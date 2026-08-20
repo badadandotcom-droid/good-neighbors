@@ -23,7 +23,7 @@ export const BRAND = {
   foundingRegion: "Southern Ontario, Canada",
   description:
     "Good Neighbors provides humane, professional wildlife removal for homes across Southern Ontario, with same-day service available for requests received before 4 PM.",
-  url: "https://www.goodneighbors.example", // PLACEHOLDER — production domain not yet assigned
+  url: "https://www.goodneighborswildlife.ca",
 } as const;
 
 /**
@@ -40,7 +40,7 @@ export const DEFAULT_PHONE: PhoneConfig = {
 };
 
 export const CONTACT = {
-  email: "hello@goodneighbors.example", // PLACEHOLDER — uses the IANA-reserved .example TLD
+  email: "hello@goodneighborswildlife.ca",
   // No physical address is published yet. Good Neighbors is presented as a
   // service-area business rather than a storefront; add a real address
   // here (and to the LocalBusiness schema in lib/seo.ts) only once one exists.

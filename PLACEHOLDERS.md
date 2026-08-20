@@ -10,11 +10,11 @@ single edit propagates everywhere.
 
 | Item | Current placeholder | Notes |
 | --- | --- | --- |
-| Brand phone | `(416) 555-0142` | Uses the North American `555` exchange, reserved for fiction — cannot be dialed. Replace with a real (ideally CallRail tracking) number. |
-| Market phones | See `lib/data/markets.ts` | Each market has its own `555` number in a locally-appropriate area code (416/905/289/705), same placeholder convention. |
-| Email | `hello@goodneighbors.example` | Uses the IANA-reserved `.example` TLD, which can never resolve to a real inbox. |
+| Brand phone | `(416) 555-0142` | Uses the North American `555` exchange, reserved for fiction — cannot be dialed. **Real GTA/CallRail number expected soon** — replace in `DEFAULT_PHONE` and flip `isPlaceholder` to `false`. |
+| Market phones | See `lib/data/markets.ts` | Each market has its own `555` number in a locally-appropriate area code (416/905/289/705), same placeholder convention — same fix needed per market as real numbers arrive. |
+| Email | ✅ Real: `hello@goodneighborswildlife.ca` | Confirmed by the client. |
 | Legal name | `Good Neighbors Wildlife Services` | Confirm against the actual registered entity name. |
-| Production domain | `https://www.goodneighbors.example` | Used for canonical URLs, sitemap, Open Graph, and JSON-LD. Update once a domain is assigned. |
+| Production domain | ✅ Real: `https://www.goodneighborswildlife.ca` | Confirmed by the client. Used for canonical URLs, sitemap, Open Graph, and JSON-LD. |
 | Physical address | Not published | `CONTACT.address` is `null` by design — add a real address object (and wire it into `lib/seo.ts` `localBusinessJsonLd`) only once one exists. |
 | Operating hours | "Phone lines open 7 days a week." | Confirm actual hours. |
 | Social links | `null` (Instagram, Facebook, Google Business Profile) | Not rendered anywhere while null; add real URLs when accounts exist. |

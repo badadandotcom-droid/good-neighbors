@@ -62,7 +62,7 @@ export function localBusinessJsonLd(market?: Market) {
     url: market ? `${BRAND.url}/service-areas/${market.slug}` : BRAND.url,
     telephone: phone.isPlaceholder ? undefined : phone.display,
     areaServed: areaServed.map((name) => ({ "@type": "AdministrativeArea", name })),
-    email: CONTACT.email.endsWith(".example") ? undefined : CONTACT.email,
+    email: CONTACT.email,
   };
 }
 
