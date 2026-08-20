@@ -8,10 +8,11 @@ import { cn } from "@/lib/utils";
  * Stands in for production photography (brief sections 5 & 39, and
  * PLACEHOLDERS.md). Every instance is typed to a documented shoot slot
  * (lib/data/photography.ts) so the placeholder doubles as art direction
- * rather than being a generic gray box. Composition intentionally echoes a
- * specimen plate: corner brackets, a restrained grain, and an illustration
- * mark bleeding off one corner rather than centered — closer to a
- * photograph waiting to be dropped in than an icon-in-a-box.
+ * rather than being a generic gray box. Composition is built as a layered
+ * plate rather than a flat color field with one small icon: a fine
+ * architectural grid for structure, a grounding horizon line, a confident
+ * illustration mark, corner brackets, and a shot-brief caption — closer to
+ * a survey drawing waiting for a photograph than an empty placeholder.
  */
 export function PhotoPlaceholder({
   slot,
@@ -40,10 +41,7 @@ export function PhotoPlaceholder({
     wood: "bg-[linear-gradient(160deg,var(--color-wood-500),var(--color-wood-700))] text-bone-50",
   } as const;
 
-  const iconPosition =
-    corner === "bottom-right"
-      ? "bottom-[-10%] right-[-8%]"
-      : "top-[-10%] left-[-8%]";
+  const iconPosition = corner === "bottom-right" ? "bottom-[-6%] right-[-6%]" : "top-[-6%] left-[-6%]";
 
   return (
     <figure
@@ -54,10 +52,15 @@ export function PhotoPlaceholder({
         className,
       )}
     >
+      <div className="blueprint-grid" />
       <div className="grain-overlay" />
+      <div
+        className="absolute inset-x-0 top-[58%] h-px bg-current opacity-[0.14]"
+        aria-hidden="true"
+      />
       <Illustration
         id={icon}
-        className={cn("absolute h-[60%] w-[60%] opacity-[0.22]", iconPosition)}
+        className={cn("absolute h-[72%] w-[72%] opacity-[0.16]", iconPosition)}
       />
       <CornerMarks />
 

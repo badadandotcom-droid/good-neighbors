@@ -13,16 +13,19 @@ import { cn } from "@/lib/utils";
 export function Illustration({
   id,
   className,
+  weight = "regular",
 }: {
   id: IllustrationId;
   className?: string;
+  /** "bold" thickens the stroke for small display sizes (tile icons), where a hairline reads as weak rather than refined. */
+  weight?: "regular" | "bold";
 }) {
   return (
     <svg
       viewBox="0 0 120 120"
       className={cn("stroke-current", className)}
       fill="none"
-      strokeWidth={1.75}
+      strokeWidth={weight === "bold" ? 2.75 : 1.75}
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"

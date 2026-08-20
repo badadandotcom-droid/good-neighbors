@@ -140,6 +140,25 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
+  /*
+   * Fine architectural-drawing grid, layered under the illustration mark on
+   * photo placeholders so the panel reads as a structured plan/plate rather
+   * than an empty flat color field. Render as an absolutely-positioned
+   * sibling (`<div class="blueprint-grid" />`).
+   */
+  .blueprint-grid {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    background-image:
+      repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(0deg, currentColor 0 1px, transparent 1px 32px);
+    background-size: 32px 32px;
+    -webkit-mask-image: radial-gradient(120% 120% at 50% 40%, black 20%, transparent 85%);
+    mask-image: radial-gradient(120% 120% at 50% 40%, black 20%, transparent 85%);
+  }
+
   /* Corner-bracket motif — ties photography and illustration panels together as "specimen plate" framing. */
   .corner-marks {
     position: absolute;
