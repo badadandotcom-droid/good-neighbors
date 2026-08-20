@@ -39,7 +39,7 @@ export function HowItWorks() {
                   {i + 1}
                 </span>
                 <div className="pt-1">
-                  <Illustration id={step.icon} className="mb-3 hidden h-9 w-9 text-brass-400 sm:mx-auto sm:block" />
+                  <Illustration id={step.icon} weight="bold" className="mb-3 hidden h-9 w-9 text-brass-400 sm:mx-auto sm:block" />
                   <h3 className="font-display text-2xl text-charcoal">{step.title}</h3>
                   <p className="mt-2 max-w-[30ch] text-[15px] leading-relaxed text-ink-700 sm:mx-auto">{step.body}</p>
                 </div>

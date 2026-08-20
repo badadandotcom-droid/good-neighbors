@@ -32,7 +32,7 @@ export function ServiceAreasTeaser() {
               href={marketHref(market)}
               className="group flex flex-col items-center gap-3 rounded-sm border border-stone-300 bg-white px-4 py-6 text-center transition-all duration-200 hover:-translate-y-0.5 hover:border-pine-500 hover:shadow-card"
             >
-              <Illustration id="compass" className="h-6 w-6 text-stone-400 transition-colors group-hover:text-pine-600" />
+              <Illustration id="compass" weight="bold" className="h-6 w-6 text-stone-400 transition-colors group-hover:text-pine-600" />
               <span className="font-display text-base text-charcoal">{market.displayName}</span>
             </Link>
           ))}

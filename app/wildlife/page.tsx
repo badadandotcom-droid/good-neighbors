@@ -44,7 +44,7 @@ export default function WildlifePage() {
             </CTAButton>
           </div>
           <div className="lg:col-span-5">
-            <PhotoPlaceholder slot="inspection" icon="attic" tone="charcoal" aspect="aspect-[4/3]" corner="top-left" />
+            <PhotoPlaceholder slot="inspection" icon="attic" tone="pine" aspect="aspect-[4/3]" corner="top-left" />
           </div>
         </Container>
       </section>
@@ -82,7 +82,9 @@ export default function WildlifePage() {
                 href={`/wildlife/${s.slug}`}
                 className="group flex flex-col gap-4 rounded-sm border border-stone-300 bg-white p-6 transition-colors hover:border-pine-500"
               >
-                <Illustration id={s.iconId} className="h-11 w-11 text-pine-600" />
+                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-pine-50">
+                  <Illustration id={s.iconId} weight="bold" className="h-8 w-8 text-pine-600" />
+                </span>
                 <div>
                   <h3 className="font-display text-xl text-charcoal">{s.name}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-ink-700">{s.summary}</p>
@@ -114,7 +116,7 @@ export default function WildlifePage() {
                   id={s.iconId}
                   className="pointer-events-none absolute -right-6 -bottom-6 h-32 w-32 text-bone-50 opacity-[0.06]"
                 />
-                <Illustration id={s.iconId} className="relative h-11 w-11 text-brass-300" />
+                <Illustration id={s.iconId} weight="bold" className="relative h-11 w-11 text-brass-300" />
                 <div className="relative">
                   <h3 className="font-display text-2xl text-bone-50">{s.name}</h3>
                   <p className="mt-2 max-w-sm text-[15px] leading-relaxed text-stone-300">{s.summary}</p>

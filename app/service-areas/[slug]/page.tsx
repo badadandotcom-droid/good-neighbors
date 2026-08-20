@@ -126,7 +126,9 @@ export default async function MarketPage({ params }: { params: Promise<{ slug: s
                 href={`/wildlife/${s.slug}`}
                 className="group flex flex-col items-center gap-3 rounded-sm border border-stone-300 bg-bone-50 px-4 py-6 text-center transition-all duration-200 hover:-translate-y-0.5 hover:border-pine-500 hover:shadow-card"
               >
-                <Illustration id={s.iconId} className="h-8 w-8 text-pine-600" />
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-pine-100">
+                  <Illustration id={s.iconId} weight="bold" className="h-7 w-7 text-pine-600" />
+                </span>
                 <span className="font-display text-base text-charcoal">{s.name}</span>
               </Link>
             ))}

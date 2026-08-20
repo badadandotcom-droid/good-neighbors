@@ -23,7 +23,13 @@ export function WildlifePicker() {
               href={`/wildlife/${s.slug}`}
               className="group flex flex-col items-start gap-5 rounded-sm border border-stone-300 bg-bone-50 p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-pine-500 hover:bg-white hover:shadow-card"
             >
-              <Illustration id={s.iconId} className="h-14 w-14 text-pine-600 transition-transform duration-200 group-hover:scale-105" />
+              <span className="flex h-16 w-16 items-center justify-center rounded-full bg-pine-50 transition-colors duration-200 group-hover:bg-pine-100">
+                <Illustration
+                  id={s.iconId}
+                  weight="bold"
+                  className="h-9 w-9 text-pine-600 transition-transform duration-200 group-hover:scale-105"
+                />
+              </span>
               <span className="font-display text-lg leading-tight text-charcoal">{s.name}</span>
             </Link>
           ))}

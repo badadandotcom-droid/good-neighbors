@@ -72,7 +72,7 @@ export default function ServiceAreasPage() {
                       )}
                     >
                       <div className="flex items-center justify-between">
-                        <Illustration id="compass" className="h-8 w-8 text-pine-600" />
+                        <Illustration id="compass" weight="bold" className="h-8 w-8 text-pine-600" />
                         {!active && (
                           <span className="rounded-full border border-stone-400 px-2.5 py-0.5 text-[11px] font-medium tracking-wide text-stone-500 uppercase">
                             Coming soon

@@ -70,7 +70,7 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
               &larr; Wildlife Removal
             </Link>
             <div className="mt-4 flex items-center gap-4">
-              <Illustration id={entry.iconId} className="h-14 w-14 shrink-0 text-pine-600" />
+              <Illustration id={entry.iconId} weight="bold" className="h-14 w-14 shrink-0 text-pine-600" />
               <h1 className="text-balance font-display text-4xl leading-[1.02] text-charcoal sm:text-5xl">
                 {entry.name} Removal
               </h1>
@@ -105,6 +105,19 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
           <div className="lg:col-span-7">
             <h2 className="font-display text-2xl text-charcoal">Our approach</h2>
             <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-ink-700 text-pretty">{entry.approach}</p>
+
+            <dl className="mt-10 flex flex-col gap-6 border-t border-stone-300 pt-8 sm:flex-row sm:gap-10">
+              {[
+                { term: "On arrival", detail: `We confirm the ${entry.singular.toLowerCase()} activity and check how it's getting in.` },
+                { term: "During the visit", detail: "Removal is handled humanely, with care taken around your roofline and finishes." },
+                { term: "Before we leave", detail: "You'll know what we found and what, if anything, makes sense to do next." },
+              ].map((step) => (
+                <div key={step.term} className="sm:flex-1">
+                  <dt className="font-display text-base text-pine-600">{step.term}</dt>
+                  <dd className="mt-1.5 text-sm leading-relaxed text-ink-700">{step.detail}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
 
           <aside className="lg:col-span-4 lg:col-start-9">
@@ -145,7 +158,9 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
                   href={`/wildlife/${r.slug}`}
                   className="group flex flex-col items-center gap-3 rounded-sm border border-stone-300 bg-white px-4 py-6 text-center transition-all duration-200 hover:-translate-y-0.5 hover:border-pine-500 hover:shadow-card"
                 >
-                  <Illustration id={r.iconId} className="h-9 w-9 text-pine-600" />
+                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-pine-50">
+                    <Illustration id={r.iconId} weight="bold" className="h-8 w-8 text-pine-600" />
+                  </span>
                   <span className="font-display text-base text-charcoal">{r.name}</span>
                 </Link>
               ))}
