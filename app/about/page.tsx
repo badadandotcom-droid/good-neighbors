@@ -110,7 +110,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="lg:col-span-5 lg:col-start-8">
-            <PhotoPlaceholder slot="streetscape" icon="roofline" tone="charcoal" aspect="aspect-[4/3]" corner="top-left" />
+            <PhotoPlaceholder slot="streetscape" icon="roofline" tone="wood" aspect="aspect-[4/3]" corner="top-left" />
           </div>
         </Container>
       </section>

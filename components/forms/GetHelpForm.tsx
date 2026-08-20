@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent, type ReactNode } from "react";
 import { PhotoUpload } from "@/components/forms/PhotoUpload";
+import { Illustration } from "@/components/illustrations/Illustration";
 import { getSpeciesEntries } from "@/lib/data/wildlife";
 import { trackEvent } from "@/lib/analytics";
 import { getPhone, getSameDayMessage } from "@/lib/config/resolvers";
@@ -163,7 +164,34 @@ export function GetHelpForm() {
       </FormSection>
 
       <FormSection number={3} title="Photos" optional last>
-        <PhotoUpload />
+        <div className="flex flex-col gap-8">
+          <div>
+            <p className="mb-3 text-sm font-medium text-ink">What you&apos;re seeing</p>
+            <PhotoUpload hint="The animal, damage, droppings, or nesting material" />
+          </div>
+
+          <div className="border-t border-stone-200 pt-8">
+            <p className="text-sm font-medium text-ink">Can you see where it&apos;s getting in?</p>
+            <p className="mt-1 text-sm leading-relaxed text-ink-700">
+              A roof vent, soffit gap, hole, chimney, or siding gap — if you can see one from the ground.
+            </p>
+            <div className="mt-3 flex items-start gap-2.5 rounded-sm border border-wood-300 bg-wood-100/50 px-4 py-3">
+              <Illustration id="shield-home" className="mt-0.5 h-4 w-4 shrink-0 text-wood-700" />
+              <p className="text-xs leading-relaxed text-wood-700">
+                Do not climb a ladder or get on the roof to take this photo. Only include it if you can see the
+                entry point safely from the ground.
+              </p>
+            </div>
+            <div className="mt-3">
+              <PhotoUpload hint="The suspected entry point" maxFiles={3} />
+            </div>
+          </div>
+
+          <p className="text-xs leading-relaxed text-stone-500">
+            Photo upload isn&apos;t connected to our system yet — once you&apos;re in touch, you&apos;re welcome to
+            text photos to the number above instead.
+          </p>
+        </div>
       </FormSection>
 
       <div className="mt-8">

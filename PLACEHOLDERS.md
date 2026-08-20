@@ -49,11 +49,15 @@ traffic and should be smoke-tested before relying on it seasonally.
 ## Photo upload — `components/forms/PhotoUpload.tsx`
 
 Selection, drag-and-drop, thumbnail preview, and removal are fully
-functional client-side. **Files are not uploaded anywhere** — there's no
-object storage (S3/Cloudinary/etc.) connected, so photos are intentionally
-excluded from the `/api/get-help` submission payload rather than silently
-failing to send. The UI tells users this and suggests texting photos
-instead. Wire storage + include resulting URLs in the payload when ready.
+functional client-side, in two separate instances on the Get Help form:
+general evidence photos, and a distinct "can you see where it's getting
+in?" entry-point section with a safety warning against climbing to get the
+shot. **Files are not uploaded anywhere** — there's no object storage
+(S3/Cloudinary/etc.) connected, so photos are intentionally excluded from
+the `/api/get-help` submission payload rather than silently failing to
+send. The UI tells users this and suggests texting photos instead. Wire
+storage + include resulting URLs (tagged by which section they came from)
+in the payload when ready.
 
 ## Legal pages — `app/privacy/page.tsx`, `app/terms/page.tsx`
 
