@@ -30,13 +30,13 @@ export function TrustBar({ market }: { market?: Market }) {
   ];
 
   return (
-    <section className="border-b border-stone-300 bg-bone-50">
-      <Container className="grid grid-cols-2 gap-x-6 gap-y-10 py-12 sm:py-14 lg:grid-cols-4 lg:gap-8">
+    <section className="border-b border-stone-300 bg-charcoal text-bone-50">
+      <Container className="grid grid-cols-1 gap-x-8 gap-y-0 sm:grid-cols-2 lg:grid-cols-4">
         {items.map((item) => (
-          <div key={item.title}>
-            <Illustration id={item.icon} className="h-7 w-7 text-pine-600" />
-            <h3 className="mt-4 font-display text-lg text-charcoal">{item.title}</h3>
-            <p className="mt-1.5 text-sm leading-relaxed text-stone-500">{item.body}</p>
+          <div key={item.title} className="flex flex-col gap-4 border-t border-stone-500/25 py-10 sm:py-14">
+            <Illustration id={item.icon} className="h-10 w-10 text-brass-300" />
+            <h3 className="font-display text-2xl text-bone-50">{item.title}</h3>
+            <p className="max-w-[26ch] text-sm leading-relaxed text-stone-300">{item.body}</p>
           </div>
         ))}
       </Container>

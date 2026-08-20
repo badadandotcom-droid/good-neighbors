@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/shared/Container";
 import { SectionHeading } from "@/components/shared/SectionHeading";
+import { Illustration } from "@/components/illustrations/Illustration";
 import { getActiveMarkets, marketHref } from "@/lib/data/markets";
 
 export function ServiceAreasTeaser() {
@@ -29,8 +30,9 @@ export function ServiceAreasTeaser() {
             <Link
               key={market.slug}
               href={marketHref(market)}
-              className="rounded-sm border border-stone-300 bg-white px-4 py-5 text-center transition-colors hover:border-pine-500"
+              className="group flex flex-col items-center gap-3 rounded-sm border border-stone-300 bg-white px-4 py-6 text-center transition-all duration-200 hover:-translate-y-0.5 hover:border-pine-500 hover:shadow-card"
             >
+              <Illustration id="compass" className="h-6 w-6 text-stone-400 transition-colors group-hover:text-pine-600" />
               <span className="font-display text-base text-charcoal">{market.displayName}</span>
             </Link>
           ))}

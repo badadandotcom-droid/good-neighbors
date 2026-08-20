@@ -13,15 +13,21 @@ export function Hero({ market }: { market?: Market }) {
 
   return (
     <section className="relative overflow-hidden border-b border-stone-300 bg-bone">
-      <Container className="grid grid-cols-1 items-center gap-12 py-14 sm:py-20 lg:grid-cols-12 lg:gap-8 lg:py-24">
+      <Illustration
+        id="roofline"
+        className="pointer-events-none absolute -left-24 top-0 h-[140%] w-auto text-pine-600 opacity-[0.06]"
+        aria-hidden="true"
+      />
+
+      <Container className="relative grid grid-cols-1 items-center gap-12 py-14 sm:py-20 lg:grid-cols-12 lg:gap-6 lg:py-16">
         <div className="lg:col-span-7">
           <SameDayBadge market={market} />
 
-          <h1 className="mt-6 max-w-xl text-balance font-display text-[2.6rem] leading-[1.06] text-charcoal sm:text-6xl lg:text-[4.2rem]">
+          <h1 className="mt-6 max-w-xl text-balance font-display text-[2.6rem] leading-[1.04] text-charcoal sm:text-6xl lg:text-[4.6rem]">
             {getHeroHeadline(market)}
           </h1>
 
-          <p className="mt-3 font-display text-xl text-pine-600 sm:text-2xl">{getPositioningLine(market)}</p>
+          <p className="mt-4 font-display text-xl italic text-pine-600 sm:text-2xl">{getPositioningLine(market)}</p>
 
           <p className="mt-6 max-w-md text-lg leading-relaxed text-ink-700 text-pretty">
             One call brings a trained technician to your door to handle the raccoon, squirrel, or unknown
@@ -39,28 +45,20 @@ export function Hero({ market }: { market?: Market }) {
               className="justify-center text-lg text-ink hover:text-pine-600 sm:justify-start"
             />
           </div>
-
-          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-stone-500">
-            <span className="inline-flex items-center gap-2">
-              <Illustration id="shield-home" className="h-4 w-4" /> Respectful of your property
-            </span>
-            <span className="inline-flex items-center gap-2">
-              <Illustration id="compass" className="h-4 w-4" /> {market ? market.metro ?? market.region : "Southern Ontario"}
-            </span>
-          </div>
         </div>
 
-        <div className="relative lg:col-span-5">
+        <div className="relative lg:col-span-5 lg:-mr-6 xl:-mr-16">
           <PhotoPlaceholder
+            slot="arrival"
             icon="roofline"
             tone="pine"
             aspect="aspect-[4/5] sm:aspect-[5/6]"
-            caption="exterior roofline / technician at work"
-            className="shadow-lifted"
+            className="shadow-deep"
           />
-          <div className="absolute -bottom-6 -left-6 hidden w-48 rounded-sm border border-stone-300 bg-bone-50 p-4 shadow-card sm:block">
-            <p className="font-display text-2xl text-charcoal">Humane by default</p>
-            <p className="mt-1 text-xs leading-relaxed text-stone-500">
+          <div className="absolute -top-7 -left-7 hidden w-52 rounded-sm border border-stone-300 bg-bone-50 p-5 shadow-card sm:block">
+            <span className="mb-2 block h-px w-6 bg-brass-400" aria-hidden="true" />
+            <p className="font-display text-2xl leading-tight text-charcoal">Humane by default</p>
+            <p className="mt-2 text-xs leading-relaxed text-stone-500">
               Not an add-on — it&apos;s how every job is handled.
             </p>
           </div>
