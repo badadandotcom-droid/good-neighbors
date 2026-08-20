@@ -111,6 +111,25 @@ export interface NavItem {
   href: string;
 }
 
+/** A typed photography placeholder slot — see lib/data/photography.ts for the full shoot brief. */
+export type PhotoSlotId =
+  | "arrival"
+  | "inspection"
+  | "conversation"
+  | "crew"
+  | "vehicle"
+  | "detail"
+  | "streetscape"
+  | "team-portrait";
+
+export interface PhotoSlot {
+  id: PhotoSlotId;
+  /** Short shot-list label, e.g. "Arrival" */
+  label: string;
+  /** Art-direction description for the eventual photo shoot */
+  brief: string;
+}
+
 /** Identifiers for the hand-built line-art illustration system (see components/illustrations). */
 export type IllustrationId =
   | "raccoon"
@@ -125,5 +144,6 @@ export type IllustrationId =
   | "inspection"
   | "shield-home"
   | "phone-call"
+  | "mail"
   | "camera"
   | "compass";

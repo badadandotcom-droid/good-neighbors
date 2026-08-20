@@ -2,13 +2,16 @@
 
 /*
  * ============================================================================
- * GOOD NEIGHBORS DESIGN TOKENS
+ * GOOD NEIGHBORS DESIGN TOKENS — V2
  * ============================================================================
- * A warm, architectural palette: bone/stone neutrals, a near-black ink for
- * text, and a single deep natural green as the brand's confident color —
- * used deliberately, not everywhere. A muted clay accent is reserved for
- * small emphasis moments only. This is a fixed light palette by design —
- * a brand-driven marketing site, not an app UI — so no dark-mode variant.
+ * Foundation: warm bone/stone neutrals, a near-black ink, and a deep natural
+ * pine green as the brand's confident color. V2 adds two supporting families
+ * so the palette can carry more visual weight without becoming "everything
+ * green": a warm wood/walnut range for grounded, residential warmth, and a
+ * restrained brass accent reserved for small premium moments — a rule, a
+ * corner mark, a hover state — never a fill. Clay stays functional (form
+ * errors, urgency) so it never competes with brass for meaning. Fixed light
+ * palette by design — a brand-driven marketing site, not an app UI.
  * ============================================================================
  */
 @theme {
@@ -32,6 +35,15 @@
   --color-pine-600: #1f3d2b;
   --color-pine-700: #162e20;
 
+  --color-wood-100: #ece1d0;
+  --color-wood-300: #d3b892;
+  --color-wood-500: #a67c4f;
+  --color-wood-700: #6b4a2e;
+
+  --color-brass-300: #cbab6f;
+  --color-brass-400: #b3894c;
+  --color-brass-600: #7d5f32;
+
   --color-clay-100: #f1e2d2;
   --color-clay-400: #b5713b;
   --color-clay-500: #9c5c2c;
@@ -41,6 +53,7 @@
 
   --shadow-card: 0 1px 2px rgba(23, 22, 15, 0.04), 0 8px 24px -12px rgba(23, 22, 15, 0.18);
   --shadow-lifted: 0 4px 8px rgba(23, 22, 15, 0.06), 0 24px 48px -20px rgba(23, 22, 15, 0.28);
+  --shadow-deep: 0 12px 16px -6px rgba(23, 22, 15, 0.12), 0 32px 64px -24px rgba(23, 22, 15, 0.35);
 
   --animate-fade-up: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
 
@@ -109,5 +122,59 @@
   }
   .text-pretty {
     text-wrap: pretty;
+  }
+
+  /*
+   * Subtle grain, used sparingly on dark sections and photo/illustration
+   * panels for tactile depth instead of flat color fields. Render as an
+   * absolutely-positioned sibling (`<div class="grain-overlay" />`) inside a
+   * `relative` parent — opacity lives in the SVG itself so it layers
+   * correctly over any background.
+   */
+  .grain-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    opacity: 0.5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Corner-bracket motif — ties photography and illustration panels together as "specimen plate" framing. */
+  .corner-marks {
+    position: absolute;
+    inset: 14px;
+    pointer-events: none;
+  }
+  .corner-marks span {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 1px solid currentColor;
+    opacity: 0.55;
+  }
+  .corner-marks span:nth-child(1) {
+    top: 0;
+    left: 0;
+    border-right: 0;
+    border-bottom: 0;
+  }
+  .corner-marks span:nth-child(2) {
+    top: 0;
+    right: 0;
+    border-left: 0;
+    border-bottom: 0;
+  }
+  .corner-marks span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    border-right: 0;
+    border-top: 0;
+  }
+  .corner-marks span:nth-child(4) {
+    bottom: 0;
+    right: 0;
+    border-left: 0;
+    border-top: 0;
   }
 }
