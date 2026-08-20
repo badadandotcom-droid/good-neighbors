@@ -1,0 +1,152 @@
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import { Container } from "@/components/shared/Container";
+import { CTAButton } from "@/components/shared/CTAButton";
+import { PhoneLink } from "@/components/shared/PhoneLink";
+import { SameDayBadge } from "@/components/shared/SameDayBadge";
+import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
+import { Illustration } from "@/components/illustrations/Illustration";
+import { FAQAccordion } from "@/components/shared/FAQAccordion";
+import { MARKETS, getMarketBySlug } from "@/lib/data/markets";
+import { getSpeciesEntries } from "@/lib/data/wildlife";
+import { getFeaturedFaqs } from "@/lib/data/faq";
+import { getPhone, getPositioningLine, getSameDayConfig } from "@/lib/config/resolvers";
+import { pageMetadata, localBusinessJsonLd, faqJsonLd } from "@/lib/seo";
+import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
+
+export function generateStaticParams() {
+  return MARKETS.map((m) => ({ slug: m.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const market = getMarketBySlug(slug);
+  if (!market) return {};
+
+  return pageMetadata({
+    title: market.brandName,
+    description: market.seoDescription,
+    path: `/service-areas/${market.slug}`,
+  });
+}
+
+export default async function MarketPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const market = getMarketBySlug(slug);
+  if (!market) notFound();
+
+  const phone = getPhone(market);
+  const species = getSpeciesEntries();
+  const faqs = getFeaturedFaqs();
+  const sameDay = getSameDayConfig(market);
+  const active = market.status === "active";
+
+  const jsonLd = localBusinessJsonLd(market);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      <section className="border-b border-stone-300 py-16 sm:py-24">
+        <Container className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-7">
+            <Link href="/service-areas" className="text-sm font-medium text-stone-500 hover:text-charcoal">
+              &larr; Service Areas
+            </Link>
+
+            {active ? (
+              <SameDayBadge market={market} className="mt-4" />
+            ) : (
+              <span className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-stone-400 px-3 py-1 text-xs font-medium tracking-wide text-stone-500 uppercase">
+                Coming soon to this area
+              </span>
+            )}
+
+            <h1 className="mt-4 text-balance font-display text-4xl leading-[1.05] text-charcoal sm:text-5xl">
+              {market.brandName}
+            </h1>
+            <p className="mt-3 font-display text-xl text-pine-600">{getPositioningLine(market)}</p>
+            <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">{market.heroBlurb}</p>
+
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <CTAButton href="/contact" size="lg" event="cta_get_help_now" eventMeta={{ location: `market-${market.slug}` }}>
+                {PRIMARY_CTA_LABEL}
+              </CTAButton>
+              <PhoneLink phone={phone} location={`market-${market.slug}`} className="justify-center text-lg text-ink hover:text-pine-600" />
+            </div>
+          </div>
+          <div className="lg:col-span-5">
+            <PhotoPlaceholder icon="roofline" tone="pine" aspect="aspect-[4/3]" caption={`${market.displayName} residential streetscape`} />
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-b border-stone-300 bg-bone-50 py-14">
+        <Container>
+          <h2 className="font-display text-lg text-charcoal">Areas we cover near {market.displayName}</h2>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {market.serviceArea.map((area) => (
+              <span key={area} className="rounded-full border border-stone-300 bg-white px-3.5 py-1.5 text-sm text-ink-700">
+                {area}
+              </span>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-16 sm:py-24">
+        <Container>
+          <h2 className="font-display text-2xl text-charcoal sm:text-3xl">Wildlife we handle in {market.displayName}</h2>
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+            {species.map((s) => (
+              <Link
+                key={s.slug}
+                href={`/wildlife/${s.slug}`}
+                className="flex flex-col items-center gap-3 rounded-sm border border-stone-300 bg-bone-50 px-4 py-6 text-center transition-colors hover:border-pine-500"
+              >
+                <Illustration id={s.iconId} className="h-8 w-8 text-pine-600" />
+                <span className="font-display text-base text-charcoal">{s.name}</span>
+              </Link>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {!sameDay.enabled && (
+        <section className="border-t border-stone-300 bg-bone-50 py-10">
+          <Container>
+            <p className="text-sm text-stone-500">{sameDay.disabledMessage}</p>
+          </Container>
+        </section>
+      )}
+
+      <section className="border-t border-stone-300 py-16 sm:py-24">
+        <Container>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }}
+          />
+          <h2 className="font-display text-2xl text-charcoal sm:text-3xl">Questions from {market.displayName} homeowners</h2>
+          <div className="mt-10">
+            <FAQAccordion items={faqs} />
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-stone-300 bg-charcoal py-16 text-bone-50 sm:py-20">
+        <Container className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
+          <h2 className="max-w-md text-balance font-display text-3xl leading-[1.1]">
+            {active ? `Ready when you are, ${market.displayName}.` : `We'll be in ${market.displayName} soon.`}
+          </h2>
+          <CTAButton href="/contact" size="lg" event="cta_get_help_now" eventMeta={{ location: `market-${market.slug}-final` }}>
+            {PRIMARY_CTA_LABEL}
+          </CTAButton>
+        </Container>
+      </section>
+    </>
+  );
+}

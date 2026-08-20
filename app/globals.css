@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+/*
+ * ============================================================================
+ * GOOD NEIGHBORS DESIGN TOKENS
+ * ============================================================================
+ * A warm, architectural palette: bone/stone neutrals, a near-black ink for
+ * text, and a single deep natural green as the brand's confident color —
+ * used deliberately, not everywhere. A muted clay accent is reserved for
+ * small emphasis moments only. This is a fixed light palette by design —
+ * a brand-driven marketing site, not an app UI — so no dark-mode variant.
+ * ============================================================================
+ */
+@theme {
+  --color-bone: #f7f3ea;
+  --color-bone-50: #fbf9f4;
+  --color-bone-100: #f1ebdd;
+
+  --color-stone-200: #e8e1d2;
+  --color-stone-300: #d9cfba;
+  --color-stone-400: #b8ab91;
+  --color-stone-500: #948569;
+
+  --color-ink: #24231f;
+  --color-ink-700: #3a3833;
+  --color-charcoal: #17160f;
+
+  --color-pine-50: #eaf0e7;
+  --color-pine-100: #d3e0cd;
+  --color-pine-400: #3f6b47;
+  --color-pine-500: #2c5137;
+  --color-pine-600: #1f3d2b;
+  --color-pine-700: #162e20;
+
+  --color-clay-100: #f1e2d2;
+  --color-clay-400: #b5713b;
+  --color-clay-500: #9c5c2c;
+
+  --font-display: var(--font-fraunces), "Iowan Old Style", "Georgia", serif;
+  --font-sans: var(--font-public-sans), "Segoe UI", system-ui, sans-serif;
+
+  --shadow-card: 0 1px 2px rgba(23, 22, 15, 0.04), 0 8px 24px -12px rgba(23, 22, 15, 0.18);
+  --shadow-lifted: 0 4px 8px rgba(23, 22, 15, 0.06), 0 24px 48px -20px rgba(23, 22, 15, 0.28);
+
+  --animate-fade-up: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-stone-300);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-bone);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01" 1;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--color-charcoal);
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: var(--color-pine-100);
+    color: var(--color-pine-700);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-pine-500);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}

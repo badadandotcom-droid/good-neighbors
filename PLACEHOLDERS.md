@@ -1,0 +1,100 @@
+# Placeholder audit
+
+This file is the single checklist of everything in the codebase that is
+**fabricated-but-clearly-fake**, standing in for real business information.
+Nothing listed here is meant to go live as-is. Search the referenced file
+for the exact string to find each spot — most are also centralized so a
+single edit propagates everywhere.
+
+## Contact & brand details — `lib/config/site.ts`
+
+| Item | Current placeholder | Notes |
+| --- | --- | --- |
+| Brand phone | `(416) 555-0142` | Uses the North American `555` exchange, reserved for fiction — cannot be dialed. Replace with a real (ideally CallRail tracking) number. |
+| Market phones | See `lib/data/markets.ts` | Each market has its own `555` number in a locally-appropriate area code (416/905/289/705), same placeholder convention. |
+| Email | `hello@goodneighbors.example` | Uses the IANA-reserved `.example` TLD, which can never resolve to a real inbox. |
+| Legal name | `Good Neighbors Wildlife Services` | Confirm against the actual registered entity name. |
+| Production domain | `https://www.goodneighbors.example` | Used for canonical URLs, sitemap, Open Graph, and JSON-LD. Update once a domain is assigned. |
+| Physical address | Not published | `CONTACT.address` is `null` by design — add a real address object (and wire it into `lib/seo.ts` `localBusinessJsonLd`) only once one exists. |
+| Operating hours | "Phone lines open 7 days a week." | Confirm actual hours. |
+| Social links | `null` (Instagram, Facebook, Google Business Profile) | Not rendered anywhere while null; add real URLs when accounts exist. |
+
+## Same-day service — `lib/config/site.ts` → `DEFAULT_SAME_DAY_SERVICE`
+
+Fully centralized and already accurate to the brief (before-4-PM cutoff,
+subject to availability, no 24/7 claim). Nothing fake here — just flag that
+turning `enabled: false` (globally or per-market) is untested against real
+traffic and should be smoke-tested before relying on it seasonally.
+
+## Analytics & tracking — `lib/config/site.ts` → `ANALYTICS`, `lib/analytics.ts`
+
+- `gaMeasurementId`, `gtmContainerId`, `callRailScriptId` are all `null`.
+- `lib/analytics.ts` `trackEvent()` pushes to `window.dataLayer` if present,
+  otherwise no-ops (console.debug in dev only). Every primary CTA, phone
+  link, and form step already calls it — wiring real GA4/GTM/CallRail is a
+  matter of loading their scripts in `app/layout.tsx` and letting this
+  function's existing `dataLayer.push` picks it up, or swapping the
+  function body.
+
+## Get Help form — `app/api/get-help/route.ts`, `components/forms/GetHelpForm.tsx`
+
+- The route **validates** submissions but does **not deliver them
+  anywhere** — no email send, no CRM webhook, no CallRail conversion
+  event. A `200 { ok: true }` response means "well-formed," not "received
+  by a human." See the `TODO(production)` comment in the route handler.
+- Basic honeypot spam protection is in place (`company` field); no rate
+  limiting is implemented yet (would need persistent storage or an edge
+  service).
+
+## Photo upload — `components/forms/PhotoUpload.tsx`
+
+Selection, drag-and-drop, thumbnail preview, and removal are fully
+functional client-side. **Files are not uploaded anywhere** — there's no
+object storage (S3/Cloudinary/etc.) connected, so photos are intentionally
+excluded from the `/api/get-help` submission payload rather than silently
+failing to send. The UI tells users this and suggests texting photos
+instead. Wire storage + include resulting URLs in the payload when ready.
+
+## Legal pages — `app/privacy/page.tsx`, `app/terms/page.tsx`
+
+Both are working drafts in plain language, clearly flagged inline as
+**pending legal review**, and marked `noIndex` in metadata so they aren't
+indexed while still drafts. They cover current, real data practices (what
+the Get Help form collects) but do not include finalized retention
+periods, service agreements, liability terms, or cancellation policies.
+Do not rely on these in production without legal sign-off.
+
+## Photography — `components/shared/PhotoPlaceholder.tsx`
+
+No production photography exists yet. Every photo spot on the site uses a
+hand-built, brand-colored placeholder panel (gradient + subtle texture +
+line-art mark + a visible "Photography placeholder — [description]"
+caption) rather than a plain gray box or (worse) improperly sourced stock
+imagery. Search for `<PhotoPlaceholder` across `app/` and `components/` to
+find every spot that expects a real photo, and use each caption as the
+art-direction brief for that shoot.
+
+## Trust signals — intentionally absent
+
+No reviews, star ratings, testimonials, "homes serviced" counts, years in
+business, awards, certifications, or insurance claims appear anywhere on
+the site. Good Neighbors is a new brand — none of that exists yet. Do not
+add placeholder versions of these; add them for real once they exist. The
+component system has no dedicated "testimonial" or "review" component for
+exactly this reason.
+
+## Markets — `lib/data/markets.ts`
+
+The seven markets included (Toronto, York Region, Durham Region, Oakville
+& Burlington, Hamilton, Barrie, Niagara Region) are a **launch-planning
+snapshot**, not a locked list. Phone numbers are placeholders per above.
+`Niagara Region` is marked `status: "coming-soon"` as a working example of
+that state — flip statuses, add, or remove markets here; no other file
+needs to change (see the architecture note at the top of that file).
+
+## Pricing — intentionally absent
+
+No prices, price ranges, or a price calculator appear anywhere by design
+(see brief section 6). `/contact` explicitly tells visitors pricing is
+discussed after the situation is understood. Do not add pricing without a
+deliberate decision to change the sales model.
