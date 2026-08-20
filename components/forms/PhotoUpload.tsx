@@ -43,8 +43,8 @@ export function PhotoUpload({ onFilesChange }: { onFilesChange?: (files: File[])
 
   return (
     <div>
-      <label htmlFor={inputId} className="mb-2 block text-sm font-medium text-ink">
-        Photos <span className="font-normal text-stone-500">(optional)</span>
+      <label htmlFor={inputId} className="sr-only">
+        Photos
       </label>
 
       <div
