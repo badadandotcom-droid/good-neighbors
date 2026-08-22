@@ -28,6 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: market.brandName,
     description: market.seoDescription,
     path: `/service-areas/${market.slug}`,
+    noIndex: market.status !== "active",
   });
 }
 
@@ -41,9 +42,13 @@ export default async function MarketPage({ params }: { params: Promise<{ slug: s
 
   const phone = getPhone(market);
   const species = getSpeciesEntries();
-  const faqs = getFeaturedFaqs();
-  const sameDay = getSameDayConfig(market);
   const active = market.status === "active";
+  const faqs = getFeaturedFaqs({ sameDayEligible: active });
+  const sameDay = getSameDayConfig(market);
+  const showAvailabilityNote = active ? !sameDay.enabled : true;
+  const availabilityNote = active
+    ? sameDay.disabledMessage
+    : `We're not yet dispatching technicians to ${market.displayName} — reach out and we'll let you know as we expand into the area.`;
   const marketIndex = MARKETS.findIndex((m) => m.slug === market.slug);
   const tone = TONES[marketIndex % TONES.length];
 
@@ -136,10 +141,10 @@ export default async function MarketPage({ params }: { params: Promise<{ slug: s
         </Container>
       </section>
 
-      {!sameDay.enabled && (
+      {showAvailabilityNote && (
         <section className="border-t border-stone-300 bg-bone-50 py-10">
           <Container>
-            <p className="text-sm text-stone-500">{sameDay.disabledMessage}</p>
+            <p className="text-sm text-stone-500">{availabilityNote}</p>
           </Container>
         </section>
       )}
@@ -150,7 +155,9 @@ export default async function MarketPage({ params }: { params: Promise<{ slug: s
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }}
           />
-          <h2 className="font-display text-2xl text-charcoal sm:text-3xl">Questions from {market.displayName} homeowners</h2>
+          <h2 className="font-display text-2xl text-charcoal sm:text-3xl">
+            {active ? `Questions from ${market.displayName} homeowners` : "Good to know"}
+          </h2>
           <div className="mt-10">
             <FAQAccordion items={faqs} />
           </div>

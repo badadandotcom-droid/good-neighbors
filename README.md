@@ -34,10 +34,17 @@ automatically — headline, badges, FAQ, footer. A market can also override
 just its own cutoff/availability via `Market.sameDayService`.
 
 **Markets are data, not pages.** `lib/data/markets.ts` holds every local
-market as a plain object (name, region, phone, service area, same-day
-override, SEO copy). `app/service-areas/[slug]/page.tsx` renders all of
-them from one template via `generateStaticParams`. Adding a market is a
-one-file edit — no new route, no new component.
+market as a plain object (name, region, status, service area, same-day
+override, SEO copy, optional phone). `app/service-areas/[slug]/page.tsx`
+renders all of them from one template via `generateStaticParams`. Adding a
+market is a one-file edit — no new route, no new component.
+
+**Markets are built before they're active.** Every market's `status` is
+either `"active"` or `"coming-soon"`. Coming-soon markets keep their full
+page, but are left out of "Currently Serving" sections, same-day claims,
+and the sitemap (their pages are `noIndex`) until someone flips the
+status — see [`PLACEHOLDERS.md`](./PLACEHOLDERS.md) for the current active
+list and the exact activation steps.
 
 **URL structure is deliberately not finalized.** Markets currently live at
 `/service-areas/[slug]`. Every internal link goes through the

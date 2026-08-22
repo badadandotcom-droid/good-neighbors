@@ -104,6 +104,8 @@ export interface FaqItem {
   answer: string;
   /** Show on homepage FAQ preview */
   featured?: boolean;
+  /** Answer assumes same-day/active service — suppress on coming-soon market pages */
+  sameDaySpecific?: boolean;
 }
 
 export interface NavItem {

@@ -11,11 +11,13 @@ export const FAQ_ITEMS: FaqItem[] = [
     question: "Can you come today?",
     answer: `In most cases, yes. ${DEFAULT_SAME_DAY_SERVICE.qualificationMessage} If same-day service isn't available in your area right now, we'll tell you upfront and get you the next available time.`,
     featured: true,
+    sameDaySpecific: true,
   },
   {
     question: `What's the ${DEFAULT_SAME_DAY_SERVICE.cutoffLabel} cutoff about?`,
     answer: `Requests received before ${DEFAULT_SAME_DAY_SERVICE.cutoffLabel} local time give us the best chance of reaching your property the same day. Requests after that are usually scheduled for the next available slot — we'll confirm timing when you contact us.`,
     featured: true,
+    sameDaySpecific: true,
   },
   {
     question: "I don't know what animal it is. Is that a problem?",
@@ -62,6 +64,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
 ];
 
-export function getFeaturedFaqs(): FaqItem[] {
-  return FAQ_ITEMS.filter((f) => f.featured);
+export function getFeaturedFaqs(opts?: { sameDayEligible?: boolean }): FaqItem[] {
+  const sameDayEligible = opts?.sameDayEligible ?? true;
+  return FAQ_ITEMS.filter((f) => f.featured && (sameDayEligible || !f.sameDaySpecific));
 }

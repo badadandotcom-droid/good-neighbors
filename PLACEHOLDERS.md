@@ -10,8 +10,7 @@ single edit propagates everywhere.
 
 | Item | Current placeholder | Notes |
 | --- | --- | --- |
-| Brand phone | `(416) 555-0142` | Uses the North American `555` exchange, reserved for fiction — cannot be dialed. **Real GTA/CallRail number expected soon** — replace in `DEFAULT_PHONE` and flip `isPlaceholder` to `false`. |
-| Market phones | See `lib/data/markets.ts` | Each market has its own `555` number in a locally-appropriate area code (416/905/289/705), same placeholder convention — same fix needed per market as real numbers arrive. |
+| Brand phone | `(416) 555-0142` | Uses the North American `555` exchange, reserved for fiction — cannot be dialed. **Real GTA/CallRail number expected soon** — replace in `DEFAULT_PHONE` and flip `isPlaceholder` to `false`. One shared number currently covers every active market (see "Markets" below); no market has a `phone` override right now, so they all resolve to `DEFAULT_PHONE` via `getPhone()`. Add a market-specific number later by setting that market's `phone` field — no other file needs to change. |
 | Email | ✅ Real: `hello@goodneighborswildlife.ca` | Confirmed by the client. |
 | Legal name | `Good Neighbors Wildlife Services` | Confirm against the actual registered entity name. |
 | Production domain | ✅ Real: `https://www.goodneighborswildlife.ca` | Confirmed by the client. Used for canonical URLs, sitemap, Open Graph, and JSON-LD. |
@@ -92,9 +91,23 @@ exactly this reason.
 The seven markets included (Toronto, York Region, Durham Region, Oakville
 & Burlington, Hamilton, Barrie, Niagara Region) are a **launch-planning
 snapshot**, not a locked list. Phone numbers are placeholders per above.
-`Niagara Region` is marked `status: "coming-soon"` as a working example of
-that state — flip statuses, add, or remove markets here; no other file
-needs to change (see the architecture note at the top of that file).
+
+**Active launch territory (as of this writing): Toronto, York Region, and
+Durham Region only.** Oakville & Burlington, Hamilton, Barrie, and Niagara
+Region are all `status: "coming-soon"` — fully built, but held back from
+"currently serving" because Good Neighbors isn't dispatching technicians
+there yet. `status` is what gates everything: `getActiveMarkets()` (used
+by the homepage "Currently Serving" section and the footer) only returns
+`"active"` markets, coming-soon market pages render a "Coming soon" badge
+instead of the same-day badge, suppress the same-day FAQ entries, and are
+marked `noIndex` (and excluded from `app/sitemap.ts`) so Google never
+indexes a page for a market that isn't live.
+
+**To activate a market:** add its real phone number to its `phone` field
+(or leave it unset to keep using the shared `DEFAULT_PHONE`), then flip
+`status` to `"active"`. That's it — the homepage, footer, nav, service-area
+hub, sitemap, and the market's own page all pick it up automatically. No
+other file needs to change, and the page never needs to be rebuilt.
 
 ## Pricing — intentionally absent
 
