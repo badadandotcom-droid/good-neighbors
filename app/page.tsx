@@ -14,7 +14,7 @@ import { faqJsonLd, pageMetadata } from "@/lib/seo";
 import { BRAND } from "@/lib/config/site";
 
 export const metadata = pageMetadata({
-  title: `${BRAND.name} | Humane, Local Wildlife Removal`,
+  title: "Humane, Local Wildlife Removal",
   description: BRAND.description,
   path: "/",
 });

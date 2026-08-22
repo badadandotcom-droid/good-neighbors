@@ -11,7 +11,7 @@ const STEPS: { title: string; body: string; icon: IllustrationId }[] = [
   },
   {
     title: "We come out and handle it",
-    body: "A technician arrives, confirms the situation, and removes the animal humanely and safely.",
+    body: "A technician arrives, confirms the situation, walks you through cost before any work begins, and removes the animal humanely and safely.",
     icon: "roofline",
   },
   {

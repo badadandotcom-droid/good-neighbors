@@ -16,15 +16,26 @@ export function pageMetadata(opts: {
   noIndex?: boolean;
 }): Metadata {
   const url = new URL(opts.path, BRAND.url).toString();
-  const title = opts.title === BRAND.name ? opts.title : `${opts.title} | ${BRAND.name}`;
+
+  // A title that already carries the brand (e.g. a market's "Good Neighbors
+  // Toronto") is rendered exactly as-is via `absolute`, bypassing the root
+  // layout's `%s | Good Neighbors` template so the brand name never doubles
+  // up. Every other nested page passes a bare title and lets that template
+  // append the suffix exactly once. The homepage is the one exception: it
+  // shares its route segment with the root layout, and Next's title
+  // template only applies to *descendant* segments — so at "/" the template
+  // never fires, and the brand suffix has to be added here explicitly too.
+  const alreadyBranded = opts.title === BRAND.name || opts.title.startsWith(`${BRAND.name} `);
+  const fullTitle = alreadyBranded ? opts.title : `${opts.title} | ${BRAND.name}`;
+  const isRoot = opts.path === "/";
 
   return {
-    title,
+    title: alreadyBranded || isRoot ? { absolute: fullTitle } : opts.title,
     description: opts.description,
     alternates: { canonical: url },
     robots: opts.noIndex ? { index: false, follow: false } : { index: true, follow: true },
     openGraph: {
-      title,
+      title: fullTitle,
       description: opts.description,
       url,
       siteName: BRAND.name,
@@ -33,7 +44,7 @@ export function pageMetadata(opts: {
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: fullTitle,
       description: opts.description,
     },
   };
