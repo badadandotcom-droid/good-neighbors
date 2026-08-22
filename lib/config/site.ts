@@ -27,16 +27,14 @@ export const BRAND = {
 } as const;
 
 /**
- * Default brand phone line. Individual markets may override this with a
- * local/tracking number via `market.phone`. Numbers use the North American
- * 555 exchange, which is reserved for fictional use and cannot be dialed —
- * this keeps the placeholder unmistakable to anyone editing the codebase
- * while still rendering like a normal phone number in the UI.
+ * Default brand phone line — the single GTA number covering the whole
+ * active launch territory for now. Individual markets may override this
+ * with their own local/tracking number later via `market.phone`.
  */
 export const DEFAULT_PHONE: PhoneConfig = {
-  display: "(416) 555-0142",
-  href: "tel:+14165550142",
-  isPlaceholder: true,
+  display: "(416) 700-4259",
+  href: "tel:+14167004259",
+  isPlaceholder: false,
 };
 
 export const CONTACT = {

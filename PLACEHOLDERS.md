@@ -10,7 +10,7 @@ single edit propagates everywhere.
 
 | Item | Current placeholder | Notes |
 | --- | --- | --- |
-| Brand phone | `(416) 555-0142` | Uses the North American `555` exchange, reserved for fiction — cannot be dialed. **Real GTA/CallRail number expected soon** — replace in `DEFAULT_PHONE` and flip `isPlaceholder` to `false`. One shared number currently covers every active market (see "Markets" below); no market has a `phone` override right now, so they all resolve to `DEFAULT_PHONE` via `getPhone()`. Add a market-specific number later by setting that market's `phone` field — no other file needs to change. |
+| Brand phone | ✅ Real (testing): `(416) 700-4259` | Provided by the client for testing — confirm it's the final production/CallRail number before launch. One shared number currently covers every active market (see "Markets" below); no market has a `phone` override right now, so they all resolve to `DEFAULT_PHONE` via `getPhone()`. Add a market-specific number later by setting that market's `phone` field — no other file needs to change. |
 | Email | ✅ Real: `hello@goodneighborswildlife.ca` | Confirmed by the client. |
 | Legal name | `Good Neighbors Wildlife Services` | Confirm against the actual registered entity name. |
 | Production domain | ✅ Real: `https://www.goodneighborswildlife.ca` | Confirmed by the client. Used for canonical URLs, sitemap, Open Graph, and JSON-LD. |
