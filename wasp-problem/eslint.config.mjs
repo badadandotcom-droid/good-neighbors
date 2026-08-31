@@ -12,10 +12,6 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    // Wasp Problem is a fully separate app/deployment living in this repo;
-    // it has its own lint config and must never be linted as part of this
-    // (Good Neighbors) project.
-    "wasp-problem/**",
   ]),
 ]);
 

@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/*
+ * ============================================================================
+ * WASP PROBLEM DESIGN TOKENS
+ * ============================================================================
+ * Matches the roadside lawn sign: safety yellow, black type, white for clean
+ * contrast where yellow-on-yellow would fail. No secondary palette, no
+ * gradients — this is a sign, not a brand system.
+ * ============================================================================
+ */
+@theme {
+  --color-yellow: #ffd400;
+  --color-black: #0a0a0a;
+  --color-white: #ffffff;
+
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-white);
+    color: var(--color-black);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-black);
+    outline-offset: 2px;
+  }
+}
