@@ -8,7 +8,7 @@ export const BRAND = {
   name: "Wasp Problem",
   url: "https://waspproblem.ca",
   description:
-    "Fast, professional wasp nest removal across the GTA, with focused service in Mississauga, Oakville and Burlington. Call Wasp Problem at 416-700-4259.",
+    "Fast, professional wasp, hornet and bee removal across the GTA, with focused service in Mississauga, Oakville and Burlington. Call Wasp Problem at 416-700-4259.",
 } as const;
 
 export const PHONE = {

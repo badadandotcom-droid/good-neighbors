@@ -29,11 +29,11 @@ export default function Home() {
           Problem?
         </h1>
         <p className="mx-auto mt-4 max-w-sm text-lg font-bold sm:text-xl">
-          Wasp Nest Removal Across the GTA
+          Wasp, Hornet &amp; Bee Removal Across the GTA
         </p>
         <p className="mx-auto mt-2 max-w-xs text-sm font-medium sm:max-w-sm">
-          Fast, professional wasp nest removal with focused service throughout Mississauga,
-          Oakville &amp; Burlington.
+          Fast, professional wasp, hornet and bee removal, with focused service throughout
+          Mississauga, Oakville &amp; Burlington.
         </p>
 
         <p className="mx-auto mt-5 inline-block rounded-sm bg-black px-3 py-1 text-xs font-black tracking-wide text-yellow uppercase">
@@ -50,7 +50,7 @@ export default function Home() {
         </PhoneLink>
 
         <p className="mx-auto mt-4 max-w-xs text-sm font-medium sm:max-w-sm">
-          Fast help for active wasp nests around your home.
+          Fast help for active wasp, hornet and bee problems around your home.
         </p>
         <p className="mx-auto mt-1 max-w-xs text-xs text-black/70 sm:max-w-sm">
           *{SAME_DAY_SERVICE.disclaimer}
