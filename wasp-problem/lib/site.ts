@@ -34,4 +34,12 @@ export const SERVICE_AREAS = [
   "Vaughan",
   "Whitby",
   "Oshawa",
+  "Mississauga",
+  "Oakville",
+  "Burlington",
 ] as const;
+
+export const SAME_DAY_SERVICE = {
+  headline: "Same-Day Service Available",
+  disclaimer: "Based on availability. Call to confirm for your area.",
+} as const;

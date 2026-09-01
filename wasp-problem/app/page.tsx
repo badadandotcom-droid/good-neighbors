@@ -1,5 +1,5 @@
 import { PhoneLink } from "@/components/PhoneLink";
-import { PHONE, SERVICE_AREAS } from "@/lib/site";
+import { PHONE, SAME_DAY_SERVICE, SERVICE_AREAS } from "@/lib/site";
 
 const STEPS = [
   {
@@ -83,9 +83,13 @@ export default function Home() {
           GTA.
         </p>
 
+        <p className="mx-auto mt-5 inline-block rounded-sm bg-black px-3 py-1 text-xs font-black tracking-wide text-yellow uppercase">
+          {SAME_DAY_SERVICE.headline}*
+        </p>
+
         <PhoneLink
           location="hero"
-          className="mt-7 inline-block w-full max-w-xs rounded-sm bg-black px-6 py-4 text-xl font-black tracking-tight text-yellow sm:w-auto"
+          className="mt-4 inline-block w-full max-w-xs rounded-sm bg-black px-6 py-4 text-xl font-black tracking-tight text-yellow sm:w-auto"
         >
           CALL NOW
           <br className="sm:hidden" />
@@ -94,6 +98,9 @@ export default function Home() {
 
         <p className="mx-auto mt-4 max-w-xs text-sm font-medium sm:max-w-sm">
           Fast help for active wasp nests around your home.
+        </p>
+        <p className="mx-auto mt-1 max-w-xs text-xs text-black/70 sm:max-w-sm">
+          *{SAME_DAY_SERVICE.disclaimer}
         </p>
       </section>
 
