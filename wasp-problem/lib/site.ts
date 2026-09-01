@@ -8,7 +8,7 @@ export const BRAND = {
   name: "Wasp Problem",
   url: "https://waspproblem.ca",
   description:
-    "Wasp nest removal in Toronto and the GTA. Seeing wasps entering your roof, soffit, siding or other part of your home? Call Wasp Problem at 416-700-4259.",
+    "Fast, professional wasp nest removal across the GTA, with focused service in Mississauga, Oakville and Burlington. Call Wasp Problem at 416-700-4259.",
 } as const;
 
 export const PHONE = {
@@ -38,6 +38,19 @@ export const SERVICE_AREAS = [
   "Oakville",
   "Burlington",
 ] as const;
+
+/**
+ * Campaign-priority cities (current Google Ads focus) — called out first and
+ * visually emphasized wherever SERVICE_AREAS is rendered, and each has its
+ * own landing page (see lib/locations.ts). Still part of SERVICE_AREAS above;
+ * this is just which three get top billing right now.
+ */
+export const FOCUS_SERVICE_AREAS = ["Mississauga", "Oakville", "Burlington"] as const;
+
+const FOCUS_SET = new Set<string>(FOCUS_SERVICE_AREAS);
+
+/** SERVICE_AREAS minus the focus cities — the "also serving" list shown after them. */
+export const SECONDARY_SERVICE_AREAS = SERVICE_AREAS.filter((area) => !FOCUS_SET.has(area));
 
 export const SAME_DAY_SERVICE = {
   headline: "Same-Day Service Available",

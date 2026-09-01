@@ -1,17 +1,23 @@
 import type { Metadata, Viewport } from "next";
+import Link from "next/link";
 import "./globals.css";
 import { PhoneLink } from "@/components/PhoneLink";
 import { StickyCallBar } from "@/components/StickyCallBar";
 import { BRAND, PHONE } from "@/lib/site";
 
+const HOME_TITLE = "Wasp Nest Removal – GTA, Mississauga, Oakville & Burlington";
+
 export const metadata: Metadata = {
   metadataBase: new URL(BRAND.url),
-  title: "Wasp Removal Toronto | Wasp Problem",
+  title: {
+    default: `${HOME_TITLE} | ${BRAND.name}`,
+    template: `%s | ${BRAND.name}`,
+  },
   description: BRAND.description,
   alternates: { canonical: BRAND.url },
   icons: { icon: "/icon", apple: "/apple-icon" },
   openGraph: {
-    title: "Wasp Removal Toronto | Wasp Problem",
+    title: HOME_TITLE,
     description: BRAND.description,
     url: BRAND.url,
     siteName: BRAND.name,
@@ -20,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Wasp Removal Toronto | Wasp Problem",
+    title: HOME_TITLE,
     description: BRAND.description,
   },
 };
@@ -39,10 +45,13 @@ function localBusinessJsonLd() {
     description: BRAND.description,
     url: BRAND.url,
     telephone: PHONE.href.replace("tel:", ""),
-    areaServed: {
-      "@type": "AdministrativeArea",
-      name: "Toronto and the Greater Toronto Area",
-    },
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Greater Toronto Area" },
+      { "@type": "City", name: "Mississauga" },
+      { "@type": "City", name: "Oakville" },
+      { "@type": "City", name: "Burlington" },
+      { "@type": "City", name: "Toronto" },
+    ],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Toronto",
@@ -67,9 +76,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <header className="flex items-center justify-between gap-3 bg-black px-4 py-3">
-          <span className="text-sm font-black tracking-tight text-yellow uppercase">
+          <Link href="/" className="text-sm font-black tracking-tight text-yellow uppercase">
             Wasp Problem
-          </span>
+          </Link>
           <PhoneLink
             location="header"
             className="rounded-sm bg-yellow px-3 py-1.5 text-sm font-black tracking-tight text-black"
