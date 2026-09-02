@@ -15,7 +15,6 @@ export const metadata: Metadata = {
   },
   description: BRAND.description,
   alternates: { canonical: BRAND.url },
-  icons: { icon: "/icon", apple: "/apple-icon" },
   openGraph: {
     title: HOME_TITLE,
     description: BRAND.description,
@@ -76,8 +75,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <header className="flex items-center justify-between gap-3 bg-black px-4 py-3">
-          <Link href="/" className="text-sm font-black tracking-tight text-yellow uppercase">
-            Wasp Problem
+          <Link href="/" className="flex items-center gap-1">
+            {/* eslint-disable-next-line @next/next/no-img-element -- tiny static brand mark, no benefit from next/image here */}
+            <img
+              src="/brand/wasp-icon-header.png"
+              alt=""
+              width={20}
+              height={20}
+              className="h-5 w-5 shrink-0 rounded-sm"
+            />
+            <span className="text-sm font-black tracking-tight text-yellow uppercase">
+              Wasp Problem
+            </span>
           </Link>
           <PhoneLink
             location="header"
