@@ -62,3 +62,13 @@ export const PHOTOGRAPHY_SLOTS: Record<PhotoSlotId, PhotoSlot> = {
 export function getPhotoSlot(id: PhotoSlotId): PhotoSlot {
   return PHOTOGRAPHY_SLOTS[id];
 }
+
+/**
+ * Real production photography, keyed by slot. Once a slot has an entry
+ * here, every `<PhotoPlaceholder slot="...">` instance using it renders
+ * the real photo instead of the synthetic placeholder — no call-site
+ * changes needed. Add entries here as approved photos come in.
+ */
+export const REAL_PHOTOS: Partial<Record<PhotoSlotId, string>> = {
+  inspection: "/images/inspection.png",
+};

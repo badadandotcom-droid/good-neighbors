@@ -1,6 +1,7 @@
+import Image from "next/image";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { CornerMarks } from "@/components/shared/CornerMarks";
-import { getPhotoSlot } from "@/lib/data/photography";
+import { getPhotoSlot, REAL_PHOTOS } from "@/lib/data/photography";
 import type { IllustrationId, PhotoSlotId } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -33,6 +34,21 @@ export function PhotoPlaceholder({
   aspect?: string;
 }) {
   const { label, brief } = getPhotoSlot(slot);
+  const realPhoto = REAL_PHOTOS[slot];
+
+  if (realPhoto) {
+    return (
+      <figure className={cn("relative isolate overflow-hidden rounded-sm", aspect, className)}>
+        <Image
+          src={realPhoto}
+          alt={note ?? brief}
+          fill
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          className="object-cover object-center"
+        />
+      </figure>
+    );
+  }
 
   const tones = {
     pine: "bg-[linear-gradient(160deg,var(--color-pine-500),var(--color-pine-700))] text-bone-50",
