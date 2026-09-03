@@ -97,6 +97,8 @@ export interface WildlifeEntry {
   /** Short paragraph on the humane approach for this situation */
   approach: string;
   iconId: IllustrationId;
+  /** Species-specific real photo, overriding the shared REAL_PHOTOS["detail"] default for this entry only */
+  photoOverride?: string;
 }
 
 export interface FaqItem {

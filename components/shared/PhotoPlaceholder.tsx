@@ -23,6 +23,7 @@ export function PhotoPlaceholder({
   corner = "bottom-right",
   className,
   aspect = "aspect-[4/5]",
+  src,
 }: {
   slot: PhotoSlotId;
   icon: IllustrationId;
@@ -32,9 +33,11 @@ export function PhotoPlaceholder({
   corner?: "bottom-right" | "top-left";
   className?: string;
   aspect?: string;
+  /** Instance-specific real photo, taking precedence over REAL_PHOTOS[slot] — for a one-off swap without affecting every other instance of this slot. */
+  src?: string;
 }) {
   const { label, brief } = getPhotoSlot(slot);
-  const realPhoto = REAL_PHOTOS[slot];
+  const realPhoto = src ?? REAL_PHOTOS[slot];
 
   if (realPhoto) {
     return (

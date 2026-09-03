@@ -30,6 +30,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     approach:
       "Raccoon removal is handled with particular care in spring and early summer, when young are often present. Our technicians confirm whether a litter is involved before deciding on next steps, since separating a mother from her young unnecessarily is neither humane nor effective — she'll simply try to get back in.",
     iconId: "raccoon",
+    photoOverride: "/images/raccoon-detail.png",
   },
   {
     slug: "squirrels",

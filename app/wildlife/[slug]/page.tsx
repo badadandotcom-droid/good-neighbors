@@ -91,6 +91,7 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
               corner={imageOnLeft ? "top-left" : "bottom-right"}
               aspect="aspect-[4/3]"
               note={`${entry.singular} — entry point detail`}
+              src={entry.photoOverride}
             />
           </div>
         </Container>
