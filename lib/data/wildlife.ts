@@ -70,6 +70,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     approach:
       "Nesting birds are handled with attention to timing and any applicable protections for active nests. Our technicians will explain what they find and the appropriate next step for the specific situation.",
     iconId: "bird",
+    photoOverride: "/images/bird-detail.png",
   },
   {
     slug: "bats",
