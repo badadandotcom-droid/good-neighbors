@@ -74,4 +74,5 @@ export const REAL_PHOTOS: Partial<Record<PhotoSlotId, string>> = {
   conversation: "/images/conversation.png",
   detail: "/images/detail.png",
   arrival: "/images/arrival.png",
+  streetscape: "/images/streetscape.png",
 };
