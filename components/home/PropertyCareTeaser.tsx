@@ -4,8 +4,8 @@ import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
 
 export function PropertyCareTeaser() {
   return (
-    <section className="border-b border-stone-300 py-20 sm:py-28">
-      <Container className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
+    <section className="border-b border-stone-300 py-14 sm:py-28">
+      <Container className="grid grid-cols-1 items-center gap-6 sm:gap-10 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-5">
           <PhotoPlaceholder slot="inspection" icon="soffit-vent" tone="wood" aspect="aspect-[4/3]" corner="top-left" />
         </div>

@@ -18,17 +18,17 @@ const STEPS: { title: string; body: string }[] = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="scroll-mt-20 border-b border-stone-300 bg-bone-50 py-20 sm:py-28">
+    <section id="how-it-works" className="scroll-mt-20 border-b border-stone-300 bg-bone-50 py-14 sm:py-28">
       <Container>
         <SectionHeading eyebrow="How It Works" title="Three steps. No guesswork required." />
 
-        <ol className="mt-16 grid grid-cols-1 gap-12 sm:mt-20 sm:grid-cols-3 sm:gap-10">
+        <ol className="mt-8 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-3 sm:gap-10">
           {STEPS.map((step, i) => (
-            <li key={step.title} className="flex flex-col gap-3">
-              <span className="font-display text-6xl leading-none text-brass-400" aria-hidden="true">
+            <li key={step.title} className="flex flex-col gap-2 sm:gap-3">
+              <span className="font-display text-4xl leading-none text-brass-400 sm:text-6xl" aria-hidden="true">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-2 font-display text-2xl text-charcoal">{step.title}</h3>
+              <h3 className="mt-1 font-display text-2xl text-charcoal sm:mt-2">{step.title}</h3>
               <p className="max-w-[32ch] text-[15px] leading-relaxed text-ink-700">{step.body}</p>
             </li>
           ))}

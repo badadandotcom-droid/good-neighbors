@@ -27,7 +27,7 @@ export function TrustBar({ market }: { market?: Market }) {
 
   return (
     <section className="border-b border-stone-300 bg-charcoal text-bone-50">
-      <Container className="grid grid-cols-1 gap-10 py-16 sm:py-20 lg:grid-cols-12 lg:gap-16 lg:py-24">
+      <Container className="grid grid-cols-1 gap-6 py-12 sm:gap-10 sm:py-20 lg:grid-cols-12 lg:gap-16 lg:py-24">
         <div className="lg:col-span-5">
           <span className="block h-px w-10 bg-brass-400" aria-hidden="true" />
           <h3 className="mt-5 max-w-xs text-balance font-display text-3xl leading-[1.1] text-bone-50 sm:text-4xl">

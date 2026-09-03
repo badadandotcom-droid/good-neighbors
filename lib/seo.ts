@@ -71,7 +71,7 @@ export function localBusinessJsonLd(market?: Market) {
     },
     description: market ? market.seoDescription : BRAND.description,
     url: market ? `${BRAND.url}/service-areas/${market.slug}` : BRAND.url,
-    telephone: phone.isPlaceholder ? undefined : phone.display,
+    telephone: phone.isPlaceholder ? undefined : phone.href.replace(/^tel:/, ""),
     areaServed: areaServed.map((name) => ({ "@type": "AdministrativeArea", name })),
     email: CONTACT.email,
   };

@@ -28,17 +28,17 @@ export function Hero({ market }: { market?: Market }) {
         aria-hidden="true"
       />
 
-      <Container className="relative grid grid-cols-1 items-center gap-12 py-14 sm:py-20 lg:grid-cols-12 lg:gap-6 lg:py-16">
+      <Container className="relative grid grid-cols-1 items-center gap-6 py-8 sm:gap-12 sm:py-20 lg:grid-cols-12 lg:gap-6 lg:py-16">
         <div className="lg:col-span-7">
           <SameDayBadge market={market} />
 
-          <h1 className="mt-6 max-w-xl text-balance font-display text-[2.25rem] leading-[1.04] text-charcoal sm:text-6xl lg:text-[4.6rem]">
+          <h1 className="mt-4 max-w-xl text-balance font-display text-[2.25rem] leading-[1.04] text-charcoal sm:mt-6 sm:text-6xl lg:text-[4.6rem]">
             {getHeroHeadline(market)}
           </h1>
 
-          <p className="mt-4 font-display text-xl italic text-pine-600 sm:text-2xl">{getPositioningLine(market)}</p>
+          <p className="mt-3 font-display text-xl italic text-pine-600 sm:mt-4 sm:text-2xl">{getPositioningLine(market)}</p>
 
-          <p className="mt-6 max-w-md text-lg leading-relaxed text-ink-700 text-pretty">
+          <p className="mt-4 hidden max-w-md text-lg leading-relaxed text-ink-700 text-pretty sm:block sm:mt-6">
             One call brings a trained technician to your door to handle it carefully and humanely — without
             turning into a bigger project.
           </p>

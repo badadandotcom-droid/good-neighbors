@@ -32,8 +32,8 @@ export const BRAND = {
  * with their own local/tracking number later via `market.phone`.
  */
 export const DEFAULT_PHONE: PhoneConfig = {
-  display: "(416) 700-4259",
-  href: "tel:+14167004259",
+  display: "(416) 900-WILD",
+  href: "tel:+14169009453",
   isPlaceholder: false,
 };
 

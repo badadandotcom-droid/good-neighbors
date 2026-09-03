@@ -8,7 +8,7 @@ export function ServiceAreasTeaser() {
   const markets = getActiveMarkets();
 
   return (
-    <section className="border-b border-stone-300 bg-bone-50 py-20 sm:py-28">
+    <section className="border-b border-stone-300 bg-bone-50 py-14 sm:py-28">
       <Container>
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading
@@ -25,7 +25,7 @@ export function ServiceAreasTeaser() {
           </Link>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-12 sm:grid-cols-3 lg:grid-cols-6">
           {markets.map((market) => (
             <Link
               key={market.slug}
