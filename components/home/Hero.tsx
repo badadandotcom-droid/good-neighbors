@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { PhoneLink } from "@/components/shared/PhoneLink";
 import { Container } from "@/components/shared/Container";
@@ -7,6 +8,14 @@ import { Illustration } from "@/components/illustrations/Illustration";
 import { getHeroHeadline, getPhone, getPositioningLine } from "@/lib/config/resolvers";
 import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
 import type { Market } from "@/lib/types";
+
+/**
+ * TEMPORARY visual test — real "Hero Candidate #2" photo vs. the placeholder
+ * system. Flip to false (or delete this const + the branch below) to revert
+ * to PhotoPlaceholder instantly; nothing else about the placeholder system
+ * has been touched.
+ */
+const HERO_TEST_IMAGE = true;
 
 export function Hero({ market }: { market?: Market }) {
   const phone = getPhone(market);
@@ -47,13 +56,26 @@ export function Hero({ market }: { market?: Market }) {
         </div>
 
         <div className="relative lg:col-span-5 lg:-mr-6 xl:-mr-16">
-          <PhotoPlaceholder
-            slot="arrival"
-            icon="roofline"
-            tone="pine"
-            aspect="aspect-[4/5] sm:aspect-[5/6]"
-            className="shadow-deep"
-          />
+          {HERO_TEST_IMAGE ? (
+            <div className="relative isolate aspect-[4/5] overflow-hidden rounded-sm shadow-deep sm:aspect-[5/6]">
+              <Image
+                src="/images/hero-candidate-2.jpg"
+                alt="A Good Neighbors technician arriving at a residential property"
+                fill
+                priority
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover object-center"
+              />
+            </div>
+          ) : (
+            <PhotoPlaceholder
+              slot="arrival"
+              icon="roofline"
+              tone="pine"
+              aspect="aspect-[4/5] sm:aspect-[5/6]"
+              className="shadow-deep"
+            />
+          )}
           <div className="absolute -top-7 -left-7 hidden w-52 rounded-sm border border-stone-300 bg-bone-50 p-5 shadow-card sm:block">
             <span className="mb-2 block h-px w-6 bg-brass-400" aria-hidden="true" />
             <p className="font-display text-2xl leading-tight text-charcoal">Humane by default</p>
