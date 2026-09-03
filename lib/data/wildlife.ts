@@ -108,6 +108,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     approach:
       "Bat situations are assessed carefully, including timing considerations tied to local wildlife regulations. Our technicians will walk you through what's involved before any work begins.",
     iconId: "bat",
+    photoOverride: "/images/bat-detail.png",
   },
   {
     slug: "something-in-the-attic",
