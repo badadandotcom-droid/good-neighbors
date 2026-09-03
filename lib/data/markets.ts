@@ -41,7 +41,7 @@ export const MARKETS: Market[] = [
     heroBlurb:
       "From century homes in the Annex to new builds in Scarborough, we handle wildlife in Toronto's attics, walls, and rooflines with the same careful, humane approach every time.",
     seoDescription:
-      "Humane, same-day wildlife removal in Toronto. Raccoons, squirrels, skunks, birds, and bats — handled quickly and professionally by local technicians.",
+      "Humane, same-day wildlife removal in Toronto. Raccoons, squirrels, birds, and bats — handled quickly and professionally by local technicians.",
   },
   {
     slug: "york-region",

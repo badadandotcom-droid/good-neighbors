@@ -33,7 +33,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 const PHOTO_TONE: Record<string, "pine" | "wood" | "charcoal"> = {
   raccoons: "charcoal",
   squirrels: "wood",
-  skunks: "charcoal",
   birds: "wood",
   bats: "charcoal",
 };

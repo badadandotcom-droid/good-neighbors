@@ -138,7 +138,6 @@ export interface PhotoSlot {
 export type IllustrationId =
   | "raccoon"
   | "squirrel"
-  | "skunk"
   | "bird"
   | "bat"
   | "attic"

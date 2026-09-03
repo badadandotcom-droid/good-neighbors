@@ -53,25 +53,6 @@ export const WILDLIFE: WildlifeEntry[] = [
     photoOverride: "/images/squirrel-detail.png",
   },
   {
-    slug: "skunks",
-    category: "species",
-    name: "Skunks",
-    singular: "Skunk",
-    summary: "Ground-level burrowers, usually found under decks, sheds, or porches rather than in attics.",
-    intro:
-      "Skunks are almost always a ground-level issue — under a deck, shed, porch, or in a gap beneath a foundation — rather than an attic problem. They're not aggressive by nature, but a startled skunk close to a home is understandably unwelcome. Handling them calmly and correctly matters more than with most other species.",
-    commonSigns: [
-      "A skunk odor near a deck, shed, or foundation, even without a direct sighting",
-      "Small, cone-shaped digging in the lawn (a sign skunks are foraging for grubs)",
-      "A visible burrow entrance under a structure",
-      "Sightings at dusk near a specific part of the yard",
-    ],
-    commonAreas: ["Under decks and porches", "Sheds", "Foundation gaps", "Crawlspaces"],
-    approach:
-      "Skunk situations are approached deliberately and quietly, minimizing the chance of the animal feeling cornered. Our technicians assess the burrow location and the safest way to encourage the animal to relocate before any exclusion work begins.",
-    iconId: "skunk",
-  },
-  {
     slug: "birds",
     category: "species",
     name: "Birds",

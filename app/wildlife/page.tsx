@@ -11,7 +11,7 @@ import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
 export const metadata = pageMetadata({
   title: "Wildlife Removal",
   description:
-    "Humane removal for raccoons, squirrels, skunks, birds, and bats — plus help for when you're not sure what's gotten into your attic or walls.",
+    "Humane removal for raccoons, squirrels, birds, and bats — plus help for when you're not sure what's gotten into your attic or walls.",
   path: "/wildlife",
 });
 
