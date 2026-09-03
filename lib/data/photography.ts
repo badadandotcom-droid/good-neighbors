@@ -72,4 +72,5 @@ export function getPhotoSlot(id: PhotoSlotId): PhotoSlot {
 export const REAL_PHOTOS: Partial<Record<PhotoSlotId, string>> = {
   inspection: "/images/inspection.png",
   conversation: "/images/conversation.png",
+  detail: "/images/detail.png",
 };
