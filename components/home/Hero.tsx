@@ -23,19 +23,18 @@ export function Hero({ market }: { market?: Market }) {
         <div className="lg:col-span-7">
           <SameDayBadge market={market} />
 
-          <h1 className="mt-6 max-w-xl text-balance font-display text-[2.6rem] leading-[1.04] text-charcoal sm:text-6xl lg:text-[4.6rem]">
+          <h1 className="mt-6 max-w-xl text-balance font-display text-[2.25rem] leading-[1.04] text-charcoal sm:text-6xl lg:text-[4.6rem]">
             {getHeroHeadline(market)}
           </h1>
 
           <p className="mt-4 font-display text-xl italic text-pine-600 sm:text-2xl">{getPositioningLine(market)}</p>
 
           <p className="mt-6 max-w-md text-lg leading-relaxed text-ink-700 text-pretty">
-            One call brings a trained technician to your door to handle the raccoon, squirrel, or unknown
-            visitor that&apos;s made itself at home — carefully, humanely, and without turning it into a bigger
-            project than it needs to be.
+            One call brings a trained technician to your door to handle it carefully and humanely — without
+            turning into a bigger project.
           </p>
 
-          <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+          <div className="mt-9 hidden gap-4 sm:flex sm:flex-row sm:items-center">
             <CTAButton href="/contact" size="lg" event="cta_get_help_now" eventMeta={{ location: "hero" }}>
               {PRIMARY_CTA_LABEL}
             </CTAButton>
