@@ -12,7 +12,7 @@ single edit propagates everywhere.
 | --- | --- | --- |
 | Brand phone | ✅ Real (permanent): `(416) 900-WILD` | The permanent Good Neighbors Wildlife number. Display text uses the vanity spelling; `tel:+14169009453` and structured data both resolve to the real digits (`WILD` = `9453` on a phone keypad). One shared number currently covers every active market (see "Markets" below); no market has a `phone` override right now, so they all resolve to `DEFAULT_PHONE` via `getPhone()`. Add a market-specific number later by setting that market's `phone` field — no other file needs to change. |
 | Email | ✅ Real: `hello@goodneighborswildlife.ca` | Confirmed by the client. |
-| Legal name | `Good Neighbors Wildlife Services` | Confirm against the actual registered entity name. |
+| Legal name | ✅ Real: `Good Neighbors Wildlife Inc.` | Confirmed registered legal entity name. Used only in the footer copyright line — every customer-facing "Good Neighbors" / "Good Neighbors Wildlife" mention elsewhere uses the separate trading name and is unaffected. |
 | Production domain | ✅ Real: `https://www.goodneighborswildlife.ca` | Confirmed by the client. Used for canonical URLs, sitemap, Open Graph, and JSON-LD. |
 | Physical address | Not published | `CONTACT.address` is `null` by design — add a real address object (and wire it into `lib/seo.ts` `localBusinessJsonLd`) only once one exists. |
 | Operating hours | "Phone lines open 7 days a week." | Confirm actual hours. |

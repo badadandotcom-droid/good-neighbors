@@ -17,7 +17,7 @@ import type { Market, PhoneConfig, SameDayServiceConfig } from "@/lib/types";
 
 export const BRAND = {
   name: "Good Neighbors",
-  legalName: "Good Neighbors Wildlife Services", // PLACEHOLDER — confirm registered legal entity name
+  legalName: "Good Neighbors Wildlife Inc.", // Confirmed registered legal entity name
   tagline: "Humane. Local. Same-Day Service.",
   taglineFallback: "Humane. Local. Fast Response.",
   foundingRegion: "Southern Ontario, Canada",
