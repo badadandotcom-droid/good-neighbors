@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/shared/Container";
 import { SectionHeading } from "@/components/shared/SectionHeading";
@@ -83,7 +84,14 @@ export default function WildlifePage() {
                 className="group flex flex-col gap-4 rounded-sm border border-stone-300 bg-white p-6 transition-colors hover:border-pine-500"
               >
                 <span className="flex h-14 w-14 items-center justify-center rounded-full bg-pine-50">
-                  <Illustration id={s.iconId} weight="bold" className="h-8 w-8 text-pine-600" />
+                  <Image
+                    src={`/images/wildlife-icons/${s.iconId}.png`}
+                    alt=""
+                    aria-hidden="true"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 object-contain"
+                  />
                 </span>
                 <div>
                   <h3 className="font-display text-xl text-charcoal">{s.name}</h3>

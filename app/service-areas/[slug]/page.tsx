@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -132,7 +133,14 @@ export default async function MarketPage({ params }: { params: Promise<{ slug: s
                 className="group flex flex-col items-center gap-3 rounded-sm border border-stone-300 bg-bone-50 px-4 py-6 text-center transition-all duration-200 hover:-translate-y-0.5 hover:border-pine-500 hover:shadow-card"
               >
                 <span className="flex h-12 w-12 items-center justify-center rounded-full bg-pine-100">
-                  <Illustration id={s.iconId} weight="bold" className="h-7 w-7 text-pine-600" />
+                  <Image
+                    src={`/images/wildlife-icons/${s.iconId}.png`}
+                    alt=""
+                    aria-hidden="true"
+                    width={28}
+                    height={28}
+                    className="h-7 w-7 object-contain"
+                  />
                 </span>
                 <span className="font-display text-base text-charcoal">{s.name}</span>
               </Link>

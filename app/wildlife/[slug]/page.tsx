@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -69,7 +70,18 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
               &larr; Wildlife Removal
             </Link>
             <div className="mt-4 flex items-center gap-4">
-              <Illustration id={entry.iconId} weight="bold" className="h-14 w-14 shrink-0 text-pine-600" />
+              {entry.category === "species" ? (
+                <Image
+                  src={`/images/wildlife-icons/${entry.iconId}.png`}
+                  alt=""
+                  aria-hidden="true"
+                  width={56}
+                  height={56}
+                  className="h-14 w-14 shrink-0 object-contain"
+                />
+              ) : (
+                <Illustration id={entry.iconId} weight="bold" className="h-14 w-14 shrink-0 text-pine-600" />
+              )}
               <h1 className="text-balance font-display text-4xl leading-[1.02] text-charcoal sm:text-5xl">
                 {entry.name} Removal
               </h1>
@@ -159,7 +171,14 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
                   className="group flex flex-col items-center gap-3 rounded-sm border border-stone-300 bg-white px-4 py-6 text-center transition-all duration-200 hover:-translate-y-0.5 hover:border-pine-500 hover:shadow-card"
                 >
                   <span className="flex h-14 w-14 items-center justify-center rounded-full bg-pine-50">
-                    <Illustration id={r.iconId} weight="bold" className="h-8 w-8 text-pine-600" />
+                    <Image
+                      src={`/images/wildlife-icons/${r.iconId}.png`}
+                      alt=""
+                      aria-hidden="true"
+                      width={32}
+                      height={32}
+                      className="h-8 w-8 object-contain"
+                    />
                   </span>
                   <span className="font-display text-base text-charcoal">{r.name}</span>
                 </Link>
