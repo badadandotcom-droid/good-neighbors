@@ -5,8 +5,6 @@ import { Illustration } from "@/components/illustrations/Illustration";
 import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
-const MAX_FILES = 6;
-
 /**
  * Photo capture UX. Selection, drag-and-drop, thumbnail preview, and
  * removal are fully functional. What's NOT connected: actual upload to
@@ -16,7 +14,15 @@ const MAX_FILES = 6;
  * (S3/Cloudinary/etc.) and include the resulting URLs in the submission
  * payload in app/api/get-help/route.ts when ready.
  */
-export function PhotoUpload({ onFilesChange }: { onFilesChange?: (files: File[]) => void }) {
+export function PhotoUpload({
+  hint,
+  maxFiles = 6,
+  onFilesChange,
+}: {
+  hint: string;
+  maxFiles?: number;
+  onFilesChange?: (files: File[]) => void;
+}) {
   const [files, setFiles] = useState<File[]>([]);
   const [dragActive, setDragActive] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -30,7 +36,7 @@ export function PhotoUpload({ onFilesChange }: { onFilesChange?: (files: File[])
     if (!list) return;
     const incoming = Array.from(list).filter((f) => f.type.startsWith("image/"));
     setFiles((prev) => {
-      const next = [...prev, ...incoming].slice(0, MAX_FILES);
+      const next = [...prev, ...incoming].slice(0, maxFiles);
       if (incoming.length) trackEvent("photo_added", { count: incoming.length });
       return next;
     });
@@ -43,8 +49,8 @@ export function PhotoUpload({ onFilesChange }: { onFilesChange?: (files: File[])
 
   return (
     <div>
-      <label htmlFor={inputId} className="mb-2 block text-sm font-medium text-ink">
-        Photos <span className="font-normal text-stone-500">(optional)</span>
+      <label htmlFor={inputId} className="sr-only">
+        Photos
       </label>
 
       <div
@@ -65,15 +71,17 @@ export function PhotoUpload({ onFilesChange }: { onFilesChange?: (files: File[])
           if (e.key === "Enter" || e.key === " ") inputRef.current?.click();
         }}
         className={cn(
-          "flex cursor-pointer flex-col items-center justify-center gap-2 rounded-sm border border-dashed px-6 py-8 text-center transition-colors",
+          "flex cursor-pointer flex-col items-center justify-center gap-2 rounded-sm border border-dashed px-6 py-7 text-center transition-colors",
           dragActive ? "border-pine-500 bg-pine-50" : "border-stone-400 bg-bone-50 hover:border-stone-500",
         )}
       >
-        <Illustration id="camera" className="h-7 w-7 text-stone-500" />
+        <Illustration id="camera" className="h-6 w-6 text-stone-500" />
         <p className="text-sm text-ink-700">
           <span className="font-medium text-pine-600">Add photos</span> or drag them here
         </p>
-        <p className="text-xs text-stone-500">The animal, entry point, roofline, or any damage — up to {MAX_FILES} images</p>
+        <p className="text-xs text-stone-500">
+          {hint} — up to {maxFiles} images
+        </p>
         <input
           ref={inputRef}
           id={inputId}
@@ -92,11 +100,6 @@ export function PhotoUpload({ onFilesChange }: { onFilesChange?: (files: File[])
           ))}
         </ul>
       )}
-
-      <p className="mt-2 text-xs text-stone-500">
-        Photo upload isn&apos;t connected to our system yet — once you&apos;re in touch, you&apos;re welcome to text
-        photos to the number above instead.
-      </p>
     </div>
   );
 }

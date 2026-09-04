@@ -37,7 +37,7 @@ export default function ContactPage() {
               <PhoneLink phone={phone} location="contact-sidebar" showIcon={false} className="text-lg text-charcoal" />
             </div>
             <div className="flex items-center gap-3">
-              <Illustration id="camera" className="h-5 w-5 shrink-0 text-pine-600" />
+              <Illustration id="mail" className="h-5 w-5 shrink-0 text-pine-600" />
               <a href={`mailto:${CONTACT.email}`} className="text-[15px] text-ink-700 hover:text-charcoal">
                 {CONTACT.email}
               </a>

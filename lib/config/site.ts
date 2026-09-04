@@ -17,30 +17,28 @@ import type { Market, PhoneConfig, SameDayServiceConfig } from "@/lib/types";
 
 export const BRAND = {
   name: "Good Neighbors",
-  legalName: "Good Neighbors Wildlife Services", // PLACEHOLDER — confirm registered legal entity name
+  legalName: "Good Neighbors Wildlife Inc.", // Confirmed registered legal entity name
   tagline: "Humane. Local. Same-Day Service.",
   taglineFallback: "Humane. Local. Fast Response.",
   foundingRegion: "Southern Ontario, Canada",
   description:
     "Good Neighbors provides humane, professional wildlife removal for homes across Southern Ontario, with same-day service available for requests received before 4 PM.",
-  url: "https://www.goodneighbors.example", // PLACEHOLDER — production domain not yet assigned
+  url: "https://www.goodneighborswildlife.ca",
 } as const;
 
 /**
- * Default brand phone line. Individual markets may override this with a
- * local/tracking number via `market.phone`. Numbers use the North American
- * 555 exchange, which is reserved for fictional use and cannot be dialed —
- * this keeps the placeholder unmistakable to anyone editing the codebase
- * while still rendering like a normal phone number in the UI.
+ * Default brand phone line — the single GTA number covering the whole
+ * active launch territory for now. Individual markets may override this
+ * with their own local/tracking number later via `market.phone`.
  */
 export const DEFAULT_PHONE: PhoneConfig = {
-  display: "(416) 555-0142",
-  href: "tel:+14165550142",
-  isPlaceholder: true,
+  display: "(416) 900-WILD",
+  href: "tel:+14169009453",
+  isPlaceholder: false,
 };
 
 export const CONTACT = {
-  email: "hello@goodneighbors.example", // PLACEHOLDER — uses the IANA-reserved .example TLD
+  email: "hello@goodneighborswildlife.ca",
   // No physical address is published yet. Good Neighbors is presented as a
   // service-area business rather than a storefront; add a real address
   // here (and to the LocalBusiness schema in lib/seo.ts) only once one exists.

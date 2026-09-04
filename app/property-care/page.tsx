@@ -42,7 +42,10 @@ export default function PropertyCarePage() {
       <section className="border-b border-stone-300 py-16 sm:py-24">
         <Container className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
-            <p className="text-xs font-semibold tracking-[0.18em] text-pine-600 uppercase">After the Immediate Job</p>
+            <p className="flex items-center gap-2.5 text-xs font-semibold tracking-[0.18em] text-pine-600 uppercase">
+              <span className="h-px w-6 bg-brass-400" aria-hidden="true" />
+              After the Immediate Job
+            </p>
             <h1 className="mt-3 text-balance font-display text-4xl leading-[1.06] text-charcoal sm:text-5xl">
               Property care & prevention
             </h1>
@@ -57,7 +60,7 @@ export default function PropertyCarePage() {
             </CTAButton>
           </div>
           <div className="lg:col-span-5">
-            <PhotoPlaceholder icon="inspection" tone="bone" aspect="aspect-[4/3]" caption="technician inspecting rooflines" />
+            <PhotoPlaceholder slot="inspection" icon="inspection" tone="wood" aspect="aspect-[4/3]" />
           </div>
         </Container>
       </section>

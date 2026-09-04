@@ -10,11 +10,10 @@ single edit propagates everywhere.
 
 | Item | Current placeholder | Notes |
 | --- | --- | --- |
-| Brand phone | `(416) 555-0142` | Uses the North American `555` exchange, reserved for fiction — cannot be dialed. Replace with a real (ideally CallRail tracking) number. |
-| Market phones | See `lib/data/markets.ts` | Each market has its own `555` number in a locally-appropriate area code (416/905/289/705), same placeholder convention. |
-| Email | `hello@goodneighbors.example` | Uses the IANA-reserved `.example` TLD, which can never resolve to a real inbox. |
-| Legal name | `Good Neighbors Wildlife Services` | Confirm against the actual registered entity name. |
-| Production domain | `https://www.goodneighbors.example` | Used for canonical URLs, sitemap, Open Graph, and JSON-LD. Update once a domain is assigned. |
+| Brand phone | ✅ Real (permanent): `(416) 900-WILD` | The permanent Good Neighbors Wildlife number. Display text uses the vanity spelling; `tel:+14169009453` and structured data both resolve to the real digits (`WILD` = `9453` on a phone keypad). One shared number currently covers every active market (see "Markets" below); no market has a `phone` override right now, so they all resolve to `DEFAULT_PHONE` via `getPhone()`. Add a market-specific number later by setting that market's `phone` field — no other file needs to change. |
+| Email | ✅ Real: `hello@goodneighborswildlife.ca` | Confirmed by the client. |
+| Legal name | ✅ Real: `Good Neighbors Wildlife Inc.` | Confirmed registered legal entity name. Used only in the footer copyright line — every customer-facing "Good Neighbors" / "Good Neighbors Wildlife" mention elsewhere uses the separate trading name and is unaffected. |
+| Production domain | ✅ Real: `https://www.goodneighborswildlife.ca` | Confirmed by the client. Used for canonical URLs, sitemap, Open Graph, and JSON-LD. |
 | Physical address | Not published | `CONTACT.address` is `null` by design — add a real address object (and wire it into `lib/seo.ts` `localBusinessJsonLd`) only once one exists. |
 | Operating hours | "Phone lines open 7 days a week." | Confirm actual hours. |
 | Social links | `null` (Instagram, Facebook, Google Business Profile) | Not rendered anywhere while null; add real URLs when accounts exist. |
@@ -49,11 +48,15 @@ traffic and should be smoke-tested before relying on it seasonally.
 ## Photo upload — `components/forms/PhotoUpload.tsx`
 
 Selection, drag-and-drop, thumbnail preview, and removal are fully
-functional client-side. **Files are not uploaded anywhere** — there's no
-object storage (S3/Cloudinary/etc.) connected, so photos are intentionally
-excluded from the `/api/get-help` submission payload rather than silently
-failing to send. The UI tells users this and suggests texting photos
-instead. Wire storage + include resulting URLs in the payload when ready.
+functional client-side, in two separate instances on the Get Help form:
+general evidence photos, and a distinct "can you see where it's getting
+in?" entry-point section with a safety warning against climbing to get the
+shot. **Files are not uploaded anywhere** — there's no object storage
+(S3/Cloudinary/etc.) connected, so photos are intentionally excluded from
+the `/api/get-help` submission payload rather than silently failing to
+send. The UI tells users this and suggests texting photos instead. Wire
+storage + include resulting URLs (tagged by which section they came from)
+in the payload when ready.
 
 ## Legal pages — `app/privacy/page.tsx`, `app/terms/page.tsx`
 
@@ -88,9 +91,23 @@ exactly this reason.
 The seven markets included (Toronto, York Region, Durham Region, Oakville
 & Burlington, Hamilton, Barrie, Niagara Region) are a **launch-planning
 snapshot**, not a locked list. Phone numbers are placeholders per above.
-`Niagara Region` is marked `status: "coming-soon"` as a working example of
-that state — flip statuses, add, or remove markets here; no other file
-needs to change (see the architecture note at the top of that file).
+
+**Active launch territory (as of this writing): Toronto, York Region, and
+Durham Region only.** Oakville & Burlington, Hamilton, Barrie, and Niagara
+Region are all `status: "coming-soon"` — fully built, but held back from
+"currently serving" because Good Neighbors isn't dispatching technicians
+there yet. `status` is what gates everything: `getActiveMarkets()` (used
+by the homepage "Currently Serving" section and the footer) only returns
+`"active"` markets, coming-soon market pages render a "Coming soon" badge
+instead of the same-day badge, suppress the same-day FAQ entries, and are
+marked `noIndex` (and excluded from `app/sitemap.ts`) so Google never
+indexes a page for a market that isn't live.
+
+**To activate a market:** add its real phone number to its `phone` field
+(or leave it unset to keep using the shared `DEFAULT_PHONE`), then flip
+`status` to `"active"`. That's it — the homepage, footer, nav, service-area
+hub, sitemap, and the market's own page all pick it up automatically. No
+other file needs to change, and the page never needs to be rebuilt.
 
 ## Pricing — intentionally absent
 

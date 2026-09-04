@@ -27,7 +27,15 @@ export function SectionHeading({
   return (
     <div className={cn("max-w-2xl", align === "center" && "mx-auto text-center", className)}>
       {eyebrow && (
-        <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-pine-600 uppercase">{eyebrow}</p>
+        <p
+          className={cn(
+            "mb-4 flex items-center gap-2.5 text-xs font-semibold tracking-[0.18em] text-pine-600 uppercase",
+            align === "center" && "justify-center",
+          )}
+        >
+          <span className="h-px w-6 bg-brass-400" aria-hidden="true" />
+          {eyebrow}
+        </p>
       )}
       <h2 className={cn(titleSizes[size], "text-balance font-normal leading-[1.08]", titleClassName)}>{title}</h2>
       {description && <p className="mt-5 text-lg leading-relaxed text-ink-700 text-pretty">{description}</p>}

@@ -97,6 +97,8 @@ export interface WildlifeEntry {
   /** Short paragraph on the humane approach for this situation */
   approach: string;
   iconId: IllustrationId;
+  /** Species-specific real photo, overriding the shared REAL_PHOTOS["detail"] default for this entry only */
+  photoOverride?: string;
 }
 
 export interface FaqItem {
@@ -104,6 +106,8 @@ export interface FaqItem {
   answer: string;
   /** Show on homepage FAQ preview */
   featured?: boolean;
+  /** Answer assumes same-day/active service — suppress on coming-soon market pages */
+  sameDaySpecific?: boolean;
 }
 
 export interface NavItem {
@@ -111,11 +115,29 @@ export interface NavItem {
   href: string;
 }
 
+/** A typed photography placeholder slot — see lib/data/photography.ts for the full shoot brief. */
+export type PhotoSlotId =
+  | "arrival"
+  | "inspection"
+  | "conversation"
+  | "crew"
+  | "vehicle"
+  | "detail"
+  | "streetscape"
+  | "team-portrait";
+
+export interface PhotoSlot {
+  id: PhotoSlotId;
+  /** Short shot-list label, e.g. "Arrival" */
+  label: string;
+  /** Art-direction description for the eventual photo shoot */
+  brief: string;
+}
+
 /** Identifiers for the hand-built line-art illustration system (see components/illustrations). */
 export type IllustrationId =
   | "raccoon"
   | "squirrel"
-  | "skunk"
   | "bird"
   | "bat"
   | "attic"
@@ -125,5 +147,6 @@ export type IllustrationId =
   | "inspection"
   | "shield-home"
   | "phone-call"
+  | "mail"
   | "camera"
   | "compass";

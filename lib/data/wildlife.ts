@@ -30,6 +30,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     approach:
       "Raccoon removal is handled with particular care in spring and early summer, when young are often present. Our technicians confirm whether a litter is involved before deciding on next steps, since separating a mother from her young unnecessarily is neither humane nor effective — she'll simply try to get back in.",
     iconId: "raccoon",
+    photoOverride: "/images/raccoon-detail.png",
   },
   {
     slug: "squirrels",
@@ -49,25 +50,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     approach:
       "Because squirrels are agile and will often re-enter through a partially repaired opening, our technicians confirm the animal is out — and identify every active entry point — before any exclusion work is discussed.",
     iconId: "squirrel",
-  },
-  {
-    slug: "skunks",
-    category: "species",
-    name: "Skunks",
-    singular: "Skunk",
-    summary: "Ground-level burrowers, usually found under decks, sheds, or porches rather than in attics.",
-    intro:
-      "Skunks are almost always a ground-level issue — under a deck, shed, porch, or in a gap beneath a foundation — rather than an attic problem. They're not aggressive by nature, but a startled skunk close to a home is understandably unwelcome. Handling them calmly and correctly matters more than with most other species.",
-    commonSigns: [
-      "A skunk odor near a deck, shed, or foundation, even without a direct sighting",
-      "Small, cone-shaped digging in the lawn (a sign skunks are foraging for grubs)",
-      "A visible burrow entrance under a structure",
-      "Sightings at dusk near a specific part of the yard",
-    ],
-    commonAreas: ["Under decks and porches", "Sheds", "Foundation gaps", "Crawlspaces"],
-    approach:
-      "Skunk situations are approached deliberately and quietly, minimizing the chance of the animal feeling cornered. Our technicians assess the burrow location and the safest way to encourage the animal to relocate before any exclusion work begins.",
-    iconId: "skunk",
+    photoOverride: "/images/squirrel-detail.png",
   },
   {
     slug: "birds",
@@ -87,6 +70,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     approach:
       "Nesting birds are handled with attention to timing and any applicable protections for active nests. Our technicians will explain what they find and the appropriate next step for the specific situation.",
     iconId: "bird",
+    photoOverride: "/images/bird-detail.png",
   },
   {
     slug: "bats",
@@ -106,6 +90,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     approach:
       "Bat situations are assessed carefully, including timing considerations tied to local wildlife regulations. Our technicians will walk you through what's involved before any work begins.",
     iconId: "bat",
+    photoOverride: "/images/bat-detail.png",
   },
   {
     slug: "something-in-the-attic",

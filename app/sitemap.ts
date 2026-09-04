@@ -22,12 +22,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
+  // Coming-soon markets are marked noIndex on their own pages (see
+  // app/service-areas/[slug]/page.tsx) — excluding them here too keeps the
+  // sitemap from pointing Google at pages it's been told not to index.
   for (const market of MARKETS) {
+    if (market.status !== "active") continue;
     entries.push({
       url: new URL(marketHref(market), BRAND.url).toString(),
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: market.status === "active" ? 0.8 : 0.5,
+      priority: 0.8,
     });
   }
 

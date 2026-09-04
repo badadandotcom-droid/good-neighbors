@@ -1,10 +1,10 @@
 import { Container } from "@/components/shared/Container";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
-import { Illustration } from "@/components/illustrations/Illustration";
 import { pageMetadata } from "@/lib/seo";
 import { BRAND, PRIMARY_CTA_LABEL } from "@/lib/config/site";
-import type { IllustrationId } from "@/lib/types";
+import { cn } from "@/lib/utils";
+import type { IllustrationId, PhotoSlotId } from "@/lib/types";
 
 export const metadata = pageMetadata({
   title: "About",
@@ -12,26 +12,35 @@ export const metadata = pageMetadata({
   path: "/about",
 });
 
-const PRINCIPLES: { icon: IllustrationId; title: string; body: string }[] = [
+const CHAPTERS: {
+  question: string;
+  title: string;
+  body: string;
+  slot: PhotoSlotId;
+  icon: IllustrationId;
+  imageOnLeft?: boolean;
+}[] = [
   {
-    icon: "shield-home",
-    title: "Humane is the standard, not the upsell",
-    body: "An animal that's found its way into the wrong place doesn't need to be treated cruelly to be removed effectively. That's simply how the work gets done here.",
-  },
-  {
-    icon: "inspection",
-    title: "Your property comes first",
-    body: "We work carefully around roofing, siding, and landscaping, and we explain what we're doing and why — no surprises, no unnecessary damage.",
-  },
-  {
-    icon: "compass",
-    title: "Genuinely local",
-    body: "Technicians work in the neighborhoods they know, not a dispatched territory picked at random from a map.",
-  },
-  {
+    question: "Who shows up at your door?",
+    title: "A trained technician, not a stranger in a truck",
+    body: "Every visit is handled by someone who does this work as their trade, not a subcontractor picked up for the day. They'll introduce themselves, explain what they're seeing, and walk you through what happens next before doing anything on your property.",
+    slot: "conversation",
     icon: "phone-call",
-    title: "Clear communication, start to finish",
-    body: "You'll know what we found, what we did, and what — if anything — makes sense to do next. No pressure, no jargon.",
+  },
+  {
+    question: "How will they treat my home — and the animal?",
+    title: "Careful with both, as a matter of course",
+    body: "We work deliberately around roofing, siding, and landscaping, and explain what we're doing and why. The same care extends to the animal: wildlife that's found its way into the wrong place doesn't need to be treated cruelly to be removed effectively. Humane handling isn't an upgrade here — it's simply how the job gets done.",
+    slot: "detail",
+    icon: "shield-home",
+    imageOnLeft: true,
+  },
+  {
+    question: "Can I trust what they tell me?",
+    title: "Straightforward, before and after",
+    body: "You'll know what was found, what was done, and what — if anything — genuinely makes sense to do next. No inflated urgency, no jargon, and no pressure to decide anything on the spot.",
+    slot: "arrival",
+    icon: "inspection",
   },
 ];
 
@@ -39,47 +48,59 @@ export default function AboutPage() {
   return (
     <>
       <section className="border-b border-stone-300 py-16 sm:py-24">
-        <Container className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-7">
-            <p className="text-xs font-semibold tracking-[0.18em] text-pine-600 uppercase">About {BRAND.name}</p>
-            <h1 className="mt-3 text-balance font-display text-4xl leading-[1.06] text-charcoal sm:text-5xl">
-              A calm, professional response to an unwelcome situation.
-            </h1>
-            <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">
-              {BRAND.name} was built on a simple idea: wildlife removal doesn&apos;t have to feel alarming, and it
-              doesn&apos;t have to come at the expense of the animal or your property. We handle the immediate
-              problem quickly and humanely, and treat every home the way we&apos;d want ours treated.
-            </p>
-          </div>
-          <div className="lg:col-span-5">
-            <PhotoPlaceholder icon="soffit-vent" tone="bone" aspect="aspect-[4/3]" caption="technician van / arrival at property" />
-          </div>
+        <Container className="max-w-2xl">
+          <p className="flex items-center gap-2.5 text-xs font-semibold tracking-[0.18em] text-pine-600 uppercase">
+            <span className="h-px w-6 bg-brass-400" aria-hidden="true" />
+            About {BRAND.name}
+          </p>
+          <h1 className="mt-4 text-balance font-display text-4xl leading-[1.06] text-charcoal sm:text-5xl">
+            A calm, professional response to an unwelcome situation.
+          </h1>
+          <p className="mt-6 text-lg leading-relaxed text-ink-700 text-pretty">
+            {BRAND.name} was built on a simple idea: wildlife removal doesn&apos;t have to feel alarming, and it
+            doesn&apos;t have to come at the expense of the animal or your property. We handle the immediate
+            problem quickly and humanely, and treat every home the way we&apos;d want ours treated.
+          </p>
         </Container>
       </section>
 
-      <section className="border-b border-stone-300 bg-bone-50 py-20 sm:py-28">
-        <Container>
-          <h2 className="max-w-lg text-balance font-display text-3xl leading-[1.1] text-charcoal sm:text-4xl">
-            What guides how we work
-          </h2>
-          <div className="mt-12 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2">
-            {PRINCIPLES.map((p) => (
-              <div key={p.title} className="flex gap-5">
-                <Illustration id={p.icon} className="h-8 w-8 shrink-0 text-pine-600" />
-                <div>
-                  <h3 className="font-display text-xl text-charcoal">{p.title}</h3>
-                  <p className="mt-2 text-[15px] leading-relaxed text-ink-700 text-pretty">{p.body}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+      {CHAPTERS.map((chapter, i) => (
+        <section
+          key={chapter.title}
+          className={cn(
+            "border-b border-stone-300 py-16 sm:py-24",
+            i % 2 === 1 ? "bg-bone-50" : "bg-transparent",
+          )}
+        >
+          <Container className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
+            <div className={cn("lg:col-span-5", chapter.imageOnLeft ? "lg:order-1" : "lg:order-2")}>
+              <PhotoPlaceholder
+                slot={chapter.slot}
+                icon={chapter.icon}
+                tone={i === 1 ? "wood" : i === 2 ? "charcoal" : "pine"}
+                aspect="aspect-[4/3]"
+                corner={chapter.imageOnLeft ? "top-left" : "bottom-right"}
+              />
+            </div>
+            <div className={cn("lg:col-span-6", chapter.imageOnLeft ? "lg:order-2 lg:col-start-7" : "lg:order-1")}>
+              <p className="font-display text-xl italic text-pine-600">{chapter.question}</p>
+              <h2 className="mt-3 max-w-md text-balance font-display text-3xl leading-[1.1] text-charcoal sm:text-4xl">
+                {chapter.title}
+              </h2>
+              <p className="mt-5 max-w-md text-[15px] leading-relaxed text-ink-700 text-pretty">{chapter.body}</p>
+            </div>
+          </Container>
+        </section>
+      ))}
 
       <section className="py-20 sm:py-28">
         <Container className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-6">
-            <h2 className="max-w-md text-balance font-display text-3xl leading-[1.1] text-charcoal sm:text-4xl">
+            <p className="flex items-center gap-2.5 text-xs font-semibold tracking-[0.18em] text-pine-600 uppercase">
+              <span className="h-px w-6 bg-brass-400" aria-hidden="true" />
+              What Makes Us Different
+            </p>
+            <h2 className="mt-4 max-w-md text-balance font-display text-3xl leading-[1.1] text-charcoal sm:text-4xl">
               One brand, growing one neighborhood at a time
             </h2>
             <p className="mt-5 max-w-md text-[15px] leading-relaxed text-ink-700 text-pretty">
@@ -89,14 +110,14 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="lg:col-span-5 lg:col-start-8">
-            <PhotoPlaceholder icon="roofline" tone="charcoal" aspect="aspect-[4/3]" caption="residential streetscape, future market" />
+            <PhotoPlaceholder slot="streetscape" icon="roofline" tone="wood" aspect="aspect-[4/3]" corner="top-left" />
           </div>
         </Container>
       </section>
 
       <section className="border-t border-stone-300 bg-charcoal py-16 text-bone-50 sm:py-20">
         <Container className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <h2 className="max-w-md text-balance font-display text-3xl leading-[1.1]">
+          <h2 className="max-w-md text-balance font-display text-3xl leading-[1.1] text-bone-50">
             Have a wildlife problem right now?
           </h2>
           <CTAButton href="/contact" size="lg" event="cta_get_help_now" eventMeta={{ location: "about-page" }}>
