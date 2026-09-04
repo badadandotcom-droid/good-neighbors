@@ -36,16 +36,21 @@ CMS or data layer — this is a one-page seasonal site.
 
 ## Analytics / lead tracking
 
-`lib/analytics.ts` exports `trackEvent`, which every phone link already
-calls on click. It's a no-op until GA4/GTM/Google Ads/CallRail are wired up.
-To connect one:
+GA4 / Google Ads conversion tracking is wired up via the Google tag
+(`gtag.js`), loaded in `app/layout.tsx` through `@next/third-parties`'
+`<GoogleAnalytics>` component. The measurement ID lives in one place:
+`GA_MEASUREMENT_ID` in `lib/site.ts`.
 
-1. Load the provider's script tag in `app/layout.tsx` (e.g. GTM's snippet,
-   or a CallRail swap-tracking script).
-2. If it uses `window.dataLayer` (GA4/GTM), `trackEvent` already pushes to
-   it automatically — nothing else to change.
-3. For a different queue (e.g. `gtag`, CallRail's own JS API), edit the body
-   of `trackEvent` in `lib/analytics.ts`. Every call site keeps working.
+`lib/analytics.ts` exports `trackEvent`, which every phone link already
+calls on click — it calls `window.gtag("event", ...)` once the tag above is
+loaded, so phone-click conversions (`cta_call`) report automatically. No
+per-call-site changes needed.
+
+To connect **CallRail** or a different provider on top of this: either swap
+`PHONE.display`/`PHONE.href` in `lib/site.ts` for CallRail's dynamic number
+insertion snippet, or add a second call inside `trackEvent`'s body in
+`lib/analytics.ts` (e.g. to CallRail's JS API) — every call site keeps
+working either way.
 
 ## Deploying as a separate Vercel project
 

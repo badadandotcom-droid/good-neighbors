@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import Link from "next/link";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { PhoneLink } from "@/components/PhoneLink";
 import { StickyCallBar } from "@/components/StickyCallBar";
-import { BRAND, PHONE } from "@/lib/site";
+import { BRAND, GA_MEASUREMENT_ID, PHONE } from "@/lib/site";
 
 const HOME_TITLE = "Wasp Nest Removal – GTA, Mississauga, Oakville & Burlington";
 
@@ -98,6 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main-content">{children}</main>
         <StickyCallBar />
       </body>
+      <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
     </html>
   );
 }

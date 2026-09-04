@@ -56,3 +56,12 @@ export const SAME_DAY_SERVICE = {
   headline: "Same-Day Service Available",
   disclaimer: "Based on availability. Call to confirm for your area.",
 } as const;
+
+/**
+ * Google tag (gtag.js) measurement ID for GA4 / Google Ads conversion
+ * tracking, loaded in app/layout.tsx via @next/third-parties. Every phone
+ * link already calls trackEvent() (see lib/analytics.ts), which calls
+ * window.gtag once this is wired up — so adding this ID is the only step
+ * needed for phone-click conversions to start reporting.
+ */
+export const GA_MEASUREMENT_ID = "G-2NETZXNWVG";
