@@ -48,7 +48,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     ],
     commonAreas: ["Attics", "Soffits and fascia", "Roof edges", "Wall cavities"],
     approach:
-      "Because squirrels are agile and will often re-enter through a partially repaired opening, our technicians confirm the animal is out — and identify every active entry point — before any exclusion work is discussed.",
+      "We identify where the squirrels are getting in. Once we've confirmed they're out, we secure the entry points to help prevent their return.",
     iconId: "squirrel",
     photoOverride: "/images/squirrel-detail.png",
   },

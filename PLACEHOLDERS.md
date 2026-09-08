@@ -15,7 +15,7 @@ single edit propagates everywhere.
 | Legal name | ✅ Real: `Good Neighbors Wildlife Inc.` | Confirmed registered legal entity name. Used only in the footer copyright line — every customer-facing "Good Neighbors" / "Good Neighbors Wildlife" mention elsewhere uses the separate trading name and is unaffected. |
 | Production domain | ✅ Real: `https://www.goodneighborswildlife.ca` | Confirmed by the client. Used for canonical URLs, sitemap, Open Graph, and JSON-LD. |
 | Physical address | Not published | `CONTACT.address` is `null` by design — add a real address object (and wire it into `lib/seo.ts` `localBusinessJsonLd`) only once one exists. |
-| Operating hours | "Phone lines open 7 days a week." | Live wording. Approved replacement copy ("Calls answered 24/7" / "Calls answered 24 hours a day, 7 days a week.") is already built and wired — see `ALWAYS_ON_CALL` below — but held back pending confirmation that phone coverage is actually staffed around the clock. |
+| Operating hours | ✅ Real: "Calls answered 24 hours a day, 7 days a week." | Live as of the client's confirmation that phone coverage is actually staffed around the clock — see `ALWAYS_ON_CALL` below. Same-day *visit* availability (before the 4 PM cutoff) remains a separate, independently-toggled promise. |
 | Social links | `null` (Instagram, Facebook, Google Business Profile) | Not rendered anywhere while null; add real URLs when accounts exist. |
 
 ## Same-day service — `lib/config/site.ts` → `DEFAULT_SAME_DAY_SERVICE`
@@ -27,13 +27,15 @@ and should be smoke-tested before relying on it seasonally.
 
 ## Always-on-call line — `lib/config/site.ts` → `ALWAYS_ON_CALL`
 
-Approved copy ("Calls answered 24/7." on the homepage hero, "Calls answered
-24 hours a day, 7 days a week." replacing the Contact page hours note) is
-built and ready, gated behind `ALWAYS_ON_CALL.enabled` (currently `false`).
-This means human phone answering around the clock, not 24-hour technician
-dispatch. **Do not flip `enabled` to `true` without explicit confirmation
-that phone coverage is actually live** — this is a business/staffing fact,
-not a design decision.
+`ALWAYS_ON_CALL.enabled` is `true` as of the client's explicit confirmation
+that phone coverage is actually staffed around the clock. Live copy:
+"Calls answered 24/7." directly under the positioning line on the
+homepage hero, and "Calls answered 24 hours a day, 7 days a week."
+replacing the Contact page hours note. This means human phone answering
+around the clock — not 24-hour technician dispatch, overnight visits, or
+instant form replies. Same-day *visit* availability stays a separate,
+independently-toggled promise (`DEFAULT_SAME_DAY_SERVICE`). Do not flip
+`enabled` back to `false` without an equally explicit instruction.
 
 ## Analytics & tracking — `lib/config/site.ts` → `ANALYTICS`, `lib/analytics.ts`
 
@@ -57,16 +59,20 @@ not a design decision.
 
 ## Photo upload — `components/forms/PhotoUpload.tsx`
 
-Selection, drag-and-drop, thumbnail preview, and removal are fully
-functional client-side, in two separate instances on the Get Help form:
-general evidence photos, and a distinct "can you see where it's getting
-in?" entry-point section with a safety warning against climbing to get the
-shot. **Files are not uploaded anywhere** — there's no object storage
-(S3/Cloudinary/etc.) connected, so photos are intentionally excluded from
-the `/api/get-help` submission payload rather than silently failing to
-send. The UI tells users this and suggests texting photos instead. Wire
-storage + include resulting URLs (tagged by which section they came from)
-in the payload when ready.
+The interactive dropzone (selection, drag-and-drop, thumbnail preview) is
+still fully built and functional client-side, but as of this pass it is
+**no longer wired into the Get Help form** — `components/forms/
+GetHelpForm.tsx` no longer imports or renders it. There is no object
+storage (S3/Cloudinary/etc.) connected, so rather than let visitors select
+photos that go nowhere, the form's "Photos" section now shows plain
+informational text (mention photos in the request; we'll confirm how to
+send them) plus the ground-safety instruction, with no upload control. The
+FAQ's "Can I send you a photo?" answer matches this — it no longer offers
+"text us photos," since SMS/MMS receiving has not been tested. The
+`PhotoUpload` component itself is untouched and ready to be wired back in
+once real storage exists; re-add the import and both call sites in
+`GetHelpForm.tsx` and include the resulting URLs (tagged by section) in
+the `/api/get-help` payload when ready.
 
 ## Legal pages — `app/privacy/page.tsx`, `app/terms/page.tsx`
 
@@ -98,14 +104,17 @@ exactly this reason.
 
 ## Markets — `lib/data/markets.ts`
 
-The seven markets included (Toronto, York Region, Durham Region, Oakville
-& Burlington, Hamilton, Barrie, Niagara Region) are a **launch-planning
-snapshot**, not a locked list. Phone numbers are placeholders per above.
+The eight markets included (Toronto, York Region, Durham Region, Peel
+Region, Oakville & Burlington, Hamilton, Barrie, Niagara Region) are a
+**launch-planning snapshot**, not a locked list. Phone numbers are
+placeholders per above.
 
-**Active launch territory (as of this writing): Toronto, York Region, and
-Durham Region.** Peel Region is also approved launch coverage and appears
-in customer-facing coverage text (footer, homepage, About, FAQ), but has
-no market page yet — see the outstanding item below.
+**Active launch territory (as of this writing): Toronto, York Region,
+Durham Region, and Peel Region** — in that order everywhere it's listed
+(footer, homepage, About, FAQ, service-area hub). Peel Region's market
+page uses the approved heading "Wildlife Removal in Peel Region" via the
+optional `Market.heroHeading` override field (falls back to `brandName`
+for every other market, so this doesn't affect their pages).
 
 Oakville & Burlington, Hamilton, Barrie, and Niagara Region are all
 `status: "hidden"` — fully built, kept as preparatory content, but
@@ -123,15 +132,6 @@ statically generated or reachable at all.
 `status` to `"active"`. That's it — the homepage, footer, nav, service-area
 hub, sitemap, and the market's own page all pick it up automatically. No
 other file needs to change, and the page never needs to be rebuilt.
-
-**Outstanding: Peel Region has no market page.** Coverage copy across the
-site (footer, homepage, About, FAQ) now names Peel Region alongside
-Toronto/York/Durham per approved wording, but `lib/data/markets.ts` has
-no Peel entry — creating one would require inventing a `heroBlurb` and
-`serviceArea` list that hasn't been approved. Add a real Peel Region
-entry (with approved copy) to `MARKETS` and set `status: "active"` when
-that content exists; until then, no "View coverage" link points at Peel
-anywhere on the site.
 
 ## Pricing — intentionally absent
 

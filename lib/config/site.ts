@@ -22,7 +22,7 @@ export const BRAND = {
   taglineFallback: "Humane. Local. Fast Response.",
   foundingRegion: "Southern Ontario, Canada",
   description:
-    "Good Neighbors provides humane, professional wildlife removal for homes across Southern Ontario, with same-day service available for requests received before 4 PM.",
+    "Good Neighbors provides humane raccoon, squirrel, bat and bird removal for homeowners in Toronto, York Region, Durham Region and Peel Region.",
   url: "https://www.goodneighborswildlife.ca",
 } as const;
 
@@ -82,17 +82,19 @@ export const DEFAULT_SAME_DAY_SERVICE: SameDayServiceConfig = {
 
 /**
  * ----------------------------------------------------------------------------
- * ALWAYS-ON-CALL LINE — approved copy, held behind a flag.
+ * ALWAYS-ON-CALL LINE.
  * ----------------------------------------------------------------------------
  * "Calls answered 24/7" means the phone is answered around the clock — it
- * does NOT mean technicians provide 24-hour on-site dispatch. The wording is
- * approved for launch, but publishing it is conditional on the phone actually
- * being staffed around the clock. Do not flip `enabled` to true without
- * explicit confirmation that coverage is live; this is not a design decision.
+ * does NOT mean technicians provide 24-hour on-site dispatch, overnight
+ * visits, or instant form replies. Same-day *visit* availability is a
+ * separate promise (see DEFAULT_SAME_DAY_SERVICE) and stays subject to its
+ * own toggle regardless of this flag. `enabled: true` reflects the client's
+ * explicit confirmation that phone coverage is actually staffed around the
+ * clock — do not flip this back off without an equally explicit instruction.
  */
 export const ALWAYS_ON_CALL = {
-  enabled: false,
-  /** Shown near the hero/phone area on the homepage when enabled. */
+  enabled: true,
+  /** Shown directly under the homepage positioning line when enabled. */
   heroLabel: "Calls answered 24/7.",
   /** Replaces CONTACT.hoursNote on the Contact page when enabled. */
   contactLabel: "Calls answered 24 hours a day, 7 days a week.",

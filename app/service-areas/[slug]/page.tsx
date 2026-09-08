@@ -82,7 +82,7 @@ export default async function MarketPage({ params }: { params: Promise<{ slug: s
             )}
 
             <h1 className="mt-4 text-balance font-display text-4xl leading-[1.05] text-charcoal sm:text-5xl">
-              {market.brandName}
+              {market.heroHeading ?? market.brandName}
             </h1>
             <p className="mt-3 font-display text-xl italic text-pine-600">{getPositioningLine(market)}</p>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">{market.heroBlurb}</p>

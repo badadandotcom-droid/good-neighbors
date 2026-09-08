@@ -57,7 +57,7 @@ export function Footer() {
 
       <Container className="flex flex-col gap-3 border-t border-white/10 py-6 text-xs text-stone-400 sm:flex-row sm:items-center sm:justify-between">
         <p>
-          &copy; {new Date().getFullYear()} {BRAND.legalName}. All rights reserved.
+          &copy; {new Date().getFullYear()} {BRAND.legalName} All rights reserved.
         </p>
         <div className="flex gap-5">
           <Link href="/privacy" className="hover:text-bone-100">

@@ -58,7 +58,9 @@ export function pageMetadata(opts: {
  */
 export function localBusinessJsonLd(market?: Market) {
   const phone = getPhone(market);
-  const areaServed = market ? market.serviceArea : ["Southern Ontario"];
+  const areaServed = market
+    ? market.serviceArea
+    : ["Toronto", "York Region", "Durham Region", "Peel Region"];
 
   return {
     "@context": "https://schema.org",

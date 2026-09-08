@@ -43,7 +43,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Can I send you a photo?",
     answer:
-      "Yes, photos of the animal, the entry point, or any damage help us prepare before we arrive. You can add photos when you request help, or send them separately once we're in touch.",
+      "If you have photos, let us know when you contact us. We'll confirm how to send them. Only take photos from a safe place on the ground.",
   },
   {
     question: "How much does wildlife removal cost?",

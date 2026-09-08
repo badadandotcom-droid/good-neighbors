@@ -64,6 +64,8 @@ export interface Market {
   displayName: string;
   /** e.g. "Good Neighbors Toronto" */
   brandName: string;
+  /** Overrides the on-page H1 (which otherwise defaults to `brandName`) when the approved heading differs from the brand-suffix convention. */
+  heroHeading?: string;
   status: MarketStatus;
   country: Country;
   /** Province or state, e.g. "Ontario" */

@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!entry) return {};
 
   return pageMetadata({
-    title: `${entry.category === "species" ? entry.singular : entry.name} Removal`,
+    title: entry.category === "species" ? `${entry.singular} Removal` : entry.name,
     description: entry.summary,
     path: `/wildlife/${entry.slug}`,
   });
@@ -50,7 +50,7 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
   const tone = PHOTO_TONE[entry.slug] ?? "pine";
 
   const related = WILDLIFE.filter((w) => w.slug !== entry.slug && w.category === "species").slice(0, 4);
-  const removalTitle = `${entry.category === "species" ? entry.singular : entry.name} Removal`;
+  const removalTitle = entry.category === "species" ? `${entry.singular} Removal` : entry.name;
   const jsonLd = serviceJsonLd({
     name: removalTitle,
     description: entry.summary,
@@ -123,7 +123,7 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
               {[
                 { term: "On arrival", detail: `We confirm the ${entry.singular.toLowerCase()} activity and check how it's getting in.` },
                 { term: "During the visit", detail: "Removal is handled humanely, with care taken around your roofline and finishes." },
-                { term: "Before we leave", detail: "You'll know what we found and what, if anything, makes sense to do next." },
+                { term: "Before we leave", detail: "We'll explain what we found, what we did, and how the animal got in." },
               ].map((step) => (
                 <div key={step.term} className="sm:flex-1">
                   <dt className="font-display text-base text-pine-600">{step.term}</dt>

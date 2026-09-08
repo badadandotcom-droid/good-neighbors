@@ -38,9 +38,12 @@ export function Hero({ market }: { market?: Market }) {
 
           <p className="mt-3 font-display text-xl italic text-pine-600 sm:mt-4 sm:text-2xl">{getPositioningLine(market)}</p>
 
+          {ALWAYS_ON_CALL.enabled && (
+            <p className="mt-2 text-sm text-stone-500">{ALWAYS_ON_CALL.heroLabel}</p>
+          )}
+
           <p className="mt-4 hidden max-w-md text-lg leading-relaxed text-ink-700 text-pretty sm:block sm:mt-6">
-            One call brings a trained technician to your door to handle it carefully and humanely — without
-            turning into a bigger project.
+            One call brings a trained technician to your door to handle it carefully and humanely.
           </p>
 
           <div className="mt-9 hidden gap-4 sm:flex sm:flex-row sm:items-center">
@@ -53,10 +56,6 @@ export function Hero({ market }: { market?: Market }) {
               className="justify-center text-lg text-ink hover:text-pine-600 sm:justify-start"
             />
           </div>
-
-          {ALWAYS_ON_CALL.enabled && (
-            <p className="mt-3 hidden text-sm text-stone-500 sm:block">{ALWAYS_ON_CALL.heroLabel}</p>
-          )}
         </div>
 
         <div className="relative lg:col-span-5 lg:-mr-6 xl:-mr-16">
