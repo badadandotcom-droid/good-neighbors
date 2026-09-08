@@ -27,8 +27,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     question: "Is the animal treated humanely?",
-    answer:
-      "Yes. A humane approach is central to how we work, not an add-on. Wildlife that's found its way into the wrong place is handled responsibly, not punitively.",
+    answer: "Yes. We use humane removal methods suited to the animal and the situation.",
     featured: true,
   },
   {
@@ -47,20 +46,19 @@ export const FAQ_ITEMS: FaqItem[] = [
       "Yes, photos of the animal, the entry point, or any damage help us prepare before we arrive. You can add photos when you request help, or send them separately once we're in touch.",
   },
   {
-    question: "Does the price depend on the situation?",
-    answer:
-      "It does. Every property and situation is different — species, location, accessibility, and complexity all factor in. We'll discuss pricing with you once we understand what's going on, before any work begins.",
+    question: "How much does wildlife removal cost?",
+    answer: "We'll confirm the price with you once we understand the problem, before any work begins.",
   },
   {
     question: "Do you service my area?",
     answer:
-      "We currently serve several Southern Ontario markets, with more being added. Check our service areas page, or simply reach out — if we're not covering your area yet, we'll let you know.",
+      "We currently serve Toronto, York Region, Durham Region and Peel Region. Check our service areas page, or reach out and we'll let you know if we cover your area.",
     featured: true,
   },
   {
     question: "What happens after the animal is removed?",
     answer:
-      "Once the immediate problem is handled, our technician can explain how the animal likely got in and point out any vulnerable areas. If prevention work makes sense for your property, we'll walk you through the options — there's no obligation to move forward with it.",
+      "Once we've confirmed the animals are out, we secure the entry point to help prevent them from getting back in.",
   },
 ];
 

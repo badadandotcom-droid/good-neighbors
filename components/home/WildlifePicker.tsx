@@ -13,7 +13,7 @@ export function WildlifePicker() {
         <SectionHeading
           eyebrow="Wildlife Removal"
           title="What are you dealing with?"
-          description="Tell us the species if you know it. If you don't, that's the most common starting point — our technicians identify it on-site."
+          description="Know what it is? Choose below. Not sure? We can identify it."
         />
 
         <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-6">
@@ -43,7 +43,7 @@ export function WildlifePicker() {
           >
             <span className="font-display text-lg leading-tight">Not sure what it is?</span>
             <span className="inline-flex items-center gap-2 text-sm text-pine-100 group-hover:text-bone-50">
-              That&apos;s completely normal — get help now
+              We can help.
               <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
             </span>
           </Link>

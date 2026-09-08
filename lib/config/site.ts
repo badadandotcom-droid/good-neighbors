@@ -32,7 +32,7 @@ export const BRAND = {
  * with their own local/tracking number later via `market.phone`.
  */
 export const DEFAULT_PHONE: PhoneConfig = {
-  display: "(416) 900-WILD",
+  display: "416-900-WILD (9453)",
   href: "tel:+14169009453",
   isPlaceholder: false,
 };
@@ -78,6 +78,24 @@ export const DEFAULT_SAME_DAY_SERVICE: SameDayServiceConfig = {
     "Same-day service is available for requests received before 4 PM, subject to technician availability.",
   disabledMessage:
     "We respond quickly to every request. Current availability will be confirmed when you contact us.",
+};
+
+/**
+ * ----------------------------------------------------------------------------
+ * ALWAYS-ON-CALL LINE — approved copy, held behind a flag.
+ * ----------------------------------------------------------------------------
+ * "Calls answered 24/7" means the phone is answered around the clock — it
+ * does NOT mean technicians provide 24-hour on-site dispatch. The wording is
+ * approved for launch, but publishing it is conditional on the phone actually
+ * being staffed around the clock. Do not flip `enabled` to true without
+ * explicit confirmation that coverage is live; this is not a design decision.
+ */
+export const ALWAYS_ON_CALL = {
+  enabled: false,
+  /** Shown near the hero/phone area on the homepage when enabled. */
+  heroLabel: "Calls answered 24/7.",
+  /** Replaces CONTACT.hoursNote on the Contact page when enabled. */
+  contactLabel: "Calls answered 24 hours a day, 7 days a week.",
 };
 
 /** Placeholder for future analytics/tracking wiring — see lib/analytics.ts */

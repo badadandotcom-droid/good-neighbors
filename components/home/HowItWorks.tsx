@@ -4,15 +4,15 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 const STEPS: { title: string; body: string }[] = [
   {
     title: "Tell us what's happening",
-    body: "Call or send a quick request — what you're hearing or seeing, and where. No need to diagnose it yourself.",
+    body: "Call or send a quick request — what you're hearing or seeing, and where.",
   },
   {
     title: "We come out and handle it",
-    body: "A technician arrives, confirms the situation, walks you through cost before any work begins, and removes the animal humanely and safely.",
+    body: "A technician arrives, confirms the situation, explains the cost before any work begins, and removes the animal safely and humanely.",
   },
   {
     title: "We explain what happened",
-    body: "If it's useful, we'll point out how the animal likely got in and what — if anything — makes sense to do next.",
+    body: "We'll explain what we found, what we did, and how the animal got in.",
   },
 ];
 

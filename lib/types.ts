@@ -42,7 +42,12 @@ export interface SameDayServiceConfig {
   disabledMessage: string;
 }
 
-export type MarketStatus = "active" | "coming-soon";
+/**
+ * "hidden" markets keep their data (preparatory content for a future
+ * launch) but are excluded from every public surface — hub grid, sitemap,
+ * footer, nav, and generateStaticParams — and 404 if visited directly.
+ */
+export type MarketStatus = "active" | "coming-soon" | "hidden";
 
 /**
  * A localized market/service-area expression of the single Good Neighbors

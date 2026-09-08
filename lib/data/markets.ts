@@ -53,7 +53,7 @@ export const MARKETS: Market[] = [
     metro: "Greater Toronto Area",
     serviceArea: ["Markham", "Richmond Hill", "Vaughan", "Thornhill", "Aurora", "Newmarket"],
     heroBlurb:
-      "Growing neighborhoods and mature tree canopy make York Region an easy place for wildlife to move in. We're close by and ready to help in Markham, Vaughan, Richmond Hill, and beyond.",
+      "We provide humane wildlife removal for homeowners across York Region, including Markham, Vaughan and Richmond Hill.",
     seoDescription:
       "Wildlife removal serving York Region — Markham, Richmond Hill, Vaughan, and Thornhill. Humane, local, same-day service available.",
   },
@@ -67,7 +67,7 @@ export const MARKETS: Market[] = [
     metro: "Greater Toronto Area",
     serviceArea: ["Pickering", "Ajax", "Whitby", "Oshawa"],
     heroBlurb:
-      "From the Pickering waterfront to established Oshawa neighborhoods, Durham Region homeowners get the same humane, careful service as anywhere else on our map.",
+      "From the Pickering waterfront to established Oshawa neighbourhoods, we provide humane wildlife removal for homes across Durham Region.",
     seoDescription:
       "Humane wildlife removal across Durham Region — Pickering, Ajax, Whitby, and Oshawa. Local technicians, same-day service available.",
   },
@@ -75,7 +75,7 @@ export const MARKETS: Market[] = [
     slug: "oakville-burlington",
     displayName: "Oakville & Burlington",
     brandName: "Good Neighbors Oakville & Burlington",
-    status: "coming-soon",
+    status: "hidden",
     country: "CA",
     region: "Ontario",
     metro: "Halton Region",
@@ -89,7 +89,7 @@ export const MARKETS: Market[] = [
     slug: "hamilton",
     displayName: "Hamilton",
     brandName: "Good Neighbors Hamilton",
-    status: "coming-soon",
+    status: "hidden",
     country: "CA",
     region: "Ontario",
     metro: "Hamilton–Niagara",
@@ -103,7 +103,7 @@ export const MARKETS: Market[] = [
     slug: "barrie",
     displayName: "Barrie",
     brandName: "Good Neighbors Barrie",
-    status: "coming-soon",
+    status: "hidden",
     country: "CA",
     region: "Ontario",
     metro: "Simcoe County",
@@ -117,7 +117,7 @@ export const MARKETS: Market[] = [
     slug: "niagara-region",
     displayName: "Niagara Region",
     brandName: "Good Neighbors Niagara Region",
-    status: "coming-soon",
+    status: "hidden",
     country: "CA",
     region: "Ontario",
     metro: "Hamilton–Niagara",

@@ -13,8 +13,8 @@ export function ServiceAreasTeaser() {
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading
             eyebrow="Service Areas"
-            title="Currently serving Southern Ontario"
-            description="Good Neighbors is expanding — if your area isn't listed yet, reach out and we'll let you know about coverage."
+            title="Areas we serve"
+            description="Serving Toronto, York Region, Durham Region and Peel Region."
             className="max-w-xl"
           />
           <Link

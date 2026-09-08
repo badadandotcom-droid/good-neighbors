@@ -4,7 +4,7 @@ import { MARKETS, marketHref } from "@/lib/data/markets";
 import { WILDLIFE } from "@/lib/data/wildlife";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPaths = ["/", "/wildlife", "/service-areas", "/about", "/contact", "/faq", "/property-care"];
+  const staticPaths = ["/", "/wildlife", "/service-areas", "/about", "/contact", "/faq"];
 
   const entries: MetadataRoute.Sitemap = staticPaths.map((path) => ({
     url: new URL(path, BRAND.url).toString(),

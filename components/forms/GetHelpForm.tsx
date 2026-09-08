@@ -220,9 +220,7 @@ export function GetHelpForm() {
       )}
 
       <div className="mt-8 flex flex-col gap-4 border-t border-stone-300 pt-8 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-ink-700">
-          Takes about a minute. <span className="text-stone-500">A real person follows up — not a bot.</span>
-        </p>
+        <p className="text-sm text-ink-700">Takes about a minute.</p>
         <button
           type="submit"
           disabled={status === "submitting"}

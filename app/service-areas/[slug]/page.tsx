@@ -17,13 +17,13 @@ import { pageMetadata, localBusinessJsonLd, faqJsonLd } from "@/lib/seo";
 import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
 
 export function generateStaticParams() {
-  return MARKETS.map((m) => ({ slug: m.slug }));
+  return MARKETS.filter((m) => m.status !== "hidden").map((m) => ({ slug: m.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const market = getMarketBySlug(slug);
-  if (!market) return {};
+  if (!market || market.status === "hidden") return {};
 
   return pageMetadata({
     title: market.brandName,
@@ -39,7 +39,7 @@ const TONES = ["pine", "wood", "charcoal"] as const;
 export default async function MarketPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const market = getMarketBySlug(slug);
-  if (!market) notFound();
+  if (!market || market.status === "hidden") notFound();
 
   const phone = getPhone(market);
   const species = getSpeciesEntries();

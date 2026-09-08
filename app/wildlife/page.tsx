@@ -55,7 +55,7 @@ export default function WildlifePage() {
           <SectionHeading
             eyebrow="By Species"
             title="Common wildlife we handle"
-            description="Raccoons are our most frequent call, especially in spring — but every species below gets the same careful approach."
+            description="Every species below gets the same careful approach."
           />
 
           <Link
@@ -66,7 +66,6 @@ export default function WildlifePage() {
               <PhotoPlaceholder slot="detail" icon={species[0].iconId} tone="charcoal" aspect="aspect-[16/9] lg:aspect-auto lg:h-full" className="rounded-none" />
             </div>
             <div className="flex flex-1 flex-col justify-center gap-3 p-8 sm:p-10">
-              <span className="text-xs font-semibold tracking-[0.18em] text-brass-600 uppercase">Most common call</span>
               <h3 className="font-display text-3xl text-charcoal sm:text-4xl">{species[0].name}</h3>
               <p className="max-w-md text-[15px] leading-relaxed text-ink-700">{species[0].summary}</p>
               <span className="mt-2 inline-flex items-center gap-2 text-sm font-medium text-pine-600 group-hover:text-pine-700">

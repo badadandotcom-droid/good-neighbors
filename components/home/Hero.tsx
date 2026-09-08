@@ -6,7 +6,7 @@ import { SameDayBadge } from "@/components/shared/SameDayBadge";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { getHeroHeadline, getPhone, getPositioningLine } from "@/lib/config/resolvers";
-import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
+import { ALWAYS_ON_CALL, PRIMARY_CTA_LABEL } from "@/lib/config/site";
 import type { Market } from "@/lib/types";
 
 /**
@@ -53,6 +53,10 @@ export function Hero({ market }: { market?: Market }) {
               className="justify-center text-lg text-ink hover:text-pine-600 sm:justify-start"
             />
           </div>
+
+          {ALWAYS_ON_CALL.enabled && (
+            <p className="mt-3 hidden text-sm text-stone-500 sm:block">{ALWAYS_ON_CALL.heroLabel}</p>
+          )}
         </div>
 
         <div className="relative lg:col-span-5 lg:-mr-6 xl:-mr-16">
@@ -79,9 +83,6 @@ export function Hero({ market }: { market?: Market }) {
           <div className="absolute -top-7 -left-7 hidden w-52 rounded-sm border border-stone-300 bg-bone-50 p-5 shadow-card sm:block">
             <span className="mb-2 block h-px w-6 bg-brass-400" aria-hidden="true" />
             <p className="font-display text-2xl leading-tight text-charcoal">Humane by default</p>
-            <p className="mt-2 text-xs leading-relaxed text-stone-500">
-              Not an add-on — it&apos;s how every job is handled.
-            </p>
           </div>
         </div>
       </Container>

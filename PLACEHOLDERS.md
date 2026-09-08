@@ -10,20 +10,30 @@ single edit propagates everywhere.
 
 | Item | Current placeholder | Notes |
 | --- | --- | --- |
-| Brand phone | ✅ Real (permanent): `(416) 900-WILD` | The permanent Good Neighbors Wildlife number. Display text uses the vanity spelling; `tel:+14169009453` and structured data both resolve to the real digits (`WILD` = `9453` on a phone keypad). One shared number currently covers every active market (see "Markets" below); no market has a `phone` override right now, so they all resolve to `DEFAULT_PHONE` via `getPhone()`. Add a market-specific number later by setting that market's `phone` field — no other file needs to change. |
+| Brand phone | ✅ Real (permanent): `416-900-WILD (9453)` | The permanent Good Neighbors Wildlife number. Display text uses the approved format (vanity spelling plus the digits); `tel:+14169009453` and structured data both resolve to the real digits. One shared number currently covers every active market (see "Markets" below); no market has a `phone` override right now, so they all resolve to `DEFAULT_PHONE` via `getPhone()`. Add a market-specific number later by setting that market's `phone` field — no other file needs to change. |
 | Email | ✅ Real: `hello@goodneighborswildlife.ca` | Confirmed by the client. |
 | Legal name | ✅ Real: `Good Neighbors Wildlife Inc.` | Confirmed registered legal entity name. Used only in the footer copyright line — every customer-facing "Good Neighbors" / "Good Neighbors Wildlife" mention elsewhere uses the separate trading name and is unaffected. |
 | Production domain | ✅ Real: `https://www.goodneighborswildlife.ca` | Confirmed by the client. Used for canonical URLs, sitemap, Open Graph, and JSON-LD. |
 | Physical address | Not published | `CONTACT.address` is `null` by design — add a real address object (and wire it into `lib/seo.ts` `localBusinessJsonLd`) only once one exists. |
-| Operating hours | "Phone lines open 7 days a week." | Confirm actual hours. |
+| Operating hours | "Phone lines open 7 days a week." | Live wording. Approved replacement copy ("Calls answered 24/7" / "Calls answered 24 hours a day, 7 days a week.") is already built and wired — see `ALWAYS_ON_CALL` below — but held back pending confirmation that phone coverage is actually staffed around the clock. |
 | Social links | `null` (Instagram, Facebook, Google Business Profile) | Not rendered anywhere while null; add real URLs when accounts exist. |
 
 ## Same-day service — `lib/config/site.ts` → `DEFAULT_SAME_DAY_SERVICE`
 
 Fully centralized and already accurate to the brief (before-4-PM cutoff,
-subject to availability, no 24/7 claim). Nothing fake here — just flag that
-turning `enabled: false` (globally or per-market) is untested against real
-traffic and should be smoke-tested before relying on it seasonally.
+subject to availability). Nothing fake here — just flag that turning
+`enabled: false` (globally or per-market) is untested against real traffic
+and should be smoke-tested before relying on it seasonally.
+
+## Always-on-call line — `lib/config/site.ts` → `ALWAYS_ON_CALL`
+
+Approved copy ("Calls answered 24/7." on the homepage hero, "Calls answered
+24 hours a day, 7 days a week." replacing the Contact page hours note) is
+built and ready, gated behind `ALWAYS_ON_CALL.enabled` (currently `false`).
+This means human phone answering around the clock, not 24-hour technician
+dispatch. **Do not flip `enabled` to `true` without explicit confirmation
+that phone coverage is actually live** — this is a business/staffing fact,
+not a design decision.
 
 ## Analytics & tracking — `lib/config/site.ts` → `ANALYTICS`, `lib/analytics.ts`
 
@@ -93,21 +103,35 @@ The seven markets included (Toronto, York Region, Durham Region, Oakville
 snapshot**, not a locked list. Phone numbers are placeholders per above.
 
 **Active launch territory (as of this writing): Toronto, York Region, and
-Durham Region only.** Oakville & Burlington, Hamilton, Barrie, and Niagara
-Region are all `status: "coming-soon"` — fully built, but held back from
-"currently serving" because Good Neighbors isn't dispatching technicians
-there yet. `status` is what gates everything: `getActiveMarkets()` (used
-by the homepage "Currently Serving" section and the footer) only returns
-`"active"` markets, coming-soon market pages render a "Coming soon" badge
-instead of the same-day badge, suppress the same-day FAQ entries, and are
-marked `noIndex` (and excluded from `app/sitemap.ts`) so Google never
-indexes a page for a market that isn't live.
+Durham Region.** Peel Region is also approved launch coverage and appears
+in customer-facing coverage text (footer, homepage, About, FAQ), but has
+no market page yet — see the outstanding item below.
+
+Oakville & Burlington, Hamilton, Barrie, and Niagara Region are all
+`status: "hidden"` — fully built, kept as preparatory content, but
+excluded from every public surface (hub grid, sitemap, footer, nav) and
+404 if visited directly, since publishing them as live or "coming soon"
+offerings was explicitly walked back. `status` is what gates everything:
+`getActiveMarkets()` (used by the homepage service-area section and the
+footer) only returns `"active"` markets; `generateStaticParams` and the
+market page's own `notFound()` guard in
+`app/service-areas/[slug]/page.tsx` keep hidden markets from being
+statically generated or reachable at all.
 
 **To activate a market:** add its real phone number to its `phone` field
 (or leave it unset to keep using the shared `DEFAULT_PHONE`), then flip
 `status` to `"active"`. That's it — the homepage, footer, nav, service-area
 hub, sitemap, and the market's own page all pick it up automatically. No
 other file needs to change, and the page never needs to be rebuilt.
+
+**Outstanding: Peel Region has no market page.** Coverage copy across the
+site (footer, homepage, About, FAQ) now names Peel Region alongside
+Toronto/York/Durham per approved wording, but `lib/data/markets.ts` has
+no Peel entry — creating one would require inventing a `heroBlurb` and
+`serviceArea` list that hasn't been approved. Add a real Peel Region
+entry (with approved copy) to `MARKETS` and set `status: "active"` when
+that content exists; until then, no "View coverage" link points at Peel
+anywhere on the site.
 
 ## Pricing — intentionally absent
 

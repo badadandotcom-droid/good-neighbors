@@ -4,7 +4,7 @@ import { CTAButton } from "@/components/shared/CTAButton";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { MARKETS, marketHref } from "@/lib/data/markets";
 import { pageMetadata } from "@/lib/seo";
-import { BRAND, PRIMARY_CTA_LABEL } from "@/lib/config/site";
+import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
 import { cn } from "@/lib/utils";
 import type { Market } from "@/lib/types";
 
@@ -24,7 +24,7 @@ function groupByMetro(markets: Market[]): { metro: string; markets: Market[] }[]
 }
 
 export default function ServiceAreasPage() {
-  const groups = groupByMetro(MARKETS);
+  const groups = groupByMetro(MARKETS.filter((m) => m.status !== "hidden"));
 
   return (
     <>
@@ -39,12 +39,10 @@ export default function ServiceAreasPage() {
             Service Areas
           </p>
           <h1 className="mt-4 text-balance font-display text-4xl leading-[1.06] text-charcoal sm:text-5xl">
-            Local wherever we operate.
+            Areas we serve
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-ink-700 text-pretty">
-            {BRAND.name} launched in {BRAND.foundingRegion} and is adding markets as we grow. Every location below
-            is served by the same brand, the same standards, and the same humane approach — just with technicians
-            who know that specific area.
+            Serving Toronto, York Region, Durham Region and Peel Region.
           </p>
         </Container>
       </section>
@@ -97,10 +95,9 @@ export default function ServiceAreasPage() {
 
       <section className="border-t border-stone-300 bg-charcoal py-16 text-bone-50 sm:py-20">
         <Container className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="max-w-md text-lg leading-relaxed text-stone-300">
-            Don&apos;t see your area yet? Reach out anyway — we&apos;re expanding across Canada and, over time, the
-            United States.
-          </p>
+          <h2 className="max-w-md text-balance font-display text-3xl leading-[1.1] text-bone-50">
+            Have a wildlife problem right now?
+          </h2>
           <CTAButton href="/contact" size="lg" event="cta_get_help_now" eventMeta={{ location: "service-areas-hub" }}>
             {PRIMARY_CTA_LABEL}
           </CTAButton>

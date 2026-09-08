@@ -3,7 +3,6 @@ import { Hero } from "@/components/home/Hero";
 import { TrustBar } from "@/components/home/TrustBar";
 import { WildlifePicker } from "@/components/home/WildlifePicker";
 import { HowItWorks } from "@/components/home/HowItWorks";
-import { PropertyCareTeaser } from "@/components/home/PropertyCareTeaser";
 import { ServiceAreasTeaser } from "@/components/home/ServiceAreasTeaser";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { Container } from "@/components/shared/Container";
@@ -32,7 +31,6 @@ export default function HomePage() {
       <TrustBar />
       <WildlifePicker />
       <HowItWorks />
-      <PropertyCareTeaser />
       <ServiceAreasTeaser />
 
       <section className="py-14 sm:py-28">

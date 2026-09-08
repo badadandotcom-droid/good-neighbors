@@ -7,20 +7,20 @@ export function TrustBar({ market }: { market?: Market }) {
 
   const lead = {
     title: "Humane",
-    body: "Wildlife is handled responsibly, every time — not treated as a pest to eliminate.",
+    body: "Wildlife is handled carefully and humanely.",
   };
 
   const supporting: { title: string; body: string }[] = [
     {
       title: "Local",
-      body: "Technicians who know the housing stock and neighborhoods they work in.",
+      body: "Serving Toronto, York Region, Durham Region and Peel Region.",
     },
     {
       title: sameDay.enabled ? "Same-Day Service" : "Fast Response",
       body: sameDay.enabled ? sameDay.qualificationMessage : sameDay.disabledMessage,
     },
     {
-      title: "Professional Property Care",
+      title: "Care for your home",
       body: "Careful around your roofline, landscaping, and finishes — every visit.",
     },
   ];
@@ -45,6 +45,9 @@ export function TrustBar({ market }: { market?: Market }) {
               </div>
             ))}
           </div>
+          <p className="mt-6 text-xs text-stone-400 sm:pl-7">
+            $5 million in liability insurance &middot; Background-checked technicians
+          </p>
         </div>
       </Container>
     </section>

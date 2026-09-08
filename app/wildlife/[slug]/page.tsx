@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!entry) return {};
 
   return pageMetadata({
-    title: `${entry.name} Removal`,
+    title: `${entry.category === "species" ? entry.singular : entry.name} Removal`,
     description: entry.summary,
     path: `/wildlife/${entry.slug}`,
   });
@@ -50,8 +50,9 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
   const tone = PHOTO_TONE[entry.slug] ?? "pine";
 
   const related = WILDLIFE.filter((w) => w.slug !== entry.slug && w.category === "species").slice(0, 4);
+  const removalTitle = `${entry.category === "species" ? entry.singular : entry.name} Removal`;
   const jsonLd = serviceJsonLd({
-    name: `${entry.name} Removal`,
+    name: removalTitle,
     description: entry.summary,
     path: `/wildlife/${entry.slug}`,
   });
@@ -83,7 +84,7 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
                 <Illustration id={entry.iconId} weight="bold" className="h-14 w-14 shrink-0 text-pine-600" />
               )}
               <h1 className="text-balance font-display text-4xl leading-[1.02] text-charcoal sm:text-5xl">
-                {entry.name} Removal
+                {removalTitle}
               </h1>
             </div>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">{entry.intro}</p>
