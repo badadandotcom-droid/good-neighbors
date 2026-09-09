@@ -45,7 +45,14 @@ export default function WildlifePage() {
             </CTAButton>
           </div>
           <div className="lg:col-span-5">
-            <PhotoPlaceholder slot="inspection" icon="attic" tone="pine" aspect="aspect-[4/3]" corner="top-left" />
+            <PhotoPlaceholder
+              slot="inspection"
+              icon="attic"
+              tone="pine"
+              aspect="aspect-[4/3]"
+              corner="top-left"
+              note="A technician on a ladder inspecting a soffit near the roofline of a house."
+            />
           </div>
         </Container>
       </section>
@@ -63,7 +70,14 @@ export default function WildlifePage() {
             className="group mt-12 flex flex-col overflow-hidden rounded-sm border border-stone-300 bg-white transition-colors hover:border-pine-500 lg:flex-row"
           >
             <div className="lg:w-2/5">
-              <PhotoPlaceholder slot="detail" icon={species[0].iconId} tone="charcoal" aspect="aspect-[16/9] lg:aspect-auto lg:h-full" className="rounded-none" />
+              <PhotoPlaceholder
+                slot="detail"
+                icon={species[0].iconId}
+                tone="charcoal"
+                aspect="aspect-[16/9] lg:aspect-auto lg:h-full"
+                className="rounded-none"
+                note="A technician cutting wire mesh at an outdoor workbench."
+              />
             </div>
             <div className="flex flex-1 flex-col justify-center gap-3 p-8 sm:p-10">
               <h3 className="font-display text-3xl text-charcoal sm:text-4xl">{species[0].name}</h3>

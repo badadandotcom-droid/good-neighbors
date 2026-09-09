@@ -49,10 +49,16 @@ independently-toggled promise (`DEFAULT_SAME_DAY_SERVICE`). Do not flip
 
 ## Get Help form — `app/api/get-help/route.ts`, `components/forms/GetHelpForm.tsx`
 
-- The route **validates** submissions but does **not deliver them
+- The route **validates** submissions but does **not deliver or store them
   anywhere** — no email send, no CRM webhook, no CallRail conversion
-  event. A `200 { ok: true }` response means "well-formed," not "received
-  by a human." See the `TODO(production)` comment in the route handler.
+  event, no database. Rather than report a fake success for a lead nobody
+  will receive, a validated submission now returns `503 { ok: false,
+  error: "We couldn't send your request. Please try again or call
+  416-900-WILD (9453)." }`, and the form surfaces that message with a
+  tap-to-call link. Wire real delivery where marked with `TODO(production)`
+  in the route handler, then change its response back to `{ ok: true }`.
+  Until that's done, **every real submission through this form currently
+  fails** — this is the top launch blocker.
 - Basic honeypot spam protection is in place (`company` field); no rate
   limiting is implemented yet (would need persistent storage or an edge
   service).
@@ -62,15 +68,16 @@ independently-toggled promise (`DEFAULT_SAME_DAY_SERVICE`). Do not flip
 The interactive dropzone (selection, drag-and-drop, thumbnail preview) is
 still fully built and functional client-side, but as of this pass it is
 **no longer wired into the Get Help form** — `components/forms/
-GetHelpForm.tsx` no longer imports or renders it. There is no object
-storage (S3/Cloudinary/etc.) connected, so rather than let visitors select
-photos that go nowhere, the form's "Photos" section now shows plain
-informational text (mention photos in the request; we'll confirm how to
-send them) plus the ground-safety instruction, with no upload control. The
+GetHelpForm.tsx` no longer imports or renders it, and there's no longer a
+standalone numbered "Photos" step. There is no object storage
+(S3/Cloudinary/etc.) connected, so rather than let visitors select photos
+that go nowhere, a short helper line next to the problem-description field
+("Have photos? Mention them in your message...") plus the ground-safety
+instruction cover this, with no upload control anywhere in the form. The
 FAQ's "Can I send you a photo?" answer matches this — it no longer offers
 "text us photos," since SMS/MMS receiving has not been tested. The
 `PhotoUpload` component itself is untouched and ready to be wired back in
-once real storage exists; re-add the import and both call sites in
+once real storage exists; re-add the import and a call site in
 `GetHelpForm.tsx` and include the resulting URLs (tagged by section) in
 the `/api/get-help` payload when ready.
 

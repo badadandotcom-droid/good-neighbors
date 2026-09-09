@@ -16,6 +16,7 @@ const CHAPTERS: {
   title: string;
   body: string;
   slot: PhotoSlotId;
+  photoDescription: string;
   icon: IllustrationId;
   imageOnLeft?: boolean;
 }[] = [
@@ -23,12 +24,14 @@ const CHAPTERS: {
     title: "What to expect when we arrive",
     body: "Your technician will take a look at the problem and explain how we'll handle it. We'll confirm the price with you before any work begins.",
     slot: "conversation",
+    photoDescription: "A Good Neighbors technician pointing out a roofline detail to a homeowner outside her house.",
     icon: "phone-call",
   },
   {
     title: "Careful with your home and the animal",
     body: "We use humane removal methods and work carefully around your roofline, siding and landscaping.",
     slot: "detail",
+    photoDescription: "A technician cutting wire mesh at an outdoor workbench.",
     icon: "shield-home",
     imageOnLeft: true,
   },
@@ -69,6 +72,7 @@ export default function AboutPage() {
                 tone={i === 1 ? "wood" : "pine"}
                 aspect="aspect-[4/3]"
                 corner={chapter.imageOnLeft ? "top-left" : "bottom-right"}
+                note={chapter.photoDescription}
               />
             </div>
             <div className={cn("lg:col-span-6", chapter.imageOnLeft ? "lg:order-2 lg:col-start-7" : "lg:order-1")}>

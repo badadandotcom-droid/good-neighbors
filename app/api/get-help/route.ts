@@ -1,14 +1,16 @@
 import { NextResponse } from "next/server";
+import { DEFAULT_PHONE } from "@/lib/config/site";
 
 /**
  * Get Help intake endpoint.
  *
- * STATUS: validates and accepts submissions, but does NOT yet deliver them
- * anywhere — there is no CRM, email, or lead-routing integration connected
- * (see PLACEHOLDERS.md). A submission that returns { ok: true } from this
- * route has been validated, not received by a human. Wire delivery (e.g.
- * an email send, a CRM webhook, or a CallRail/lead-routing call) where
- * marked below before relying on this in production.
+ * STATUS: validates submissions but does NOT deliver or store them anywhere
+ * — there is no CRM, email, or lead-routing integration connected (see
+ * PLACEHOLDERS.md). Rather than report a fake success for a lead nobody will
+ * see, a validated submission is returned as a failure with an honest
+ * retry/call message. Wire real delivery (e.g. a transactional email send,
+ * a CRM webhook, or a CallRail/lead-routing call) where marked below, then
+ * change the response below to { ok: true } once delivery is confirmed.
  *
  * Photos are intentionally not accepted here — see components/forms/PhotoUpload.tsx.
  */
@@ -64,14 +66,13 @@ export async function POST(request: Request) {
 
   // TODO(production): deliver the validated lead — e.g. send an email via a
   // transactional provider, POST to a CRM/dispatch webhook, or trigger a
-  // CallRail conversion event. Nothing downstream is connected yet.
-  console.log("[get-help] validated submission received", {
-    name: body.name,
-    hasEmail: Boolean(body.email),
-    location: body.location,
-    animal: body.animal,
-    whereActivity: body.whereActivity,
-  });
+  // CallRail conversion event — then return { ok: true } below. Nothing
+  // downstream is connected yet, so this intentionally reports failure
+  // rather than a fake success for a lead nobody will receive.
+  console.warn("[get-help] validated submission could not be delivered — no delivery integration is configured");
 
-  return NextResponse.json({ ok: true });
+  return NextResponse.json(
+    { ok: false, error: `We couldn't send your request. Please try again or call ${DEFAULT_PHONE.display}.` },
+    { status: 503 },
+  );
 }

@@ -27,6 +27,7 @@ export function GetHelpForm() {
   const phone = getPhone();
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [started, setStarted] = useState(false);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -48,6 +49,7 @@ export function GetHelpForm() {
 
     setStatus("submitting");
     setErrors({});
+    setErrorMessage(null);
     trackEvent("form_submit");
 
     try {
@@ -60,6 +62,7 @@ export function GetHelpForm() {
 
       if (!res.ok || !result.ok) {
         setErrors(result.errors ?? {});
+        setErrorMessage(typeof result.error === "string" ? result.error : null);
         setStatus("error");
         trackEvent("form_submit_error");
         return;
@@ -71,6 +74,7 @@ export function GetHelpForm() {
     } catch {
       setStatus("error");
       setErrors({});
+      setErrorMessage(null);
       trackEvent("form_submit_error");
     }
   }
@@ -118,7 +122,7 @@ export function GetHelpForm() {
         </div>
       </FormSection>
 
-      <FormSection number={2} title="What's happening">
+      <FormSection number={2} title="What's happening" last>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <Field label="Property location or postal code" htmlFor="location" optional className="sm:col-span-2">
             <input id="location" name="location" type="text" placeholder="e.g. Scarborough, or M1B 2K5" className={inputClass(false)} />
@@ -158,17 +162,12 @@ export function GetHelpForm() {
               placeholder="e.g. Scratching in the attic in the early morning for the past two days."
               className={inputClass(!!errors.description)}
             />
+            <p className="mt-2 text-xs leading-relaxed text-stone-500">
+              Have photos? Mention them in your message and we&apos;ll arrange how to receive them.
+            </p>
           </Field>
-        </div>
-      </FormSection>
 
-      <FormSection number={3} title="Photos" optional last>
-        <div className="flex flex-col gap-4">
-          <p className="text-sm leading-relaxed text-ink-700">
-            If you have photos of the animal or entry point, mention them in your request. We&apos;ll confirm how
-            to send them when we get in touch.
-          </p>
-          <div className="flex items-start gap-2.5 rounded-sm border border-wood-300 bg-wood-100/50 px-4 py-3">
+          <div className="flex items-start gap-2.5 rounded-sm border border-wood-300 bg-wood-100/50 px-4 py-3 sm:col-span-2">
             <Illustration id="shield-home" className="mt-0.5 h-4 w-4 shrink-0 text-wood-700" />
             <p className="text-xs leading-relaxed text-wood-700">
               Only take photos from a safe place on the ground. Do not climb a ladder or get onto the roof.
@@ -197,9 +196,12 @@ export function GetHelpForm() {
       </div>
 
       {status === "error" && Object.keys(errors).length === 0 && (
-        <p className="mt-5 rounded-sm border border-clay-100 bg-clay-100/40 px-4 py-3 text-sm text-clay-500">
-          Something went wrong sending your request. Please try again, or call us directly.
-        </p>
+        <div className="mt-5 flex flex-col gap-2 rounded-sm border border-clay-100 bg-clay-100/40 px-4 py-3">
+          <p className="text-sm text-clay-500">
+            {errorMessage ?? "Something went wrong sending your request. Please try again, or call us directly."}
+          </p>
+          <PhoneLink phone={phone} location="form-error" className="text-sm text-clay-500 hover:text-clay-600" />
+        </div>
       )}
 
       <div className="mt-8 flex flex-col gap-4 border-t border-stone-300 pt-8 sm:flex-row sm:items-center sm:justify-between">

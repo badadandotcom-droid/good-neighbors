@@ -164,7 +164,7 @@ export default async function MarketPage({ params }: { params: Promise<{ slug: s
             dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }}
           />
           <h2 className="font-display text-2xl text-charcoal sm:text-3xl">
-            {active ? `Questions from ${market.displayName} homeowners` : "Good to know"}
+            {active ? "Common questions" : "Good to know"}
           </h2>
           <div className="mt-10">
             <FAQAccordion items={faqs} />
