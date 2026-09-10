@@ -49,16 +49,22 @@ independently-toggled promise (`DEFAULT_SAME_DAY_SERVICE`). Do not flip
 
 ## Get Help form — `app/api/get-help/route.ts`, `components/forms/GetHelpForm.tsx`
 
-- The route **validates** submissions but does **not deliver or store them
-  anywhere** — no email send, no CRM webhook, no CallRail conversion
-  event, no database. Rather than report a fake success for a lead nobody
-  will receive, a validated submission now returns `503 { ok: false,
-  error: "We couldn't send your request. Please try again or call
-  416-900-WILD (9453)." }`, and the form surfaces that message with a
-  tap-to-call link. Wire real delivery where marked with `TODO(production)`
-  in the route handler, then change its response back to `{ ok: true }`.
-  Until that's done, **every real submission through this form currently
-  fails** — this is the top launch blocker.
+- The route validates submissions and emails them to `CONTACT.email`
+  (`hello@goodneighborswildlife.ca`) via Resend, sending from
+  `website@goodneighborswildlife.ca` with the customer's address as
+  `reply_to` when they supplied one. `{ ok: true }` is returned **only**
+  after Resend accepts the message; a missing `RESEND_API_KEY`, a rejected
+  key, or a network failure all return `503 { ok: false, error: "We
+  couldn't send your request. Please try again or call 416-900-WILD
+  (9453)." }`, which the form shows with a tap-to-call link. So the form is
+  never able to claim success for a lead nobody will receive.
+- **Requires `RESEND_API_KEY` in the Vercel environment.** Without it the
+  route still runs, but every submission fails with the message above —
+  same behaviour as before delivery was wired up.
+- **The notification email is the only record of a lead.** There is no
+  database or CRM. If that email is deleted or filtered to spam, the lead
+  is gone. Durable storage is the obvious next step but was deliberately
+  out of scope for this pass.
 - Basic honeypot spam protection is in place (`company` field); no rate
   limiting is implemented yet (would need persistent storage or an edge
   service).
