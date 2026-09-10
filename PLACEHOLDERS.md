@@ -60,7 +60,12 @@ independently-toggled promise (`DEFAULT_SAME_DAY_SERVICE`). Do not flip
   never able to claim success for a lead nobody will receive.
 - **Requires `RESEND_API_KEY` in the Vercel environment.** Without it the
   route still runs, but every submission fails with the message above —
-  same behaviour as before delivery was wired up.
+  same behaviour as before delivery was wired up. The key is set on
+  Production only; add it to Preview/Development if those ever need to send.
+- **Verified end-to-end on 10 Sep 2026**: a real submission through the
+  live site arrived in the `hello@` inbox. The domain is verified in Resend
+  (DKIM + SPF + a `send.` subdomain MX), and the root MX still points at
+  Google Workspace, so normal mail is unaffected.
 - **The notification email is the only record of a lead.** There is no
   database or CRM. If that email is deleted or filtered to spam, the lead
   is gone. Durable storage is the obvious next step but was deliberately
