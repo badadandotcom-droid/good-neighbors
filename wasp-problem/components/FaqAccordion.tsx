@@ -1,3 +1,5 @@
+import { SectionHeading } from "@/components/SectionHeading";
+
 type FaqItem = { q: string; a: string };
 
 function faqJsonLd(items: readonly FaqItem[]) {
@@ -14,31 +16,30 @@ function faqJsonLd(items: readonly FaqItem[]) {
 
 export function FaqAccordion({ items }: { items: readonly FaqItem[] }) {
   return (
-    <section className="px-5 py-12">
+    <section className="bg-surface px-5 py-16 sm:py-24">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(items)) }}
       />
-      <div className="mx-auto max-w-md">
-        <h2 className="text-center text-2xl uppercase sm:text-3xl">Questions</h2>
-        <div className="mt-6 flex flex-col gap-3">
+      <div className="mx-auto max-w-2xl">
+        <SectionHeading eyebrow="Good to know" title="Questions" />
+        <div className="mt-10 flex flex-col gap-3">
           {items.map((item) => (
-            <details
-              key={item.q}
-              className="group rounded-sm border-2 border-black px-4 py-3 open:pb-4"
-            >
+            <details key={item.q} className="group card px-5 py-4 open:pb-5 sm:px-6">
               <summary className="cursor-pointer list-none text-base font-bold marker:content-none">
-                <span className="flex items-center justify-between gap-3">
+                <span className="flex items-center justify-between gap-4">
                   {item.q}
-                  <span className="shrink-0 text-xl leading-none font-black group-open:hidden">
+                  <span
+                    aria-hidden="true"
+                    className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-yellow-tint text-lg leading-none font-black text-ink transition-transform duration-200 group-open:rotate-45"
+                  >
                     +
-                  </span>
-                  <span className="hidden shrink-0 text-xl leading-none font-black group-open:inline">
-                    −
                   </span>
                 </span>
               </summary>
-              <p className="mt-2 text-sm leading-relaxed">{item.a}</p>
+              <p className="mt-3 max-w-prose text-sm leading-relaxed text-muted sm:text-base">
+                {item.a}
+              </p>
             </details>
           ))}
         </div>

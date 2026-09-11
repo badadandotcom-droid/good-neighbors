@@ -4,12 +4,12 @@ import { PHONE_TOLLFREE } from "@/lib/site";
 /** Persistent mobile-only call button — one dominant action, the fastest path to a call from anywhere on the page. */
 export function StickyCallBar() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t-4 border-black bg-yellow sm:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 bg-white/95 p-2.5 shadow-bar backdrop-blur sm:hidden">
       <PhoneLink
         location="sticky-mobile"
-        className="flex items-center justify-center gap-2 py-4 text-lg font-black tracking-tight text-black"
+        className="btn btn-primary w-full py-3.5 text-lg"
       >
-        CALL {PHONE_TOLLFREE.display}
+        Call {PHONE_TOLLFREE.display}
       </PhoneLink>
     </div>
   );

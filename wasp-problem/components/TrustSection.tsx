@@ -1,3 +1,4 @@
+import { SectionHeading } from "@/components/SectionHeading";
 import type { JobPhoto, Review } from "@/lib/testimonials";
 
 /**
@@ -15,23 +16,23 @@ export function TrustSection({
   if (reviews.length === 0 && photos.length === 0) return null;
 
   return (
-    <section className="bg-cream px-5 py-16 sm:py-20">
-      <div className="mx-auto max-w-xl text-center">
-        <h2 className="text-2xl uppercase sm:text-3xl">What Customers Say</h2>
+    <section className="bg-surface px-5 py-16 sm:py-24">
+      <div className="mx-auto max-w-3xl">
+        <SectionHeading eyebrow="Real customers" title="What Customers Say" />
 
         {reviews.length > 0 && (
-          <ul className="mt-8 flex flex-col gap-4 text-left">
+          <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {reviews.map((review) => (
-              <li key={review.author} className="rounded-sm border-2 border-black/15 px-4 py-4">
+              <li key={review.author} className="card px-5 py-5">
                 <p className="text-base leading-relaxed">&ldquo;{review.quote}&rdquo;</p>
-                <p className="mt-2 text-sm font-bold">
+                <p className="mt-3 text-sm font-bold">
                   {review.author}
                   {review.source ? (
                     review.sourceUrl ? (
                       <>
                         {" "}
                         &middot;{" "}
-                        <a href={review.sourceUrl} className="underline underline-offset-2">
+                        <a href={review.sourceUrl} className="underline underline-offset-4">
                           {review.source}
                         </a>
                       </>
@@ -48,12 +49,10 @@ export function TrustSection({
         {photos.length > 0 && (
           <ul className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
             {photos.map((photo) => (
-              <li key={photo.src} className="overflow-hidden rounded-sm border-2 border-black/15">
+              <li key={photo.src} className="card overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element -- real, supplied job photos; no benefit from next/image's remote-optimization config here */}
                 <img src={photo.src} alt={photo.alt} className="h-full w-full object-cover" />
-                {photo.caption && (
-                  <p className="px-2 py-1 text-xs text-black/70">{photo.caption}</p>
-                )}
+                {photo.caption && <p className="px-3 py-2 text-xs text-muted">{photo.caption}</p>}
               </li>
             ))}
           </ul>

@@ -1,4 +1,5 @@
 import { ContactActions } from "@/components/ContactActions";
+import { TrustPoints } from "@/components/TrustPoints";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { PricingTable } from "@/components/PricingTable";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
@@ -17,36 +18,39 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-yellow px-5 pt-10 pb-12 text-center">
-        <h1 className="text-5xl leading-[0.95] font-black uppercase sm:text-7xl">
-          Wasp
-          <br />
-          Problem?
-        </h1>
-        <p className="mx-auto mt-4 max-w-sm text-lg font-bold sm:text-xl">
-          Professional Wasp Nest Removal
-        </p>
-        <p className="mx-auto mt-2 max-w-xs text-sm font-medium sm:max-w-sm">
-          Serving Toronto &amp; the GTA
-        </p>
+      <section className="relative overflow-hidden bg-white px-5 pt-12 pb-14 text-center sm:pt-20 sm:pb-20">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-[radial-gradient(60%_60%_at_50%_0%,rgb(255_212_0_/_0.22),transparent_70%)]"
+        />
+        <div className="relative mx-auto max-w-2xl">
+          <p className="inline-flex items-center gap-2 rounded-full border border-yellow-deep/40 bg-yellow-tint px-3.5 py-1.5 text-xs font-bold tracking-[0.12em] text-ink uppercase">
+            <span className="h-2 w-2 rounded-full bg-yellow-deep" aria-hidden="true" />
+            {SAME_DAY_SERVICE.headline}*
+          </p>
 
-        <p className="mx-auto mt-5 inline-block rounded-sm bg-black px-3 py-1 text-xs font-black tracking-wide text-yellow uppercase">
-          {SAME_DAY_SERVICE.headline}*
-        </p>
-        <p className="mx-auto mt-2 max-w-xs text-sm font-medium sm:max-w-sm">
-          Visible and hidden nests.
-        </p>
+          <h1 className="mt-6 text-5xl leading-[0.95] uppercase sm:text-7xl">
+            Wasp
+            <br />
+            Problem?
+          </h1>
+          <p className="mx-auto mt-5 max-w-md text-xl font-bold sm:text-2xl">
+            Professional Wasp Nest Removal
+          </p>
+          <p className="mx-auto mt-2 max-w-md text-base text-muted sm:text-lg">
+            Serving Toronto &amp; the GTA &middot; Visible and hidden nests
+          </p>
 
-        <div className="mt-6">
-          <ContactActions ctaLocationPrefix="hero" variant="light" />
+          <div className="mt-8">
+            <ContactActions ctaLocationPrefix="hero" variant="light" />
+          </div>
+
+          <div className="mt-9 flex justify-center">
+            <TrustPoints />
+          </div>
+
+          <p className="mx-auto mt-7 max-w-sm text-xs text-muted">*{SAME_DAY_SERVICE.disclaimer}</p>
         </div>
-
-        <p className="mx-auto mt-4 max-w-xs text-xs text-black/70 sm:max-w-sm">
-          *{SAME_DAY_SERVICE.disclaimer}
-        </p>
-        <a href="#guarantee" className="mt-3 inline-block text-sm font-bold underline underline-offset-2">
-          90-Day Service Guarantee
-        </a>
       </section>
 
       <TrustSection reviews={REVIEWS} photos={PHOTOS} />

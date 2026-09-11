@@ -13,7 +13,7 @@ Vercel project.
 
 - **Next.js 16** (App Router, React 19, TypeScript)
 - **Tailwind CSS v4** (CSS-first `@theme` config in `app/globals.css`)
-- No web fonts (system font stack). Client components are small and
+- Two self-hosted Google Fonts via `next/font/google` (Archivo for headlines, Manrope for body), no runtime font requests. Client components are small and
   targeted — click-tracking on phone/text links (`components/PhoneLink.tsx`,
   `components/TextLink.tsx`, `components/StickyCallBar.tsx`) plus the
   Google tag. The FAQ accordion is a native `<details>` — no JS.
