@@ -1,5 +1,5 @@
 import { PhoneLink } from "@/components/PhoneLink";
-import { PHONE } from "@/lib/site";
+import { PHONE_TOLLFREE } from "@/lib/site";
 
 /** "Got wasps going in and out of one spot?" — shared verbatim across the home and city pages since it's the same factual guidance regardless of location. */
 export function NestSigns({ ctaLocation }: { ctaLocation: string }) {
@@ -22,7 +22,7 @@ export function NestSigns({ ctaLocation }: { ctaLocation: string }) {
           location={ctaLocation}
           className="mt-6 inline-block rounded-sm border-4 border-black px-6 py-3 text-lg font-black"
         >
-          Call {PHONE.display}
+          Call {PHONE_TOLLFREE.display}
         </PhoneLink>
       </div>
     </section>

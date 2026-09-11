@@ -1,13 +1,18 @@
 import Link from "next/link";
+import { ContactActions } from "@/components/ContactActions";
 import { PhoneLink } from "@/components/PhoneLink";
 import { NestSigns } from "@/components/NestSigns";
 import { ProcessSteps } from "@/components/ProcessSteps";
+import { PricingTable } from "@/components/PricingTable";
+import { GuaranteeSection } from "@/components/GuaranteeSection";
 import { TreatmentTimeline } from "@/components/TreatmentTimeline";
+import { TrustSection } from "@/components/TrustSection";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { FinalCta } from "@/components/FinalCta";
 import { SiteFooter } from "@/components/SiteFooter";
-import { PHONE, SAME_DAY_SERVICE } from "@/lib/site";
+import { PHONE_TOLLFREE, SAME_DAY_SERVICE } from "@/lib/site";
 import { BASE_FAQS } from "@/lib/content";
+import { REVIEWS, PHOTOS } from "@/lib/testimonials";
 import { CITY_LOCATIONS, type CityLocation } from "@/lib/locations";
 
 export function CityPage({ location }: { location: CityLocation }) {
@@ -32,17 +37,12 @@ export function CityPage({ location }: { location: CityLocation }) {
           {SAME_DAY_SERVICE.headline}*
         </p>
 
-        <PhoneLink
-          location={`city-${location.slug}-hero`}
-          className="mt-4 inline-block w-full max-w-xs rounded-sm bg-black px-6 py-4 text-xl font-black tracking-tight text-yellow sm:w-auto"
-        >
-          CALL NOW
-          <br className="sm:hidden" />
-          <span className="sm:ml-2">{PHONE.display}</span>
-        </PhoneLink>
+        <div className="mt-4">
+          <ContactActions ctaLocationPrefix={`city-${location.slug}-hero`} variant="light" />
+        </div>
 
         <p className="mx-auto mt-4 max-w-xs text-sm font-medium sm:max-w-sm">
-          Fast help for active wasp nests around your home.
+          Fast help for active wasp, hornet and carpenter bee problems around your home.
         </p>
         <p className="mx-auto mt-1 max-w-xs text-xs text-black/70 sm:max-w-sm">
           *{SAME_DAY_SERVICE.disclaimer}
@@ -50,10 +50,13 @@ export function CityPage({ location }: { location: CityLocation }) {
       </section>
 
       {/* INTRO */}
-      <section className="px-5 py-12 text-center">
-        <div className="mx-auto max-w-md">
+      <section className="px-5 py-16 sm:py-20 text-center">
+        <div className="mx-auto max-w-xl">
           {location.intro.map((paragraph, i) => (
-            <p key={i} className={i === 0 ? "text-base leading-relaxed" : "mt-4 text-base leading-relaxed"}>
+            <p
+              key={i}
+              className={i === 0 ? "text-base leading-relaxed" : "mt-4 text-base leading-relaxed"}
+            >
               {paragraph}
             </p>
           ))}
@@ -61,18 +64,21 @@ export function CityPage({ location }: { location: CityLocation }) {
             location={`city-${location.slug}-intro`}
             className="mt-6 inline-block rounded-sm border-4 border-black px-6 py-3 text-lg font-black"
           >
-            Call {PHONE.display}
+            Call {PHONE_TOLLFREE.display}
           </PhoneLink>
         </div>
       </section>
 
+      <TrustSection reviews={REVIEWS} photos={PHOTOS} />
       <NestSigns ctaLocation={`city-${location.slug}-nest-signs`} />
       <ProcessSteps />
+      <PricingTable />
+      <GuaranteeSection />
       <TreatmentTimeline />
 
       {/* SERVICE AREA CROSS-LINKS */}
-      <section className="bg-yellow/15 px-5 py-12 text-center">
-        <div className="mx-auto max-w-md">
+      <section className="bg-cream px-5 py-16 sm:py-20 text-center">
+        <div className="mx-auto max-w-xl">
           <h2 className="text-2xl uppercase sm:text-3xl">Also Serving the GTA</h2>
           <p className="mt-4 text-base leading-relaxed">
             Alongside {location.city}, Wasp Problem is a primary service provider for{" "}
@@ -84,7 +90,7 @@ export function CityPage({ location }: { location: CityLocation }) {
               <li key={l.slug}>
                 <Link
                   href={l.href}
-                  className="block rounded-sm border-2 border-black px-3 py-1 text-sm font-bold"
+                  className="block rounded-sm border-2 border-black/15 bg-white px-3 py-1 text-sm font-bold"
                 >
                   {l.city}
                 </Link>
@@ -93,7 +99,7 @@ export function CityPage({ location }: { location: CityLocation }) {
             <li>
               <Link
                 href="/#service-areas"
-                className="block rounded-sm border-2 border-black px-3 py-1 text-sm font-bold"
+                className="block rounded-sm border-2 border-black/15 bg-white px-3 py-1 text-sm font-bold"
               >
                 All Service Areas
               </Link>

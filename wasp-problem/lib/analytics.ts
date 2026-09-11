@@ -12,7 +12,7 @@
  * objects, so going through window.gtag is what actually registers a GA4
  * event. Falls back to a no-op (console.debug in dev) if gtag isn't loaded.
  */
-export type ConversionEvent = "cta_call";
+export type ConversionEvent = "cta_call" | "cta_text";
 
 type Gtag = (...args: unknown[]) => void;
 

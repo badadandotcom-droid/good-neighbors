@@ -22,7 +22,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     h1: "Wasp Nest Removal in Mississauga",
     metaTitle: "Wasp Nest Removal in Mississauga",
     metaDescription:
-      "Wasp removal in Mississauga. Fast, professional wasp nest removal for homes across Mississauga and the GTA. Call Wasp Problem at 416-700-4259.",
+      "Wasp removal in Mississauga. Fast, professional wasp nest removal for homes across Mississauga and the GTA. Call Wasp Problem at 1-800-800-WASP.",
     heroSubheadline: "Fast Wasp Nest Removal for Mississauga Homeowners",
     intro: [
       "Mississauga is one of our primary service areas. If you're seeing wasps repeatedly entering and leaving one spot around your roof, soffit, siding, brickwork, deck or shed, there's likely an active nest nearby.",
@@ -40,7 +40,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     h1: "Wasp Nest Removal in Oakville",
     metaTitle: "Wasp Nest Removal in Oakville",
     metaDescription:
-      "Wasp removal in Oakville. Wasp Problem provides fast, professional wasp nest removal throughout Oakville and the GTA. Call 416-700-4259.",
+      "Wasp removal in Oakville. Wasp Problem provides fast, professional wasp nest removal throughout Oakville and the GTA. Call 1-800-800-WASP.",
     heroSubheadline: "Fast Wasp Nest Removal for Oakville Homeowners",
     intro: [
       "Oakville homeowners usually call us for the same reason: wasps keep flying in and out of one specific spot on the house, and nobody wants to get close enough to check. That's typically a sign of an active nest.",
@@ -58,7 +58,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     h1: "Wasp Nest Removal in Burlington",
     metaTitle: "Wasp Nest Removal in Burlington",
     metaDescription:
-      "Wasp removal in Burlington. Wasp Problem handles active wasp nests for homes throughout Burlington and the GTA. Call 416-700-4259.",
+      "Wasp removal in Burlington. Wasp Problem handles active wasp nests for homes throughout Burlington and the GTA. Call 1-800-800-WASP.",
     heroSubheadline: "Fast Wasp Nest Removal for Burlington Homeowners",
     intro: [
       "If you live in Burlington and you've noticed wasps consistently going in and out of the same opening — the roof, under the soffit, along the siding or brickwork, or around a deck or shed — that's usually an active nest, not just wasps passing through.",

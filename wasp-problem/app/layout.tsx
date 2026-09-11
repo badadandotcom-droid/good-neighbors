@@ -4,9 +4,9 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { PhoneLink } from "@/components/PhoneLink";
 import { StickyCallBar } from "@/components/StickyCallBar";
-import { BRAND, GA_MEASUREMENT_ID, PHONE } from "@/lib/site";
+import { BRAND, GA_MEASUREMENT_ID, PHONE_TOLLFREE, SERVICE_AREAS } from "@/lib/site";
 
-const HOME_TITLE = "Wasp Nest Removal – GTA, Mississauga, Oakville & Burlington";
+const HOME_TITLE = "Wasp Nest Removal – Toronto & the GTA";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BRAND.url),
@@ -44,13 +44,10 @@ function localBusinessJsonLd() {
     name: BRAND.name,
     description: BRAND.description,
     url: BRAND.url,
-    telephone: PHONE.href.replace("tel:", ""),
+    telephone: PHONE_TOLLFREE.href.replace("tel:", ""),
     areaServed: [
       { "@type": "AdministrativeArea", name: "Greater Toronto Area" },
-      { "@type": "City", name: "Mississauga" },
-      { "@type": "City", name: "Oakville" },
-      { "@type": "City", name: "Burlington" },
-      { "@type": "City", name: "Toronto" },
+      ...SERVICE_AREAS.map((city) => ({ "@type": "City", name: city })),
     ],
     address: {
       "@type": "PostalAddress",
@@ -75,8 +72,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Skip to content
         </a>
-        <header className="flex items-center justify-between gap-3 bg-black px-4 py-3">
-          <Link href="/" className="flex items-center gap-1">
+        <header className="flex items-center justify-between gap-3 bg-black px-3 py-3 sm:px-4">
+          <Link href="/" className="flex min-w-0 items-center gap-1">
             {/* eslint-disable-next-line @next/next/no-img-element -- tiny static brand mark, no benefit from next/image here */}
             <img
               src="/brand/wasp-icon-header.png"
@@ -85,15 +82,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               height={20}
               className="h-5 w-5 shrink-0 rounded-sm"
             />
-            <span className="text-sm font-black tracking-tight text-yellow uppercase">
+            <span className="truncate text-xs font-black tracking-tight text-yellow uppercase min-[375px]:text-sm">
               Wasp Problem
             </span>
           </Link>
           <PhoneLink
             location="header"
-            className="rounded-sm bg-yellow px-3 py-1.5 text-sm font-black tracking-tight text-black"
+            className="whitespace-nowrap rounded-sm bg-yellow px-2.5 py-1.5 text-sm font-black tracking-tight text-black"
           >
-            {PHONE.display}
+            {PHONE_TOLLFREE.display}
           </PhoneLink>
         </header>
         <main id="main-content">{children}</main>

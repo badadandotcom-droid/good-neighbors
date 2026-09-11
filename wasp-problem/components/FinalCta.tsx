@@ -1,5 +1,4 @@
-import { PhoneLink } from "@/components/PhoneLink";
-import { PHONE } from "@/lib/site";
+import { ContactActions } from "@/components/ContactActions";
 
 export function FinalCta({ ctaLocation }: { ctaLocation: string }) {
   return (
@@ -9,14 +8,10 @@ export function FinalCta({ ctaLocation }: { ctaLocation: string }) {
         <br />
         Problem?
       </h2>
-      <PhoneLink
-        location={ctaLocation}
-        className="mt-7 inline-block w-full max-w-xs rounded-sm bg-yellow px-6 py-4 text-xl font-black tracking-tight text-black sm:w-auto"
-      >
-        CALL NOW
-        <br className="sm:hidden" />
-        <span className="sm:ml-2">{PHONE.display}</span>
-      </PhoneLink>
+      <p className="mt-3 text-sm font-medium text-white/80">Serving Toronto &amp; the GTA</p>
+      <div className="mt-6">
+        <ContactActions ctaLocationPrefix={ctaLocation} variant="dark" />
+      </div>
     </section>
   );
 }

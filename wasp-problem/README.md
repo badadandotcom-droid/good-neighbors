@@ -1,7 +1,8 @@
 # Wasp Problem
 
-Seasonal lead-capture site for Wasp Problem (WaspProblem.ca). One page, one
-job: get a visitor on their phone to 416-700-4259 as fast as possible.
+Lead-capture site for Wasp Problem (WaspProblem.ca). One job: get a visitor
+on the phone — primarily the toll-free branded number, 1-800-800-WASP, with
+416-700-4259 as the local secondary line — as fast as possible.
 
 This app is **fully isolated** from the Good Neighbors Wildlife app that
 lives at the repo root — separate `package.json`, separate `node_modules`,
@@ -12,10 +13,10 @@ Vercel project.
 
 - **Next.js 16** (App Router, React 19, TypeScript)
 - **Tailwind CSS v4** (CSS-first `@theme` config in `app/globals.css`)
-- No web fonts (system font stack), no client-side libraries. The only
-  client components are two small ones that fire a click-tracking event on
-  the phone links (`components/PhoneLink.tsx`, `components/StickyCallBar.tsx`).
-  The FAQ accordion is a native `<details>` — no JS.
+- No web fonts (system font stack). Client components are small and
+  targeted — click-tracking on phone/text links (`components/PhoneLink.tsx`,
+  `components/TextLink.tsx`, `components/StickyCallBar.tsx`) plus the
+  Google tag. The FAQ accordion is a native `<details>` — no JS.
 
 ## Getting started
 
@@ -30,9 +31,13 @@ npm run lint      # ESLint
 
 ## Editing content
 
-Everything editorial (phone number, domain, service-area city list) lives in
-`lib/site.ts`. Page copy lives in `app/page.tsx`. There's intentionally no
-CMS or data layer — this is a one-page seasonal site.
+Editorial facts (phone numbers, domain, service-area list, same-day
+messaging, the 90-day guarantee) live in `lib/site.ts`. Pricing lives in
+`lib/pricing.ts`. Real customer reviews/photos go in `lib/testimonials.ts`
+(empty by default — `components/TrustSection.tsx` renders nothing until real
+data is added there; never fabricate content in that file). Homepage copy is
+in `app/page.tsx`; city-page copy is data-driven from `lib/locations.ts`
+through `components/CityPage.tsx`. There's intentionally no CMS or database.
 
 ## Analytics / lead tracking
 
@@ -46,11 +51,14 @@ calls on click — it calls `window.gtag("event", ...)` once the tag above is
 loaded, so phone-click conversions (`cta_call`) report automatically. No
 per-call-site changes needed.
 
-To connect **CallRail** or a different provider on top of this: either swap
-`PHONE.display`/`PHONE.href` in `lib/site.ts` for CallRail's dynamic number
-insertion snippet, or add a second call inside `trackEvent`'s body in
-`lib/analytics.ts` (e.g. to CallRail's JS API) — every call site keeps
-working either way.
+Phone-click and text-click conversions are tracked as separate event types
+(`cta_call` / `cta_text`, see `ConversionEvent` in `lib/analytics.ts`), each
+carrying which number was used. True connected-call or booked-job
+attribution needs CallRail or a similar dynamic-number-insertion service,
+which isn't wired up — that would mean swapping `PHONE_TOLLFREE`/
+`PHONE_LOCAL` in `lib/site.ts` for CallRail's tracking numbers and pointing
+`trackEvent`'s body at CallRail's JS API, and requires a real CallRail
+account (can't be stubbed in).
 
 ## Deploying as a separate Vercel project
 
@@ -80,23 +88,14 @@ under `wasp-problem/` change (Vercel's default "ignore build if no relevant
 changes" behavior, driven by the Root Directory setting) — the two
 deployments can't clobber each other.
 
-## Adding analytics IDs later
+## Adding a new city landing page
 
-No IDs are hardcoded anywhere. When ready:
-
-- **Google Analytics / Google Ads conversion tracking**: add the GA4/gtag
-  script in `app/layout.tsx`, and fire a conversion event from
-  `trackEvent`'s body in `lib/analytics.ts` on the `"cta_call"` event.
-- **CallRail**: swap `PHONE.display`/`PHONE.href` in `lib/site.ts` for
-  CallRail's dynamic number insertion snippet, or point `trackEvent` at
-  CallRail's JS API — whichever their current integration guide recommends.
-
-## Adding location pages later
-
-The brief intentionally keeps this a single page for now, but the service
-area list already lives as data (`SERVICE_AREAS` in `lib/site.ts`) rather
-than being hand-written into markup. If ad or search data shows strong
-demand for a specific city (Markham, Pickering, Ajax, Scarborough, etc.),
-add a `app/[slug]/page.tsx` (or `app/wasp-removal-markham/page.tsx`-style
-static route) that reuses the same sections/copy with a city-specific
-headline and `<link rel="canonical">` — no restructuring required.
+Three exist today (`app/mississauga-wasp-removal`, `app/oakville-wasp-removal`,
+`app/burlington-wasp-removal`), each a thin `page.tsx` that reads its data
+from `CITY_LOCATIONS` in `lib/locations.ts` and renders `<CityPage />`. To
+add another: append an entry to `CITY_LOCATIONS` (hand-write its own
+intro copy — don't just swap the city name into an existing entry's
+paragraphs) and add a matching `app/<slug>/page.tsx`. The homepage's
+`components/ServiceAreaList.tsx` automatically links any city in
+`SERVICE_AREAS` (`lib/site.ts`) that has a matching `CITY_LOCATIONS` entry —
+no other homepage change needed.
