@@ -6,6 +6,7 @@ import { GuaranteeSection } from "@/components/GuaranteeSection";
 import { TreatmentTimeline } from "@/components/TreatmentTimeline";
 import { TrustSection } from "@/components/TrustSection";
 import { WhatWeHandle } from "@/components/WhatWeHandle";
+import { RecentJobs } from "@/components/RecentJobs";
 import { ServiceAreaList } from "@/components/ServiceAreaList";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { FinalCta } from "@/components/FinalCta";
@@ -55,6 +56,7 @@ export default function Home() {
 
       <TrustSection reviews={REVIEWS} photos={PHOTOS} />
       <WhatWeHandle />
+      <RecentJobs />
       <PricingTable />
       <ProcessSteps />
       <GuaranteeSection />

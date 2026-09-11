@@ -3,6 +3,7 @@ import { ContactActions } from "@/components/ContactActions";
 import { TrustPoints } from "@/components/TrustPoints";
 import { PhoneLink } from "@/components/PhoneLink";
 import { NestSigns } from "@/components/NestSigns";
+import { RecentJobs } from "@/components/RecentJobs";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { PricingTable } from "@/components/PricingTable";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
@@ -82,6 +83,7 @@ export function CityPage({ location }: { location: CityLocation }) {
 
       <TrustSection reviews={REVIEWS} photos={PHOTOS} />
       <NestSigns ctaLocation={`city-${location.slug}-nest-signs`} />
+      <RecentJobs />
       <ProcessSteps />
       <PricingTable />
       <GuaranteeSection />
