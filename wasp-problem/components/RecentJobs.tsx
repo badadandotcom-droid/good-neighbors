@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionHeading } from "@/components/SectionHeading";
 import { JOBS } from "@/lib/jobs";
 
@@ -25,14 +26,12 @@ export function RecentJobs() {
                 {job.images.map((image, i) => (
                   <figure key={image.src}>
                     <div className="overflow-hidden rounded-xl border border-line bg-surface">
-                      {/* eslint-disable-next-line @next/next/no-img-element -- real job photos, already sized and compressed at 1200px square */}
-                      <img
+                      <Image
                         src={image.src}
                         alt={image.alt}
                         width={1200}
                         height={1200}
-                        loading="lazy"
-                        decoding="async"
+                        sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 85vw"
                         className="aspect-square h-full w-full object-cover"
                       />
                     </div>

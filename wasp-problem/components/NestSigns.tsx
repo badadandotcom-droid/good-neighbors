@@ -5,7 +5,7 @@ import { PHONE_TOLLFREE } from "@/lib/site";
 /** "Got wasps going in and out of one spot?" — shared verbatim across the home and city pages since it's the same factual guidance regardless of location. */
 export function NestSigns({ ctaLocation }: { ctaLocation: string }) {
   return (
-    <section className="bg-surface px-5 py-16 text-center sm:py-24">
+    <section className="bg-white px-5 py-16 text-center sm:py-24">
       <div className="mx-auto max-w-xl">
         <SectionHeading eyebrow="Signs of a nest" title="Got Wasps Going In and Out of One Spot?" />
         <p className="mt-6 text-base leading-relaxed">

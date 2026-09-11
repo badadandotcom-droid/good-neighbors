@@ -33,7 +33,11 @@ export function ServiceAreaList() {
             return (
               <li key={city}>
                 {href ? (
-                  <Link href={href} className={`${pill} transition-colors hover:border-ink hover:bg-yellow-tint`}>
+                  <Link
+                    href={href}
+                    prefetch={false}
+                    className={`${pill} transition-colors hover:border-ink hover:bg-yellow-tint`}
+                  >
                     {city}
                   </Link>
                 ) : (

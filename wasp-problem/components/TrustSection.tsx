@@ -1,9 +1,27 @@
 import { SectionHeading } from "@/components/SectionHeading";
 import type { JobPhoto, Review } from "@/lib/testimonials";
 
+/** Per-review star rating only — never an aggregate score for the business. */
+function Stars({ rating }: { rating: number }) {
+  return (
+    <div className="flex gap-0.5 text-yellow" role="img" aria-label={`${rating} out of 5 stars`}>
+      {Array.from({ length: 5 }, (_, i) => (
+        <svg key={i} viewBox="0 0 20 20" aria-hidden="true" className="h-5 w-5">
+          <path
+            d="M10 1.6l2.6 5.2 5.8.9-4.2 4.1 1 5.7L10 14.8l-5.2 2.7 1-5.7L1.6 7.7l5.8-.9z"
+            fill={i < rating ? "currentColor" : "none"}
+            stroke="rgb(10 10 10 / 0.4)"
+            strokeWidth="0.9"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
 /**
- * Renders nothing while both arrays are empty — prepared but off the live
- * page until real, approved reviews/photos exist (see lib/testimonials.ts).
+ * Renders nothing while both arrays are empty (see lib/testimonials.ts).
  * Never fabricate content here.
  */
 export function TrustSection({
@@ -21,24 +39,33 @@ export function TrustSection({
         <SectionHeading eyebrow="Real customers" title="What Customers Say" />
 
         {reviews.length > 0 && (
-          <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <ul
+            className={
+              reviews.length === 1
+                ? "mx-auto mt-10 max-w-xl"
+                : "mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2"
+            }
+          >
             {reviews.map((review) => (
-              <li key={review.author} className="card px-5 py-5">
-                <p className="text-base leading-relaxed">&ldquo;{review.quote}&rdquo;</p>
-                <p className="mt-3 text-sm font-bold">
+              <li key={review.author} className="card px-6 py-6 sm:px-8 sm:py-7">
+                {review.rating != null && <Stars rating={review.rating} />}
+                <blockquote className="mt-4 text-lg leading-relaxed">
+                  &ldquo;{review.quote}&rdquo;
+                </blockquote>
+                <p className="mt-4 text-sm font-bold">
                   {review.author}
                   {review.source ? (
-                    review.sourceUrl ? (
-                      <>
-                        {" "}
-                        &middot;{" "}
+                    <span className="font-medium text-muted">
+                      {" "}
+                      &middot;{" "}
+                      {review.sourceUrl ? (
                         <a href={review.sourceUrl} className="underline underline-offset-4">
                           {review.source}
                         </a>
-                      </>
-                    ) : (
-                      <> &middot; {review.source}</>
-                    )
+                      ) : (
+                        review.source
+                      )}
+                    </span>
                   ) : null}
                 </p>
               </li>

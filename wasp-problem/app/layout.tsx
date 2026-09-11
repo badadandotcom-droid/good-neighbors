@@ -88,7 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         <header className="border-b-[3px] border-yellow bg-black">
           <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-3 py-3 sm:px-5">
-            <Link href="/" className="flex min-w-0 items-center gap-2">
+            <Link href="/" prefetch={false} className="flex min-w-0 items-center gap-2">
               {/* eslint-disable-next-line @next/next/no-img-element -- tiny static brand mark, no benefit from next/image here */}
               <img
                 src="/brand/wasp-icon-header.png"

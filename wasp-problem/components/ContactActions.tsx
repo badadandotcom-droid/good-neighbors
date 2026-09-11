@@ -49,19 +49,19 @@ export function ContactActions({
         or dial {PHONE_TOLLFREE.numeric}
       </p>
 
-      <p className={`mt-5 text-sm font-medium ${isDark ? "text-white/85" : "text-ink"}`}>
+      <p className={`mt-5 text-sm leading-8 font-medium ${isDark ? "text-white/85" : "text-ink"}`}>
         Local call or text:{" "}
         <PhoneLink
           number={PHONE_LOCAL}
           location={`${ctaLocationPrefix}-local-call`}
-          className="font-bold underline decoration-yellow decoration-2 underline-offset-4"
+          className="inline-block -my-1.5 py-1.5 font-bold underline decoration-yellow decoration-2 underline-offset-4"
         >
           {PHONE_LOCAL.display}
         </PhoneLink>{" "}
         &middot;{" "}
         <TextLink
           location={`${ctaLocationPrefix}-text`}
-          className="font-bold underline decoration-yellow decoration-2 underline-offset-4"
+          className="inline-block -my-1.5 py-1.5 font-bold underline decoration-yellow decoration-2 underline-offset-4"
         >
           Text Us
         </TextLink>

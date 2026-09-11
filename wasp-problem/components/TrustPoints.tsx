@@ -25,7 +25,7 @@ export function TrustPoints({ tone = "light" }: { tone?: "light" | "dark" }) {
     <>
       Upfront pricing from <strong className="font-extrabold">${PRICING[0].amount} + HST</strong>
     </>,
-    <a key="g" href="#guarantee" className="underline decoration-yellow decoration-2 underline-offset-4">
+    <a key="g" href="#guarantee" className="inline-block -my-1.5 py-1.5 underline decoration-yellow decoration-2 underline-offset-4">
       {GUARANTEE.name}
     </a>,
     <>Wasps, hornets &amp; carpenter bees</>,

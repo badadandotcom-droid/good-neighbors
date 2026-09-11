@@ -3,7 +3,7 @@ import { WHAT_WE_HANDLE, WHAT_WE_HANDLE_SCOPE_NOTE } from "@/lib/content";
 
 export function WhatWeHandle() {
   return (
-    <section className="bg-surface px-5 py-16 sm:py-24">
+    <section className="bg-white px-5 py-16 sm:py-24">
       <div className="mx-auto max-w-3xl">
         <SectionHeading eyebrow="Our specialty" title="What We Handle" />
 

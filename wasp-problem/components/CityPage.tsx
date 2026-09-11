@@ -106,13 +106,13 @@ export function CityPage({ location }: { location: CityLocation }) {
           <ul className="mt-8 flex flex-wrap justify-center gap-2.5">
             {otherCities.map((l) => (
               <li key={l.slug}>
-                <Link href={l.href} className={pill}>
+                <Link href={l.href} prefetch={false} className={pill}>
                   {l.city}
                 </Link>
               </li>
             ))}
             <li>
-              <Link href="/#service-areas" className={pill}>
+              <Link href="/#service-areas" prefetch={false} className={pill}>
                 All Service Areas
               </Link>
             </li>
@@ -120,7 +120,7 @@ export function CityPage({ location }: { location: CityLocation }) {
         </div>
       </section>
 
-      <FaqAccordion items={faqs} />
+      <FaqAccordion items={faqs} background="white" />
       <FinalCta ctaLocation={`city-${location.slug}-final`} />
       <SiteFooter />
     </>

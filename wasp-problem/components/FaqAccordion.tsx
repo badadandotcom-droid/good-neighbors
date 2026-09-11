@@ -14,9 +14,17 @@ function faqJsonLd(items: readonly FaqItem[]) {
   };
 }
 
-export function FaqAccordion({ items }: { items: readonly FaqItem[] }) {
+export function FaqAccordion({
+  items,
+  background = "surface",
+}: {
+  items: readonly FaqItem[];
+  background?: "surface" | "white";
+}) {
   return (
-    <section className="bg-surface px-5 py-16 sm:py-24">
+    <section
+      className={`px-5 py-16 sm:py-24 ${background === "white" ? "bg-white" : "bg-surface"}`}
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(items)) }}

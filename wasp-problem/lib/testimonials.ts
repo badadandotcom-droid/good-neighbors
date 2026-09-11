@@ -1,11 +1,12 @@
 /**
- * Real customer evidence only — no fabricated quotes, names, ratings, or
- * counts. Both arrays are empty until genuine, approved reviews/photos are
- * supplied; components/TrustSection.tsx renders nothing while they're empty,
- * so the section is prepared but stays off the live page until real data
- * lands here. Populate from a verified Google Business Profile or other
- * approved source, and link `source` to the real profile URL when adding a
- * review.
+ * Real customer evidence only — no fabricated quotes, names, ratings, dates,
+ * photos, locations, review counts, or overall business ratings. Quote text
+ * is reproduced exactly as the customer wrote it and is never edited,
+ * shortened, or combined with details from the job or any reply.
+ *
+ * `sourceUrl` is only for a verified public link to the review itself. Do not
+ * put a "leave us a review" request link here — that link asks visitors to
+ * write a review and would misrepresent an existing one.
  */
 
 export type Review = {
@@ -22,6 +23,13 @@ export type JobPhoto = {
   caption?: string;
 };
 
-export const REVIEWS: readonly Review[] = [];
+export const REVIEWS: readonly Review[] = [
+  {
+    quote: "Amazing service and got the job done.",
+    author: "Ryan Spinner",
+    source: "Google",
+    rating: 5,
+  },
+];
 
 export const PHOTOS: readonly JobPhoto[] = [];
