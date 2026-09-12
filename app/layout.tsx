@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { StickyMobileCTA } from "@/components/layout/StickyMobileCTA";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { BRAND } from "@/lib/config/site";
 import { localBusinessJsonLd } from "@/lib/seo";
 
@@ -55,6 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer />
         <StickyMobileCTA />
+        <GoogleAnalytics />
       </body>
     </html>
   );

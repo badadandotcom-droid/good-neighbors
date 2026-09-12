@@ -102,7 +102,11 @@ export const ALWAYS_ON_CALL = {
 
 /** Placeholder for future analytics/tracking wiring — see lib/analytics.ts */
 export const ANALYTICS = {
-  gaMeasurementId: null as string | null, // PLACEHOLDER — GA4 measurement id
+  /**
+   * Good Neighbors' own GA4 property. Do not replace this with the Wasp
+   * Problem measurement id — that is a different business sharing this repo.
+   */
+  gaMeasurementId: "G-MLBBT02NEC" as string | null,
   gtmContainerId: null as string | null, // PLACEHOLDER — GTM container id
   callRailScriptId: null as string | null, // PLACEHOLDER — CallRail swap script id
 } as const;

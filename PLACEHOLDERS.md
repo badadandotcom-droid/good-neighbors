@@ -39,7 +39,16 @@ independently-toggled promise (`DEFAULT_SAME_DAY_SERVICE`). Do not flip
 
 ## Analytics & tracking — `lib/config/site.ts` → `ANALYTICS`, `lib/analytics.ts`
 
-- `gaMeasurementId`, `gtmContainerId`, `callRailScriptId` are all `null`.
+- `gaMeasurementId` is **real**: `G-MLBBT02NEC`, Good Neighbors' own GA4
+  property, loaded site-wide by `components/analytics/GoogleAnalytics.tsx`
+  from the root layout. Do not swap in `G-2NETZXNWVG` — that belongs to Wasp
+  Problem, a separate business sharing this repository.
+- `gtmContainerId` and `callRailScriptId` are still `null`. GA4 is installed
+  and sending; **Google Ads conversion import and CallRail attribution are
+  not set up** and should not be described as working.
+- Page views are left entirely to gtag: `config` sends one on load, and GA4
+  enhanced measurement covers App Router client navigation via History API
+  events. Nothing fires `page_view` manually — adding that would double count.
 - `lib/analytics.ts` `trackEvent()` pushes to `window.dataLayer` if present,
   otherwise no-ops (console.debug in dev only). Every primary CTA, phone
   link, and form step already calls it — wiring real GA4/GTM/CallRail is a
