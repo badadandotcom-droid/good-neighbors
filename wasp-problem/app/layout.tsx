@@ -1,11 +1,19 @@
 import type { Metadata, Viewport } from "next";
 import Link from "next/link";
-import { Archivo, Manrope } from "next/font/google";
+import { Anton, Archivo, Manrope } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { PhoneLink } from "@/components/PhoneLink";
 import { StickyCallBar } from "@/components/StickyCallBar";
 import { BRAND, GA_MEASUREMENT_ID, PHONE_TOLLFREE, SERVICE_AREAS } from "@/lib/site";
+
+/** Sign face — the heavy condensed grotesque matching the lawn-sign lettering. Used only for the "WASP PROBLEM?" lockup. */
+const anton = Anton({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-anton",
+  display: "swap",
+});
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -74,7 +82,7 @@ function localBusinessJsonLd() {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${archivo.variable} ${manrope.variable}`}>
+    <html lang="en" className={`${anton.variable} ${archivo.variable} ${manrope.variable}`}>
       <body className="pb-16 antialiased sm:pb-0">
         <script
           type="application/ld+json"

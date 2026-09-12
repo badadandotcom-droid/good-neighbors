@@ -24,6 +24,7 @@
 
   --font-sans: var(--font-manrope), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-display: var(--font-archivo), var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-sign: var(--font-anton), "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
 
   --shadow-card: 0 1px 2px rgb(21 23 27 / 0.04), 0 12px 32px -16px rgb(21 23 27 / 0.16);
   --shadow-card-lg: 0 2px 4px rgb(21 23 27 / 0.04), 0 24px 48px -20px rgb(21 23 27 / 0.22);
@@ -59,6 +60,18 @@
 }
 
 @layer components {
+  /*
+   * The "WASP PROBLEM?" lockup, matched to the lawn sign. Anton ships a single
+   * weight, so the 800 from the heading base style would trigger faux-bold and
+   * smear the strokes — 400 is the real weight. Anton's own sidebearings already
+   * match the sign's spacing, so the heading's -0.02em tracking is cleared too.
+   */
+  .sign-lockup {
+    font-family: var(--font-sign);
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+
   .btn {
     display: inline-flex;
     align-items: center;

@@ -30,7 +30,7 @@ export default function Home() {
             {SAME_DAY_SERVICE.headline}*
           </p>
 
-          <h1 className="mt-6 text-5xl leading-[0.95] uppercase sm:text-7xl">
+          <h1 className="sign-lockup mt-6 text-6xl leading-[0.95] uppercase sm:text-8xl">
             Wasp
             <br />
             Problem?
