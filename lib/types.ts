@@ -42,7 +42,12 @@ export interface SameDayServiceConfig {
   disabledMessage: string;
 }
 
-export type MarketStatus = "active" | "coming-soon";
+/**
+ * "hidden" markets keep their data (preparatory content for a future
+ * launch) but are excluded from every public surface — hub grid, sitemap,
+ * footer, nav, and generateStaticParams — and 404 if visited directly.
+ */
+export type MarketStatus = "active" | "coming-soon" | "hidden";
 
 /**
  * A localized market/service-area expression of the single Good Neighbors
@@ -59,6 +64,8 @@ export interface Market {
   displayName: string;
   /** e.g. "Good Neighbors Toronto" */
   brandName: string;
+  /** Overrides the on-page H1 (which otherwise defaults to `brandName`) when the approved heading differs from the brand-suffix convention. */
+  heroHeading?: string;
   status: MarketStatus;
   country: Country;
   /** Province or state, e.g. "Ontario" */
@@ -97,6 +104,8 @@ export interface WildlifeEntry {
   /** Short paragraph on the humane approach for this situation */
   approach: string;
   iconId: IllustrationId;
+  /** Species-specific real photo, overriding the shared REAL_PHOTOS["detail"] default for this entry only */
+  photoOverride?: string;
 }
 
 export interface FaqItem {
@@ -104,6 +113,8 @@ export interface FaqItem {
   answer: string;
   /** Show on homepage FAQ preview */
   featured?: boolean;
+  /** Answer assumes same-day/active service — suppress on coming-soon market pages */
+  sameDaySpecific?: boolean;
 }
 
 export interface NavItem {
@@ -111,11 +122,29 @@ export interface NavItem {
   href: string;
 }
 
+/** A typed photography placeholder slot — see lib/data/photography.ts for the full shoot brief. */
+export type PhotoSlotId =
+  | "arrival"
+  | "inspection"
+  | "conversation"
+  | "crew"
+  | "vehicle"
+  | "detail"
+  | "streetscape"
+  | "team-portrait";
+
+export interface PhotoSlot {
+  id: PhotoSlotId;
+  /** Short shot-list label, e.g. "Arrival" */
+  label: string;
+  /** Art-direction description for the eventual photo shoot */
+  brief: string;
+}
+
 /** Identifiers for the hand-built line-art illustration system (see components/illustrations). */
 export type IllustrationId =
   | "raccoon"
   | "squirrel"
-  | "skunk"
   | "bird"
   | "bat"
   | "attic"
@@ -125,5 +154,6 @@ export type IllustrationId =
   | "inspection"
   | "shield-home"
   | "phone-call"
+  | "mail"
   | "camera"
   | "compass";

@@ -38,11 +38,10 @@ export const MARKETS: Market[] = [
     region: "Ontario",
     metro: "Greater Toronto Area",
     serviceArea: ["Toronto", "Scarborough", "North York", "Etobicoke", "East York"],
-    phone: { display: "(416) 555-0142", href: "tel:+14165550142", isPlaceholder: true },
     heroBlurb:
       "From century homes in the Annex to new builds in Scarborough, we handle wildlife in Toronto's attics, walls, and rooflines with the same careful, humane approach every time.",
     seoDescription:
-      "Humane, same-day wildlife removal in Toronto. Raccoons, squirrels, skunks, birds, and bats — handled quickly and professionally by local technicians.",
+      "Humane, same-day wildlife removal in Toronto. Raccoons, squirrels, birds, and bats — handled quickly and professionally by local technicians.",
   },
   {
     slug: "york-region",
@@ -53,9 +52,8 @@ export const MARKETS: Market[] = [
     region: "Ontario",
     metro: "Greater Toronto Area",
     serviceArea: ["Markham", "Richmond Hill", "Vaughan", "Thornhill", "Aurora", "Newmarket"],
-    phone: { display: "(905) 555-0119", href: "tel:+19055550119", isPlaceholder: true },
     heroBlurb:
-      "Growing neighborhoods and mature tree canopy make York Region an easy place for wildlife to move in. We're close by and ready to help in Markham, Vaughan, Richmond Hill, and beyond.",
+      "We provide humane wildlife removal for homeowners across York Region, including Markham, Vaughan and Richmond Hill.",
     seoDescription:
       "Wildlife removal serving York Region — Markham, Richmond Hill, Vaughan, and Thornhill. Humane, local, same-day service available.",
   },
@@ -68,67 +66,77 @@ export const MARKETS: Market[] = [
     region: "Ontario",
     metro: "Greater Toronto Area",
     serviceArea: ["Pickering", "Ajax", "Whitby", "Oshawa"],
-    phone: { display: "(905) 555-0176", href: "tel:+19055550176", isPlaceholder: true },
     heroBlurb:
-      "From the Pickering waterfront to established Oshawa neighborhoods, Durham Region homeowners get the same humane, careful service as anywhere else on our map.",
+      "From the Pickering waterfront to established Oshawa neighbourhoods, we provide humane wildlife removal for homes across Durham Region.",
     seoDescription:
       "Humane wildlife removal across Durham Region — Pickering, Ajax, Whitby, and Oshawa. Local technicians, same-day service available.",
+  },
+  {
+    slug: "peel-region",
+    displayName: "Peel Region",
+    brandName: "Good Neighbors Peel Region",
+    heroHeading: "Wildlife Removal in Peel Region",
+    status: "active",
+    country: "CA",
+    region: "Ontario",
+    metro: "Greater Toronto Area",
+    serviceArea: ["Mississauga", "Brampton", "Caledon"],
+    heroBlurb:
+      "We provide humane raccoon, squirrel, bat and bird removal for homeowners across Peel Region.",
+    seoDescription:
+      "Humane wildlife removal for homeowners in Peel Region. Raccoons, squirrels, bats and birds. Contact Good Neighbors to arrange a visit.",
   },
   {
     slug: "oakville-burlington",
     displayName: "Oakville & Burlington",
     brandName: "Good Neighbors Oakville & Burlington",
-    status: "active",
+    status: "hidden",
     country: "CA",
     region: "Ontario",
     metro: "Halton Region",
     serviceArea: ["Oakville", "Burlington"],
-    phone: { display: "(905) 555-0187", href: "tel:+19055550187", isPlaceholder: true },
     heroBlurb:
-      "Oakville and Burlington's mature, leafy streets are excellent habitat — for people and, occasionally, for the wildlife that finds its way into a roofline. We're local to the area.",
+      "Good Neighbors is expanding into Oakville and Burlington. Reach out and we'll let you know about coverage and availability in your area.",
     seoDescription:
-      "Wildlife removal in Oakville and Burlington. Humane raccoon, squirrel, and bird removal with same-day service available.",
+      "Good Neighbors is coming soon to Oakville and Burlington. Humane wildlife removal, expanding across the Halton Region.",
   },
   {
     slug: "hamilton",
     displayName: "Hamilton",
     brandName: "Good Neighbors Hamilton",
-    status: "active",
+    status: "hidden",
     country: "CA",
     region: "Ontario",
     metro: "Hamilton–Niagara",
     serviceArea: ["Hamilton", "Ancaster", "Dundas", "Stoney Creek"],
-    phone: { display: "(289) 555-0134", href: "tel:+12895550134", isPlaceholder: true },
     heroBlurb:
-      "Hamilton's mix of older housing stock and escarpment-adjacent properties sees its share of wildlife activity. Our technicians know the neighborhoods and the housing types well.",
+      "Good Neighbors is expanding into Hamilton. Reach out and we'll let you know about coverage and availability in your area.",
     seoDescription:
-      "Humane wildlife removal in Hamilton, Ancaster, Dundas, and Stoney Creek. Local, same-day service available.",
+      "Good Neighbors is coming soon to Hamilton, Ancaster, Dundas, and Stoney Creek. Humane wildlife removal, expanding across Southern Ontario.",
   },
   {
     slug: "barrie",
     displayName: "Barrie",
     brandName: "Good Neighbors Barrie",
-    status: "active",
+    status: "hidden",
     country: "CA",
     region: "Ontario",
     metro: "Simcoe County",
     serviceArea: ["Barrie", "Innisfil", "Springwater"],
-    phone: { display: "(705) 555-0158", href: "tel:+17055550158", isPlaceholder: true },
     heroBlurb:
-      "Barrie's proximity to forest and shoreline means wildlife encounters are common. We help homeowners around Lake Simcoe get their homes back to normal quickly.",
+      "Good Neighbors is expanding into Barrie and Simcoe County. Reach out and we'll let you know about coverage and availability in your area.",
     seoDescription:
-      "Wildlife removal in Barrie and Simcoe County. Humane, local, same-day service available for raccoons, squirrels, and more.",
+      "Good Neighbors is coming soon to Barrie and Simcoe County. Humane wildlife removal, expanding across Southern Ontario.",
   },
   {
     slug: "niagara-region",
     displayName: "Niagara Region",
     brandName: "Good Neighbors Niagara Region",
-    status: "coming-soon",
+    status: "hidden",
     country: "CA",
     region: "Ontario",
     metro: "Hamilton–Niagara",
     serviceArea: ["St. Catharines", "Niagara Falls", "Welland", "Niagara-on-the-Lake"],
-    phone: { display: "(905) 555-0193", href: "tel:+19055550193", isPlaceholder: true },
     heroBlurb:
       "Good Neighbors is expanding into the Niagara Region. Reach out and we'll let you know about coverage and availability in your area.",
     seoDescription:

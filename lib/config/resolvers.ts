@@ -1,4 +1,4 @@
-import { BRAND, DEFAULT_PHONE, DEFAULT_SAME_DAY_SERVICE } from "@/lib/config/site";
+import { ALWAYS_ON_CALL, BRAND, CONTACT, DEFAULT_PHONE, DEFAULT_SAME_DAY_SERVICE } from "@/lib/config/site";
 import type { Market, PhoneConfig, SameDayServiceConfig } from "@/lib/types";
 
 /**
@@ -27,6 +27,11 @@ export function getPositioningLine(market?: Market): string {
 export function getSameDayMessage(market?: Market): string {
   const sameDay = getSameDayConfig(market);
   return sameDay.enabled ? sameDay.qualificationMessage : sameDay.disabledMessage;
+}
+
+/** Phone-hours line shown on the Contact page — swaps to the 24/7 line once ALWAYS_ON_CALL is enabled. */
+export function getHoursNote(): string {
+  return ALWAYS_ON_CALL.enabled ? ALWAYS_ON_CALL.contactLabel : CONTACT.hoursNote;
 }
 
 export function getBrandName(market?: Market): string {

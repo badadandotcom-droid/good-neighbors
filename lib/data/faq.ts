@@ -11,11 +11,13 @@ export const FAQ_ITEMS: FaqItem[] = [
     question: "Can you come today?",
     answer: `In most cases, yes. ${DEFAULT_SAME_DAY_SERVICE.qualificationMessage} If same-day service isn't available in your area right now, we'll tell you upfront and get you the next available time.`,
     featured: true,
+    sameDaySpecific: true,
   },
   {
     question: `What's the ${DEFAULT_SAME_DAY_SERVICE.cutoffLabel} cutoff about?`,
     answer: `Requests received before ${DEFAULT_SAME_DAY_SERVICE.cutoffLabel} local time give us the best chance of reaching your property the same day. Requests after that are usually scheduled for the next available slot — we'll confirm timing when you contact us.`,
     featured: true,
+    sameDaySpecific: true,
   },
   {
     question: "I don't know what animal it is. Is that a problem?",
@@ -25,8 +27,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     question: "Is the animal treated humanely?",
-    answer:
-      "Yes. A humane approach is central to how we work, not an add-on. Wildlife that's found its way into the wrong place is handled responsibly, not punitively.",
+    answer: "Yes. We use humane removal methods suited to the animal and the situation.",
     featured: true,
   },
   {
@@ -42,26 +43,26 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Can I send you a photo?",
     answer:
-      "Yes, photos of the animal, the entry point, or any damage help us prepare before we arrive. You can add photos when you request help, or send them separately once we're in touch.",
+      "If you have photos, let us know when you contact us. We'll confirm how to send them. Only take photos from a safe place on the ground.",
   },
   {
-    question: "Does the price depend on the situation?",
-    answer:
-      "It does. Every property and situation is different — species, location, accessibility, and complexity all factor in. We'll discuss pricing with you once we understand what's going on, before any work begins.",
+    question: "How much does wildlife removal cost?",
+    answer: "We'll confirm the price with you once we understand the problem, before any work begins.",
   },
   {
     question: "Do you service my area?",
     answer:
-      "We currently serve several Southern Ontario markets, with more being added. Check our service areas page, or simply reach out — if we're not covering your area yet, we'll let you know.",
+      "We currently serve Toronto, York Region, Durham Region and Peel Region. Check our service areas page, or reach out and we'll let you know if we cover your area.",
     featured: true,
   },
   {
     question: "What happens after the animal is removed?",
     answer:
-      "Once the immediate problem is handled, our technician can explain how the animal likely got in and point out any vulnerable areas. If prevention work makes sense for your property, we'll walk you through the options — there's no obligation to move forward with it.",
+      "Once we've confirmed the animals are out, we secure the entry point to help prevent them from getting back in.",
   },
 ];
 
-export function getFeaturedFaqs(): FaqItem[] {
-  return FAQ_ITEMS.filter((f) => f.featured);
+export function getFeaturedFaqs(opts?: { sameDayEligible?: boolean }): FaqItem[] {
+  const sameDayEligible = opts?.sameDayEligible ?? true;
+  return FAQ_ITEMS.filter((f) => f.featured && (sameDayEligible || !f.sameDaySpecific));
 }
