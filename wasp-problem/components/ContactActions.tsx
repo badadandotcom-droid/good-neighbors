@@ -50,7 +50,7 @@ export function ContactActions({
       </p>
 
       <p className={`mt-5 text-sm leading-8 font-medium ${isDark ? "text-white/85" : "text-ink"}`}>
-        Local call or text:{" "}
+        Call or text:{" "}
         <PhoneLink
           number={PHONE_LOCAL}
           location={`${ctaLocationPrefix}-local-call`}
