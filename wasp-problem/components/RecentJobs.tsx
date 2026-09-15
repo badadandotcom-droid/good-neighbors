@@ -29,10 +29,10 @@ export function RecentJobs() {
                       <Image
                         src={image.src}
                         alt={image.alt}
-                        width={1200}
+                        width={900}
                         height={1200}
                         sizes="(min-width: 1024px) 320px, (min-width: 640px) 45vw, 85vw"
-                        className="aspect-square h-full w-full object-cover"
+                        className="aspect-[3/4] h-full w-full object-cover"
                       />
                     </div>
                     <figcaption className="mt-3 flex items-center gap-2.5 text-xs font-bold tracking-[0.12em] uppercase">

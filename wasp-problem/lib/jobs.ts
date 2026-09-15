@@ -28,13 +28,13 @@ export const JOBS: readonly Job[] = [
       "We treated a wasp problem beside this garage. The customer confirmed that wasp activity stopped completely after treatment.",
     images: [
       {
-        src: "/jobs/garage-wasp-initial.jpg",
-        alt: "Trap board taped beside a garage door, covered in captured wasps, at the initial visit.",
+        src: "/jobs/garage-initial.jpg",
+        alt: "A glue board taped to the garage door frame, covered in captured wasps, with expanding foam visible along the brickwork.",
         label: "Initial visit",
       },
       {
-        src: "/jobs/garage-wasp-followup.jpg",
-        alt: "The same garage doorway photographed at the follow-up visit.",
+        src: "/jobs/garage-followup.jpg",
+        alt: "The same garage doorway at the follow-up visit, with the glue board removed and the foam still in place along the brickwork.",
         label: "Follow-up visit",
       },
     ],
