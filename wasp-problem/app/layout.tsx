@@ -4,8 +4,9 @@ import { Anton, Archivo, Manrope } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { PhoneLink } from "@/components/PhoneLink";
+import { TextLink } from "@/components/TextLink";
 import { StickyCallBar } from "@/components/StickyCallBar";
-import { BRAND, GA_MEASUREMENT_ID, PHONE_TOLLFREE, SERVICE_AREAS } from "@/lib/site";
+import { BRAND, GA_MEASUREMENT_ID, PHONE_LOCAL, PHONE_TOLLFREE, SERVICE_AREAS } from "@/lib/site";
 
 /** Sign face — the heavy condensed grotesque matching the lawn-sign lettering. Used only for the "WASP PROBLEM?" lockup. */
 const anton = Anton({
@@ -109,12 +110,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 Wasp Problem
               </span>
             </Link>
-            <PhoneLink
-              location="header"
-              className="btn btn-primary shadow-none whitespace-nowrap px-2.5 py-2 text-sm"
-            >
-              {PHONE_TOLLFREE.display}
-            </PhoneLink>
+            <div className="flex shrink-0 items-center gap-2">
+              {/* Text lives in the sticky bar on phones — a third action does not fit beside the wordmark at 320px. */}
+              <TextLink
+                location="header-text"
+                ariaLabel={`Text ${PHONE_LOCAL.display}`}
+                className="btn hidden min-h-11 border-[1.5px] border-white/30 bg-transparent px-4 py-2 text-sm text-white hover:border-white hover:bg-white/10 sm:inline-flex"
+              >
+                Text {PHONE_LOCAL.display}
+              </TextLink>
+              <PhoneLink
+                location="header"
+                className="btn btn-primary min-h-11 shadow-none whitespace-nowrap px-3 py-2 text-sm"
+              >
+                {PHONE_TOLLFREE.display}
+              </PhoneLink>
+            </div>
           </div>
         </header>
         <main id="main-content">{children}</main>
