@@ -14,9 +14,6 @@ export function GuaranteeSection() {
         <p className="mt-5 text-xs font-bold tracking-[0.14em] text-muted uppercase">Our commitment</p>
         <h2 className="mt-2 text-3xl leading-tight sm:text-4xl">{GUARANTEE.name}</h2>
         <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed sm:text-lg">{GUARANTEE.summary}</p>
-        <p className="mx-auto mt-5 max-w-lg border-t border-line pt-5 text-sm leading-relaxed text-muted">
-          {GUARANTEE.afterTreatment}
-        </p>
       </div>
     </section>
   );
