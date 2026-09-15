@@ -3,7 +3,6 @@ import { TrustPoints } from "@/components/TrustPoints";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { PricingTable } from "@/components/PricingTable";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
-import { TreatmentTimeline } from "@/components/TreatmentTimeline";
 import { TrustSection } from "@/components/TrustSection";
 import { WhatWeHandle } from "@/components/WhatWeHandle";
 import { RecentJobs } from "@/components/RecentJobs";
@@ -60,8 +59,7 @@ export default function Home() {
       <PricingTable />
       <ProcessSteps />
       <GuaranteeSection />
-      <TreatmentTimeline />
-      <FaqAccordion items={HOMEPAGE_FAQS} />
+      <FaqAccordion items={HOMEPAGE_FAQS} background="white" />
       <ServiceAreaList />
       <FinalCta ctaLocation="final-cta" />
       <SiteFooter />

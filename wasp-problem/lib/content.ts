@@ -25,12 +25,6 @@ export const PROCESS_STEPS = [
   },
 ] as const;
 
-export const TREATMENT_TIMELINE = [
-  { day: "Day 5", result: "At least 50% less activity." },
-  { day: "Day 10", result: "Approximately 90% less activity." },
-  { day: "Day 14", result: "There should be no activity." },
-] as const;
-
 /** Generic FAQ items only — each city page appends its own final, location-specific item. */
 export const BASE_FAQS = [
   {
@@ -47,7 +41,7 @@ export const BASE_FAQS = [
   },
   {
     q: "What if I still see activity?",
-    a: "By Day 5 there should be at least 50% less activity, by Day 10 approximately 90% less, and by Day 14 there should be no activity. Contact us if those benchmarks are not being met.",
+    a: "Some activity in the first few days is normal, and it should tail off from there. If it hasn't settled down, call us and we'll come back.",
   },
 ] as const;
 
@@ -94,6 +88,6 @@ export const HOMEPAGE_FAQS = [
   },
   {
     q: "What does the service guarantee cover?",
-    a: "Our 90-day service guarantee means if activity isn't decreasing as expected, or the treated nest becomes active again, within 90 days we'll come back and follow up at no additional charge. It covers the treated nest, not unrelated nests elsewhere on the property.",
+    a: "If wasps return to the nest we treated within 90 days, we come back and deal with it at no additional charge. It covers the nest we treated, not a new or unrelated nest elsewhere on the property.",
   },
 ] as const;

@@ -58,7 +58,14 @@ export const SAME_DAY_SERVICE = {
 export const GUARANTEE = {
   name: "90-Day Service Guarantee",
   summary:
-    "If activity isn't decreasing as expected, or the treated nest becomes active again, within 90 days of treatment, we'll come back and follow up at no additional charge.",
+    "If wasps return to the nest we treated within 90 days, we come back and deal with it at no additional charge.",
+  /**
+   * Sets expectations without publishing day-by-day benchmarks. Those numbers
+   * are worst-case figures given to a customer in person after service; on the
+   * website they read as a public promise the business can be measured against.
+   */
+  afterTreatment:
+    "Some activity in the first few days is normal — wasps that were away from the nest return to the treated area. If it hasn't settled down, call us.",
 } as const;
 
 /**

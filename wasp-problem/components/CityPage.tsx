@@ -7,7 +7,6 @@ import { RecentJobs } from "@/components/RecentJobs";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { PricingTable } from "@/components/PricingTable";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
-import { TreatmentTimeline } from "@/components/TreatmentTimeline";
 import { TrustSection } from "@/components/TrustSection";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { FinalCta } from "@/components/FinalCta";
@@ -87,10 +86,9 @@ export function CityPage({ location }: { location: CityLocation }) {
       <ProcessSteps />
       <PricingTable />
       <GuaranteeSection />
-      <TreatmentTimeline />
 
       {/* SERVICE AREA CROSS-LINKS */}
-      <section className="bg-surface px-5 py-16 text-center sm:py-24">
+      <section className="bg-white px-5 py-16 text-center sm:py-24">
         <div className="mx-auto max-w-2xl">
           <SectionHeading
             eyebrow="Service area"
@@ -120,7 +118,7 @@ export function CityPage({ location }: { location: CityLocation }) {
         </div>
       </section>
 
-      <FaqAccordion items={faqs} background="white" />
+      <FaqAccordion items={faqs} />
       <FinalCta ctaLocation={`city-${location.slug}-final`} />
       <SiteFooter />
     </>

@@ -15,7 +15,7 @@ export function ServiceAreaList() {
     "inline-block rounded-full border border-line bg-white px-4 py-2 text-sm font-semibold shadow-card";
 
   return (
-    <section id="service-areas" className="bg-white px-5 py-16 sm:py-24">
+    <section id="service-areas" className="bg-surface px-5 py-16 sm:py-24">
       <div className="mx-auto max-w-2xl">
         <SectionHeading
           eyebrow="Service area"
