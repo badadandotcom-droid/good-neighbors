@@ -2,9 +2,8 @@ import { PhoneLink } from "@/components/PhoneLink";
 import { TextLink } from "@/components/TextLink";
 import { PHONE_LOCAL, PHONE_TOLLFREE } from "@/lib/site";
 
-/** Negative margin keeps the line rhythm while the padding enlarges the tap target. */
 const FOOTER_LINK =
-  "inline-block -my-1.5 py-1.5 font-semibold text-white underline decoration-yellow decoration-2 underline-offset-4";
+  "inline-flex min-h-11 items-center font-semibold text-white underline decoration-yellow decoration-2 underline-offset-4";
 
 export function SiteFooter() {
   return (
@@ -14,20 +13,25 @@ export function SiteFooter() {
           Wasp Problem
         </p>
         <p className="mt-2">Toronto, Ontario &middot; Serving Toronto &amp; the GTA</p>
-        <p className="mt-3 leading-8">
+
+        <p className="mt-3">
+          Call:{" "}
           <PhoneLink location="footer-tollfree" className={FOOTER_LINK}>
             {PHONE_TOLLFREE.display}
           </PhoneLink>{" "}
-          or{" "}
+          <span className="text-white/50">({PHONE_TOLLFREE.numeric})</span>
+        </p>
+        <p className="mt-1">
+          Call or text:{" "}
           <PhoneLink number={PHONE_LOCAL} location="footer-local" className={FOOTER_LINK}>
             {PHONE_LOCAL.display}
           </PhoneLink>{" "}
-          (
-          <TextLink location="footer-text" className="inline-block -my-1.5 py-1.5 underline underline-offset-4">
-            text
+          <span className="text-white/50">&middot;</span>{" "}
+          <TextLink location="footer-text" className={FOOTER_LINK}>
+            Text us
           </TextLink>
-          )
         </p>
+
         <p className="mt-4 text-xs text-white/60">WaspProblem.ca</p>
       </div>
     </footer>

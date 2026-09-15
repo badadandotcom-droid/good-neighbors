@@ -10,18 +10,23 @@ import { PHONE_TOLLFREE } from "@/lib/site";
 export const PROCESS_STEPS = [
   {
     n: "1",
-    title: "Call Us",
-    body: "Tell us where you're seeing the wasps.",
+    title: "Call or Text Us",
+    body: "Tell us your service address and where you're seeing the wasps. Send a photo if you can take one safely.",
   },
   {
     n: "2",
-    title: "We Assess the Problem",
-    body: "We determine where the activity is coming from and the appropriate treatment.",
+    title: "We Talk It Through",
+    body: "We go over the problem, what it will cost, and when we can get there.",
   },
   {
     n: "3",
+    title: "We Confirm the Appointment",
+    body: "You get a confirmed time before we head out.",
+  },
+  {
+    n: "4",
     title: "We Treat the Nest",
-    body: "We deal with the active wasp problem and explain what to expect afterward.",
+    body: "We deal with the active nest and explain what to expect for your particular job.",
   },
 ] as const;
 
@@ -32,12 +37,16 @@ export const BASE_FAQS = [
     a: `Call us at ${PHONE_TOLLFREE.display} and we'll tell you the earliest available appointment.`,
   },
   {
+    q: "Can I book entirely by text?",
+    a: "Yes. Text 416-700-4259 with your name, service address and a brief description of the problem. We'll discuss pricing and availability by text—no phone call required.",
+  },
+  {
     q: "Can I send you a photo?",
     a: "Yes. Photos of the area where the wasps are entering can help us understand the problem before arrival.",
   },
   {
-    q: "Will the wasps disappear immediately?",
-    a: "Not always. Returning wasps may continue entering the treated area temporarily. Activity should decrease substantially over the following days.",
+    q: "How quickly will the wasps be gone?",
+    a: "Activity can stop the same day, although some nests take longer after treatment. We'll explain what to expect for your particular job.",
   },
   {
     q: "What if I still see activity?",
@@ -75,6 +84,10 @@ export const HOMEPAGE_FAQS = [
     a: "Yes. Many nests are hidden inside a soffit, wall void, or other opening — you don't need to see the nest itself, just where wasps are entering and leaving. That's treated as a hidden nest ($220 + HST).",
   },
   {
+    q: "Can I book entirely by text?",
+    a: "Yes. Text 416-700-4259 with your name, service address and a brief description of the problem. We'll discuss pricing and availability by text—no phone call required.",
+  },
+  {
     q: "Is same-day service available?",
     a: "Same-day service is available in many cases, based on availability. Call us and we'll tell you the earliest appointment for your area.",
   },
@@ -83,8 +96,8 @@ export const HOMEPAGE_FAQS = [
     a: "Price depends on whether the nest is visible ($180 + HST) or hidden ($220 + HST), whether more than one nest needs treatment (+$80 + HST each), and whether a ladder is required (+$65 + HST).",
   },
   {
-    q: "Will activity stop immediately?",
-    a: "Not immediately. Returning wasps may continue entering the treated area for a short time. Activity should decrease substantially over the days that follow.",
+    q: "How quickly will the wasps be gone?",
+    a: "Activity can stop the same day, although some nests take longer after treatment. We'll explain what to expect for your particular job.",
   },
   {
     q: "What does the service guarantee cover?",

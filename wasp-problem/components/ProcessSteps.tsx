@@ -4,9 +4,9 @@ import { PROCESS_STEPS } from "@/lib/content";
 export function ProcessSteps() {
   return (
     <section className="bg-black px-5 py-16 text-white sm:py-24">
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-5xl">
         <SectionHeading eyebrow="How it works" title="Simple. Fast. Local." tone="dark" />
-        <ol className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5">
+        <ol className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
           {PROCESS_STEPS.map((step) => (
             <li
               key={step.n}

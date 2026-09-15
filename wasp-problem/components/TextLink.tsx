@@ -11,10 +11,13 @@ import { PHONE_LOCAL } from "@/lib/site";
 export function TextLink({
   className,
   location,
+  ariaLabel,
   children,
 }: {
   className?: string;
   location: string;
+  /** Use when the visible label is abbreviated, so the accessible name still names the number. */
+  ariaLabel?: string;
   children: React.ReactNode;
 }) {
   return (
@@ -22,6 +25,7 @@ export function TextLink({
       href={PHONE_LOCAL.smsHref}
       onClick={() => trackEvent("cta_text", { location })}
       className={className}
+      aria-label={ariaLabel}
     >
       {children}
     </a>

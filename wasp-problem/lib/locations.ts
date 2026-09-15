@@ -25,12 +25,12 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
       "Wasp removal in Mississauga. Fast, professional wasp nest removal for homes across Mississauga and the GTA. Call Wasp Problem at 1-800-800-WASP.",
     heroSubheadline: "Fast Wasp Nest Removal for Mississauga Homeowners",
     intro: [
-      "Mississauga is one of our primary service areas. If you're seeing wasps repeatedly entering and leaving one spot around your roof, soffit, siding, brickwork, deck or shed, there's likely an active nest nearby.",
+      "Mississauga is one of the areas we serve regularly, alongside Toronto and communities across the GTA. If you're seeing wasps repeatedly entering and leaving one spot around your roof, soffit, siding, brickwork, deck or shed, there's likely an active nest nearby.",
       "Call Wasp Problem and tell us what you're seeing — a quick description helps, and a photo helps even more, if you can safely take one before we arrive.",
     ],
     extraFaq: {
       q: "Do you service Mississauga?",
-      a: "Yes — Mississauga is one of our primary service areas, along with Oakville, Burlington and the wider GTA.",
+      a: "Yes — we work in Mississauga regularly, along with Toronto and communities across the GTA.",
     },
   },
   {
@@ -48,7 +48,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     ],
     extraFaq: {
       q: "Do you service Oakville?",
-      a: "Yes — Oakville is one of our primary service areas, along with Mississauga, Burlington and the wider GTA.",
+      a: "Yes — we serve Oakville, along with Toronto, Mississauga and communities across the GTA. Give us a call and we'll let you know the earliest we can get there.",
     },
   },
   {
@@ -66,7 +66,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     ],
     extraFaq: {
       q: "Do you service Burlington?",
-      a: "Yes — Burlington is one of our primary service areas, along with Mississauga, Oakville and the wider GTA.",
+      a: "Yes — we serve Burlington, along with Toronto, Mississauga and communities across the GTA. Give us a call and we'll let you know the earliest we can get there.",
     },
   },
 ];

@@ -95,9 +95,8 @@ export function CityPage({ location }: { location: CityLocation }) {
             title="Also Serving the GTA"
             lede={
               <>
-                Alongside {location.city}, Wasp Problem is a primary service provider for{" "}
-                {otherCities.map((l) => l.city).join(" and ")}, and we also serve Toronto and
-                communities across the wider GTA.
+                Alongside {location.city}, Wasp Problem serves Toronto and communities across
+                the GTA, including {otherCities.map((l) => l.city).join(" and ")}.
               </>
             }
           />

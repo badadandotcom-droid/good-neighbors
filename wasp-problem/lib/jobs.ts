@@ -34,7 +34,7 @@ export const JOBS: readonly Job[] = [
       },
       {
         src: "/jobs/garage-wasp-followup.jpg",
-        alt: "The same garage doorway at the follow-up visit, with no wasp activity.",
+        alt: "The same garage doorway photographed at the follow-up visit.",
         label: "Follow-up visit",
       },
     ],
