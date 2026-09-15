@@ -26,7 +26,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     heroSubheadline: "Fast Wasp Nest Removal for Mississauga Homeowners",
     intro: [
       "Mississauga is one of the areas we serve regularly, alongside Toronto and communities across the GTA. If you're seeing wasps repeatedly entering and leaving one spot around your roof, soffit, siding, brickwork, deck or shed, there's likely an active nest nearby.",
-      "Call Wasp Problem and tell us what you're seeing — a quick description helps, and a photo helps even more, if you can safely take one before we arrive.",
+      "Call or text Wasp Problem and tell us what you're seeing — a quick description helps, and a photo helps even more, if you can safely take one before we arrive.",
     ],
     extraFaq: {
       q: "Do you service Mississauga?",
@@ -44,11 +44,11 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     heroSubheadline: "Fast Wasp Nest Removal for Oakville Homeowners",
     intro: [
       "Oakville homeowners usually call us for the same reason: wasps keep flying in and out of one specific spot on the house, and nobody wants to get close enough to check. That's typically a sign of an active nest.",
-      "Give us a call and describe where you're seeing the activity — the roofline, soffit, siding, brickwork, a deck or a shed are the most common spots. A photo helps too, if it's safe to take one.",
+      "Call or text us and describe where you're seeing the activity — the roofline, soffit, siding, brickwork, a deck or a shed are the most common spots. A photo helps too, if it's safe to take one.",
     ],
     extraFaq: {
       q: "Do you service Oakville?",
-      a: "Yes — we serve Oakville, along with Toronto, Mississauga and communities across the GTA. Give us a call and we'll let you know the earliest we can get there.",
+      a: "Yes — we serve Oakville, along with Toronto, Mississauga and communities across the GTA. Call or text us and we'll let you know the earliest we can get there.",
     },
   },
   {
@@ -62,11 +62,11 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     heroSubheadline: "Fast Wasp Nest Removal for Burlington Homeowners",
     intro: [
       "If you live in Burlington and you've noticed wasps consistently going in and out of the same opening — the roof, under the soffit, along the siding or brickwork, or around a deck or shed — that's usually an active nest, not just wasps passing through.",
-      "Call Wasp Problem and let us know what you're seeing. Photos of the area help us prepare before we arrive, if you're able to take them safely.",
+      "Call or text Wasp Problem and let us know what you're seeing. Photos of the area help us prepare before we arrive, if you're able to take them safely.",
     ],
     extraFaq: {
       q: "Do you service Burlington?",
-      a: "Yes — we serve Burlington, along with Toronto, Mississauga and communities across the GTA. Give us a call and we'll let you know the earliest we can get there.",
+      a: "Yes — we serve Burlington, along with Toronto, Mississauga and communities across the GTA. Call or text us and we'll let you know the earliest we can get there.",
     },
   },
 ];

@@ -50,7 +50,7 @@ export const BASE_FAQS = [
   },
   {
     q: "What if I still see activity?",
-    a: "Some activity in the first few days is normal, and it should tail off from there. If it hasn't settled down, call us and we'll come back.",
+    a: "Some activity in the first few days is normal, and it should tail off from there. If it hasn't settled down, call or text us and we'll come back.",
   },
 ] as const;
 
@@ -89,7 +89,7 @@ export const HOMEPAGE_FAQS = [
   },
   {
     q: "Is same-day service available?",
-    a: "Same-day service is available in many cases, based on availability. Call us and we'll tell you the earliest appointment for your area.",
+    a: "Same-day service is available in many cases, based on availability. Call or text us and we'll tell you the earliest appointment for your area.",
   },
   {
     q: "What affects the price?",

@@ -65,24 +65,13 @@ export function ContactActions({
         {PHONE_TOLLFREE.display}
       </PhoneLink>
 
-      <p className={`mt-2 text-xs ${isDark ? "text-white/60" : "text-muted"}`}>
-        or dial {PHONE_TOLLFREE.numeric}
-      </p>
-
-      <div className="mt-4 flex w-full max-w-xs flex-col gap-2.5 sm:w-auto sm:max-w-none sm:flex-row">
-        <PhoneLink
-          number={PHONE_LOCAL}
-          location={`${ctaLocationPrefix}-local-call`}
-          className={secondary}
-        >
-          <PhoneIcon />
-          Call {PHONE_LOCAL.display}
-        </PhoneLink>
-        <TextLink location={`${ctaLocationPrefix}-text`} className={secondary}>
+      <div className="mt-3 w-full max-w-xs sm:w-auto">
+        <TextLink location={`${ctaLocationPrefix}-text`} className={`${secondary} w-full sm:w-auto`}>
           <TextIcon />
           Text {PHONE_LOCAL.display}
         </TextLink>
       </div>
+
     </div>
   );
 }

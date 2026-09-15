@@ -52,7 +52,7 @@ export const SERVICE_AREAS = [
 
 export const SAME_DAY_SERVICE = {
   headline: "Same-Day Service Available",
-  disclaimer: "Based on availability. Call to confirm for your area.",
+  disclaimer: "Based on availability. Call or text to confirm for your area.",
 } as const;
 
 export const GUARANTEE = {

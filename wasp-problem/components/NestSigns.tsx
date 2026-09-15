@@ -14,7 +14,7 @@ export function NestSigns({ ctaLocation }: { ctaLocation: string }) {
           may be an active nest.
         </p>
         <p className="mt-4 text-base leading-relaxed">
-          Call Wasp Problem and tell us what you&rsquo;re seeing. Photos are helpful if you can
+          Call or text Wasp Problem and tell us what you&rsquo;re seeing. Photos are helpful if you can
           safely take them.
         </p>
         <PhoneLink location={ctaLocation} className="btn btn-dark mt-8 px-7 py-4 text-lg">
