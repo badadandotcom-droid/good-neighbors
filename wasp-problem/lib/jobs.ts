@@ -30,7 +30,7 @@ export const JOBS: readonly Job[] = [
       {
         src: "/jobs/garage-initial-85b43b0.jpg",
         alt: "A glue board taped to the garage door frame, covered in captured wasps, with expanding foam visible along the brickwork.",
-        label: "Initial visit",
+        label: "After initial visit",
       },
       {
         src: "/jobs/garage-followup-f2636ec.jpg",
