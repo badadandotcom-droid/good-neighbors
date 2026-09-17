@@ -23,6 +23,7 @@ export function FaqAccordion({
 }) {
   return (
     <section
+      id="faq"
       className={`px-5 py-16 sm:py-24 ${background === "white" ? "bg-white" : "bg-surface"}`}
     >
       <script
