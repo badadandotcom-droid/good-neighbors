@@ -38,6 +38,7 @@ export const CONTACT = {
 export const SERVICE_AREAS = [
   "Toronto",
   "Mississauga",
+  "Brampton",
   "Vaughan",
   "Markham",
   "Richmond Hill",
