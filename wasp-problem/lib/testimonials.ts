@@ -30,6 +30,7 @@ export const REVIEWS: readonly Review[] = [
     quote:
       "Excellent service. Showed up after dawn to make sure all the bees are inside . Very honest. Secured all the gaps around our house. Gave us a peace of mind. Highly recommend Duane to anyone with wasps issues. Thank you Duane!",
     author: "Patrick Chiu",
+    sourceUrl: "https://goo.gl/maps/y4turNzD9WBnz6Vc9",
     source: "Google",
     rating: 5,
   },
@@ -37,12 +38,14 @@ export const REVIEWS: readonly Review[] = [
     // "Dwayne" is her spelling; the owner is Duane. Left as written.
     quote: "Dwayne fabulous service follow up care. I would recommend this company to all",
     author: "Linda Fairley",
+    sourceUrl: "https://goo.gl/maps/odbKw9B2mXAjb16V7",
     source: "Google",
     rating: 5,
   },
   {
     quote: "Amazing service and got the job done",
     author: "Ryan Spinner",
+    sourceUrl: "https://goo.gl/maps/jFpEkC8BUAQ4fH5A6",
     source: "Google",
     rating: 5,
   },

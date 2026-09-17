@@ -46,22 +46,24 @@ export function TrustSection({ reviews = [] }: { reviews?: readonly Review[] }) 
                 <blockquote className="mt-4 text-lg leading-relaxed">
                   &ldquo;{review.quote}&rdquo;
                 </blockquote>
-                <p className="mt-4 pt-1 text-sm font-bold sm:mt-auto">
-                  {review.author}
-                  {review.source ? (
-                    <span className="font-medium text-muted">
-                      {" "}
-                      &middot;{" "}
-                      {review.sourceUrl ? (
-                        <a href={review.sourceUrl} className="underline underline-offset-4">
-                          {review.source}
-                        </a>
-                      ) : (
-                        review.source
-                      )}
-                    </span>
-                  ) : null}
-                </p>
+                <div className="mt-4 pt-1 sm:mt-auto">
+                  <p className="text-sm font-bold">{review.author}</p>
+                  {review.sourceUrl ? (
+                    <a
+                      href={review.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Read ${review.author}'s review on ${review.source ?? "Google"}`}
+                      className="mt-1 inline-flex min-h-11 items-center text-sm font-medium text-muted underline decoration-yellow decoration-2 underline-offset-4"
+                    >
+                      Read on {review.source ?? "Google"}
+                    </a>
+                  ) : (
+                    review.source && (
+                      <p className="mt-1 text-sm font-medium text-muted">{review.source}</p>
+                    )
+                  )}
+                </div>
               </li>
             ))}
           </ul>
