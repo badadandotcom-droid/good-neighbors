@@ -54,7 +54,7 @@ export function TrustSection({ reviews = [] }: { reviews?: readonly Review[] }) 
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Read ${review.author}'s review on ${review.source ?? "Google"}`}
-                      className="mt-1 inline-flex min-h-11 items-center text-sm font-medium text-muted underline decoration-yellow decoration-2 underline-offset-4"
+                      className="mt-1 inline-flex min-h-11 items-center text-base font-bold text-ink underline decoration-yellow decoration-2 underline-offset-4 hover:decoration-[3px]"
                     >
                       Read on {review.source ?? "Google"}
                     </a>
