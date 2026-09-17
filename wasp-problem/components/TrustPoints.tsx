@@ -21,11 +21,12 @@ function Check() {
 /** Three facts already stated elsewhere on the page, surfaced under the hero CTA. Nothing here is a claim the rest of the site doesn't make. */
 export function TrustPoints({ tone = "light" }: { tone?: "light" | "dark" }) {
   const text = tone === "dark" ? "text-white/85" : "text-ink";
+  const link = "inline-flex min-h-11 -my-3 items-center underline decoration-yellow decoration-2 underline-offset-4";
   const points = [
-    <>
-      Upfront pricing from <strong className="font-extrabold">${PRICING[0].amount} + HST</strong>
-    </>,
-    <a key="g" href="#guarantee" className="inline-block -my-1.5 py-1.5 underline decoration-yellow decoration-2 underline-offset-4">
+    <a key="p" href="#pricing" className={link}>
+      Upfront pricing from&nbsp;<strong className="font-extrabold">${PRICING[0].amount} + HST</strong>
+    </a>,
+    <a key="g" href="#guarantee" className={link}>
       {GUARANTEE.name}
     </a>,
     <>Wasps, hornets &amp; carpenter bees</>,

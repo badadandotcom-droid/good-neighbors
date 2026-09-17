@@ -30,7 +30,7 @@ export default function Home() {
           </p>
 
           <h1 className="sign-lockup mt-6 text-6xl leading-[0.95] uppercase sm:text-8xl">
-            Wasp
+            Wasp{" "}
             <br />
             Problem?
           </h1>
@@ -54,9 +54,10 @@ export default function Home() {
       </section>
 
       <TrustSection reviews={REVIEWS} />
-      <WhatWeHandle />
-      <RecentJobs />
+      {/* Pricing sits right after the reviews: "from $180" in the hero invites "so what will I pay?" and the answer shouldn't be six screens down. */}
       <PricingTable />
+      <RecentJobs />
+      <WhatWeHandle />
       <ProcessSteps />
       <GuaranteeSection />
       <FaqAccordion items={HOMEPAGE_FAQS} background="white" />

@@ -12,7 +12,7 @@ import { SERVICE_AREAS } from "@/lib/site";
 export function ServiceAreaList() {
   const pageByCity = new Map(CITY_LOCATIONS.map((location) => [location.city, location.href]));
   const pill =
-    "inline-block rounded-full border border-line bg-white px-4 py-2 text-sm font-semibold shadow-card";
+    "inline-flex min-h-11 items-center rounded-full border border-line bg-white px-4 py-2 text-sm font-semibold shadow-card";
 
   return (
     <section id="service-areas" className="bg-surface px-5 py-16 sm:py-24">

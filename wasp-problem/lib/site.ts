@@ -8,7 +8,7 @@ export const BRAND = {
   name: "Wasp Problem",
   url: "https://waspproblem.ca",
   description:
-    "Professional wasp, hornet and carpenter bee nest removal serving Toronto and the GTA. Same-day service available for visible and hidden nests. Call Wasp Problem at 1-800-800-WASP.",
+    "Professional wasp, hornet and carpenter bee nest removal in Toronto and the GTA. Same-day service available. Call Wasp Problem at 1-800-800-WASP.",
 } as const;
 
 /**
@@ -23,7 +23,7 @@ export const PHONE_TOLLFREE = {
   href: "tel:+18008009277",
 } as const;
 
-/** Secondary contact — always presented as "local call or text," never as competing equally with the toll-free number. */
+/** Secondary contact — the call-or-text number, never presented as competing equally with the toll-free number. */
 export const PHONE_LOCAL = {
   display: "416-700-4259",
   href: "tel:+14167004259",

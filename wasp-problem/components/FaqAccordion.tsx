@@ -34,9 +34,9 @@ export function FaqAccordion({
         <SectionHeading eyebrow="Good to know" title="Questions" />
         <div className="mt-10 flex flex-col gap-3">
           {items.map((item) => (
-            <details key={item.q} className="group card px-5 py-4 open:pb-5 sm:px-6">
+            <details key={item.q} className="group card px-5 py-2.5 open:pb-5 sm:px-6">
               <summary className="cursor-pointer list-none text-base font-bold marker:content-none">
-                <span className="flex items-center justify-between gap-4">
+                <span className="flex min-h-11 items-center justify-between gap-4">
                   {item.q}
                   <span
                     aria-hidden="true"

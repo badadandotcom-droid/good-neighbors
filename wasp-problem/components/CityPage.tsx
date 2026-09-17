@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ContactActions } from "@/components/ContactActions";
 import { TrustPoints } from "@/components/TrustPoints";
 import { PhoneLink } from "@/components/PhoneLink";
-import { NestSigns } from "@/components/NestSigns";
 import { RecentJobs } from "@/components/RecentJobs";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { PricingTable } from "@/components/PricingTable";
@@ -21,7 +20,7 @@ export function CityPage({ location }: { location: CityLocation }) {
   const otherCities = CITY_LOCATIONS.filter((l) => l.slug !== location.slug);
   const faqs = [...BASE_FAQS, location.extraFaq];
   const pill =
-    "inline-block rounded-full border border-line bg-white px-4 py-2 text-sm font-semibold shadow-card transition-colors hover:border-ink hover:bg-yellow-tint";
+    "inline-flex min-h-11 items-center rounded-full border border-line bg-white px-4 py-2 text-sm font-semibold shadow-card transition-colors hover:border-ink hover:bg-yellow-tint";
 
   return (
     <>
@@ -81,10 +80,9 @@ export function CityPage({ location }: { location: CityLocation }) {
       </section>
 
       <TrustSection reviews={REVIEWS} />
-      <NestSigns ctaLocation={`city-${location.slug}-nest-signs`} />
+      <PricingTable />
       <RecentJobs />
       <ProcessSteps />
-      <PricingTable />
       <GuaranteeSection />
 
       {/* SERVICE AREA CROSS-LINKS */}
