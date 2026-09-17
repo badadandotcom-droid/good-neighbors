@@ -37,16 +37,16 @@ export function TrustSection({ reviews = [] }: { reviews?: readonly Review[] }) 
             className={
               reviews.length === 1
                 ? "mx-auto mt-10 max-w-xl"
-                : "mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2"
+                : "mt-10 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3"
             }
           >
             {reviews.map((review) => (
-              <li key={review.author} className="card px-6 py-6 sm:px-8 sm:py-7">
+              <li key={review.author} className="card flex h-full flex-col px-6 py-6 sm:px-8 sm:py-7">
                 {review.rating != null && <Stars rating={review.rating} />}
                 <blockquote className="mt-4 text-lg leading-relaxed">
                   &ldquo;{review.quote}&rdquo;
                 </blockquote>
-                <p className="mt-4 text-sm font-bold">
+                <p className="mt-4 pt-1 text-sm font-bold sm:mt-auto">
                   {review.author}
                   {review.source ? (
                     <span className="font-medium text-muted">

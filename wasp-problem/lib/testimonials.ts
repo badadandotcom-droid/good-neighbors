@@ -25,7 +25,23 @@ export type JobPhoto = {
 
 export const REVIEWS: readonly Review[] = [
   {
-    quote: "Amazing service and got the job done.",
+    // Reproduced exactly as written, including the space before the period
+    // after "inside". Do not tidy a customer's grammar inside a quotation.
+    quote:
+      "Excellent service. Showed up after dawn to make sure all the bees are inside . Very honest. Secured all the gaps around our house. Gave us a peace of mind. Highly recommend Duane to anyone with wasps issues. Thank you Duane!",
+    author: "Patrick Chiu",
+    source: "Google",
+    rating: 5,
+  },
+  {
+    // "Dwayne" is her spelling; the owner is Duane. Left as written.
+    quote: "Dwayne fabulous service follow up care. I would recommend this company to all",
+    author: "Linda Fairley",
+    source: "Google",
+    rating: 5,
+  },
+  {
+    quote: "Amazing service and got the job done",
     author: "Ryan Spinner",
     source: "Google",
     rating: 5,
@@ -49,9 +65,14 @@ export const PHOTOS: readonly JobPhoto[] = [
     caption: "Wasps caught on a trap board.",
   },
   {
-    src: "/jobs/stone-wall-65e1376.jpg",
-    alt: "An applicator tube inserted into a joint in a stone retaining wall, with a wasp beside it.",
-    caption: "Treating a gap in a stone retaining wall.",
+    src: "/jobs/brick-gap-wasp-7079149.jpg",
+    alt: "A wasp at a narrow opening in the mortar joint of a brick wall, beside a white downspout.",
+    caption: "A wasp at a gap in the brickwork beside a downspout.",
+  },
+  {
+    src: "/jobs/brick-gap-treated-c2003b9.jpg",
+    alt: "The same narrow opening in the brick wall with treatment applied around it.",
+    caption: "Treatment applied at the gap in the brickwork.",
   },
   {
     src: "/jobs/mortar-nest-ca6cc9f.jpg",
