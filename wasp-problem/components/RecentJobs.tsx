@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { SectionHeading } from "@/components/SectionHeading";
 import { JOBS } from "@/lib/jobs";
+import { PHOTOS } from "@/lib/testimonials";
 
 /**
  * Our own summary of jobs we completed — factual, never framed as a customer
- * quotation or a review. Renders nothing while JOBS is empty.
+ * quotation or a review. Renders nothing while there is nothing to show.
  */
 export function RecentJobs() {
-  if (JOBS.length === 0) return null;
+  if (JOBS.length === 0 && PHOTOS.length === 0) return null;
 
   return (
     <section className="bg-surface px-5 py-16 sm:py-24">
@@ -47,6 +48,35 @@ export function RecentJobs() {
             </article>
           ))}
         </div>
+
+        {PHOTOS.length > 0 && (
+          <div className="mt-10">
+            <h3 className="text-center text-xs font-bold tracking-[0.14em] text-muted uppercase">
+              More from recent jobs
+            </h3>
+            <ul className="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-3">
+              {PHOTOS.map((photo) => (
+                <li key={photo.src}>
+                  <figure className="card overflow-hidden">
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      width={900}
+                      height={1200}
+                      sizes="(min-width: 640px) 30vw, 45vw"
+                      className="aspect-[3/4] h-full w-full object-cover"
+                    />
+                    {photo.caption && (
+                      <figcaption className="px-3 py-2.5 text-xs leading-snug text-muted">
+                        {photo.caption}
+                      </figcaption>
+                    )}
+                  </figure>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -12,7 +12,7 @@ import { FinalCta } from "@/components/FinalCta";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SAME_DAY_SERVICE } from "@/lib/site";
 import { HOMEPAGE_FAQS } from "@/lib/content";
-import { REVIEWS, PHOTOS } from "@/lib/testimonials";
+import { REVIEWS } from "@/lib/testimonials";
 
 export default function Home() {
   return (
@@ -53,7 +53,7 @@ export default function Home() {
         </div>
       </section>
 
-      <TrustSection reviews={REVIEWS} photos={PHOTOS} />
+      <TrustSection reviews={REVIEWS} />
       <WhatWeHandle />
       <RecentJobs />
       <PricingTable />

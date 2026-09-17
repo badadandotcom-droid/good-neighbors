@@ -14,7 +14,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SectionHeading } from "@/components/SectionHeading";
 import { PHONE_TOLLFREE, SAME_DAY_SERVICE } from "@/lib/site";
 import { BASE_FAQS } from "@/lib/content";
-import { REVIEWS, PHOTOS } from "@/lib/testimonials";
+import { REVIEWS } from "@/lib/testimonials";
 import { CITY_LOCATIONS, type CityLocation } from "@/lib/locations";
 
 export function CityPage({ location }: { location: CityLocation }) {
@@ -80,7 +80,7 @@ export function CityPage({ location }: { location: CityLocation }) {
         </div>
       </section>
 
-      <TrustSection reviews={REVIEWS} photos={PHOTOS} />
+      <TrustSection reviews={REVIEWS} />
       <NestSigns ctaLocation={`city-${location.slug}-nest-signs`} />
       <RecentJobs />
       <ProcessSteps />
