@@ -8,7 +8,7 @@ export function PricingTable() {
     <section id="pricing" className="bg-white px-5 py-16 sm:py-24">
       <div className="mx-auto max-w-xl">
         <SectionHeading
-          eyebrow="Transparent pricing"
+          eyebrow="Residential pricing"
           title="Pricing"
           lede="What we quote is what you pay."
         />
