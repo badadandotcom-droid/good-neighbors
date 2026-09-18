@@ -1,9 +1,7 @@
 export type PriceLineItem = {
   id: string;
   label: string;
-  /** A dollar figure, or "TBD" for a line item that is quoted per job — some ladder work costs far more than a flat fee could cover. */
-  amount: number | "TBD";
-  /** Empty when the amount already says everything, as with TBD. */
+  amount: number;
   qualifier: string;
 };
 
@@ -11,7 +9,7 @@ export const PRICING: readonly PriceLineItem[] = [
   { id: "visible-nest", label: "Visible / exposed nest", amount: 180, qualifier: "+ HST" },
   { id: "hidden-nest", label: "Hidden nest", amount: 220, qualifier: "+ HST" },
   { id: "additional-nest", label: "Each additional nest", amount: 80, qualifier: "+ HST" },
-  { id: "ladder-fee", label: "Ladder fee, when required", amount: "TBD", qualifier: "" },
+  { id: "ladder-fee", label: "Ladder access (under 35 feet)", amount: 65, qualifier: "+ HST" },
 ] as const;
 
 export const NEST_TYPE_EXPLANATION = {
