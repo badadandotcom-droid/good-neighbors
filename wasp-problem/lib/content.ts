@@ -140,6 +140,6 @@ export const HOMEPAGE_FAQS = [
   },
   {
     q: "What does the service guarantee cover?",
-    a: "If activity at the treated nest isn't decreasing as expected, or returns within 90 days of treatment, we'll return at no additional charge. It covers the nest we treated, not a new or unrelated nest elsewhere on the property.",
+    a: "If wasps return to the nest we treated within 90 days, we come back and deal with it at no additional charge. It covers the nest we treated, not a new or unrelated nest elsewhere on the property.",
   },
 ] as const;

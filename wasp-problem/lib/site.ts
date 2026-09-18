@@ -58,7 +58,7 @@ export const SAME_DAY_SERVICE = {
 export const GUARANTEE = {
   name: "90-day service guarantee",
   summary:
-    "If activity at the treated nest isn't decreasing as expected, or returns within 90 days of treatment, we'll return at no additional charge.",
+    "If wasps return to the nest we treated within 90 days, we come back and deal with it at no additional charge.",
 } as const;
 
 /**
