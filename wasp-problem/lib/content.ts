@@ -37,6 +37,14 @@ export const BASE_FAQS = [
     a: `Call us at ${PHONE_TOLLFREE.display} and we'll tell you the earliest available appointment.`,
   },
   {
+    q: "Do you take the nest away?",
+    a: "Yes. When there's a visible nest, we take it down and take it with us when we're done. A hidden nest inside a wall or soffit can't be pulled out, so we treat it instead.",
+  },
+  {
+    q: "Do I need to be home?",
+    a: "No. As long as we can safely reach the nest, you don't need to be there.",
+  },
+  {
     q: "Can I book entirely by text?",
     a: "Yes. Text 416-700-4259 with your name, service address and a brief description of the problem. We'll discuss pricing and availability by text—no phone call required.",
   },
@@ -82,6 +90,14 @@ export const HOMEPAGE_FAQS = [
   {
     q: "Can you help if I cannot see the nest?",
     a: "Yes. Many nests are hidden inside a soffit, wall void, or other opening — you don't need to see the nest itself, just where wasps are entering and leaving. That's treated as a hidden nest ($220 + HST).",
+  },
+  {
+    q: "Do you take the nest away?",
+    a: "Yes. When there's a visible nest, we take it down and take it with us when we're done. A hidden nest inside a wall or soffit can't be pulled out, so we treat it instead.",
+  },
+  {
+    q: "Do I need to be home?",
+    a: "No. As long as we can safely reach the nest, you don't need to be there.",
   },
   {
     q: "Can I book entirely by text?",

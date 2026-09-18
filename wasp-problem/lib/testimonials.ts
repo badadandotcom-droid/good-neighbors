@@ -21,6 +21,9 @@ export type JobPhoto = {
   src: string;
   alt: string;
   caption?: string;
+  /** Only the first photo carries these: it is shown large at the top of Recent Work. */
+  headline?: string;
+  detail?: string;
 };
 
 export const REVIEWS: readonly Review[] = [
@@ -56,6 +59,9 @@ export const PHOTOS: readonly JobPhoto[] = [
     src: "/jobs/gable-nest-4f7cf56.jpg",
     alt: "A large grey paper nest built into the peak of a roof gable, with its entrance hole visible underneath.",
     caption: "An exposed nest built into a roof peak.",
+    headline: "Exposed nest at a roof peak",
+    detail:
+      "A large paper nest built into the peak of a roof gable. Visible nests like this one come down and leave with us when the job is done.",
   },
   {
     src: "/jobs/porch-trim-743257d.jpg",
