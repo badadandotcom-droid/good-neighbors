@@ -19,7 +19,12 @@ export function PricingTable() {
               key={item.id}
               className="flex items-baseline justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5"
             >
-              <dt className="text-base font-semibold">{item.label}</dt>
+              <dt className="text-base font-semibold">
+                {item.label}
+                {item.note && (
+                  <span className="mt-1 block text-sm leading-snug font-medium text-muted">{item.note}</span>
+                )}
+              </dt>
               <dd className="shrink-0 font-display text-xl font-extrabold tracking-tight whitespace-nowrap">
                 ${item.amount}{" "}
                 <span className="font-sans text-sm font-medium text-muted">{item.qualifier}</span>

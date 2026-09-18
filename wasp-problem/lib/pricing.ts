@@ -3,13 +3,21 @@ export type PriceLineItem = {
   label: string;
   amount: number;
   qualifier: string;
+  /** One short supporting line under the label, for the cases the headline figure doesn't cover. */
+  note?: string;
 };
 
 export const PRICING: readonly PriceLineItem[] = [
   { id: "visible-nest", label: "Visible / exposed nest", amount: 180, qualifier: "+ HST" },
   { id: "hidden-nest", label: "Hidden nest", amount: 220, qualifier: "+ HST" },
   { id: "additional-nest", label: "Each additional nest", amount: 80, qualifier: "+ HST" },
-  { id: "ladder-fee", label: "Ladder fee (under 35 feet)", amount: 65, qualifier: "+ HST" },
+  {
+    id: "ladder-fee",
+    label: "Ladder access (10–35 ft)",
+    amount: 65,
+    qualifier: "+ HST",
+    note: "Access under 10 ft is included. Over 35 ft: $150 + HST ladder fee.",
+  },
 ] as const;
 
 export const NEST_TYPE_EXPLANATION = {
