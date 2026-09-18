@@ -10,7 +10,7 @@ export function PricingTable() {
         <SectionHeading
           eyebrow="Transparent pricing"
           title="Pricing"
-          lede="Straightforward pricing, in Canadian dollars. Tax and any required ladder access are never hidden behind a headline price."
+          lede="Straightforward pricing. Tax and any required ladder access are never hidden behind a headline price."
         />
 
         <dl className="card mt-10 divide-y divide-line overflow-hidden shadow-card-lg">
