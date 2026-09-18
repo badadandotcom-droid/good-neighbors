@@ -2,7 +2,7 @@ export type PriceLineItem = {
   id: string;
   label: string;
   amount: number;
-  /** True for the rows that stack on top of a base price; shown as "+$100" so the table reads "pick a base, add what applies". */
+  /** True for the rows that stack on top of a base price. No longer shown with a "+" in the table — plain numbers align better in a right-aligned column — but still kept separate so the FAQ and any future UI can describe them as add-ons if needed. */
   addOn?: boolean;
   qualifier: string;
   /** Supporting lines under the label, for the cases the headline figure doesn't cover. Each string is its own line; the first stands apart from the rest. */
