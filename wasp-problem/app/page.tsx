@@ -54,7 +54,7 @@ export default function Home() {
       </section>
 
       <TrustSection reviews={REVIEWS} />
-      {/* Pricing sits right after the reviews: "from $180" in the hero invites "so what will I pay?" and the answer shouldn't be six screens down. */}
+      {/* Pricing sits right after the reviews: "from $210" in the hero invites "so what will I pay?" and the answer shouldn't be six screens down. */}
       <PricingTable />
       <RecentJobs />
       <WhatWeHandle />

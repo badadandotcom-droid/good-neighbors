@@ -103,7 +103,7 @@ export const WHAT_WE_HANDLE_SCOPE_NOTE =
 export const HOMEPAGE_FAQS = [
   {
     q: "Can you help if I don't see the nest?",
-    a: "Yes. Many nests are hidden inside a soffit, wall void, or other opening — you don't need to see the nest itself, just where wasps are entering and leaving. That's treated as a hidden nest ($220).",
+    a: "Yes. Many nests are hidden inside a soffit, wall void, or other opening — you don't need to see the nest itself, just where wasps are entering and leaving. That's treated as a hidden nest ($250).",
   },
   {
     q: "Do you take the nest away?",
@@ -132,7 +132,7 @@ export const HOMEPAGE_FAQS = [
   },
   {
     q: "What affects the price?",
-    a: "Price depends on whether the nest is visible ($180) or hidden ($220), whether more than one nest needs treatment (+$80 each), and how high the nest or entry point is — under 10 ft is included in your service price, 10–35 ft adds a $65 ladder fee, and over 35 ft is quoted separately.",
+    a: "Price depends on whether the nest is visible ($210) or hidden ($250), whether more than one nest needs treatment (+$100 each), and how high the nest or entry point is — under 10 ft is included in your service price, 10–35 ft adds a $75 ladder fee, and over 35 ft is quoted separately.",
   },
   {
     q: "How quickly will the wasps be gone?",
