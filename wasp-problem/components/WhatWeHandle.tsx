@@ -8,8 +8,12 @@ export function WhatWeHandle() {
         <SectionHeading eyebrow="Our specialty" title="What We Handle" />
 
         <dl className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
-          {WHAT_WE_HANDLE.map((item) => (
-            <div key={item.title} className="card px-5 py-5 sm:px-6 sm:py-6">
+          {WHAT_WE_HANDLE.map((item, i) => (
+            <div
+              key={item.title}
+              // An odd final card spans the row on wider screens instead of sitting alone on the left.
+              className={`card px-5 py-5 sm:px-6 sm:py-6 ${i === WHAT_WE_HANDLE.length - 1 && WHAT_WE_HANDLE.length % 2 === 1 ? "sm:col-span-2" : ""}`}
+            >
               <dt className="font-display text-lg font-extrabold tracking-tight">{item.title}</dt>
               <dd className="mt-2 text-sm leading-relaxed text-muted sm:text-base">{item.body}</dd>
             </div>

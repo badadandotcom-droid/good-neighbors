@@ -51,7 +51,8 @@ export function PricingTable() {
 
         <p className="mt-6 text-center text-sm leading-relaxed text-muted">
           More than one nest, or a nest that needs ladder access, adds to the total — we&rsquo;ll
-          walk through what applies to your property before any work begins.
+          walk through what applies to your property before any work begins. Commercial and
+          institutional properties are quoted separately.
         </p>
 
         <div className="mt-8 text-center">

@@ -80,6 +80,11 @@ export const WHAT_WE_HANDLE = [
     title: "Carpenter Bees",
     body: "Carpenter bees boring into wood — fascia, decks, siding and other structural wood.",
   },
+  {
+    // Scope, not a job history: no list of building types, so nobody wonders whether theirs is on it.
+    title: "Commercial & Institutional",
+    body: "Any property, quoted per building.",
+  },
 ] as const;
 
 export const WHAT_WE_HANDLE_SCOPE_NOTE =
