@@ -10,7 +10,7 @@ export type PriceLineItem = {
 };
 
 export const PRICING: readonly PriceLineItem[] = [
-  { id: "visible-nest", label: "Visible / exposed nest", amount: 210, qualifier: "" },
+  { id: "visible-nest", label: "Visible / exposed nest", amount: 180, qualifier: "" },
   { id: "hidden-nest", label: "Hidden nest", amount: 250, qualifier: "" },
   { id: "additional-nest", label: "Each additional nest", amount: 100, addOn: true, qualifier: "" },
   {
