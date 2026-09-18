@@ -13,7 +13,7 @@ export const PRICING: readonly PriceLineItem[] = [
   { id: "additional-nest", label: "Each additional nest", amount: 80, qualifier: "+ HST" },
   {
     id: "ladder-fee",
-    label: "Ladder access (10–35 ft)",
+    label: "Nest height 10–35 ft",
     amount: 65,
     qualifier: "+ HST",
     note: "Access under 10 ft is included. Over 35 ft: $150 + HST ladder fee.",
