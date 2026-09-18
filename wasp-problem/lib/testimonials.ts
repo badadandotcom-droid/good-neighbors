@@ -64,16 +64,8 @@ export const PHOTOS: readonly JobPhoto[] = [
       "A large paper nest built into the peak of a roof gable. Visible nests like this one come down and leave with us when the job is done.",
   },
   {
-    src: "/jobs/porch-trim-743257d.jpg",
-    alt: "Several wasps flying around a narrow gap where porch trim meets the siding.",
-    caption: "Wasps going in and out of a gap in porch trim.",
-  },
-  {
-    src: "/jobs/trap-board-f84188f.jpg",
-    alt: "A trap board held up against a brick wall, covered in captured wasps.",
-    caption: "Wasps caught on a trap board.",
-  },
-  {
+    // These two are one before/after pair, so they stay adjacent — the grid
+    // puts them side by side on a row and the captions carry the link.
     src: "/jobs/brick-gap-wasp-7079149.jpg",
     alt: "A wasp at a narrow opening in the mortar joint of a brick wall, beside a white downspout.",
     caption: "A wasp at a gap in the brickwork beside a downspout.",
@@ -81,11 +73,11 @@ export const PHOTOS: readonly JobPhoto[] = [
   {
     src: "/jobs/brick-gap-treated-c2003b9.jpg",
     alt: "The same narrow opening in the brick wall with treatment applied around it.",
-    caption: "Treatment applied at the gap in the brickwork.",
+    caption: "The same gap, after treatment.",
   },
   {
-    src: "/jobs/mortar-nest-ca6cc9f.jpg",
-    alt: "A small tube-shaped paper nest built into the mortar joint between stone and concrete.",
-    caption: "A small nest built into a mortar joint.",
+    src: "/jobs/trap-board-f84188f.jpg",
+    alt: "A trap board held up against a brick wall, covered in captured wasps.",
+    caption: "Wasps caught on a trap board.",
   },
 ];

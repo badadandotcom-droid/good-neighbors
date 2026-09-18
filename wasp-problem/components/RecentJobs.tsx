@@ -43,8 +43,13 @@ export function RecentJobs() {
               More from recent jobs
             </h3>
             <ul className="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-3">
-              {rest.map((photo) => (
-                <li key={photo.src}>
+              {rest.map((photo, i) => (
+                <li
+                  key={photo.src}
+                  className={
+                    i === rest.length - 1 && rest.length % 2 === 1 ? "col-span-2 sm:col-span-1" : ""
+                  }
+                >
                   <figure className="card overflow-hidden">
                     <Image
                       src={photo.src}

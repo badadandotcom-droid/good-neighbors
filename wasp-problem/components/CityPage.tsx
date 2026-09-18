@@ -52,10 +52,7 @@ export function CityPage({ location }: { location: CityLocation }) {
             <TrustPoints />
           </div>
 
-          <p className="mx-auto mt-7 max-w-sm text-sm font-medium">
-            Fast help for active wasp, hornet and carpenter bee problems around your home.
-          </p>
-          <p className="mx-auto mt-2 max-w-sm text-xs text-muted">*{SAME_DAY_SERVICE.disclaimer}</p>
+          <p className="mx-auto mt-7 max-w-sm text-xs text-muted">*{SAME_DAY_SERVICE.disclaimer}</p>
         </div>
       </section>
 
@@ -81,9 +78,10 @@ export function CityPage({ location }: { location: CityLocation }) {
 
       <TrustSection reviews={REVIEWS} />
       <PricingTable />
+      <GuaranteeSection />
+      <FaqAccordion items={faqs} background="white" />
       <RecentJobs />
       <ProcessSteps />
-      <GuaranteeSection />
 
       {/* SERVICE AREA CROSS-LINKS */}
       <section className="bg-white px-5 py-16 text-center sm:py-24">
@@ -115,7 +113,6 @@ export function CityPage({ location }: { location: CityLocation }) {
         </div>
       </section>
 
-      <FaqAccordion items={faqs} />
       <FinalCta ctaLocation={`city-${location.slug}-final`} />
       <SiteFooter />
     </>

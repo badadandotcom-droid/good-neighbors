@@ -38,7 +38,7 @@ export default function Home() {
             Professional Wasp Nest Removal
           </p>
           <p className="mx-auto mt-2 max-w-md text-base text-muted sm:text-lg">
-            Serving Toronto &amp; the GTA &middot; Visible and hidden nests
+            Serving Toronto &amp; the GTA
           </p>
 
           <div className="mt-8">
@@ -54,13 +54,19 @@ export default function Home() {
       </section>
 
       <TrustSection reviews={REVIEWS} />
-      {/* Pricing sits right after the reviews: "from $180" in the hero invites "so what will I pay?" and the answer shouldn't be six screens down. */}
+      {/*
+       * Order is: what it costs, what's guaranteed, your questions — then the
+       * proof. The FAQ carries the answers that actually calm a nervous
+       * caller (kids and pets, do you take the nest away), so it runs ahead
+       * of the photo gallery instead of below three screens of it.
+       * Backgrounds alternate white / surface down the page.
+       */}
       <PricingTable />
+      <GuaranteeSection />
+      <FaqAccordion items={HOMEPAGE_FAQS} background="white" />
       <RecentJobs />
       <WhatWeHandle />
       <ProcessSteps />
-      <GuaranteeSection />
-      <FaqAccordion items={HOMEPAGE_FAQS} background="white" />
       <ServiceAreaList />
       <FinalCta ctaLocation="final-cta" />
       <SiteFooter />

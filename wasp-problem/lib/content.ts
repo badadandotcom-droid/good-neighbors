@@ -20,11 +20,6 @@ export const PROCESS_STEPS = [
   },
   {
     n: "3",
-    title: "We Confirm the Appointment",
-    body: "You get a confirmed time before we head out.",
-  },
-  {
-    n: "4",
     title: "We Treat the Nest",
     body: "We deal with the active nest and explain what to expect for your particular job.",
   },
@@ -74,14 +69,8 @@ export const BASE_FAQS = [
 /** What the business handles — kept explicit so scope doesn't drift into general pest control or wildlife services. */
 export const WHAT_WE_HANDLE = [
   {
-    title: "Visible Nests",
-    body: "The nest itself can be seen — hanging under an eave, attached to a wall, or out in the open.",
-  },
-  {
-    title: "Hidden Nests",
-    body: "Wasps entering and leaving through a soffit, wall void, or hole, even when the nest itself isn't visible.",
-  },
-  {
+    // Visible vs hidden is explained in the pricing section, where it drives
+    // the $180-or-$250 decision. Repeating it here read as padding.
     title: "Wasps & Hornets",
     body: "Active wasp and hornet nests around the home, treated at the source.",
   },
