@@ -16,7 +16,7 @@ export const PRICING: readonly PriceLineItem[] = [
     label: "Nest height 10–35 ft",
     amount: 65,
     qualifier: "+ HST",
-    note: "Access under 10 ft is included. Over 35 ft: $150 + HST ladder fee.",
+    note: "Nests under 10 ft are included. Over 35 ft: $150 + HST ladder fee.",
   },
 ] as const;
 
