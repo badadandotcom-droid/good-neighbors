@@ -1,27 +1,9 @@
+import { ReviewStrip } from "@/components/ReviewStrip";
 import { SectionHeading } from "@/components/SectionHeading";
 import type { Review } from "@/lib/testimonials";
 
-/** Per-review star rating only — never an aggregate score for the business. */
-function Stars({ rating }: { rating: number }) {
-  return (
-    <div className="flex gap-0.5 text-yellow" role="img" aria-label={`${rating} out of 5 stars`}>
-      {Array.from({ length: 5 }, (_, i) => (
-        <svg key={i} viewBox="0 0 20 20" aria-hidden="true" className="h-5 w-5">
-          <path
-            d="M10 1.6l2.6 5.2 5.8.9-4.2 4.1 1 5.7L10 14.8l-5.2 2.7 1-5.7L1.6 7.7l5.8-.9z"
-            fill={i < rating ? "currentColor" : "none"}
-            stroke="rgb(10 10 10 / 0.4)"
-            strokeWidth="0.9"
-            strokeLinejoin="round"
-          />
-        </svg>
-      ))}
-    </div>
-  );
-}
-
 /**
- * Renders nothing while both arrays are empty (see lib/testimonials.ts).
+ * Renders nothing while the reviews array is empty (see lib/testimonials.ts).
  * Never fabricate content here.
  */
 export function TrustSection({ reviews = [] }: { reviews?: readonly Review[] }) {
@@ -31,44 +13,7 @@ export function TrustSection({ reviews = [] }: { reviews?: readonly Review[] }) 
     <section className="bg-surface px-5 py-16 sm:py-24">
       <div className="mx-auto max-w-3xl">
         <SectionHeading eyebrow="Real customers" title="What Customers Say" />
-
-        {reviews.length > 0 && (
-          <ul
-            className={
-              reviews.length === 1
-                ? "mx-auto mt-10 max-w-xl"
-                : "mt-10 grid grid-cols-1 items-start gap-4 sm:grid-cols-2 lg:grid-cols-3"
-            }
-          >
-            {reviews.map((review) => (
-              <li key={review.author} className="card flex flex-col px-6 py-6 sm:px-8 sm:py-7">
-                {review.rating != null && <Stars rating={review.rating} />}
-                <blockquote className="mt-4 text-lg leading-relaxed">
-                  &ldquo;{review.quote}&rdquo;
-                </blockquote>
-                <div className="mt-4 pt-1">
-                  <p className="text-sm font-bold">{review.author}</p>
-                  {review.sourceUrl ? (
-                    <a
-                      href={review.sourceUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`Read ${review.author}'s review on ${review.source ?? "Google"}`}
-                      className="mt-1 inline-flex min-h-11 items-center text-base font-bold text-ink underline decoration-yellow decoration-2 underline-offset-4 hover:decoration-[3px]"
-                    >
-                      Read on {review.source ?? "Google"}
-                    </a>
-                  ) : (
-                    review.source && (
-                      <p className="mt-1 text-sm font-medium text-muted">{review.source}</p>
-                    )
-                  )}
-                </div>
-              </li>
-            ))}
-          </ul>
-        )}
-
+        <ReviewStrip reviews={reviews} />
       </div>
     </section>
   );
