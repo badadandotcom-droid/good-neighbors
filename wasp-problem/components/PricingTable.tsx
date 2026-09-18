@@ -20,11 +20,14 @@ export function PricingTable() {
               className="flex items-baseline justify-between gap-4 px-5 py-4 sm:px-6 sm:py-5"
             >
               <dt className="text-base font-semibold">{item.label}</dt>
-              <dd className="shrink-0 font-display text-xl font-extrabold tracking-tight whitespace-nowrap">
-                {typeof item.amount === "number" ? `$${item.amount}` : item.amount}
-                {item.qualifier && (
-                  <span className="font-sans text-sm font-medium text-muted"> {item.qualifier}</span>
-                )}
+              {/* The qualifier slot is always rendered so every amount shares one right edge — a bare TBD would otherwise drift past the numbers. */}
+              <dd className="flex shrink-0 items-baseline justify-end whitespace-nowrap">
+                <span
+                  className={`font-display font-extrabold tracking-tight ${typeof item.amount === "number" ? "text-xl" : "text-lg"}`}
+                >
+                  {typeof item.amount === "number" ? `$${item.amount}` : item.amount}
+                </span>
+                <span className="ml-1 w-12 font-sans text-sm font-medium text-muted">{item.qualifier}</span>
               </dd>
             </div>
           ))}
