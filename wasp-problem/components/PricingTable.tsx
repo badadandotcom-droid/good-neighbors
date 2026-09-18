@@ -21,8 +21,10 @@ export function PricingTable() {
             >
               <dt className="text-base font-semibold">{item.label}</dt>
               <dd className="shrink-0 font-display text-xl font-extrabold tracking-tight whitespace-nowrap">
-                {typeof item.amount === "number" ? `$${item.amount}` : item.amount}{" "}
-                <span className="font-sans text-sm font-medium text-muted">{item.qualifier}</span>
+                {typeof item.amount === "number" ? `$${item.amount}` : item.amount}
+                {item.qualifier && (
+                  <span className="font-sans text-sm font-medium text-muted"> {item.qualifier}</span>
+                )}
               </dd>
             </div>
           ))}
