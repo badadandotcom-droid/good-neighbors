@@ -38,7 +38,7 @@ export const BASE_FAQS = [
   },
   {
     q: "Do you take the nest away?",
-    a: "Yes. When there's a visible nest, we take it down and take it with us when we're done. A hidden nest inside a wall or soffit is treated in place.",
+    a: "Yes. When there's a visible nest, we take it down and take it with us when we're done. A hidden nest inside a wall or soffit is usually treated in place. If you want it taken out, that means opening up the wall — we do that too, at a separately quoted cost.",
   },
   {
     q: "Do I need to be home?",
@@ -88,12 +88,12 @@ export const WHAT_WE_HANDLE_SCOPE_NOTE =
 /** Homepage-specific FAQ set — replaces the appended-BASE_FAQS pattern city pages still use, since the homepage needs pricing/guarantee-aware answers. */
 export const HOMEPAGE_FAQS = [
   {
-    q: "Can you help if I cannot see the nest?",
+    q: "Can you help if I don't see the nest?",
     a: "Yes. Many nests are hidden inside a soffit, wall void, or other opening — you don't need to see the nest itself, just where wasps are entering and leaving. That's treated as a hidden nest ($220 + HST).",
   },
   {
     q: "Do you take the nest away?",
-    a: "Yes. When there's a visible nest, we take it down and take it with us when we're done. A hidden nest inside a wall or soffit is treated in place.",
+    a: "Yes. When there's a visible nest, we take it down and take it with us when we're done. A hidden nest inside a wall or soffit is usually treated in place. If you want it taken out, that means opening up the wall — we do that too, at a separately quoted cost.",
   },
   {
     q: "Do I need to be home?",
