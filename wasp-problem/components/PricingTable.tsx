@@ -1,7 +1,7 @@
 import { PhoneLink } from "@/components/PhoneLink";
 import { SectionHeading } from "@/components/SectionHeading";
 import { PRICING, NEST_TYPE_EXPLANATION } from "@/lib/pricing";
-import { PHONE_TOLLFREE } from "@/lib/site";
+import { TollFreeNumber } from "@/components/TollFreeNumber";
 
 export function PricingTable() {
   return (
@@ -57,7 +57,7 @@ export function PricingTable() {
 
         <div className="mt-8 text-center">
           <PhoneLink location="pricing" className="btn btn-dark px-7 py-4 text-lg">
-            Call {PHONE_TOLLFREE.display}
+            Call <TollFreeNumber />
           </PhoneLink>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { PhoneLink } from "@/components/PhoneLink";
 import { TextLink } from "@/components/TextLink";
-import { PHONE_LOCAL, PHONE_TOLLFREE } from "@/lib/site";
+import { TollFreeNumber } from "@/components/TollFreeNumber";
+import { PHONE_LOCAL } from "@/lib/site";
 
 /** Mobile-only: the same two actions as the hero — call the branded number, or text the line that accepts texts. */
 export function StickyCallBar() {
@@ -10,7 +11,7 @@ export function StickyCallBar() {
         location="sticky-mobile"
         className="btn btn-primary min-h-12 flex-1 py-3 text-base"
       >
-        Call {PHONE_TOLLFREE.display}
+        Call <TollFreeNumber />
       </PhoneLink>
       <TextLink
         location="sticky-mobile-text"

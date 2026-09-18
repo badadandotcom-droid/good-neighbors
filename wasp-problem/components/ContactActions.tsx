@@ -1,6 +1,7 @@
 import { PhoneLink } from "@/components/PhoneLink";
 import { TextLink } from "@/components/TextLink";
-import { PHONE_LOCAL, PHONE_TOLLFREE } from "@/lib/site";
+import { TollFreeNumber } from "@/components/TollFreeNumber";
+import { PHONE_LOCAL } from "@/lib/site";
 
 function PhoneIcon() {
   return (
@@ -62,7 +63,7 @@ export function ContactActions({
         className="btn btn-primary min-h-14 w-full max-w-xs px-7 py-4 text-xl sm:w-auto sm:min-w-72"
       >
         <PhoneIcon />
-        {PHONE_TOLLFREE.display}
+        <TollFreeNumber />
       </PhoneLink>
 
       <div className="mt-3 w-full max-w-xs sm:w-auto">

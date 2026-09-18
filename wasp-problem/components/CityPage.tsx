@@ -11,7 +11,8 @@ import { FaqAccordion } from "@/components/FaqAccordion";
 import { FinalCta } from "@/components/FinalCta";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SectionHeading } from "@/components/SectionHeading";
-import { PHONE_TOLLFREE, SAME_DAY_SERVICE } from "@/lib/site";
+import { TollFreeNumber } from "@/components/TollFreeNumber";
+import { SAME_DAY_SERVICE } from "@/lib/site";
 import { BASE_FAQS } from "@/lib/content";
 import { REVIEWS } from "@/lib/testimonials";
 import { CITY_LOCATIONS, type CityLocation } from "@/lib/locations";
@@ -71,7 +72,7 @@ export function CityPage({ location }: { location: CityLocation }) {
             location={`city-${location.slug}-intro`}
             className="btn btn-dark mt-8 px-7 py-4 text-lg"
           >
-            Call {PHONE_TOLLFREE.display}
+            Call <TollFreeNumber />
           </PhoneLink>
         </div>
       </section>
