@@ -3,8 +3,6 @@ export type PriceLineItem = {
   label: string;
   amount: number;
   qualifier: string;
-  /** Shown as "+$65" rather than "$65": an add-on to the service price, not a price on its own. */
-  addOn?: boolean;
   /** Supporting lines under the label, for the cases the headline figure doesn't cover. Each string is its own line; the first stands apart from the rest. */
   note?: readonly string[];
 };
@@ -17,7 +15,6 @@ export const PRICING: readonly PriceLineItem[] = [
     id: "ladder-fee",
     label: "Ladder service",
     amount: 65,
-    addOn: true,
     qualifier: "+ HST",
     note: [
       "For nests or entry points 10–35 ft high.",

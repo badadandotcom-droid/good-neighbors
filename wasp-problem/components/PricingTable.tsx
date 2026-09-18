@@ -31,7 +31,7 @@ export function PricingTable() {
                 ))}
               </dt>
               <dd className="shrink-0 font-display text-xl font-extrabold tracking-tight whitespace-nowrap">
-                {item.addOn && "+"}${item.amount}{" "}
+                ${item.amount}{" "}
                 <span className="font-sans text-sm font-medium text-muted">{item.qualifier}</span>
               </dd>
             </div>
