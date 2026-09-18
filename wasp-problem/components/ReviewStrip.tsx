@@ -82,7 +82,7 @@ export function ReviewStrip({ reviews }: { reviews: readonly Review[] }) {
             className="card flex w-[85%] shrink-0 snap-start flex-col px-6 py-6 sm:w-[calc(50%-0.5rem)] sm:px-8 sm:py-7 lg:w-[calc(33.333%-0.667rem)]"
           >
             {review.rating != null && <Stars rating={review.rating} />}
-            <blockquote className="mt-4 text-lg leading-relaxed">
+            <blockquote className="mt-4 line-clamp-5 text-lg leading-relaxed">
               &ldquo;{review.quote}&rdquo;
             </blockquote>
             <div className="mt-4 pt-1">
