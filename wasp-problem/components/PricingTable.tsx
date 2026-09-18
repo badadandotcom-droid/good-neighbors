@@ -21,12 +21,17 @@ export function PricingTable() {
             >
               <dt className="text-base font-semibold">
                 {item.label}
-                {item.note && (
-                  <span className="mt-1 block text-sm leading-snug font-medium text-muted">{item.note}</span>
-                )}
+                {item.note?.map((line, i) => (
+                  <span
+                    key={line}
+                    className={`block text-sm leading-snug font-medium text-muted ${i === 0 ? "mt-1" : i === 1 ? "mt-2" : ""}`}
+                  >
+                    {line}
+                  </span>
+                ))}
               </dt>
               <dd className="shrink-0 font-display text-xl font-extrabold tracking-tight whitespace-nowrap">
-                ${item.amount}{" "}
+                {item.addOn && "+"}${item.amount}{" "}
                 <span className="font-sans text-sm font-medium text-muted">{item.qualifier}</span>
               </dd>
             </div>

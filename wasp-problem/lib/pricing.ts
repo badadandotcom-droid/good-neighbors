@@ -3,8 +3,10 @@ export type PriceLineItem = {
   label: string;
   amount: number;
   qualifier: string;
-  /** One short supporting line under the label, for the cases the headline figure doesn't cover. */
-  note?: string;
+  /** Shown as "+$65" rather than "$65": an add-on to the service price, not a price on its own. */
+  addOn?: boolean;
+  /** Supporting lines under the label, for the cases the headline figure doesn't cover. Each string is its own line; the first stands apart from the rest. */
+  note?: readonly string[];
 };
 
 export const PRICING: readonly PriceLineItem[] = [
@@ -13,10 +15,15 @@ export const PRICING: readonly PriceLineItem[] = [
   { id: "additional-nest", label: "Each additional nest", amount: 80, qualifier: "+ HST" },
   {
     id: "ladder-fee",
-    label: "Nest height 10–35 ft",
+    label: "Ladder service",
     amount: 65,
+    addOn: true,
     qualifier: "+ HST",
-    note: "Nests under 10 ft are included. Over 35 ft: $150 + HST ladder fee.",
+    note: [
+      "For nests or entry points 10–35 ft high.",
+      "Under 10 ft: included in your service price.",
+      "Over 35 ft: quoted separately.",
+    ],
   },
 ] as const;
 
