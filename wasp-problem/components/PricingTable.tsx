@@ -24,7 +24,7 @@ export function PricingTable() {
                 {item.note?.map((line, i) => (
                   <span
                     key={line}
-                    className={`block text-sm leading-snug font-medium text-muted ${i === 0 ? "mt-1" : i === 1 ? "mt-2" : ""}`}
+                    className={`block text-xs leading-snug font-medium text-muted italic ${i === 0 ? "mt-1" : i === 1 ? "mt-1.5" : ""}`}
                   >
                     {line}
                   </span>
