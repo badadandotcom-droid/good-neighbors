@@ -10,15 +10,15 @@ export type PriceLineItem = {
 };
 
 export const PRICING: readonly PriceLineItem[] = [
-  { id: "visible-nest", label: "Visible / exposed nest", amount: 180, qualifier: "+ HST" },
-  { id: "hidden-nest", label: "Hidden nest", amount: 220, qualifier: "+ HST" },
-  { id: "additional-nest", label: "Each additional nest", amount: 80, addOn: true, qualifier: "+ HST" },
+  { id: "visible-nest", label: "Visible / exposed nest", amount: 180, qualifier: "" },
+  { id: "hidden-nest", label: "Hidden nest", amount: 220, qualifier: "" },
+  { id: "additional-nest", label: "Each additional nest", amount: 80, addOn: true, qualifier: "" },
   {
     id: "ladder-fee",
     label: "Ladder fees",
     amount: 65,
     addOn: true,
-    qualifier: "+ HST",
+    qualifier: "",
     note: [
       "For nests or entry points 10–35 ft high.",
       "Under 10 ft: included in your service price.",

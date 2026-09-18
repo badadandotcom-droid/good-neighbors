@@ -92,18 +92,18 @@ export const WHAT_WE_HANDLE = [
   {
     // Scope, not a job history: no list of building types, so nobody wonders whether theirs is on it.
     title: "Commercial & Institutional",
-    body: "Any property, quoted per building.",
+    body: "Professional nest treatment for businesses and institutions. Quoted per building.",
   },
 ] as const;
 
 export const WHAT_WE_HANDLE_SCOPE_NOTE =
-  "We focus on wasp, hornet and carpenter bee nests — not general pest control or wildlife removal.";
+  "Wasp, hornet and carpenter bee specialists.";
 
 /** Homepage-specific FAQ set — replaces the appended-BASE_FAQS pattern city pages still use, since the homepage needs pricing/guarantee-aware answers. */
 export const HOMEPAGE_FAQS = [
   {
     q: "Can you help if I don't see the nest?",
-    a: "Yes. Many nests are hidden inside a soffit, wall void, or other opening — you don't need to see the nest itself, just where wasps are entering and leaving. That's treated as a hidden nest ($220 + HST).",
+    a: "Yes. Many nests are hidden inside a soffit, wall void, or other opening — you don't need to see the nest itself, just where wasps are entering and leaving. That's treated as a hidden nest ($220).",
   },
   {
     q: "Do you take the nest away?",
@@ -132,7 +132,7 @@ export const HOMEPAGE_FAQS = [
   },
   {
     q: "What affects the price?",
-    a: "Price depends on whether the nest is visible ($180 + HST) or hidden ($220 + HST), whether more than one nest needs treatment (+$80 + HST each), and how high the nest or entry point is — under 10 ft is included in your service price, 10–35 ft adds a $65 + HST ladder fee, and over 35 ft is quoted separately.",
+    a: "Price depends on whether the nest is visible ($180) or hidden ($220), whether more than one nest needs treatment (+$80 each), and how high the nest or entry point is — under 10 ft is included in your service price, 10–35 ft adds a $65 ladder fee, and over 35 ft is quoted separately.",
   },
   {
     q: "How quickly will the wasps be gone?",
@@ -140,6 +140,6 @@ export const HOMEPAGE_FAQS = [
   },
   {
     q: "What does the service guarantee cover?",
-    a: "If wasps return to the nest we treated within 90 days, we come back and deal with it at no additional charge. It covers the nest we treated, not a new or unrelated nest elsewhere on the property.",
+    a: "If activity at the treated nest isn't decreasing as expected, or returns within 90 days of treatment, we'll return at no additional charge. It covers the nest we treated, not a new or unrelated nest elsewhere on the property.",
   },
 ] as const;
