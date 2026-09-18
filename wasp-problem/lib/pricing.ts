@@ -9,7 +9,7 @@ export const PRICING: readonly PriceLineItem[] = [
   { id: "visible-nest", label: "Visible / exposed nest", amount: 180, qualifier: "+ HST" },
   { id: "hidden-nest", label: "Hidden nest", amount: 220, qualifier: "+ HST" },
   { id: "additional-nest", label: "Each additional nest", amount: 80, qualifier: "+ HST" },
-  { id: "ladder-fee", label: "Ladder access (under 35 feet)", amount: 65, qualifier: "+ HST" },
+  { id: "ladder-fee", label: "Ladder fee (under 35 feet)", amount: 65, qualifier: "+ HST" },
 ] as const;
 
 export const NEST_TYPE_EXPLANATION = {

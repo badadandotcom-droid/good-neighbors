@@ -93,7 +93,7 @@ export const HOMEPAGE_FAQS = [
   },
   {
     q: "What affects the price?",
-    a: "Price depends on whether the nest is visible ($180 + HST) or hidden ($220 + HST), whether more than one nest needs treatment (+$80 + HST each), and whether ladder access is needed (+$65 + HST for ladder access under 35 feet).",
+    a: "Price depends on whether the nest is visible ($180 + HST) or hidden ($220 + HST), whether more than one nest needs treatment (+$80 + HST each), and whether a ladder is required (+$65 + HST, under 35 feet).",
   },
   {
     q: "How quickly will the wasps be gone?",
