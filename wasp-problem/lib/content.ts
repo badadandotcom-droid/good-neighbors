@@ -38,7 +38,7 @@ export const BASE_FAQS = [
   },
   {
     q: "Do you take the nest away?",
-    a: "Yes. When there's a visible nest, we take it down and take it with us when we're done. A hidden nest inside a wall or soffit can't be pulled out, so we treat it instead.",
+    a: "Yes. When there's a visible nest, we take it down and take it with us when we're done. A hidden nest inside a wall or soffit is treated in place.",
   },
   {
     q: "Do I need to be home?",
@@ -93,7 +93,7 @@ export const HOMEPAGE_FAQS = [
   },
   {
     q: "Do you take the nest away?",
-    a: "Yes. When there's a visible nest, we take it down and take it with us when we're done. A hidden nest inside a wall or soffit can't be pulled out, so we treat it instead.",
+    a: "Yes. When there's a visible nest, we take it down and take it with us when we're done. A hidden nest inside a wall or soffit is treated in place.",
   },
   {
     q: "Do I need to be home?",
