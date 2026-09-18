@@ -15,7 +15,7 @@ export const PRICING: readonly PriceLineItem[] = [
   { id: "additional-nest", label: "Each additional nest", amount: 80, addOn: true, qualifier: "+ HST" },
   {
     id: "ladder-fee",
-    label: "Ladder service",
+    label: "Ladder fees",
     amount: 65,
     addOn: true,
     qualifier: "+ HST",

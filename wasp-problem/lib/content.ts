@@ -114,7 +114,7 @@ export const HOMEPAGE_FAQS = [
   },
   {
     q: "What affects the price?",
-    a: "Price depends on whether the nest is visible ($180 + HST) or hidden ($220 + HST), whether more than one nest needs treatment (+$80 + HST each), and how high the nest or entry point is — under 10 ft is included in your service price, 10–35 ft adds $65 + HST for ladder service, and over 35 ft is quoted separately.",
+    a: "Price depends on whether the nest is visible ($180 + HST) or hidden ($220 + HST), whether more than one nest needs treatment (+$80 + HST each), and how high the nest or entry point is — under 10 ft is included in your service price, 10–35 ft adds a $65 + HST ladder fee, and over 35 ft is quoted separately.",
   },
   {
     q: "How quickly will the wasps be gone?",
