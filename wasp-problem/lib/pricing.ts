@@ -2,6 +2,8 @@ export type PriceLineItem = {
   id: string;
   label: string;
   amount: number;
+  /** True for the rows that stack on top of a base price; shown as "+$80" so the table reads "pick a base, add what applies". */
+  addOn?: boolean;
   qualifier: string;
   /** Supporting lines under the label, for the cases the headline figure doesn't cover. Each string is its own line; the first stands apart from the rest. */
   note?: readonly string[];
@@ -10,11 +12,12 @@ export type PriceLineItem = {
 export const PRICING: readonly PriceLineItem[] = [
   { id: "visible-nest", label: "Visible / exposed nest", amount: 180, qualifier: "+ HST" },
   { id: "hidden-nest", label: "Hidden nest", amount: 220, qualifier: "+ HST" },
-  { id: "additional-nest", label: "Each additional nest", amount: 80, qualifier: "+ HST" },
+  { id: "additional-nest", label: "Each additional nest", amount: 80, addOn: true, qualifier: "+ HST" },
   {
     id: "ladder-fee",
     label: "Ladder service",
     amount: 65,
+    addOn: true,
     qualifier: "+ HST",
     note: [
       "For nests or entry points 10–35 ft high.",
