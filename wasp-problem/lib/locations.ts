@@ -75,6 +75,10 @@ export function locationMetadata(location: CityLocation): Metadata {
   const url = new URL(location.href, BRAND.url).toString();
   const ogTitle = `${location.metaTitle} | ${BRAND.name}`;
 
+  // The opengraph-image file convention only covers its own route segment (the
+  // homepage); city pages need the same brand card wired in explicitly or a
+  // shared link gets no preview at all.
+  const shareImage = { url: "/opengraph-image.png", width: 1200, height: 630, alt: BRAND.name };
   return {
     title: location.metaTitle,
     description: location.metaDescription,
@@ -86,11 +90,13 @@ export function locationMetadata(location: CityLocation): Metadata {
       siteName: BRAND.name,
       type: "website",
       locale: "en_CA",
+      images: [shareImage],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title: ogTitle,
       description: location.metaDescription,
+      images: [shareImage.url],
     },
   };
 }

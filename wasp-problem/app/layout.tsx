@@ -7,6 +7,7 @@ import { PhoneLink } from "@/components/PhoneLink";
 import { TextLink } from "@/components/TextLink";
 import { StickyCallBar } from "@/components/StickyCallBar";
 import { BRAND, GA_MEASUREMENT_ID, PHONE_LOCAL, PHONE_TOLLFREE, SERVICE_AREAS } from "@/lib/site";
+import { PRICING } from "@/lib/pricing";
 
 /** Sign face — the heavy condensed grotesque matching the lawn-sign lettering. Used only for the "WASP PROBLEM?" lockup. */
 const anton = Anton({
@@ -61,6 +62,7 @@ export const viewport: Viewport = {
 };
 
 function localBusinessJsonLd() {
+  const amounts = PRICING.map((item) => item.amount);
   return {
     "@context": "https://schema.org",
     "@type": "PestControl",
@@ -68,6 +70,7 @@ function localBusinessJsonLd() {
     description: BRAND.description,
     url: BRAND.url,
     telephone: PHONE_TOLLFREE.href.replace("tel:", ""),
+    priceRange: `$${Math.min(...amounts)}-$${Math.max(...amounts)}`,
     areaServed: [
       { "@type": "AdministrativeArea", name: "Greater Toronto Area" },
       ...SERVICE_AREAS.map((city) => ({ "@type": "City", name: city })),
