@@ -45,6 +45,10 @@ export const BASE_FAQS = [
     a: "No. As long as we can safely reach the nest, you don't need to be there.",
   },
   {
+    q: "When can I reach you?",
+    a: "Text or call any time. We reply as soon as we're free, usually within the hour during the day.",
+  },
+  {
     q: "Can I book entirely by text?",
     a: "Yes. Text 416-700-4259 with your name, service address and a brief description of the problem. We'll discuss pricing and availability by text—no phone call required.",
   },
@@ -103,6 +107,10 @@ export const HOMEPAGE_FAQS = [
   {
     q: "Do I need to be home?",
     a: "No. As long as we can safely reach the nest, you don't need to be there.",
+  },
+  {
+    q: "When can I reach you?",
+    a: "Text or call any time. We reply as soon as we're free, usually within the hour during the day.",
   },
   {
     q: "Can I book entirely by text?",
