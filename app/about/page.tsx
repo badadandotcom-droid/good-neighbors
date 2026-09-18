@@ -50,8 +50,12 @@ export default function AboutPage() {
             Wildlife removal for your home.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-ink-700 text-pretty">
-            Good Neighbors provides humane raccoon, squirrel, bat and bird removal for homeowners in Toronto,
-            York Region, Durham Region and Peel Region.
+            Good Neighbors Wildlife Inc. was founded by Duane Lewis to provide humane wildlife removal for
+            homeowners in Toronto &amp; the GTA.
+          </p>
+          <p className="mt-4 text-lg leading-relaxed text-ink-700 text-pretty">
+            Our approach is straightforward: understand the problem, explain the price before work begins, and
+            handle the situation with care for your home and the animal.
           </p>
         </Container>
       </section>

@@ -2,7 +2,6 @@ import Image from "next/image";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { PhoneLink } from "@/components/shared/PhoneLink";
 import { Container } from "@/components/shared/Container";
-import { SameDayBadge } from "@/components/shared/SameDayBadge";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { getHeroHeadline, getPhone, getPositioningLine } from "@/lib/config/resolvers";
 import { ALWAYS_ON_CALL, PRIMARY_CTA_LABEL } from "@/lib/config/site";
@@ -21,7 +20,10 @@ export function Hero({ market }: { market?: Market }) {
 
       <Container className="relative grid grid-cols-1 items-center gap-6 py-8 sm:gap-12 sm:py-20 lg:grid-cols-12 lg:gap-6 lg:py-16">
         <div className="lg:col-span-7">
-          <SameDayBadge market={market} />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-pine-100 bg-pine-50 px-3 py-1 text-xs font-medium tracking-wide text-pine-700 uppercase">
+            <span className="h-1.5 w-1.5 rounded-full bg-pine-500" aria-hidden="true" />
+            Serving Toronto &amp; the GTA
+          </span>
 
           <h1 className="mt-4 max-w-xl text-balance font-display text-[2.25rem] leading-[1.04] text-charcoal sm:mt-6 sm:text-6xl lg:text-[4.6rem]">
             {getHeroHeadline(market)}
@@ -33,11 +35,15 @@ export function Hero({ market }: { market?: Market }) {
             <p className="mt-2 text-sm text-stone-500">{ALWAYS_ON_CALL.heroLabel}</p>
           )}
 
-          <p className="mt-4 hidden max-w-md text-lg leading-relaxed text-ink-700 text-pretty sm:block sm:mt-6">
-            One call brings a trained technician to your door to handle it carefully and humanely.
+          <p className="mt-4 max-w-md text-base leading-relaxed text-ink-700 text-pretty sm:mt-6 sm:text-lg">
+            Usually, we can solve the wildlife problem entirely from outside without needing to enter your home.
           </p>
 
-          <div className="mt-9 hidden gap-4 sm:flex sm:flex-row sm:items-center">
+          <p className="mt-2 max-w-md text-sm leading-relaxed text-ink-700 sm:mt-3 sm:text-base">
+            We explain the price before any work begins.
+          </p>
+
+          <div className="mt-7 hidden gap-4 sm:mt-9 sm:flex sm:flex-row sm:items-center">
             <CTAButton href="/contact" size="lg" event="cta_get_help_now" eventMeta={{ location: "hero" }}>
               {PRIMARY_CTA_LABEL}
             </CTAButton>

@@ -129,6 +129,12 @@ add placeholder versions of these; add them for real once they exist. The
 component system has no dedicated "testimonial" or "review" component for
 exactly this reason.
 
+**"$5 million in liability insurance · Background-checked technicians" was
+briefly live on the homepage and has been removed.** Neither is in place
+yet. Do not restore them, and do not substitute softer wording ("fully
+insured", "vetted technicians") — the owner will confirm explicitly when
+the insurance is active and the background checks are done.
+
 ## Markets — `lib/data/markets.ts`
 
 The eight markets included (Toronto, York Region, Durham Region, Peel

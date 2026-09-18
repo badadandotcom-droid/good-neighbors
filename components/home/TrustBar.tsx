@@ -45,9 +45,6 @@ export function TrustBar({ market }: { market?: Market }) {
               </div>
             ))}
           </div>
-          <p className="mt-6 text-xs text-stone-400 sm:pl-7">
-            $5 million in liability insurance &middot; Background-checked technicians
-          </p>
         </div>
       </Container>
     </section>

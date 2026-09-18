@@ -41,6 +41,11 @@ export const FAQ_ITEMS: FaqItem[] = [
       "Leave the wall alone — cutting into it yourself can make the situation harder to resolve. Let us know which wall and when the noise happens, and we'll take it from there.",
   },
   {
+    question: "Will you need to come inside my home?",
+    answer:
+      "Usually, we can solve the wildlife problem entirely from outside without needing to enter your home. Some situations require access inside; your technician will explain what is needed.",
+  },
+  {
     question: "Can I send you a photo?",
     answer:
       "If you have photos, let us know when you contact us. We'll confirm how to send them. Only take photos from a safe place on the ground.",
