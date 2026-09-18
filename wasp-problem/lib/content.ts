@@ -41,6 +41,11 @@ export const BASE_FAQS = [
     a: "Yes. When there's a visible nest, we take it down and take it with us when we're done. A hidden nest inside a wall or soffit is usually treated in place. If you want it taken out, that means opening up the wall — we do that too, at a separately quoted cost.",
   },
   {
+    // Describes practice, never claims the product is "safe": Canadian pesticide advertising rules don't allow safety claims, and the honest version reads better anyway.
+    q: "What about my kids and pets?",
+    a: "We use professional, Health Canada-registered products and apply them according to the label. For a hidden nest the treatment is targeted: a small amount of product goes directly into the nest entrance or the wall, soffit or roof void where the colony is, not sprayed across your home or yard. Keep children and pets away from the immediate treatment area while we work and until any dust has settled. Your technician will tell you if your job needs anything more.",
+  },
+  {
     q: "Do I need to be home?",
     a: "No. As long as we can safely reach the nest, you don't need to be there.",
   },
@@ -103,6 +108,11 @@ export const HOMEPAGE_FAQS = [
   {
     q: "Do you take the nest away?",
     a: "Yes. When there's a visible nest, we take it down and take it with us when we're done. A hidden nest inside a wall or soffit is usually treated in place. If you want it taken out, that means opening up the wall — we do that too, at a separately quoted cost.",
+  },
+  {
+    // Describes practice, never claims the product is "safe": Canadian pesticide advertising rules don't allow safety claims, and the honest version reads better anyway.
+    q: "What about my kids and pets?",
+    a: "We use professional, Health Canada-registered products and apply them according to the label. For a hidden nest the treatment is targeted: a small amount of product goes directly into the nest entrance or the wall, soffit or roof void where the colony is, not sprayed across your home or yard. Keep children and pets away from the immediate treatment area while we work and until any dust has settled. Your technician will tell you if your job needs anything more.",
   },
   {
     q: "Do I need to be home?",
