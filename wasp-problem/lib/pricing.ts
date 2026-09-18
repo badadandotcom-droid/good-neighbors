@@ -15,9 +15,9 @@ export const PRICING: readonly PriceLineItem[] = [
     label: "Ladder fees",
     amount: 75,
     note: [
-      "For nests or entry points 10–35 ft high.",
+      "For nests or entry points 10–25 ft high.",
       "Under 10 ft: included in your service price.",
-      "Over 35 ft: quoted separately.",
+      "Over 25 ft: quoted separately.",
     ],
   },
 ] as const;
