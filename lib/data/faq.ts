@@ -44,6 +44,7 @@ export const FAQ_ITEMS: FaqItem[] = [
     question: "Will you need to come inside my home?",
     answer:
       "Usually, we can solve the wildlife problem entirely from outside without needing to enter your home. Some situations require access inside; your technician will explain what is needed.",
+    featured: true,
   },
   {
     question: "Can I send you a photo?",
