@@ -17,30 +17,28 @@ import type { Market, PhoneConfig, SameDayServiceConfig } from "@/lib/types";
 
 export const BRAND = {
   name: "Good Neighbors",
-  legalName: "Good Neighbors Wildlife Services", // PLACEHOLDER — confirm registered legal entity name
+  legalName: "Good Neighbors Wildlife Inc.", // Confirmed registered legal entity name
   tagline: "Humane. Local. Same-Day Service.",
   taglineFallback: "Humane. Local. Fast Response.",
   foundingRegion: "Southern Ontario, Canada",
   description:
-    "Good Neighbors provides humane, professional wildlife removal for homes across Southern Ontario, with same-day service available for requests received before 4 PM.",
-  url: "https://www.goodneighbors.example", // PLACEHOLDER — production domain not yet assigned
+    "Good Neighbors provides humane raccoon, squirrel, bat and bird removal for homeowners in Toronto, York Region, Durham Region and Peel Region.",
+  url: "https://www.goodneighborswildlife.ca",
 } as const;
 
 /**
- * Default brand phone line. Individual markets may override this with a
- * local/tracking number via `market.phone`. Numbers use the North American
- * 555 exchange, which is reserved for fictional use and cannot be dialed —
- * this keeps the placeholder unmistakable to anyone editing the codebase
- * while still rendering like a normal phone number in the UI.
+ * Default brand phone line — the single GTA number covering the whole
+ * active launch territory for now. Individual markets may override this
+ * with their own local/tracking number later via `market.phone`.
  */
 export const DEFAULT_PHONE: PhoneConfig = {
-  display: "(416) 555-0142",
-  href: "tel:+14165550142",
-  isPlaceholder: true,
+  display: "416-900-WILD (9453)",
+  href: "tel:+14169009453",
+  isPlaceholder: false,
 };
 
 export const CONTACT = {
-  email: "hello@goodneighbors.example", // PLACEHOLDER — uses the IANA-reserved .example TLD
+  email: "hello@goodneighborswildlife.ca",
   // No physical address is published yet. Good Neighbors is presented as a
   // service-area business rather than a storefront; add a real address
   // here (and to the LocalBusiness schema in lib/seo.ts) only once one exists.
@@ -82,9 +80,33 @@ export const DEFAULT_SAME_DAY_SERVICE: SameDayServiceConfig = {
     "We respond quickly to every request. Current availability will be confirmed when you contact us.",
 };
 
+/**
+ * ----------------------------------------------------------------------------
+ * ALWAYS-ON-CALL LINE.
+ * ----------------------------------------------------------------------------
+ * "Calls answered 24/7" means the phone is answered around the clock — it
+ * does NOT mean technicians provide 24-hour on-site dispatch, overnight
+ * visits, or instant form replies. Same-day *visit* availability is a
+ * separate promise (see DEFAULT_SAME_DAY_SERVICE) and stays subject to its
+ * own toggle regardless of this flag. `enabled: true` reflects the client's
+ * explicit confirmation that phone coverage is actually staffed around the
+ * clock — do not flip this back off without an equally explicit instruction.
+ */
+export const ALWAYS_ON_CALL = {
+  enabled: true,
+  /** Shown directly under the homepage positioning line when enabled. */
+  heroLabel: "Calls answered 24/7.",
+  /** Replaces CONTACT.hoursNote on the Contact page when enabled. */
+  contactLabel: "Calls answered 24 hours a day, 7 days a week.",
+};
+
 /** Placeholder for future analytics/tracking wiring — see lib/analytics.ts */
 export const ANALYTICS = {
-  gaMeasurementId: null as string | null, // PLACEHOLDER — GA4 measurement id
+  /**
+   * Good Neighbors' own GA4 property. Do not replace this with the Wasp
+   * Problem measurement id — that is a different business sharing this repo.
+   */
+  gaMeasurementId: "G-MLBBT02NEC" as string | null,
   gtmContainerId: null as string | null, // PLACEHOLDER — GTM container id
   callRailScriptId: null as string | null, // PLACEHOLDER — CallRail swap script id
 } as const;

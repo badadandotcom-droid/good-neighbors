@@ -2,35 +2,50 @@
 
 /*
  * ============================================================================
- * GOOD NEIGHBORS DESIGN TOKENS
+ * GOOD NEIGHBORS DESIGN TOKENS — V2.1 (approved brand palette)
  * ============================================================================
- * A warm, architectural palette: bone/stone neutrals, a near-black ink for
- * text, and a single deep natural green as the brand's confident color —
- * used deliberately, not everywhere. A muted clay accent is reserved for
- * small emphasis moments only. This is a fixed light palette by design —
- * a brand-driven marketing site, not an app UI — so no dark-mode variant.
+ * Anchored to four approved brand values — forest green, warm cream, an
+ * ink near-black, and a supporting neutral — with every surrounding ramp
+ * step re-derived from those anchors so existing contrast relationships
+ * hold. `wood` is kept as a token family (nothing that references it needs
+ * to change) but its values now alias directly onto the supporting-neutral
+ * ramp rather than a separate decorative brown, per brand direction. Brass
+ * stays a restrained accent for small premium moments — a rule, a corner
+ * mark, a badge — never a fill. Clay stays strictly functional (form
+ * errors, urgency) so it never competes with brass for meaning. Fixed
+ * light palette by design — a brand-driven marketing site, not an app UI.
  * ============================================================================
  */
 @theme {
-  --color-bone: #f7f3ea;
-  --color-bone-50: #fbf9f4;
-  --color-bone-100: #f1ebdd;
+  --color-bone: #f3efe3;
+  --color-bone-50: #f7f5ed;
+  --color-bone-100: #ede7d6;
 
-  --color-stone-200: #e8e1d2;
-  --color-stone-300: #d9cfba;
-  --color-stone-400: #b8ab91;
-  --color-stone-500: #948569;
+  --color-stone-200: #e7e4db;
+  --color-stone-300: #d8d2c3;
+  --color-stone-400: #b7ae9a;
+  --color-stone-500: #938872;
 
-  --color-ink: #24231f;
-  --color-ink-700: #3a3833;
-  --color-charcoal: #17160f;
+  --color-ink: #242626;
+  --color-ink-700: #3a3b3a;
+  --color-charcoal: #171916;
 
-  --color-pine-50: #eaf0e7;
-  --color-pine-100: #d3e0cd;
-  --color-pine-400: #3f6b47;
-  --color-pine-500: #2c5137;
-  --color-pine-600: #1f3d2b;
-  --color-pine-700: #162e20;
+  --color-pine-50: #e2f0e3;
+  --color-pine-100: #cbe0c9;
+  --color-pine-400: #376b43;
+  --color-pine-500: #245133;
+  --color-pine-600: #173d27;
+  --color-pine-700: #0e2e1c;
+
+  /* Aliased onto the supporting-neutral ramp (see header note) rather than a separate brown family. */
+  --color-wood-100: #e7e4db;
+  --color-wood-300: #d8d2c3;
+  --color-wood-500: #b7ae9a;
+  --color-wood-700: #938872;
+
+  --color-brass-300: #cbab6f;
+  --color-brass-400: #b3894c;
+  --color-brass-600: #7d5f32;
 
   --color-clay-100: #f1e2d2;
   --color-clay-400: #b5713b;
@@ -41,6 +56,7 @@
 
   --shadow-card: 0 1px 2px rgba(23, 22, 15, 0.04), 0 8px 24px -12px rgba(23, 22, 15, 0.18);
   --shadow-lifted: 0 4px 8px rgba(23, 22, 15, 0.06), 0 24px 48px -20px rgba(23, 22, 15, 0.28);
+  --shadow-deep: 0 12px 16px -6px rgba(23, 22, 15, 0.12), 0 32px 64px -24px rgba(23, 22, 15, 0.35);
 
   --animate-fade-up: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
 
@@ -109,5 +125,78 @@
   }
   .text-pretty {
     text-wrap: pretty;
+  }
+
+  /*
+   * Subtle grain, used sparingly on dark sections and photo/illustration
+   * panels for tactile depth instead of flat color fields. Render as an
+   * absolutely-positioned sibling (`<div class="grain-overlay" />`) inside a
+   * `relative` parent — opacity lives in the SVG itself so it layers
+   * correctly over any background.
+   */
+  .grain-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    opacity: 0.5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /*
+   * Fine architectural-drawing grid, layered under the illustration mark on
+   * photo placeholders so the panel reads as a structured plan/plate rather
+   * than an empty flat color field. Render as an absolutely-positioned
+   * sibling (`<div class="blueprint-grid" />`).
+   */
+  .blueprint-grid {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    background-image:
+      repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(0deg, currentColor 0 1px, transparent 1px 32px);
+    background-size: 32px 32px;
+    -webkit-mask-image: radial-gradient(120% 120% at 50% 40%, black 20%, transparent 85%);
+    mask-image: radial-gradient(120% 120% at 50% 40%, black 20%, transparent 85%);
+  }
+
+  /* Corner-bracket motif — ties photography and illustration panels together as "specimen plate" framing. */
+  .corner-marks {
+    position: absolute;
+    inset: 14px;
+    pointer-events: none;
+  }
+  .corner-marks span {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 1px solid currentColor;
+    opacity: 0.55;
+  }
+  .corner-marks span:nth-child(1) {
+    top: 0;
+    left: 0;
+    border-right: 0;
+    border-bottom: 0;
+  }
+  .corner-marks span:nth-child(2) {
+    top: 0;
+    right: 0;
+    border-left: 0;
+    border-bottom: 0;
+  }
+  .corner-marks span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    border-right: 0;
+    border-top: 0;
+  }
+  .corner-marks span:nth-child(4) {
+    bottom: 0;
+    right: 0;
+    border-left: 0;
+    border-top: 0;
   }
 }
