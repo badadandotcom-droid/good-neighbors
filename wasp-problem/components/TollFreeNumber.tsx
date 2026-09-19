@@ -24,8 +24,8 @@ export function TollFreeNumber() {
         {prefix}
         <span className="relative inline-block">
           {letters}
-          <span className="absolute inset-x-0 top-full -mt-[0.1em] text-center text-[0.45em] font-bold tracking-[0.18em] opacity-75">
-            {PHONE_TOLLFREE.numeric.slice(-4)}
+          <span className="absolute inset-x-0 top-full -mt-[0.24em] text-center text-[0.72em] font-bold tracking-tight opacity-75">
+            ({PHONE_TOLLFREE.numeric.slice(-4)})
           </span>
         </span>
       </span>
