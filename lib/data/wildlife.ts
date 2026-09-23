@@ -7,9 +7,9 @@ import type { WildlifeEntry } from "@/lib/types";
  * both "raccoon in attic" and "noise in my attic" searches — without
  * maintaining two separate page systems.
  *
- * Entry-point inspection, exclusion, and preventative sealing live on
- * /property-care as supporting information, not as their own funnel here —
- * see section 27/28 of the brief. Do not promote them into this list.
+ * Entry-point work is mentioned only as part of solving the current animal
+ * problem (see each entry's `approach`), never as a separate prevention
+ * product or its own page. Do not promote it into this list.
  */
 export const WILDLIFE: WildlifeEntry[] = [
   {
@@ -19,7 +19,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     singular: "Raccoon",
     summary: "Strong, dexterous, and drawn to attics, chimneys, and sheds — especially with young in spring.",
     intro:
-      "Raccoons are among the most common calls we get, particularly in spring when a female looks for a warm, hidden place to raise her young. They're strong enough to tear rooflines and soffits and clever enough to find the weakest point in a house. Once one settles into an attic, it rarely leaves on its own.",
+      "In spring, a female raccoon often looks for a warm, hidden place to raise her young. Raccoons are strong enough to tear rooflines and soffits and clever enough to find the weakest point in a house.",
     commonSigns: [
       "Heavy footsteps or thumping overhead, especially at dusk and dawn",
       "Torn or lifted roofline, fascia, or soffit",
@@ -28,8 +28,9 @@ export const WILDLIFE: WildlifeEntry[] = [
     ],
     commonAreas: ["Attics", "Chimneys", "Soffits", "Sheds and decks"],
     approach:
-      "Raccoon removal is handled with particular care in spring and early summer, when young are often present. Our technicians confirm whether a litter is involved before deciding on next steps, since separating a mother from her young unnecessarily is neither humane nor effective — she'll simply try to get back in.",
+      "We check for young before removal and take care to avoid separating them from their mother.",
     iconId: "raccoon",
+    photoOverride: "/images/raccoon-detail.png",
   },
   {
     slug: "squirrels",
@@ -38,7 +39,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     singular: "Squirrel",
     summary: "Persistent chewers that exploit small gaps in soffits, fascia, and roof edges.",
     intro:
-      "Squirrels don't need much of an opening — a gap the size of a golf ball is enough. Once inside a soffit or attic, they'll often widen the entry point over time and may return to the same spot even after a first attempt to seal it. Activity is usually most noticeable in early morning and late afternoon.",
+      "Squirrels can enter through small gaps around soffits, fascia and roof edges. Once inside a soffit or attic, they'll often widen the entry point over time and may return to the same spot even after a first attempt to seal it. Activity is usually most noticeable in early morning and late afternoon.",
     commonSigns: [
       "Scratching or scampering along walls or ceilings, mainly during the day",
       "Gnaw marks on fascia boards, soffits, or wiring",
@@ -47,27 +48,9 @@ export const WILDLIFE: WildlifeEntry[] = [
     ],
     commonAreas: ["Attics", "Soffits and fascia", "Roof edges", "Wall cavities"],
     approach:
-      "Because squirrels are agile and will often re-enter through a partially repaired opening, our technicians confirm the animal is out — and identify every active entry point — before any exclusion work is discussed.",
+      "We identify where the squirrels are getting in. Once we've confirmed they're out, we secure the entry points to help prevent their return.",
     iconId: "squirrel",
-  },
-  {
-    slug: "skunks",
-    category: "species",
-    name: "Skunks",
-    singular: "Skunk",
-    summary: "Ground-level burrowers, usually found under decks, sheds, or porches rather than in attics.",
-    intro:
-      "Skunks are almost always a ground-level issue — under a deck, shed, porch, or in a gap beneath a foundation — rather than an attic problem. They're not aggressive by nature, but a startled skunk close to a home is understandably unwelcome. Handling them calmly and correctly matters more than with most other species.",
-    commonSigns: [
-      "A skunk odor near a deck, shed, or foundation, even without a direct sighting",
-      "Small, cone-shaped digging in the lawn (a sign skunks are foraging for grubs)",
-      "A visible burrow entrance under a structure",
-      "Sightings at dusk near a specific part of the yard",
-    ],
-    commonAreas: ["Under decks and porches", "Sheds", "Foundation gaps", "Crawlspaces"],
-    approach:
-      "Skunk situations are approached deliberately and quietly, minimizing the chance of the animal feeling cornered. Our technicians assess the burrow location and the safest way to encourage the animal to relocate before any exclusion work begins.",
-    iconId: "skunk",
+    photoOverride: "/images/squirrel-detail.png",
   },
   {
     slug: "birds",
@@ -85,8 +68,9 @@ export const WILDLIFE: WildlifeEntry[] = [
     ],
     commonAreas: ["Dryer and bathroom vents", "Chimneys", "Eaves and soffits", "Gutters"],
     approach:
-      "Nesting birds are handled with attention to timing and any applicable protections for active nests. Our technicians will explain what they find and the appropriate next step for the specific situation.",
+      "We identify the birds and check for eggs or young before work begins. If the nest is protected, we'll explain what can be done and when.",
     iconId: "bird",
+    photoOverride: "/images/bird-detail.png",
   },
   {
     slug: "bats",
@@ -95,7 +79,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     singular: "Bat",
     summary: "Roosting in attics and soffit gaps, requiring a careful, timing-sensitive approach.",
     intro:
-      "Bats typically roost in attics, soffit gaps, or behind loose fascia, entering through openings as small as a fingertip. Because bats are slow to reproduce and protected in many jurisdictions during parts of the year, this is one of the more specialized situations we handle, and timing matters.",
+      "Bats typically roost in attics, soffit gaps, or behind loose fascia, entering through openings as small as a fingertip. Bats are protected wildlife in Ontario. We'll assess the situation and explain the appropriate method and timing for humane removal.",
     commonSigns: [
       "Faint scratching or squeaking in the attic, especially at dusk",
       "Small dark staining around a gap in the roofline (from repeated entry)",
@@ -106,6 +90,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     approach:
       "Bat situations are assessed carefully, including timing considerations tied to local wildlife regulations. Our technicians will walk you through what's involved before any work begins.",
     iconId: "bat",
+    photoOverride: "/images/bat-detail.png",
   },
   {
     slug: "something-in-the-attic",
@@ -133,7 +118,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     singular: "wall",
     summary: "Movement or scratching inside a wall cavity, most active early morning or after dark.",
     intro:
-      "Noise inside a wall is unsettling, and it's genuinely harder to diagnose than an attic — wall cavities are narrow and connect in ways that aren't obvious from inside the house. It's usually a smaller animal that's found its way in through an exterior gap near a utility line, vent, or foundation.",
+      "Hearing scratching or movement inside a wall? Your technician will check for wildlife activity and explain what needs to be done.",
     commonSigns: [
       "Scratching or movement inside a wall, often low or mid-height",
       "Noise concentrated to one wall or corner of a room",

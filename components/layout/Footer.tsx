@@ -19,7 +19,7 @@ export function Footer() {
             {BRAND.name}
           </Link>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-stone-300">
-            {getPositioningLine()} Serving homeowners across {BRAND.foundingRegion}.
+            {getPositioningLine()} Serving homeowners in Toronto, York Region, Durham Region and Peel Region.
           </p>
           <div className="mt-6 flex flex-col gap-2 text-sm">
             <PhoneLink phone={phone} location="footer" className="text-bone-50 hover:text-pine-100" />
@@ -49,16 +49,17 @@ export function Footer() {
           title="Company"
           links={[
             { label: "About", href: "/about" },
-            { label: "Property Care", href: "/property-care" },
             { label: "FAQ", href: "/faq" },
             { label: "Contact", href: "/contact" },
           ]}
         />
       </Container>
 
-      <Container className="flex flex-col gap-3 border-t border-white/10 py-6 text-xs text-stone-400 sm:flex-row sm:items-center sm:justify-between">
+      {/* Extra bottom padding on mobile so the fixed Call/Get Help bar doesn't sit over
+          the copyright and legal links at the very end of the page. */}
+      <Container className="flex flex-col gap-3 border-t border-white/10 pt-6 pb-[calc(5.25rem+env(safe-area-inset-bottom))] text-xs text-stone-400 sm:flex-row sm:items-center sm:justify-between sm:pb-6">
         <p>
-          &copy; {new Date().getFullYear()} {BRAND.legalName}. All rights reserved.
+          &copy; {new Date().getFullYear()} {BRAND.legalName} All rights reserved.
         </p>
         <div className="flex gap-5">
           <Link href="/privacy" className="hover:text-bone-100">
