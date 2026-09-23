@@ -2,8 +2,10 @@ import Script from "next/script";
 import { ANALYTICS } from "@/lib/config/site";
 
 /**
- * Loads gtag.js for the GA4 property in ANALYTICS.gaMeasurementId, or renders
- * nothing when no id is configured.
+ * Loads gtag.js once and configures every Google tag id in ANALYTICS (GA4 and
+ * Google Ads) against that single load. Google's copy-paste snippet for each
+ * product includes its own gtag.js script; pasting both would load the library
+ * twice, so the ids share one loader here instead.
  *
  * Page views are left to gtag's own behaviour: `config` sends one on load, and
  * GA4's enhanced measurement ("page changes based on browser history events")
@@ -12,20 +14,17 @@ import { ANALYTICS } from "@/lib/config/site";
  * count every navigation, so deliberately none of that happens here.
  */
 export function GoogleAnalytics() {
-  const measurementId = ANALYTICS.gaMeasurementId;
-  if (!measurementId) return null;
+  const ids = [ANALYTICS.gaMeasurementId, ANALYTICS.googleAdsId].filter((id): id is string => Boolean(id));
+  if (ids.length === 0) return null;
 
   return (
     <>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
-        strategy="afterInteractive"
-      />
-      <Script id="ga4-init" strategy="afterInteractive">
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${ids[0]}`} strategy="afterInteractive" />
+      <Script id="gtag-init" strategy="afterInteractive">
         {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', '${measurementId}');`}
+${ids.map((id) => `gtag('config', '${id}');`).join("\n")}`}
       </Script>
     </>
   );

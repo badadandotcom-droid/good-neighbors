@@ -43,9 +43,15 @@ independently-toggled promise (`DEFAULT_SAME_DAY_SERVICE`). Do not flip
   property, loaded site-wide by `components/analytics/GoogleAnalytics.tsx`
   from the root layout. Do not swap in `G-2NETZXNWVG` — that belongs to Wasp
   Problem, a separate business sharing this repository.
-- `gtmContainerId` and `callRailScriptId` are still `null`. GA4 is installed
-  and sending; **Google Ads conversion import and CallRail attribution are
-  not set up** and should not be described as working.
+- `googleAdsId` is `AW-18430229184`, configured on the same single gtag.js
+  load as GA4 (not a second copy of Google's snippet). This installs the Ads
+  tag site-wide, which is what Google Ads checks for — **it does not record
+  conversions.** That needs a conversion action created in Google Ads, whose
+  label (`AW-18430229184/xxxx`) then fires on the right event — a form
+  accepted by the server (`form_submit_success`), and/or a phone-link tap
+  (`cta_call`, which is a tap, not a completed call). Not done yet.
+- `gtmContainerId` and `callRailScriptId` are still `null`. **CallRail
+  attribution is not set up** and should not be described as working.
 - Page views are left entirely to gtag: `config` sends one on load, and GA4
   enhanced measurement covers App Router client navigation via History API
   events. Nothing fires `page_view` manually — adding that would double count.
