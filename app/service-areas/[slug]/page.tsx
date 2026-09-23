@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Container } from "@/components/shared/Container";
 import { CTAButton } from "@/components/shared/CTAButton";
-import { PhoneLink } from "@/components/shared/PhoneLink";
 import { SameDayBadge } from "@/components/shared/SameDayBadge";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
 import { Illustration } from "@/components/illustrations/Illustration";
@@ -87,11 +86,26 @@ export default async function MarketPage({ params }: { params: Promise<{ slug: s
             <p className="mt-3 font-display text-xl italic text-pine-600">{getPositioningLine(market)}</p>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">{market.heroBlurb}</p>
 
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <CTAButton href="/contact" size="lg" event="cta_get_help_now" eventMeta={{ location: `market-${market.slug}` }}>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+              <CTAButton
+                href={phone.href}
+                size="lg"
+                event="cta_call"
+                eventMeta={{ location: `market-${market.slug}` }}
+                className="w-full sm:w-auto"
+              >
+                {phone.display}
+              </CTAButton>
+              <CTAButton
+                href="/contact"
+                variant="outline"
+                size="lg"
+                event="cta_get_help_now"
+                eventMeta={{ location: `market-${market.slug}` }}
+                className="w-full font-semibold sm:w-auto"
+              >
                 {PRIMARY_CTA_LABEL}
               </CTAButton>
-              <PhoneLink phone={phone} location={`market-${market.slug}`} className="justify-center text-lg text-ink hover:text-pine-600" />
             </div>
           </div>
           <div className="lg:col-span-5">

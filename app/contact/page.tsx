@@ -2,7 +2,7 @@ import { Container } from "@/components/shared/Container";
 import { GetHelpForm } from "@/components/forms/GetHelpForm";
 import { PhoneLink } from "@/components/shared/PhoneLink";
 import { SameDayBadge } from "@/components/shared/SameDayBadge";
-import { Illustration } from "@/components/illustrations/Illustration";
+import { MailIcon, PhoneIcon } from "@/components/shared/ContactIcons";
 import { getHoursNote, getPhone } from "@/lib/config/resolvers";
 import { CONTACT } from "@/lib/config/site";
 import { pageMetadata } from "@/lib/seo";
@@ -32,11 +32,11 @@ export default function ContactPage() {
 
           <div className="mt-8 flex flex-col gap-4 rounded-sm border border-stone-300 bg-bone-50 p-6">
             <div className="flex items-center gap-3">
-              <Illustration id="phone-call" className="h-5 w-5 shrink-0 text-pine-600" />
+              <PhoneIcon className="h-5 w-5 shrink-0 text-pine-600" />
               <PhoneLink phone={phone} location="contact-sidebar" showIcon={false} className="text-lg text-charcoal" />
             </div>
             <div className="flex items-center gap-3">
-              <Illustration id="mail" className="h-5 w-5 shrink-0 text-pine-600" />
+              <MailIcon className="h-5 w-5 shrink-0 text-pine-600" />
               <a href={`mailto:${CONTACT.email}`} className="text-[15px] text-ink-700 hover:text-charcoal">
                 {CONTACT.email}
               </a>

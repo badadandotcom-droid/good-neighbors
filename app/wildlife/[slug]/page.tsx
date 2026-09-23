@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Container } from "@/components/shared/Container";
 import { CTAButton } from "@/components/shared/CTAButton";
-import { PhoneLink } from "@/components/shared/PhoneLink";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { FinalCTA } from "@/components/home/FinalCTA";
@@ -88,11 +87,26 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
               </h1>
             </div>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">{entry.intro}</p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <CTAButton href="/contact" size="lg" event="cta_get_help_now" eventMeta={{ location: `wildlife-${entry.slug}` }}>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+              <CTAButton
+                href={phone.href}
+                size="lg"
+                event="cta_call"
+                eventMeta={{ location: `wildlife-${entry.slug}` }}
+                className="w-full sm:w-auto"
+              >
+                {phone.display}
+              </CTAButton>
+              <CTAButton
+                href="/contact"
+                variant="outline"
+                size="lg"
+                event="cta_get_help_now"
+                eventMeta={{ location: `wildlife-${entry.slug}` }}
+                className="w-full font-semibold sm:w-auto"
+              >
                 {PRIMARY_CTA_LABEL}
               </CTAButton>
-              <PhoneLink phone={phone} location={`wildlife-${entry.slug}`} className="justify-center text-lg text-ink hover:text-pine-600" />
             </div>
           </div>
           <div className={cn("lg:col-span-5", imageOnLeft && "lg:order-1")}>

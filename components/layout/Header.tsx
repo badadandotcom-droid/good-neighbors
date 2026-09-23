@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Container } from "@/components/shared/Container";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { PhoneLink } from "@/components/shared/PhoneLink";
-import { Illustration } from "@/components/illustrations/Illustration";
+import { PhoneIcon } from "@/components/shared/ContactIcons";
 import { trackEvent } from "@/lib/analytics";
 import { BRAND, NAV_ITEMS, PRIMARY_CTA_LABEL } from "@/lib/config/site";
 import { getPhone } from "@/lib/config/resolvers";
@@ -64,7 +64,7 @@ export function Header() {
             aria-label={`Call ${phone.display}`}
             className="flex h-10 w-10 items-center justify-center rounded-sm bg-pine-600 text-bone-50 transition-colors active:bg-pine-700 md:hidden"
           >
-            <Illustration id="phone-call" className="h-4 w-4" />
+            <PhoneIcon className="h-[18px] w-[18px]" />
           </a>
 
           <button

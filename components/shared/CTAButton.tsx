@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { Illustration } from "@/components/illustrations/Illustration";
+import { PhoneIcon } from "@/components/shared/ContactIcons";
 import { cn } from "@/lib/utils";
 import { trackEvent, type ConversionEvent } from "@/lib/analytics";
 
@@ -75,7 +75,7 @@ export function CTAButton({
   // leads with it so the action reads before the number does.
   const content = (
     <>
-      {isTel && <Illustration id="phone-call" className="h-4 w-4 shrink-0" />}
+      {isTel && <PhoneIcon className="h-[1.1em] w-[1.1em] shrink-0" />}
       {children}
       {!isTel && variant === "primary" && <HoverArrow />}
     </>

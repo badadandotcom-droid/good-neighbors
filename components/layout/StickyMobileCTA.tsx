@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { CTAButton } from "@/components/shared/CTAButton";
-import { Illustration } from "@/components/illustrations/Illustration";
+import { PhoneIcon } from "@/components/shared/ContactIcons";
 import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
 import { getPhone } from "@/lib/config/resolvers";
 import { trackEvent } from "@/lib/analytics";
@@ -29,7 +29,7 @@ export function StickyMobileCTA() {
           onClick={() => trackEvent("cta_call", { location: "sticky-mobile" })}
           className="flex flex-1 items-center justify-center gap-2 rounded-sm bg-pine-600 py-3.5 text-sm font-semibold text-bone-50 transition-colors active:bg-pine-700"
         >
-          <Illustration id="phone-call" className="h-4 w-4 shrink-0" />
+          <PhoneIcon className="h-4 w-4 shrink-0" />
           Call Now
         </a>
         <CTAButton
