@@ -3,9 +3,9 @@
 import { useState, type FormEvent, type ReactNode } from "react";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { getSpeciesEntries } from "@/lib/data/wildlife";
-import { trackEvent } from "@/lib/analytics";
+import { trackAdsConversion, trackEvent } from "@/lib/analytics";
 import { getPhone, getSameDayMessage } from "@/lib/config/resolvers";
-import { BRAND } from "@/lib/config/site";
+import { ANALYTICS, BRAND } from "@/lib/config/site";
 import { PhoneLink } from "@/components/shared/PhoneLink";
 import { cn } from "@/lib/utils";
 
@@ -69,7 +69,12 @@ export function GetHelpForm() {
       }
 
       setStatus("success");
-      trackEvent("form_submit_success");
+      // Count a lead only when the server says it actually sent one. The spam
+      // honeypot also answers ok:true, but without `delivered`.
+      if (result.delivered === true) {
+        trackEvent("form_submit_success");
+        trackAdsConversion(ANALYTICS.googleAdsFormLeadSendTo);
+      }
       form.reset();
     } catch {
       setStatus("error");

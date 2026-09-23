@@ -107,12 +107,10 @@ export const ANALYTICS = {
    * Problem measurement id — that is a different business sharing this repo.
    */
   gaMeasurementId: "G-MLBBT02NEC" as string | null,
-  /**
-   * Google Ads account tag. This only establishes the Ads tag on the site;
-   * recording a conversion additionally needs a conversion label from the Ads
-   * account (see PLACEHOLDERS.md), which isn't configured yet.
-   */
+  /** Good Neighbors Wildlife's own Google Ads account tag (confirmed by the owner). */
   googleAdsId: "AW-18430229184" as string | null,
+  /** "Form lead" conversion action — fired only when the server confirms delivery. */
+  googleAdsFormLeadSendTo: "AW-18430229184/76znCLPM7IIdEMD1m9RE" as string | null,
   gtmContainerId: null as string | null, // PLACEHOLDER — GTM container id
   callRailScriptId: null as string | null, // PLACEHOLDER — CallRail swap script id
 } as const;

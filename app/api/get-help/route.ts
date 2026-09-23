@@ -110,7 +110,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Invalid request body." }, { status: 400 });
   }
 
-  // Honeypot: bots tend to fill every field. Pretend success without processing.
+  // Honeypot: bots tend to fill every field. Pretend success without processing —
+  // but without `delivered`, so the client doesn't count it as a lead or an Ads conversion.
   if (typeof body.company === "string" && body.company.trim().length > 0) {
     return NextResponse.json({ ok: true });
   }
@@ -141,5 +142,5 @@ export async function POST(request: Request) {
     );
   }
 
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({ ok: true, delivered: true });
 }

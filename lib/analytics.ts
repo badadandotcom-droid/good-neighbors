@@ -47,3 +47,20 @@ export function trackEvent(
     console.debug("[analytics]", event, meta);
   }
 }
+
+/**
+ * Reports a Google Ads conversion to the given `send_to` target
+ * (`AW-<account>/<label>`). Rides on the gtag already loaded by
+ * GoogleAnalytics — no separate Ads snippet. Callers own *when* this fires;
+ * for leads that means only after the server confirms delivery. No-ops if
+ * gtag isn't present (e.g. blocked by an ad blocker).
+ */
+export function trackAdsConversion(sendTo: string | null): void {
+  if (!sendTo || typeof window === "undefined") return;
+  const w = window as unknown as {
+    gtag?: (command: string, name: string, params?: Record<string, unknown>) => void;
+  };
+  if (typeof w.gtag === "function") {
+    w.gtag("event", "conversion", { send_to: sendTo });
+  }
+}

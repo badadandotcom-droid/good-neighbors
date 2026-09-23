@@ -45,11 +45,16 @@ independently-toggled promise (`DEFAULT_SAME_DAY_SERVICE`). Do not flip
   Problem, a separate business sharing this repository.
 - `googleAdsId` is `AW-18430229184`, configured on the same single gtag.js
   load as GA4 (not a second copy of Google's snippet). This installs the Ads
-  tag site-wide, which is what Google Ads checks for — **it does not record
-  conversions.** That needs a conversion action created in Google Ads, whose
-  label (`AW-18430229184/xxxx`) then fires on the right event — a form
-  accepted by the server (`form_submit_success`), and/or a phone-link tap
-  (`cta_call`, which is a tap, not a completed call). Not done yet.
+  tag site-wide. Confirmed by the owner as the Good Neighbors Wildlife Ads
+  account.
+- **"Form lead" conversion** (`googleAdsFormLeadSendTo`,
+  `AW-18430229184/76znCLPM7IIdEMD1m9RE`) fires only when `/api/get-help`
+  answers `{ ok: true, delivered: true }` — i.e. Resend accepted the email.
+  Not on page view, not on submit click, not on validation or send failure,
+  and not for the spam honeypot (which answers `ok: true` with no
+  `delivered`). `form_submit_success` in GA4 is gated the same way. No phone
+  tap conversion exists; `cta_call` is a GA4 event only, and a tap is not a
+  completed call.
 - `gtmContainerId` and `callRailScriptId` are still `null`. **CallRail
   attribution is not set up** and should not be described as working.
 - Page views are left entirely to gtag: `config` sends one on load, and GA4
