@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { CTAButton } from "@/components/shared/CTAButton";
-import { PhoneLink } from "@/components/shared/PhoneLink";
 import { Container } from "@/components/shared/Container";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { getHeroHeadline, getPhone, getPositioningLine } from "@/lib/config/resolvers";
@@ -31,10 +30,6 @@ export function Hero({ market }: { market?: Market }) {
 
           <p className="mt-3 font-display text-xl italic text-pine-600 sm:mt-4 sm:text-2xl">{getPositioningLine(market)}</p>
 
-          {ALWAYS_ON_CALL.enabled && (
-            <p className="mt-2 text-sm text-stone-500">{ALWAYS_ON_CALL.heroLabel}</p>
-          )}
-
           <p className="mt-4 max-w-md text-base leading-relaxed text-ink-700 text-pretty sm:mt-6 sm:text-lg">
             Usually, we can solve the wildlife problem entirely from outside without needing to enter your home.
           </p>
@@ -43,16 +38,34 @@ export function Hero({ market }: { market?: Market }) {
             We explain the price before any work begins.
           </p>
 
-          <div className="mt-7 hidden gap-4 sm:mt-9 sm:flex sm:flex-row sm:items-center">
-            <CTAButton href="/contact" size="lg" event="cta_get_help_now" eventMeta={{ location: "hero" }}>
+          {/* Urgent problems get phoned in, so the call is the primary action and carries
+              the number itself — on mobile it sits above the fold rather than only in the
+              sticky bar. */}
+          <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
+            <CTAButton
+              href={phone.href}
+              size="lg"
+              event="cta_call"
+              eventMeta={{ location: "hero" }}
+              className="w-full sm:w-auto"
+            >
+              {phone.display}
+            </CTAButton>
+            <CTAButton
+              href="/contact"
+              variant="outline"
+              size="lg"
+              event="cta_get_help_now"
+              eventMeta={{ location: "hero" }}
+              className="w-full font-semibold sm:w-auto"
+            >
               {PRIMARY_CTA_LABEL}
             </CTAButton>
-            <PhoneLink
-              phone={phone}
-              location="hero"
-              className="justify-center text-lg text-ink hover:text-pine-600 sm:justify-start"
-            />
           </div>
+
+          {ALWAYS_ON_CALL.enabled && (
+            <p className="mt-3 text-sm text-stone-500">{ALWAYS_ON_CALL.heroLabel}</p>
+          )}
         </div>
 
         <div className="relative lg:col-span-5 lg:-mr-6 xl:-mr-16">

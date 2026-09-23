@@ -55,7 +55,9 @@ export function Footer() {
         />
       </Container>
 
-      <Container className="flex flex-col gap-3 border-t border-white/10 py-6 text-xs text-stone-400 sm:flex-row sm:items-center sm:justify-between">
+      {/* Extra bottom padding on mobile so the fixed Call/Get Help bar doesn't sit over
+          the copyright and legal links at the very end of the page. */}
+      <Container className="flex flex-col gap-3 border-t border-white/10 pt-6 pb-[calc(5.25rem+env(safe-area-inset-bottom))] text-xs text-stone-400 sm:flex-row sm:items-center sm:justify-between sm:pb-6">
         <p>
           &copy; {new Date().getFullYear()} {BRAND.legalName} All rights reserved.
         </p>

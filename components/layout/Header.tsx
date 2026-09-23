@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { Container } from "@/components/shared/Container";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { PhoneLink } from "@/components/shared/PhoneLink";
+import { Illustration } from "@/components/illustrations/Illustration";
+import { trackEvent } from "@/lib/analytics";
 import { BRAND, NAV_ITEMS, PRIMARY_CTA_LABEL } from "@/lib/config/site";
 import { getPhone } from "@/lib/config/resolvers";
 import { cn } from "@/lib/utils";
@@ -55,6 +57,16 @@ export function Header() {
             </CTAButton>
           </span>
 
+          {/* Mobile tap-to-call: on a phone the number is otherwise buried in the menu. */}
+          <a
+            href={phone.href}
+            onClick={() => trackEvent("cta_call", { location: "header-mobile" })}
+            aria-label={`Call ${phone.display}`}
+            className="flex h-10 w-10 items-center justify-center rounded-sm bg-pine-600 text-bone-50 transition-colors active:bg-pine-700 md:hidden"
+          >
+            <Illustration id="phone-call" className="h-4 w-4" />
+          </a>
+
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -62,8 +74,7 @@ export function Header() {
             aria-controls="mobile-nav"
             aria-label={open ? "Close menu" : "Open menu"}
             className="flex h-10 w-10 items-center justify-center lg:hidden"
-          >
-            <span className="relative block h-4 w-5">
+          >            <span className="relative block h-4 w-5">
               <span
                 className={cn(
                   "absolute left-0 top-0 h-px w-5 bg-charcoal transition-transform duration-200",
