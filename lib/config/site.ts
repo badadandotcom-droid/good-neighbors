@@ -111,6 +111,8 @@ export const ANALYTICS = {
   googleAdsId: "AW-18430229184" as string | null,
   /** "Form lead" conversion action — fired only when the server confirms delivery. */
   googleAdsFormLeadSendTo: "AW-18430229184/76znCLPM7IIdEMD1m9RE" as string | null,
+  /** Phone-number tap/click conversion — fired for any tel: link click, site-wide. */
+  googleAdsPhoneClickSendTo: "AW-18430229184/JtZ6CMb2mYgdEMD1m9RE" as string | null,
   gtmContainerId: null as string | null, // PLACEHOLDER — GTM container id
   callRailScriptId: null as string | null, // PLACEHOLDER — CallRail swap script id
 } as const;

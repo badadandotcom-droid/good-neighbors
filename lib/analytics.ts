@@ -18,6 +18,7 @@
 export type ConversionEvent =
   | "cta_get_help_now"
   | "cta_call"
+  | "phone_click"
   | "form_start"
   | "form_submit"
   | "form_submit_success"

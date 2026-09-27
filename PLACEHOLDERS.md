@@ -52,9 +52,14 @@ independently-toggled promise (`DEFAULT_SAME_DAY_SERVICE`). Do not flip
   answers `{ ok: true, delivered: true }` — i.e. Resend accepted the email.
   Not on page view, not on submit click, not on validation or send failure,
   and not for the spam honeypot (which answers `ok: true` with no
-  `delivered`). `form_submit_success` in GA4 is gated the same way. No phone
-  tap conversion exists; `cta_call` is a GA4 event only, and a tap is not a
-  completed call.
+  `delivered`). `form_submit_success` in GA4 is gated the same way.
+- **Phone-click conversion** (`googleAdsPhoneClickSendTo`,
+  `AW-18430229184/JtZ6CMb2mYgdEMD1m9RE`) plus a GA4 `phone_click` event fire
+  on any click of an `a[href^="tel:"]` link, via one delegated document
+  listener in `components/analytics/PhoneClickTracker.tsx` — so phone links
+  added later are covered automatically. It never calls preventDefault; the
+  dialer opens normally. A tap is not a completed call: real call
+  conversions (calls from ads / website call forwarding) are separate.
 - `gtmContainerId` and `callRailScriptId` are still `null`. **CallRail
   attribution is not set up** and should not be described as working.
 - Page views are left entirely to gtag: `config` sends one on load, and GA4
