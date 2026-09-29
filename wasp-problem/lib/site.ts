@@ -55,6 +55,14 @@ export const SAME_DAY_SERVICE = {
   disclaimer: "Based on availability. Call or text to confirm for your area.",
 } as const;
 
+/**
+ * Insurance is a real, current policy the owner confirmed. No licence or
+ * certification claim appears anywhere on the site — the licence exam is not
+ * sat until December, so "licensed" and "certified" stay off until it is.
+ */
+/** No trailing period: it sits in a list where no other item carries one. */
+export const INSURANCE = "Fully insured — $5,000,000 liability coverage" as const;
+
 export const GUARANTEE = {
   name: "90-day service guarantee",
   summary:

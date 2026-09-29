@@ -1,5 +1,5 @@
 import { PRICING } from "@/lib/pricing";
-import { GUARANTEE } from "@/lib/site";
+import { GUARANTEE, INSURANCE } from "@/lib/site";
 
 function Check() {
   return (
@@ -18,7 +18,7 @@ function Check() {
   );
 }
 
-/** Three facts already stated elsewhere on the page, surfaced under the hero CTA. Nothing here is a claim the rest of the site doesn't make. */
+/** Facts surfaced under the hero CTA. Nothing here is a claim the rest of the site doesn't make. */
 export function TrustPoints({ tone = "light" }: { tone?: "light" | "dark" }) {
   const text = tone === "dark" ? "text-white/85" : "text-ink";
   const link = "inline-flex min-h-11 -my-3 items-center underline decoration-yellow decoration-2 underline-offset-4";
@@ -30,6 +30,7 @@ export function TrustPoints({ tone = "light" }: { tone?: "light" | "dark" }) {
       {GUARANTEE.name}
     </a>,
     <>Wasps, hornets &amp; carpenter bees</>,
+    <>{INSURANCE}</>,
   ];
 
   return (
