@@ -74,7 +74,7 @@ export function ReviewStrip({ reviews }: { reviews: readonly Review[] }) {
         ref={scroller}
         tabIndex={0}
         aria-label="Customer reviews"
-        className="-mx-5 flex snap-x snap-mandatory items-start gap-4 overflow-x-auto scroll-px-5 px-5 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:-mx-0 sm:scroll-px-0 sm:px-0"
+        className="-mx-5 flex snap-x snap-mandatory items-stretch gap-4 overflow-x-auto scroll-px-5 px-5 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:-mx-0 sm:scroll-px-0 sm:px-0"
       >
         {reviews.map((review) => (
           <li
@@ -85,7 +85,7 @@ export function ReviewStrip({ reviews }: { reviews: readonly Review[] }) {
             <blockquote className="mt-4 line-clamp-5 text-lg leading-relaxed">
               &ldquo;{review.quote}&rdquo;
             </blockquote>
-            <div className="mt-4 pt-1">
+            <div className="mt-auto pt-4">
               <p className="text-sm font-bold">{review.author}</p>
               {review.sourceUrl ? (
                 <a
@@ -98,7 +98,9 @@ export function ReviewStrip({ reviews }: { reviews: readonly Review[] }) {
                   Read on {review.source ?? "Google"}
                 </a>
               ) : (
-                review.source && <p className="mt-1 text-sm font-medium text-muted">{review.source}</p>
+                review.source && (
+                  <p className="mt-1 flex min-h-11 items-center text-sm font-medium text-muted">{review.source}</p>
+                )
               )}
             </div>
           </li>
