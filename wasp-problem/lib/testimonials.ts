@@ -38,10 +38,34 @@ export const REVIEWS: readonly Review[] = [
     rating: 5,
   },
   {
+    // "and was able" is his wording, and "90 day" is unhyphenated as he wrote
+    // it. Google's own "Reasonable price" and "Pest type" chips are Google's
+    // attributes, not his words, so they are not part of the quotation.
+    quote:
+      "They came over promptly and was able to effectively deal with the wasp problem I had. This was greatly appreciated because I had a family event in my yard 3 days later. The 90 day guarantee also provided some peace of mind (although I did not need the second visit). Friendly and informative service too!",
+    author: "Mark Chan",
+    source: "Google",
+    rating: 5,
+  },
+  {
+    quote:
+      "Duane was great to work with and even came back twice to my house to ensure the problem with my wasp nest was eradicated. I highly recommend.",
+    author: "Prashanth Srichandramohan",
+    source: "Google",
+    rating: 5,
+  },
+  {
     // "Dwayne" is her spelling; the owner is Duane. Left as written.
     quote: "Dwayne fabulous service follow up care. I would recommend this company to all",
     author: "Linda Fairley",
     sourceUrl: "https://goo.gl/maps/odbKw9B2mXAjb16V7",
+    source: "Google",
+    rating: 5,
+  },
+  {
+    // "is gone is one day" is exactly how she wrote it. Not corrected.
+    quote: "The wasp problem is gone is one day. It's great.",
+    author: "Leina Choi",
     source: "Google",
     rating: 5,
   },
