@@ -61,11 +61,13 @@ export const SERVICE_AREAS = [
 ] as const;
 
 /**
- * Owner-confirmed: calls and texts are answered around the clock, so the site
- * says "Open 24/7". That is about answering, not arrival — same-day service stays "based on
+ * Owner-confirmed: PHONE CALLS are answered around the clock, so the site says
+ * "Open 24/7 — call". Texts and online requests are not: the owner may not hear
+ * them overnight, so never promise a 24/7 or "day or night" reply to either —
+ * they are answered "as soon as we see them". 24/7 is also about answering, not arrival — same-day service stays "based on
  * availability" (SAME_DAY_SERVICE) everywhere it appears.
  */
-export const AVAILABILITY_24_7 = "Open 24/7 — call or text anytime." as const;
+export const AVAILABILITY_24_7 = "Open 24/7 — call us anytime." as const;
 
 export const SAME_DAY_SERVICE = {
   headline: "Same-Day Service Available",

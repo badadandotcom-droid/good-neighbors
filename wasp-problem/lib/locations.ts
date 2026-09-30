@@ -33,7 +33,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     intro: [
       "Toronto's older brick houses — the semis and row houses of Leslieville, Riverdale, the Annex and Roncesvalles — give wasps plenty of ways in: gaps in old mortar, loose wooden soffits, and the spot where a porch roof meets the main wall. In the postwar bungalows and backsplits of North York, Etobicoke and Scarborough, the usual entry points are aluminum soffits, roof vents and the gap behind a gutter.",
       "Laneway garages and backyard sheds are common nest sites, and paper wasps like the underside of balcony railings, deck boards and barbecue lids. Homes backing onto the Don and Humber ravines also see bald-faced hornets, which hang their grey paper nests in trees and hedges.",
-      "If the nest is on a condo or townhouse balcony, it's worth telling your property manager too. Call or text us any time with where you're seeing the wasps — a photo from a safe distance helps.",
+      "If the nest is on a condo or townhouse balcony, it's worth telling your property manager too. Call us any time, day or night, or text us where you're seeing the wasps — a photo from a safe distance helps.",
     ],
     extraFaq: {
       q: "Do you cover all of Toronto?",
@@ -89,7 +89,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     intro: [
       "Many homes in Woodbridge, Maple and Vellore Village are large two-storey builds with tall peaks and high soffits, which is exactly where wasps like to build — well out of reach from the ground. How high a nest sits affects the price, so it helps to tell us roughly how far up the activity is.",
       "Around Kleinburg, bigger lots and mature trees near the Humber River mean more hornet nests in hedges and trees, and more nests in sheds and outbuildings. In Concord's industrial and commercial areas, wasps often nest in loading-dock overhangs, signage and rooftop units — we handle commercial buildings as well as homes.",
-      "Call or text us day or night and describe what you're seeing. A photo taken from a safe distance is a big help.",
+      "Call us day or night, or text us a description of what you're seeing. A photo taken from a safe distance is a big help.",
     ],
     extraFaq: {
       q: "Do you serve Woodbridge, Maple and Kleinburg?",
@@ -165,7 +165,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     intro: [
       "Ajax is mostly family homes, from the older streets around Pickering Village on Kingston Road to the newer subdivisions in the north end. Across the town, wasps typically get in through soffit vents, vinyl siding seams and the openings around exhaust vents and utility lines.",
       "Homes near the waterfront and along Duffins Creek tend to see more hornet nests in trees and shrubs. Decks, fences, sheds and play structures are frequent spots for paper wasps, and cedar decks and fences attract carpenter bees.",
-      "Call or text us any time — tell us where you're seeing the wasps and how high up, and we'll tell you what's involved.",
+      "Call us any time, day or night, or send a text — tell us where you're seeing the wasps and how high up, and we'll tell you what's involved.",
     ],
     extraFaq: {
       q: "Do you serve all of Ajax?",
@@ -184,7 +184,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     intro: [
       "Whitby's older homes around downtown, near Brock and Dundas, and down toward Port Whitby have wooden porches, trim and brickwork where wasps nest behind loose boards and in mortar gaps. Carpenter bees are drawn to the older wooden fascia and railings.",
       "In newer neighbourhoods like Williamsburg, Taunton North and Brooklin, nests are usually hidden behind vinyl siding or in soffit vents on two-storey walls. Brooklin's edge-of-town lots also see nests in sheds, fences and outbuildings.",
-      "Call or text us day or night with what you're seeing. A photo of where the wasps are going in helps us plan the job.",
+      "Call us day or night, or text us with what you're seeing. A photo of where the wasps are going in helps us plan the job.",
     ],
     extraFaq: {
       q: "Do you serve Brooklin?",
@@ -203,7 +203,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     intro: [
       "Newmarket's historic homes around Main Street have wooden soffits, trim and porches, and brick with the kind of gaps wasps use to get into walls. In neighbourhoods like Stonehaven, Summerhill and Woodland Hill, the usual spots are soffit vents, siding seams and roof peaks.",
       "Homes near Fairy Lake and the trails along the Holland River often see hornet nests in trees and shrubs. Cedar decks, fences and pergolas attract carpenter bees, and sheds and garages are common for paper wasps.",
-      "Call or text us any time and describe what you're seeing. Knowing roughly how high the nest is helps us tell you what's involved.",
+      "Call us any time, or text and describe what you're seeing. Knowing roughly how high the nest is helps us tell you what's involved.",
     ],
     extraFaq: {
       q: "Do you come up to Newmarket?",

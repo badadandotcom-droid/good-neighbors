@@ -1,6 +1,7 @@
 import { LeadForm } from "@/components/LeadForm";
 import { SectionHeading } from "@/components/SectionHeading";
 import { leadFormEnabled } from "@/lib/leads";
+import { PHONE_TOLLFREE } from "@/lib/site";
 
 /** Anchor the hero's "send a request" link jumps to. */
 export const LEAD_FORM_ANCHOR = "request";
@@ -28,7 +29,7 @@ export function LeadFormSection({
         <SectionHeading
           eyebrow="Prefer not to call?"
           title="Send Us a Request"
-          lede="Tell us what you're seeing and where. We reply day or night."
+          lede={`Tell us what you're seeing and where, and we'll get back to you as soon as we see it. For the fastest help, call ${PHONE_TOLLFREE.display} — we answer day or night.`}
         />
         <div className="mt-10">
           <LeadForm page={page} />

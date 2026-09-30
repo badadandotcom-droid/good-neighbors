@@ -65,7 +65,7 @@ export const viewport: Viewport = {
   themeColor: "#0a0a0a",
 };
 
-/** Calls and texts answered around the clock — see AVAILABILITY_24_7 in lib/site.ts. 00:00–23:59 is how schema.org expresses a full day. */
+/** Phone calls answered around the clock — see AVAILABILITY_24_7 in lib/site.ts. 00:00–23:59 is how schema.org expresses a full day. */
 const OPEN_24_7 = {
   "@type": "OpeningHoursSpecification",
   dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],

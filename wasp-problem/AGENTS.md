@@ -54,7 +54,7 @@ These are not style preferences. Breaking one is a real-world problem for the ow
 8. **It's a "90-day service guarantee", never a "warranty".** Don't change the
    guarantee wording, the prices, or the "Simple. Fast. Local." heading.
 9. **Same-day service always carries "based on availability".** 24/7 is about
-   answering calls and texts, not arrival times. The one exception is the
+   answering phone calls, not texts and not arrival times. The one exception is the
    owner-specified homepage title, which says "24/7 Same-Day Service*" — the asterisk
    stands in for the qualifier.
 10. **Don't touch the GA4 tag or rename `cta_call` / `cta_text`.** Google Ads imports
@@ -75,8 +75,10 @@ These are not style preferences. Breaking one is a real-world problem for the ow
   treated within 90 days, we come back and deal with it at no additional charge."*
   The owner chose this wording over alternatives. Don't re-litigate it.
 - `INSURANCE` in `lib/site.ts`: "Fully insured — $5,000,000 liability coverage".
-- Calls and texts are answered **24/7** (`AVAILABILITY_24_7` in `lib/site.ts`); the
-  business schema says so too.
+- **Phone calls** are answered **24/7** (`AVAILABILITY_24_7` in `lib/site.ts`); the business
+  schema says so too. **Texts and online requests are not** — the owner may not hear them
+  overnight. Never write "day or night", "24/7" or "any time" as a promise about replying to
+  a text or a request; they are answered "as soon as we see them". Calling is the fastest way.
 - Based in **Toronto**, serves the whole GTA. `SERVICE_AREAS` is 14 cities, Toronto
   first. Oakville, Burlington and Brampton are kept but **not featured**: listed last,
   and left out of other city pages' cross-links (`featured: false`). There is no public
