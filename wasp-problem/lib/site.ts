@@ -77,3 +77,15 @@ export const GUARANTEE = {
  * needed for phone-click conversions to start reporting.
  */
 export const GA_MEASUREMENT_ID = "G-2NETZXNWVG";
+
+/**
+ * Share link for the Google Business Profile as a whole — the listing, not any
+ * one review. It is what the "See all reviews on Google" button points at.
+ *
+ * While this is empty the button does not render (see components/TrustSection),
+ * exactly as the review strip stays hidden until there are real reviews. Do not
+ * substitute an individual review's link or a "write a review" link: the first
+ * sends everyone to one customer, and the second asks visitors to write a
+ * review rather than read the existing ones.
+ */
+export const GOOGLE_REVIEWS_URL = "" as const;
