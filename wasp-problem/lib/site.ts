@@ -64,7 +64,8 @@ export const SERVICE_AREAS = [
  * Owner-confirmed: PHONE CALLS are answered around the clock, so the site says
  * "Open 24/7 — call". Texts and online requests are not: the owner may not hear
  * them overnight, so never promise a 24/7 or "day or night" reply to either —
- * they are answered "as soon as we see them". 24/7 is also about answering, not arrival — same-day service stays "based on
+ * the vetted wording is "usually within a few hours; overnight, first thing in
+ * the morning". 24/7 is also about answering, not arrival — same-day service stays "based on
  * availability" (SAME_DAY_SERVICE) everywhere it appears.
  */
 export const AVAILABILITY_24_7 = "Open 24/7 — call us anytime." as const;

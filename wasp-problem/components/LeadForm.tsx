@@ -35,11 +35,12 @@ export function LeadForm({ page }: { page: string }) {
       <div role="status" className="card px-6 py-9 text-center sm:px-10">
         <p className="font-display text-2xl font-extrabold">Thanks{state.name ? `, ${state.name}` : ""} — request received.</p>
         <p className="mx-auto mt-3 max-w-md text-base leading-relaxed text-muted">
-          We&apos;ll {state.reply === "text" ? "text" : "call"} you back at {state.phone} as soon as we see your request. Need help sooner? Call{" "}
+          We&apos;ll {state.reply === "text" ? "text" : "call"} you back at {state.phone} — usually within a few hours, and first thing in the morning if you
+          sent this overnight. Need us right away? Call{" "}
           <PhoneLink location="lead-form-sent" className="font-semibold text-ink underline decoration-yellow-deep decoration-2 underline-offset-4">
             {PHONE_TOLLFREE.display}
           </PhoneLink>{" "}
-          — we answer day or night. If there&apos;s a photo of the nest area, text it
+          — phones are answered day or night. If there&apos;s a photo of the nest area, text it
           to{" "}
           <TextLink location="lead-form-sent-text" className="font-semibold text-ink underline decoration-yellow-deep decoration-2 underline-offset-4">
             {PHONE_LOCAL.display}

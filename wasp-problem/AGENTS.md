@@ -77,8 +77,10 @@ These are not style preferences. Breaking one is a real-world problem for the ow
 - `INSURANCE` in `lib/site.ts`: "Fully insured — $5,000,000 liability coverage".
 - **Phone calls** are answered **24/7** (`AVAILABILITY_24_7` in `lib/site.ts`); the business
   schema says so too. **Texts and online requests are not** — the owner may not hear them
-  overnight. Never write "day or night", "24/7" or "any time" as a promise about replying to
-  a text or a request; they are answered "as soon as we see them". Calling is the fastest way.
+  overnight. Never write "day or night", "24/7" or "any time" as a promise about replying to a text or
+  a request. The owner-vetted expectation, from their own description of when they reply, is:
+  "usually within a few hours; overnight, first thing in the morning". Don't shorten it to a
+  flat time promise, and don't revert it to "as soon as we see it" — that reads unstaffed.
 - Based in **Toronto**, serves the whole GTA. `SERVICE_AREAS` is 14 cities, Toronto
   first. Oakville, Burlington and Brampton are kept but **not featured**: listed last,
   and left out of other city pages' cross-links (`featured: false`). There is no public

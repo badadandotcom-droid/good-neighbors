@@ -29,7 +29,7 @@ export function LeadFormSection({
         <SectionHeading
           eyebrow="Prefer not to call?"
           title="Send Us a Request"
-          lede={`Tell us what you're seeing and where, and we'll get back to you as soon as we see it. For the fastest help, call ${PHONE_TOLLFREE.display} — we answer day or night.`}
+          lede={`Tell us what you're seeing and where. We usually reply within a few hours; overnight requests are answered first thing in the morning. Need us right away? Call ${PHONE_TOLLFREE.display} — phones are answered day or night.`}
         />
         <div className="mt-10">
           <LeadForm page={page} />
