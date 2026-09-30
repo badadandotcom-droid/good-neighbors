@@ -46,7 +46,7 @@ export const BASE_FAQS = [
   },
   {
     q: "When can I reach you?",
-    a: "Text or call any time. We reply as soon as we're free, usually within the hour during the day.",
+    a: "Text or call any time. We reply as soon as we're free, day or night.",
   },
   {
     q: "Can I book entirely by text?",
@@ -109,7 +109,7 @@ export const HOMEPAGE_FAQS = [
   },
   {
     q: "When can I reach you?",
-    a: "Text or call any time. We reply as soon as we're free, usually within the hour during the day.",
+    a: "Text or call any time. We reply as soon as we're free, day or night.",
   },
   {
     q: "Can I book entirely by text?",

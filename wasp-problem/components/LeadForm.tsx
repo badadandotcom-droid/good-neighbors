@@ -34,7 +34,7 @@ export function LeadForm({ page }: { page: string }) {
         <p className="font-display text-2xl font-extrabold">Thanks{state.name ? `, ${state.name}` : ""} — request received.</p>
         <p className="mx-auto mt-3 max-w-md text-base leading-relaxed text-muted">
           We&apos;ll {state.reply === "text" ? "text" : "call"} you at {state.phone} as soon as we&apos;re
-          free, usually within the hour during the day. If there&apos;s a photo of the nest area, text it
+          free, day or night. If there&apos;s a photo of the nest area, text it
           to{" "}
           <a href={PHONE_LOCAL.smsHref} className="font-semibold text-ink underline decoration-yellow-deep decoration-2 underline-offset-4">
             {PHONE_LOCAL.display}

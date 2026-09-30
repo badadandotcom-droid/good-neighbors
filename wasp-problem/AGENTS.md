@@ -51,6 +51,14 @@ These are not style preferences. Breaking one is a real-world problem for the ow
 6. **Never claim a phone or SMS test happened.** No tool here can place a call.
 7. **The word "can't" stays out of site copy.** Owner's preference, applies to user-
    facing text only.
+8. **It's a "90-day service guarantee", never a "warranty".** Don't change the
+   guarantee wording, the prices, or the "Simple. Fast. Local." heading.
+9. **Same-day service always carries "based on availability".** 24/7 is about
+   answering calls and texts, not arrival times. The one exception is the
+   owner-specified homepage title, which says "24/7 Same-Day Service" as written.
+10. **Don't touch the GA4 tag or rename `cta_call` / `cta_text`.** Google Ads imports
+   them as conversions. Every `tel:` link goes through `PhoneLink` and every `sms:`
+   link through `TextLink`, so each one fires its event.
 
 ## Business facts (source of truth is the code, not this list)
 
@@ -66,8 +74,14 @@ These are not style preferences. Breaking one is a real-world problem for the ow
   treated within 90 days, we come back and deal with it at no additional charge."*
   The owner chose this wording over alternatives. Don't re-litigate it.
 - `INSURANCE` in `lib/site.ts`: "Fully insured — $5,000,000 liability coverage".
-- Based in **Toronto**, serves the whole GTA. `SERVICE_AREAS` is 12 cities, Toronto
-  first. There is no public street address — it's a service-area business.
+- Calls and texts are answered **24/7** (`AVAILABILITY_24_7` in `lib/site.ts`); the
+  business schema says so too.
+- Based in **Toronto**, serves the whole GTA. `SERVICE_AREAS` is 14 cities, Toronto
+  first. Oakville, Burlington and Brampton are kept but **not featured**: listed last,
+  and left out of other city pages' cross-links (`featured: false`). There is no public
+  street address — it's a service-area business.
+- City pages: 13, one per `CITY_LOCATIONS` entry (Brampton has none). Each has its own
+  hand-written copy — never clone one and swap the name.
 - Canonical domain is bare `https://waspproblem.ca`. The `.com` redirects to it.
 - GA4 `G-2NETZXNWVG`. Conversion events: `cta_call`, `cta_text`, `lead_form` (a request
   from the online form was delivered).
@@ -114,6 +128,5 @@ Note that a contrast check reading only the alpha in a colour value misses CSS
       `lead_form` as a key event in GA4.
 - [ ] Reorder the Business Profile service areas so Toronto is first (owner's action).
 - [ ] Licence wording — only after the December exam is passed.
-- [ ] Link Google Ads to GA4 conversions (owner's action).
 - [ ] Desktop hero reads thin; needs a real hero photo decision from the owner.
 - [ ] Confirm in Vercel that bare `waspproblem.ca` is primary, matching the code.

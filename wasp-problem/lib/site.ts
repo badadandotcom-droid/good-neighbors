@@ -8,7 +8,7 @@ export const BRAND = {
   name: "Wasp Problem",
   url: "https://waspproblem.ca",
   description:
-    "Professional wasp, hornet and carpenter bee nest removal in Toronto and the GTA. Same-day service available. Call Wasp Problem at 1-800-800-WASP.",
+    "Wasp nest removal in Toronto and the GTA. We answer 24/7, with same-day service based on availability. Call 1-800-800-WASP or text 416-700-4259.",
 } as const;
 
 /**
@@ -34,21 +34,38 @@ export const CONTACT = {
   city: "Toronto, Ontario",
 } as const;
 
-/** Cities named in the service-area section and structured data. Presented as one balanced list — no city featured over another. */
+/**
+ * Cities named in the service-area section and structured data. Presented as
+ * one balanced list — no city styled over another. Oakville, Burlington and
+ * Brampton are kept but deliberately not featured (owner's call): they sit at
+ * the end here and stay out of the city pages' cross-links (see
+ * FEATURED in lib/locations.ts). Thornhill is a community split between
+ * Vaughan and Markham, not a municipality — still listed on its own because
+ * that is what people search.
+ */
 export const SERVICE_AREAS = [
   "Toronto",
   "Mississauga",
-  "Brampton",
-  "Vaughan",
   "Markham",
+  "Vaughan",
   "Richmond Hill",
-  "Oakville",
-  "Burlington",
+  "Thornhill",
   "Pickering",
   "Ajax",
   "Whitby",
+  "Newmarket",
   "Whitchurch-Stouffville",
+  "Oakville",
+  "Burlington",
+  "Brampton",
 ] as const;
+
+/**
+ * Owner-confirmed: calls and texts are answered around the clock. This is
+ * about answering, not arrival — same-day service stays "based on
+ * availability" (SAME_DAY_SERVICE) everywhere it appears.
+ */
+export const AVAILABILITY_24_7 = "We answer calls and texts 24/7 — nights, weekends and holidays." as const;
 
 export const SAME_DAY_SERVICE = {
   headline: "Same-Day Service Available",

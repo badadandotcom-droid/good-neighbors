@@ -112,8 +112,8 @@ deployments can't clobber each other.
 
 ## Adding a new city landing page
 
-Three exist today (`app/mississauga-wasp-removal`, `app/oakville-wasp-removal`,
-`app/burlington-wasp-removal`), each a thin `page.tsx` that reads its data
+Thirteen exist today (`app/toronto-wasp-removal`, `app/mississauga-wasp-removal`
+and so on — one per entry in `CITY_LOCATIONS`), each a thin `page.tsx` that reads its data
 from `CITY_LOCATIONS` in `lib/locations.ts` and renders `<CityPage />`. To
 add another: append an entry to `CITY_LOCATIONS` (hand-write its own
 intro copy — don't just swap the city name into an existing entry's
