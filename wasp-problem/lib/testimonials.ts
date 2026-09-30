@@ -49,6 +49,18 @@ export const REVIEWS: readonly Review[] = [
     rating: 5,
   },
   {
+    // "Knowledgeable" is capitalised mid-sentence, "necessary,." carries both
+    // marks, and "Very reasonable priced" is her phrasing — all exactly as she
+    // wrote them. Google's "Pest type" chip and the owner's reply below her
+    // review are not her words, so neither is part of the quotation.
+    quote:
+      "Duane provided Knowledgeable expertise. Took time to explain issues and offered practical solutions and follow up if necessary,. Very reasonable priced as well. Thanks again!",
+    author: "Michelle Lewis",
+    sourceUrl: "https://goo.gl/maps/JMz3doJtSoGcjtvi8",
+    source: "Google",
+    rating: 5,
+  },
+  {
     quote:
       "Duane was great to work with and even came back twice to my house to ensure the problem with my wasp nest was eradicated. I highly recommend.",
     author: "Prashanth Srichandramohan",
