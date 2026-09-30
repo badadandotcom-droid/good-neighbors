@@ -28,7 +28,7 @@ export function LeadFormSection({
         <SectionHeading
           eyebrow="Prefer not to call?"
           title="Send Us a Request"
-          lede="Tell us what you're seeing and where. We reply as soon as we're free, day or night."
+          lede="Tell us what you're seeing and where. We reply day or night."
         />
         <div className="mt-10">
           <LeadForm page={page} />

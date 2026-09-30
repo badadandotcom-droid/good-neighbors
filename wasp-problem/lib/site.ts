@@ -8,7 +8,7 @@ export const BRAND = {
   name: "Wasp Problem",
   url: "https://waspproblem.ca",
   description:
-    "Wasp nest removal in Toronto and the GTA. We answer 24/7, with same-day service based on availability. Call 1-800-800-WASP or text 416-700-4259.",
+    "Wasp nest removal in Toronto and the GTA. Open 24/7, with same-day service based on availability. Call 1-800-800-WASP or text 416-700-4259.",
 } as const;
 
 /**
@@ -61,11 +61,11 @@ export const SERVICE_AREAS = [
 ] as const;
 
 /**
- * Owner-confirmed: calls and texts are answered around the clock. This is
- * about answering, not arrival — same-day service stays "based on
+ * Owner-confirmed: calls and texts are answered around the clock, so the site
+ * says "Open 24/7". That is about answering, not arrival — same-day service stays "based on
  * availability" (SAME_DAY_SERVICE) everywhere it appears.
  */
-export const AVAILABILITY_24_7 = "We answer calls and texts 24/7 — nights, weekends and holidays." as const;
+export const AVAILABILITY_24_7 = "Open 24/7 — call or text anytime." as const;
 
 export const SAME_DAY_SERVICE = {
   headline: "Same-Day Service Available",

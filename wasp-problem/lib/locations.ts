@@ -28,7 +28,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     h1: "Wasp Nest Removal in Toronto",
     metaTitle: "Wasp Nest Removal in Toronto",
     metaDescription:
-      "Wasp nest removal in Toronto, from Etobicoke to Scarborough. We answer calls and texts 24/7. Call 1-800-800-WASP or text 416-700-4259.",
+      "Wasp nest removal in Toronto, from Etobicoke to Scarborough. Open 24/7. Call 1-800-800-WASP or text 416-700-4259.",
     heroSubheadline: "Wasp Nest Removal Across Toronto, Lake to Steeles",
     intro: [
       "Toronto's older brick houses — the semis and row houses of Leslieville, Riverdale, the Annex and Roncesvalles — give wasps plenty of ways in: gaps in old mortar, loose wooden soffits, and the spot where a porch roof meets the main wall. In the postwar bungalows and backsplits of North York, Etobicoke and Scarborough, the usual entry points are aluminum soffits, roof vents and the gap behind a gutter.",
@@ -65,7 +65,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     h1: "Wasp Nest Removal in Markham",
     metaTitle: "Wasp Nest Removal in Markham",
     metaDescription:
-      "Wasp nest removal in Markham — Unionville, Cornell, Markham Village and beyond. We answer calls and texts 24/7. Call 1-800-800-WASP.",
+      "Wasp nest removal in Markham — Unionville, Cornell, Markham Village and beyond. Open 24/7. Call 1-800-800-WASP.",
     heroSubheadline: "Wasp Nest Removal for Markham Homeowners",
     intro: [
       "Markham runs from the heritage homes along Main Street Unionville and Markham Village to newer neighbourhoods like Cornell, Berczy Village and Cathedraltown. In the newer subdivisions, wasps tend to get in through vinyl siding seams, soffit vents, and the openings around dryer vents and gas lines.",
@@ -84,7 +84,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     h1: "Wasp Nest Removal in Vaughan",
     metaTitle: "Wasp Nest Removal in Vaughan",
     metaDescription:
-      "Wasp nest removal in Vaughan — Woodbridge, Maple, Kleinburg and Concord. We answer calls and texts 24/7. Call 1-800-800-WASP or text 416-700-4259.",
+      "Wasp nest removal in Vaughan — Woodbridge, Maple, Kleinburg and Concord. Open 24/7. Call 1-800-800-WASP or text 416-700-4259.",
     heroSubheadline: "Wasp Nest Removal for Vaughan Homes and Businesses",
     intro: [
       "Many homes in Woodbridge, Maple and Vellore Village are large two-storey builds with tall peaks and high soffits, which is exactly where wasps like to build — well out of reach from the ground. How high a nest sits affects the price, so it helps to tell us roughly how far up the activity is.",
@@ -103,7 +103,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     h1: "Wasp Nest Removal in Richmond Hill",
     metaTitle: "Wasp Nest Removal in Richmond Hill",
     metaDescription:
-      "Wasp nest removal in Richmond Hill — Oak Ridges, Mill Pond, Bayview Hill and more. We answer calls and texts 24/7. Call 1-800-800-WASP.",
+      "Wasp nest removal in Richmond Hill — Oak Ridges, Mill Pond, Bayview Hill and more. Open 24/7. Call 1-800-800-WASP.",
     heroSubheadline: "Wasp Nest Removal for Richmond Hill Homeowners",
     intro: [
       "Richmond Hill stretches from the established streets around Mill Pond and Bayview Hill up to Oak Ridges and Lake Wilcox on the Oak Ridges Moraine. Around Mill Pond, mature trees and older homes mean hornet nests in branches and hedges, and wasps working their way into wooden soffits and attic vents.",
@@ -122,7 +122,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     h1: "Wasp Nest Removal in Thornhill",
     metaTitle: "Wasp Nest Removal in Thornhill",
     metaDescription:
-      "Wasp nest removal in Thornhill, on both the Vaughan and Markham sides of Yonge. We answer calls and texts 24/7. Call 1-800-800-WASP.",
+      "Wasp nest removal in Thornhill, on both the Vaughan and Markham sides of Yonge. Open 24/7. Call 1-800-800-WASP.",
     heroSubheadline: "Wasp Nest Removal on Both Sides of Yonge",
     intro: [
       "Thornhill sits on both sides of Yonge Street — the west side is part of Vaughan, the east side part of Markham — and we serve both. The older homes around Old Thornhill, near Yonge and Centre Street, have wooden trim, porches and brickwork where wasps find gaps to nest behind.",
@@ -141,7 +141,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     h1: "Wasp Nest Removal in Pickering",
     metaTitle: "Wasp Nest Removal in Pickering",
     metaDescription:
-      "Wasp nest removal in Pickering — Bay Ridges, Amberlea, Seaton and rural north Pickering. We answer calls and texts 24/7. Call 1-800-800-WASP.",
+      "Wasp nest removal in Pickering — Bay Ridges, Amberlea, Seaton and rural north Pickering. Open 24/7. Call 1-800-800-WASP.",
     heroSubheadline: "Wasp Nest Removal for Pickering Homeowners",
     intro: [
       "Pickering covers a lot of ground: lakeside homes in Bay Ridges and around Frenchman's Bay, established neighbourhoods like Amberlea, Liverpool and Rosebank, the newer Duffin Heights and Seaton communities, and rural properties up around Claremont.",
@@ -160,7 +160,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     h1: "Wasp Nest Removal in Ajax",
     metaTitle: "Wasp Nest Removal in Ajax",
     metaDescription:
-      "Wasp nest removal in Ajax, from the waterfront to Pickering Village. We answer calls and texts 24/7. Call 1-800-800-WASP or text 416-700-4259.",
+      "Wasp nest removal in Ajax, from the waterfront to Pickering Village. Open 24/7. Call 1-800-800-WASP or text 416-700-4259.",
     heroSubheadline: "Wasp Nest Removal for Ajax Homeowners",
     intro: [
       "Ajax is mostly family homes, from the older streets around Pickering Village on Kingston Road to the newer subdivisions in the north end. Across the town, wasps typically get in through soffit vents, vinyl siding seams and the openings around exhaust vents and utility lines.",
@@ -179,7 +179,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     h1: "Wasp Nest Removal in Whitby",
     metaTitle: "Wasp Nest Removal in Whitby",
     metaDescription:
-      "Wasp nest removal in Whitby and Brooklin — downtown, Port Whitby and the north end. We answer calls and texts 24/7. Call 1-800-800-WASP.",
+      "Wasp nest removal in Whitby and Brooklin — downtown, Port Whitby and the north end. Open 24/7. Call 1-800-800-WASP.",
     heroSubheadline: "Wasp Nest Removal for Whitby and Brooklin",
     intro: [
       "Whitby's older homes around downtown, near Brock and Dundas, and down toward Port Whitby have wooden porches, trim and brickwork where wasps nest behind loose boards and in mortar gaps. Carpenter bees are drawn to the older wooden fascia and railings.",
@@ -198,7 +198,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     h1: "Wasp Nest Removal in Newmarket",
     metaTitle: "Wasp Nest Removal in Newmarket",
     metaDescription:
-      "Wasp nest removal in Newmarket, from Main Street to Stonehaven and Summerhill. We answer calls and texts 24/7. Call 1-800-800-WASP.",
+      "Wasp nest removal in Newmarket, from Main Street to Stonehaven and Summerhill. Open 24/7. Call 1-800-800-WASP.",
     heroSubheadline: "Wasp Nest Removal for Newmarket Homeowners",
     intro: [
       "Newmarket's historic homes around Main Street have wooden soffits, trim and porches, and brick with the kind of gaps wasps use to get into walls. In neighbourhoods like Stonehaven, Summerhill and Woodland Hill, the usual spots are soffit vents, siding seams and roof peaks.",
@@ -217,7 +217,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     h1: "Wasp Nest Removal in Whitchurch-Stouffville",
     metaTitle: "Wasp Nest Removal in Whitchurch-Stouffville",
     metaDescription:
-      "Wasp nest removal in Stouffville, Ballantrae, Musselman's Lake and rural Whitchurch-Stouffville. We answer calls and texts 24/7. Call 1-800-800-WASP.",
+      "Wasp nest removal in Stouffville, Ballantrae, Musselman's Lake and rural Whitchurch-Stouffville. Open 24/7. Call 1-800-800-WASP.",
     heroSubheadline: "Wasp Nest Removal in Stouffville and Rural Whitchurch",
     intro: [
       "Whitchurch-Stouffville mixes town and country: the older homes and newer subdivisions around Stouffville's Main Street, and rural properties around Ballantrae, Musselman's Lake, Gormley and Vandorf.",

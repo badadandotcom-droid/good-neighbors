@@ -151,14 +151,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </PhoneLink>
             </div>
           </div>
-          {/* Below md there is no room beside the wordmark, so the local number gets its own slim row. */}
-          <PhoneLink
-            number={PHONE_LOCAL}
-            location="header-local"
-            className="flex min-h-11 items-center justify-center border-t border-white/10 px-3 text-sm font-semibold text-white md:hidden"
-          >
-            Call or text&nbsp;<span className="underline decoration-yellow decoration-2 underline-offset-4">{PHONE_LOCAL.display}</span>
-          </PhoneLink>
         </header>
         <main id="main-content">{children}</main>
         <StickyCallBar />
