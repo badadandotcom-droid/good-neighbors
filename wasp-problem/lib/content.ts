@@ -46,7 +46,7 @@ export const BASE_FAQS = [
   },
   {
     q: "When can I reach you?",
-    a: "Text or call any time. We reply as soon as we're free, usually within the hour during the day.",
+    a: "Any time — phones are answered 24 hours a day, 7 days a week. Texts and online requests usually get a reply within a few hours; if you write to us overnight, you'll hear back first thing in the morning.",
   },
   {
     q: "Can I book entirely by text?",
@@ -109,7 +109,7 @@ export const HOMEPAGE_FAQS = [
   },
   {
     q: "When can I reach you?",
-    a: "Text or call any time. We reply as soon as we're free, usually within the hour during the day.",
+    a: "Any time — phones are answered 24 hours a day, 7 days a week. Texts and online requests usually get a reply within a few hours; if you write to us overnight, you'll hear back first thing in the morning.",
   },
   {
     q: "Can I book entirely by text?",

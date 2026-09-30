@@ -8,17 +8,19 @@ import { PricingTable } from "@/components/PricingTable";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
 import { TrustSection } from "@/components/TrustSection";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { LeadFormSection } from "@/components/LeadFormSection";
 import { FinalCta } from "@/components/FinalCta";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SectionHeading } from "@/components/SectionHeading";
 import { TollFreeNumber } from "@/components/TollFreeNumber";
-import { SAME_DAY_SERVICE } from "@/lib/site";
+import { AVAILABILITY_24_7, SAME_DAY_SERVICE } from "@/lib/site";
 import { BASE_FAQS } from "@/lib/content";
 import { REVIEWS } from "@/lib/testimonials";
 import { CITY_LOCATIONS, type CityLocation } from "@/lib/locations";
 
 export function CityPage({ location }: { location: CityLocation }) {
-  const otherCities = CITY_LOCATIONS.filter((l) => l.slug !== location.slug);
+  // Unfeatured cities (Oakville, Burlington) still link to the featured ones, but never appear here themselves.
+  const otherCities = CITY_LOCATIONS.filter((l) => l.slug !== location.slug && l.featured !== false);
   const faqs = [...BASE_FAQS, location.extraFaq];
   const pill =
     "inline-flex min-h-11 items-center rounded-full border border-line bg-white px-4 py-2 text-sm font-semibold shadow-card transition-colors hover:border-ink hover:bg-yellow-tint";
@@ -44,9 +46,10 @@ export function CityPage({ location }: { location: CityLocation }) {
           <p className="mx-auto mt-2 max-w-md text-base text-muted sm:text-lg">
             Proudly serving {location.city} and communities across the GTA.
           </p>
+          <p className="mx-auto mt-4 max-w-md text-base font-bold sm:text-lg">{AVAILABILITY_24_7}</p>
 
           <div className="mt-8">
-            <ContactActions ctaLocationPrefix={`city-${location.slug}-hero`} variant="light" />
+            <ContactActions ctaLocationPrefix={`city-${location.slug}-hero`} variant="light" requestLink />
           </div>
 
           <div className="mt-9 flex justify-center">
@@ -90,12 +93,10 @@ export function CityPage({ location }: { location: CityLocation }) {
           <SectionHeading
             eyebrow="Service area"
             title="Also Serving the GTA"
-            lede={
-              <>
-                Alongside {location.city}, Wasp Problem serves Toronto and communities across
-                the GTA, including {otherCities.map((l) => l.city).join(" and ")}.
-              </>
-            }
+            lede={`Alongside ${location.city}, Wasp Problem serves ${
+              // Toronto has its own page now — "Alongside Toronto ... serves Toronto" read broken there.
+              location.city === "Toronto" ? "" : "Toronto and "
+            }communities across the GTA.`}
           />
           <ul className="mt-8 flex flex-wrap justify-center gap-2.5">
             {otherCities.map((l) => (
@@ -114,6 +115,7 @@ export function CityPage({ location }: { location: CityLocation }) {
         </div>
       </section>
 
+      <LeadFormSection page={location.href} background="surface" />
       <FinalCta ctaLocation={`city-${location.slug}-final`} />
       <SiteFooter />
     </>

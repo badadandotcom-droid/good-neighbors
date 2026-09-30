@@ -4,7 +4,6 @@ import { Anton, Archivo, Manrope } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { PhoneLink } from "@/components/PhoneLink";
-import { TextLink } from "@/components/TextLink";
 import { StickyCallBar } from "@/components/StickyCallBar";
 import { BRAND, GA_MEASUREMENT_ID, PHONE_LOCAL, PHONE_TOLLFREE, SERVICE_AREAS } from "@/lib/site";
 import { PRICING } from "@/lib/pricing";
@@ -30,12 +29,17 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const HOME_TITLE = "Wasp Nest Removal – Toronto & the GTA";
+/**
+ * Owner-specified homepage title (it already ends with the brand, so it bypasses the
+ * template). The asterisk is the owner's: it points to "based on availability" on
+ * the page, since a title has no room for the qualifier itself.
+ */
+const HOME_TITLE = "Wasp Nest Removal Toronto & GTA | 24/7 Same-Day Service* | Wasp Problem";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BRAND.url),
   title: {
-    default: `${HOME_TITLE} | ${BRAND.name}`,
+    default: HOME_TITLE,
     template: `%s | ${BRAND.name}`,
   },
   description: BRAND.description,
@@ -61,6 +65,15 @@ export const viewport: Viewport = {
   themeColor: "#0a0a0a",
 };
 
+/** Phone calls answered around the clock — see AVAILABILITY_24_7 in lib/site.ts. 00:00–23:59 is how schema.org expresses a full day. */
+const OPEN_24_7 = {
+  "@type": "OpeningHoursSpecification",
+  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+  opens: "00:00",
+  closes: "23:59",
+};
+
+/** PestControl is a schema.org LocalBusiness subtype, so this is the LocalBusiness markup. */
 function localBusinessJsonLd() {
   const amounts = PRICING.map((item) => item.amount);
   return {
@@ -70,6 +83,15 @@ function localBusinessJsonLd() {
     description: BRAND.description,
     url: BRAND.url,
     telephone: PHONE_TOLLFREE.href.replace("tel:", ""),
+    contactPoint: [PHONE_TOLLFREE, PHONE_LOCAL].map((phone) => ({
+      "@type": "ContactPoint",
+      telephone: phone.href.replace("tel:", ""),
+      contactType: "customer service",
+      areaServed: "CA",
+      availableLanguage: "en",
+      hoursAvailable: OPEN_24_7,
+    })),
+    openingHoursSpecification: OPEN_24_7,
     priceRange: `$${Math.min(...amounts)}-$${Math.max(...amounts)}`,
     areaServed: [
       { "@type": "AdministrativeArea", name: "Greater Toronto Area" },
@@ -114,14 +136,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </span>
             </Link>
             <div className="flex shrink-0 items-center gap-2">
-              {/* Text lives in the sticky bar on phones — a third action does not fit beside the wordmark at 320px. */}
-              <TextLink
-                location="header-text"
-                ariaLabel={`Text ${PHONE_LOCAL.display}`}
-                className="btn hidden min-h-11 border-[1.5px] border-white/30 bg-transparent px-4 py-2 text-sm text-white hover:border-white hover:bg-white/10 sm:inline-flex"
+              <PhoneLink
+                number={PHONE_LOCAL}
+                location="header-local"
+                className="btn hidden min-h-11 border-[1.5px] border-white/30 bg-transparent px-4 py-2 text-sm text-white hover:border-white hover:bg-white/10 md:inline-flex"
               >
-                Text {PHONE_LOCAL.display}
-              </TextLink>
+                Call or text {PHONE_LOCAL.display}
+              </PhoneLink>
               <PhoneLink
                 location="header"
                 className="btn btn-primary min-h-11 shadow-none whitespace-nowrap px-3 py-2 text-sm"

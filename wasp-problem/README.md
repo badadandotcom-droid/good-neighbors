@@ -2,7 +2,8 @@
 
 Lead-capture site for Wasp Problem (WaspProblem.ca). One job: get a visitor
 on the phone — primarily the toll-free branded number, 1-800-800-WASP, with
-416-700-4259 as the local secondary line — as fast as possible.
+416-700-4259 as the local secondary line — as fast as possible. For visitors
+who won't call or text, an online request form emails the owner (see below).
 
 This app is **fully isolated** from the Good Neighbors Wildlife app that
 lives at the repo root — separate `package.json`, separate `node_modules`,
@@ -60,6 +61,27 @@ which isn't wired up — that would mean swapping `PHONE_TOLLFREE`/
 `trackEvent`'s body at CallRail's JS API, and requires a real CallRail
 account (can't be stubbed in).
 
+## Online request form
+
+`components/LeadFormSection.tsx` sits above the final CTA on the homepage and
+every city page, with a "Send a request online" link under each hero's call
+buttons. Submissions go through a Server Action (`app/actions.ts`) and are
+emailed to the owner via [Resend](https://resend.com) (`lib/leads.ts`, plain
+`fetch`, no SDK). A hidden honeypot field drops most bot spam.
+
+**The form stays hidden until delivery is configured.** In Vercel → Project
+Settings → Environment Variables, set:
+
+| Variable | Value |
+|---|---|
+| `RESEND_API_KEY` | API key from the Resend dashboard |
+| `LEAD_TO_EMAIL` | Inbox that receives requests (comma-separate for several) |
+| `LEAD_FROM_EMAIL` | Optional. Until `waspproblem.ca` is verified in Resend, leave unset: the default test sender only delivers to the email the Resend account was opened with. After verifying, e.g. `Wasp Problem <requests@waspproblem.ca>` |
+
+Then redeploy — the pages are static, so the form appears on the next build.
+A successful submission fires the `lead_form` GA4 event; mark it as a key
+event in GA4 to import it into Google Ads.
+
 ## Deploying as a separate Vercel project
 
 Do this once, from the Vercel dashboard:
@@ -90,8 +112,8 @@ deployments can't clobber each other.
 
 ## Adding a new city landing page
 
-Three exist today (`app/mississauga-wasp-removal`, `app/oakville-wasp-removal`,
-`app/burlington-wasp-removal`), each a thin `page.tsx` that reads its data
+Thirteen exist today (`app/toronto-wasp-removal`, `app/mississauga-wasp-removal`
+and so on — one per entry in `CITY_LOCATIONS`), each a thin `page.tsx` that reads its data
 from `CITY_LOCATIONS` in `lib/locations.ts` and renders `<CityPage />`. To
 add another: append an entry to `CITY_LOCATIONS` (hand-write its own
 intro copy — don't just swap the city name into an existing entry's

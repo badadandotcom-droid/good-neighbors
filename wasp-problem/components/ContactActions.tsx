@@ -1,6 +1,8 @@
 import { PhoneLink } from "@/components/PhoneLink";
 import { TextLink } from "@/components/TextLink";
 import { TollFreeNumber } from "@/components/TollFreeNumber";
+import { LEAD_FORM_ANCHOR } from "@/components/LeadFormSection";
+import { leadFormEnabled } from "@/lib/leads";
 import { PHONE_LOCAL } from "@/lib/site";
 
 function PhoneIcon() {
@@ -43,13 +45,18 @@ function TextIcon() {
  * line takes calls only — so TextLink is hardcoded to PHONE_LOCAL and the
  * toll-free number is never described as text-capable anywhere, including in
  * accessible names.
+ *
+ * `requestLink` adds a quiet link down to the online request form — heroes
+ * only, on pages that carry LeadFormSection, and only once that form is live.
  */
 export function ContactActions({
   ctaLocationPrefix,
   variant = "light",
+  requestLink = false,
 }: {
   ctaLocationPrefix: string;
   variant?: "light" | "dark";
+  requestLink?: boolean;
 }) {
   const isDark = variant === "dark";
   const secondary = isDark
@@ -73,6 +80,17 @@ export function ContactActions({
         </TextLink>
       </div>
 
+      {requestLink && leadFormEnabled() && (
+        <p className={`mt-4 text-sm ${isDark ? "text-white/75" : "text-muted"}`}>
+          Prefer not to call?{" "}
+          <a
+            href={`#${LEAD_FORM_ANCHOR}`}
+            className={`inline-flex min-h-11 items-center font-semibold underline decoration-2 underline-offset-4 ${isDark ? "text-white decoration-yellow" : "text-ink decoration-yellow-deep"}`}
+          >
+            Send a request online
+          </a>
+        </p>
+      )}
     </div>
   );
 }

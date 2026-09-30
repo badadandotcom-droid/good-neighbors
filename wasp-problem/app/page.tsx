@@ -8,9 +8,10 @@ import { WhatWeHandle } from "@/components/WhatWeHandle";
 import { RecentJobs } from "@/components/RecentJobs";
 import { ServiceAreaList } from "@/components/ServiceAreaList";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { LeadFormSection } from "@/components/LeadFormSection";
 import { FinalCta } from "@/components/FinalCta";
 import { SiteFooter } from "@/components/SiteFooter";
-import { SAME_DAY_SERVICE } from "@/lib/site";
+import { AVAILABILITY_24_7, SAME_DAY_SERVICE } from "@/lib/site";
 import { HOMEPAGE_FAQS } from "@/lib/content";
 import { REVIEWS } from "@/lib/testimonials";
 
@@ -40,9 +41,10 @@ export default function Home() {
           <p className="mx-auto mt-2 max-w-md text-base text-muted sm:text-lg">
             Serving Toronto &amp; the GTA
           </p>
+          <p className="mx-auto mt-4 max-w-md text-base font-bold sm:text-lg">{AVAILABILITY_24_7}</p>
 
           <div className="mt-8">
-            <ContactActions ctaLocationPrefix="hero" variant="light" />
+            <ContactActions ctaLocationPrefix="hero" variant="light" requestLink />
           </div>
 
           <div className="mt-9 flex justify-center">
@@ -68,6 +70,7 @@ export default function Home() {
       <WhatWeHandle />
       <ProcessSteps />
       <ServiceAreaList />
+      <LeadFormSection page="/" />
       <FinalCta ctaLocation="final-cta" />
       <SiteFooter />
     </>
