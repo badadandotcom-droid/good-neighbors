@@ -44,6 +44,7 @@ export const REVIEWS: readonly Review[] = [
     quote:
       "They came over promptly and was able to effectively deal with the wasp problem I had. This was greatly appreciated because I had a family event in my yard 3 days later. The 90 day guarantee also provided some peace of mind (although I did not need the second visit). Friendly and informative service too!",
     author: "Mark Chan",
+    sourceUrl: "https://goo.gl/maps/5NL4oiuZf6rQb9T36",
     source: "Google",
     rating: 5,
   },
@@ -51,6 +52,7 @@ export const REVIEWS: readonly Review[] = [
     quote:
       "Duane was great to work with and even came back twice to my house to ensure the problem with my wasp nest was eradicated. I highly recommend.",
     author: "Prashanth Srichandramohan",
+    sourceUrl: "https://goo.gl/maps/gh34uYMMz72PA7Dm7",
     source: "Google",
     rating: 5,
   },
@@ -64,6 +66,7 @@ export const REVIEWS: readonly Review[] = [
   },
   {
     // "is gone is one day" is exactly how she wrote it. Not corrected.
+    // No sourceUrl yet — her review link has not been supplied.
     quote: "The wasp problem is gone is one day. It's great.",
     author: "Leina Choi",
     source: "Google",
