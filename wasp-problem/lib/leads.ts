@@ -84,7 +84,7 @@ function oneLine(value: string): string {
   return value.replace(/[\r\n]+/g, " ");
 }
 
-export async function sendLead(lead: LeadFields, page: string): Promise<boolean> {
+export async function sendLead(lead: LeadFields, page: string, suspectedBot = false): Promise<boolean> {
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.LEAD_TO_EMAIL;
   if (!apiKey || !to) return false;
@@ -108,6 +108,9 @@ export async function sendLead(lead: LeadFields, page: string): Promise<boolean>
     lead.details,
     "",
     `Sent from:   ${page}`,
+    ...(suspectedBot
+      ? ["", "Note: the hidden anti-spam field was filled in. Usually a bot; occasionally a browser autofilling for a real person, so it is delivered anyway."]
+      : []),
   ].join("\n");
 
   try {
@@ -117,7 +120,7 @@ export async function sendLead(lead: LeadFields, page: string): Promise<boolean>
       body: JSON.stringify({
         from: process.env.LEAD_FROM_EMAIL || DEFAULT_FROM,
         to: to.split(",").map((s) => s.trim()).filter(Boolean),
-        subject: oneLine(`Website request: ${lead.name}${lead.address ? ` — ${lead.address}` : ""}`),
+        subject: oneLine(`${suspectedBot ? "Possible spam — " : ""}Website request: ${lead.name}${lead.address ? ` — ${lead.address}` : ""}`),
         text,
         ...(lead.email ? { reply_to: lead.email } : {}),
       }),

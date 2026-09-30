@@ -93,7 +93,10 @@ export function CityPage({ location }: { location: CityLocation }) {
           <SectionHeading
             eyebrow="Service area"
             title="Also Serving the GTA"
-            lede={`Alongside ${location.city}, Wasp Problem serves Toronto and communities across the GTA.`}
+            lede={`Alongside ${location.city}, Wasp Problem serves ${
+              // Toronto has its own page now — "Alongside Toronto ... serves Toronto" read broken there.
+              location.city === "Toronto" ? "" : "Toronto and "
+            }communities across the GTA.`}
           />
           <ul className="mt-8 flex flex-wrap justify-center gap-2.5">
             {otherCities.map((l) => (
