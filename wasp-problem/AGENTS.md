@@ -103,9 +103,6 @@ Note that a contrast check reading only the alpha in a colour value misses CSS
 
 ## Open items
 
-- [ ] Google Business Profile *Share* link (the listing, not one review). The button
-      is built and verified — setting `GOOGLE_REVIEWS_URL` in `lib/site.ts` is all
-      that is left; it stays hidden while that is empty.
 - [ ] Reorder the Business Profile service areas so Toronto is first (owner's action).
 - [ ] Licence wording — only after the December exam is passed.
 - [ ] Link Google Ads to GA4 conversions (owner's action).

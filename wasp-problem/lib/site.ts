@@ -88,4 +88,4 @@ export const GA_MEASUREMENT_ID = "G-2NETZXNWVG";
  * sends everyone to one customer, and the second asks visitors to write a
  * review rather than read the existing ones.
  */
-export const GOOGLE_REVIEWS_URL = "" as const;
+export const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/88UEFwzbGr9cp55t9" as const;
