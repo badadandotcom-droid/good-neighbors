@@ -103,7 +103,6 @@ Note that a contrast check reading only the alpha in a colour value misses CSS
 
 ## Open items
 
-- [ ] Leina Choi's review link — her card shows plain "Google" until it arrives.
 - [ ] Google Business Profile *Share* link for a "See all reviews on Google" button.
 - [ ] Reorder the Business Profile service areas so Toronto is first (owner's action).
 - [ ] Licence wording — only after the December exam is passed.

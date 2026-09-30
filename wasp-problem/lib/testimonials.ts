@@ -66,9 +66,9 @@ export const REVIEWS: readonly Review[] = [
   },
   {
     // "is gone is one day" is exactly how she wrote it. Not corrected.
-    // No sourceUrl yet — her review link has not been supplied.
     quote: "The wasp problem is gone is one day. It's great.",
     author: "Leina Choi",
+    sourceUrl: "https://goo.gl/maps/976v777zxqMyDDsTA",
     source: "Google",
     rating: 5,
   },
