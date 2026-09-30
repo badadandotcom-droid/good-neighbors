@@ -29,8 +29,12 @@ const manrope = Manrope({
   display: "swap",
 });
 
-/** Owner-specified homepage title, used verbatim (it already ends with the brand, so it bypasses the template). */
-const HOME_TITLE = "Wasp Nest Removal Toronto & GTA | 24/7 Same-Day Service | Wasp Problem";
+/**
+ * Owner-specified homepage title (it already ends with the brand, so it bypasses the
+ * template). The asterisk is the owner's: it points to "based on availability" on
+ * the page, since a title has no room for the qualifier itself.
+ */
+const HOME_TITLE = "Wasp Nest Removal Toronto & GTA | 24/7 Same-Day Service* | Wasp Problem";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BRAND.url),

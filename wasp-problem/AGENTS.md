@@ -55,7 +55,8 @@ These are not style preferences. Breaking one is a real-world problem for the ow
    guarantee wording, the prices, or the "Simple. Fast. Local." heading.
 9. **Same-day service always carries "based on availability".** 24/7 is about
    answering calls and texts, not arrival times. The one exception is the
-   owner-specified homepage title, which says "24/7 Same-Day Service" as written.
+   owner-specified homepage title, which says "24/7 Same-Day Service*" — the asterisk
+   stands in for the qualifier.
 10. **Don't touch the GA4 tag or rename `cta_call` / `cta_text`.** Google Ads imports
    them as conversions. Every `tel:` link goes through `PhoneLink` and every `sms:`
    link through `TextLink`, so each one fires its event.
@@ -128,5 +129,4 @@ Note that a contrast check reading only the alpha in a colour value misses CSS
       `lead_form` as a key event in GA4.
 - [ ] Reorder the Business Profile service areas so Toronto is first (owner's action).
 - [ ] Licence wording — only after the December exam is passed.
-- [ ] Desktop hero reads thin; needs a real hero photo decision from the owner.
 - [ ] Confirm in Vercel that bare `waspproblem.ca` is primary, matching the code.
