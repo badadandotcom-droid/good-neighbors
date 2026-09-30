@@ -8,6 +8,7 @@ import { PricingTable } from "@/components/PricingTable";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
 import { TrustSection } from "@/components/TrustSection";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { LeadFormSection } from "@/components/LeadFormSection";
 import { FinalCta } from "@/components/FinalCta";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -46,7 +47,7 @@ export function CityPage({ location }: { location: CityLocation }) {
           </p>
 
           <div className="mt-8">
-            <ContactActions ctaLocationPrefix={`city-${location.slug}-hero`} variant="light" />
+            <ContactActions ctaLocationPrefix={`city-${location.slug}-hero`} variant="light" requestLink />
           </div>
 
           <div className="mt-9 flex justify-center">
@@ -114,6 +115,7 @@ export function CityPage({ location }: { location: CityLocation }) {
         </div>
       </section>
 
+      <LeadFormSection page={location.href} background="surface" />
       <FinalCta ctaLocation={`city-${location.slug}-final`} />
       <SiteFooter />
     </>

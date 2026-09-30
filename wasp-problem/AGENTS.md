@@ -69,7 +69,8 @@ These are not style preferences. Breaking one is a real-world problem for the ow
 - Based in **Toronto**, serves the whole GTA. `SERVICE_AREAS` is 12 cities, Toronto
   first. There is no public street address — it's a service-area business.
 - Canonical domain is bare `https://waspproblem.ca`. The `.com` redirects to it.
-- GA4 `G-2NETZXNWVG`. Conversion events: `cta_call`, `cta_text`.
+- GA4 `G-2NETZXNWVG`. Conversion events: `cta_call`, `cta_text`, `lead_form` (a request
+  from the online form was delivered).
 
 ## Where things live
 
@@ -81,10 +82,15 @@ These are not style preferences. Breaking one is a real-world problem for the ow
 | FAQ copy | `lib/content.ts` |
 | City landing pages | `lib/locations.ts` + `components/CityPage.tsx` |
 | Homepage section order | `app/page.tsx` |
+| Online request form (Resend delivery, env vars) | `lib/leads.ts`, `app/actions.ts`, `components/LeadForm*.tsx` |
 
 City pages don't inherit the `opengraph-image` file convention from the root — it is
 scoped per route segment, so `locationMetadata()` wires the share card explicitly.
 Don't "simplify" that away.
+
+The request form renders nowhere until `RESEND_API_KEY` and `LEAD_TO_EMAIL` are set in
+Vercel — deliberately, so the site never takes a request it drops. Don't make it render
+unconditionally, and don't point it at an address nobody reads.
 
 ## Verifying
 
@@ -103,6 +109,9 @@ Note that a contrast check reading only the alpha in a colour value misses CSS
 
 ## Open items
 
+- [ ] Turn on the request form: Resend account, then `RESEND_API_KEY` + `LEAD_TO_EMAIL`
+      in Vercel and redeploy (owner's action; details in `lib/leads.ts`). Then mark
+      `lead_form` as a key event in GA4.
 - [ ] Reorder the Business Profile service areas so Toronto is first (owner's action).
 - [ ] Licence wording — only after the December exam is passed.
 - [ ] Link Google Ads to GA4 conversions (owner's action).

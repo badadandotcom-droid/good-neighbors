@@ -8,6 +8,7 @@ import { WhatWeHandle } from "@/components/WhatWeHandle";
 import { RecentJobs } from "@/components/RecentJobs";
 import { ServiceAreaList } from "@/components/ServiceAreaList";
 import { FaqAccordion } from "@/components/FaqAccordion";
+import { LeadFormSection } from "@/components/LeadFormSection";
 import { FinalCta } from "@/components/FinalCta";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SAME_DAY_SERVICE } from "@/lib/site";
@@ -42,7 +43,7 @@ export default function Home() {
           </p>
 
           <div className="mt-8">
-            <ContactActions ctaLocationPrefix="hero" variant="light" />
+            <ContactActions ctaLocationPrefix="hero" variant="light" requestLink />
           </div>
 
           <div className="mt-9 flex justify-center">
@@ -68,6 +69,7 @@ export default function Home() {
       <WhatWeHandle />
       <ProcessSteps />
       <ServiceAreaList />
+      <LeadFormSection page="/" />
       <FinalCta ctaLocation="final-cta" />
       <SiteFooter />
     </>
