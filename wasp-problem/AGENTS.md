@@ -149,11 +149,30 @@ Ads points at them. Add new pages alongside them.
 
 ## Open items
 
-- [ ] Turn on the request form: Resend account, then `RESEND_API_KEY` + `LEAD_TO_EMAIL`
-      in Vercel and redeploy (owner's action; details in `lib/leads.ts`). Then mark
-      `lead_form` as a key event in GA4.
-      Resend login: the Wasp Problem Google account ("Continue with Google" at resend.com).
+- [x] Turn on the request form — done Oct 1, 2026. `RESEND_API_KEY` + `LEAD_TO_EMAIL` set in
+      Vercel (Production), redeployed, test request delivered to the inbox (not spam).
+- [ ] Mark `lead_form` as a key event in GA4 (owner's action).
+- [ ] Optional: verify waspproblem.ca in Resend so requests can go to any inbox and come from
+      a waspproblem.ca address (then set `LEAD_FROM_EMAIL`). Until then they can only go to
+      the Resend account's own email.
+- [ ] Separate from Wasp Problem: check how Good Neighbors' own form is set up in Resend
+      (it delivers to hello@goodneighborswildlife.ca from the same Resend account).
 - [ ] Reorder the Business Profile service areas so Toronto is first (owner's action).
 - [ ] Licence wording — only after the December exam is passed.
 - [ ] In Vercel → Settings → Domains, confirm bare `waspproblem.ca` redirects to `www.waspproblem.ca` and not the
       other way round (owner's action; the code now assumes www is primary).
+
+## Accounts
+
+Which login each service uses. Emails and sign-in method only — never passwords or API keys.
+
+| Service | Login | How to sign in | Notes |
+|---|---|---|---|
+| Resend (request form email) | duane@goodneighborswildlife.ca | "Log in with Google", from the **Work** (Good Neighbors) Chrome profile | Shared with Good Neighbors. Wasp Problem's key is named "Wasp Problem website" — don't delete it, the form stops sending. Requests go to `LEAD_TO_EMAIL` = duane@goodneighborswildlife.ca. |
+| Resend (unused) | badadandotcom@gmail.com | — | Created by mistake Oct 1, 2026. Not used; safe to ignore or delete. |
+| Vercel (hosting) | badadandotcom-droid team | the Chrome profile with the wasp picture | Project `wasp-problem`. Holds `RESEND_API_KEY` and `LEAD_TO_EMAIL`. |
+
+Chrome profiles: the one with the **wasp picture** is signed in to Google as
+badadandotcom@gmail.com, not a Wasp Problem address — there is no Wasp Problem email yet.
+"Log in with Google" from that profile signs in as badadandotcom. Use the **Work** profile
+for anything that should be under duane@goodneighborswildlife.ca.
