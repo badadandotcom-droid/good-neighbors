@@ -2,6 +2,8 @@
 
 ## Wasp Problem standing rules (from the Google Ads side)
 
+These rules apply only to Wasp Problem (the site in `wasp-problem/`). They do not apply to Good Neighbors Wildlife or any other work in this repo.
+
 - Business: Wasp Problem, waspproblem.ca, wasp / hornet / yellow jacket / bee removal in Toronto and the GTA. Google Ads sends paid traffic to the homepage and the city pages.
 - 24/7 means PHONE CALLS ONLY. The owner answers calls around the clock but may not see texts or web requests until morning. Never promise a 24/7 reply to a text. Hero line: "Open 24/7 — call us anytime." Texts and web requests: "usually within a few hours; overnight, first thing in the morning." Ad copy matches: "Open 24/7 — Call Now", never "Call or Text 24/7".
 - Same-day service is always "based on availability". Homepage title: "Wasp Nest Removal Toronto & GTA | 24/7 Same-Day Service* | Wasp Problem" (the asterisk points to that line on the page).
