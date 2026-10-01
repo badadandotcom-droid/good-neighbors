@@ -103,7 +103,7 @@ These are not style preferences. Breaking one is a real-world problem for the ow
 | City landing pages | `lib/locations.ts` + `components/CityPage.tsx` |
 | Homepage section order | `app/page.tsx` |
 | Online request form (Resend delivery, env vars) | `lib/leads.ts`, `app/actions.ts`, `components/LeadForm*.tsx` |
-| Link preview when the URL is texted/shared (image, og title/description) | `app/opengraph-image.png` (+ `.alt.txt`), `SHARE_PREVIEW` in `lib/site.ts` |
+| Link preview when the URL is texted/shared (image, og title/description) | `app/opengraph-image.tsx` (drawn at build time; assets in `assets/og/`), `SERVICE_REGION` + `SHARE_PREVIEW` in `lib/site.ts` |
 
 City pages don't inherit the `opengraph-image` file convention from the root — it is
 scoped per route segment, so `locationMetadata()` wires the share card explicitly.
@@ -127,6 +127,23 @@ Note that a contrast check reading only the alpha in a colour value misses CSS
 
 - `claude/good-neighbors-website-17l0bw` — tracked by Vercel production. Commit here.
 - `claude/wasp-problem-website-h1a4xo` — kept in sync; push to both.
+
+## Expanding beyond the GTA
+
+The owner plans to expand (BC and elsewhere) in 2027. When that happens:
+
+1. Change `SERVICE_REGION` in `lib/site.ts`. The link-preview image, og:title and
+   og:description update from it on the next deploy. Check the image afterwards at
+   `/opengraph-image`, since the region sits on one line.
+2. Then update the places that still name Toronto / the GTA directly: `BRAND.description`
+   and `SERVICE_AREAS` (`lib/site.ts`), the homepage title and the LocalBusiness schema
+   (`app/layout.tsx`, address and `areaServed`), the hero (`app/page.tsx`),
+   `components/FinalCta.tsx`, `SiteFooter.tsx`, `ServiceAreaList.tsx`, `PricingTable.tsx`,
+   `CityPage.tsx`, and the city pages in `lib/locations.ts`.
+3. Off the site: Google Business Profile service areas, Google Ads locations and ad copy.
+
+Never rename or remove an existing `/<city>-wasp-removal` URL while doing this, because Google
+Ads points at them. Add new pages alongside them.
 
 ## Open items
 

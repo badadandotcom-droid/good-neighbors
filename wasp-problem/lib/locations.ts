@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BRAND } from "@/lib/site";
+import { BRAND, SHARE_PREVIEW } from "@/lib/site";
 
 export type CityLocation = {
   slug: string;
@@ -276,7 +276,7 @@ export function locationMetadata(location: CityLocation): Metadata {
   // The opengraph-image file convention only covers its own route segment (the
   // homepage); city pages need the same brand card wired in explicitly or a
   // shared link gets no preview at all.
-  const shareImage = { url: "/opengraph-image.png", width: 1200, height: 630, alt: BRAND.name };
+  const shareImage = { url: "/opengraph-image", width: 1200, height: 630, alt: SHARE_PREVIEW.imageAlt };
   return {
     title: location.metaTitle,
     description: location.metaDescription,

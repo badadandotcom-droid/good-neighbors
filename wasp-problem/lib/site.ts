@@ -120,7 +120,20 @@ export const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/88UEFwzbGr9cp55t9" as
  * the signs spell it, and nothing here promises a response time. If it did,
  * "same-day" would need "based on availability" beside it.
  */
+/**
+ * The area the business serves, as one phrase. The link preview (share image,
+ * og:title, og:description) is built from it, so expanding to new regions means
+ * changing this line and redeploying — the image redraws itself at build time
+ * (app/opengraph-image.tsx). Keep it short: it sits on one line of the image.
+ * The rest of the site still names Toronto & the GTA directly; see "Expanding
+ * beyond the GTA" in AGENTS.md for the full list.
+ */
+export const SERVICE_REGION = "Toronto & the GTA";
+
 export const SHARE_PREVIEW = {
-  title: "Wasp Nest Removal in Toronto & the GTA",
-  description: `Wasp and hornet nest removal across Toronto and the GTA. Upfront pricing, ${GUARANTEE.name}. Call ${PHONE_TOLLFREE.display}.`,
+  title: `Wasp Nest Removal in ${SERVICE_REGION}`,
+  description: `Wasp and hornet nest removal across ${SERVICE_REGION}. Upfront pricing, ${GUARANTEE.name}. Call ${PHONE_TOLLFREE.display}.`,
+  /** The service line on the share image, above the region. */
+  imageService: "Wasp & hornet nest removal",
+  imageAlt: `${BRAND.name} — wasp and hornet nest removal in ${SERVICE_REGION}. Call ${PHONE_TOLLFREE.display}.`,
 } as const;
