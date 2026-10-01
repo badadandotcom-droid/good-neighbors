@@ -18,7 +18,7 @@ export function FinalCta({ ctaLocation }: { ctaLocation: string }) {
           Serving Toronto &amp; the GTA
         </p>
         <div className="mt-8">
-          <ContactActions ctaLocationPrefix={ctaLocation} variant="dark" />
+          <ContactActions ctaLocationPrefix={ctaLocation} variant="dark" localCall />
         </div>
         <div className="mt-9 flex justify-center">
           <TrustPoints tone="dark" />
