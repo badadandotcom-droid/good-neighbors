@@ -75,8 +75,9 @@ export const WHAT_WE_HANDLE = [
     body: "Active wasp and hornet nests around the home, treated at the source.",
   },
   {
-    title: "Carpenter Bees",
-    body: "Carpenter bees boring into wood — fascia, decks, siding and other structural wood.",
+    // Generic on purpose (owner's call): callers say "bees", not a species.
+    title: "Bees",
+    body: "Bees in walls, soffits and the ground, and bees boring into wood — fascia, decks and siding.",
   },
   {
     // Scope, not a job history: no list of building types, so nobody wonders whether theirs is on it.
@@ -86,7 +87,7 @@ export const WHAT_WE_HANDLE = [
 ] as const;
 
 export const WHAT_WE_HANDLE_SCOPE_NOTE =
-  "Wasp, hornet and carpenter bee specialists.";
+  "Wasp, hornet and bee specialists.";
 
 /** Homepage-specific FAQ set — replaces the appended-BASE_FAQS pattern city pages still use, since the homepage needs pricing/guarantee-aware answers. */
 export const HOMEPAGE_FAQS = [

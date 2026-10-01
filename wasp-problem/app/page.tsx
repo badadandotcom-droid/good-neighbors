@@ -6,6 +6,7 @@ import { GuaranteeSection } from "@/components/GuaranteeSection";
 import { TrustSection } from "@/components/TrustSection";
 import { HiddenNestSection } from "@/components/HiddenNestSection";
 import { WhatWeHandle } from "@/components/WhatWeHandle";
+import { BeesSection } from "@/components/BeesSection";
 import { RecentJobs } from "@/components/RecentJobs";
 import { ServiceAreaList } from "@/components/ServiceAreaList";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -71,6 +72,7 @@ export default function Home() {
       <FaqAccordion items={HOMEPAGE_FAQS} background="white" />
       <RecentJobs />
       <WhatWeHandle />
+      <BeesSection />
       <ProcessSteps />
       <ServiceAreaList />
       <LeadFormSection page="/" />

@@ -77,6 +77,9 @@ export function CityPage({ location }: { location: CityLocation }) {
             in the brick, the soffit, the siding, a vent or a window frame usually means a nest hidden
             inside. Spraying from outside rarely reaches it — we treat hidden nests at the source.
           </p>
+          <p className="mt-4 text-base leading-relaxed text-muted">
+            We also remove bees — including bees in walls and soffits.
+          </p>
           <PhoneLink
             location={`city-${location.slug}-intro`}
             className="btn btn-dark mt-8 px-7 py-4 text-lg"
