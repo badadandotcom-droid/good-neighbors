@@ -103,6 +103,7 @@ These are not style preferences. Breaking one is a real-world problem for the ow
 | City landing pages | `lib/locations.ts` + `components/CityPage.tsx` |
 | Homepage section order | `app/page.tsx` |
 | Online request form (Resend delivery, env vars) | `lib/leads.ts`, `app/actions.ts`, `components/LeadForm*.tsx` |
+| Link preview when the URL is texted/shared (image, og title/description) | `app/opengraph-image.png` (+ `.alt.txt`), `SHARE_PREVIEW` in `lib/site.ts` |
 
 City pages don't inherit the `opengraph-image` file convention from the root — it is
 scoped per route segment, so `locationMetadata()` wires the share card explicitly.

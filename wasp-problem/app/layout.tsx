@@ -6,7 +6,7 @@ import "./globals.css";
 import { PhoneLink } from "@/components/PhoneLink";
 import { StickyCallBar } from "@/components/StickyCallBar";
 import { TextLink } from "@/components/TextLink";
-import { BRAND, GA_MEASUREMENT_ID, PHONE_LOCAL, PHONE_TOLLFREE, SERVICE_AREAS } from "@/lib/site";
+import { BRAND, GA_MEASUREMENT_ID, PHONE_LOCAL, PHONE_TOLLFREE, SERVICE_AREAS, SHARE_PREVIEW } from "@/lib/site";
 import { PRICING } from "@/lib/pricing";
 
 /** Sign face — the heavy condensed grotesque matching the lawn-sign lettering. Used only for the "WASP PROBLEM?" lockup. */
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
   description: BRAND.description,
   alternates: { canonical: BRAND.url },
   openGraph: {
-    title: HOME_TITLE,
-    description: BRAND.description,
+    title: SHARE_PREVIEW.title,
+    description: SHARE_PREVIEW.description,
     url: BRAND.url,
     siteName: BRAND.name,
     type: "website",
@@ -55,8 +55,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: HOME_TITLE,
-    description: BRAND.description,
+    title: SHARE_PREVIEW.title,
+    description: SHARE_PREVIEW.description,
   },
 };
 

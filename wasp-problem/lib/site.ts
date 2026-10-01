@@ -109,3 +109,18 @@ export const GA_MEASUREMENT_ID = "G-2NETZXNWVG";
  * review rather than read the existing ones.
  */
 export const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/88UEFwzbGr9cp55t9" as const;
+
+/**
+ * What a link preview shows when the site URL is sent in a text message or
+ * shared (og:title / og:description / twitter:*), kept separate from the page's
+ * search <title> and meta description so tuning one never changes the other.
+ * Short on purpose: messaging apps cut titles off around 40-60 characters and
+ * descriptions after two lines. The brand is carried by og:site_name and the
+ * share image (app/opengraph-image.png), the phone number is spelled the way
+ * the signs spell it, and nothing here promises a response time. If it did,
+ * "same-day" would need "based on availability" beside it.
+ */
+export const SHARE_PREVIEW = {
+  title: "Wasp Nest Removal in Toronto & the GTA",
+  description: `Wasp and hornet nest removal across Toronto and the GTA. Upfront pricing, ${GUARANTEE.name}. Call ${PHONE_TOLLFREE.display}.`,
+} as const;
