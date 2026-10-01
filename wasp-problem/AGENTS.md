@@ -152,6 +152,7 @@ Ads points at them. Add new pages alongside them.
 - [ ] Turn on the request form: Resend account, then `RESEND_API_KEY` + `LEAD_TO_EMAIL`
       in Vercel and redeploy (owner's action; details in `lib/leads.ts`). Then mark
       `lead_form` as a key event in GA4.
+      Resend login: the Wasp Problem Google account ("Continue with Google" at resend.com).
 - [ ] Reorder the Business Profile service areas so Toronto is first (owner's action).
 - [ ] Licence wording — only after the December exam is passed.
 - [ ] In Vercel → Settings → Domains, confirm bare `waspproblem.ca` redirects to `www.waspproblem.ca` and not the
