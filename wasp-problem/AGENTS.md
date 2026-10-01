@@ -88,7 +88,9 @@ These are not style preferences. Breaking one is a real-world problem for the ow
   street address — it's a service-area business.
 - City pages: 13, one per `CITY_LOCATIONS` entry (Brampton has none). Each has its own
   hand-written copy — never clone one and swap the name.
-- Canonical domain is bare `https://waspproblem.ca`. The `.com` redirects to it.
+- Canonical domain is `https://www.waspproblem.ca` (`BRAND.url` in `lib/site.ts`; the canonical tag, og:url,
+  og:image, sitemap, robots and schema all follow it). Vercel's Domains list shows the www addresses
+  (.ca and .com) as serving the site. The share image prints `waspproblem.ca` without the www.
 - GA4 `G-2NETZXNWVG`. Conversion events: `cta_call`, `cta_text`, `lead_form` (a request
   from the online form was delivered).
 
@@ -152,4 +154,5 @@ Ads points at them. Add new pages alongside them.
       `lead_form` as a key event in GA4.
 - [ ] Reorder the Business Profile service areas so Toronto is first (owner's action).
 - [ ] Licence wording — only after the December exam is passed.
-- [ ] Confirm in Vercel that bare `waspproblem.ca` is primary, matching the code.
+- [ ] In Vercel → Settings → Domains, confirm bare `waspproblem.ca` redirects to `www.waspproblem.ca` and not the
+      other way round (owner's action; the code now assumes www is primary).

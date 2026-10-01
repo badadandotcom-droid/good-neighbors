@@ -6,7 +6,10 @@
 
 export const BRAND = {
   name: "Wasp Problem",
-  url: "https://waspproblem.ca",
+  // Canonical host. The canonical tag, og:url, og:image, sitemap, robots and schema all read this.
+  // www, because that is what Vercel serves (Domains shows www.waspproblem.ca); the share image
+  // strips the "www." so the card matches the signs. Change here only, then redeploy.
+  url: "https://www.waspproblem.ca",
   description:
     "Wasp nest removal in Toronto and the GTA. Open 24/7, with same-day service based on availability. Call 1-800-800-WASP or text 416-700-4259.",
 } as const;

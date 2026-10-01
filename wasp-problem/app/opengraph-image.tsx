@@ -36,7 +36,8 @@ const SOFT_WHITE = "#d9dce2";
 
 export default function Image() {
   const iconSrc = `data:image/png;base64,${icon.toString("base64")}`;
-  const domain = new URL(BRAND.url).host;
+  // The signs say waspproblem.ca, so the card drops "www." even though the canonical host has it.
+  const domain = new URL(BRAND.url).host.replace(/^www\./, "");
 
   return new ImageResponse(
     (
