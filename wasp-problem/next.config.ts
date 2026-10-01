@@ -1,6 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        // The share image used to be a static file at this path; it is now drawn
+        // at build time by app/opengraph-image.tsx. Keeps previews that cached
+        // the old URL from showing a broken image.
+        source: "/opengraph-image.png",
+        destination: "/opengraph-image",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

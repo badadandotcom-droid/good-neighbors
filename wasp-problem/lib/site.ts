@@ -6,7 +6,10 @@
 
 export const BRAND = {
   name: "Wasp Problem",
-  url: "https://waspproblem.ca",
+  // Canonical host. The canonical tag, og:url, og:image, sitemap, robots and schema all read this.
+  // www, because that is what Vercel serves (Domains shows www.waspproblem.ca); the share image
+  // strips the "www." so the card matches the signs. Change here only, then redeploy.
+  url: "https://www.waspproblem.ca",
   description:
     "Wasp nest removal in Toronto and the GTA. Open 24/7, with same-day service based on availability. Call 1-800-800-WASP or text 416-700-4259.",
 } as const;
@@ -109,3 +112,31 @@ export const GA_MEASUREMENT_ID = "G-2NETZXNWVG";
  * review rather than read the existing ones.
  */
 export const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/88UEFwzbGr9cp55t9" as const;
+
+/**
+ * What a link preview shows when the site URL is sent in a text message or
+ * shared (og:title / og:description / twitter:*), kept separate from the page's
+ * search <title> and meta description so tuning one never changes the other.
+ * Short on purpose: messaging apps cut titles off around 40-60 characters and
+ * descriptions after two lines. The brand is carried by og:site_name and the
+ * share image (app/opengraph-image.png), the phone number is spelled the way
+ * the signs spell it, and nothing here promises a response time. If it did,
+ * "same-day" would need "based on availability" beside it.
+ */
+/**
+ * The area the business serves, as one phrase. The link preview (share image,
+ * og:title, og:description) is built from it, so expanding to new regions means
+ * changing this line and redeploying — the image redraws itself at build time
+ * (app/opengraph-image.tsx). Keep it short: it sits on one line of the image.
+ * The rest of the site still names Toronto & the GTA directly; see "Expanding
+ * beyond the GTA" in AGENTS.md for the full list.
+ */
+export const SERVICE_REGION = "Toronto & the GTA";
+
+export const SHARE_PREVIEW = {
+  title: `Wasp Nest Removal in ${SERVICE_REGION}`,
+  description: `Wasp and hornet nest removal across ${SERVICE_REGION}. Upfront pricing, ${GUARANTEE.name}. Call ${PHONE_TOLLFREE.display}.`,
+  /** The service line on the share image, above the region. */
+  imageService: "Wasp & hornet nest removal",
+  imageAlt: `${BRAND.name} — wasp and hornet nest removal in ${SERVICE_REGION}. Call ${PHONE_TOLLFREE.display}.`,
+} as const;
