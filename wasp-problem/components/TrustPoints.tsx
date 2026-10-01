@@ -29,7 +29,7 @@ export function TrustPoints({ tone = "light" }: { tone?: "light" | "dark" }) {
     <a key="g" href="#guarantee" className={link}>
       {GUARANTEE.name}
     </a>,
-    <>Wasps, hornets &amp; carpenter bees</>,
+    <>Wasps, hornets &amp; bees</>,
     <>{INSURANCE}</>,
   ];
 

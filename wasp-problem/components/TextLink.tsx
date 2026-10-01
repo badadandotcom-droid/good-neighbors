@@ -1,6 +1,6 @@
 "use client";
 
-import { trackEvent } from "@/lib/analytics";
+import { eventContext, trackEvent } from "@/lib/analytics";
 import { PHONE_LOCAL } from "@/lib/site";
 
 /**
@@ -23,7 +23,7 @@ export function TextLink({
   return (
     <a
       href={PHONE_LOCAL.smsHref}
-      onClick={() => trackEvent("cta_text", { location })}
+      onClick={() => trackEvent("cta_text", { location, ...eventContext(PHONE_LOCAL.smsHref) })}
       className={className}
       aria-label={ariaLabel}
     >

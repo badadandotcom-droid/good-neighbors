@@ -53,10 +53,13 @@ export function ContactActions({
   ctaLocationPrefix,
   variant = "light",
   requestLink = false,
+  localCall = false,
 }: {
   ctaLocationPrefix: string;
   variant?: "light" | "dark";
   requestLink?: boolean;
+  /** Also offer the local line as a call — used in the contact section, where both numbers belong as tap-to-call. */
+  localCall?: boolean;
 }) {
   const isDark = variant === "dark";
   const secondary = isDark
@@ -79,6 +82,19 @@ export function ContactActions({
           Text {PHONE_LOCAL.display}
         </TextLink>
       </div>
+
+      {localCall && (
+        <p className={`mt-4 text-sm ${isDark ? "text-white/75" : "text-muted"}`}>
+          Or call the local line:{" "}
+          <PhoneLink
+            number={PHONE_LOCAL}
+            location={`${ctaLocationPrefix}-local-call`}
+            className={`inline-flex min-h-11 items-center font-semibold underline decoration-2 underline-offset-4 ${isDark ? "text-white decoration-yellow" : "text-ink decoration-yellow-deep"}`}
+          >
+            {PHONE_LOCAL.display}
+          </PhoneLink>
+        </p>
+      )}
 
       {requestLink && leadFormEnabled() && (
         <p className={`mt-4 text-sm ${isDark ? "text-white/75" : "text-muted"}`}>

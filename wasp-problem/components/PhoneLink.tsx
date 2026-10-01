@@ -1,6 +1,6 @@
 "use client";
 
-import { trackEvent } from "@/lib/analytics";
+import { eventContext, trackEvent } from "@/lib/analytics";
 import { PHONE_TOLLFREE } from "@/lib/site";
 
 type PhoneNumber = { display: string; href: string };
@@ -25,7 +25,7 @@ export function PhoneLink({
   return (
     <a
       href={number.href}
-      onClick={() => trackEvent("cta_call", { location, number: number.display })}
+      onClick={() => trackEvent("cta_call", { location, number: number.display, ...eventContext(number.href) })}
       className={className}
     >
       {children}

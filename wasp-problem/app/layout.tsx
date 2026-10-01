@@ -5,6 +5,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { PhoneLink } from "@/components/PhoneLink";
 import { StickyCallBar } from "@/components/StickyCallBar";
+import { TextLink } from "@/components/TextLink";
 import { BRAND, GA_MEASUREMENT_ID, PHONE_LOCAL, PHONE_TOLLFREE, SERVICE_AREAS } from "@/lib/site";
 import { PRICING } from "@/lib/pricing";
 
@@ -82,7 +83,7 @@ function localBusinessJsonLd() {
     name: BRAND.name,
     description: BRAND.description,
     url: BRAND.url,
-    telephone: PHONE_TOLLFREE.href.replace("tel:", ""),
+    telephone: PHONE_LOCAL.href.replace("tel:", ""),
     contactPoint: [PHONE_TOLLFREE, PHONE_LOCAL].map((phone) => ({
       "@type": "ContactPoint",
       telephone: phone.href.replace("tel:", ""),
@@ -136,13 +137,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </span>
             </Link>
             <div className="flex shrink-0 items-center gap-2">
+              {/* The 416 line takes calls and texts, so each action gets its own link: this one calls, the next one texts. */}
               <PhoneLink
                 number={PHONE_LOCAL}
                 location="header-local"
                 className="btn hidden min-h-11 border-[1.5px] border-white/30 bg-transparent px-4 py-2 text-sm text-white hover:border-white hover:bg-white/10 md:inline-flex"
               >
-                Call or text {PHONE_LOCAL.display}
+                Call {PHONE_LOCAL.display}
               </PhoneLink>
+              <TextLink
+                location="header-text"
+                ariaLabel={`Text ${PHONE_LOCAL.display}`}
+                className="btn hidden min-h-11 border-[1.5px] border-white/30 bg-transparent px-4 py-2 text-sm text-white hover:border-white hover:bg-white/10 md:inline-flex"
+              >
+                Text us
+              </TextLink>
               <PhoneLink
                 location="header"
                 className="btn btn-primary min-h-11 shadow-none whitespace-nowrap px-3 py-2 text-sm"

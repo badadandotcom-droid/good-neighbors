@@ -4,7 +4,7 @@ import { useActionState, useEffect } from "react";
 import { submitLead } from "@/app/actions";
 import { PhoneLink } from "@/components/PhoneLink";
 import { TextLink } from "@/components/TextLink";
-import { trackEvent } from "@/lib/analytics";
+import { eventContext, trackEvent } from "@/lib/analytics";
 import type { LeadFields, LeadFormState } from "@/lib/leads";
 import { PHONE_LOCAL, PHONE_TOLLFREE } from "@/lib/site";
 
@@ -27,7 +27,7 @@ export function LeadForm({ page }: { page: string }) {
   const [state, formAction, pending] = useActionState(submitLead, INITIAL);
 
   useEffect(() => {
-    if (state.status === "sent") trackEvent("lead_form", { location: page });
+    if (state.status === "sent") trackEvent("lead_form", { location: page, ...eventContext() });
   }, [state, page]);
 
   if (state.status === "sent") {

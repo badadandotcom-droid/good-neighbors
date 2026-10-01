@@ -71,6 +71,15 @@ export function CityPage({ location }: { location: CityLocation }) {
               {paragraph}
             </p>
           ))}
+          {/* Short form of the homepage's hidden-nest section — the way callers describe the problem. */}
+          <p className="mt-6 rounded-[0.625rem] bg-yellow-tint px-5 py-4 text-left text-base leading-relaxed">
+            <strong className="font-extrabold">Wasps going into a hole?</strong> A hole in the wall, a gap
+            in the brick, the soffit, the siding, a vent or a window frame usually means a nest hidden
+            inside. Spraying from outside rarely reaches it — we treat hidden nests at the source.
+          </p>
+          <p className="mt-4 text-base leading-relaxed text-muted">
+            We also remove bees — including bees in walls and soffits.
+          </p>
           <PhoneLink
             location={`city-${location.slug}-intro`}
             className="btn btn-dark mt-8 px-7 py-4 text-lg"

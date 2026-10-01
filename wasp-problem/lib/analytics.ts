@@ -15,6 +15,20 @@
 /** `lead_form` fires once a request from components/LeadForm.tsx has actually been delivered. */
 export type ConversionEvent = "cta_call" | "cta_text" | "lead_form";
 
+/**
+ * Parameters every conversion event carries, so GA4 and Google Ads can split
+ * the same event by number and by landing page: `phone_number` is the digits of
+ * the tapped number (18008009277 or 4167004259; absent on lead_form) and `page`
+ * is the path the tap happened on. Register both as event-scoped custom
+ * dimensions in GA4 to see them in reports. `location` (which button) stays.
+ */
+export function eventContext(href?: string): { phone_number?: string; page: string } {
+  return {
+    ...(href ? { phone_number: href.replace(/\D/g, "") } : {}),
+    page: typeof window === "undefined" ? "" : window.location.pathname,
+  };
+}
+
 type Gtag = (...args: unknown[]) => void;
 
 export function trackEvent(

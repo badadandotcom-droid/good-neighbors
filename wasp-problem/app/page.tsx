@@ -4,7 +4,9 @@ import { ProcessSteps } from "@/components/ProcessSteps";
 import { PricingTable } from "@/components/PricingTable";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
 import { TrustSection } from "@/components/TrustSection";
+import { HiddenNestSection } from "@/components/HiddenNestSection";
 import { WhatWeHandle } from "@/components/WhatWeHandle";
+import { BeesSection } from "@/components/BeesSection";
 import { RecentJobs } from "@/components/RecentJobs";
 import { ServiceAreaList } from "@/components/ServiceAreaList";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -56,6 +58,8 @@ export default function Home() {
       </section>
 
       <TrustSection reviews={REVIEWS} />
+      {/* Callers say "wasps going into a hole", so that section sits right after the proof and sets up the hidden-nest price below. */}
+      <HiddenNestSection />
       {/*
        * Order is: what it costs, what's guaranteed, your questions — then the
        * proof. The FAQ carries the answers that actually calm a nervous
@@ -68,6 +72,7 @@ export default function Home() {
       <FaqAccordion items={HOMEPAGE_FAQS} background="white" />
       <RecentJobs />
       <WhatWeHandle />
+      <BeesSection />
       <ProcessSteps />
       <ServiceAreaList />
       <LeadFormSection page="/" />

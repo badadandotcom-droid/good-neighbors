@@ -1,6 +1,6 @@
 import { PhoneLink } from "@/components/PhoneLink";
 import { TextLink } from "@/components/TextLink";
-import { PHONE_LOCAL, PHONE_TOLLFREE } from "@/lib/site";
+import { INSURANCE, PHONE_LOCAL, PHONE_TOLLFREE } from "@/lib/site";
 
 const FOOTER_LINK =
   "inline-flex min-h-11 items-center font-semibold text-white underline decoration-yellow decoration-2 underline-offset-4";
@@ -32,7 +32,8 @@ export function SiteFooter() {
           </TextLink>
         </p>
 
-        <p className="mt-4 text-xs text-white/60">WaspProblem.ca</p>
+        <p className="mt-4 text-white/75">{INSURANCE}.</p>
+        <p className="mt-2 text-xs text-white/60">WaspProblem.ca</p>
       </div>
     </footer>
   );

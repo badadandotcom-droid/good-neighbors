@@ -17,7 +17,8 @@ Everything below is outside the Next.js block above, so `next dev` preserves it.
 ## What this is
 
 `wasp-problem/` is the marketing site for **Wasp Problem** (waspproblem.ca) — wasp,
-hornet and carpenter bee nest removal in Toronto and the GTA. Owner: Duane.
+hornet and bee nest removal in Toronto and the GTA. Owner: Duane. Bees are described
+generically on purpose (owner's call) — callers say "bees", not a species.
 Next.js 16 App Router, React 19, TypeScript strict, Tailwind v4 (`@theme` in
 `app/globals.css`; there is no `tailwind.config`).
 
