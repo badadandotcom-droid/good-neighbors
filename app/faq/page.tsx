@@ -21,8 +21,11 @@ export default function FaqPage() {
 
       <section className="border-b border-stone-300 py-16 sm:py-24">
         <Container className="max-w-2xl">
-          <p className="text-xs font-semibold tracking-[0.18em] text-pine-600 uppercase">FAQ</p>
-          <h1 className="mt-3 text-balance font-display text-4xl leading-[1.06] text-charcoal sm:text-5xl">
+          <p className="flex items-center gap-2.5 text-xs font-semibold tracking-[0.18em] text-pine-600 uppercase">
+            <span className="h-px w-6 bg-brass-400" aria-hidden="true" />
+            FAQ
+          </p>
+          <h1 className="mt-4 text-balance font-display text-4xl leading-[1.06] text-charcoal sm:text-5xl">
             Questions, answered plainly.
           </h1>
         </Container>

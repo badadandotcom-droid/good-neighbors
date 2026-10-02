@@ -2,21 +2,42 @@
 
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { PhoneIcon } from "@/components/shared/ContactIcons";
 import { cn } from "@/lib/utils";
 import { trackEvent, type ConversionEvent } from "@/lib/analytics";
 
-type Variant = "primary" | "secondary" | "ghost" | "outline-on-dark";
+type Variant = "primary" | "secondary" | "outline" | "ghost" | "outline-on-dark";
 type Size = "md" | "lg";
 
 const base =
-  "inline-flex items-center justify-center gap-2 font-medium transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50";
+  "group inline-flex items-center justify-center gap-2 font-medium transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50";
 
 const variants: Record<Variant, string> = {
   primary: "bg-pine-600 text-bone-50 hover:bg-pine-700 active:bg-pine-700",
   secondary: "bg-bone-50 text-ink border border-stone-400 hover:border-ink hover:bg-white",
+  /** Paired with `primary` where both choices need to read as buttons — the mobile
+      action bar, where a bare text link read as a caption rather than a control. */
+  outline: "bg-bone-50 text-pine-700 border-2 border-pine-600 hover:bg-pine-50 active:bg-pine-50",
   ghost: "text-ink hover:text-pine-600",
   "outline-on-dark": "border border-bone-50/40 text-bone-50 hover:bg-bone-50/10",
 };
+
+/** A restrained arrow that nudges right on hover — the one micro-interaction on the primary CTA. */
+function HoverArrow() {
+  return (
+    <svg
+      viewBox="0 0 16 10"
+      className="h-2.5 w-4 shrink-0 stroke-current transition-transform duration-200 group-hover:translate-x-1"
+      fill="none"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M1 5h13M9.5 1 14 5l-4.5 4" />
+    </svg>
+  );
+}
 
 const sizes: Record<Size, string> = {
   md: "px-5 py-3 text-[15px] rounded-sm",
@@ -48,18 +69,29 @@ export function CTAButton({
   };
 
   const isExternal = href.startsWith("tel:") || href.startsWith("mailto:");
+  const isTel = href.startsWith("tel:");
+
+  // A forward arrow implies navigation; a call button gets a handset instead, and
+  // leads with it so the action reads before the number does.
+  const content = (
+    <>
+      {isTel && <PhoneIcon className="h-[1.1em] w-[1.1em] shrink-0" />}
+      {children}
+      {!isTel && variant === "primary" && <HoverArrow />}
+    </>
+  );
 
   if (isExternal) {
     return (
       <a href={href} onClick={handleClick} className={cn(base, variants[variant], sizes[size], className)}>
-        {children}
+        {content}
       </a>
     );
   }
 
   return (
     <Link href={href} onClick={handleClick} className={cn(base, variants[variant], sizes[size], className)}>
-      {children}
+      {content}
     </Link>
   );
 }

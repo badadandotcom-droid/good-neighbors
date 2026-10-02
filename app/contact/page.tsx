@@ -2,9 +2,9 @@ import { Container } from "@/components/shared/Container";
 import { GetHelpForm } from "@/components/forms/GetHelpForm";
 import { PhoneLink } from "@/components/shared/PhoneLink";
 import { SameDayBadge } from "@/components/shared/SameDayBadge";
-import { Illustration } from "@/components/illustrations/Illustration";
-import { getPhone, getSameDayMessage } from "@/lib/config/resolvers";
-import { CONTACT, BRAND } from "@/lib/config/site";
+import { MailIcon, PhoneIcon } from "@/components/shared/ContactIcons";
+import { getHoursNote, getPhone } from "@/lib/config/resolvers";
+import { CONTACT } from "@/lib/config/site";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -26,28 +26,26 @@ export default function ContactPage() {
             Get help now
           </h1>
           <p className="mt-5 text-[15px] leading-relaxed text-ink-700 text-pretty">
-            Tell us what&apos;s going on and where. A real person will follow up — no automated runaround.
-            {" "}
-            {getSameDayMessage()}
+            Tell us what you&apos;re hearing or seeing at your home. We&apos;ll get in touch to confirm the details
+            and arrange a time to come out.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 rounded-sm border border-stone-300 bg-bone-50 p-6">
             <div className="flex items-center gap-3">
-              <Illustration id="phone-call" className="h-5 w-5 shrink-0 text-pine-600" />
+              <PhoneIcon className="h-5 w-5 shrink-0 text-pine-600" />
               <PhoneLink phone={phone} location="contact-sidebar" showIcon={false} className="text-lg text-charcoal" />
             </div>
             <div className="flex items-center gap-3">
-              <Illustration id="camera" className="h-5 w-5 shrink-0 text-pine-600" />
+              <MailIcon className="h-5 w-5 shrink-0 text-pine-600" />
               <a href={`mailto:${CONTACT.email}`} className="text-[15px] text-ink-700 hover:text-charcoal">
                 {CONTACT.email}
               </a>
             </div>
-            <p className="text-xs leading-relaxed text-stone-500">{CONTACT.hoursNote}</p>
+            <p className="text-xs leading-relaxed text-stone-500">{getHoursNote()}</p>
           </div>
 
           <p className="mt-6 text-xs leading-relaxed text-stone-500">
-            {BRAND.name} does not publish fixed pricing online — every situation is different. We&apos;ll discuss
-            cost with you once we understand what&apos;s happening.
+            We&apos;ll confirm the price with you before any work begins.
           </p>
         </div>
 
