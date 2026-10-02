@@ -151,7 +151,7 @@ Ads points at them. Add new pages alongside them.
 
 - [x] Turn on the request form — done Oct 1, 2026. `RESEND_API_KEY` + `LEAD_TO_EMAIL` set in
       Vercel (Production), redeployed, test request delivered to the inbox (not spam).
-- [ ] Mark `lead_form` as a key event in GA4 (owner's action).
+- [x] `lead_form` marked as a key event in GA4 — done Oct 2, 2026 (starred next to `cta_call` / `cta_text`).
 - [ ] Optional: verify waspproblem.ca in Resend so requests can go to any inbox and come from
       a waspproblem.ca address (then set `LEAD_FROM_EMAIL`). Until then they can only go to
       the Resend account's own email.
