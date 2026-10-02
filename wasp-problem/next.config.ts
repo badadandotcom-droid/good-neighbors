@@ -11,6 +11,15 @@ const nextConfig: NextConfig = {
         destination: "/opengraph-image",
         permanent: true,
       },
+      {
+        // Short link the owner texts to customers when asking for a Google
+        // review: waspproblem.ca/review reads as ours, a bare g.page link can
+        // look like a scam. Destination is the "write a review" link from the
+        // Google Business Profile — copy it exactly; never point this anywhere else.
+        source: "/review",
+        destination: "https://g.page/r/CZKnYjdmzAygEAI/review",
+        permanent: true,
+      },
     ];
   },
   async headers() {
