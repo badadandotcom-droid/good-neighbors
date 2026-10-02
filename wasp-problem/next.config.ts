@@ -16,9 +16,12 @@ const nextConfig: NextConfig = {
         // review: waspproblem.ca/review reads as ours, a bare g.page link can
         // look like a scam. Destination is the "write a review" link from the
         // Google Business Profile — copy it exactly; never point this anywhere else.
+        // Temporary on purpose (owner's choice): phones don't cache it, so if
+        // Google ever issues a new review link, changing it here fixes every
+        // link already sent.
         source: "/review",
         destination: "https://g.page/r/CZKnYjdmzAygEAI/review",
-        permanent: true,
+        permanent: false,
       },
     ];
   },
