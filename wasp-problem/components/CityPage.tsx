@@ -34,7 +34,7 @@ export function CityPage({ location }: { location: CityLocation }) {
           className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-[radial-gradient(60%_60%_at_50%_0%,rgb(255_212_0_/_0.22),transparent_70%)]"
         />
         <div className="relative mx-auto max-w-2xl">
-          <p className="inline-flex items-center gap-2 rounded-full border border-yellow-deep/40 bg-yellow-tint px-3.5 py-1.5 text-xs font-bold tracking-[0.12em] text-ink uppercase">
+          <p className="inline-flex items-center gap-2 rounded-full border border-yellow-deep/40 bg-yellow-tint px-3.5 py-1.5 text-xs font-bold tracking-[0.06em] text-ink uppercase min-[360px]:tracking-[0.12em]">
             <span className="h-2 w-2 rounded-full bg-yellow-deep" aria-hidden="true" />
             {SAME_DAY_SERVICE.headline}*
           </p>

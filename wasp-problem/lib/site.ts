@@ -73,8 +73,13 @@ export const SERVICE_AREAS = [
  */
 export const AVAILABILITY_24_7 = "Open 24/7 — call us anytime." as const;
 
+/**
+ * Hero badge on the homepage and city pages. "Emergency" is owner-confirmed (urgent jobs —
+ * a nest by the door, an allergy, a sting — are handled the same evening). The asterisk
+ * still points to the disclaimer; never pair "emergency" with 24/7, which promises arrival.
+ */
 export const SAME_DAY_SERVICE = {
-  headline: "Same-Day Service Available",
+  headline: "Same-Day & Emergency Service",
   disclaimer: "Based on availability. Call or text to confirm for your area.",
 } as const;
 

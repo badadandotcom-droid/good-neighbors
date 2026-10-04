@@ -75,6 +75,8 @@ These are not style preferences. Breaking one is a real-world problem for the ow
 - 90-day guarantee (`GUARANTEE` in `lib/site.ts`): *"If wasps return to the nest we
   treated within 90 days, we come back and deal with it at no additional charge."*
   The owner chose this wording over alternatives. Don't re-litigate it.
+- Hero badge (`SAME_DAY_SERVICE.headline`): "Same-Day & Emergency Service*" — emergency is owner-confirmed;
+  the asterisk points to "based on availability". Never write "24/7 emergency" or "24-hour emergency".
 - `INSURANCE` in `lib/site.ts`: "Fully insured — $5,000,000 liability coverage".
 - **Phone calls** are answered **24/7** (`AVAILABILITY_24_7` in `lib/site.ts`); the business
   schema says so too. **Texts and online requests are not** — the owner may not hear them
@@ -158,6 +160,15 @@ Ads points at them. Add new pages alongside them.
 - [ ] Separate from Wasp Problem: check how Good Neighbors' own form is set up in Resend
       (it delivers to hello@goodneighborswildlife.ca from the same Resend account).
 - [ ] Reorder the Business Profile service areas so Toronto is first (owner's action).
+- [ ] Google Ads: after a few real web requests, decide whether to import `lead_form` as an Ads
+      conversion (owner's call; Ads counts `cta_call` today).
+- [ ] Build one `/emergency-wasp-removal` page for "24 hour / emergency / late-night / open now"
+      searches (owner's plan; do it from the terminal). One strong page — not one per phrase or
+      per city. Needs from the owner first: the hours he actually goes out, and what counts as
+      urgent. Copy: calls answered 24/7; urgent and evening jobs based on availability — never
+      "24/7 emergency". Pull search volumes in Semrush once the account has API units.
+- [ ] Google Business Profile: set hours to "Open 24 hours" if not already (calls are answered
+      24/7) — drives "open now" searches in Maps (owner's action).
 - [ ] Licence wording — only after the December exam is passed.
 - [ ] In Vercel → Settings → Domains, confirm bare `waspproblem.ca` redirects to `www.waspproblem.ca` and not the
       other way round (owner's action; the code now assumes www is primary).
