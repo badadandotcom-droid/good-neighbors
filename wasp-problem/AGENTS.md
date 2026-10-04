@@ -162,6 +162,13 @@ Ads points at them. Add new pages alongside them.
 - [ ] Reorder the Business Profile service areas so Toronto is first (owner's action).
 - [ ] Google Ads: after a few real web requests, decide whether to import `lead_form` as an Ads
       conversion (owner's call; Ads counts `cta_call` today).
+- [ ] Build one `/emergency-wasp-removal` page for "24 hour / emergency / late-night / open now"
+      searches (owner's plan; do it from the terminal). One strong page — not one per phrase or
+      per city. Needs from the owner first: the hours he actually goes out, and what counts as
+      urgent. Copy: calls answered 24/7; urgent and evening jobs based on availability — never
+      "24/7 emergency". Pull search volumes in Semrush once the account has API units.
+- [ ] Google Business Profile: set hours to "Open 24 hours" if not already (calls are answered
+      24/7) — drives "open now" searches in Maps (owner's action).
 - [ ] Licence wording — only after the December exam is passed.
 - [ ] In Vercel → Settings → Domains, confirm bare `waspproblem.ca` redirects to `www.waspproblem.ca` and not the
       other way round (owner's action; the code now assumes www is primary).
