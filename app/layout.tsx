@@ -4,6 +4,8 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { StickyMobileCTA } from "@/components/layout/StickyMobileCTA";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { PhoneClickTracker } from "@/components/analytics/PhoneClickTracker";
 import { BRAND } from "@/lib/config/site";
 import { localBusinessJsonLd } from "@/lib/seo";
 
@@ -11,6 +13,7 @@ const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-fraunces",
   axes: ["opsz", "SOFT"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -54,6 +57,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer />
         <StickyMobileCTA />
+        <GoogleAnalytics />
+        <PhoneClickTracker />
       </body>
     </html>
   );
