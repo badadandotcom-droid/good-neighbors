@@ -136,6 +136,18 @@ imagery. Search for `<PhotoPlaceholder` across `app/` and `components/` to
 find every spot that expects a real photo, and use each caption as the
 art-direction brief for that shoot.
 
+Several of the current photos (`inspection`, `conversation`, `arrival`,
+`detail`) show "Good Neighbors Wildlife Inc." on uniforms and the van. That
+is most likely what the open "replace photos with WILDLIFE INC. text" to-do
+refers to; it has not been done yet.
+
+## Wildlife icons — `public/images/wildlife-icons/`
+
+Raccoon, squirrel, bird and bat are the approved raster artwork. The skunk
+icon (added Oct 2026, when skunks came back) was drawn to match that set —
+same ink colour, engraved style, transparent 400×400 PNG. It can be swapped
+for artwork from the same source as the others at any time; no code changes.
+
 ## Trust signals — intentionally absent
 
 No reviews, star ratings, testimonials, "homes serviced" counts, years in
@@ -144,6 +156,15 @@ the site. Good Neighbors is a new brand — none of that exists yet. Do not
 add placeholder versions of these; add them for real once they exist. The
 component system has no dedicated "testimonial" or "review" component for
 exactly this reason.
+
+**The lifetime guarantee is real (owner-confirmed, Oct 2026) and is the only
+guarantee on the site.** The exact wording lives in `GUARANTEE` in
+`lib/config/site.ts` and is never paraphrased: it covers the entry points we
+seal (an animal getting back in through one), not repairs in general. No
+separate guarantee page, no other guarantees or warranties. The wording says
+"Full terms are written on your invoice", and the owner is making the invoices
+after the website: **invoices carrying the guarantee terms must be ready before
+the first job after this goes live.**
 
 **"$5 million in liability insurance · Background-checked technicians" was
 briefly live on the homepage and has been removed.** Neither is in place
@@ -160,10 +181,9 @@ placeholders per above.
 
 **Active launch territory (as of this writing): Toronto, York Region,
 Durham Region, and Peel Region** — in that order everywhere it's listed
-(footer, homepage, About, FAQ, service-area hub). Peel Region's market
-page uses the approved heading "Wildlife Removal in Peel Region" via the
-optional `Market.heroHeading` override field (falls back to `brandName`
-for every other market, so this doesn't affect their pages).
+(footer, homepage, About, FAQ, service-area hub). Every active market
+page uses a "Wildlife Removal in [area]" heading and title via the optional
+`Market.heroHeading` field (hidden markets fall back to `brandName`).
 
 Oakville & Burlington, Hamilton, Barrie, and Niagara Region are all
 `status: "hidden"` — fully built, kept as preparatory content, but
@@ -181,6 +201,28 @@ statically generated or reachable at all.
 `status` to `"active"`. That's it — the homepage, footer, nav, service-area
 hub, sitemap, and the market's own page all pick it up automatically. No
 other file needs to change, and the page never needs to be rebuilt.
+
+## Damage repair — `lib/data/repairs.ts`, `/wildlife/damage-repair`
+
+Real and owner-confirmed (Oct 2026). After removal we seal the entry point
+and repair the damage the animal caused: roofs (shingles and roof boards),
+soffits, fascia, roof vents, chimney caps and chimney screening, vent covers
+and screens, eavestroughs, siding, attic insulation removal and replacement,
+attic cleanup (droppings and nesting material), and drywall inside the home.
+For skunks, the ground under decks, porches and sheds is sealed with wire
+mesh dug into the soil. Repairs are matched to the home's existing materials
+and colours. Name no other repair type without asking the owner.
+
+## Planned — not built yet
+
+- **`/reviews` page.** Like Wasp Problem's: an unlisted page the owner sends
+  customers to when it's time to ask for a Google review, instead of the raw
+  Google review link. Build it once the Google Business Profile exists and
+  its review link is known. Unlisted means `noIndex`, and not in the nav,
+  footer or sitemap.
+- **Whole-home prevention ("block and lock") page.** Deliberately kept off
+  the public site so customers aren't put off. If built, it's an unlisted
+  page the owner sends to customers directly, on the same unlisted terms.
 
 ## Pricing — intentionally absent
 

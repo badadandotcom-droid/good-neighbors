@@ -54,9 +54,10 @@ later is a routing change, not a data-model change or a find-and-replace
 across the codebase.
 
 **Wildlife content covers species and situations.** `lib/data/wildlife.ts`
-holds both species pages (raccoons, squirrels, birds, bats) and
+holds both species pages (raccoons, squirrels, skunks, birds, bats) and
 "situation" pages (something in the attic / in the walls) in one list,
-rendered by one template at `app/wildlife/[slug]/page.tsx`. This matches
+rendered by one template at `app/wildlife/[slug]/page.tsx`. Damage repair
+has its own static page at `app/wildlife/damage-repair/page.tsx`. This matches
 how people actually search — "raccoon in attic" and "noise in my attic"
 both land somewhere useful — without maintaining two page systems.
 
@@ -76,6 +77,7 @@ honest).
 ```
 app/                    Routes (App Router)
   wildlife/[slug]        Species + situation pages
+  wildlife/damage-repair Sealing + damage repair page
   service-areas/[slug]   Market pages
   api/get-help/           Intake form submission endpoint (validates only — see PLACEHOLDERS.md)
 components/
