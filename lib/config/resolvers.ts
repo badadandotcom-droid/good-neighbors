@@ -39,15 +39,12 @@ export function getBrandName(market?: Market): string {
 }
 
 /**
- * The homepage/market hero headline. Kept centralized (rather than a
- * hard-coded string in the Hero component) so the same-day promise can
- * never linger in the headline after the config is switched off. Names the
- * place (Toronto by default) so the page's H1 carries the location.
+ * The homepage/market hero headline (owner-approved wording). It names the
+ * place so the page's H1 carries the location, and says "Toronto and the
+ * GTA" so ads aimed at York, Durham or Peel still read as local. It makes no
+ * same-day promise: the hero's SameDayBadge and positioning line carry that,
+ * both driven by the same-day config.
  */
 export function getHeroHeadline(market?: Market): string {
-  const sameDay = getSameDayConfig(market);
-  const place = market?.displayName ?? "Toronto";
-  return sameDay.enabled
-    ? `Wildlife problem in ${place}? We can be there today.`
-    : `Wildlife problem in ${place}? We respond fast.`;
+  return `Wildlife problem? Serving ${market?.displayName ?? "Toronto and the GTA"}.`;
 }
