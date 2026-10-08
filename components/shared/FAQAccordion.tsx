@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { FaqItem } from "@/lib/types";
 
 /** Native <details>/<summary> accordion — accessible and animation-free by default, no JS required. */
@@ -14,6 +15,15 @@ export function FAQAccordion({ items }: { items: FaqItem[] }) {
             </span>
           </summary>
           <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-ink-700 text-pretty">{item.answer}</p>
+          {item.link && (
+            <Link
+              href={item.link.href}
+              className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-pine-600 hover:text-pine-700"
+            >
+              {item.link.label}
+              <span aria-hidden="true">&rarr;</span>
+            </Link>
+          )}
         </details>
       ))}
     </div>

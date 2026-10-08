@@ -5,14 +5,17 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
+import { GuaranteeLine } from "@/components/shared/GuaranteeLine";
+import { JsonLd } from "@/components/shared/JsonLd";
 import { getSituationEntries, getSpeciesEntries } from "@/lib/data/wildlife";
-import { pageMetadata } from "@/lib/seo";
+import { DAMAGE_REPAIR_PATH } from "@/lib/data/repairs";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
 
 export const metadata = pageMetadata({
-  title: "Wildlife Removal",
+  title: "Wildlife Removal in Toronto & the GTA",
   description:
-    "Humane removal for raccoons, squirrels, birds, and bats — plus help for when you're not sure what's gotten into your attic or walls.",
+    "Humane raccoon, squirrel, skunk, bird and bat removal in Toronto & the GTA, plus sealing and damage repair. Lifetime guarantee on every entry point we seal.",
   path: "/wildlife",
 });
 
@@ -22,6 +25,8 @@ export default function WildlifePage() {
 
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd([{ name: "Wildlife Removal", path: "/wildlife" }])} />
+
       <section className="relative overflow-hidden border-b border-stone-300 py-16 sm:py-24">
         <Illustration
           id="attic"
@@ -31,15 +36,19 @@ export default function WildlifePage() {
           <div className="lg:col-span-7">
             <p className="flex items-center gap-2.5 text-xs font-semibold tracking-[0.18em] text-pine-600 uppercase">
               <span className="h-px w-6 bg-brass-400" aria-hidden="true" />
-              Wildlife Removal
+              Raccoons, squirrels, skunks, birds &amp; bats
             </p>
             <h1 className="mt-3 text-balance font-display text-4xl leading-[1.06] text-charcoal sm:text-5xl lg:text-6xl">
-              Whatever moved in, we know how to move it out.
+              Wildlife Removal in Toronto &amp; the GTA
             </h1>
+            <p className="mt-4 font-display text-xl italic text-pine-600 sm:text-2xl">
+              Whatever moved in, we know how to move it out.
+            </p>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">
               Each species behaves differently, which changes how we approach removal — but every job starts the
               same way: understanding what&apos;s happening at your property and responding quickly.
             </p>
+            <GuaranteeLine className="mt-6" />
             <CTAButton href="/contact" size="lg" event="cta_get_help_now" eventMeta={{ location: "wildlife-hub-hero" }} className="mt-8">
               {PRIMARY_CTA_LABEL}
             </CTAButton>
@@ -116,6 +125,34 @@ export default function WildlifePage() {
               </Link>
             ))}
           </div>
+        </Container>
+      </section>
+
+      <section className="border-b border-stone-300 py-16 sm:py-20">
+        <Container>
+          <Link
+            href={DAMAGE_REPAIR_PATH}
+            className="group grid grid-cols-1 gap-6 rounded-sm border border-stone-300 bg-white p-8 transition-colors hover:border-pine-500 sm:p-10 lg:grid-cols-12 lg:items-center lg:gap-12"
+          >
+            <div className="lg:col-span-8">
+              <p className="flex items-center gap-2.5 text-xs font-semibold tracking-[0.18em] text-pine-600 uppercase">
+                <span className="h-px w-6 bg-brass-400" aria-hidden="true" />
+                After removal
+              </p>
+              <h2 className="mt-3 font-display text-3xl text-charcoal sm:text-4xl">Sealing and damage repair</h2>
+              <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-ink-700 text-pretty sm:text-base">
+                Once the animal is out, we seal the entry point and repair the damage it caused: roofs, soffits,
+                fascia, vents, attics and more, matched to your home&apos;s existing materials and colours.
+              </p>
+              <GuaranteeLine className="mt-4" />
+            </div>
+            <div className="lg:col-span-4 lg:text-right">
+              <span className="inline-flex items-center gap-2 text-sm font-medium text-pine-600 group-hover:text-pine-700">
+                See the repairs we handle
+                <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+              </span>
+            </div>
+          </Link>
         </Container>
       </section>
 

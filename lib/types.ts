@@ -88,13 +88,31 @@ export interface Market {
 
 export type WildlifeCategory = "species" | "situation";
 
+/**
+ * A page-specific "we don't just remove the animal" section. Written fresh
+ * for each page rather than shared, and always followed by the lifetime
+ * guarantee (GUARANTEE.full) and a link to /wildlife/damage-repair.
+ */
+export interface RepairSection {
+  heading: string;
+  paragraphs: string[];
+  /** Anchor text for the link to the damage repair page — varied per page. */
+  linkLabel: string;
+}
+
 export interface WildlifeEntry {
   slug: string;
   category: WildlifeCategory;
-  /** Plural display name, e.g. "Raccoons" or "Wildlife in the Attic" */
+  /** Plural display name, e.g. "Raccoons" or "Something in the Attic" — used on cards and in navigation */
   name: string;
   /** Singular form, e.g. "Raccoon" — used mid-sentence */
   singular: string;
+  /** Page <title>, before the site-wide " | Good Neighbors Wildlife" suffix. Names the animal or problem and Toronto. */
+  seoTitle: string;
+  /** On-page H1. Names the animal or problem and Toronto. */
+  heading: string;
+  /** Meta description (aim for 150–160 characters). */
+  metaDescription: string;
   /** One-sentence summary for cards/listings */
   summary: string;
   /** Longer intro paragraph for the detail page */
@@ -103,14 +121,24 @@ export interface WildlifeEntry {
   commonAreas: string[];
   /** Short paragraph on the humane approach for this situation */
   approach: string;
+  /** Overrides the default "During the visit" line, for animals where the roofline doesn't apply. */
+  visitNote?: string;
   iconId: IllustrationId;
   /** Species-specific real photo, overriding the shared REAL_PHOTOS["detail"] default for this entry only */
   photoOverride?: string;
+  /** Describes photoOverride for search engines and screen readers. */
+  photoAlt?: string;
+  /** Sealing + damage repair section for this page, when the page carries one. */
+  repair?: RepairSection;
+  /** Show the short lifetime-guarantee line near the top of the page (pages without a repair section). */
+  showGuaranteeLine?: boolean;
 }
 
 export interface FaqItem {
   question: string;
   answer: string;
+  /** Optional internal link shown after the answer (not part of the FAQ structured data). */
+  link?: { href: string; label: string };
   /** Show on homepage FAQ preview */
   featured?: boolean;
   /** Answer assumes same-day/active service — suppress on coming-soon market pages */
@@ -145,6 +173,7 @@ export interface PhotoSlot {
 export type IllustrationId =
   | "raccoon"
   | "squirrel"
+  | "skunk"
   | "bird"
   | "bat"
   | "attic"

@@ -8,29 +8,39 @@ import { FinalCTA } from "@/components/home/FinalCTA";
 import { Container } from "@/components/shared/Container";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { FAQAccordion } from "@/components/shared/FAQAccordion";
+import { JsonLd } from "@/components/shared/JsonLd";
+import { RepairSection } from "@/components/shared/RepairSection";
 import { getFeaturedFaqs } from "@/lib/data/faq";
 import { faqJsonLd, pageMetadata } from "@/lib/seo";
-import { BRAND } from "@/lib/config/site";
+import type { RepairSection as RepairSectionData } from "@/lib/types";
 
 export const metadata = pageMetadata({
-  title: "Humane, Local Wildlife Removal",
-  description: BRAND.description,
+  title: "Humane Wildlife Removal in Toronto & the GTA",
+  description:
+    "Humane wildlife removal in Toronto & the GTA. We seal the entry point and repair the damage it caused. Lifetime guarantee on every entry point we seal.",
   path: "/",
 });
+
+const REPAIR: RepairSectionData = {
+  heading: "We remove the animal, seal the way in, and repair the damage",
+  paragraphs: [
+    "Getting the animal out is only part of the job. Once it's out, we seal the spot it was using to get in and repair what it damaged, whether that's a torn soffit, a chewed roof vent or a lifted section of shingles.",
+    "Repairs are matched to your home's existing materials and colours and handled by the same company that removed the animal, so there's no separate roofer or contractor to find.",
+  ],
+  linkLabel: "See the repairs we handle",
+};
 
 export default function HomePage() {
   const featuredFaqs = getFeaturedFaqs();
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(featuredFaqs)) }}
-      />
+      <JsonLd data={faqJsonLd(featuredFaqs)} />
       <Hero />
       <TrustBar />
       <WildlifePicker />
       <HowItWorks />
+      <RepairSection section={REPAIR} eyebrow="More than removal" className="border-b border-stone-300" />
       <ServiceAreasTeaser />
 
       <section className="py-14 sm:py-28">

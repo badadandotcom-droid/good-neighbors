@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { StickyMobileCTA } from "@/components/layout/StickyMobileCTA";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { PhoneClickTracker } from "@/components/analytics/PhoneClickTracker";
+import { JsonLd } from "@/components/shared/JsonLd";
 import { BRAND } from "@/lib/config/site";
 import { localBusinessJsonLd } from "@/lib/seo";
 
@@ -26,8 +27,8 @@ const publicSans = Public_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(BRAND.url),
   title: {
-    default: `${BRAND.name} | Humane Wildlife Removal`,
-    template: `%s | ${BRAND.name}`,
+    default: `Humane Wildlife Removal in Toronto & the GTA | ${BRAND.seoName}`,
+    template: `%s | ${BRAND.seoName}`,
   },
   description: BRAND.description,
   icons: {
@@ -41,10 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${fraunces.variable} ${publicSans.variable}`}>
       <body className="flex min-h-screen flex-col antialiased">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <JsonLd data={jsonLd} />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-sm focus:bg-charcoal focus:px-4 focus:py-2 focus:text-bone-50"

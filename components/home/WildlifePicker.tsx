@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/shared/Container";
 import { SectionHeading } from "@/components/shared/SectionHeading";
+import { DamageRepairBanner } from "@/components/shared/DamageRepairBanner";
 import { getSpeciesEntries } from "@/lib/data/wildlife";
 
 export function WildlifePicker() {
@@ -39,15 +40,17 @@ export function WildlifePicker() {
 
           <Link
             href="/contact"
-            className="group col-span-2 flex flex-col justify-between gap-6 rounded-sm bg-pine-600 p-5 text-bone-50 transition-colors hover:bg-pine-700 sm:col-span-1 lg:col-span-2"
+            className="group flex flex-col justify-between gap-6 rounded-sm bg-pine-600 p-5 text-bone-50 transition-colors hover:bg-pine-700"
           >
-            <span className="font-display text-lg leading-tight">Not sure what it is?</span>
+            <span className="text-balance font-display text-lg leading-tight">Not sure what it is?</span>
             <span className="inline-flex items-center gap-2 text-sm text-pine-100 group-hover:text-bone-50">
               We can help.
               <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
             </span>
           </Link>
         </div>
+
+        <DamageRepairBanner className="mt-4" />
       </Container>
     </section>
   );

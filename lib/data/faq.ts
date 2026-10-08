@@ -1,5 +1,6 @@
 import type { FaqItem } from "@/lib/types";
-import { DEFAULT_SAME_DAY_SERVICE } from "@/lib/config/site";
+import { DEFAULT_SAME_DAY_SERVICE, GUARANTEE } from "@/lib/config/site";
+import { DAMAGE_REPAIR_PATH } from "@/lib/data/repairs";
 
 /**
  * FAQ copy references the same-day cutoff via DEFAULT_SAME_DAY_SERVICE so it
@@ -63,8 +64,17 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     question: "What happens after the animal is removed?",
+    answer: `Once we've confirmed the animal is out, we seal the spot it was using to get in and repair any damage it caused. ${GUARANTEE.short}`,
+  },
+  {
+    question: "Do you repair the damage the animal caused?",
     answer:
-      "Once we've confirmed the animals are out, we secure the entry point to help prevent them from getting back in.",
+      "Yes. Once the animal is out, we seal the entry point and repair the damage it caused, matched to your home's existing materials and colours. That includes roofs, soffits, fascia, roof vents, chimney caps, vent covers, eavestroughs and siding, as well as attic insulation, attic cleanup and drywall inside the home.",
+    link: { href: DAMAGE_REPAIR_PATH, label: "See the repairs we handle" },
+  },
+  {
+    question: "Is your work guaranteed?",
+    answer: GUARANTEE.full,
   },
 ];
 

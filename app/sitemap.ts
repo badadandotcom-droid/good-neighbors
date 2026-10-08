@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { BRAND } from "@/lib/config/site";
 import { MARKETS, marketHref } from "@/lib/data/markets";
 import { WILDLIFE } from "@/lib/data/wildlife";
+import { DAMAGE_REPAIR_PATH } from "@/lib/data/repairs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = ["/", "/wildlife", "/service-areas", "/about", "/contact", "/faq"];
@@ -21,6 +22,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     });
   }
+
+  entries.push({
+    url: new URL(DAMAGE_REPAIR_PATH, BRAND.url).toString(),
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  });
 
   // Coming-soon markets are marked noIndex on their own pages (see
   // app/service-areas/[slug]/page.tsx) — excluding them here too keeps the

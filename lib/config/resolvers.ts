@@ -41,9 +41,13 @@ export function getBrandName(market?: Market): string {
 /**
  * The homepage/market hero headline. Kept centralized (rather than a
  * hard-coded string in the Hero component) so the same-day promise can
- * never linger in the headline after the config is switched off.
+ * never linger in the headline after the config is switched off. Names the
+ * place (Toronto by default) so the page's H1 carries the location.
  */
 export function getHeroHeadline(market?: Market): string {
   const sameDay = getSameDayConfig(market);
-  return sameDay.enabled ? "Wildlife problem? We can be there today." : "Wildlife problem? We respond fast.";
+  const place = market?.displayName ?? "Toronto";
+  return sameDay.enabled
+    ? `Wildlife problem in ${place}? We can be there today.`
+    : `Wildlife problem in ${place}? We respond fast.`;
 }

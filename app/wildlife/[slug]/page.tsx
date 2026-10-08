@@ -7,9 +7,12 @@ import { CTAButton } from "@/components/shared/CTAButton";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { FinalCTA } from "@/components/home/FinalCTA";
+import { GuaranteeLine } from "@/components/shared/GuaranteeLine";
+import { JsonLd } from "@/components/shared/JsonLd";
+import { RepairSection } from "@/components/shared/RepairSection";
 import { WILDLIFE, getWildlifeBySlug } from "@/lib/data/wildlife";
 import { getPhone } from "@/lib/config/resolvers";
-import { pageMetadata, serviceJsonLd } from "@/lib/seo";
+import { breadcrumbJsonLd, pageMetadata, serviceJsonLd } from "@/lib/seo";
 import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
 import { cn } from "@/lib/utils";
 
@@ -23,8 +26,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!entry) return {};
 
   return pageMetadata({
-    title: entry.category === "species" ? `${entry.singular} Removal` : entry.name,
-    description: entry.summary,
+    title: entry.seoTitle,
+    description: entry.metaDescription,
     path: `/wildlife/${entry.slug}`,
   });
 }
@@ -33,6 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 const PHOTO_TONE: Record<string, "pine" | "wood" | "charcoal"> = {
   raccoons: "charcoal",
   squirrels: "wood",
+  skunks: "charcoal",
   birds: "wood",
   bats: "charcoal",
 };
@@ -48,19 +52,24 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
   const imageOnLeft = speciesIndex > -1 && speciesIndex % 2 === 1;
   const tone = PHOTO_TONE[entry.slug] ?? "pine";
 
-  const related = WILDLIFE.filter((w) => w.slug !== entry.slug && w.category === "species").slice(0, 4);
-  const removalTitle = entry.category === "species" ? `${entry.singular} Removal` : entry.name;
-  const jsonLd = serviceJsonLd({
-    name: removalTitle,
-    description: entry.summary,
-    path: `/wildlife/${entry.slug}`,
-  });
+  const related = WILDLIFE.filter((w) => w.slug !== entry.slug && w.category === "species");
+  const path = `/wildlife/${entry.slug}`;
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      <JsonLd
+        data={serviceJsonLd({
+          name: entry.heading,
+          serviceType: entry.category === "species" ? `${entry.singular} removal` : "Wildlife removal",
+          description: entry.metaDescription,
+          path,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Wildlife Removal", path: "/wildlife" },
+          { name: entry.heading, path },
+        ])}
       />
 
       <section className="border-b border-stone-300 py-16 sm:py-24">
@@ -83,10 +92,11 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
                 <Illustration id={entry.iconId} weight="bold" className="h-14 w-14 shrink-0 text-pine-600" />
               )}
               <h1 className="text-balance font-display text-4xl leading-[1.02] text-charcoal sm:text-5xl">
-                {removalTitle}
+                {entry.heading}
               </h1>
             </div>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">{entry.intro}</p>
+            {entry.showGuaranteeLine && <GuaranteeLine className="mt-5" />}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
               <CTAButton
                 href={phone.href}
@@ -116,7 +126,7 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
               tone={tone}
               corner={imageOnLeft ? "top-left" : "bottom-right"}
               aspect="aspect-[4/3]"
-              note={`${entry.singular} — entry point detail`}
+              note={entry.photoOverride ? entry.photoAlt : "A Good Neighbors technician cutting wire mesh to seal an entry point"}
               src={entry.photoOverride}
             />
           </div>
@@ -136,7 +146,10 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
             <dl className="mt-10 flex flex-col gap-6 border-t border-stone-300 pt-8 sm:flex-row sm:gap-10">
               {[
                 { term: "On arrival", detail: `We confirm the ${entry.singular.toLowerCase()} activity and check how it's getting in.` },
-                { term: "During the visit", detail: "Removal is handled humanely, with care taken around your roofline and finishes." },
+                {
+                  term: "During the visit",
+                  detail: entry.visitNote ?? "Removal is handled humanely, with care taken around your roofline and finishes.",
+                },
                 { term: "Before we leave", detail: "We'll explain what we found, what we did, and how the animal got in." },
               ].map((step) => (
                 <div key={step.term} className="sm:flex-1">
@@ -174,11 +187,13 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
         </Container>
       </section>
 
+      {entry.repair && <RepairSection section={entry.repair} className="border-t border-stone-300" />}
+
       {related.length > 0 && (
         <section className="border-t border-stone-300 bg-bone-50 py-16 sm:py-20">
           <Container>
             <h2 className="font-display text-2xl text-charcoal">Other wildlife we handle</h2>
-            <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <div className={cn("mt-8 grid grid-cols-2 gap-4", related.length > 4 ? "sm:grid-cols-3 lg:grid-cols-5" : "sm:grid-cols-4")}>
               {related.map((r) => (
                 <Link
                   key={r.slug}

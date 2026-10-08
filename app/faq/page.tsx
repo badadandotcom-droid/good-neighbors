@@ -2,22 +2,21 @@ import { Container } from "@/components/shared/Container";
 import { FAQAccordion } from "@/components/shared/FAQAccordion";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { FAQ_ITEMS } from "@/lib/data/faq";
+import { JsonLd } from "@/components/shared/JsonLd";
 import { pageMetadata, faqJsonLd } from "@/lib/seo";
 import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
 
 export const metadata = pageMetadata({
-  title: "Frequently Asked Questions",
-  description: "Answers to the questions homeowners ask most before requesting wildlife removal help.",
+  title: "Wildlife Removal FAQ for Toronto & the GTA",
+  description:
+    "Answers to the questions Toronto homeowners ask most about wildlife removal, sealing entry points, damage repair and the lifetime guarantee.",
   path: "/faq",
 });
 
 export default function FaqPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(FAQ_ITEMS)) }}
-      />
+      <JsonLd data={faqJsonLd(FAQ_ITEMS)} />
 
       <section className="border-b border-stone-300 py-16 sm:py-24">
         <Container className="max-w-2xl">
@@ -26,7 +25,7 @@ export default function FaqPage() {
             FAQ
           </p>
           <h1 className="mt-4 text-balance font-display text-4xl leading-[1.06] text-charcoal sm:text-5xl">
-            Questions, answered plainly.
+            Toronto wildlife removal questions, answered plainly.
           </h1>
         </Container>
       </section>

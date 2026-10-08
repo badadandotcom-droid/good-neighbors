@@ -2,6 +2,7 @@ import Image from "next/image";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { Container } from "@/components/shared/Container";
 import { Illustration } from "@/components/illustrations/Illustration";
+import { GuaranteeLine } from "@/components/shared/GuaranteeLine";
 import { getHeroHeadline, getPhone, getPositioningLine } from "@/lib/config/resolvers";
 import { ALWAYS_ON_CALL, PRIMARY_CTA_LABEL } from "@/lib/config/site";
 import type { Market } from "@/lib/types";
@@ -63,9 +64,10 @@ export function Hero({ market }: { market?: Market }) {
             </CTAButton>
           </div>
 
-          {ALWAYS_ON_CALL.enabled && (
-            <p className="mt-3 text-sm text-stone-500">{ALWAYS_ON_CALL.heroLabel}</p>
-          )}
+          <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6">
+            <GuaranteeLine />
+            {ALWAYS_ON_CALL.enabled && <p className="text-sm text-stone-500">{ALWAYS_ON_CALL.heroLabel}</p>}
+          </div>
         </div>
 
         <div className="relative lg:col-span-5 lg:-mr-6 xl:-mr-16">

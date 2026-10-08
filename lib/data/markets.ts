@@ -33,6 +33,7 @@ export const MARKETS: Market[] = [
     slug: "toronto",
     displayName: "Toronto",
     brandName: "Good Neighbors Toronto",
+    heroHeading: "Wildlife Removal in Toronto",
     status: "active",
     country: "CA",
     region: "Ontario",
@@ -41,12 +42,13 @@ export const MARKETS: Market[] = [
     heroBlurb:
       "From century homes in the Annex to new builds in Scarborough, we handle wildlife in Toronto's attics, walls, and rooflines with the same careful, humane approach every time.",
     seoDescription:
-      "Humane, same-day wildlife removal in Toronto. Raccoons, squirrels, birds, and bats — handled quickly and professionally by local technicians.",
+      "Humane raccoon, squirrel, skunk, bat and bird removal in Toronto. We seal the way in and repair the damage. Lifetime guarantee on every entry point we seal.",
   },
   {
     slug: "york-region",
     displayName: "York Region",
     brandName: "Good Neighbors York Region",
+    heroHeading: "Wildlife Removal in York Region",
     status: "active",
     country: "CA",
     region: "Ontario",
@@ -55,12 +57,13 @@ export const MARKETS: Market[] = [
     heroBlurb:
       "We provide humane wildlife removal for homeowners across York Region, including Markham, Vaughan and Richmond Hill.",
     seoDescription:
-      "Wildlife removal serving York Region — Markham, Richmond Hill, Vaughan, and Thornhill. Humane, local, same-day service available.",
+      "Humane wildlife removal in Markham, Vaughan and across York Region. We seal the way in and repair the damage. Lifetime guarantee on every entry point we seal.",
   },
   {
     slug: "durham-region",
     displayName: "Durham Region",
     brandName: "Good Neighbors Durham Region",
+    heroHeading: "Wildlife Removal in Durham Region",
     status: "active",
     country: "CA",
     region: "Ontario",
@@ -69,7 +72,7 @@ export const MARKETS: Market[] = [
     heroBlurb:
       "From the Pickering waterfront to established Oshawa neighbourhoods, we provide humane wildlife removal for homes across Durham Region.",
     seoDescription:
-      "Humane wildlife removal across Durham Region — Pickering, Ajax, Whitby, and Oshawa. Local technicians, same-day service available.",
+      "Humane wildlife removal in Pickering, Ajax, Whitby and Oshawa. We seal the way in and repair the damage. Lifetime guarantee on every entry point we seal.",
   },
   {
     slug: "peel-region",
@@ -82,9 +85,9 @@ export const MARKETS: Market[] = [
     metro: "Greater Toronto Area",
     serviceArea: ["Mississauga", "Brampton", "Caledon"],
     heroBlurb:
-      "We provide humane raccoon, squirrel, bat and bird removal for homeowners across Peel Region.",
+      "We provide humane raccoon, squirrel, skunk, bat and bird removal for homeowners across Peel Region.",
     seoDescription:
-      "Humane wildlife removal for homeowners in Peel Region. Raccoons, squirrels, bats and birds. Contact Good Neighbors to arrange a visit.",
+      "Humane wildlife removal in Mississauga, Brampton and Caledon. We seal the way in and repair the damage. Lifetime guarantee on every entry point we seal.",
   },
   {
     slug: "oakville-burlington",

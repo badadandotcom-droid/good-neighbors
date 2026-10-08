@@ -5,6 +5,7 @@ import { BRAND, CONTACT } from "@/lib/config/site";
 import { getPhone, getPositioningLine } from "@/lib/config/resolvers";
 import { getActiveMarkets, marketHref } from "@/lib/data/markets";
 import { getSpeciesEntries } from "@/lib/data/wildlife";
+import { DAMAGE_REPAIR_PATH } from "@/lib/data/repairs";
 
 export function Footer() {
   const phone = getPhone();
@@ -34,6 +35,7 @@ export function Footer() {
           links={[
             { label: "All Wildlife Services", href: "/wildlife" },
             ...species.map((s) => ({ label: s.name, href: `/wildlife/${s.slug}` })),
+            { label: "Damage Repair", href: DAMAGE_REPAIR_PATH },
           ]}
         />
 

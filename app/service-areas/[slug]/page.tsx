@@ -8,11 +8,13 @@ import { SameDayBadge } from "@/components/shared/SameDayBadge";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { FAQAccordion } from "@/components/shared/FAQAccordion";
-import { MARKETS, getMarketBySlug } from "@/lib/data/markets";
+import { DamageRepairBanner } from "@/components/shared/DamageRepairBanner";
+import { JsonLd } from "@/components/shared/JsonLd";
+import { MARKETS, getMarketBySlug, marketHref } from "@/lib/data/markets";
 import { getSpeciesEntries } from "@/lib/data/wildlife";
 import { getFeaturedFaqs } from "@/lib/data/faq";
 import { getPhone, getPositioningLine, getSameDayConfig } from "@/lib/config/resolvers";
-import { pageMetadata, localBusinessJsonLd, faqJsonLd } from "@/lib/seo";
+import { breadcrumbJsonLd, faqJsonLd, marketAreaNames, pageMetadata, serviceJsonLd } from "@/lib/seo";
 import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
 
 export function generateStaticParams() {
@@ -25,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!market || market.status === "hidden") return {};
 
   return pageMetadata({
-    title: market.brandName,
+    title: market.heroHeading ?? `Wildlife Removal in ${market.displayName}`,
     description: market.seoDescription,
     path: `/service-areas/${market.slug}`,
     noIndex: market.status !== "active",
@@ -52,13 +54,23 @@ export default async function MarketPage({ params }: { params: Promise<{ slug: s
   const marketIndex = MARKETS.findIndex((m) => m.slug === market.slug);
   const tone = TONES[marketIndex % TONES.length];
 
-  const jsonLd = localBusinessJsonLd(market);
+  const heading = market.heroHeading ?? market.brandName;
+  const jsonLd = serviceJsonLd({
+    name: heading,
+    serviceType: "Wildlife removal",
+    description: market.seoDescription,
+    path: marketHref(market),
+    areaServed: marketAreaNames(market),
+  });
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      <JsonLd data={jsonLd} />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Service Areas", path: "/service-areas" },
+          { name: heading, path: marketHref(market) },
+        ])}
       />
 
       <section className="relative overflow-hidden border-b border-stone-300 py-16 sm:py-24">
@@ -81,7 +93,7 @@ export default async function MarketPage({ params }: { params: Promise<{ slug: s
             )}
 
             <h1 className="mt-4 text-balance font-display text-4xl leading-[1.05] text-charcoal sm:text-5xl">
-              {market.heroHeading ?? market.brandName}
+              {heading}
             </h1>
             <p className="mt-3 font-display text-xl italic text-pine-600">{getPositioningLine(market)}</p>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">{market.heroBlurb}</p>
@@ -160,6 +172,7 @@ export default async function MarketPage({ params }: { params: Promise<{ slug: s
               </Link>
             ))}
           </div>
+          <DamageRepairBanner className="mt-4" />
         </Container>
       </section>
 
@@ -173,10 +186,7 @@ export default async function MarketPage({ params }: { params: Promise<{ slug: s
 
       <section className="border-t border-stone-300 py-16 sm:py-24">
         <Container>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }}
-          />
+          <JsonLd data={faqJsonLd(faqs)} />
           <h2 className="font-display text-2xl text-charcoal sm:text-3xl">
             {active ? "Common questions" : "Good to know"}
           </h2>

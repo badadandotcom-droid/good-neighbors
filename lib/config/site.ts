@@ -17,13 +17,30 @@ import type { Market, PhoneConfig, SameDayServiceConfig } from "@/lib/types";
 
 export const BRAND = {
   name: "Good Neighbors",
+  /** The full business name, used in page titles, Open Graph and structured data (matches the domain). */
+  seoName: "Good Neighbors Wildlife",
   legalName: "Good Neighbors Wildlife Inc.", // Confirmed registered legal entity name
   tagline: "Humane. Local. Same-Day Service.",
   taglineFallback: "Humane. Local. Fast Response.",
   foundingRegion: "Southern Ontario, Canada",
   description:
-    "Good Neighbors provides humane raccoon, squirrel, bat and bird removal for homeowners in Toronto, York Region, Durham Region and Peel Region.",
+    "Good Neighbors Wildlife provides humane raccoon, squirrel, skunk, bat and bird removal, entry-point sealing and damage repair for homeowners in Toronto, York Region, Durham Region and Peel Region.",
   url: "https://www.goodneighborswildlife.ca",
+} as const;
+
+/**
+ * ----------------------------------------------------------------------------
+ * LIFETIME GUARANTEE — the owner's exact approved wording. Never paraphrase.
+ * ----------------------------------------------------------------------------
+ * It covers the entry points we seal (an animal getting back in through one),
+ * not repairs in general. It is the only guarantee on the site: no other
+ * guarantees, warranties or prices, and no separate guarantee page. `short`
+ * appears near the top of pages without a repair section; `full` goes with
+ * every repair section, the damage repair page and the FAQ.
+ */
+export const GUARANTEE = {
+  short: "Lifetime guarantee on every entry point we seal.",
+  full: "Every entry point we seal comes with a lifetime guarantee, for as long as you own your home. If an animal gets back in through it, we come back and take care of it at no charge. Full terms are written on your invoice.",
 } as const;
 
 /**
