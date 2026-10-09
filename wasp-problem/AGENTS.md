@@ -154,9 +154,10 @@ Ads points at them. Add new pages alongside them.
 - [x] Turn on the request form — done Oct 1, 2026. `RESEND_API_KEY` + `LEAD_TO_EMAIL` set in
       Vercel (Production), redeployed, test request delivered to the inbox (not spam).
 - [x] `lead_form` marked as a key event in GA4 — done Oct 2, 2026 (starred next to `cta_call` / `cta_text`).
-- [ ] Optional: verify waspproblem.ca in Resend so requests can go to any inbox and come from
-      a waspproblem.ca address (then set `LEAD_FROM_EMAIL`). Until then they can only go to
-      the Resend account's own email.
+- [ ] Verify waspproblem.ca in Resend (DNS records), THEN set `LEAD_FROM_EMAIL` =
+      `Wasp Problem <website@waspproblem.ca>` in Vercel and redeploy. Never set it before the
+      domain shows Verified — Resend rejects the sender and every lead fails. Lead subjects
+      start "Wasp Problem lead —" (owner's Gmail filter keys on it; don't change it).
 - [ ] Separate from Wasp Problem: check how Good Neighbors' own form is set up in Resend
       (it delivers to hello@goodneighborswildlife.ca from the same Resend account).
 - [ ] Reorder the Business Profile service areas so Toronto is first (owner's action).

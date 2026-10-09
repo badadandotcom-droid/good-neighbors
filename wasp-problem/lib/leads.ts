@@ -11,9 +11,10 @@
  *   LEAD_TO_EMAIL    — inbox the requests go to.
  *   LEAD_FROM_EMAIL  — optional sender. Defaults to Resend's shared test
  *                      sender, which only delivers to the email address the
- *                      Resend account was opened with; verify waspproblem.ca
- *                      in Resend and set e.g. "Wasp Problem <requests@waspproblem.ca>"
- *                      to send to any inbox.
+ *                      Resend account was opened with. Once waspproblem.ca is
+ *                      verified in Resend, set "Wasp Problem <website@waspproblem.ca>".
+ *                      Set it only AFTER Resend shows the domain as Verified —
+ *                      an unverified sender is rejected and every lead fails.
  *
  * While the first two are unset the form does not render anywhere — a form
  * that accepts a request and delivers it nowhere loses the lead silently,
@@ -120,7 +121,8 @@ export async function sendLead(lead: LeadFields, page: string, suspectedBot = fa
       body: JSON.stringify({
         from: process.env.LEAD_FROM_EMAIL || DEFAULT_FROM,
         to: to.split(",").map((s) => s.trim()).filter(Boolean),
-        subject: oneLine(`${suspectedBot ? "Possible spam — " : ""}Website request: ${lead.name}${lead.address ? ` — ${lead.address}` : ""}`),
+        // Always starts "Wasp Problem lead —" — the owner's Gmail filter keys on it.
+        subject: oneLine(`Wasp Problem lead — ${suspectedBot ? "Possible spam — " : ""}${lead.name}${lead.address ? ` — ${lead.address}` : ""}`),
         text,
         ...(lead.email ? { reply_to: lead.email } : {}),
       }),
