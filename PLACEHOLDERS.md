@@ -99,23 +99,26 @@ independently-toggled promise (`DEFAULT_SAME_DAY_SERVICE`). Do not flip
   limiting is implemented yet (would need persistent storage or an edge
   service).
 
-## Photo upload — `components/forms/PhotoUpload.tsx`
+## Photo upload — `components/forms/PhotoUpload.tsx`, `lib/photos/`
 
-The interactive dropzone (selection, drag-and-drop, thumbnail preview) is
-still fully built and functional client-side, but as of this pass it is
-**no longer wired into the Get Help form** — `components/forms/
-GetHelpForm.tsx` no longer imports or renders it, and there's no longer a
-standalone numbered "Photos" step. There is no object storage
-(S3/Cloudinary/etc.) connected, so rather than let visitors select photos
-that go nowhere, a short helper line next to the problem-description field
-("Have photos? Mention them in your message...") plus the ground-safety
-instruction cover this, with no upload control anywhere in the form. The
-FAQ's "Can I send you a photo?" answer matches this — it no longer offers
-"text us photos," since SMS/MMS receiving has not been tested. The
-`PhotoUpload` component itself is untouched and ready to be wired back in
-once real storage exists; re-add the import and a call site in
-`GetHelpForm.tsx` and include the resulting URLs (tagged by section) in
-the `/api/get-help` payload when ready.
+Live in the Get Help form (Oct 2026): an optional "Add photos" button in
+step 2, up to 5 photos, with previews and × to remove. No `capture`
+attribute, so phones offer both camera and photo library. Each photo is
+shrunk in the browser to a JPEG of at most 1600 px on its long side
+(`lib/photos/processPhoto.ts`, loaded only when a photo is added; iPhone HEIC
+is converted with `heic2any`, downloaded only when the browser can't read
+HEIC itself). Limits are shared with the server in `lib/photos/limits.ts`:
+5 photos, 700 KB each, 3.5 MB together, comfortably under Vercel's 4.5 MB
+request limit.
+
+Photos go only into the lead email to `CONTACT.email` as attachments — no
+storage, no public links, no new service. The server keeps only real JPEGs
+within the limits. A photo problem never costs the lead: bad photos are
+dropped, a send that fails with photos is retried without them, and the
+browser re-sends the lead without photos if the upload itself is refused.
+Whenever photos were tried but didn't make it, the email says "Customer
+tried to attach photos, but they didn't come through." A form without photos
+sends exactly the same JSON request as before.
 
 ## Legal pages — `app/privacy/page.tsx`, `app/terms/page.tsx`
 

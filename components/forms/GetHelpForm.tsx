@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, type FormEvent, type ReactNode } from "react";
+import { useRef, useState, type FormEvent, type ReactNode } from "react";
 import { Illustration } from "@/components/illustrations/Illustration";
+import { PhotoUpload, type FormPhoto } from "@/components/forms/PhotoUpload";
 import { getSpeciesEntries } from "@/lib/data/wildlife";
 import { trackAdsConversion, trackEvent } from "@/lib/analytics";
 import { getPhone, getSameDayMessage } from "@/lib/config/resolvers";
@@ -29,9 +30,46 @@ export function GetHelpForm() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [started, setStarted] = useState(false);
+  const [photos, setPhotos] = useState<FormPhoto[]>([]);
+  const [photosBusy, setPhotosBusy] = useState(false);
+  // Blocks a second tap before React re-renders the disabled button — one
+  // request, one lead, one conversion.
+  const sendingRef = useRef(false);
+
+  /**
+   * Sends the lead. With photos it goes as multipart so the JPEGs aren't
+   * inflated; if that request is refused before reaching our route (e.g. too
+   * large for the host), the lead is re-sent without photos and the email
+   * notes that photos were tried. Without photos it's the same JSON request
+   * as always.
+   */
+  async function postLead(payload: Record<string, unknown>): Promise<Response> {
+    const asJson = (body: Record<string, unknown>) =>
+      fetch("/api/get-help", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+
+    if (photos.length === 0) return asJson(payload);
+
+    const multipart = new FormData();
+    multipart.append("payload", JSON.stringify(payload));
+    photos.forEach((p, i) => multipart.append("photos", p.blob, `photo-${i + 1}.jpg`));
+    try {
+      const res = await fetch("/api/get-help", { method: "POST", body: multipart });
+      const fromOurRoute = (res.headers.get("content-type") ?? "").includes("application/json");
+      if (fromOurRoute && res.status !== 413) return res;
+    } catch {
+      // Upload never got an answer — fall back to sending the lead alone.
+    }
+    return asJson({ ...payload, photosFailed: true });
+  }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (sendingRef.current || photosBusy) return;
+    sendingRef.current = true;
     const form = e.currentTarget;
     const data = new FormData(form);
 
@@ -53,11 +91,7 @@ export function GetHelpForm() {
     trackEvent("form_submit");
 
     try {
-      const res = await fetch("/api/get-help", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+      const res = await postLead(payload);
       const result = await res.json();
 
       if (!res.ok || !result.ok) {
@@ -65,6 +99,7 @@ export function GetHelpForm() {
         setErrorMessage(typeof result.error === "string" ? result.error : null);
         setStatus("error");
         trackEvent("form_submit_error");
+        sendingRef.current = false;
         return;
       }
 
@@ -81,6 +116,7 @@ export function GetHelpForm() {
       setErrors({});
       setErrorMessage(null);
       trackEvent("form_submit_error");
+      sendingRef.current = false;
     }
   }
 
@@ -167,9 +203,6 @@ export function GetHelpForm() {
               placeholder="e.g. Scratching in the attic in the early morning for the past two days."
               className={inputClass(!!errors.description)}
             />
-            <p className="mt-2 text-xs leading-relaxed text-stone-500">
-              Have photos? Mention them in your message and we&apos;ll arrange how to receive them.
-            </p>
           </Field>
 
           <div className="flex items-start gap-2.5 rounded-sm border border-wood-300 bg-wood-100/50 px-4 py-3 sm:col-span-2">
@@ -177,6 +210,15 @@ export function GetHelpForm() {
             <p className="text-xs leading-relaxed text-wood-700">
               Only take photos from a safe place on the ground. Do not climb a ladder or get onto the roof.
             </p>
+          </div>
+
+          <div className="sm:col-span-2">
+            <PhotoUpload
+              photos={photos}
+              onChange={setPhotos}
+              onBusyChange={setPhotosBusy}
+              disabled={status === "submitting"}
+            />
           </div>
         </div>
       </FormSection>
@@ -213,7 +255,7 @@ export function GetHelpForm() {
         <p className="text-sm text-ink-700">Takes about a minute.</p>
         <button
           type="submit"
-          disabled={status === "submitting"}
+          disabled={status === "submitting" || photosBusy}
           className="inline-flex items-center justify-center gap-2 rounded-sm bg-pine-600 px-7 py-4 text-base font-medium text-bone-50 transition-colors hover:bg-pine-700 disabled:opacity-60"
         >
           {status === "submitting" ? "Sending…" : "Get Help Now"}
