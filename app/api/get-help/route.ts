@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { CONTACT, DEFAULT_PHONE } from "@/lib/config/site";
+import { isPhoneType, validateLead, type PhoneType } from "@/lib/forms/lead";
 import { PHOTO_LIMITS, PHOTOS_FAILED_NOTE } from "@/lib/photos/limits";
 
 /**
@@ -27,6 +28,8 @@ const FROM_ADDRESS = "Good Neighbors Website <website@goodneighborswildlife.ca>"
 interface GetHelpPayload {
   name: string;
   phone: string;
+  /** Optional answer to "Mobile or landline?". */
+  phoneType?: PhoneType;
   email?: string;
   location?: string;
   animal?: string;
@@ -44,10 +47,9 @@ interface Photo {
   content: Buffer;
 }
 
-const MAX_FIELD_LENGTH = 2000;
-
-function isNonEmptyString(value: unknown, max = MAX_FIELD_LENGTH): value is string {
-  return typeof value === "string" && value.trim().length > 0 && value.length <= max;
+/** Optional text fields arrive as strings from the form; anything else is treated as left blank. */
+function text(value: unknown): string | undefined {
+  return typeof value === "string" ? value : undefined;
 }
 
 function optional(value: string | undefined) {
@@ -75,6 +77,7 @@ async function sendLeadEmail(lead: GetHelpPayload, photos: Photo[], photosNote: 
   const lines = [
     `Name: ${lead.name.trim()}`,
     `Phone: ${lead.phone.trim()}`,
+    `Phone type: ${lead.phoneType ?? "Not provided"}`,
     `Email: ${optional(lead.email)}`,
     `Location: ${optional(lead.location)}`,
     `Animal: ${optional(lead.animal)}`,
@@ -159,13 +162,19 @@ export async function POST(request: Request) {
         const read = await readPhotos(form.getAll("photos"));
         photos = read.photos;
         photosNote = read.dropped;
-      } catch {
+      } catch (error) {
+        console.error("[get-help] Couldn't read the photos — sending the lead without them", error);
         photosNote = true;
       }
     } else {
       body = await request.json();
     }
-  } catch {
+  } catch (error) {
+    // With photos, the browser re-sends the lead without them after this.
+    console.error("[get-help] Couldn't read the request", error);
+    return NextResponse.json({ ok: false, error: "Invalid request body." }, { status: 400 });
+  }
+  if (typeof body !== "object" || body === null) {
     return NextResponse.json({ ok: false, error: "Invalid request body." }, { status: 400 });
   }
   if (body.photosFailed === true) photosNote = true;
@@ -176,24 +185,24 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   }
 
-  const errors: Partial<Record<keyof GetHelpPayload, string>> = {};
-
-  if (!isNonEmptyString(body.name, 200)) errors.name = "Please enter your name.";
-  if (!isNonEmptyString(body.phone, 40)) errors.phone = "Please enter a phone number.";
-  if (!isNonEmptyString(body.description, MAX_FIELD_LENGTH)) {
-    errors.description = "Please briefly describe what's happening.";
-  }
-  if (body.email && typeof body.email === "string" && body.email.length > 0) {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(body.email)) errors.email = "Please enter a valid email address.";
-  }
-  if (body.consent !== true) errors.consent = "Please confirm you're okay with us contacting you.";
-
+  // Same rules (and messages) the form checks in the browser — see lib/forms/lead.ts.
+  const errors = validateLead(body);
   if (Object.keys(errors).length > 0) {
     return NextResponse.json({ ok: false, errors }, { status: 400 });
   }
 
-  const lead = body as GetHelpPayload;
+  const lead: GetHelpPayload = {
+    name: body.name as string,
+    phone: body.phone as string,
+    phoneType: isPhoneType(body.phoneType) ? body.phoneType : undefined,
+    email: text(body.email),
+    location: text(body.location),
+    animal: text(body.animal),
+    whereActivity: text(body.whereActivity),
+    description: body.description as string,
+    consent: true,
+  };
+
   let delivered = await sendLeadEmail(lead, photos, photosNote);
   if (!delivered && photos.length > 0) {
     // The photos may be what failed — never lose the lead over them.

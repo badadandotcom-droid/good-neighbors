@@ -52,7 +52,10 @@ independently-toggled promise (`DEFAULT_SAME_DAY_SERVICE`). Do not flip
   answers `{ ok: true, delivered: true }` — i.e. Resend accepted the email.
   Not on page view, not on submit click, not on validation or send failure,
   and not for the spam honeypot (which answers `ok: true` with no
-  `delivered`). `form_submit_success` in GA4 is gated the same way.
+  `delivered`). `form_submit_success` in GA4 is gated the same way. It is
+  recorded once, just before the form moves the visitor to
+  `/contact/thank-you` (a client-side move, so the request isn't cut off);
+  the thank-you page itself records nothing.
 - **Phone-click conversion** (`googleAdsPhoneClickSendTo`,
   `AW-18430229184/JtZ6CMb2mYgdEMD1m9RE`) plus a GA4 `phone_click` event fire
   on any click of an `a[href^="tel:"]` link, via one delegated document
@@ -98,6 +101,21 @@ independently-toggled promise (`DEFAULT_SAME_DAY_SERVICE`). Do not flip
 - Basic honeypot spam protection is in place (`company` field); no rate
   limiting is implemented yet (would need persistent storage or an edge
   service).
+- **Checked in the browser first**, with the same rules and messages as the
+  server (`lib/forms/lead.ts`): a missing or invalid field is flagged at
+  once, the page scrolls to the first one and focuses it, and a message sits
+  right above the button ("Please tick the box above, then press Get Help
+  Now again." when only the consent box is missing). Nothing is sent, and
+  no photos are uploaded, until the fields are right. The server still
+  checks everything.
+- **After a delivered request** the visitor lands on `/contact/thank-you`
+  (noindex, not in the sitemap; the sticky mobile bar is hidden there, as on
+  `/contact`). It promises contact "soon" but not how, because automatic
+  texts and emails to customers are planned by the owner and not built yet.
+  Mention them there once they exist. If that page is slow to load, the
+  form shows its "Request received" panel after 4 seconds instead.
+- **"Mobile or landline?"** is an optional question under the phone number.
+  The email shows `Phone type: Mobile`, `Landline` or `Not provided`.
 
 ## Photo upload — `components/forms/PhotoUpload.tsx`, `lib/photos/`
 
@@ -115,7 +133,13 @@ Photos go only into the lead email to `CONTACT.email` as attachments — no
 storage, no public links, no new service. The server keeps only real JPEGs
 within the limits. A photo problem never costs the lead: bad photos are
 dropped, a send that fails with photos is retried without them, and the
-browser re-sends the lead without photos if the upload itself is refused.
+browser re-sends the lead without photos whenever the send with photos fails
+for any reason other than a field to fix (upload refused, server or email
+error, dropped connection, or no answer within 60 seconds). After 8 seconds
+of sending, the form says "Still sending. Please keep this page open." In
+the rare case the connection drops after the server has already sent the
+email, the owner can get the same request twice, once with photos and once
+without; better twice than never.
 Whenever photos were tried but didn't make it, the email says "Customer
 tried to attach photos, but they didn't come through." A form without photos
 sends exactly the same JSON request as before.

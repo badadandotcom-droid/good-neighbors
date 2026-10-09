@@ -79,7 +79,8 @@ app/                    Routes (App Router)
   wildlife/[slug]        Species + situation pages
   wildlife/damage-repair Sealing + damage repair page
   service-areas/[slug]   Market pages
-  api/get-help/           Intake form submission endpoint (validates only — see PLACEHOLDERS.md)
+  contact/thank-you      Shown after a request is sent (noindex)
+  api/get-help/           Intake form endpoint: validates and emails the lead (see PLACEHOLDERS.md)
 components/
   layout/                 Header, Footer, StickyMobileCTA
   home/                   Homepage sections
@@ -90,6 +91,7 @@ lib/
   config/site.ts          Brand, contact, same-day service — the source of truth
   config/resolvers.ts     Every page reads config through these, never the raw constants
   data/                   Markets, wildlife, FAQ, nav
+  forms/lead.ts           Get Help form rules, shared by the browser and the server
   seo.ts                  Metadata + JSON-LD builders
   analytics.ts             Conversion-event tracking hook (no-op until IDs exist)
 ```
@@ -97,6 +99,6 @@ lib/
 ## Known gaps before production
 
 See [`PLACEHOLDERS.md`](./PLACEHOLDERS.md). In short: real phone/email,
-real photography, a connected form backend (currently validates but
-doesn't deliver anywhere), photo upload storage, analytics IDs, and legal
-review of `/privacy` and `/terms`.
+real photography, a lead database (each lead lives only in its
+notification email), analytics IDs, and legal review of `/privacy` and
+`/terms`.

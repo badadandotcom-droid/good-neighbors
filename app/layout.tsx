@@ -40,7 +40,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const jsonLd = localBusinessJsonLd();
 
   return (
-    <html lang="en" className={`${fraunces.variable} ${publicSans.variable}`}>
+    // data-scroll-behavior: lets Next switch off the CSS smooth scrolling while
+    // it moves to a new page, so pages open at the top instead of gliding up
+    // from wherever the visitor was. In-page links still scroll smoothly.
+    <html lang="en" data-scroll-behavior="smooth" className={`${fraunces.variable} ${publicSans.variable}`}>
       <body className="flex min-h-screen flex-col antialiased">
         <JsonLd data={jsonLd} />
         <a

@@ -6,6 +6,7 @@ import { PhoneIcon } from "@/components/shared/ContactIcons";
 import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
 import { getPhone } from "@/lib/config/resolvers";
 import { trackEvent } from "@/lib/analytics";
+import { THANK_YOU_PATH } from "@/lib/forms/lead";
 
 /**
  * Mobile-only persistent conversion bar — the fastest path to a call or the form
@@ -19,7 +20,9 @@ export function StickyMobileCTA() {
   const pathname = usePathname();
   const phone = getPhone();
 
-  if (pathname === "/contact") return null;
+  // Not on the form itself, nor right after sending it: a "Get Help Now"
+  // button there invites a duplicate request (both pages show the number).
+  if (pathname === "/contact" || pathname === THANK_YOU_PATH) return null;
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-stone-300 bg-bone-50/95 backdrop-blur-md sm:hidden">

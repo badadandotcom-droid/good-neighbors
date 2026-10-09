@@ -16,3 +16,10 @@ export const PHOTO_LIMITS = {
 
 /** Added to the lead email whenever photos were tried but didn't make it. */
 export const PHOTOS_FAILED_NOTE = "Customer tried to attach photos, but they didn't come through.";
+
+/**
+ * How long the browser waits on a send with photos before giving up on the
+ * photos and sending the lead without them. Generous, so slow mobile uploads
+ * still get through.
+ */
+export const PHOTO_SEND_TIMEOUT_MS = 60_000;
