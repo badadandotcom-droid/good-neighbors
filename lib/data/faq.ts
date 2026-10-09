@@ -50,7 +50,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Can I send you a photo?",
     answer:
-      "If you have photos, let us know when you contact us. We'll confirm how to send them. Only take photos from a safe place on the ground.",
+      "Yes. You can add up to 5 photos to your request on our contact form. Only take photos from a safe place on the ground.",
   },
   {
     question: "How much does wildlife removal cost?",
