@@ -168,6 +168,28 @@ Ads points at them. Add new pages alongside them.
       per city. Needs from the owner first: the hours he actually goes out, and what counts as
       urgent. Copy: calls answered 24/7; urgent and evening jobs based on availability — never
       "24/7 emergency". Pull search volumes in Semrush once the account has API units.
+- [ ] Product & safety page (owner's plan; build from the terminal). Product: **Drione
+      Insecticide Dust** (Envu / Environmental Science CA Inc., Kitchener ON; formerly Bayer).
+      Verified from the Canadian label and SDS in Oct 2026 — re-check every fact against a
+      photo of the label on the container the owner actually uses before publishing:
+      - PCP Registration No. 15255. Guarantee: pyrethrins 1.0%, piperonyl butoxide 9.7%,
+        amorphous silica gel 40.0%.
+      - Current label: PMRA approved 2024-03-19 (correction 2024-07-17), updated after the
+        pyrethrins / piperonyl butoxide re-evaluations; the older label expired 2025-03-02.
+      - SDS 2023-09-25: GHS "Not a hazardous substance or mixture"; repeated exposure may
+        cause skin dryness or cracking. Label: "Keep out of reach of children"; harmful if
+        swallowed; avoid skin contact and inhaling the powder. Earlier Canadian labels: toxic
+        to fish, keep out of lakes, streams and ponds. Applicator PPE on the label: long
+        sleeves, long pants, chemical-resistant gloves, socks, shoes, N95-minimum respirator.
+      - Envu's wasp guidance (marketing copy, not label text): treat nests in the evening;
+        dust the nest, its entrance and the surrounding area (0.25–0.5 g per average nest);
+        keep people and pets out of treated areas until the dust has completely settled.
+      - Page copy may use only label/SDS wording and the owner's own practice. Never
+        "non-toxic", "100% safe", "eco-friendly", "organic" or "licensed". The Canadian label
+        lists wasps; bees were not confirmed on it — keep bee claims off this page unless the
+        owner's label says otherwise.
+      Sources: ca.envu.com/pest-management/products/drione (label + SDS PDFs);
+      labelsds.com "Canada Drione Dust En-Fr Label 7-17-24" and "SDS 9-25-23".
 - [ ] Google Business Profile: set hours to "Open 24 hours" if not already (calls are answered
       24/7) — drives "open now" searches in Maps (owner's action).
 - [ ] Licence wording — only after the December exam is passed.
