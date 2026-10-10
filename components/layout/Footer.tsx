@@ -4,6 +4,7 @@ import { PhoneLink } from "@/components/shared/PhoneLink";
 import { BRAND, CONTACT } from "@/lib/config/site";
 import { getPhone, getPositioningLine } from "@/lib/config/resolvers";
 import { getActiveMarkets, marketHref } from "@/lib/data/markets";
+import { CITIES, cityHref } from "@/lib/data/cities";
 import { getSpeciesEntries } from "@/lib/data/wildlife";
 import { DAMAGE_REPAIR_PATH } from "@/lib/data/repairs";
 
@@ -11,6 +12,7 @@ export function Footer() {
   const phone = getPhone();
   const species = getSpeciesEntries();
   const markets = getActiveMarkets();
+  const cities = CITIES.filter((c) => c.featured);
 
   return (
     <footer className="border-t border-stone-300 bg-charcoal text-bone-100">
@@ -44,6 +46,7 @@ export function Footer() {
           links={[
             { label: "All Service Areas", href: "/service-areas" },
             ...markets.map((m) => ({ label: m.displayName, href: marketHref(m) })),
+            ...cities.map((c) => ({ label: c.name, href: cityHref(c) })),
           ]}
         />
 

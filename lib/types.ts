@@ -66,6 +66,17 @@ export interface Market {
   brandName: string;
   /** Overrides the on-page H1 (which otherwise defaults to `brandName`) when the approved heading differs from the brand-suffix convention. */
   heroHeading?: string;
+  /**
+   * Hub page <title> before the brand suffix, naming the region's main
+   * cities, e.g. "Wildlife Removal in Peel Region: Brampton, Mississauga &
+   * Caledon". Falls back to `heroHeading`.
+   */
+  hubTitle?: string;
+  /**
+   * Places the hub names as covered that have no city page of their own
+   * (East York, King City, Bowmanville…). Plain text, never links.
+   */
+  alsoCovered?: string[];
   status: MarketStatus;
   country: Country;
   /** Province or state, e.g. "Ontario" */
@@ -84,6 +95,57 @@ export interface Market {
   seoDescription: string;
   /** Optional coordinates for LocalBusiness/service-area schema, once known */
   coordinates?: { lat: number; lng: number };
+}
+
+/** The four region hubs a city page can belong to (their Market slugs). */
+export type RegionSlug = "toronto" | "peel-region" | "york-region" | "durham-region";
+
+export interface CityFaq {
+  question: string;
+  answer: string;
+}
+
+/**
+ * A city page at /service-areas/[slug], e.g. /service-areas/brampton. People
+ * search by city ("raccoon removal brampton"), not by region, so each city
+ * gets a page that is genuinely about that city: real neighbourhoods, the
+ * local housing and landscape, and how they affect which animals get in.
+ *
+ * Every text field is written for that city alone. Google treats near-
+ * duplicate location pages as doorway pages, so no two cities may share
+ * more than a sentence of copy, and nothing here may claim anything about
+ * the business that the live site doesn't already say. Copy may carry
+ * inline links written as [label](/path) (see components/shared/RichText).
+ */
+export interface City {
+  slug: string;
+  /** e.g. "Brampton" */
+  name: string;
+  region: RegionSlug;
+  /** Page <title> before the brand suffix; defaults to "Raccoon & Squirrel Removal in {name}". */
+  seoTitle?: string;
+  /** Under 155 characters: the city, same-day service, the lifetime guarantee, humane, and the phone number. */
+  metaDescription: string;
+  /** One line for the hub card and the service-areas index, e.g. "Castlemore to Mount Pleasant." */
+  cardLine: string;
+  /** Hero paragraph naming the city and two or three of its neighbourhoods. */
+  intro: string;
+  /** Real neighbourhoods, the higher-end areas first. Plain text, never links. */
+  neighbourhoods: string[];
+  /** Two or three paragraphs on the local housing and landscape; one links to /wildlife/something-in-the-attic. */
+  problems: string[];
+  /** "Raccoon removal in {name}", one or two paragraphs, linking to /wildlife/raccoons. */
+  raccoons: string[];
+  /** "Squirrel removal in {name}", linking to /wildlife/squirrels. */
+  squirrels: string[];
+  /** "Skunk, bird and bat removal in {name}", one combined section linking to each page. */
+  otherWildlife: string[];
+  /** Two city-specific questions, shown after the six featured FAQs. */
+  faqs: CityFaq[];
+  /** Neighbouring city slugs. Linked once their pages exist, named until then. */
+  nearby: string[];
+  /** Listed in the footer (the first three cities built). */
+  featured?: boolean;
 }
 
 export type WildlifeCategory = "species" | "situation";

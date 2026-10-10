@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { BRAND } from "@/lib/config/site";
 import { MARKETS, marketHref } from "@/lib/data/markets";
+import { CITIES, cityHref } from "@/lib/data/cities";
 import { WILDLIFE } from "@/lib/data/wildlife";
 import { DAMAGE_REPAIR_PATH } from "@/lib/data/repairs";
 
@@ -37,6 +38,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (market.status !== "active") continue;
     entries.push({
       url: new URL(marketHref(market), BRAND.url).toString(),
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    });
+  }
+
+  for (const city of CITIES) {
+    entries.push({
+      url: new URL(cityHref(city), BRAND.url).toString(),
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,

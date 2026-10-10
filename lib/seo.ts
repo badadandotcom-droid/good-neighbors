@@ -140,8 +140,10 @@ export function serviceJsonLd(opts: {
   serviceType: string;
   description: string;
   path: string;
-  /** Narrows the area served (market pages); defaults to the whole active territory. */
+  /** Narrows the area served (market and city pages); defaults to the whole active territory. */
   areaServed?: string[];
+  /** schema.org type for each `areaServed` entry: a city page passes "City". */
+  areaServedType?: "AdministrativeArea" | "City";
   /** Lists the confirmed repairs as an offer catalog (damage repair page only). */
   includeRepairs?: boolean;
 }) {
@@ -157,7 +159,7 @@ export function serviceJsonLd(opts: {
       url: BRAND.url,
     },
     areaServed: opts.areaServed
-      ? opts.areaServed.map((name) => ({ "@type": "AdministrativeArea", name }))
+      ? opts.areaServed.map((name) => ({ "@type": opts.areaServedType ?? "AdministrativeArea", name }))
       : serviceAreaJsonLd(),
     url: new URL(opts.path, BRAND.url).toString(),
     description: opts.description,

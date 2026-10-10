@@ -2,15 +2,18 @@ import Link from "next/link";
 import { Container } from "@/components/shared/Container";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { Illustration } from "@/components/illustrations/Illustration";
+import { hubPlaces } from "@/components/service-areas/MarketHub";
+import { cityHref, getPlannedCitiesForRegion, listJoin } from "@/lib/data/cities";
 import { MARKETS, marketHref } from "@/lib/data/markets";
 import { pageMetadata } from "@/lib/seo";
 import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
+import type { Market, RegionSlug } from "@/lib/types";
 import { cn } from "@/lib/utils";
-import type { Market } from "@/lib/types";
 
 export const metadata = pageMetadata({
   title: "Service Areas",
-  description: "Good Neighbors service areas across Southern Ontario, with more markets being added as we grow.",
+  description:
+    "Humane wildlife removal across Toronto, Peel, York and Durham: Scarborough, Brampton, Mississauga and more. Lifetime guarantee on every entry point we seal.",
   path: "/service-areas",
 });
 
@@ -22,6 +25,8 @@ function groupByMetro(markets: Market[]): { metro: string; markets: Market[] }[]
   }
   return Array.from(groups, ([metro, markets]) => ({ metro, markets }));
 }
+
+const REGION_SLUGS: RegionSlug[] = ["toronto", "peel-region", "york-region", "durham-region"];
 
 export default function ServiceAreasPage() {
   const groups = groupByMetro(MARKETS.filter((m) => m.status !== "hidden"));
@@ -55,18 +60,17 @@ export default function ServiceAreasPage() {
                 <span className="h-px w-8 bg-stone-400" aria-hidden="true" />
                 {group.metro}
               </h2>
-              <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
                 {group.markets.map((market) => {
                   const active = market.status === "active";
+                  const isRegion = (REGION_SLUGS as string[]).includes(market.slug);
+                  const cities = isRegion ? getPlannedCitiesForRegion(market.slug as RegionSlug) : [];
                   return (
-                    <Link
+                    <div
                       key={market.slug}
-                      href={marketHref(market)}
                       className={cn(
-                        "group flex flex-col gap-4 rounded-sm border p-7 transition-all duration-200",
-                        active
-                          ? "border-stone-300 bg-bone-50 hover:-translate-y-0.5 hover:border-pine-500 hover:shadow-card"
-                          : "border-dashed border-stone-300 bg-transparent",
+                        "flex flex-col gap-4 rounded-sm border p-7",
+                        active ? "border-stone-300 bg-bone-50" : "border-dashed border-stone-300 bg-transparent",
                       )}
                     >
                       <div className="flex items-center justify-between">
@@ -78,13 +82,38 @@ export default function ServiceAreasPage() {
                         )}
                       </div>
                       <div>
-                        <h3 className="font-display text-2xl text-charcoal">{market.displayName}</h3>
-                        <p className="mt-2 text-sm leading-relaxed text-ink-700">{market.serviceArea.join(", ")}</p>
+                        <h3 className="font-display text-2xl text-charcoal">
+                          <Link href={marketHref(market)} className="hover:text-pine-700">
+                            {market.heroHeading ?? market.displayName}
+                          </Link>
+                        </h3>
+                        <p className="mt-2 text-sm leading-relaxed text-ink-700">
+                          {isRegion ? listJoin(hubPlaces(market)) : market.serviceArea.join(", ")}
+                        </p>
                       </div>
-                      <span className="mt-auto text-sm font-medium text-pine-600 group-hover:text-pine-700">
-                        {active ? "View coverage →" : "Get notified →"}
-                      </span>
-                    </Link>
+                      {cities.some((c) => c.live) && (
+                        <ul className="flex flex-wrap gap-2" aria-label={`${market.displayName} city pages`}>
+                          {cities
+                            .filter((c) => c.live)
+                            .map((c) => (
+                              <li key={c.slug}>
+                                <Link
+                                  href={cityHref(c)}
+                                  className="inline-block rounded-full border border-stone-300 bg-white px-3.5 py-1.5 text-sm font-medium text-pine-700 hover:border-pine-500"
+                                >
+                                  {c.name}
+                                </Link>
+                              </li>
+                            ))}
+                        </ul>
+                      )}
+                      <Link
+                        href={marketHref(market)}
+                        className="mt-auto text-sm font-medium text-pine-600 hover:text-pine-700"
+                      >
+                        {active ? `All of ${market.displayName} →` : "Get notified →"}
+                      </Link>
+                    </div>
                   );
                 })}
               </div>
