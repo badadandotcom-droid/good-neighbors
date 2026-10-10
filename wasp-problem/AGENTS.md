@@ -88,7 +88,8 @@ These are not style preferences. Breaking one is a real-world problem for the ow
   first. Oakville, Burlington and Brampton are kept but **not featured**: listed last,
   and left out of other city pages' cross-links (`featured: false`). There is no public
   street address — it's a service-area business.
-- City pages: 13, one per `CITY_LOCATIONS` entry (Brampton has none). Each has its own
+- City pages: 14, one per `CITY_LOCATIONS` entry. Brampton's was added Oct 2026 for people who
+  find the site on their own — it is not featured and gets no Google Ads. Each has its own
   hand-written copy — never clone one and swap the name.
 - Canonical domain is `https://www.waspproblem.ca` (`BRAND.url` in `lib/site.ts`; the canonical tag, og:url,
   og:image, sitemap, robots and schema all follow it). Vercel's Domains list shows the www addresses
