@@ -221,6 +221,326 @@ export const CITIES: City[] = [
     ],
     nearby: ["north-york", "pickering", "markham"],
   },
+  {
+    slug: "markham",
+    name: "Markham",
+    region: "york-region",
+    metaDescription:
+      "Humane raccoon & squirrel removal across Markham. Same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+    cardLine: "Unionville and Angus Glen to Cornell and Milliken.",
+    intro:
+      "Markham mixes the heritage streets of Unionville, the big newer homes of Cachet and Angus Glen, and the tight subdivisions of Milliken and Cornell, with the Rouge River threading through all of it. When something moves in overhead, we get it out humanely, seal the way in and repair the damage.",
+    neighbourhoods: [
+      "Unionville",
+      "Cachet",
+      "Angus Glen",
+      "Thornhill (east)",
+      "Berczy",
+      "Wismer",
+      "Cornell",
+      "Box Grove",
+      "Markham Village",
+      "Milliken",
+    ],
+    problems: [
+      "The Rouge River's headwater streams run through Markham, past Unionville, Markham Village and Cornell, and the valley land along them is full of raccoons, squirrels and skunks. Unionville's Main Street homes date back well over a century, with mature trees, wood trim and old brick chimneys, and the same goes for the older parts of Markham Village. Houses like that have a dozen small ways in that a newer home doesn't.",
+      "Cachet and Angus Glen are the other end of the scale: large homes from the 1990s and 2000s on big lots, often backing onto a golf course or a woodlot. Size works against you here. A bigger roof has more vents, more soffit and more places where two rooflines meet, and a raccoon only needs one of them.",
+      "Berczy, Wismer, Box Grove and Milliken are mostly two-storey subdivision homes with aluminum soffit, roof vents and attached garages, and in Thornhill, east of Yonge, the streets are older and the trees reach over the roof. A [squirrel in the attic](/wildlife/something-in-the-attic) in Berczy almost always chewed in at a soffit corner; in Thornhill it may have simply walked in along a maple branch.",
+    ],
+    raccoons: [
+      "A raccoon in a Markham attic usually announces itself after dark: heavy steps, a thump, sometimes a growl. They climb the downspout or a tree, pull apart a roof vent or shove up the soffit where the roof meets the eaves, and settle into the insulation. From late winter to early summer the attic is often a nursery.",
+      "That is why we look for kits before anything else and keep the family together on the way out. Then the opening gets sealed and the vent, soffit or roof repaired to match your home. [Raccoon removal](/wildlife/raccoons) is about the whole roofline, not only the spot you heard.",
+    ],
+    squirrels: [
+      "Daytime noise overhead is a squirrel, and Markham's black and grey squirrels are busiest at first light and again before dusk. They chew at soffit corners, fascia edges and roof vents, and the mature trees of Unionville, Thornhill and Markham Village hand them a direct route to the roof.",
+      "With two litters a year, a squirrel in March or late August is probably a mother with a nest in the insulation, so nothing is sealed until every squirrel, young included, is out. The chewed spot is then repaired as part of [squirrel removal](/wildlife/squirrels).",
+    ],
+    otherWildlife: [
+      "Skunks dig in under decks, sheds and front steps, and the ravine lots along the Rouge and the big yards of Cachet and Angus Glen give them cover to do it. When the skunk is out, the base of the structure gets wire mesh dug into the soil ([skunk removal](/wildlife/skunks)).",
+      "Starlings and sparrows nest in uncovered dryer and bathroom vents on homes of every age; eggs and young are checked for first, then the vent is screened ([bird removal](/wildlife/birds)). Bats favour the older attics and fascia gaps of Unionville, Thornhill and Markham Village. They're protected in Ontario, and we go through the timing and method with you before any work starts ([bat removal](/wildlife/bats)).",
+    ],
+    faqs: [
+      {
+        question: "Do you cover Unionville and Angus Glen?",
+        answer:
+          "Yes. We cover all of Markham: Unionville, Cachet and Angus Glen; Thornhill east of Yonge; Berczy, Wismer, Cornell and Box Grove; and Markham Village and Milliken. Stouffville and Richmond Hill next door are covered as well.",
+      },
+      {
+        question: "How quickly can you get to Markham?",
+        answer:
+          "Requests that reach us before 4 PM qualify for same-day service, subject to technician availability. Someone answers the phone 24 hours a day, 7 days a week, and we confirm the timing with you before a technician is sent.",
+      },
+    ],
+    nearby: ["richmond-hill", "scarborough", "stouffville", "vaughan"],
+  },
+  {
+    slug: "vaughan",
+    name: "Vaughan",
+    region: "york-region",
+    metaDescription:
+      "Raccoon or squirrel in a Vaughan attic? Humane removal, same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+    cardLine: "Kleinburg and Woodbridge to Maple, Vellore and Thornhill.",
+    intro:
+      "Vaughan runs from the estate lots of Kleinburg on the Humber, through Woodbridge's old village and newer streets, to the big subdivisions of Maple and Vellore Village. Different houses, same answer: we get the animal out humanely, seal the entry point and repair the damage.",
+    neighbourhoods: [
+      "Kleinburg",
+      "Woodbridge",
+      "Islington Woods",
+      "Thornhill (west)",
+      "Patterson",
+      "Maple",
+      "Vellore Village",
+      "Sonoma Heights",
+      "Concord",
+    ],
+    problems: [
+      "The Humber River is Vaughan's wildlife highway. It runs past Kleinburg, through Boyd Conservation Area and down through Woodbridge, and the homes along it, from the Kleinburg estates to the treed lots of Islington Woods, back directly onto raccoon and skunk country. Large lots mean more trees over the roof, more outbuildings and more decks, and the older village homes in Kleinburg and Woodbridge add wood trim and uncapped chimneys to the list.",
+      "Maple, Vellore Village, Patterson and Sonoma Heights are mostly 1990s to 2010s two-storeys: aluminum or vinyl soffit, several roof vents, and a garage roof that meets the house at a climbable angle. The materials are newer, but a soffit panel that has popped loose or a vent cap that has cracked is an open door.",
+      "Thornhill, west of Yonge, is older and greener, with 1950s to 1980s homes under mature trees, and Concord is a mix of everything. Wherever you are, [something in the attic](/wildlife/something-in-the-attic) nearly always got in at the roofline, and the entry is often nowhere near the room where you hear it.",
+    ],
+    raccoons: [
+      "Raccoons in Vaughan follow the Humber and the hydro corridors into every neighbourhood, and the attic is where they want to be from late winter through early summer, when a female is raising kits. They climb the downspout or a tree, tear a roof vent open or push through the soffit, and the first you know of it is heavy footsteps after dark.",
+      "Kits are checked for before any removal so the family leaves together. After that, the opening is sealed and the roof, vent or soffit repaired, matched to your home. [Raccoon removal](/wildlife/raccoons) always starts with the whole roofline.",
+    ],
+    squirrels: [
+      "A squirrel in the attic is the daytime version of the same problem. Vaughan's grey and black squirrels are busiest around sunrise and in the late afternoon, and they chew in at soffit corners, fascia edges and roof vents, with the big trees of Kleinburg, Woodbridge and Thornhill giving them the easiest climb.",
+      "They raise young twice a year and nest in the insulation, so every squirrel, including the young, is confirmed out before the hole is sealed and the chewed wood or soffit repaired. More on [squirrel removal](/wildlife/squirrels).",
+    ],
+    otherWildlife: [
+      "Skunks are busy along the Humber and in Boyd Conservation Area, and they den under decks, sheds and porch steps across Vaughan, especially on the bigger Kleinburg and Islington Woods lots. Once the skunk is out, the base of the structure is meshed and the mesh dug into the ground ([skunk removal](/wildlife/skunks)).",
+      "Birds nest in uncovered dryer and bathroom vents in every subdivision; we check for eggs and young and then screen the vent ([bird removal](/wildlife/birds)). Bats turn up in the older homes of Kleinburg, Woodbridge and Thornhill, roosting behind fascia or in an attic gap. Bats are protected in Ontario, so the method and timing are explained before any work begins ([bat removal](/wildlife/bats)).",
+    ],
+    faqs: [
+      {
+        question: "Do you cover Kleinburg, Woodbridge and Thornhill?",
+        answer:
+          "Yes. We cover all of Vaughan: Kleinburg, Woodbridge and Islington Woods; Thornhill west of Yonge; Maple, Vellore Village, Patterson and Sonoma Heights; and Concord. King City to the north is covered too.",
+      },
+      {
+        question: "How quickly can you get to Vaughan?",
+        answer:
+          "For requests received before 4 PM, same-day service is available, subject to technician availability. We answer calls around the clock and confirm the timing with you when you get in touch.",
+      },
+    ],
+    nearby: ["richmond-hill", "markham", "brampton", "etobicoke"],
+  },
+  {
+    slug: "richmond-hill",
+    name: "Richmond Hill",
+    region: "york-region",
+    seoTitle: "Richmond Hill Raccoon & Squirrel Removal",
+    metaDescription:
+      "Humane raccoon & squirrel removal in Richmond Hill, same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+    cardLine: "Bayview Hill and Mill Pond to Oak Ridges and Lake Wilcox.",
+    intro:
+      "Richmond Hill sits on the Oak Ridges Moraine, with the big lots of Bayview Hill, the older streets around Mill Pond and the lakeside homes of Oak Ridges and Lake Wilcox all sharing the same woods and wildlife. We remove the animal humanely, seal the way in and repair what it damaged.",
+    neighbourhoods: ["Bayview Hill", "Oak Ridges", "Mill Pond", "Jefferson", "Lake Wilcox", "Richvale", "Doncrest", "Westbrook"],
+    problems: [
+      "The north half of Richmond Hill is moraine: rolling, wooded and dotted with kettle lakes, with Lake Wilcox the largest of them. Oak Ridges and Jefferson were built into that landscape, and the homes around Lake Wilcox range from converted cottages to new builds. Living on the moraine means raccoons, squirrels, skunks and bats are never far away, and a treed lot gives them a straight line to the roof.",
+      "Bayview Hill is a different kind of exposure: large homes on large lots, with long rooflines, many vents and plenty of soffit. Around Mill Pond and in Richvale, the housing is older, from the 1950s onward, with wood fascia and soffit that has weathered for decades under mature trees.",
+      "Doncrest and Westbrook are newer subdivisions with aluminum soffit and roof vents, and the weak points are the usual ones: a corner panel that has slipped, a cracked vent cap, a dryer vent without a cover. However the house is built, a [raccoon in the attic](/wildlife/something-in-the-attic) found a gap somewhere along the roofline, and that gap is what has to be fixed.",
+    ],
+    raccoons: [
+      "Raccoons use the moraine's woodlots and the creek valleys to move between neighbourhoods, and a Richmond Hill attic suits them from late winter to early summer, when the females are raising kits. Listen for slow, heavy movement after dark; they get in by tearing a roof vent open or lifting the soffit where the roof meets the eaves.",
+      "Because kits are so often involved, we check for them before removing anything and keep mother and young together. Then the opening is sealed and the vent, soffit or roof repaired to match. [Raccoon removal](/wildlife/raccoons) starts with the whole roofline.",
+    ],
+    squirrels: [
+      "Squirrels are the daytime scampering, busiest at sunrise and before dusk. In Richmond Hill they chew in at soffit corners, fascia edges and roof vents, and the big trees of Mill Pond, Richvale and the moraine neighbourhoods get them onto the roof without effort.",
+      "Two litters a year means a squirrel in early spring or late summer is often a mother with young in the insulation, so all of them are confirmed out before anything is sealed and the chewed spot repaired. See [squirrel removal](/wildlife/squirrels).",
+    ],
+    otherWildlife: [
+      "Skunks are common right across the moraine and den under decks, sheds and porches from Oak Ridges to Doncrest. Once the skunk is out, wire mesh goes along the base of the structure and into the soil so nothing digs back in ([skunk removal](/wildlife/skunks)).",
+      "Starlings and sparrows nest in open dryer and bathroom vents; eggs and young are checked for before the vent is screened ([bird removal](/wildlife/birds)). Bats are more common here than in most of the GTA because of the woods and lakes, roosting behind fascia and in attic gaps, particularly in the older homes near Mill Pond and Lake Wilcox. They are protected in Ontario, which affects timing, and we go over the plan with you before any work begins ([bat removal](/wildlife/bats)).",
+    ],
+    faqs: [
+      {
+        question: "Do you cover Oak Ridges and Lake Wilcox?",
+        answer:
+          "Yes. We cover all of Richmond Hill: Bayview Hill, Mill Pond and Richvale; Oak Ridges, Jefferson and Lake Wilcox on the moraine; and Doncrest and Westbrook. Aurora and King City are covered as well.",
+      },
+      {
+        question: "How quickly can you get to Richmond Hill?",
+        answer:
+          "Same-day service is available for requests received before 4 PM, subject to technician availability, and the phone is answered 24 hours a day. We confirm the time with you before anyone is sent out.",
+      },
+    ],
+    nearby: ["markham", "vaughan", "aurora", "stouffville"],
+  },
+  {
+    slug: "newmarket",
+    name: "Newmarket",
+    region: "york-region",
+    metaDescription:
+      "Humane raccoon & squirrel removal in Newmarket, same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+    cardLine: "Historic Main Street to Stonehaven, Glenway and Woodland Hill.",
+    intro:
+      "Newmarket has a historic core along Main Street and Fairy Lake, established neighbourhoods like Glenway and Huron Heights, and newer estates in Stonehaven and Summerhill, with the Holland River running through the middle. Whatever is in the attic, we get it out humanely, seal the entry point and repair the damage.",
+    neighbourhoods: ["Stonehaven", "Glenway", "Summerhill", "Armitage", "Woodland Hill", "Huron Heights", "Bristol-London"],
+    problems: [
+      "Newmarket's oldest homes sit along Main Street and around Fairy Lake, Victorian brick with wood trim, deep eaves and chimneys that were never capped. The Holland River flows past them and north out of town, and its banks and the trails around Fairy Lake are where the town's raccoons and skunks live. An old house with mature trees beside a river valley is about as inviting as it gets.",
+      "Huron Heights and Bristol-London were built in the 1970s and 80s, Glenway and Armitage mostly in the 80s and 90s, and by now their trees are big enough to touch the roof and their wood fascia has had decades of weather. Stonehaven, Summerhill and Woodland Hill are newer and larger, with long rooflines, more vents and more soffit, which is more for a raccoon to test.",
+      "North of the subdivisions it turns rural quickly, so bats and skunks are a bigger part of the picture than in a city neighbourhood. A [squirrel in the attic](/wildlife/something-in-the-attic) in Glenway probably chewed in at a soffit corner; in a Main Street home it may have come down the chimney.",
+    ],
+    raccoons: [
+      "Raccoons work the Holland River and the ravines, and a warm attic in Newmarket is prime real estate from late winter to early summer, when the females are raising kits. Heavy, slow footsteps after dark are the giveaway. They tear roof vents open, lift soffit at the eaves and, on the older homes, come straight down an uncapped chimney.",
+      "Kits are the first thing we look for, so mother and young leave together. The opening is then sealed and the vent, soffit, chimney or roof repaired to match your home. [Raccoon removal](/wildlife/raccoons) covers the whole roofline.",
+    ],
+    squirrels: [
+      "Daytime scampering overhead is a squirrel, busiest at first light and before dusk, and Newmarket's black and grey squirrels chew in at soffit corners, fascia edges and roof vents. The mature trees of Glenway, Huron Heights and the Main Street area give them an easy route up.",
+      "Litters come twice a year, so a squirrel in spring or late summer is usually a mother with a nest in the insulation. Every squirrel is confirmed out before the hole is sealed and the chewed spot repaired. More on [squirrel removal](/wildlife/squirrels).",
+    ],
+    otherWildlife: [
+      "Skunks den under decks, sheds and front steps all over Newmarket, and the river valley and the rural edge keep the supply up. Once the skunk is out, wire mesh is fixed along the base of the structure and dug into the ground ([skunk removal](/wildlife/skunks)).",
+      "Starlings and sparrows nest in uncovered dryer and bathroom vents; we check for eggs and young, then screen the vent ([bird removal](/wildlife/birds)). Bats roost behind fascia and in attic gaps, most often in the older homes near Fairy Lake and Main Street. They are protected in Ontario, so timing is explained before any work begins ([bat removal](/wildlife/bats)).",
+    ],
+    faqs: [
+      {
+        question: "Do you cover Stonehaven and Glenway?",
+        answer:
+          "Yes. We cover all of Newmarket: Stonehaven, Summerhill and Woodland Hill; Glenway and Armitage; Huron Heights and Bristol-London; and the Main Street and Fairy Lake area. Aurora, just south, is covered too.",
+      },
+      {
+        question: "How quickly can you get to Newmarket?",
+        answer:
+          "If your request reaches us before 4 PM, it qualifies for same-day service, subject to technician availability. Calls are answered 24 hours a day, 7 days a week, and we confirm timing with you when you reach us.",
+      },
+    ],
+    nearby: ["aurora", "richmond-hill", "stouffville"],
+  },
+  {
+    slug: "north-york",
+    name: "North York",
+    region: "toronto",
+    metaDescription:
+      "Humane raccoon & squirrel removal in North York. Same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+    cardLine: "York Mills and the Bridle Path to Willowdale and Don Mills.",
+    intro:
+      "North York is ravine country: the Don Valley and its branches run through York Mills, Hoggs Hollow and Bayview Village, and the mid-century homes of Willowdale, Don Mills and Bathurst Manor sit under trees planted seventy years ago. We remove the animal humanely, seal the way in and repair the damage.",
+    neighbourhoods: [
+      "York Mills",
+      "Bridle Path",
+      "Hoggs Hollow",
+      "Armour Heights",
+      "Bayview Village",
+      "Don Mills",
+      "Willowdale",
+      "Bathurst Manor",
+      "Newtonbrook",
+      "Downsview",
+    ],
+    problems: [
+      "The Don River's east and west branches, and the ravines that feed them, are the reason North York has so much wildlife. York Mills, Hoggs Hollow, Armour Heights and the Bridle Path are built on and around those ravines, with large older homes, big lots and oaks and maples that reach well over the roof. A branch near the eaves is a bridge, and an old wood soffit is a door.",
+      "Willowdale, Bathurst Manor, Newtonbrook and Downsview were mostly bungalows and split-levels from the 1950s and 60s. Many have been rebuilt as large new houses, which brings its own problems: complicated rooflines, more vents and soffit, and gaps where new construction meets what was left of the old. The bungalows that remain have sixty-year-old trim under mature trees.",
+      "Don Mills and Bayview Village were planned communities of the 1950s and 60s, laid out around ravines and parkland, which is exactly where raccoons and skunks live. [Something in the attic](/wildlife/something-in-the-attic) in any of these neighbourhoods almost always came in at the roofline, and often at the back of the house, away from where the noise seems to be.",
+    ],
+    raccoons: [
+      "Raccoons are everywhere in North York, and the ravine neighbourhoods have the densest numbers. They come up from the valley after dark, climb a tree or a downspout, and pull apart a roof vent or push through the soffit. From late winter to early summer, a female will raise her kits in the attic, and the slow, heavy footsteps overhead are hers.",
+      "We check for kits before any removal so the family leaves together, then seal the opening and repair the vent, soffit or roof so it matches the rest of the house. [Raccoon removal](/wildlife/raccoons) looks at the whole roofline, not just one corner.",
+    ],
+    squirrels: [
+      "Scampering by day means a squirrel, and North York's black and grey squirrels have more big trees to work with than almost anywhere in Toronto. They chew in at soffit corners, fascia edges and roof vents, and on an older York Mills or Bathurst Manor home the wood trim gives way fast.",
+      "Because they raise young twice a year, a squirrel in early spring or late summer usually means a nest in the insulation. Each one is confirmed out before the hole is sealed and the chewed trim repaired. See [squirrel removal](/wildlife/squirrels).",
+    ],
+    otherWildlife: [
+      "Skunks den under decks, sheds and front steps in every ravine neighbourhood, from Hoggs Hollow to Don Mills. Once the skunk is out, wire mesh goes along the base of the structure and into the ground ([skunk removal](/wildlife/skunks)).",
+      "Starlings and sparrows nest in open dryer and bathroom vents, busiest in spring; eggs and young are checked for first, then the vent is screened ([bird removal](/wildlife/birds)). Bats roost in the attics and behind the fascia of older homes near the ravines. They are protected in Ontario, and the method and timing are explained before any work begins ([bat removal](/wildlife/bats)).",
+    ],
+    faqs: [
+      {
+        question: "Do you cover York Mills and the Bridle Path?",
+        answer:
+          "Yes. We cover all of North York: York Mills, the Bridle Path, Hoggs Hollow and Armour Heights; Bayview Village and Don Mills; Willowdale, Newtonbrook, Bathurst Manor and Downsview. Scarborough, East York and the rest of Toronto are covered as well.",
+      },
+      {
+        question: "How quickly can you get to North York?",
+        answer:
+          "Same-day service covers requests received before 4 PM, subject to technician availability. The phone is answered 24 hours a day, and we confirm the timing with you when you get in touch.",
+      },
+    ],
+    nearby: ["scarborough", "etobicoke", "vaughan", "markham"],
+  },
+  {
+    slug: "pickering",
+    name: "Pickering",
+    region: "durham-region",
+    metaDescription:
+      "Raccoon & squirrel removal in Pickering, humane and same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+    cardLine: "Rosebank and Bay Ridges to Amberlea and Brock Ridge.",
+    intro:
+      "Pickering is squeezed between Rouge National Urban Park on one side, Duffins Creek on the other and the lake along the bottom, with the wooded lots of Rosebank and the lakefront streets of Bay Ridges right in the middle of it. We get the animal out humanely, seal the entry point and repair the damage.",
+    neighbourhoods: ["Rosebank", "Rouge Park", "Whitevale", "Amberlea", "Dunbarton", "Bay Ridges", "Liverpool", "Brock Ridge"],
+    problems: [
+      "Few GTA cities have this much green around them. The Rouge valley forms Pickering's western edge, Duffins Creek runs down the east side to the lake, and Frenchman's Bay sits in the middle of the waterfront. Rosebank and Rouge Park back onto the national park, with older homes on wooded lots, while Bay Ridges, built in the 1960s, runs right down to the bay. Raccoons, squirrels and skunks treat these neighbourhoods as part of the park.",
+      "Amberlea, Liverpool and Dunbarton are mostly 1970s to 90s subdivisions, and Brock Ridge is newer. By now the trees in the older ones are big enough to reach the roof, and the original wood fascia and soffit has weathered for decades. Whitevale, up on Duffins Creek, is a heritage hamlet of 19th-century homes with all the gaps that come with that age.",
+      "Wherever the house is, the way in is at the roofline: a soffit corner, a roof vent, the junction of two roofs, an uncapped chimney. A [raccoon in the attic](/wildlife/something-in-the-attic) in Rosebank has usually come up from the Rouge, and the opening it used is often on the side of the house you can't see from the street.",
+    ],
+    raccoons: [
+      "Raccoons move between the Rouge, Duffins Creek and the lakeshore all year, and from late winter to early summer the females look for an attic to raise their kits. Heavy footsteps after dark, a torn roof vent or a soffit pushed up at the eaves are the signs.",
+      "Kits are checked for before removal so mother and young stay together. Then the opening is sealed and the vent, soffit or roof repaired to match your home. [Raccoon removal](/wildlife/raccoons) takes in the whole roofline.",
+    ],
+    squirrels: [
+      "Squirrels are the daytime scratching and scampering, loudest around sunrise and before dusk. Pickering's grey and black squirrels chew in at soffit corners, fascia edges and roof vents, and the treed lots of Rosebank, Dunbarton and Whitevale make the climb easy.",
+      "They nest in the insulation and raise two litters a year, so every squirrel, young included, is confirmed out before the hole is sealed and the chewed spot repaired. More on [squirrel removal](/wildlife/squirrels).",
+    ],
+    otherWildlife: [
+      "Skunks are common near the Rouge, Duffins Creek and the bay, and they den under decks, sheds and porch steps from Rosebank to Brock Ridge. When the skunk has left, the base of the deck or shed gets wire mesh dug into the soil ([skunk removal](/wildlife/skunks)).",
+      "Sparrows and starlings get into uncovered dryer and bathroom vents; the nest is checked for eggs and young before the vent is screened ([bird removal](/wildlife/birds)). Bats roost behind fascia and in attic gaps, most often in the older homes near the Rouge and in Whitevale. They are protected in Ontario, and we explain the method and timing before any work begins ([bat removal](/wildlife/bats)).",
+    ],
+    faqs: [
+      {
+        question: "Do you cover Rosebank and Bay Ridges?",
+        answer:
+          "Yes. We cover all of Pickering: Rosebank, Rouge Park and Whitevale; Amberlea, Dunbarton and Liverpool; Bay Ridges on the waterfront; and Brock Ridge. Ajax and Scarborough on either side are covered as well.",
+      },
+      {
+        question: "How quickly can you get to Pickering?",
+        answer:
+          "If your request comes in before 4 PM, it qualifies for same-day service, subject to technician availability. Calls are answered 24 hours a day, 7 days a week, and we confirm the time with you before a technician heads out.",
+      },
+    ],
+    nearby: ["ajax", "scarborough", "whitby", "markham"],
+  },
+  {
+    slug: "ajax",
+    name: "Ajax",
+    region: "durham-region",
+    metaDescription:
+      "Humane raccoon & squirrel removal in Ajax, same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453) any time.",
+    cardLine: "The lakefront and Pickering Village to Riverside and Nottingham.",
+    intro:
+      "Ajax runs from the lakefront in Lakeside up past the old homes of Pickering Village and central Ajax to the newer streets of Riverside and Nottingham, with Duffins Creek along its western edge. Wherever the noise is coming from, we remove the animal humanely, seal the way in and repair the damage.",
+    neighbourhoods: ["Riverside", "Nottingham", "Pickering Village", "Lakeside", "Applecroft", "Hermitage", "Salem", "Central Ajax"],
+    problems: [
+      "Ajax has two very different kinds of older home. Pickering Village, now part of Ajax, is a 19th-century village with brick and frame houses under big trees. Central Ajax was built in the 1940s through the 70s, starting with the wartime homes around the old munitions plant, and those houses have wood fascia and soffit that has had a long time to weather. Both kinds give a squirrel plenty to chew on.",
+      "Riverside, Nottingham, Salem and Applecroft came later, mostly 1990s to 2010s two-storeys with aluminum soffit, several roof vents and attached garages, and Hermitage sits in between. Riverside backs onto Duffins Creek, and the creek valley is where much of the town's wildlife lives.",
+      "Then there is the lake. Lakeside and the waterfront trail bring skunks and raccoons right up to the back fences. Whichever neighbourhood you're in, [something in the attic](/wildlife/something-in-the-attic) got in at the roofline, and the opening may be well away from where you hear the noise.",
+    ],
+    raccoons: [
+      "Raccoons follow Duffins Creek and the waterfront into every part of Ajax, and an attic is their first choice for raising kits from late winter to early summer. The signs are heavy footsteps after dark and a roof vent or soffit that has been torn or lifted at the eaves.",
+      "We look for kits before any removal and keep the family together, then seal the opening and repair the vent, soffit or roof so it matches the house. [Raccoon removal](/wildlife/raccoons) means the whole roofline, not a single corner.",
+    ],
+    squirrels: [
+      "Daytime noise overhead is a squirrel, and in Ajax they are loudest at first light and before dusk. Soffit corners, fascia edges and roof vents are where they chew in, and the old trees of Pickering Village and central Ajax do the climbing for them.",
+      "With two litters a year, a squirrel in spring or late summer often means a mother and young in the insulation. All of them are confirmed out before the hole is sealed and the chewed spot repaired. See [squirrel removal](/wildlife/squirrels).",
+    ],
+    otherWildlife: [
+      "Skunks den under decks, sheds and front steps from Lakeside to Nottingham, and the creek and the waterfront keep them well supplied. Once the skunk is out, the base of the structure is meshed and the mesh dug into the soil ([skunk removal](/wildlife/skunks)).",
+      "Starlings and sparrows nest in open dryer and bathroom vents, busiest in spring; eggs and young are checked for before the vent is screened ([bird removal](/wildlife/birds)). Bats roost behind fascia and in the attics of older homes, particularly in Pickering Village and central Ajax. They are protected in Ontario, so the method and timing are explained before any work begins ([bat removal](/wildlife/bats)).",
+    ],
+    faqs: [
+      {
+        question: "Do you cover Pickering Village and the lakefront?",
+        answer:
+          "Yes. We cover all of Ajax: Pickering Village and central Ajax; Lakeside on the waterfront; Riverside, Nottingham, Salem, Applecroft and Hermitage. Pickering and Whitby on either side are covered as well.",
+      },
+      {
+        question: "How quickly can you get to Ajax?",
+        answer:
+          "Same-day service is available when your request reaches us before 4 PM, subject to technician availability. The phone is answered 24 hours a day, 7 days a week, and the timing is confirmed with you before anyone is dispatched.",
+      },
+    ],
+    nearby: ["pickering", "whitby", "oshawa", "scarborough"],
+  },
 ];
 
 export function getCityBySlug(slug: string): City | undefined {

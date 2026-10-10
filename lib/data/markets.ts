@@ -51,6 +51,7 @@ export const MARKETS: Market[] = [
     displayName: "York Region",
     brandName: "Good Neighbors York Region",
     heroHeading: "Wildlife Removal in York Region",
+    hubTitle: "Wildlife Removal in York Region: Markham, Vaughan & Richmond Hill",
     alsoCovered: ["King City", "Thornhill"],
     status: "active",
     country: "CA",
@@ -58,7 +59,7 @@ export const MARKETS: Market[] = [
     metro: "Greater Toronto Area",
     serviceArea: ["Markham", "Richmond Hill", "Vaughan", "Thornhill", "Aurora", "Newmarket"],
     heroBlurb:
-      "We provide humane wildlife removal for homeowners across York Region, including Markham, Vaughan and Richmond Hill.",
+      "York Region climbs from the older streets of Thornhill and Markham, through the big newer subdivisions of Vaughan and Richmond Hill, up onto the Oak Ridges Moraine at Aurora, Newmarket, Stouffville and King City. More trees, bigger lots and more open country mean more raccoons and squirrels at the roofline and more skunks under the deck. Across York, we get the animal out humanely, seal the entry point and repair what it damaged.",
     seoDescription:
       "Humane wildlife removal in Markham, Vaughan and across York Region. We seal the way in and repair the damage. Lifetime guarantee on every entry point we seal.",
   },
@@ -67,6 +68,7 @@ export const MARKETS: Market[] = [
     displayName: "Durham Region",
     brandName: "Good Neighbors Durham Region",
     heroHeading: "Wildlife Removal in Durham Region",
+    hubTitle: "Wildlife Removal in Durham Region: Pickering, Ajax, Whitby & Oshawa",
     alsoCovered: ["Bowmanville"],
     status: "active",
     country: "CA",
@@ -74,7 +76,7 @@ export const MARKETS: Market[] = [
     metro: "Greater Toronto Area",
     serviceArea: ["Pickering", "Ajax", "Whitby", "Oshawa"],
     heroBlurb:
-      "From the Pickering waterfront to established Oshawa neighbourhoods, we provide humane wildlife removal for homes across Durham Region.",
+      "Durham Region runs along the lake from Pickering through Ajax and Whitby to Oshawa and Bowmanville, with the Rouge, Duffins Creek, Lynde Creek and Oshawa Creek cutting green corridors through it. Lakefront homes, postwar neighbourhoods and new subdivisions all get the same visitors. Wherever you are in Durham, we remove the animal humanely, seal the way in and repair the damage.",
     seoDescription:
       "Humane wildlife removal in Pickering, Ajax, Whitby and Oshawa. We seal the way in and repair the damage. Lifetime guarantee on every entry point we seal.",
   },
