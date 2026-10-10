@@ -10,6 +10,10 @@ import { FinalCTA } from "@/components/home/FinalCTA";
 import { GuaranteeLine } from "@/components/shared/GuaranteeLine";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { RepairSection } from "@/components/shared/RepairSection";
+import { RichText } from "@/components/shared/RichText";
+import { RelatedWildlife } from "@/components/wildlife/RelatedWildlife";
+import { SituationPage } from "@/components/wildlife/SituationPage";
+import { getSituationContent } from "@/lib/data/situations";
 import { WILDLIFE, getWildlifeBySlug } from "@/lib/data/wildlife";
 import { getPhone } from "@/lib/config/resolvers";
 import { breadcrumbJsonLd, pageMetadata, serviceJsonLd } from "@/lib/seo";
@@ -46,13 +50,16 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
   const entry = getWildlifeBySlug(slug);
   if (!entry) notFound();
 
+  // The attic and walls pages carry long-form content and their own template.
+  const situation = getSituationContent(entry.slug);
+  if (situation) return <SituationPage entry={entry} content={situation} />;
+
   const phone = getPhone();
   const speciesOnly = WILDLIFE.filter((w) => w.category === "species");
   const speciesIndex = speciesOnly.findIndex((w) => w.slug === entry.slug);
   const imageOnLeft = speciesIndex > -1 && speciesIndex % 2 === 1;
   const tone = PHOTO_TONE[entry.slug] ?? "pine";
 
-  const related = WILDLIFE.filter((w) => w.slug !== entry.slug && w.category === "species");
   const path = `/wildlife/${entry.slug}`;
 
   return (
@@ -142,6 +149,11 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
           <div className="lg:col-span-7">
             <h2 className="font-display text-2xl text-charcoal">Our approach</h2>
             <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-ink-700 text-pretty">{entry.approach}</p>
+            {entry.relatedNote && (
+              <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-ink-700 text-pretty">
+                <RichText text={entry.relatedNote} />
+              </p>
+            )}
 
             <dl className="mt-10 flex flex-col gap-6 border-t border-stone-300 pt-8 sm:flex-row sm:gap-10">
               {[
@@ -189,34 +201,7 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
 
       {entry.repair && <RepairSection section={entry.repair} className="border-t border-stone-300" />}
 
-      {related.length > 0 && (
-        <section className="border-t border-stone-300 bg-bone-50 py-16 sm:py-20">
-          <Container>
-            <h2 className="font-display text-2xl text-charcoal">Other wildlife we handle</h2>
-            <div className={cn("mt-8 grid grid-cols-2 gap-4", related.length > 4 ? "sm:grid-cols-3 lg:grid-cols-5" : "sm:grid-cols-4")}>
-              {related.map((r) => (
-                <Link
-                  key={r.slug}
-                  href={`/wildlife/${r.slug}`}
-                  className="group flex flex-col items-center gap-3 rounded-sm border border-stone-300 bg-white px-4 py-6 text-center transition-all duration-200 hover:-translate-y-0.5 hover:border-pine-500 hover:shadow-card"
-                >
-                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-pine-50">
-                    <Image
-                      src={`/images/wildlife-icons/${r.iconId}.png`}
-                      alt=""
-                      aria-hidden="true"
-                      width={32}
-                      height={32}
-                      className="h-8 w-8 object-contain"
-                    />
-                  </span>
-                  <span className="font-display text-base text-charcoal">{r.name}</span>
-                </Link>
-              ))}
-            </div>
-          </Container>
-        </section>
-      )}
+      <RelatedWildlife currentSlug={entry.slug} />
 
       <FinalCTA />
     </>

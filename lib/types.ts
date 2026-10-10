@@ -185,6 +185,8 @@ export interface WildlifeEntry {
   approach: string;
   /** Overrides the default "During the visit" line, for animals where the roofline doesn't apply. */
   visitNote?: string;
+  /** Shown after `approach`: where to read on when the animal is in the attic or a wall. May carry [label](/path) links. */
+  relatedNote?: string;
   iconId: IllustrationId;
   /** Species-specific real photo, overriding the shared REAL_PHOTOS["detail"] default for this entry only */
   photoOverride?: string;

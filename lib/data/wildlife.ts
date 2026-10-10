@@ -38,6 +38,8 @@ export const WILDLIFE: WildlifeEntry[] = [
     commonAreas: ["Attics", "Chimneys", "Soffits", "Sheds and decks"],
     approach:
       "We check for young before removal and take care to avoid separating them from their mother.",
+    relatedNote:
+      "Hearing heavy footsteps overhead at night? See [raccoon in the attic](/wildlife/something-in-the-attic). Movement inside a wall or ceiling? See [raccoon in the wall](/wildlife/something-in-the-walls).",
     iconId: "raccoon",
     photoOverride: "/images/raccoon-detail.png",
     photoAlt: "A raccoon looking out of a torn soffit at a home's roofline",
@@ -71,6 +73,8 @@ export const WILDLIFE: WildlifeEntry[] = [
     commonAreas: ["Attics", "Soffits and fascia", "Roof edges", "Wall cavities"],
     approach:
       "We find where the squirrels are getting in and make sure they're all out, including any young, before anything is sealed.",
+    relatedNote:
+      "Daytime scampering overhead? See [squirrel in the attic](/wildlife/something-in-the-attic). Scratching in one spot inside a wall? See [squirrel in the wall](/wildlife/something-in-the-walls).",
     iconId: "squirrel",
     photoOverride: "/images/squirrel-detail.png",
     photoAlt: "A squirrel at a chewed hole in a soffit at a home's roofline",
@@ -172,13 +176,13 @@ export const WILDLIFE: WildlifeEntry[] = [
     category: "situation",
     name: "Something in the Attic",
     singular: "attic",
-    seoTitle: "Animals in the Attic? Wildlife Removal in Toronto",
-    heading: "Something in Your Attic? Wildlife Removal in Toronto",
+    seoTitle: "Squirrel or Raccoon in the Attic? Removal in Toronto & GTA",
+    heading: "Something in Your Attic? Squirrel & Raccoon Removal in Toronto",
     metaDescription:
-      "Noises in your attic in Toronto? We remove the animal humanely, seal the way in and repair the damage. Lifetime guarantee on every entry point we seal.",
+      "Scratching or thumping in the attic? Squirrels by day, raccoons by night. Humane removal from outside your home, same-day before 4 PM. Call 416-900-WILD.",
     summary: "Hearing movement overhead? You don't need to know what it is before you call.",
     intro:
-      "Scratching, thumping, or scurrying overhead is one of the most common reasons people contact us — often before they've seen the animal at all. Attics are dark, insulated, and hard to reach, which makes them attractive to several different species. You don't need to identify the animal yourself.",
+      "Scratching, thumping or running overhead, by day or at night? It's usually a squirrel or a raccoon, and it's usually solved from outside your home. You don't need to identify the animal yourself.",
     commonSigns: [
       "Footsteps, thumping, or scratching overhead, especially at dawn or dusk",
       "Scurrying that moves across the ceiling in a fairly straight line",
@@ -203,13 +207,13 @@ export const WILDLIFE: WildlifeEntry[] = [
     category: "situation",
     name: "Something in the Walls",
     singular: "wall",
-    seoTitle: "Animal in Your Walls? Wildlife Removal in Toronto",
-    heading: "Something in Your Walls? Wildlife Removal in Toronto",
+    seoTitle: "Animal in Your Walls? Squirrel, Raccoon & Bird Removal in Toronto",
+    heading: "Something in Your Walls? Squirrel, Raccoon & Bird Removal in Toronto",
     metaDescription:
-      "Scratching inside a wall in Toronto? We find how it got in, remove it humanely and repair the damage. Lifetime guarantee on every entry point we seal.",
+      "Scratching in a wall or ceiling in Toronto? Usually a squirrel, raccoon or bird from outside. Humane removal, same-day before 4 PM. Call 416-900-WILD.",
     summary: "Movement or scratching inside a wall cavity, most active early morning or after dark.",
     intro:
-      "Hearing scratching or movement inside a wall? Your technician will check for wildlife activity and explain what needs to be done.",
+      "Scratching inside a wall, a ceiling or a vent? Here is what's usually behind it, and why opening the wall is the last resort, not the first step.",
     commonSigns: [
       "Scratching or movement inside a wall, often low or mid-height",
       "Noise concentrated to one wall or corner of a room",

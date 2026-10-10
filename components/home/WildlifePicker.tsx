@@ -14,7 +14,25 @@ export function WildlifePicker() {
         <SectionHeading
           eyebrow="Wildlife Removal"
           title="What are you dealing with?"
-          description="Know what it is? Choose below. Not sure? We can identify it."
+          description={
+            <>
+              Know what it is? Choose below. Not sure? We can identify it. Hearing noises? Start with{" "}
+              <Link
+                href="/wildlife/something-in-the-attic"
+                className="font-medium text-pine-600 underline underline-offset-2 hover:text-pine-700"
+              >
+                something in the attic
+              </Link>{" "}
+              or{" "}
+              <Link
+                href="/wildlife/something-in-the-walls"
+                className="font-medium text-pine-600 underline underline-offset-2 hover:text-pine-700"
+              >
+                in the walls
+              </Link>
+              .
+            </>
+          }
         />
 
         <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-6">
