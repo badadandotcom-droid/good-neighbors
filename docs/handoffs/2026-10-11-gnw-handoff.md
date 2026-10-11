@@ -2,14 +2,10 @@
 
 Good Neighbors Wildlife only, never Wasp Problem.
 
-## Branch state (Oct 11, 2026, evening)
-- Live branch `claude/good-neighbors-v2-visual-redesign` is at commit c5f432c (insurance line and FAQ). Vercel deploys it to www.goodneighborswildlife.ca.
-- Session branch `claude/gnw-websites-october-5-4p19rh` is ahead of live by:
-  - f1cc9fb Privacy Policy correction + notes refresh. **Owner approved Oct 11.** The push to the live branch was blocked by the cloud session's permission check ("production deploy"); it needs the owner's OK on the prompt, or a permission rule for pushes to the live branch.
-  - 57f9743 the first version of this handoff.
-  - The landing-pages commit (see "Waiting for approved" below).
-  - 8b2d963 sync rule with the ads chat (shared Claude Doc), and the relay-rule commit after it (docs only, no site change).
-- Going live = fast-forward the live branch to the session branch (`git push origin <session-branch>:claude/good-neighbors-v2-visual-redesign`), only after the owner says "approved".
+## Branch state (Oct 11, 2026, late evening)
+- Live branch `claude/good-neighbors-v2-visual-redesign` is at 492337a. Everything in "Live as of Oct 11" below is deployed by Vercel to www.goodneighborswildlife.ca. The owner said "go live" on Oct 11 and the push went through (no permission block this time).
+- Session branch `claude/gnw-websites-october-5-4p19rh` equals the live branch plus this handoff update (docs only), which is pushed to both.
+- Going live = fast-forward the live branch to the session branch (`git push origin <session-branch>:claude/good-neighbors-v2-visual-redesign`), only after the owner says "approved" or "go live". Before the push: `npm ci && npm run build`, then `npx next start -p 3000` and `node scripts/checks/crawl.mjs <outDir>` must end with "Problems: none".
 
 ## Rules (also in the repo's CLAUDE.md, which a new chat reads automatically)
 - Work on a session branch started from the live branch `claude/good-neighbors-v2-visual-redesign`. Show the owner everything first; push to the live branch only after "approved".
@@ -28,11 +24,13 @@ Good Neighbors Wildlife only, never Wasp Problem.
 The Google Ads chat can't see this repo. Both chats read and write one shared Claude Doc, "Good Neighbors: website ↔ ads sync", https://claude.ai/code/artifact/6eba0798-46b5-4c5b-bafe-309a0899635f (Claude Docs tools, never a web fetch). Start of every task: read it, act on "For the website chat". End of every task: update "Website side", add dated entries to "For the ads chat", tick what you handled, never delete. The same rule is in CLAUDE.md and in the owner's project instructions.
 
 ## Live as of Oct 11
-Form improvements + thank-you page; 16 city pages (/service-areas/[city]); 4 region hubs; rewritten attic and walls pages; insurance line + "Are you insured?" FAQ; photo upload. Ads brief with the keyword-to-URL map was sent to the owner for the ads chat.
+Went live Oct 11, late evening (492337a): the Privacy Policy correction (photo and analytics statements); the long-form /wildlife/raccoons (1,785 words), /wildlife/squirrels (1,651) and /service-areas/toronto (1,546); the check scripts; the sync and relay rules in CLAUDE.md. The owner approved without striking any of the 11 judgment calls in the review document, so they are live as written. Crawl check before the push: 34 pages, all 200, no duplicates, no problems.
 
-## Waiting for "approved" (on the session branch)
-1. Privacy Policy correction (f1cc9fb), approved, push blocked (above).
-2. Three ad landing pages thickened the same way as attic/walls:
+Live earlier on Oct 11: form improvements + thank-you page; 16 city pages (/service-areas/[city]); 4 region hubs; rewritten attic and walls pages; insurance line + "Are you insured?" FAQ; photo upload. Ads brief with the keyword-to-URL map was sent to the owner for the ads chat.
+
+## DONE: went live Oct 11 (was "waiting for approved"; kept for the record)
+1. Privacy Policy correction (f1cc9fb). Live.
+2. Live: three ad landing pages thickened the same way as attic/walls:
    - /wildlife/raccoons 368 → 1,785 words, /wildlife/squirrels 359 → 1,651, /service-areas/toronto 496 → 1,546 (visible words between header and footer; attic measures 1,292, walls 1,100 the same way).
    - Copy: lib/data/species-pages.ts (raccoons, squirrels) and the Toronto entry in lib/data/markets.ts. Template: components/wildlife/SituationPage.tsx now serves attic, walls, raccoons and squirrels (species variant keeps the live hero, photo, intro, signs and areas; adds the trust row, sections, process and FAQ). components/service-areas/MarketHub.tsx renders `hubSections`/`hubFaqs` and the trust row when present.
    - Titles, H1s, meta descriptions, URLs, phone links, form, tracking unchanged. Every other page byte-identical (crawl compare).
