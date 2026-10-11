@@ -22,6 +22,9 @@ Good Neighbors Wildlife only, never Wasp Problem.
 - East York and downtown Toronto have no owner neighbourhood list, so they stay general. Never invent a neighbourhood.
 - Start of every chat: say which model the chat is on; Sonnet is fine for reading and planning, switch to Fable before writing or judgment-heavy work (saved in the owner's preferences).
 
+## Sync with the ads chat (owner's rule, Oct 11)
+The Google Ads chat can't see this repo. Both chats read and write one shared Claude Doc, "Good Neighbors: website ↔ ads sync", https://claude.ai/code/artifact/6eba0798-46b5-4c5b-bafe-309a0899635f (Claude Docs tools, never a web fetch). Start of every task: read it, act on "For the website chat". End of every task: update "Website side", add dated entries to "For the ads chat", tick what you handled, never delete. The same rule is in CLAUDE.md and in the owner's project instructions.
+
 ## Live as of Oct 11
 Form improvements + thank-you page; 16 city pages (/service-areas/[city]); 4 region hubs; rewritten attic and walls pages; insurance line + "Are you insured?" FAQ; photo upload. Ads brief with the keyword-to-URL map was sent to the owner for the ads chat.
 
