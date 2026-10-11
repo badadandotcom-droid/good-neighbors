@@ -5,7 +5,7 @@ import { CTAButton } from "@/components/shared/CTAButton";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { FAQAccordion } from "@/components/shared/FAQAccordion";
-import { GuaranteeLine } from "@/components/shared/GuaranteeLine";
+import { TrustRow } from "@/components/shared/TrustRow";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
 import { RepairSection } from "@/components/shared/RepairSection";
@@ -13,7 +13,7 @@ import { RichText } from "@/components/shared/RichText";
 import { RelatedWildlife } from "@/components/wildlife/RelatedWildlife";
 import { getPhone } from "@/lib/config/resolvers";
 import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/seo";
-import { ALWAYS_ON_CALL, INSURANCE, PRIMARY_CTA_LABEL } from "@/lib/config/site";
+import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
 import type { SituationContent } from "@/lib/data/situations";
 import type { WildlifeEntry } from "@/lib/types";
 import { cn } from "@/lib/utils";
@@ -115,13 +115,7 @@ export function SituationPage({
               <p className="mt-6 font-display text-xl leading-snug text-pine-600 text-pretty sm:text-2xl">{content.subhead}</p>
               <p className="mt-4 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">{entry.intro}</p>
               {ctas}
-              {content.trustRow && (
-                <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6">
-                  <GuaranteeLine />
-                  <p className="text-sm font-medium text-pine-700">{INSURANCE.line}</p>
-                  {ALWAYS_ON_CALL.enabled && <p className="text-sm text-stone-500">{ALWAYS_ON_CALL.heroLabel}</p>}
-                </div>
-              )}
+              {content.trustRow && <TrustRow />}
             </div>
             <div className={cn("lg:col-span-5", hero?.imageOnLeft && "lg:order-1")}>
               <PhotoPlaceholder
@@ -153,6 +147,7 @@ export function SituationPage({
             <p className="mt-6 font-display text-xl leading-snug text-pine-600 text-pretty sm:text-2xl">{content.subhead}</p>
             {content.keepLine && <p className="mt-3 text-lg leading-relaxed text-ink-700">{content.keepLine}</p>}
             {ctas}
+            {content.trustRow && <TrustRow />}
           </Container>
         </section>
       )}

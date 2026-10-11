@@ -3,7 +3,8 @@ import { Container } from "@/components/shared/Container";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
-import { GuaranteeLine, ShieldCheckIcon } from "@/components/shared/GuaranteeLine";
+import { ShieldCheckIcon } from "@/components/shared/GuaranteeLine";
+import { TrustRow } from "@/components/shared/TrustRow";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { FinalCTA } from "@/components/home/FinalCTA";
@@ -103,7 +104,6 @@ export default function DamageRepairPage() {
               Repairs are matched to your home&apos;s existing materials and colours, so the fix blends in with the
               rest of the house.
             </p>
-            <GuaranteeLine className="mt-6" />
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
               <CTAButton
                 href={phone.href}
@@ -125,6 +125,7 @@ export default function DamageRepairPage() {
                 {PRIMARY_CTA_LABEL}
               </CTAButton>
             </div>
+            <TrustRow />
           </div>
           <div className="lg:col-span-5">
             <PhotoPlaceholder

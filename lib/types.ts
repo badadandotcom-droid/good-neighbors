@@ -202,8 +202,8 @@ export interface WildlifeEntry {
   photoAlt?: string;
   /** Sealing + damage repair section for this page, when the page carries one. */
   repair?: RepairSection;
-  /** Show the short lifetime-guarantee line near the top of the page (pages without a repair section). */
-  showGuaranteeLine?: boolean;
+  /** Show the guarantee, insurance and 24/7 lines under the hero buttons, as the homepage and city pages do. */
+  trustRow?: boolean;
 }
 
 export interface FaqItem {

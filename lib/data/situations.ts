@@ -69,6 +69,7 @@ export const SITUATIONS: SituationContent[] = [
     slug: "something-in-the-attic",
     subhead:
       "Scratching, thumping or running overhead, by day or at night? It's usually a squirrel or a raccoon, and it's usually solved from outside your home.",
+    trustRow: true,
     keepLine: "You don't need to identify the animal yourself.",
     soundGuide: {
       heading: "What the noise in your attic is telling you",
@@ -186,6 +187,7 @@ export const SITUATIONS: SituationContent[] = [
     slug: "something-in-the-walls",
     subhead:
       "Scratching inside a wall, a ceiling or a vent? Here's what's usually behind it, and why opening the wall is the last resort, not the first step.",
+    trustRow: true,
     soundGuide: {
       heading: "What's making the noise in your wall",
       intro: "Where the sound is, and whether it moves, says more than how loud it is.",

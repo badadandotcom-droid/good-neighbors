@@ -2,10 +2,10 @@ import Image from "next/image";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { Container } from "@/components/shared/Container";
 import { Illustration } from "@/components/illustrations/Illustration";
-import { GuaranteeLine } from "@/components/shared/GuaranteeLine";
+import { TrustRow } from "@/components/shared/TrustRow";
 import { SameDayBadge } from "@/components/shared/SameDayBadge";
 import { getHeroHeadline, getPhone, getPositioningLine } from "@/lib/config/resolvers";
-import { ALWAYS_ON_CALL, INSURANCE, PRIMARY_CTA_LABEL } from "@/lib/config/site";
+import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
 import type { Market } from "@/lib/types";
 
 export function Hero({ market }: { market?: Market }) {
@@ -62,11 +62,7 @@ export function Hero({ market }: { market?: Market }) {
             </CTAButton>
           </div>
 
-          <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6">
-            <GuaranteeLine />
-            <p className="text-sm font-medium text-pine-700">{INSURANCE.line}</p>
-            {ALWAYS_ON_CALL.enabled && <p className="text-sm text-stone-500">{ALWAYS_ON_CALL.heroLabel}</p>}
-          </div>
+          <TrustRow />
         </div>
 
         <div className="relative lg:col-span-5 lg:-mr-6 xl:-mr-16">

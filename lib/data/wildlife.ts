@@ -143,7 +143,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     iconId: "bird",
     photoOverride: "/images/bird-detail.png",
     photoAlt: "A starling carrying nesting material into a wall vent on a stone house",
-    showGuaranteeLine: true,
+    trustRow: true,
   },
   {
     slug: "bats",
@@ -169,7 +169,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     iconId: "bat",
     photoOverride: "/images/bat-detail.png",
     photoAlt: "A bat tucked into a gap in a damaged soffit",
-    showGuaranteeLine: true,
+    trustRow: true,
   },
   {
     slug: "something-in-the-attic",

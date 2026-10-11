@@ -7,7 +7,7 @@ import { Illustration } from "@/components/illustrations/Illustration";
 import { FAQAccordion } from "@/components/shared/FAQAccordion";
 import { DamageRepairBanner } from "@/components/shared/DamageRepairBanner";
 import { GuaranteeBlock } from "@/components/shared/GuaranteeBlock";
-import { GuaranteeLine } from "@/components/shared/GuaranteeLine";
+import { TrustRow } from "@/components/shared/TrustRow";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { RichText } from "@/components/shared/RichText";
 import { cityHref, getCityBySlug, getPlannedCitiesForRegion, listJoin } from "@/lib/data/cities";
@@ -16,7 +16,7 @@ import { getSpeciesEntries } from "@/lib/data/wildlife";
 import { getFeaturedFaqs } from "@/lib/data/faq";
 import { getPhone, getPositioningLine, getSameDayConfig } from "@/lib/config/resolvers";
 import { breadcrumbJsonLd, faqJsonLd, marketAreaNames, serviceJsonLd } from "@/lib/seo";
-import { ALWAYS_ON_CALL, INSURANCE, PRIMARY_CTA_LABEL } from "@/lib/config/site";
+import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
 import type { Market, RegionSlug } from "@/lib/types";
 
 /** The places a hub names under its heading: its cities (page or not) and the extra places it covers. */
@@ -125,13 +125,7 @@ export function MarketHub({ market }: { market: Market }) {
             </CTAButton>
           </div>
 
-          {longForm && (
-            <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6">
-              <GuaranteeLine />
-              <p className="text-sm font-medium text-pine-700">{INSURANCE.line}</p>
-              {ALWAYS_ON_CALL.enabled && <p className="text-sm text-stone-500">{ALWAYS_ON_CALL.heroLabel}</p>}
-            </div>
-          )}
+          {longForm && <TrustRow />}
         </Container>
       </section>
 

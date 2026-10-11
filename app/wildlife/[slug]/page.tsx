@@ -7,7 +7,7 @@ import { CTAButton } from "@/components/shared/CTAButton";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { FinalCTA } from "@/components/home/FinalCTA";
-import { GuaranteeLine } from "@/components/shared/GuaranteeLine";
+import { TrustRow } from "@/components/shared/TrustRow";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { RepairSection } from "@/components/shared/RepairSection";
 import { RichText } from "@/components/shared/RichText";
@@ -105,7 +105,6 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
               </h1>
             </div>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">{entry.intro}</p>
-            {entry.showGuaranteeLine && <GuaranteeLine className="mt-5" />}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
               <CTAButton
                 href={phone.href}
@@ -127,6 +126,7 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
                 {PRIMARY_CTA_LABEL}
               </CTAButton>
             </div>
+            {entry.trustRow && <TrustRow />}
           </div>
           <div className={cn("lg:col-span-5", imageOnLeft && "lg:order-1")}>
             <PhotoPlaceholder
