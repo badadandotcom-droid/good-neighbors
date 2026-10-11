@@ -27,24 +27,29 @@ export default function PrivacyPage() {
             <h2 className="font-display text-xl text-charcoal">What we collect</h2>
             <p className="mt-2">
               When you submit the &quot;Get Help Now&quot; form, we collect the information you provide: your name,
-              phone number, email address (if given), property location or postal code, a description of your
-              situation, and any details you choose to share about the animal or affected area. Photo upload is
-              part of the interface but is not yet connected to storage — see the note on the contact form.
+              phone number (and, if you choose, whether it is a mobile or a landline), email address (if given),
+              property location or postal code, a description of your situation, and any details you choose to
+              share about the animal or affected area. You can also add up to five photos. Photos are optional,
+              and they are sent to us attached to your request email. We do not keep them in a database, and
+              we do not publish them or give them a public link.
             </p>
           </div>
           <div>
             <h2 className="font-display text-xl text-charcoal">How we use it</h2>
             <p className="mt-2">
-              Information submitted is used solely to respond to your request and provide service. We do not sell
-              personal information.
+              Information submitted is used solely to respond to your request and provide service. Your request
+              reaches us as an email, sent through an email delivery service. We do not sell personal
+              information.
             </p>
           </div>
           <div>
             <h2 className="font-display text-xl text-charcoal">Analytics &amp; tracking</h2>
             <p className="mt-2">
-              This site is built to support standard web analytics and call-tracking tools (for example, Google
-              Analytics and CallRail) so we can understand how people find and use the site. No such tool is
-              actively connected yet — this section will be updated with specifics once one is.
+              This site uses Google Analytics and Google Ads conversion tracking so we can understand how people
+              find and use the site and which ads lead to calls and requests. They record things like the pages
+              you view, and when someone taps our phone number or sends a request through the form. They do not
+              receive what you type into the form or the photos you add. We do not currently use call-tracking
+              software.
             </p>
           </div>
           <div>

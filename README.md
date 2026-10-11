@@ -76,29 +76,31 @@ honest).
 
 ```
 app/                    Routes (App Router)
-  wildlife/[slug]        Species + situation pages
+  wildlife/[slug]        Species pages, plus the long-form attic and walls pages
   wildlife/damage-repair Sealing + damage repair page
-  service-areas/[slug]   Market pages
+  service-areas/[slug]   Region hubs (4) and city pages (16), one route
   contact/thank-you      Shown after a request is sent (noindex)
   api/get-help/           Intake form endpoint: validates and emails the lead (see PLACEHOLDERS.md)
 components/
   layout/                 Header, Footer, StickyMobileCTA
   home/                   Homepage sections
+  service-areas/          CityPage and MarketHub (region hub) templates
+  wildlife/               SituationPage (attic/walls template), RelatedWildlife
   shared/                 CTAButton, PhoneLink, SameDayBadge, FAQAccordion, PhotoPlaceholder, etc.
   forms/                  GetHelpForm, PhotoUpload
   illustrations/          Hand-built line-art icon system (stands in for photography)
 lib/
   config/site.ts          Brand, contact, same-day service — the source of truth
   config/resolvers.ts     Every page reads config through these, never the raw constants
-  data/                   Markets, wildlife, FAQ, nav
+  data/                   Markets, cities (16 city pages' copy), situations (attic/walls copy), wildlife, FAQ, nav
   forms/lead.ts           Get Help form rules, shared by the browser and the server
   seo.ts                  Metadata + JSON-LD builders
-  analytics.ts             Conversion-event tracking hook (no-op until IDs exist)
+  analytics.ts             Conversion-event tracking (GA4 events, Google Ads conversions)
 ```
 
 ## Known gaps before production
 
 See [`PLACEHOLDERS.md`](./PLACEHOLDERS.md). In short: real phone/email,
 real photography, a lead database (each lead lives only in its
-notification email), analytics IDs, and legal review of `/privacy` and
-`/terms`.
+notification email) and legal review of `/privacy` and `/terms`. Analytics
+(GA4 + Google Ads) are live.

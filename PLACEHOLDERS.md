@@ -144,14 +144,34 @@ Whenever photos were tried but didn't make it, the email says "Customer
 tried to attach photos, but they didn't come through." A form without photos
 sends exactly the same JSON request as before.
 
+## City pages and the attic/walls pages (Oct 2026)
+
+- **16 city pages** at `/service-areas/[city]`, copy in `lib/data/cities.ts`
+  (one entry per city), rendered by `components/service-areas/CityPage.tsx`.
+  The four region pages are hubs (`MarketHub.tsx`) that link to them. Rules:
+  500+ words of unique copy per city, no sentence shared with another city,
+  only neighbourhoods from the owner's lists, general housing and landscape
+  facts only (no claims about our work there), no prices/reviews/stats/years/
+  certifications, Canadian spelling. A city is linked from hubs and "nearby"
+  lists only once it has an entry in `CITIES`; `CITY_INDEX` lists every
+  planned city.
+- **Attic and walls pages**: long-form copy in `lib/data/situations.ts`,
+  template `components/wildlife/SituationPage.tsx`. How we work is described
+  only as the live site already does (humane, usually from outside, young
+  checked for first, seal, repair); no tools or techniques the site doesn't
+  already describe, no trap-and-relocate promises. An Ontario relocation-rule
+  FAQ was left out because it couldn't be verified on ontario.ca; add it
+  only after checking.
+
 ## Legal pages — `app/privacy/page.tsx`, `app/terms/page.tsx`
 
 Both are working drafts in plain language, clearly flagged inline as
 **pending legal review**, and marked `noIndex` in metadata so they aren't
 indexed while still drafts. They cover current, real data practices (what
-the Get Help form collects) but do not include finalized retention
-periods, service agreements, liability terms, or cancellation policies.
-Do not rely on these in production without legal sign-off.
+the Get Help form collects, optional photos sent by email only, GA4 and
+Google Ads tracking) but do not include finalized retention periods, service
+agreements, liability terms, or cancellation policies. Do not rely on these
+in production without legal sign-off.
 
 ## Photography — `components/shared/PhotoPlaceholder.tsx`
 
