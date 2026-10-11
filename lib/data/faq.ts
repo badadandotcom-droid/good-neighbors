@@ -1,5 +1,5 @@
 import type { FaqItem } from "@/lib/types";
-import { DEFAULT_SAME_DAY_SERVICE, GUARANTEE } from "@/lib/config/site";
+import { DEFAULT_SAME_DAY_SERVICE, GUARANTEE, INSURANCE } from "@/lib/config/site";
 import { DAMAGE_REPAIR_PATH } from "@/lib/data/repairs";
 
 /**
@@ -29,6 +29,11 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Is the animal treated humanely?",
     answer: "Yes. We use humane removal methods suited to the animal and the situation.",
+    featured: true,
+  },
+  {
+    question: INSURANCE.faqQuestion,
+    answer: INSURANCE.faqAnswer,
     featured: true,
   },
   {

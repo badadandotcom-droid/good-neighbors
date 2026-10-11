@@ -5,7 +5,7 @@ import { Illustration } from "@/components/illustrations/Illustration";
 import { GuaranteeLine } from "@/components/shared/GuaranteeLine";
 import { SameDayBadge } from "@/components/shared/SameDayBadge";
 import { getHeroHeadline, getPhone, getPositioningLine } from "@/lib/config/resolvers";
-import { ALWAYS_ON_CALL, PRIMARY_CTA_LABEL } from "@/lib/config/site";
+import { ALWAYS_ON_CALL, INSURANCE, PRIMARY_CTA_LABEL } from "@/lib/config/site";
 import type { Market } from "@/lib/types";
 
 export function Hero({ market }: { market?: Market }) {
@@ -64,6 +64,7 @@ export function Hero({ market }: { market?: Market }) {
 
           <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6">
             <GuaranteeLine />
+            <p className="text-sm font-medium text-pine-700">{INSURANCE.line}</p>
             {ALWAYS_ON_CALL.enabled && <p className="text-sm text-stone-500">{ALWAYS_ON_CALL.heroLabel}</p>}
           </div>
         </div>

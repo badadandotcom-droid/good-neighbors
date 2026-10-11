@@ -14,7 +14,8 @@ import { getMarketBySlug, marketHref } from "@/lib/data/markets";
 import { getFeaturedFaqs } from "@/lib/data/faq";
 import { getPhone } from "@/lib/config/resolvers";
 import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/seo";
-import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
+import { ALWAYS_ON_CALL, INSURANCE, PRIMARY_CTA_LABEL } from "@/lib/config/site";
+import { GuaranteeLine } from "@/components/shared/GuaranteeLine";
 import type { City, IllustrationId } from "@/lib/types";
 
 /**
@@ -101,6 +102,12 @@ export function CityPage({ city }: { city: City }) {
             >
               {PRIMARY_CTA_LABEL}
             </CTAButton>
+          </div>
+
+          <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6">
+            <GuaranteeLine />
+            <p className="text-sm font-medium text-pine-700">{INSURANCE.line}</p>
+            {ALWAYS_ON_CALL.enabled && <p className="text-sm text-stone-500">{ALWAYS_ON_CALL.heroLabel}</p>}
           </div>
         </Container>
       </section>

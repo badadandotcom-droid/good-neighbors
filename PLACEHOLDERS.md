@@ -178,11 +178,19 @@ for artwork from the same source as the others at any time; no code changes.
 ## Trust signals — intentionally absent
 
 No reviews, star ratings, testimonials, "homes serviced" counts, years in
-business, awards, certifications, or insurance claims appear anywhere on
-the site. Good Neighbors is a new brand — none of that exists yet. Do not
-add placeholder versions of these; add them for real once they exist. The
-component system has no dedicated "testimonial" or "review" component for
-exactly this reason.
+business, awards or certifications appear anywhere on the site. Good
+Neighbors is a new brand — none of that exists yet. Do not add placeholder
+versions of these; add them for real once they exist. The component system
+has no dedicated "testimonial" or "review" component for exactly this reason.
+
+**Liability insurance is real (owner-confirmed, Oct 2026): $5 million, in
+the company's name.** The exact wording lives in `INSURANCE` in
+`lib/config/site.ts`: the trust line "$5 million liability insurance" (in
+the homepage hero row and the city page hero row, beside the guarantee line
+and the 24/7 line) and the FAQ "Are you insured?" / "Yes. Good Neighbors
+Wildlife carries $5 million in liability insurance." (main FAQ page and the
+shared featured set used by the homepage, hubs and city pages). Never
+paraphrase it, and never say "fully insured" or "bonded".
 
 **The lifetime guarantee is real (owner-confirmed, Oct 2026) and is the only
 guarantee on the site.** The exact wording lives in `GUARANTEE` in
@@ -193,11 +201,10 @@ separate guarantee page, no other guarantees or warranties. The wording says
 after the website: **invoices carrying the guarantee terms must be ready before
 the first job after this goes live.**
 
-**"$5 million in liability insurance · Background-checked technicians" was
-briefly live on the homepage and has been removed.** Neither is in place
-yet. Do not restore them, and do not substitute softer wording ("fully
-insured", "vetted technicians") — the owner will confirm explicitly when
-the insurance is active and the background checks are done.
+**"Background-checked technicians" was briefly live on the homepage and
+has been removed.** It is not in place. Do not restore it, and do not
+substitute softer wording ("vetted technicians", "licensed") — the owner
+will confirm explicitly if and when background checks are done.
 
 ## Markets — `lib/data/markets.ts`
 

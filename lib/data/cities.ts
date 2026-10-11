@@ -15,7 +15,7 @@ import type { City, RegionSlug } from "@/lib/types";
  * - Housing and landscape stay factual and general ("postwar bungalows near
  *   the Rouge ravines"), never claims about our work there, and nothing about
  *   the business that isn't already true on the live site: no prices,
- *   reviews, counts, years, certifications, insurance, awards or "block and
+ *   reviews, counts, years, certifications, awards or "block and
  *   lock".
  * - Higher-end neighbourhoods are named first, without snobbery.
  * - Canadian spelling in the copy; the brand stays "Good Neighbors".
