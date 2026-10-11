@@ -1,4 +1,5 @@
 import type { Market } from "@/lib/types";
+import { DEFAULT_SAME_DAY_SERVICE } from "@/lib/config/site";
 
 /**
  * ============================================================================
@@ -45,6 +46,76 @@ export const MARKETS: Market[] = [
       "Toronto's raccoons are famous for a reason, and they share the city with squirrels in every mature tree, skunks under the decks and bats in the older attics. From the Bluffs in Scarborough to the Kingsway in Etobicoke, the ravine lots of North York and the century homes of East York and downtown, we remove the animal humanely, seal the way in and repair the damage it caused.",
     seoDescription:
       "Humane raccoon, squirrel, skunk, bat and bird removal in Toronto. We seal the way in and repair the damage. Lifetime guarantee on every entry point we seal.",
+    // Long-form hub copy (Oct 2026). Same rules as the city pages: real
+    // neighbourhoods from the owner's lists only, general facts about the
+    // city's homes and landscape, nothing about the business that the live
+    // site doesn't already say. East York and downtown have no neighbourhood
+    // list yet, so they stay general.
+    hubSections: [
+      {
+        heading: "Why Toronto has so much wildlife",
+        paragraphs: [
+          "Toronto is a city of ravines. The Don, the Humber and the Rouge, Highland Creek, Mimico Creek and the smaller valleys that feed them run through every part of the city, and they are home to raccoons, squirrels, skunks and, around the older homes, bats. A house that backs onto a ravine, or sits a few streets from one, has wildlife for neighbours whether it ever sees them or not.",
+          "The trees do the rest. The oaks and maples planted when the postwar neighbourhoods went up are now big enough to hang over the roof, and in the older neighbourhoods they have had a century. A branch near the eaves is a bridge for a squirrel; a tree trunk or a downspout is a ladder for a raccoon. Add rooflines with sixty-year-old wood soffits, gable vents, plastic roof vents and chimneys that have never had a cap, and you have the reason Toronto's raccoons are famous.",
+        ],
+      },
+      {
+        heading: "Toronto, part by part",
+        paragraphs: [
+          "[Scarborough](/service-areas/scarborough) is one of the busiest parts of the city for raccoons and squirrels: postwar bungalows, side-splits and back-splits from the 1950s and 60s in Cliffside, Bendale, Wexford and Scarborough Village, wooded lots in Guildwood and Birch Cliff and along the Bluffs, and the deep valleys of Highland Creek and the Rouge in the east. Agincourt and Malvern are newer, with aluminum soffit that lifts at the corners.",
+          "[North York](/service-areas/north-york) is ravine country. The Don's east and west branches run through York Mills, Hoggs Hollow, Armour Heights and the Bridle Path, where large older homes sit under trees that reach well over the roof, and Don Mills and Bayview Village were laid out around the same ravines. Willowdale, Bathurst Manor, Newtonbrook and Downsview mix sixty-year-old bungalows with big new rebuilds, whose complicated rooflines have more vents, more soffit and more places where two roofs meet.",
+          "[Etobicoke](/service-areas/etobicoke) is old trees and old rooflines. The Kingsway, Humber Valley Village and Sunnylea sit along the Humber in stone and brick homes from the 1930s to the 50s, with wood soffits, big chimneys and oaks that have had ninety years to grow; Mimico, Long Branch and Alderwood line the lake; Islington, Princess Gardens, Markland Wood and Eringate are 1950s and 60s streets under mature trees; and Rexdale, to the north, is postwar bungalows and semis beside the hydro corridors and the Humber's west branch.",
+          "East York and the older neighbourhoods downtown are the century homes: brick semis and narrow detached houses on small lots, with wood trim, old chimneys and street trees as old as the houses. We cover all of them, along with the rest of the city.",
+        ],
+      },
+      {
+        heading: "Which animal, and where",
+        paragraphs: [
+          "Raccoons are the night sound: heavy, slow footsteps overhead, a thump, sometimes a growl, and in spring the chirping of kits. They pull roof vents apart, push up the soffit at the eaves and den in attics and chimneys from late winter to early summer. See [raccoon removal](/wildlife/raccoons).",
+          "Squirrels are the day sound: light, fast scampering around sunrise and again before dusk, and gnawing. They chew in at soffit corners, fascia boards and roof vents, nest in the insulation and raise young twice a year. See [squirrel removal](/wildlife/squirrels).",
+          "Skunks dig in under decks, porches, sheds and front steps, and the ravine neighbourhoods have the most of them ([skunk removal](/wildlife/skunks)). Starlings and sparrows nest in uncovered dryer and bathroom vents and in uncapped chimneys, busiest in spring ([bird removal](/wildlife/birds)). Bats roost in the attics and behind the fascia of the older homes near the ravines and the lake; they are protected in Ontario, so we assess the timing and explain the method before any work begins ([bat removal](/wildlife/bats)).",
+          "Not sure which it is? [Something in the attic](/wildlife/something-in-the-attic) and [something in the walls](/wildlife/something-in-the-walls) go by the sound and the time of day, and you don't need to identify the animal yourself.",
+        ],
+      },
+      {
+        heading: "How a visit works in Toronto",
+        paragraphs: [
+          "Usually, we can solve the wildlife problem entirely from outside without needing to enter your home. The visit starts with a full inspection of the roofline, because the opening is often nowhere near where you hear the noise, and on an older home there may be more than one. We identify the animal, check for young, and remove it humanely, with mother and young kept together.",
+          "Then we seal the entry point and repair what the animal damaged: roof boards and shingles, soffits, fascia, roof vents, chimney caps, eavestroughs, siding, and flattened or soiled attic insulation, matched to your home's existing materials and colours, which on a Kingsway or York Mills home matters. See [damage repair](/wildlife/damage-repair) for the full list.",
+        ],
+      },
+    ],
+    hubFaqs: [
+      {
+        question: "Which parts of Toronto do you cover?",
+        answer:
+          "All of it: Scarborough, North York, Etobicoke, East York, downtown and everything in between. Scarborough, North York and Etobicoke each have a page of their own with the neighbourhoods listed.",
+      },
+      {
+        question: "Do you cover the Kingsway, York Mills and the Bluffs?",
+        answer:
+          "Yes. The Kingsway, Humber Valley Village and Sunnylea in Etobicoke; York Mills, the Bridle Path, Hoggs Hollow and Don Mills in North York; Guildwood, Cliffside, Birch Cliff and the Scarborough Bluffs along the lake; and the rest of the city.",
+      },
+      {
+        question: "Why does Toronto have so many raccoons?",
+        answer:
+          "Ravines, mature trees and older rooflines. The Don, the Humber and the Rouge give raccoons somewhere to live, the trees and downspouts give them a way onto the roof, and sixty-year-old soffits, roof vents and uncapped chimneys give them a way in. Toronto has one of the densest urban raccoon populations anywhere.",
+      },
+      {
+        question: "What's the most common wildlife problem in a Toronto home?",
+        answer:
+          "Usually a raccoon or a squirrel in the attic. Raccoons at night, squirrels by day. Both come in at the roofline, and both are usually solved from outside the house.",
+      },
+      {
+        question: "Can you match the repairs on an older home?",
+        answer:
+          "Yes. Repairs are matched to your home's existing materials and colours, so the fix blends in with the rest of the house.",
+      },
+      {
+        question: "How quickly can you get to a Toronto home?",
+        answer: `${DEFAULT_SAME_DAY_SERVICE.qualificationMessage} Calls are answered 24 hours a day, 7 days a week, and we confirm the timing with you when you call or send a request.`,
+      },
+    ],
   },
   {
     slug: "york-region",

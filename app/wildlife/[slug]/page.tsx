@@ -14,6 +14,7 @@ import { RichText } from "@/components/shared/RichText";
 import { RelatedWildlife } from "@/components/wildlife/RelatedWildlife";
 import { SituationPage } from "@/components/wildlife/SituationPage";
 import { getSituationContent } from "@/lib/data/situations";
+import { getSpeciesPageContent } from "@/lib/data/species-pages";
 import { WILDLIFE, getWildlifeBySlug } from "@/lib/data/wildlife";
 import { getPhone } from "@/lib/config/resolvers";
 import { breadcrumbJsonLd, pageMetadata, serviceJsonLd } from "@/lib/seo";
@@ -50,15 +51,16 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
   const entry = getWildlifeBySlug(slug);
   if (!entry) notFound();
 
-  // The attic and walls pages carry long-form content and their own template.
-  const situation = getSituationContent(entry.slug);
-  if (situation) return <SituationPage entry={entry} content={situation} />;
-
   const phone = getPhone();
   const speciesOnly = WILDLIFE.filter((w) => w.category === "species");
   const speciesIndex = speciesOnly.findIndex((w) => w.slug === entry.slug);
   const imageOnLeft = speciesIndex > -1 && speciesIndex % 2 === 1;
   const tone = PHOTO_TONE[entry.slug] ?? "pine";
+
+  // The attic and walls pages, and the raccoon and squirrel pages, carry
+  // long-form content and share the long-form template.
+  const longForm = getSituationContent(entry.slug) ?? getSpeciesPageContent(entry.slug);
+  if (longForm) return <SituationPage entry={entry} content={longForm} hero={{ tone, imageOnLeft }} />;
 
   const path = `/wildlife/${entry.slug}`;
 

@@ -34,13 +34,27 @@ export interface SituationSection {
   paragraphs: string[];
 }
 
+/**
+ * The long-form page content. The attic and walls pages (below) and the
+ * raccoon and squirrel pages (lib/data/species-pages.ts) share this shape
+ * and the SituationPage template.
+ */
 export interface SituationContent {
   slug: string;
   /** One or two sentences under the H1. */
   subhead: string;
   /** A line from the live page kept word for word, shown after the subhead. */
   keepLine?: string;
-  soundGuide: { heading: string; intro: string; rows: SoundRow[] };
+  /** The sound guide table (attic and walls pages). */
+  soundGuide?: { heading: string; intro: string; rows: SoundRow[] };
+  /**
+   * Species pages: a band after the hero showing the entry's own
+   * `commonSigns` and `commonAreas` (the live page's lists, kept word for
+   * word) under this heading, with the entry's `relatedNote` beneath.
+   */
+  signs?: { heading: string; intro: string };
+  /** Show the guarantee, insurance and 24/7 lines under the hero buttons, as the homepage and city pages do. */
+  trustRow?: boolean;
   sections: SituationSection[];
   /** "How we get animals out…": the live site's three-step wording plus the plain-words list. */
   process?: { heading: string; intro: string; steps: string[]; outro: string };

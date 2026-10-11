@@ -95,6 +95,14 @@ export interface Market {
   seoDescription: string;
   /** Optional coordinates for LocalBusiness/service-area schema, once known */
   coordinates?: { lat: number; lng: number };
+  /**
+   * Long-form hub copy (Toronto first, Oct 2026): body sections rendered
+   * between the city cards and the animal grid. Paragraphs may carry
+   * [label](/path) links. A hub without them renders exactly as before.
+   */
+  hubSections?: { heading: string; paragraphs: string[] }[];
+  /** Hub-specific questions, shown after the featured FAQs and included in the FAQPage schema. Answers are plain text. */
+  hubFaqs?: FaqItem[];
 }
 
 /** The four region hubs a city page can belong to (their Market slugs). */

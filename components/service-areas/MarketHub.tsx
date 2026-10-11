@@ -7,14 +7,16 @@ import { Illustration } from "@/components/illustrations/Illustration";
 import { FAQAccordion } from "@/components/shared/FAQAccordion";
 import { DamageRepairBanner } from "@/components/shared/DamageRepairBanner";
 import { GuaranteeBlock } from "@/components/shared/GuaranteeBlock";
+import { GuaranteeLine } from "@/components/shared/GuaranteeLine";
 import { JsonLd } from "@/components/shared/JsonLd";
+import { RichText } from "@/components/shared/RichText";
 import { cityHref, getCityBySlug, getPlannedCitiesForRegion, listJoin } from "@/lib/data/cities";
 import { marketHref } from "@/lib/data/markets";
 import { getSpeciesEntries } from "@/lib/data/wildlife";
 import { getFeaturedFaqs } from "@/lib/data/faq";
 import { getPhone, getPositioningLine, getSameDayConfig } from "@/lib/config/resolvers";
 import { breadcrumbJsonLd, faqJsonLd, marketAreaNames, serviceJsonLd } from "@/lib/seo";
-import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
+import { ALWAYS_ON_CALL, INSURANCE, PRIMARY_CTA_LABEL } from "@/lib/config/site";
 import type { Market, RegionSlug } from "@/lib/types";
 
 /** The places a hub names under its heading: its cities (page or not) and the extra places it covers. */
@@ -32,12 +34,18 @@ function isRegionSlug(slug: string): slug is RegionSlug {
  * cities, cards to each city page, the animals, the guarantee, the FAQ and
  * the CTA. A city without a page yet is named in plain text, never linked,
  * so nothing 404s while the city pages are built out in stages.
+ *
+ * A hub with `hubSections` (Toronto, Oct 2026) is the long-form version: the
+ * trust row under the hero buttons, body sections between the city cards
+ * and the animal grid, and its own questions after the featured FAQs. A hub
+ * without them renders exactly as before.
  */
 export function MarketHub({ market }: { market: Market }) {
   const phone = getPhone(market);
   const species = getSpeciesEntries();
   const active = market.status === "active";
-  const faqs = getFeaturedFaqs({ sameDayEligible: active });
+  const longForm = Boolean(market.hubSections?.length);
+  const faqs = [...getFeaturedFaqs({ sameDayEligible: active }), ...(market.hubFaqs ?? [])];
   const sameDay = getSameDayConfig(market);
   const showAvailabilityNote = active ? !sameDay.enabled : true;
   const availabilityNote = active
@@ -116,6 +124,14 @@ export function MarketHub({ market }: { market: Market }) {
               {PRIMARY_CTA_LABEL}
             </CTAButton>
           </div>
+
+          {longForm && (
+            <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6">
+              <GuaranteeLine />
+              <p className="text-sm font-medium text-pine-700">{INSURANCE.line}</p>
+              {ALWAYS_ON_CALL.enabled && <p className="text-sm text-stone-500">{ALWAYS_ON_CALL.heroLabel}</p>}
+            </div>
+          )}
         </Container>
       </section>
 
@@ -149,6 +165,25 @@ export function MarketHub({ market }: { market: Market }) {
                 {market.slug === "toronto" ? ", and the rest of the city." : `, and the rest of ${market.displayName}.`}
               </p>
             )}
+          </Container>
+        </section>
+      )}
+
+      {market.hubSections && market.hubSections.length > 0 && (
+        <section className="border-b border-stone-300 py-16 sm:py-24">
+          <Container className="flex max-w-3xl flex-col gap-12 sm:gap-14">
+            {market.hubSections.map((section) => (
+              <div key={section.heading}>
+                <h2 className="font-display text-2xl text-charcoal sm:text-3xl">{section.heading}</h2>
+                <div className="mt-5 flex flex-col gap-4">
+                  {section.paragraphs.map((p) => (
+                    <p key={p} className="text-[15px] leading-relaxed text-ink-700 text-pretty sm:text-base">
+                      <RichText text={p} />
+                    </p>
+                  ))}
+                </div>
+              </div>
+            ))}
           </Container>
         </section>
       )}
