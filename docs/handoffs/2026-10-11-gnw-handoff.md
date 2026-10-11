@@ -8,12 +8,14 @@ Good Neighbors Wildlife only, never Wasp Problem.
   - f1cc9fb Privacy Policy correction + notes refresh. **Owner approved Oct 11.** The push to the live branch was blocked by the cloud session's permission check ("production deploy"); it needs the owner's OK on the prompt, or a permission rule for pushes to the live branch.
   - 57f9743 the first version of this handoff.
   - The landing-pages commit (see "Waiting for approved" below).
+  - 8b2d963 sync rule with the ads chat (shared Claude Doc), and the relay-rule commit after it (docs only, no site change).
 - Going live = fast-forward the live branch to the session branch (`git push origin <session-branch>:claude/good-neighbors-v2-visual-redesign`), only after the owner says "approved".
 
 ## Rules (also in the repo's CLAUDE.md, which a new chat reads automatically)
 - Work on a session branch started from the live branch `claude/good-neighbors-v2-visual-redesign`. Show the owner everything first; push to the live branch only after "approved".
 - SEO on every change. Guarantee wording exact (GUARANTEE in lib/config/site.ts). Insurance only as "$5 million liability insurance" (INSURANCE in lib/config/site.ts). No prices, reviews, ratings, years, awards, certifications, "fully insured", "bonded", "licensed", "background-checked", "vetted", "block and lock".
 - Never change: tel: links, the contact form, the thank-you page, GA4 G-MLBBT02NEC, Google Ads AW-18430229184, the two conversions. Never touch Wasp Problem or G-2NETZXNWVG.
+- Relay between chats (owner's rule, Oct 11): after every major task, end with a "For the other chat" note the owner carries to the ads chat ("Nothing for the other chat." if there is nothing). Act first on any note the owner pastes from the ads chat. Paste text for the owner goes in a fenced code block on its own. Full rule in CLAUDE.md; the owner pasted the same rule into the ads chat on Oct 11.
 
 ## Owner decisions from the landing-pages chat (Oct 11)
 - Keep working on the session branch; merge to live only after "approved".
