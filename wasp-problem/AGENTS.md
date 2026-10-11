@@ -211,3 +211,53 @@ Chrome profiles: the one with the **wasp picture** is signed in to Google as
 badadandotcom@gmail.com, not a Wasp Problem address — there is no Wasp Problem email yet.
 "Log in with Google" from that profile signs in as badadandotcom. Use the **Work** profile
 for anything that should be under duane@goodneighborswildlife.ca.
+
+## Google Ads & SEO roadmap (Oct 2026)
+
+From the Oct 10, 2026 Google Ads data pull (kept in the owner's ads chat, not in this repo: 90
+days of search terms, keywords with quality scores, the negative list, conversions, ads and
+Keyword Planner volumes). Facts that drive the plan:
+
+- Search volume, Toronto geo, 12-month averages (Jul–Aug runs ~10x these; Nov–Apr is near zero):
+  wasp nest removal 390/mo · wasp removal toronto 260 · wasp exterminator 110 · yellow jacket
+  exterminator 110 (Low competition) · mud dauber nest removal 90 · wasp removal 70 · ground wasps
+  70 (Low) · wasp nest in ground 50 (Low) · hornet nest removal 40 · wasp removal near me 40 ·
+  every other city term ~10/mo.
+- Every non-city keyword lands on the homepage. "wasps in wall" scores landing-page experience
+  Below average; the city pages score Above average (Toronto QS 9). The only tracked conversion
+  in 90 days came from a "wasp nest removal cost" search.
+- Hire-intent clicks cost CA$11–12. The bee ad group sends traffic to the homepage, not /#bees.
+
+Pages to build, in this order. New URLs only — never rename the homepage or a city page.
+
+1. `/yellow-jacket-removal` — yellow jackets, ground wasps, nests in the lawn, under steps and
+   in wall voids. Targets ~260/mo of mostly Low-competition searches (yellow jacket exterminator,
+   ground wasps, wasp nest in ground, yellow jacket nest removal).
+2. `/wasp-nest-removal-cost` — the price table ($180 visible, $250 hidden, +$100 each extra nest,
+   ladder fees), what changes the price, what is included, the 90-day service guarantee. Cost
+   searches are hire-intent and convert; upfront pricing is the differentiator.
+3. Deepen `/toronto-wasp-removal` to 400–500 words (neighbourhoods, housing types, where nests
+   turn up). It carries "wasp removal toronto" (260/mo); the other city pages carry ~10/mo each
+   and already score well — leave them as they are.
+4. `/wasps-in-wall-or-roof` — hidden nests: wall voids, behind siding, brick weep holes, soffits,
+   roof edges, attics. Matches the "Wasps in Your Wall or Roof?" ad headline and the $250
+   hidden-nest price.
+5. `/hornet-nest-removal` — bald-faced hornets and paper nests in trees, eaves and sheds.
+6. `/emergency-wasp-removal` — supports the 24/7 ad (see the open item above).
+7. Product & safety page (Drione; see the open item above). Best after the Dec 7 exam, since
+   it describes commercial pesticide use.
+
+Every page: the search phrase in the title, H1 and H2s; a "what you're seeing → what it
+probably is" section; what happens if you wait; what we do; the prices that apply; the
+guarantee; an FAQ with FAQPage schema; links to the homepage and the city pages. Same rules as
+the rest of the site: never "licensed" or "certified", no "can't", 24/7 means calls only, bees
+stay generic.
+
+Hold until after the Dec 7 exterminator exam: the word "exterminator" anywhere on the site or in
+ad headlines — Ontario licenses that role.
+
+Account-side work (owner and the ads chat, not code) was listed in the Oct 11 chat: call-asset
+conversion tracking, pause the old RSA, point the bee ad at /#bees, split the single ad group
+into themed groups once the pages exist, lower bids over the winter, find who owns the Wasp
+Problem Business Profile.
+
