@@ -88,7 +88,8 @@ These are not style preferences. Breaking one is a real-world problem for the ow
   first. Oakville, Burlington and Brampton are kept but **not featured**: listed last,
   and left out of other city pages' cross-links (`featured: false`). There is no public
   street address — it's a service-area business.
-- City pages: 13, one per `CITY_LOCATIONS` entry (Brampton has none). Each has its own
+- City pages: 14, one per `CITY_LOCATIONS` entry. Brampton's was added Oct 2026 for people who
+  find the site on their own — it is not featured and gets no Google Ads. Each has its own
   hand-written copy — never clone one and swap the name.
 - Canonical domain is `https://www.waspproblem.ca` (`BRAND.url` in `lib/site.ts`; the canonical tag, og:url,
   og:image, sitemap, robots and schema all follow it). Vercel's Domains list shows the www addresses
@@ -154,9 +155,10 @@ Ads points at them. Add new pages alongside them.
 - [x] Turn on the request form — done Oct 1, 2026. `RESEND_API_KEY` + `LEAD_TO_EMAIL` set in
       Vercel (Production), redeployed, test request delivered to the inbox (not spam).
 - [x] `lead_form` marked as a key event in GA4 — done Oct 2, 2026 (starred next to `cta_call` / `cta_text`).
-- [ ] Optional: verify waspproblem.ca in Resend so requests can go to any inbox and come from
-      a waspproblem.ca address (then set `LEAD_FROM_EMAIL`). Until then they can only go to
-      the Resend account's own email.
+- [ ] Verify waspproblem.ca in Resend (DNS records), THEN set `LEAD_FROM_EMAIL` =
+      `Wasp Problem <website@waspproblem.ca>` in Vercel and redeploy. Never set it before the
+      domain shows Verified — Resend rejects the sender and every lead fails. Lead subjects
+      start "Wasp Problem lead —" (owner's Gmail filter keys on it; don't change it).
 - [ ] Separate from Wasp Problem: check how Good Neighbors' own form is set up in Resend
       (it delivers to hello@goodneighborswildlife.ca from the same Resend account).
 - [ ] Reorder the Business Profile service areas so Toronto is first (owner's action).
@@ -167,6 +169,28 @@ Ads points at them. Add new pages alongside them.
       per city. Needs from the owner first: the hours he actually goes out, and what counts as
       urgent. Copy: calls answered 24/7; urgent and evening jobs based on availability — never
       "24/7 emergency". Pull search volumes in Semrush once the account has API units.
+- [ ] Product & safety page (owner's plan; build from the terminal). Product: **Drione
+      Insecticide Dust** (Envu / Environmental Science CA Inc., Kitchener ON; formerly Bayer).
+      Verified from the Canadian label and SDS in Oct 2026 — re-check every fact against a
+      photo of the label on the container the owner actually uses before publishing:
+      - PCP Registration No. 15255. Guarantee: pyrethrins 1.0%, piperonyl butoxide 9.7%,
+        amorphous silica gel 40.0%.
+      - Current label: PMRA approved 2024-03-19 (correction 2024-07-17), updated after the
+        pyrethrins / piperonyl butoxide re-evaluations; the older label expired 2025-03-02.
+      - SDS 2023-09-25: GHS "Not a hazardous substance or mixture"; repeated exposure may
+        cause skin dryness or cracking. Label: "Keep out of reach of children"; harmful if
+        swallowed; avoid skin contact and inhaling the powder. Earlier Canadian labels: toxic
+        to fish, keep out of lakes, streams and ponds. Applicator PPE on the label: long
+        sleeves, long pants, chemical-resistant gloves, socks, shoes, N95-minimum respirator.
+      - Envu's wasp guidance (marketing copy, not label text): treat nests in the evening;
+        dust the nest, its entrance and the surrounding area (0.25–0.5 g per average nest);
+        keep people and pets out of treated areas until the dust has completely settled.
+      - Page copy may use only label/SDS wording and the owner's own practice. Never
+        "non-toxic", "100% safe", "eco-friendly", "organic" or "licensed". The Canadian label
+        lists wasps; bees were not confirmed on it — keep bee claims off this page unless the
+        owner's label says otherwise.
+      Sources: ca.envu.com/pest-management/products/drione (label + SDS PDFs);
+      labelsds.com "Canada Drione Dust En-Fr Label 7-17-24" and "SDS 9-25-23".
 - [ ] Google Business Profile: set hours to "Open 24 hours" if not already (calls are answered
       24/7) — drives "open now" searches in Maps (owner's action).
 - [ ] Licence wording — only after the December exam is passed.
@@ -187,3 +211,53 @@ Chrome profiles: the one with the **wasp picture** is signed in to Google as
 badadandotcom@gmail.com, not a Wasp Problem address — there is no Wasp Problem email yet.
 "Log in with Google" from that profile signs in as badadandotcom. Use the **Work** profile
 for anything that should be under duane@goodneighborswildlife.ca.
+
+## Google Ads & SEO roadmap (Oct 2026)
+
+From the Oct 10, 2026 Google Ads data pull (kept in the owner's ads chat, not in this repo: 90
+days of search terms, keywords with quality scores, the negative list, conversions, ads and
+Keyword Planner volumes). Facts that drive the plan:
+
+- Search volume, Toronto geo, 12-month averages (Jul–Aug runs ~10x these; Nov–Apr is near zero):
+  wasp nest removal 390/mo · wasp removal toronto 260 · wasp exterminator 110 · yellow jacket
+  exterminator 110 (Low competition) · mud dauber nest removal 90 · wasp removal 70 · ground wasps
+  70 (Low) · wasp nest in ground 50 (Low) · hornet nest removal 40 · wasp removal near me 40 ·
+  every other city term ~10/mo.
+- Every non-city keyword lands on the homepage. "wasps in wall" scores landing-page experience
+  Below average; the city pages score Above average (Toronto QS 9). The only tracked conversion
+  in 90 days came from a "wasp nest removal cost" search.
+- Hire-intent clicks cost CA$11–12. The bee ad group sends traffic to the homepage, not /#bees.
+
+Pages to build, in this order. New URLs only — never rename the homepage or a city page.
+
+1. `/yellow-jacket-removal` — yellow jackets, ground wasps, nests in the lawn, under steps and
+   in wall voids. Targets ~260/mo of mostly Low-competition searches (yellow jacket exterminator,
+   ground wasps, wasp nest in ground, yellow jacket nest removal).
+2. `/wasp-nest-removal-cost` — the price table ($180 visible, $250 hidden, +$100 each extra nest,
+   ladder fees), what changes the price, what is included, the 90-day service guarantee. Cost
+   searches are hire-intent and convert; upfront pricing is the differentiator.
+3. Deepen `/toronto-wasp-removal` to 400–500 words (neighbourhoods, housing types, where nests
+   turn up). It carries "wasp removal toronto" (260/mo); the other city pages carry ~10/mo each
+   and already score well — leave them as they are.
+4. `/wasps-in-wall-or-roof` — hidden nests: wall voids, behind siding, brick weep holes, soffits,
+   roof edges, attics. Matches the "Wasps in Your Wall or Roof?" ad headline and the $250
+   hidden-nest price.
+5. `/hornet-nest-removal` — bald-faced hornets and paper nests in trees, eaves and sheds.
+6. `/emergency-wasp-removal` — supports the 24/7 ad (see the open item above).
+7. Product & safety page (Drione; see the open item above). Best after the Dec 7 exam, since
+   it describes commercial pesticide use.
+
+Every page: the search phrase in the title, H1 and H2s; a "what you're seeing → what it
+probably is" section; what happens if you wait; what we do; the prices that apply; the
+guarantee; an FAQ with FAQPage schema; links to the homepage and the city pages. Same rules as
+the rest of the site: never "licensed" or "certified", no "can't", 24/7 means calls only, bees
+stay generic.
+
+Hold until after the Dec 7 exterminator exam: the word "exterminator" anywhere on the site or in
+ad headlines — Ontario licenses that role.
+
+Account-side work (owner and the ads chat, not code) was listed in the Oct 11 chat: call-asset
+conversion tracking, pause the old RSA, point the bee ad at /#bees, split the single ad group
+into themed groups once the pages exist, lower bids over the winter, find who owns the Wasp
+Problem Business Profile.
+

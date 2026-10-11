@@ -267,6 +267,25 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
       a: "Yes — we serve Burlington, along with Toronto, Mississauga and communities across the GTA. Call or text us and we'll let you know the earliest we can get there.",
     },
   },
+  {
+    featured: false,
+    slug: "brampton-wasp-removal",
+    href: "/brampton-wasp-removal",
+    city: "Brampton",
+    h1: "Wasp Nest Removal in Brampton",
+    metaTitle: "Wasp Nest Removal in Brampton",
+    metaDescription:
+      "Wasp removal in Brampton. Wasp Problem removes active wasp and hornet nests from homes across Brampton and the GTA. Call 1-800-800-WASP.",
+    heroSubheadline: "Fast Wasp Nest Removal for Brampton Homeowners",
+    intro: [
+      "A lot of Brampton homes are newer builds with aluminum soffits, vinyl siding and brick fronts, and that's exactly where wasps get in: the gap where the soffit meets the brick, a dryer or bathroom vent, or a weep hole in the brickwork. If you see wasps going in and out of one opening all day, there's usually a nest behind it.",
+      "Call or text us with the spot you're seeing them — roofline, soffit, siding, a deck, a shed or a hole in the lawn — and a photo if it's safe to take one. We'll tell you the earliest we can get to you.",
+    ],
+    extraFaq: {
+      q: "Do you service Brampton?",
+      a: "Yes — we serve all of Brampton, from Bramalea and Springdale to Mount Pleasant and Castlemore, along with Mississauga, Toronto and communities across the GTA. Call or text us and we'll let you know the earliest we can get there.",
+    },
+  },
 ];
 
 export function locationMetadata(location: CityLocation): Metadata {
