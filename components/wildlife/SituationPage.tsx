@@ -20,7 +20,7 @@ import { cn } from "@/lib/utils";
 
 /**
  * The long-form template for the two "situation" pages (something in the
- * attic / in the walls) and, since Oct 2026, the raccoon and squirrel pages:
+ * attic / in the walls) and, since Oct 2026, the raccoon, squirrel and bird pages:
  * an optional sound guide, a section per topic, the reasons not to wait or
  * DIY, how a visit goes, the page's own sealing-and-repair block with the
  * lifetime guarantee, and a FAQ with matching FAQPage schema.

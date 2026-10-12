@@ -127,22 +127,33 @@ export const WILDLIFE: WildlifeEntry[] = [
     seoTitle: "Bird Removal in Toronto: Vents, Chimneys & Eaves",
     heading: "Bird Removal in Toronto",
     metaDescription:
-      "Birds in a vent, chimney or eaves in Toronto? We check for eggs and young first, then seal the opening. Lifetime guarantee on every entry point we seal.",
+      "Pigeon and bird removal in Toronto: roofs, ledges, balconies, vents and chimneys. Eggs and young checked first. Lifetime guarantee on every entry point we seal.",
     summary: "Nesting in vents, chimneys, and eaves — most often a seasonal, fast-moving situation.",
     intro:
       "Birds most often turn up nesting in bathroom or dryer vents, chimneys, or under eaves. It's usually a seasonal situation tied to nesting season, and it can move quickly from 'a bit of noise' to a blocked vent or chimney that needs prompt attention.",
     commonSigns: [
+      "Pigeons settling on the same ledge, roof edge or balcony every day, with droppings building up below",
       "Chirping or rustling from a vent, chimney, or eave",
       "Nesting material visible at a vent opening",
       "A vent that's stopped venting properly",
       "Birds repeatedly entering and exiting the same small gap",
     ],
-    commonAreas: ["Dryer and bathroom vents", "Chimneys", "Eaves and soffits", "Gutters"],
+    commonAreas: ["Roofs, ledges and balconies", "Dryer and bathroom vents", "Chimneys", "Eaves and soffits", "Gutters"],
     approach:
       "We identify the birds and check for eggs or young before work begins. If the nest is protected, we'll explain what can be done and when.",
+    relatedNote:
+      "Chirping behind a bathroom or laundry-room wall? See [birds in the vent](/wildlife/something-in-the-walls). Flapping or cooing at a roof vent or soffit? See [something in the attic](/wildlife/something-in-the-attic).",
     iconId: "bird",
     photoOverride: "/images/bird-detail.png",
     photoAlt: "A starling carrying nesting material into a wall vent on a stone house",
+    repair: {
+      heading: "Bird removal and vent, chimney and soffit repair",
+      paragraphs: [
+        "Birds don't make the opening; they find it. An uncovered dryer or bathroom vent, a chimney without a cap, a torn gable-vent screen or a gap where the soffit meets the wall is all a starling or a pigeon needs.",
+        "Once the birds are out and the nest is cleaned out, we screen the vent or cap the chimney and repair what the nesting damaged: vent covers and screens, chimney caps, soffits, fascia and eavestroughs, matched to your home's existing materials and colours. Where birds got into the attic, the droppings and nesting material are cleaned out and soiled insulation is replaced.",
+      ],
+      linkLabel: "Vent, chimney and soffit repair after birds",
+    },
     trustRow: true,
   },
   {

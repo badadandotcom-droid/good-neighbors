@@ -3,14 +3,24 @@ import type { SituationContent } from "@/lib/data/situations";
 
 /**
  * ============================================================================
- * LONG-FORM SPECIES PAGES — raccoons and squirrels
+ * LONG-FORM SPECIES PAGES — raccoons, squirrels and birds
  * ============================================================================
- * The two Google Ads landing pages for "raccoon removal toronto" and
- * "squirrel removal toronto", thickened the same way as the attic and walls
- * pages (Oct 2026): real sections, a FAQ with FAQPage schema, neighbourhood
- * mentions and the insurance line. They render through the same template
+ * The Google Ads landing pages for "raccoon removal toronto", "squirrel
+ * removal toronto" and the bird terms (pigeon control, birds in vents),
+ * thickened the same way as the attic and walls pages (Oct 2026): real
+ * sections, a FAQ with FAQPage schema, neighbourhood mentions and the
+ * insurance line. They render through the same template
  * (components/wildlife/SituationPage.tsx); the hero keeps the live page's
- * photo, intro paragraph, signs and areas word for word.
+ * photo and intro paragraph word for word, and the signs and areas lists too
+ * (birds adds one pigeon line to each, since pigeons lead that page).
+ *
+ * Birds (Oct 12, 2026): pigeons year-round on roofs, ledges and balconies,
+ * condo and apartment balconies included (owner's call: the usual job is
+ * removal; screening a balcony is a separate, larger job; building
+ * management may need to be involved); starlings and sparrows in vents in
+ * spring and early summer; eggs and young checked for first; protected
+ * birds left where they are until the young have flown; no relocation
+ * promises; nothing about the work beyond what the live site already says.
  *
  * Same rules as lib/data/situations.ts: general facts about the animals and
  * about Toronto homes are wanted; everything about the business must already
@@ -231,6 +241,116 @@ export const SPECIES_PAGES: SituationContent[] = [
       {
         question: "How quickly can you get here?",
         answer: `${SAME_DAY} The phone is answered 24 hours a day, 7 days a week, and we confirm the timing with you when you call or send a request.`,
+      },
+    ],
+  },
+  {
+    slug: "birds",
+    subhead:
+      "Pigeons on the roof or the balcony all year, starlings in the dryer vent every spring, a nest in the chimney: what can be done about each, and when.",
+    trustRow: true,
+    signs: {
+      heading: "Signs of birds in or on your home",
+      intro:
+        "The place usually tells you the bird: pigeons out in the open on ledges, roofs and balconies; starlings and sparrows inside vents and gaps. You don't need to identify them yourself.",
+    },
+    sections: [
+      {
+        heading: "Pigeons in Toronto",
+        paragraphs: [
+          "Pigeons are the one bird problem that doesn't keep to a season. They don't migrate, they breed in any month of the year, and a pair that settles on your home can raise several broods before next winter. They started out as cliff birds, and to a pigeon a house is full of cliffs: a deep window ledge, a flat roof, a covered balcony.",
+          "The trouble is what collects below: droppings on the ledge, the steps and the stonework, nesting material in the eavestroughs. A pair that finds an open soffit or a torn gable-vent screen nests inside instead. No part of the city is short of pigeons; our [Toronto](/service-areas/toronto), [Scarborough](/service-areas/scarborough), [North York](/service-areas/north-york) and [Etobicoke](/service-areas/etobicoke) pages cover it part by part.",
+          "Pigeons that have got inside, into an attic, a soffit or a vent, are removed humanely, with eggs and young checked for first; the nest is cleaned out and the opening screened or sealed. Pigeons on an open roof or ledge are a different kind of job: we look at the spot they've chosen and explain what can be done about it before any work begins.",
+        ],
+      },
+      {
+        heading: "Pigeons on a condo or apartment balcony",
+        paragraphs: [
+          "A balcony is a ledge with a roof over it, and a pair of pigeons will nest behind a planter or in the corner by the wall and keep coming back. The usual job is removing the birds and the nest, with eggs and young checked for first. Screening the whole balcony so nothing can land there is a larger, separate job that we quote on its own. Depending on the building, your property manager or condo board may need to be involved before anything is fixed to the outside; we'll tell you if that applies.",
+        ],
+      },
+      {
+        heading: "Bird nests in vents, soffits and the attic",
+        paragraphs: [
+          "From April into early summer, the bird in the vent is nearly always a European starling or a house sparrow. An uncovered dryer, bathroom or kitchen vent is a ready-made nest hole, and the first sign is chirping behind a bathroom or laundry-room wall, loudest in the morning, then grass showing at the vent hood. The same birds, and pigeons, use the gaps higher up: a loose fascia board, a soffit corner, a gable vent with a torn screen, and the attic beyond it.",
+          "A nest in a dryer duct packs grass in with the lint, and the dryer heats it every cycle, so please don't run the dryer until the duct is clear. Starlings usually lay in mid-April; the eggs hatch in about twelve days, the young fly about three weeks later, and there is often a second brood in early summer. A vent that's quiet in July still has the nest in it, and the pair returns next spring unless it's covered. Bird mites live in an old nest too, and once the young have flown they look for another host, sometimes in the room below.",
+          "We check for eggs and young first. Once the birds are out, the nest is cleaned out of the duct, soffit or attic and the opening gets a proper cover; late summer and fall are the best months for it. For the noises a vent nest makes inside the house, see [something in the walls](/wildlife/something-in-the-walls).",
+        ],
+      },
+      {
+        heading: "Birds in the chimney",
+        paragraphs: [
+          "An uncapped chimney draws birds in two ways. Starlings nest on the smoke shelf above the damper, with chirping from the fireplace and twigs dropping into the firebox. A bird that falls down the flue and can't climb back out flutters against the damper; keep the damper closed, the room shut and the fire unlit, and call.",
+          "From May to mid-August the bird may be a chimney swift, a small, fast bird that glues a half-cup of twigs to the inside of the flue. Chimney swifts are a threatened species in Ontario and protected all year, so a nest in use is left where it is; we'll tell you what can be done and when, usually a wait of a few weeks. Any chimney, once it's empty, gets a cap or a screen so it doesn't happen again.",
+        ],
+      },
+      {
+        heading: "Protected birds, and what not to do yourself",
+        paragraphs: [
+          "Most wild birds, and their nests and eggs while the nest is in use, are protected under Ontario and federal law; some, the chimney swift among them, are protected all year. Pigeons, starlings and house sparrows, the three that nest on and in houses most often, are the usual exceptions. So identifying the bird is the first thing we do: a pigeon, starling or sparrow nest can be dealt with when you call, while a robin on the porch light or a duck on the balcony waits until the young have flown, usually a few weeks, and we'll tell you what to do in the meantime.",
+          "Two things we'd ask you not to do. Don't pull a nest out of a vent, chimney or soffit yourself in spring: if it belongs to a protected bird the law doesn't allow it, and if there are young in a vent the parents keep trying to reach them. And don't cover a vent or seal a gap while birds are inside; a bird closed into a duct dies there, and the smell follows.",
+        ],
+      },
+    ],
+    process: {
+      heading: "How we remove birds",
+      intro:
+        "Usually, we can solve the wildlife problem entirely from outside without needing to enter your home. Here is what a bird visit looks like.",
+      steps: [
+        "An inspection of the vents, chimney, soffits and roof, and the ledge or balcony if pigeons are the problem, to find every spot the birds use.",
+        "We identify the birds and check for eggs or young before work begins. If the nest is protected, we'll explain what can be done and when.",
+        "Humane removal, and the nest cleaned out of the vent, chimney, soffit or attic.",
+        `We screen the vent, cap the chimney or seal the gap the birds were using. ${GUARANTEE.short}`,
+        "We repair the damage: vent covers and screens, chimney caps, soffits, fascia and eavestroughs, plus soiled attic insulation, matched to your home's existing materials and colours.",
+      ],
+      outro: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week.`,
+    },
+    faqHeading: "Questions about birds",
+    faqs: [
+      {
+        question: "Which bird is it?",
+        answer:
+          "Go by where it is. Pigeons sit in the open, on a ledge, a roof edge or a balcony, and come back to the same spot every day. Starlings and house sparrows go into holes: a vent, a soffit gap, a gable vent, with chirping behind the wall. You don't need to be sure before you call; our technician identifies it on site.",
+      },
+      {
+        question: "Can you remove a bird's nest with eggs or babies in it?",
+        answer:
+          "It depends on the bird. Most wild birds, their nests and their eggs are protected while the nest is in use, so that nest stays until the young have flown; pigeons, starlings and house sparrows are the usual exceptions. Either way, we check for eggs and young before any work begins.",
+      },
+      {
+        question: "There's a bird in my dryer vent. What should I do?",
+        answer:
+          "Don't run the dryer until the duct is clear, and don't pull the nest out or tape the flap shut; if there are young in the duct, that traps them. Take a photo of the vent hood if you can and call or send a request. We check for eggs and young, clear the duct and fit a cover.",
+        link: { href: "/contact", label: "Send a request with photos" },
+      },
+      {
+        question: "Do you remove pigeons from condo and apartment balconies?",
+        answer:
+          "Yes. The usual job is removing the birds and the nest, with eggs and young checked for first; screening the whole balcony is a larger, separate job that we quote on its own. Your property manager or condo board may need to approve work on the outside, and we'll tell you if that applies.",
+      },
+      {
+        question: "What happens to the birds?",
+        answer:
+          "They leave alive. We use humane methods suited to the bird and the situation, and we check for eggs and young before anything is done.",
+      },
+      {
+        question: "The birds have gone. Do I still need to do anything?",
+        answer:
+          "Yes. A nest site that worked once is used year after year, so an empty nest is the time to fix the problem: the material comes out, the droppings are cleaned up, and the opening is screened or capped before the birds return in spring.",
+      },
+      {
+        question: "How much does bird removal cost in Toronto?",
+        answer:
+          "It depends on where the birds are, whether they've got inside, and what needs to be screened, capped or repaired afterwards. We confirm the price with you once we understand the problem, before any work begins.",
+      },
+      {
+        question: "Will the birds come back?",
+        answer: `Not through the opening we sealed. ${GUARANTEE.full}`,
+      },
+      INSURANCE_FAQ,
+      {
+        question: "How quickly can you get here?",
+        answer: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week, and we confirm the timing with you before anyone is sent out.`,
       },
     ],
   },

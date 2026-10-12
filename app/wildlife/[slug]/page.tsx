@@ -57,8 +57,8 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
   const imageOnLeft = speciesIndex > -1 && speciesIndex % 2 === 1;
   const tone = PHOTO_TONE[entry.slug] ?? "pine";
 
-  // The attic and walls pages, and the raccoon and squirrel pages, carry
-  // long-form content and share the long-form template.
+  // The attic and walls pages, and the raccoon, squirrel and bird pages,
+  // carry long-form content and share the long-form template.
   const longForm = getSituationContent(entry.slug) ?? getSpeciesPageContent(entry.slug);
   if (longForm) return <SituationPage entry={entry} content={longForm} hero={{ tone, imageOnLeft }} />;
 

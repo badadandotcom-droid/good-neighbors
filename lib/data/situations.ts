@@ -50,7 +50,8 @@ export interface SituationContent {
   /**
    * Species pages: a band after the hero showing the entry's own
    * `commonSigns` and `commonAreas` (the live page's lists, kept word for
-   * word) under this heading, with the entry's `relatedNote` beneath.
+   * word; birds adds one pigeon line to each) under this heading, with the
+   * entry's `relatedNote` beneath.
    */
   signs?: { heading: string; intro: string };
   /** Show the guarantee, insurance and 24/7 lines under the hero buttons, as the homepage and city pages do. */
