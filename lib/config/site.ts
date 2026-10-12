@@ -150,6 +150,23 @@ export const ANALYTICS = {
   callRailScriptId: null as string | null, // PLACEHOLDER — CallRail swap script id
 } as const;
 
+/**
+ * Pages that load Google's gtag.js library after the page has finished loading
+ * (strategy "lazyOnload") instead of right after hydration. The library is the
+ * biggest script on the page and, on the pages still over the 2.5 s LCP target,
+ * it competes with the first paint. Owner's OK, Oct 12 2026 (via the ads chat):
+ * it may load right after the page shows (not wait for a tap or scroll), and only
+ * on pages still over 2.5 s. Everything else is unchanged: the small init script
+ * that defines `gtag` and queues the config calls still runs straight away, so a
+ * phone tap or form lead before the library arrives is queued in dataLayer and
+ * sent when it does. Add a path here only with the owner's say-so.
+ */
+export const GOOGLE_TAG_LAZY_PATHS: readonly string[] = [
+  "/wildlife/something-in-the-attic",
+  "/wildlife/something-in-the-walls",
+  "/service-areas/peel-region",
+];
+
 export const PRIMARY_CTA_LABEL = "Get Help Now";
 
 export const NAV_ITEMS: { label: string; href: string }[] = [

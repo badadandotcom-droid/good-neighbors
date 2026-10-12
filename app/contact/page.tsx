@@ -1,6 +1,7 @@
 import { Container } from "@/components/shared/Container";
 import { GetHelpForm } from "@/components/forms/GetHelpForm";
 import { PhoneLink } from "@/components/shared/PhoneLink";
+import { GuaranteeLine } from "@/components/shared/GuaranteeLine";
 import { SameDayBadge } from "@/components/shared/SameDayBadge";
 import { MailIcon, PhoneIcon } from "@/components/shared/ContactIcons";
 import { getHoursNote, getPhone } from "@/lib/config/resolvers";
@@ -25,6 +26,7 @@ export default function ContactPage() {
           <h1 className="mt-4 text-balance font-display text-4xl leading-[1.06] text-charcoal sm:text-5xl">
             Get help now
           </h1>
+          <GuaranteeLine className="mt-4 text-balance" />
           <p className="mt-5 text-[15px] leading-relaxed text-ink-700 text-pretty">
             Tell us what you&apos;re hearing or seeing at your home. We&apos;ll get in touch to confirm the details
             and arrange a time to come out.
