@@ -70,9 +70,9 @@ export function getPhotoSlot(id: PhotoSlotId): PhotoSlot {
  * changes needed. Add entries here as approved photos come in.
  */
 export const REAL_PHOTOS: Partial<Record<PhotoSlotId, string>> = {
-  inspection: "/images/inspection.png",
-  conversation: "/images/conversation.png",
-  detail: "/images/detail.png",
-  arrival: "/images/arrival.png",
-  streetscape: "/images/streetscape.png",
+  inspection: "/images/inspection.jpg",
+  conversation: "/images/conversation.jpg",
+  detail: "/images/detail.jpg",
+  arrival: "/images/arrival.jpg",
+  streetscape: "/images/streetscape.jpg",
 };

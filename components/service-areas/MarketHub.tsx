@@ -81,29 +81,29 @@ export function MarketHub({ market }: { market: Market }) {
           id="compass"
           className="pointer-events-none absolute -left-24 -bottom-24 h-96 w-96 text-pine-600 opacity-[0.05]"
         />
-        <Container className="relative max-w-3xl">
-          <Link href="/service-areas" className="inline-block text-sm font-medium text-stone-500 hover:text-charcoal">
+        <Container className="relative flex max-w-3xl flex-col sm:block">
+          <Link href="/service-areas" className="order-1 inline-block self-start text-sm font-medium text-stone-500 hover:text-charcoal">
             &larr; Service Areas
           </Link>
 
           {active ? (
-            <div className="mt-4">
+            <div className="order-2 mt-4">
               <SameDayBadge market={market} />
             </div>
           ) : (
-            <span className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-brass-400 bg-brass-300/15 px-3 py-1 text-xs font-medium tracking-wide text-brass-600 uppercase">
+            <span className="order-2 mt-4 inline-flex items-center gap-1.5 self-start rounded-full border border-brass-400 bg-brass-300/15 px-3 py-1 text-xs font-medium tracking-wide text-brass-600 uppercase">
               Coming soon to this area
             </span>
           )}
 
-          <h1 className="mt-4 text-balance font-display text-4xl leading-[1.05] text-charcoal sm:text-5xl">{heading}</h1>
+          <h1 className="order-3 mt-4 text-balance font-display text-4xl leading-[1.05] text-charcoal sm:text-5xl">{heading}</h1>
           {places.length > 0 && (
-            <p className="mt-3 font-display text-xl leading-snug text-pine-600 text-pretty sm:text-2xl">{listJoin(places)}.</p>
+            <p className="order-8 mt-8 font-display text-xl leading-snug text-pine-600 text-pretty sm:mt-3 sm:text-2xl">{listJoin(places)}.</p>
           )}
-          <p className="mt-6 text-lg leading-relaxed text-ink-700 text-pretty">{market.heroBlurb}</p>
-          <p className="mt-4 font-display text-lg italic text-pine-600">{getPositioningLine(market)}</p>
+          <p className="order-9 mt-6 text-lg leading-relaxed text-ink-700 text-pretty">{market.heroBlurb}</p>
+          <p className="order-10 mt-4 font-display text-lg text-pine-600">{getPositioningLine(market)}</p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+          <div className="order-5 mt-5 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
             <CTAButton
               href={phone.href}
               size="lg"
@@ -125,7 +125,7 @@ export function MarketHub({ market }: { market: Market }) {
             </CTAButton>
           </div>
 
-          {longForm && <TrustRow />}
+          {longForm && <TrustRow mobileOrder />}
         </Container>
       </section>
 

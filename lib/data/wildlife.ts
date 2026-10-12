@@ -41,7 +41,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     relatedNote:
       "Hearing heavy footsteps overhead at night? See [raccoon in the attic](/wildlife/something-in-the-attic). Movement inside a wall or ceiling? See [raccoon in the wall](/wildlife/something-in-the-walls).",
     iconId: "raccoon",
-    photoOverride: "/images/raccoon-detail.png",
+    photoOverride: "/images/raccoon-detail.jpg",
     photoAlt: "A raccoon looking out of a torn soffit at a home's roofline",
     repair: {
       heading: "Raccoon removal and roof damage repair",
@@ -76,7 +76,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     relatedNote:
       "Daytime scampering overhead? See [squirrel in the attic](/wildlife/something-in-the-attic). Scratching in one spot inside a wall? See [squirrel in the wall](/wildlife/something-in-the-walls).",
     iconId: "squirrel",
-    photoOverride: "/images/squirrel-detail.png",
+    photoOverride: "/images/squirrel-detail.jpg",
     photoAlt: "A squirrel at a chewed hole in a soffit at a home's roofline",
     repair: {
       heading: "Squirrel removal and roof repair",
@@ -144,7 +144,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     relatedNote:
       "Chirping behind a bathroom or laundry-room wall? See [birds in the vent](/wildlife/something-in-the-walls). Flapping or cooing at a roof vent or soffit? See [something in the attic](/wildlife/something-in-the-attic).",
     iconId: "bird",
-    photoOverride: "/images/bird-detail.png",
+    photoOverride: "/images/bird-detail.jpg",
     photoAlt: "A starling carrying nesting material into a wall vent on a stone house",
     repair: {
       heading: "Bird removal and vent, chimney and soffit repair",
@@ -178,7 +178,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     approach:
       "Bat situations are assessed carefully, including timing considerations tied to local wildlife regulations. Our technicians will walk you through what's involved before any work begins.",
     iconId: "bat",
-    photoOverride: "/images/bat-detail.png",
+    photoOverride: "/images/bat-detail.jpg",
     photoAlt: "A bat tucked into a gap in a damaged soffit",
     trustRow: true,
   },

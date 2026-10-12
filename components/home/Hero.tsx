@@ -6,6 +6,8 @@ import { TrustRow } from "@/components/shared/TrustRow";
 import { SameDayBadge } from "@/components/shared/SameDayBadge";
 import { getHeroHeadline, getPhone, getPositioningLine } from "@/lib/config/resolvers";
 import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
+import { frauncesItalic } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
 import type { Market } from "@/lib/types";
 
 export function Hero({ market }: { market?: Market }) {
@@ -27,7 +29,7 @@ export function Hero({ market }: { market?: Market }) {
             {getHeroHeadline(market)}
           </h1>
 
-          <p className="mt-3 font-display text-xl italic text-pine-600 sm:mt-4 sm:text-2xl">{getPositioningLine(market)}</p>
+          <p className={cn(frauncesItalic.className, "mt-3 text-xl text-pine-600 sm:mt-4 sm:text-2xl")}>{getPositioningLine(market)}</p>
 
           <p className="mt-4 max-w-md text-base leading-relaxed text-ink-700 text-pretty sm:mt-6 sm:text-lg">
             Usually, we can solve the wildlife problem entirely from outside without needing to enter your home.

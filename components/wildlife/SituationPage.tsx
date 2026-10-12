@@ -51,7 +51,7 @@ export function SituationPage({
   ];
 
   const ctas = (
-    <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+    <div className="order-5 mt-5 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
       <CTAButton
         href={phone.href}
         size="lg"
@@ -95,11 +95,11 @@ export function SituationPage({
       {isSpecies ? (
         <section className="border-b border-stone-300 py-16 sm:py-24">
           <Container className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
-            <div className={cn("lg:col-span-7", hero?.imageOnLeft && "lg:order-2")}>
-              <Link href="/wildlife" className="text-sm font-medium text-stone-500 hover:text-charcoal">
+            <div className={cn("flex flex-col sm:block lg:col-span-7", hero?.imageOnLeft && "lg:order-2")}>
+              <Link href="/wildlife" className="order-1 self-start text-sm font-medium text-stone-500 hover:text-charcoal">
                 &larr; Wildlife Removal
               </Link>
-              <div className="mt-4 flex items-center gap-4">
+              <div className="order-3 mt-4 flex items-center gap-4">
                 <Image
                   src={`/images/wildlife-icons/${entry.iconId}.png`}
                   alt=""
@@ -112,10 +112,10 @@ export function SituationPage({
                   {entry.heading}
                 </h1>
               </div>
-              <p className="mt-6 font-display text-xl leading-snug text-pine-600 text-pretty sm:text-2xl">{content.subhead}</p>
-              <p className="mt-4 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">{entry.intro}</p>
+              <p className="order-8 mt-8 font-display text-xl leading-snug text-pine-600 text-pretty sm:mt-6 sm:text-2xl">{content.subhead}</p>
+              <p className="order-9 mt-4 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">{entry.intro}</p>
               {ctas}
-              {content.trustRow && <TrustRow />}
+              {content.trustRow && <TrustRow mobileOrder />}
             </div>
             <div className={cn("lg:col-span-5", hero?.imageOnLeft && "lg:order-1")}>
               <PhotoPlaceholder
@@ -136,18 +136,18 @@ export function SituationPage({
             id={entry.iconId}
             className="pointer-events-none absolute -right-16 -bottom-16 h-96 w-96 text-pine-600 opacity-[0.05]"
           />
-          <Container className="relative max-w-3xl">
-            <Link href="/wildlife" className="inline-block text-sm font-medium text-stone-500 hover:text-charcoal">
+          <Container className="relative flex max-w-3xl flex-col sm:block">
+            <Link href="/wildlife" className="order-1 inline-block self-start text-sm font-medium text-stone-500 hover:text-charcoal">
               &larr; Wildlife Removal
             </Link>
-            <div className="mt-6 flex items-start gap-4">
+            <div className="order-3 mt-6 flex items-start gap-4">
               <Illustration id={entry.iconId} weight="bold" className="mt-1 h-12 w-12 shrink-0 text-pine-600 sm:h-14 sm:w-14" />
               <h1 className="text-balance font-display text-4xl leading-[1.04] text-charcoal sm:text-5xl">{entry.heading}</h1>
             </div>
-            <p className="mt-6 font-display text-xl leading-snug text-pine-600 text-pretty sm:text-2xl">{content.subhead}</p>
-            {content.keepLine && <p className="mt-3 text-lg leading-relaxed text-ink-700">{content.keepLine}</p>}
+            <p className="order-8 mt-8 font-display text-xl leading-snug text-pine-600 text-pretty sm:mt-6 sm:text-2xl">{content.subhead}</p>
+            {content.keepLine && <p className="order-9 mt-3 text-lg leading-relaxed text-ink-700">{content.keepLine}</p>}
             {ctas}
-            {content.trustRow && <TrustRow />}
+            {content.trustRow && <TrustRow mobileOrder />}
           </Container>
         </section>
       )}

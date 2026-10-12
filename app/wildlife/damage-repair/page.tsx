@@ -86,25 +86,25 @@ export default function DamageRepairPage() {
 
       <section className="border-b border-stone-300 py-16 sm:py-24">
         <Container className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-7">
-            <Link href="/wildlife" className="text-sm font-medium text-stone-500 hover:text-charcoal">
+          <div className="flex flex-col sm:block lg:col-span-7">
+            <Link href="/wildlife" className="order-1 self-start text-sm font-medium text-stone-500 hover:text-charcoal">
               &larr; Wildlife Removal
             </Link>
-            <p className="mt-6 flex items-center gap-2.5 text-xs font-semibold tracking-[0.18em] text-pine-600 uppercase">
+            <p className="order-2 mt-6 flex items-center gap-2.5 text-xs font-semibold tracking-[0.18em] text-pine-600 uppercase">
               <span className="h-px w-6 bg-brass-400" aria-hidden="true" />
               Damage repair
             </p>
-            <h1 className="mt-3 text-balance font-display text-4xl leading-[1.04] text-charcoal sm:text-5xl">{TITLE}</h1>
-            <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">
+            <h1 className="order-3 mt-3 text-balance font-display text-4xl leading-[1.04] text-charcoal sm:text-5xl">{TITLE}</h1>
+            <p className="order-8 mt-8 max-w-lg sm:mt-6 text-lg leading-relaxed text-ink-700 text-pretty">
               When a raccoon or squirrel gets into a home, it usually does some damage on the way in. We remove the
               animal humanely, seal the entry point it was using, and repair the damage it caused, from the roof and
               soffits to the attic.
             </p>
-            <p className="mt-4 max-w-lg text-base leading-relaxed text-ink-700 text-pretty">
+            <p className="order-9 mt-4 max-w-lg text-base leading-relaxed text-ink-700 text-pretty">
               Repairs are matched to your home&apos;s existing materials and colours, so the fix blends in with the
               rest of the house.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+            <div className="order-5 mt-5 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
               <CTAButton
                 href={phone.href}
                 size="lg"
@@ -125,7 +125,7 @@ export default function DamageRepairPage() {
                 {PRIMARY_CTA_LABEL}
               </CTAButton>
             </div>
-            <TrustRow />
+            <TrustRow mobileOrder />
           </div>
           <div className="lg:col-span-5">
             <PhotoPlaceholder
@@ -133,7 +133,7 @@ export default function DamageRepairPage() {
               icon="roofline"
               tone="charcoal"
               aspect="aspect-[4/3]"
-              src="/images/raccoon-detail.png"
+              src="/images/raccoon-detail.jpg"
               note="A raccoon looking out of a torn soffit at a home's roofline"
             />
           </div>

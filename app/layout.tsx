@@ -13,8 +13,10 @@ import { localBusinessJsonLd } from "@/lib/seo";
 const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-fraunces",
-  axes: ["opsz", "SOFT"],
-  style: ["normal", "italic"],
+  // Upright only, optical size only: the italic lives in lib/fonts.ts (loaded
+  // only where it is used) and the SOFT axis was never varied, so it only
+  // added weight to the file every page waits for.
+  axes: ["opsz"],
   display: "swap",
 });
 

@@ -83,11 +83,11 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
 
       <section className="border-b border-stone-300 py-16 sm:py-24">
         <Container className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
-          <div className={cn("lg:col-span-7", imageOnLeft && "lg:order-2")}>
-            <Link href="/wildlife" className="text-sm font-medium text-stone-500 hover:text-charcoal">
+          <div className={cn("flex flex-col sm:block lg:col-span-7", imageOnLeft && "lg:order-2")}>
+            <Link href="/wildlife" className="order-1 self-start text-sm font-medium text-stone-500 hover:text-charcoal">
               &larr; Wildlife Removal
             </Link>
-            <div className="mt-4 flex items-center gap-4">
+            <div className="order-3 mt-4 flex items-center gap-4">
               {entry.category === "species" ? (
                 <Image
                   src={`/images/wildlife-icons/${entry.iconId}.png`}
@@ -104,8 +104,8 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
                 {entry.heading}
               </h1>
             </div>
-            <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">{entry.intro}</p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+            <p className="order-9 mt-8 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty sm:mt-6">{entry.intro}</p>
+            <div className="order-5 mt-5 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
               <CTAButton
                 href={phone.href}
                 size="lg"
@@ -126,7 +126,7 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
                 {PRIMARY_CTA_LABEL}
               </CTAButton>
             </div>
-            {entry.trustRow && <TrustRow />}
+            {entry.trustRow && <TrustRow mobileOrder />}
           </div>
           <div className={cn("lg:col-span-5", imageOnLeft && "lg:order-1")}>
             <PhotoPlaceholder

@@ -11,6 +11,8 @@ import { getSituationEntries, getSpeciesEntries } from "@/lib/data/wildlife";
 import { DAMAGE_REPAIR_PATH } from "@/lib/data/repairs";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
+import { frauncesItalic } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
 
 export const metadata = pageMetadata({
   title: "Wildlife Removal in Toronto & the GTA",
@@ -41,7 +43,7 @@ export default function WildlifePage() {
             <h1 className="mt-3 text-balance font-display text-4xl leading-[1.06] text-charcoal sm:text-5xl lg:text-6xl">
               Wildlife Removal in Toronto &amp; the GTA
             </h1>
-            <p className="mt-4 font-display text-xl italic text-pine-600 sm:text-2xl">
+            <p className={cn(frauncesItalic.className, "mt-4 text-xl text-pine-600 sm:text-2xl")}>
               Whatever moved in, we know how to move it out.
             </p>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">
