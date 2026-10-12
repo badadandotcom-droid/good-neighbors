@@ -58,9 +58,9 @@ Desktop and tablet (1280 and 768 px wide), full-page screenshots against the unt
 4. /contact: add the guarantee line under its H1, or leave it? (item 4)
 
 ## Answers (Oct 12, via the ads chat, 9:25 AM Toronto)
-1. Google's tag: yes, load it right after the page shows, only on pages still over 2.5 s. Built as a second batch: `GOOGLE_TAG_LAZY_PATHS` in `lib/config/site.ts` (attic, walls, Peel hub). Only the library moves; the init script is unchanged.
+1. Google's tag: yes, load it right after the page shows, only on pages still over 2.5 s. Built as a second batch: `GOOGLE_TAG_LAZY_PATHS` in `lib/config/site.ts` (attic, walls, Peel hub). Only the library moves; the init script is unchanged. LIVE Oct 12 (9dd7137).
 2. Hub tagline: no answer yet (stays upright).
-3. /contact: yes, add the guarantee line. Built (second batch).
+3. /contact: yes, add the guarantee line. Built (second batch). LIVE Oct 12 (9dd7137).
 4. PageSpeed API key: no answer yet.
 
 Live PageSpeed after go-live (the ads chat, mobile): attic 95 (LCP 2.7 s, TBT 20 ms), raccoons 92 (LCP 2.0 s, TBT 330 ms), Scarborough 99, Peel hub 72 (LCP not captured; 87 that morning). Peel: not reproduced locally (12 runs on the live build scored 94-98; about 1 run in 17 scores about 70 locally with no Google tag, so the live 72 looks like an outlier run; the tagline change measured as an improvement). Worth re-running PageSpeed 2-3 times and taking the middle number.

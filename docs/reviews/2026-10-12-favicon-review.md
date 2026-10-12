@@ -1,6 +1,6 @@
 # Site icon (favicon): review notes for the owner (Oct 12, 2026)
 
-**Status: built on the session branch `ccr-c0dfa50a-3r4c5t`, waiting for the owner's "approved" (with the /contact guarantee line and the Google tag timing). Not live.**
+**DONE: approved by the owner Oct 12, 2026 ("make stuff live now") and live the same day (9dd7137), together with the /contact guarantee line and the Google tag timing.**
 
 Asked for by the ads chat (Oct 12, 12:45 PM): the icon in browser tabs and next to the site in Google results was still the starter template's black triangle.
 
