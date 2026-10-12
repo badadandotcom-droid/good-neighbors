@@ -34,5 +34,5 @@ General credit rules live in the owner's account-wide model-routing skill. These
 - Read this file and only the files the task touches. Don't sweep the whole repo; the business rules above are already summarized here.
 - Routine work fits Sonnet at low or medium effort, or a Haiku subagent for searches. Routine work means copy the owner already approved, CSS, page titles and meta descriptions, sitemap entries, adding a city or area page from an existing one.
 - Higher-risk work: phone links, the contact form, GA4 or Google Ads tracking, structured data, URL changes to Google Ads landing pages, and merges into the live branch. Recommend Sonnet high or Opus, and check against the rules above before showing the owner.
-- New site wording drafted in ChatGPT must still pass the rules above before use: the exact guarantee text, no made-up trust signals, Wasp Problem's banned words, and no prices.
+- Site wording drafted in a Claude chat (outside this repo) must still pass the rules above before use: the exact guarantee text, no made-up trust signals, Wasp Problem's banned words, and no prices.
 - Check work with `npm run lint` and `npm run build`, run in the site's own folder (repo root, or `wasp-problem/`), plus a look at the changed page. Don't ask a premium model to review small changes.
