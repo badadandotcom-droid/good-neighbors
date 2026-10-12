@@ -33,9 +33,8 @@ export const metadata: Metadata = {
     template: `%s | ${BRAND.seoName}`,
   },
   description: BRAND.description,
-  icons: {
-    icon: "/favicon.ico",
-  },
+  // Icons come from the files in app/ (favicon.ico, icon0.svg, icon1.png,
+  // icon2.png, apple-icon.png), which Next turns into <link> tags itself.
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
