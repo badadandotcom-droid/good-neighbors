@@ -1,5 +1,9 @@
 # Handoff: Good Neighbors Wildlife website (Oct 12 2026; last updated by the birds chat after the birds page went live)
 
+Chat name: GNW Website 6
+Next chat name: GNW Website 7
+(Chat names are job name + number, copied exactly; this file was written by GNW Website 5. Put the next two names at the top of this file at every handoff.)
+
 Good Neighbors Wildlife only, never Wasp Problem.
 
 Dates and times in this file are the session clock (UTC) unless marked Toronto. Toronto is four hours behind, so "Oct 12, early morning" here is the evening of Oct 11 in Toronto, which is how the ads chat dates things (its "Oct 11, 9:07 PM" is 01:07 on Oct 12 here).
