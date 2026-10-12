@@ -468,7 +468,7 @@ export const CITIES: City[] = [
     cardLine: "Rosebank and Bay Ridges to Amberlea and Brock Ridge.",
     intro:
       "Pickering is squeezed between Rouge National Urban Park on one side, Duffins Creek on the other and the lake along the bottom, with the wooded lots of Rosebank and the lakefront streets of Bay Ridges right in the middle of it. We get the animal out humanely, seal the entry point and repair the damage.",
-    neighbourhoods: ["Rosebank", "Rouge Park", "Whitevale", "Amberlea", "Dunbarton", "Bay Ridges", "Liverpool", "Brock Ridge"],
+    neighbourhoods: ["Rosebank", "Rouge Park", "Whitevale", "Amberlea", "Dunbarton", "Bay Ridges", "Liverpool", "Brock Ridge", "Claremont"],
     problems: [
       "Few GTA cities have this much green around them. The Rouge valley forms Pickering's western edge, Duffins Creek runs down the east side to the lake, and Frenchman's Bay sits in the middle of the waterfront. Rosebank and Rouge Park back onto the national park, with older homes on wooded lots, while Bay Ridges, built in the 1960s, runs right down to the bay. Raccoons, squirrels and skunks treat these neighbourhoods as part of the park.",
       "Amberlea, Liverpool and Dunbarton are mostly 1970s to 90s subdivisions, and Brock Ridge is newer. By now the trees in the older ones are big enough to reach the roof, and the original wood fascia and soffit has weathered for decades. Whitevale, up on Duffins Creek, is a heritage hamlet of 19th-century homes with all the gaps that come with that age.",
