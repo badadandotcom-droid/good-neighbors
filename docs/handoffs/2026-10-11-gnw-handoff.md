@@ -1,10 +1,10 @@
-# Handoff: Good Neighbors Wildlife website (Oct 12 2026, early morning; last updated by the Peel hub chat, after the ads-sync chat of Oct 11)
+# Handoff: Good Neighbors Wildlife website (Oct 12 2026; last updated by the Peel hub chat after the Peel hub and the trust row went live)
 
 Good Neighbors Wildlife only, never Wasp Problem.
 
-## Branch state (Oct 12, 2026, early morning)
-- Live branch `claude/good-neighbors-v2-visual-redesign` is at 32f4804. Everything in "Live as of Oct 11" below is deployed by Vercel to www.goodneighborswildlife.ca.
-- Session branch `claude/wildlife-trust-row-deploy-mhc0vy` = the live branch + the trust-row change (f73ec04, the one commit of `ccr-220fb330-k6qhkj`) + the Peel hub long-form copy + these docs (see "Waiting for approved"). Not merged to live. The Peel copy needs the trust-row commit (its row is the shared component), so the two go live together, or the trust row first.
+## Branch state (Oct 12, 2026, after go-live)
+- Live branch `claude/good-neighbors-v2-visual-redesign` was fast-forwarded Oct 12 from the Peel hub session branch `claude/wildlife-trust-row-deploy-mhc0vy` to 4a420e3, then this docs commit. Everything in "Live as of Oct 12" and "Live as of Oct 11" below is deployed by Vercel to www.goodneighborswildlife.ca.
+- No session branch is open. The next chat starts a new one from the live branch.
 - Going live = fast-forward the live branch to the session branch (`git push origin <session-branch>:claude/good-neighbors-v2-visual-redesign`), only after the owner says "approved" or "go live". Before the push: `npm ci && npm run build`, then `npx next start -p 3000` and `node scripts/checks/crawl.mjs <outDir>` must end with "Problems: none"; `node scripts/checks/compare.mjs <before> <after>` must list only the pages the change meant to touch.
 - Start every new session branch from the live branch, not from the repository's default branch (which carries Wasp Problem and older site code).
 
@@ -21,21 +21,26 @@ Good Neighbors Wildlife only, never Wasp Problem.
 - Build first, then show the rendered pages and the wording together (not wording first).
 - Toronto hub: optional long-form fields on the shared hub template (`Market.hubSections`, `Market.hubFaqs`); the other three hubs render unchanged until they get copy.
 - East York and downtown Toronto have no owner neighbourhood list, so they stay general. Never invent a neighbourhood.
-- Trust row (the guarantee, insurance and 24/7 lines under the hero buttons) on every ad landing page: approved Oct 11, 6:35 PM. Built; see below.
+- Trust row (the guarantee, insurance and 24/7 lines under the hero buttons) on every ad landing page: approved Oct 11, 6:35 PM. Live Oct 12.
+- Peel hub long-form copy: approved Oct 12 without striking any of the 12 judgment calls in docs/reviews/2026-10-12-peel-hub-review.md. Live Oct 12.
 - Bird ads: bid about half the squirrel bid (ads side: Peel birds $4.50, Toronto birds $6).
 - Birds page long-form: the owner's rule is to build it if GTA bird searches run over 50 a month in Oct–Dec. The website chat's judgment: build it anyway (pigeons are year-round and /wildlife/birds is already an ad landing page). Keyword Planner numbers are coming from the ads chat; the owner decides.
 - Region hubs (York, Durham, Peel): long-form copy later, all together, except Peel, which the ads chat needs first (below).
 
-## Waiting for "approved" (built on the session branch, not live)
+## Waiting for "approved"
+Nothing (Oct 12). The trust row and the Peel hub copy are live; see "Live as of Oct 12".
+
+## Live as of Oct 12
+Went live Oct 12, early morning (4a420e3, docs after): the trust row on the five ad landing pages and the Peel hub long-form copy, both approved by the owner without changes. Details:
+
 Trust row on the ad landing pages that lacked it: /wildlife/something-in-the-attic and /wildlife/something-in-the-walls (`trustRow: true` in lib/data/situations.ts), /wildlife/birds and /wildlife/bats (`trustRow: true` in lib/data/wildlife.ts, which replaced the old `showGuaranteeLine` flag) and /wildlife/damage-repair. The three lines now come from one shared component, components/shared/TrustRow.tsx, also used by the homepage, the Toronto hub, the city pages, raccoons and squirrels (those pages render byte-identical, per the compare check). On birds, bats and damage repair the guarantee line moved from above the buttons into the row under them. No new wording; URLs, titles, H1s, phone links, form and tracking unchanged. Skunks keeps its old layout (it was never flagged for the guarantee line). Crawl after the change: 34 pages, all 200, Problems: none.
 
-Peel hub long-form copy (/service-areas/peel-region), built Oct 12 on this branch, requested by the ads chat Oct 11 because three Peel ad groups ("near me" and no-city searches from people in Peel) land on the hub: `hubSections` (four sections: "Why Peel has so much wildlife", "Peel, part by part", "Which animal, and where", "How a visit works in Peel") and six `hubFaqs` on the Peel entry in lib/data/markets.ts, the same way as Toronto. About 1,160 new words (the page went from 485 to 1,668 main words; Toronto's hub is 1,546), so a little over the 1,000 asked for; the easy cuts if the owner wants it shorter are the "Does it matter whether the house is new or old?" FAQ and the "If all you have is a noise" paragraph. Peel facts only, the owner's neighbourhood lists only, Bolton named but never linked (no page), no new claims about the business, the word "guarantee" nowhere in the new copy (the trust row and the guarantee block carry it in the exact wording). URL, title, H1, meta description, phone links, form and tracking unchanged. The trust row appears on the hub with the copy. Checks: lint and typecheck clean, build OK, crawl 34 pages all 200, Problems: none, FAQ schema matches the 13 rendered questions, compare against the branch head before the change: 1 page changed (the Peel hub only), no new sentence shared with any other page. Screenshots (desktop and phone), the rendered wording and the review notes (docs/reviews/2026-10-12-peel-hub-review.md) went to the owner.
+Peel hub long-form copy (/service-areas/peel-region), built and approved Oct 12, requested by the ads chat Oct 11 because three Peel ad groups ("near me" and no-city searches from people in Peel) land on the hub: `hubSections` (four sections: "Why Peel has so much wildlife", "Peel, part by part", "Which animal, and where", "How a visit works in Peel") and six `hubFaqs` on the Peel entry in lib/data/markets.ts, the same way as Toronto. About 1,160 new words (the page went from 485 to 1,668 main words; Toronto's hub is 1,546), so a little over the 1,000 asked for; the easy cuts if the owner wants it shorter are the "Does it matter whether the house is new or old?" FAQ and the "If all you have is a noise" paragraph. Peel facts only, the owner's neighbourhood lists only, Bolton named but never linked (no page), no new claims about the business, the word "guarantee" nowhere in the new copy (the trust row and the guarantee block carry it in the exact wording). URL, title, H1, meta description, phone links, form and tracking unchanged. The trust row appears on the hub with the copy. Checks: lint and typecheck clean, build OK, crawl 34 pages all 200, Problems: none, FAQ schema matches the 13 rendered questions, compare against the branch head before the change: 1 page changed (the Peel hub only), no new sentence shared with any other page. Screenshots (desktop and phone), the rendered wording and the review notes (docs/reviews/2026-10-12-peel-hub-review.md) went to the owner.
 
 ## Next (owner's call; in this order)
-1. Peel hub long-form copy: built Oct 12, waiting for "approved" (above). Once it is live, tell the ads chat, which is holding the Peel ads for it.
-2. Birds long-form (/wildlife/birds), the way raccoons and squirrels were done: an entry in lib/data/species-pages.ts (SituationPage template), about 1,500 words, ten FAQs; pigeons year-round, starlings and sparrows in vents in spring and early summer, "we check for eggs and young first", bats and birds protected where they are, no relocation promises, and how we work described only as the live site already does. URL, title and H1 unchanged. Gate: the owner decision above.
-3. York and Durham hubs long-form, same template (the Durham ads land on the city pages; nothing points at the Durham hub).
-4. "Do you relocate the raccoon?" FAQ: needs the owner's answer first.
+1. Birds long-form (/wildlife/birds), the way raccoons and squirrels were done: an entry in lib/data/species-pages.ts (SituationPage template), about 1,500 words, ten FAQs; pigeons year-round, starlings and sparrows in vents in spring and early summer, "we check for eggs and young first", bats and birds protected where they are, no relocation promises, and how we work described only as the live site already does. URL, title and H1 unchanged. Gate: the owner decision above.
+2. York and Durham hubs long-form, same template (the Durham ads land on the city pages; nothing points at the Durham hub).
+3. "Do you relocate the raccoon?" FAQ: needs the owner's answer first.
 
 ## Live as of Oct 11
 Went live Oct 11, late evening (492337a, docs to 32f4804): the Privacy Policy correction (photo and analytics statements); the long-form /wildlife/raccoons (1,785 words), /wildlife/squirrels (1,651) and /service-areas/toronto (1,546); the check scripts; the sync and relay rules in CLAUDE.md. The owner approved without striking any of the 11 judgment calls in the review document, so they are live as written. Crawl check before the push: 34 pages, all 200, no duplicates, no problems.
@@ -47,7 +52,7 @@ Copy lives in: lib/data/species-pages.ts (raccoons, squirrels), lib/data/situati
 ## Ads side (what the website chat knows, Oct 11)
 - Toronto campaign built and paused. Landing pages: the list in CLAUDE.md. Sitelinks "Damage Repair" → /wildlife/damage-repair, "Contact & Send Photos" → /contact.
 - Durham (Part 5) ads land on /service-areas/pickering, /ajax and /whitby; no Oshawa ads at launch; nothing points at /service-areas/durham-region.
-- Peel ads land on /service-areas/brampton, /mississauga, /caledon and /peel-region (hub copy built Oct 12, waiting for approved; the ads chat is told when it is live), plus the shared pages.
+- Peel ads land on /service-areas/brampton, /mississauga, /caledon and /peel-region (hub copy live Oct 12; the ads chat was told the same morning, so the Peel ads can go), plus the shared pages.
 - Birds: Keyword Planner numbers (Toronto geo, by month) are being pulled by the ads chat; they arrive in its next note.
 
 ## Check scripts (in the repo)
@@ -61,5 +66,6 @@ Copy lives in: lib/data/species-pages.ts (raccoons, squirrels), lib/data/situati
 Gmail filters; invoices with the guarantee terms (before the first job); replace photos showing "Good Neighbors Wildlife Inc." on shirts/van; the Google Ads changes; update the project instructions' sync line (the shared Claude Doc is retired).
 
 ## Relay notes (newest first; the same text went to the owner for the ads chat)
+- Oct 12, after go-live, Peel hub chat: the Peel hub long-form copy is live on /service-areas/peel-region with the trust row (URL, title and H1 unchanged), so the Peel ads can go; the trust row is live on /wildlife/something-in-the-attic, /something-in-the-walls, /birds, /bats and /damage-repair with no other change to those pages. Needed back: the Keyword Planner numbers for the bird terms. (This note replaced the "built, waiting" note below before it was sent.)
 - Oct 12, Peel hub chat: Peel hub long-form copy built on /service-areas/peel-region with the trust row (URL, title and H1 unchanged), waiting for the owner's "approved"; a note follows when it is live. The trust row on the five ad landing pages is still waiting for "approved" too. Needed back: the Keyword Planner numbers for the bird terms (still pending).
 - Oct 11, late evening, ads-sync chat (part 3): trust row built on the five ad landing pages, waiting for approved; Peel hub copy next, before the Peel ads go live; Durham unchanged (Pickering, Ajax and Whitby live with the trust row; nothing for Oshawa or the Durham hub); sync done the Wasp Problem way (CLAUDE.md, shared Claude Doc retired); waiting for the bird keyword numbers.

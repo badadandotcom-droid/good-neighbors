@@ -1,6 +1,8 @@
 # Peel hub long-form copy: review notes for the owner (Oct 12, 2026)
 
-Page: /service-areas/peel-region. URL, title, H1 and meta description unchanged. Built on the session branch `claude/wildlife-trust-row-deploy-mhc0vy`, not live. Approve as is, or name the numbers below to strike or change.
+**DONE: approved by the owner Oct 12, 2026, without strikes. Live the same morning.**
+
+Page: /service-areas/peel-region. URL, title, H1 and meta description unchanged. Built on the session branch `claude/wildlife-trust-row-deploy-mhc0vy`; live since Oct 12. Approve as is, or name the numbers below to strike or change.
 
 ## What changed on the page
 - Four new sections between the city cards and the animal grid: "Why Peel has so much wildlife", "Peel, part by part", "Which animal, and where", "How a visit works in Peel".
