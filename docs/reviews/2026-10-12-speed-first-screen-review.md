@@ -1,6 +1,6 @@
 # Speed and phone first screen: review notes for the owner (Oct 12, 2026)
 
-**Status: built on the session branch `ccr-c0dfa50a-3r4c5t`, waiting for the owner's "approved". Not live.**
+**DONE: approved by the owner Oct 12, 2026 and live the same day (337767a). The four questions at the end are still open for the owner.**
 
 From the ads chat's note of Oct 12, 7:50 AM (Toronto): jobs 1 (speed) and 2 (first phone screen). Job 3 (place names) and the York hub long-form copy are writing work and are not in this batch. No wording on any page changed: the visible text of all 34 pages is identical before and after (checked by comparing the text of every crawled page).
 
