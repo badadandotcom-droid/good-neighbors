@@ -1,6 +1,8 @@
 # Birds page long-form copy: review notes for the owner (Oct 12, 2026)
 
-Page: /wildlife/birds. URL, title and H1 unchanged. Built on the session branch `ccr-2cbcfa75-34ro3e`, started from the live branch at ef3cbd9. Approve as is, or name the numbers below to strike or change.
+**DONE: approved by the owner Oct 12, 2026 (late evening of Oct 11 in Toronto), without strikes, together with the far-towns names (Claremont on Pickering; Nobleton and Schomberg on the York hub; Uxbridge, Port Perry and Courtice on the Durham hub). Live the same evening. The questions at the end stay open for the owner.**
+
+Page: /wildlife/birds. URL, title and H1 unchanged. Built on the session branch `ccr-2cbcfa75-34ro3e`, started from the live branch at ef3cbd9; live since Oct 12.
 
 ## What changed on the page
 - The page moved from the short species template to the long-form template the raccoon and squirrel pages use. The hero photo and the hero paragraph are kept word for word; a new one-line subhead sits above the paragraph; the trust row stays under the buttons.
