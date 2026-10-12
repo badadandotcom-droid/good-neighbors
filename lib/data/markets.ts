@@ -167,6 +167,74 @@ export const MARKETS: Market[] = [
       "Peel Region runs from the Mississauga lakefront, through Brampton's big subdivisions, to the estates, barns and conservation land of Caledon, and the wildlife changes along the way: raccoons and squirrels in the treed older neighbourhoods, more skunks and bats as the lots get larger. Wherever you are in Peel, we get the animal out humanely, seal the entry point and repair what it damaged.",
     seoDescription:
       "Humane wildlife removal in Mississauga, Brampton and Caledon. We seal the way in and repair the damage. Lifetime guarantee on every entry point we seal.",
+    // Long-form hub copy (Oct 2026), done the same way as Toronto: Peel facts
+    // only, the owner's neighbourhood lists only, nothing about the business
+    // that the live site doesn't already say. Bolton has no page of its own,
+    // so it is named inside Caledon's paragraph, never linked.
+    hubSections: [
+      {
+        heading: "Why Peel has so much wildlife",
+        paragraphs: [
+          "Peel runs from the lake at Mississauga up to the Niagara Escarpment and the Oak Ridges Moraine in Caledon, and its rivers run with it. The Credit comes down off the Escarpment at Belfountain and Inglewood, runs through Meadowvale and Streetsville and meets the lake at Port Credit; Etobicoke Creek cuts through the middle of Brampton and along Mississauga's eastern edge; the Humber comes through Bolton on its way to Toronto. Those valleys, and the creeks and conservation lands between them, are home to raccoons, squirrels and skunks, and the older houses along them get the occasional bat.",
+          "The houses do the rest. In south Mississauga and in Peel Village the oaks and maples have had half a century or more to reach over the roof, with wood soffits and fascia underneath them. Much of Brampton and the north and west of Mississauga are newer, with vinyl or aluminum soffit, plastic roof vents and a garage roof that meets the house at a climbable angle, and twenty summers of sun are enough to make a vent cap brittle and a soffit panel loose. In Caledon, the barns, sheds and woodlots mean the animals were there first.",
+        ],
+      },
+      {
+        heading: "Peel, part by part",
+        paragraphs: [
+          "[Brampton](/service-areas/brampton) is mostly newer homes on long, low rooflines: Springdale, Sandringham-Wellington, Fletcher's Meadow and Mount Pleasant from the 1990s on, Bramalea and Heart Lake a generation older, the estate lots of Castlemore and the Vales of Castlemore in the northeast, and the mature trees of Peel Village, downtown and the streets around Professor's Lake. Etobicoke Creek, Heart Lake Conservation Area and the valleys between the subdivisions keep every part of the city supplied with wildlife.",
+          "[Mississauga](/service-areas/mississauga) is two cities. Along the lake and the Credit, Lorne Park, Mineola and Clarkson are big treed lots and older homes, from 1950s bungalows to large rebuilds, and the heritage streets of Port Credit and Streetsville add uncapped chimneys and additions that meet the original roof. Cooksville, Applewood and Lakeview are postwar streets with the trees now as tall as the houses; Erin Mills, Meadowvale, Churchill Meadows and Sheridan are 1970s to 2000s subdivisions with the usual roof vents and soffit panels.",
+          "[Caledon](/service-areas/caledon) is more than half of Peel's land and mostly countryside: the Escarpment villages of Belfountain, Inglewood, Cheltenham and Alton, the moraine country around Palgrave and Caledon East, Caledon Village and Mono Mills, and the estates and farms between them. Bolton, on the Humber in the southeast corner, is the town: an old village core ringed by three decades of subdivisions. Out here skunks and bats are a bigger part of the picture, and a raccoon has a barn or a shed to try before it tries the house. We cover all of it, Bolton and the rural roads included.",
+        ],
+      },
+      {
+        heading: "Which animal, and where",
+        paragraphs: [
+          "Raccoons are in every part of Peel, from the Lakeview waterfront to the farms above Caledon East. You hear them after dark: slow, heavy steps across the ceiling, a thump, and in spring a high chirping from the kits. They get in through a roof vent they have pulled apart or a soffit lifted at the eaves; on a newer Brampton two-storey, the favourite spot is where the garage roof meets the second storey. See [raccoon removal](/wildlife/raccoons).",
+          "Squirrels are the daytime version: quick scampering overhead at first light and again in the late afternoon, and the sound of chewing. The wood trim of Lorne Park, Peel Village and the old villages is the easiest for them, but a loose vinyl panel in Springdale or Churchill Meadows works just as well. See [squirrel removal](/wildlife/squirrels).",
+          "Skunks dig in under decks, sheds, porches and front steps, and the big lots of Castlemore and Lorne Park, and most of Caledon, give them the most room to do it ([skunk removal](/wildlife/skunks)). Starlings and sparrows nest in open dryer and bathroom vents and in the uncapped chimneys of older homes, mostly in spring ([bird removal](/wildlife/birds)). Bats roost behind the fascia and in the attics of the older houses near the Credit and the lake, and in Caledon's barns; they are protected in Ontario, so the timing and the method are explained before any work begins ([bat removal](/wildlife/bats)).",
+          "If all you have is a noise, start with [something in the attic](/wildlife/something-in-the-attic) or [something in the walls](/wildlife/something-in-the-walls). The sound and the time of day usually say which animal it is, and there is no need to go up and look yourself.",
+        ],
+      },
+      {
+        heading: "How a visit works in Peel",
+        paragraphs: [
+          "Usually, we can solve the wildlife problem entirely from outside without needing to enter your home. We start with the whole roofline, not just the corner the noise came from, because the opening is often somewhere else, and on a big Castlemore or Lorne Park roof there may be more than one. We confirm which animal it is, check for young before anything is removed, and get the family out together, humanely.",
+          "Then we seal the entry point and repair what the animal damaged: the roof vent, soffit or fascia, torn shingles and roof boards, the chimney cap, the eavestrough or siding, and attic insulation that has been flattened or soiled, matched to your home's existing materials and colours, on a Mineola rebuild and a Bolton two-storey alike. The full list is on [damage repair](/wildlife/damage-repair).",
+        ],
+      },
+    ],
+    hubFaqs: [
+      {
+        question: "Which parts of Peel Region do you cover?",
+        answer:
+          "All of Peel: Mississauga, Brampton and Caledon, including Bolton and the rural roads between the villages. Brampton, Mississauga and Caledon each have a page of their own with the neighbourhoods listed.",
+      },
+      {
+        question: "Do you cover Lorne Park, Castlemore and Bolton?",
+        answer:
+          "Yes. Lorne Park, Mineola, Port Credit and Clarkson in south Mississauga; Castlemore, the Vales of Castlemore and Peel Village in Brampton; Bolton, Caledon East and the Escarpment villages in Caledon; and everywhere in between.",
+      },
+      {
+        question: "Do you come out to rural Caledon?",
+        answer:
+          "Yes. Farms, estates and the villages are all covered, and same-day service applies to rural addresses on the same terms as the towns: requests before 4 PM, subject to technician availability.",
+      },
+      {
+        question: "What's the most common wildlife problem in a Peel home?",
+        answer:
+          "Something in the attic, and it is nearly always a raccoon or a squirrel: raccoons after dark, squirrels in daylight, both in through a gap at the roofline. Skunks under a deck or a shed come next, and there are more of them in Caledon and on the larger lots.",
+      },
+      {
+        question: "Does it matter whether the house is new or old?",
+        answer:
+          "Only in where the animal gets in. Older homes have wood trim, big trees and uncapped chimneys; newer ones have plastic roof vents, vinyl soffit and a garage roof that makes an easy climb. The visit is the same on both: find every opening, get the animal out, seal and repair.",
+      },
+      {
+        question: "How quickly can you get to a Peel home?",
+        answer: `${DEFAULT_SAME_DAY_SERVICE.qualificationMessage} The phone is answered 24 hours a day, 7 days a week, and the timing is confirmed with you before anyone heads out.`,
+      },
+    ],
   },
   {
     slug: "oakville-burlington",
