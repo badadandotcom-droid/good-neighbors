@@ -1,5 +1,7 @@
 # Handoff: far and rich towns job, continuation (Oct 11, 2026, 9:50 PM)
 
+**Status: DONE (Oct 11, 2026, 11:15 PM).** All next steps below were completed in the continuation chat. Results: claude/far-towns-plan-2026-10-11.md (now FINAL), including the note for the ads chat (section "For the ads chat"). Nothing below needs doing again.
+
 Start here in a NEW chat. This job is recommendation only: make no Google Ads changes, no website changes, and no decisions for Duane.
 
 **Model:** Sonnet (medium) is fine for the lookups in steps 1–2. Fable is only worth it if the results change the verdicts a lot (Duane's rule: Fable for writing and judgment-heavy work).
