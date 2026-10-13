@@ -128,11 +128,85 @@ export const MARKETS: Market[] = [
     country: "CA",
     region: "Ontario",
     metro: "Greater Toronto Area",
-    serviceArea: ["Markham", "Richmond Hill", "Vaughan", "Thornhill", "Aurora", "Newmarket"],
+    serviceArea: ["Markham", "Richmond Hill", "Vaughan", "Thornhill", "Aurora", "Newmarket", "Stouffville", "King Township"],
     heroBlurb:
       "York Region climbs from the older streets of Thornhill and Markham, through the big newer subdivisions of Vaughan and Richmond Hill, up onto the Oak Ridges Moraine at Aurora, Newmarket, Stouffville and King Township. More trees, bigger lots and more open country mean more raccoons and squirrels at the roofline and more skunks under the deck. Across York, we get the animal out humanely, seal the entry point and repair what it damaged.",
     seoDescription:
       "Humane wildlife removal in Markham, Vaughan and across York Region. We seal the way in and repair the damage. Lifetime guarantee on every entry point we seal.",
+    // Long-form hub copy (Oct 2026), done the same way as Toronto and Peel:
+    // York facts only, neighbourhood names from the York city pages (the
+    // owner's lists), King Township rather than its villages, plain
+    // Thornhill, nothing about the business that the live site doesn't
+    // already say. Thornhill and King Township have no page of their own,
+    // so they are named, never linked.
+    hubSections: [
+      {
+        heading: "Why York Region has so much wildlife",
+        paragraphs: [
+          "The Oak Ridges Moraine runs across the middle of York Region, a broad band of hills, woodlots and kettle lakes, and the rivers that run through York's cities have their headwaters there. The Humber, the Don and the Rouge run south from it through Vaughan, Richmond Hill and Markham toward Lake Ontario; the Holland River and its branches run the other way, through Newmarket and the Holland Marsh to Lake Simcoe. Every one of those valleys is a travel route for raccoons, skunks and squirrels, and the conservation areas, forest tracts and golf courses between them give the animals somewhere to live within sight of the houses.",
+          "The houses do the rest. Thornhill, Richmond Hill and Aurora grew up along Yonge Street, and Unionville, Markham Village, Woodbridge, Kleinburg and Newmarket are old towns and villages too, with century homes, wood trim, deep eaves and chimneys that were never capped. Around those old cores, most of York is new: the region had about 170,000 people when it was formed in 1971 and has well over a million today, and many of its subdivisions went up on the edge of farmland and woodlots where the animals already lived. A large new home, with a long roofline, a row of plastic roof vents and aluminum or vinyl soffit, gives a raccoon or a squirrel more places to try, not fewer.",
+        ],
+      },
+      {
+        heading: "York Region, part by part",
+        paragraphs: [
+          "[Markham](/service-areas/markham) has some of York's oldest streets and some of its biggest new homes. Unionville's Main Street and Markham Village go back well over a century, with mature trees and old brick chimneys; Cachet and Angus Glen are large 1990s and 2000s homes on big lots, many backing onto a golf course or a woodlot; Berczy, Wismer, Cornell, Box Grove and Milliken are two-storey subdivisions with aluminum soffit and attached garages. The Rouge and its branches wind through the middle of the city, and their valleys keep every part of it supplied with wildlife.",
+          "[Vaughan](/service-areas/vaughan) follows the Humber. Kleinburg's old village and estate lots sit on the river, Boyd Conservation Area and the treed lots of Islington Woods line it further down, and Woodbridge wraps newer streets around its old village core. Maple, Vellore Village, Patterson and Sonoma Heights are the big subdivisions of the 1990s onward, two-storeys with several roof vents each and a garage roof that makes an easy climb, and Concord is a little of everything.",
+          "[Richmond Hill](/service-areas/richmond-hill) climbs from its south end onto the moraine. Bayview Hill is large homes on large lots, the streets around Mill Pond and in Richvale are older, from the 1950s on, under trees that have had decades to grow, and Doncrest and Westbrook are newer subdivisions. North of them, Oak Ridges, Jefferson and the homes around Lake Wilcox sit among the moraine's woods and kettle lakes, where the trees come right up to the back fences.",
+          "Further up Yonge Street, [Aurora](/service-areas/aurora) and [Newmarket](/service-areas/newmarket) each have an old core and newer edges. Aurora Estates and Hills of St Andrew are big properties against the moraine's woodlots, Aurora Village along Yonge is Victorian and Edwardian brick under century-old trees, and Aurora Highlands, Bayview Northeast and Bayview Wellington are newer. Newmarket's historic Main Street and Fairy Lake sit on the Holland River, with the larger homes of Stonehaven, Summerhill and Woodland Hill and the established streets of Glenway, Armitage, Huron Heights and Bristol-London around the old town.",
+          "[Stouffville](/service-areas/stouffville), the main town in Whitchurch-Stouffville, is where the subdivisions give way to countryside. Ballantrae's homes sit on a golf course ringed by woods, cottages and newer houses share the shore of Musselman's Lake, the town centre has a village core with new streets around it, and the forest tracts and rural lots around Vandorf and Gormley are countryside outright.",
+          "Thornhill and King Township have no page of their own, and both are covered. Thornhill goes back to the 1790s as a village on Yonge Street, and its heritage core is surrounded by quiet streets of 1950s to 80s homes under mature trees. King Township is the countryside on York's west side: farms, estates, woodlots and small villages spread across the moraine, with the Holland Marsh in the north. Out there a raccoon or a skunk may be living in a barn, a garage or under a porch long before it tries the house, so the outbuildings get a look too.",
+        ],
+      },
+      {
+        heading: "Which animal, and where",
+        paragraphs: [
+          "Raccoons live in every part of York, from the old streets of Thornhill to the farms of King Township. Most calls start with a sound after dark: something heavy crossing the ceiling, a thump, and in spring the chittering of kits. On a large newer home the way in is usually a roof vent torn open or a soffit lifted where two rooflines meet; on an old village house it may be an uncapped chimney. See [raccoon removal](/wildlife/raccoons).",
+          "Squirrels are the daytime noise, busiest at first light and again late in the afternoon. The old trees of Unionville, Thornhill, Aurora Village and Newmarket's Main Street give them a bridge to the roof, and in the subdivisions they chew in at a soffit corner, a fascia edge or the rim of a roof vent; from early spring to late summer there may be young in the nest. See [squirrel removal](/wildlife/squirrels).",
+          "Skunks den under decks, porches, sheds and front steps, and the moraine, the river valleys and the big lots from Kleinburg to Ballantrae keep plenty of them close ([skunk removal](/wildlife/skunks)). Starlings and sparrows build nests in uncovered dryer and bathroom vents and in old chimneys, mostly in spring; we check for eggs and young before a vent is screened ([bird removal](/wildlife/birds)).",
+          "Bats turn up more often on the moraine than in the city, because the woods and lakes feed them; they roost behind loose fascia and in the attics of older homes and cottages, from Richmond Hill and Aurora to Stouffville and King Township. They are protected in Ontario, so we look at the timing first and explain the method before any work begins ([bat removal](/wildlife/bats)).",
+          "Only heard it, never seen it? The [something in the attic](/wildlife/something-in-the-attic) and [something in the walls](/wildlife/something-in-the-walls) pages go by the sound and the time of day, and nobody needs to go up into the attic to look.",
+        ],
+      },
+      {
+        heading: "How a visit works in York Region",
+        paragraphs: [
+          "Usually, we can solve the wildlife problem entirely from outside without needing to enter your home. On a York Region house that starts with the whole roofline, every slope, vent and corner of it, because the opening is often on the far side from the noise, and a large roof can have more than one. We confirm which animal it is, check for young before anything is removed, and see mother and young out together, humanely. The price is explained before any work begins.",
+          "Then we seal the opening the animal used and repair the damage it left: a torn roof vent, a chewed soffit or fascia board, shingles and roof boards, a chimney cap or vent cover, an eavestrough or a piece of siding, and attic insulation that has been soiled or flattened. Repairs are matched to your home's existing materials and colours, on a heritage house in Unionville as much as a new build in Vellore Village, and where a skunk has dug in, the ground along the deck or shed is sealed with wire mesh set into the soil. [Damage repair](/wildlife/damage-repair) has the complete list.",
+        ],
+      },
+    ],
+    hubFaqs: [
+      {
+        question: "Which parts of York Region do you cover?",
+        answer:
+          "Markham, Vaughan (Woodbridge included), Richmond Hill, Newmarket, Aurora and Stouffville each have a page of their own. Thornhill and King Township are covered too, rural roads included, along with the rest of York Region.",
+      },
+      {
+        question: "Do you cover Unionville, Kleinburg and Bayview Hill?",
+        answer:
+          "Yes. Unionville, Cachet and Angus Glen in Markham; Kleinburg, Woodbridge and Islington Woods in Vaughan; Bayview Hill, Mill Pond and Oak Ridges in Richmond Hill; Aurora Estates and Hills of St Andrew in Aurora; Stonehaven in Newmarket; Ballantrae and Musselman's Lake in Stouffville; and everywhere in between.",
+      },
+      {
+        question: "Do you come out to rural properties in King Township and Stouffville?",
+        answer:
+          "Yes. Farms, estates, woodlots and lake properties are all covered. Same-day service works the same way out there as in town: requests received before 4 PM, subject to technician availability.",
+      },
+      {
+        question: "Our house is only a few years old. How did an animal get in?",
+        answer:
+          "New homes have their own weak points: plastic roof vents a raccoon can tear open, aluminum or vinyl soffit that lifts at the corners, and the places where a garage roof or a second roofline meets the house. Many York subdivisions were also built beside woodlots and ravines, so the animals were living next door before the house went up. Age doesn't change the job: we find where it got in, get it out humanely, then seal and repair that spot.",
+      },
+      {
+        question: "We back onto a ravine or a woodlot. Is that why the animals keep coming?",
+        answer:
+          "Very likely. Raccoons, skunks and squirrels live in the valleys and woodlots, and the houses along the edge are the nearest roofs, decks and sheds. It doesn't change the visit, and there is nothing you need to do about the trees or the ravine: the work is on the opening the animal used and the damage it caused.",
+      },
+      {
+        question: "How quickly can you get to a York Region home?",
+        answer: `${DEFAULT_SAME_DAY_SERVICE.qualificationMessage} Calls are answered 24 hours a day, 7 days a week; tell us where you are, and we confirm the timing with you before anyone sets out.`,
+      },
+    ],
   },
   {
     slug: "durham-region",
