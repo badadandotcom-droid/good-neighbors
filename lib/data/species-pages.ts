@@ -47,7 +47,7 @@ export const SPECIES_PAGES: SituationContent[] = [
       {
         heading: "Raccoons in Toronto",
         paragraphs: [
-          "Toronto has one of the densest urban raccoon populations anywhere, and the reasons are built into the city. The Don, the Humber and the Rouge, and the smaller ravines that feed them, run past the back fences of York Mills and Hoggs Hollow, the Kingsway and Humber Valley Village, Guildwood and the Scarborough Bluffs. Mature oaks and maples reach over the roofs of Don Mills, Sunnylea and Cliffside. And the housing, from the century homes of East York and downtown to the postwar bungalows of Willowdale and Rexdale, has wood soffits, old chimneys and roof vents that have been through sixty or more winters.",
+          "Toronto has one of the densest urban raccoon populations anywhere, and the reasons are built into the city. The Don, the Humber and the Rouge, and the smaller ravines that feed them, run past the back fences of North York, Etobicoke and Scarborough, right out to the Bluffs. Mature oaks and maples reach over the roofs of every postwar street. And the housing, from the century homes of East York and downtown to the bungalows of North York and Etobicoke, has wood soffits, old chimneys and roof vents that have been through sixty or more winters.",
           "A raccoon doesn't need a ravine, though. It needs somewhere dark, dry and quiet, and an attic is exactly that. The raccoon that visits your green bin at night may well be denning a few doors down, and from late winter to early summer a female will be looking for a place to have her kits. Our [Toronto](/service-areas/toronto) page covers the city part by part; [Scarborough](/service-areas/scarborough), [North York](/service-areas/north-york) and [Etobicoke](/service-areas/etobicoke) each have a page of their own.",
         ],
       },
@@ -150,8 +150,8 @@ export const SPECIES_PAGES: SituationContent[] = [
       {
         heading: "Squirrels in Toronto",
         paragraphs: [
-          "Toronto's squirrels are eastern grey squirrels, and the black ones you see everywhere are the same species in a darker coat. They live in every mature tree in the city, which means every established neighbourhood: the oaks and maples of the Kingsway and Sunnylea along the Humber, York Mills, Hoggs Hollow and Don Mills around the Don, the sixty-year-old trees over the bungalows of Cliffside, Bendale and Wexford in Scarborough, and the street trees of East York and downtown that are as old as the houses.",
-          "A branch near the eaves is a bridge, and once a squirrel is on the roof it finds the soft spots: wood fascia that has had decades of weather, a soffit corner that was never quite closed, a plastic roof vent. The pages for [Scarborough](/service-areas/scarborough), [North York](/service-areas/north-york) and [Etobicoke](/service-areas/etobicoke) go neighbourhood by neighbourhood; the [Toronto](/service-areas/toronto) page covers the whole city.",
+          "Toronto's squirrels are eastern grey squirrels, and the black ones you see everywhere are the same species in a darker coat. They live in every mature tree in the city, which means every established neighbourhood: the oaks and maples along the Humber in Etobicoke and around the Don in North York, the sixty-year-old trees over the postwar bungalows of Scarborough, and the street trees of East York and downtown that are as old as the houses.",
+          "A branch near the eaves is a bridge, and once a squirrel is on the roof it finds the soft spots: wood fascia that has had decades of weather, a soffit corner that was never quite closed, a plastic roof vent. The pages for [Scarborough](/service-areas/scarborough), [North York](/service-areas/north-york) and [Etobicoke](/service-areas/etobicoke) go part by part; the [Toronto](/service-areas/toronto) page covers the whole city.",
         ],
       },
       {

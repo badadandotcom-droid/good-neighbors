@@ -136,10 +136,15 @@ export interface City {
   metaDescription: string;
   /** One line for the hub card and the service-areas index, e.g. "Castlemore to Mount Pleasant." */
   cardLine: string;
-  /** Hero paragraph naming the city and two or three of its neighbourhoods. */
+  /** Hero paragraph naming the city and describing its parts without naming neighbourhoods; says the city is covered in full. */
   intro: string;
-  /** Real neighbourhoods, the higher-end areas first. Plain text, never links. */
-  neighbourhoods: string[];
+  /**
+   * Retired (owner, Oct 12 2026: no neighbourhoods or small villages anywhere
+   * on the site). A city still carrying a list shows the old "Neighbourhoods
+   * we cover" section until its copy is rewritten; the field goes once every
+   * city is done.
+   */
+  neighbourhoods?: string[];
   /** Two or three paragraphs on the local housing and landscape; one links to /wildlife/something-in-the-attic. */
   problems: string[];
   /** "Raccoon removal in {name}", one or two paragraphs, linking to /wildlife/raccoons. */
