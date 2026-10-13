@@ -1,6 +1,6 @@
 # Place names: audit of the live site against the owner's rule (Oct 12, 2026)
 
-**Status (GNW Website 7, Oct 13):** the owner answered all five decisions on Oct 12, 6:15 PM, as proposed, with one change: "downtown Toronto" stays (the live ad text and a live keyword use it). The answers are recorded in CLAUDE.md under "Place names". Batch 1 (the ten ad-traffic pages: Toronto hub and its three cities, Peel hub and its three cities, raccoons, squirrels) is built and reviewed in `docs/reviews/2026-10-13-place-names-batch-1-review.md`, waiting for the owner's "approved". Batch 2 (York and Durham cities and hubs, the /service-areas index) follows.
+**SUPERSEDED (owner, Oct 13, in GNW Website 7):** the "no neighbourhoods anywhere" rule this audit is built on misread the owner. He meant no neighbourhood PAGES; a city page may name its biggest real neighbourhoods. Batch 1 (the ten ad-traffic pages rewritten without names) was built, shown to the owner and reverted the same day, unmerged. What survives of the five decisions: York on the Toronto hub, "downtown Toronto" kept, plain "Thornhill", King Township and Scugog on the York and Durham hubs and the /service-areas index. The current rule is in CLAUDE.md under "Place names". The rest of this document is the record of the audit only.
 
 Scope document for the place-names job (GNW Website 7). Made by GNW Website 6 from a crawl of the live build after the second batch went live (ef04aeb). The rule is in CLAUDE.md ("Place names"): name only big areas; no neighbourhoods or small villages anywhere on the site.
 

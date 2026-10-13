@@ -108,23 +108,21 @@ export function CityPage({ city }: { city: City }) {
         </Container>
       </section>
 
-      {city.neighbourhoods && city.neighbourhoods.length > 0 && (
-        <section className="border-b border-stone-300 bg-bone-50 py-14">
-          <Container>
-            <h2 className="flex items-center gap-3 font-display text-xl text-charcoal sm:text-2xl">
-              <Illustration id="compass" className="h-6 w-6 shrink-0 text-pine-600" />
-              Neighbourhoods we cover in {city.name}
-            </h2>
-            <ul className="mt-5 flex flex-wrap gap-2" aria-label={`${city.name} neighbourhoods`}>
-              {city.neighbourhoods.map((area) => (
-                <li key={area} className="rounded-full border border-stone-300 bg-white px-3.5 py-1.5 text-sm text-ink-700">
-                  {area}
-                </li>
-              ))}
-            </ul>
-          </Container>
-        </section>
-      )}
+      <section className="border-b border-stone-300 bg-bone-50 py-14">
+        <Container>
+          <h2 className="flex items-center gap-3 font-display text-xl text-charcoal sm:text-2xl">
+            <Illustration id="compass" className="h-6 w-6 shrink-0 text-pine-600" />
+            Neighbourhoods we cover in {city.name}
+          </h2>
+          <ul className="mt-5 flex flex-wrap gap-2" aria-label={`${city.name} neighbourhoods`}>
+            {city.neighbourhoods.map((area) => (
+              <li key={area} className="rounded-full border border-stone-300 bg-white px-3.5 py-1.5 text-sm text-ink-700">
+                {area}
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
 
       <section className="py-16 sm:py-24">
         <Container className="max-w-3xl">

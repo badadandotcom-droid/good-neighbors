@@ -11,24 +11,15 @@ import type { City, RegionSlug } from "@/lib/types";
  * Writing rules (owner, Oct 2026), also enforced by scripts before a push:
  * - At least 500 words of body copy per city, none of it shared with another
  *   city beyond a single sentence. Vary the structure, not just the names.
- * - Place names (owner, Oct 12 2026): name only big areas. In Toronto:
- *   Scarborough, North York, Etobicoke, East York, York and downtown. Outside
- *   Toronto: cities, towns and townships of 20,000+, plus Thornhill,
- *   Woodbridge, Bolton, Bowmanville, Courtice, King Township, Uxbridge and
- *   Scugog. No neighbourhoods and no small villages. Describe a city by its
- *   parts instead (the lakefront, the streets south of the 401, the newer
- *   subdivisions, housing eras, lot sizes) and say "all of {city}" in the
- *   intro and the first FAQ. Rivers, creeks, lakes, the Moraine, the
- *   Escarpment, the Bluffs, conservation areas, parks, roads and
- *   institutions may be named, but not a landscape name used as a
- *   neighbourhood (Oak Ridges, Lake Wilcox, Mill Pond, Heart Lake, Lakeview,
- *   Taunton).
+ * - One page per city, never a page per neighbourhood (owner, Oct 13 2026).
+ *   A city page names its biggest real neighbourhoods, from the owner's
+ *   lists; never invent one. Plain "Thornhill" (no east/west).
  * - Housing and landscape stay factual and general ("postwar bungalows near
  *   the Rouge ravines"), never claims about our work there, and nothing about
  *   the business that isn't already true on the live site: no prices,
  *   reviews, counts, years, certifications, awards or "block and
  *   lock".
- * - Higher-end areas are described first, without snobbery.
+ * - Higher-end neighbourhoods are named first, without snobbery.
  * - Canadian spelling in the copy; the brand stays "Good Neighbors".
  *
  * CITY_INDEX lists every planned city in build order so hubs and "nearby"
@@ -74,13 +65,27 @@ export const CITIES: City[] = [
     featured: true,
     metaDescription:
       "Raccoon or squirrel in a Brampton attic? Humane removal, same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
-    cardLine: "The estate lots in the northeast and the older streets downtown to the big subdivisions in between.",
+    cardLine: "Castlemore and Peel Village to Springdale and Mount Pleasant.",
     intro:
-      "Brampton gives wildlife a lot to work with: the mature maples over the estate lots in the northeast and the older streets around downtown, street after street of vinyl-soffit homes in the newer subdivisions to the north and west, and creek valleys that run right through the city. If something is scratching overhead anywhere in Brampton, we come out, get the animal out humanely, seal the way in and repair the damage.",
+      "Brampton gives wildlife a lot to work with: the mature maples over the Castlemore estates and Peel Village, street after street of vinyl-soffit homes in Springdale and Fletcher's Meadow, and creek valleys that run right through the city. If something is scratching overhead, we come out, get the animal out humanely, seal the way in and repair the damage.",
+    neighbourhoods: [
+      "Castlemore",
+      "Vales of Castlemore",
+      "Peel Village",
+      "Professor's Lake",
+      "Heart Lake",
+      "Snelgrove",
+      "Springdale",
+      "Sandringham-Wellington",
+      "Bramalea",
+      "Fletcher's Meadow",
+      "Mount Pleasant",
+      "Downtown Brampton",
+    ],
     problems: [
-      "Much of Brampton was built from the 1990s on, and those homes share a few features that matter to wildlife: vinyl or aluminum soffits, plastic roof vents on long, low-pitched roofs, and attached garages whose rooflines meet the house at an angle that is easy to climb. A soffit panel that has slipped out of its channel, or a vent that has gone brittle after twenty summers, is all a raccoon needs. The big subdivisions that fill the north and west of the city are full of exactly that kind of roofline.",
-      "The older parts of the city are a different picture. Downtown and the 1960s streets south of it have the mature trees that squirrels travel along, and the wood fascia and soffits that a squirrel can chew through in an afternoon. Out on the estate lots in the northeast, there is more tree cover and more outbuildings, so the roofline is only part of it: decks, sheds and pool houses give skunks somewhere to dig in.",
-      "Then there is the water. Etobicoke Creek winds through the middle of the city, Heart Lake Conservation Area sits to the north, and the valleys and hydro corridors between subdivisions work as wildlife corridors. A home backing onto a creek or a park gets more visitors, and a [raccoon in the attic](/wildlife/something-in-the-attic) in the north end has often been living in the ravine behind the house all along.",
+      "Much of Brampton was built from the 1990s on, and those homes share a few features that matter to wildlife: vinyl or aluminum soffits, plastic roof vents on long, low-pitched roofs, and attached garages whose rooflines meet the house at an angle that is easy to climb. A soffit panel that has slipped out of its channel, or a vent that has gone brittle after twenty summers, is all a raccoon needs. The big subdivisions of Springdale, Sandringham-Wellington, Fletcher's Meadow and Mount Pleasant are full of exactly that kind of roofline.",
+      "The older parts of the city are a different picture. Peel Village, Downtown Brampton and the streets around Professor's Lake have the mature trees that squirrels travel along, and the wood fascia and soffits that a squirrel can chew through in an afternoon. Out in Castlemore and the Vales of Castlemore, the estate lots have more tree cover and more outbuildings, so the roofline is only part of it: decks, sheds and pool houses give skunks somewhere to dig in.",
+      "Then there is the water. Etobicoke Creek winds through the middle of the city, Heart Lake Conservation Area and Professor's Lake sit to the north, and the valleys and hydro corridors between subdivisions work as wildlife corridors. A home backing onto a creek or a park gets more visitors, and a [raccoon in the attic](/wildlife/something-in-the-attic) in Heart Lake or Snelgrove has often been living in the ravine behind the house all along.",
     ],
     raccoons: [
       "Raccoons are the heavy footsteps overhead after dark, most often from late winter through early summer, when a female is looking for a den to raise her kits. In Brampton that den is usually an attic reached through a roof vent or a soffit panel where the garage roof meets the second storey; they don't need a big opening, they make one.",
@@ -88,17 +93,17 @@ export const CITIES: City[] = [
     ],
     squirrels: [
       "Squirrels are the daytime noise: scampering at first light, again in the late afternoon, and quiet at night. The grey squirrels in Brampton, including the black ones, raise two litters a year, so a squirrel in the attic in March or August is very likely a mother with a nest in the insulation.",
-      "They get in by chewing. A soffit corner, the edge of a fascia board or the gap where a roof vent meets the shingles becomes a hole, and the hole becomes their regular door. The wood trim on the older streets around downtown is the easiest for them, but vinyl soffit isn't squirrel-proof either; a loose panel gives them a way up behind it. We find every opening, confirm the squirrels and any young are out, then seal and repair the chewed spot. [Squirrel removal](/wildlife/squirrels) is the same careful job whether the house is a 1960s side-split or a two-storey built last year.",
+      "They get in by chewing. A soffit corner, the edge of a fascia board or the gap where a roof vent meets the shingles becomes a hole, and the hole becomes their regular door. The wood trim in Peel Village and downtown is the easiest for them, but vinyl soffit isn't squirrel-proof either; a loose panel gives them a way up behind it. We find every opening, confirm the squirrels and any young are out, then seal and repair the chewed spot. [Squirrel removal](/wildlife/squirrels) is the same careful job whether the house is in Bramalea or Mount Pleasant.",
     ],
     otherWildlife: [
-      "Skunks are a ground-level problem, and Brampton's decks, sheds and front steps give them plenty of options, especially on the larger lots in the northeast and the older streets near the conservation area. Once the skunk is out, we fix wire mesh along the base of the structure and dig it into the soil so nothing can tunnel back in. [Skunk removal](/wildlife/skunks)",
-      "Birds, mostly starlings and sparrows, nest in uncovered dryer and bathroom vents on the side of the house; we check for eggs and young first, then screen the vent. [Bird removal](/wildlife/birds). Bats are less common in the newer subdivisions than in the older homes around downtown, where a gap behind the fascia is all they need. Bats are protected in Ontario, so timing matters, and we explain what is involved before any work begins. [Bat removal](/wildlife/bats)",
+      "Skunks are a ground-level problem, and Brampton's decks, sheds and front steps give them plenty of options, especially on the larger Castlemore lots and in the older neighbourhoods near Heart Lake. Once the skunk is out, we fix wire mesh along the base of the structure and dig it into the soil so nothing can tunnel back in. [Skunk removal](/wildlife/skunks)",
+      "Birds, mostly starlings and sparrows, nest in uncovered dryer and bathroom vents on the side of the house; we check for eggs and young first, then screen the vent. [Bird removal](/wildlife/birds). Bats are less common in the newer subdivisions than in the older homes downtown and around Peel Village, where a gap behind the fascia is all they need. Bats are protected in Ontario, so timing matters, and we explain what is involved before any work begins. [Bat removal](/wildlife/bats)",
     ],
     faqs: [
       {
-        question: "Do you cover all of Brampton?",
+        question: "Do you cover Castlemore and the Vales of Castlemore?",
         answer:
-          "Yes. We cover all of Brampton, from the estate lots in the northeast to the newest subdivisions in the west, plus downtown and the older streets around it. Just outside the city, Caledon and Bolton are covered too.",
+          "Yes. We cover all of Brampton, from the Castlemore estates, Springdale and Sandringham-Wellington in the northeast to Mount Pleasant and Fletcher's Meadow in the west, plus Snelgrove, Heart Lake, Professor's Lake, Bramalea, Peel Village and downtown. Just outside the city, Caledon and Bolton are covered too.",
       },
       {
         question: "How quickly can you get to Brampton?",
@@ -115,31 +120,45 @@ export const CITIES: City[] = [
     featured: true,
     metaDescription:
       "Mississauga raccoon & squirrel removal, humane and same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
-    cardLine: "The treed lakefront lots and the Credit River valley to the newer subdivisions in the north and west.",
+    cardLine: "Lorne Park and Port Credit to Streetsville and Meadowvale.",
     intro:
-      "From the deep, treed lots along the lake to the newer streets in the northwest, Mississauga has every kind of home a raccoon or squirrel could want. Wherever you are, we cover all of Mississauga: we remove the animal humanely, seal the entry point and repair the damage it caused.",
+      "From the deep, treed lots of Lorne Park and Mineola to the newer streets of Churchill Meadows, Mississauga has every kind of home a raccoon or squirrel could want. Wherever you are, from Port Credit to Meadowvale, we remove the animal humanely, seal the entry point and repair the damage it caused.",
+    neighbourhoods: [
+      "Lorne Park",
+      "Mineola",
+      "Port Credit",
+      "Clarkson",
+      "Streetsville",
+      "Sheridan",
+      "Erin Mills",
+      "Meadowvale",
+      "Churchill Meadows",
+      "Cooksville",
+      "Applewood",
+      "Lakeview",
+    ],
     problems: [
-      "South Mississauga is old by GTA standards. The streets along the lake were cottage country and then estate country before they were suburbs, and it shows: big lots, oaks and maples that reach over the roof, and houses that run from 1950s bungalows to large custom rebuilds. Mature trees are the main thing. A branch within a few feet of the eaves is a bridge for squirrels and raccoons, and the wood soffits and fascia on an older home are far easier to chew or pry open than vinyl.",
-      "The Credit River runs the length of the city, from the old mill village in the northwest down to the harbour, and the ravines along it are where much of the city's wildlife lives. Homes backing onto the river valley, onto Rattray Marsh, or onto the lakefront get more traffic than homes in the middle of a subdivision. The heritage homes along the river and around the harbour add a problem of their own: old brick chimneys without caps, and gaps where an addition meets the original roof.",
-      "Further north and west, the subdivisions are mostly 1970s to 2000s. The houses are tighter, but they have the same weak points as anywhere: roof vents, soffit panels where the garage roof meets the second storey, and dryer vents with no cover. A [squirrel in the attic](/wildlife/something-in-the-attic) in a 1980s two-storey usually came in at a soffit corner; on a treed lot near the lake it is just as likely to have walked in along a branch.",
+      "South Mississauga is old by GTA standards. Lorne Park, Mineola and Clarkson were cottage country and then estate country before they were suburbs, and it shows: big lots, oaks and maples that reach over the roof, and houses that run from 1950s bungalows to large custom rebuilds. Mature trees are the main thing. A branch within a few feet of the eaves is a bridge for squirrels and raccoons, and the wood soffits and fascia on an older home are far easier to chew or pry open than vinyl.",
+      "The Credit River runs from Streetsville down past Erin Mills to the lake at Port Credit, and the ravines along it are where much of the city's wildlife lives. Homes backing onto the river valley, onto Rattray Marsh in Clarkson, or onto the lakefront in Lakeview and Port Credit get more traffic than homes in the middle of a subdivision. The heritage homes in Streetsville and Port Credit add a problem of their own: old brick chimneys without caps, and gaps where an addition meets the original roof.",
+      "Further north and west, Erin Mills, Meadowvale, Churchill Meadows and Sheridan are mostly 1970s to 2000s subdivisions. The houses are tighter, but they have the same weak points as anywhere: roof vents, soffit panels where the garage roof meets the second storey, and dryer vents with no cover. A [squirrel in the attic](/wildlife/something-in-the-attic) in Erin Mills usually came in at a soffit corner; in Mineola it is just as likely to have walked in along a branch.",
     ],
     raccoons: [
-      "Raccoons in Mississauga have the lake, the Credit River and a lot of mature trees, and they are at home in every part of the city. The attic is the usual target, reached through a roof vent they have pulled apart or a soffit they have pushed up where the roof meets the eaves. On a south Mississauga lot with trees over the house, they often don't need the downspout at all.",
+      "Raccoons in Mississauga have the lake, the Credit River and a lot of mature trees, and they are at home in every neighbourhood from Lakeview to Meadowvale. The attic is the usual target, reached through a roof vent they have pulled apart or a soffit they have pushed up where the roof meets the eaves. On a Lorne Park or Mineola lot with trees over the house, they often don't need the downspout at all.",
       "Spring is the busy season, when a female looks for a quiet attic to raise her kits, so we check for young before any removal and keep the family together. Then we seal the opening and repair the roof, vent or soffit, matched to your home's materials and colours. [Raccoon removal](/wildlife/raccoons) covers the whole roofline, because the way in is often not where the noise is.",
     ],
     squirrels: [
-      "If the noise is during the day, think squirrel. Mississauga's grey and black squirrels are busiest around sunrise and again in the late afternoon, and they chew their way in at soffit corners, fascia edges and roof vents. The treed streets in the south and the older middle of the city give them the easiest route to the roof, but a squirrel will happily climb a brick wall or a downspout on a two-storey in the newest subdivision.",
+      "If the noise is during the day, think squirrel. Mississauga's grey and black squirrels are busiest around sunrise and again in the late afternoon, and they chew their way in at soffit corners, fascia edges and roof vents. The treed streets of Lorne Park, Mineola, Clarkson and Applewood give them the easiest route to the roof, but a squirrel will happily climb a brick wall or a downspout on a Churchill Meadows two-storey.",
       "They nest in the insulation and raise two litters a year, so a spring or late-summer squirrel is often a mother with young. We confirm they are all out before we seal anything, then repair the chewed soffit, fascia or roof edge so the same spot can't be reopened. [Squirrel removal](/wildlife/squirrels)",
     ],
     otherWildlife: [
-      "Skunks dig in under decks, sheds and porch steps, and the big yards near the lake and the older lots in the middle of the city give them room to do it. Once the skunk is out, we mesh the base of the structure so nothing can dig back in. [Skunk removal](/wildlife/skunks)",
-      "Birds nest in uncovered bathroom and dryer vents right across the city, and in the uncapped chimneys of the older homes along the river and around the harbour; we check for eggs and young, then screen or cap the opening. [Bird removal](/wildlife/birds). Bats roost behind loose fascia and in attic gaps, most often in the older homes near the river and the lake. They are protected in Ontario, so we assess the timing carefully and explain the plan before any work begins. [Bat removal](/wildlife/bats)",
+      "Skunks dig in under decks, sheds and porch steps, and the big yards in Lorne Park and Clarkson and the older lots in Lakeview and Cooksville give them room to do it. Once the skunk is out, we mesh the base of the structure so nothing can dig back in. [Skunk removal](/wildlife/skunks)",
+      "Birds nest in uncovered bathroom and dryer vents right across the city, and in the uncapped chimneys of older Port Credit and Streetsville homes; we check for eggs and young, then screen or cap the opening. [Bird removal](/wildlife/birds). Bats roost behind loose fascia and in attic gaps, most often in the older homes near the river and the lake. They are protected in Ontario, so we assess the timing carefully and explain the plan before any work begins. [Bat removal](/wildlife/bats)",
     ],
     faqs: [
       {
-        question: "Do you cover all of Mississauga?",
+        question: "Do you cover Lorne Park, Mineola and Port Credit?",
         answer:
-          "Yes. We cover all of Mississauga: the lakefront and the treed streets in the south, the older middle of the city, the river valley, and the subdivisions to the north and west. Brampton and Etobicoke on either side are covered as well.",
+          "Yes. We cover all of Mississauga: the lakefront neighbourhoods of Lorne Park, Mineola, Port Credit, Clarkson and Lakeview; Cooksville, Applewood and Sheridan in the middle of the city; and Erin Mills, Streetsville, Meadowvale and Churchill Meadows to the north and west.",
       },
       {
         question: "How quickly can you get to Mississauga?",
@@ -156,16 +175,30 @@ export const CITIES: City[] = [
     featured: true,
     metaDescription:
       "Humane raccoon & squirrel removal across Scarborough. Same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
-    cardLine: "The Bluffs and the Rouge to the postwar streets and the newer north.",
+    cardLine: "The Bluffs and Guildwood to Agincourt and Malvern.",
     intro:
-      "Scarborough's postwar bungalows, the wooded lots along the Bluffs and the ravines of the Rouge and Highland Creek make it one of the busiest parts of Toronto for raccoons and squirrels. From the lake to the city's northern edge, across all of Scarborough, we get the animal out humanely, seal the entry point and repair what it damaged.",
+      "Scarborough's postwar bungalows, the wooded lots of Guildwood and the ravines of the Rouge and Highland Creek make it one of the busiest parts of Toronto for raccoons and squirrels. From the Bluffs to Malvern, we get the animal out humanely, seal the entry point and repair what it damaged.",
+    neighbourhoods: [
+      "Guildwood",
+      "Scarborough Bluffs",
+      "Cliffside",
+      "Birch Cliff",
+      "Highland Creek",
+      "West Hill",
+      "Rouge",
+      "Scarborough Village",
+      "Bendale",
+      "Wexford",
+      "Agincourt",
+      "Malvern",
+    ],
     problems: [
-      "A lot of Scarborough went up in the 1950s and 60s: brick bungalows, side-splits and back-splits on generous lots, with wood soffits and fascia and gable vents that are now sixty years old. That trim has had decades of weather, and the trees planted when the houses were new are big enough to hang over the roof. Old wood plus mature maples and oaks is what makes the postwar streets in the middle of Scarborough so attractive to squirrels and raccoons.",
-      "Along the lake, the streets on top of the Scarborough Bluffs sit on wooded lots with the bluffs and their ravines right behind them. Highland Creek and the Rouge cut deep valleys through the east end, and Rouge National Urban Park is habitat on a scale no other part of the city has. A home backing onto any of this sees more raccoons, more skunks under the deck and the occasional bat in the attic, simply because the animals are already next door.",
-      "The 1960s to 90s subdivisions in the north have newer materials but the same pressure points: aluminum soffit that lifts at the corners, roof vents, and dryer vents with no cover. Whether the noise is overhead in a lakeside bungalow or above the garage in the north end, [something in the attic](/wildlife/something-in-the-attic) nearly always came in at the roofline, and the opening is often nowhere near where you hear it.",
+      "A lot of Scarborough went up in the 1950s and 60s: brick bungalows, side-splits and back-splits on generous lots, with wood soffits and fascia and gable vents that are now sixty years old. That trim has had decades of weather, and the trees planted when the houses were new are big enough to hang over the roof. Old wood plus mature maples and oaks is what makes Cliffside, Bendale, Wexford and Scarborough Village so attractive to squirrels and raccoons.",
+      "Along the lake, Guildwood, the Scarborough Bluffs and Birch Cliff sit on wooded lots with the bluffs and their ravines right behind them. Highland Creek and the Rouge cut deep valleys through the east end, and Rouge National Urban Park is habitat on a scale no other part of the city has. A home backing onto any of this sees more raccoons, more skunks under the deck and the occasional bat in the attic, simply because the animals are already next door.",
+      "The 1960s to 90s subdivisions in Agincourt and Malvern have newer materials but the same pressure points: aluminum soffit that lifts at the corners, roof vents, and dryer vents with no cover. Whether the noise is overhead in a Guildwood bungalow or above the garage in Malvern, [something in the attic](/wildlife/something-in-the-attic) nearly always came in at the roofline, and the opening is often nowhere near where you hear it.",
     ],
     raccoons: [
-      "Toronto has one of the densest urban raccoon populations anywhere, and Scarborough's ravines and old rooflines are a big part of why. The sound is hard to mistake: slow, heavy footsteps overhead after dark, sometimes a thump or a growl. Raccoons pull roof vents apart and push through soffits where the roof meets the eaves, and a 1960s bungalow in the east end gives them plenty of soft spots.",
+      "Toronto has one of the densest urban raccoon populations anywhere, and Scarborough's ravines and old rooflines are a big part of why. The sound is hard to mistake: slow, heavy footsteps overhead after dark, sometimes a thump or a growl. Raccoons pull roof vents apart and push through soffits where the roof meets the eaves, and a 1960s bungalow in West Hill or Cliffside gives them plenty of soft spots.",
       "In spring the attic is usually a nursery, so we check for kits before removal and keep mother and young together. Then we seal the opening and repair the vent, soffit or roof so it matches the rest of the house. [Raccoon removal](/wildlife/raccoons)",
     ],
     squirrels: [
@@ -173,14 +206,14 @@ export const CITIES: City[] = [
       "Black and grey squirrels raise young twice a year, in early spring and again in late summer, so we confirm the whole family is out before anything is sealed, then repair the chewed wood or soffit. [Squirrel removal](/wildlife/squirrels)",
     ],
     otherWildlife: [
-      "Skunks are common near the ravines and the Bluffs, and they den under decks, sheds and front steps from the lake to the north end. Once the skunk is out, we fix wire mesh along the base of the structure and dig it into the ground. [Skunk removal](/wildlife/skunks)",
+      "Skunks are common near the ravines and the Bluffs, and they den under decks, sheds and front steps from Guildwood to Agincourt. Once the skunk is out, we fix wire mesh along the base of the structure and dig it into the ground. [Skunk removal](/wildlife/skunks)",
       "Starlings and sparrows nest in uncovered bathroom and dryer vents and in uncapped chimneys, and they are busiest in spring; we check for eggs and young before the vent is screened. [Bird removal](/wildlife/birds). Bats roost in the attics and behind the fascia of older homes, especially near Highland Creek and the Rouge. They are protected in Ontario, so we assess each situation and explain the method and timing before any work begins. [Bat removal](/wildlife/bats)",
     ],
     faqs: [
       {
-        question: "Do you cover all of Scarborough?",
+        question: "Do you cover Guildwood and the Bluffs?",
         answer:
-          "Yes. We cover all of Scarborough: the streets along the lake and the Bluffs, the valleys of Highland Creek and the Rouge in the east, the postwar streets in the middle, and the subdivisions to the north. North York, East York and the rest of Toronto are covered as well.",
+          "Yes. We cover all of Scarborough: Guildwood, Cliffside, Birch Cliff and the Scarborough Bluffs along the lake; Highland Creek, West Hill and the Rouge in the east; Scarborough Village, Bendale and Wexford in the middle; and Agincourt and Malvern to the north. North York, East York and the rest of Toronto are covered as well.",
       },
       {
         question: "How quickly can you get to Scarborough?",
@@ -203,7 +236,7 @@ export const CITIES: City[] = [
       "Unionville",
       "Cachet",
       "Angus Glen",
-      "Thornhill (east)",
+      "Thornhill",
       "Berczy",
       "Wismer",
       "Cornell",
@@ -232,7 +265,7 @@ export const CITIES: City[] = [
       {
         question: "Do you cover Unionville and Angus Glen?",
         answer:
-          "Yes. We cover all of Markham: Unionville, Cachet and Angus Glen; Thornhill east of Yonge; Berczy, Wismer, Cornell and Box Grove; and Markham Village and Milliken. Stouffville and Richmond Hill next door are covered as well.",
+          "Yes. We cover all of Markham: Unionville, Cachet and Angus Glen; Thornhill; Berczy, Wismer, Cornell and Box Grove; and Markham Village and Milliken. Stouffville and Richmond Hill next door are covered as well.",
       },
       {
         question: "How quickly can you get to Markham?",
@@ -255,7 +288,7 @@ export const CITIES: City[] = [
       "Kleinburg",
       "Woodbridge",
       "Islington Woods",
-      "Thornhill (west)",
+      "Thornhill",
       "Patterson",
       "Maple",
       "Vellore Village",
@@ -283,7 +316,7 @@ export const CITIES: City[] = [
       {
         question: "Do you cover Kleinburg, Woodbridge and Thornhill?",
         answer:
-          "Yes. We cover all of Vaughan: Kleinburg, Woodbridge and Islington Woods; Thornhill west of Yonge; Maple, Vellore Village, Patterson and Sonoma Heights; and Concord. King City to the north is covered too.",
+          "Yes. We cover all of Vaughan: Kleinburg, Woodbridge and Islington Woods; Thornhill; Maple, Vellore Village, Patterson and Sonoma Heights; and Concord. King City to the north is covered too.",
       },
       {
         question: "How quickly can you get to Vaughan?",
@@ -382,31 +415,43 @@ export const CITIES: City[] = [
     region: "toronto",
     metaDescription:
       "Humane raccoon & squirrel removal in North York. Same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
-    cardLine: "The ravine estates along the Don to the mid-century streets and the big rebuilds.",
+    cardLine: "York Mills and the Bridle Path to Willowdale and Don Mills.",
     intro:
-      "North York is ravine country: the Don Valley and its branches run through the middle of it, and the mid-century homes on either side sit under trees planted seventy years ago. Across all of North York, we remove the animal humanely, seal the way in and repair the damage.",
+      "North York is ravine country: the Don Valley and its branches run through York Mills, Hoggs Hollow and Bayview Village, and the mid-century homes of Willowdale, Don Mills and Bathurst Manor sit under trees planted seventy years ago. We remove the animal humanely, seal the way in and repair the damage.",
+    neighbourhoods: [
+      "York Mills",
+      "Bridle Path",
+      "Hoggs Hollow",
+      "Armour Heights",
+      "Bayview Village",
+      "Don Mills",
+      "Willowdale",
+      "Bathurst Manor",
+      "Newtonbrook",
+      "Downsview",
+    ],
     problems: [
-      "The Don River's east and west branches, and the ravines that feed them, are the reason North York has so much wildlife. The estate streets along the valley are built on and around those ravines, with large older homes, big lots and oaks and maples that reach well over the roof. A branch near the eaves is a bridge, and an old wood soffit is a door.",
-      "The streets to the north and west were mostly bungalows and split-levels from the 1950s and 60s. Many have been rebuilt as large new houses, which brings its own problems: complicated rooflines, more vents and soffit, and gaps where new construction meets what was left of the old. The bungalows that remain have sixty-year-old trim under mature trees.",
-      "The planned communities of the 1950s and 60s east of the valley were laid out around ravines and parkland, which is exactly where raccoons and skunks live. [Something in the attic](/wildlife/something-in-the-attic) in any part of North York almost always came in at the roofline, and often at the back of the house, away from where the noise seems to be.",
+      "The Don River's east and west branches, and the ravines that feed them, are the reason North York has so much wildlife. York Mills, Hoggs Hollow, Armour Heights and the Bridle Path are built on and around those ravines, with large older homes, big lots and oaks and maples that reach well over the roof. A branch near the eaves is a bridge, and an old wood soffit is a door.",
+      "Willowdale, Bathurst Manor, Newtonbrook and Downsview were mostly bungalows and split-levels from the 1950s and 60s. Many have been rebuilt as large new houses, which brings its own problems: complicated rooflines, more vents and soffit, and gaps where new construction meets what was left of the old. The bungalows that remain have sixty-year-old trim under mature trees.",
+      "Don Mills and Bayview Village were planned communities of the 1950s and 60s, laid out around ravines and parkland, which is exactly where raccoons and skunks live. [Something in the attic](/wildlife/something-in-the-attic) in any of these neighbourhoods almost always came in at the roofline, and often at the back of the house, away from where the noise seems to be.",
     ],
     raccoons: [
       "Raccoons are everywhere in North York, and the ravine neighbourhoods have the densest numbers. They come up from the valley after dark, climb a tree or a downspout, and pull apart a roof vent or push through the soffit. From late winter to early summer, a female will raise her kits in the attic, and the slow, heavy footsteps overhead are hers.",
       "We check for kits before any removal so the family leaves together, then seal the opening and repair the vent, soffit or roof so it matches the rest of the house. [Raccoon removal](/wildlife/raccoons) looks at the whole roofline, not just one corner.",
     ],
     squirrels: [
-      "Scampering by day means a squirrel, and North York's black and grey squirrels have more big trees to work with than almost anywhere in Toronto. They chew in at soffit corners, fascia edges and roof vents, and on an older home the wood trim gives way fast.",
+      "Scampering by day means a squirrel, and North York's black and grey squirrels have more big trees to work with than almost anywhere in Toronto. They chew in at soffit corners, fascia edges and roof vents, and on an older York Mills or Bathurst Manor home the wood trim gives way fast.",
       "Because they raise young twice a year, a squirrel in early spring or late summer usually means a nest in the insulation. Each one is confirmed out before the hole is sealed and the chewed trim repaired. See [squirrel removal](/wildlife/squirrels).",
     ],
     otherWildlife: [
-      "Skunks den under decks, sheds and front steps in every ravine neighbourhood, on both sides of the valley. Once the skunk is out, wire mesh goes along the base of the structure and into the ground ([skunk removal](/wildlife/skunks)).",
+      "Skunks den under decks, sheds and front steps in every ravine neighbourhood, from Hoggs Hollow to Don Mills. Once the skunk is out, wire mesh goes along the base of the structure and into the ground ([skunk removal](/wildlife/skunks)).",
       "Starlings and sparrows nest in open dryer and bathroom vents, busiest in spring; eggs and young are checked for first, then the vent is screened ([bird removal](/wildlife/birds)). Bats roost in the attics and behind the fascia of older homes near the ravines. They are protected in Ontario, and the method and timing are explained before any work begins ([bat removal](/wildlife/bats)).",
     ],
     faqs: [
       {
-        question: "Do you cover all of North York?",
+        question: "Do you cover York Mills and the Bridle Path?",
         answer:
-          "Yes. We cover all of North York: the estate streets along the Don, the planned communities east of the valley, and the bungalow streets and big rebuilds to the north and west. Scarborough, East York and the rest of Toronto are covered as well.",
+          "Yes. We cover all of North York: York Mills, the Bridle Path, Hoggs Hollow and Armour Heights; Bayview Village and Don Mills; Willowdale, Newtonbrook, Bathurst Manor and Downsview. Scarborough, East York and the rest of Toronto are covered as well.",
       },
       {
         question: "How quickly can you get to North York?",
@@ -586,31 +631,44 @@ export const CITIES: City[] = [
     region: "toronto",
     metaDescription:
       "Humane raccoon & squirrel removal in Etobicoke. Same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
-    cardLine: "The old stone homes along the Humber to the lakefront and the postwar north.",
+    cardLine: "The Kingsway and Humber Valley to Mimico, Long Branch and Rexdale.",
     intro:
-      "Etobicoke is old trees and old rooflines: the stone and brick homes along the Humber, the lakefront streets in the south, and the postwar subdivisions in the middle and the north. Across all of Etobicoke, we get the animal out humanely, seal the way in and repair the damage.",
+      "Etobicoke is old trees and old rooflines: the Kingsway, Humber Valley Village and Sunnylea along the Humber, the lakefront streets of Mimico and Long Branch, and the postwar subdivisions of Markland Wood, Alderwood and Rexdale. We get the animal out humanely, seal the way in and repair the damage.",
+    neighbourhoods: [
+      "The Kingsway",
+      "Humber Valley Village",
+      "Princess Gardens",
+      "Sunnylea",
+      "Islington",
+      "Markland Wood",
+      "Mimico",
+      "Long Branch",
+      "Alderwood",
+      "Rexdale",
+      "Eringate",
+    ],
     problems: [
-      "The Humber River is the spine of Etobicoke, and the homes along its lower valley were built from the 1930s to the 50s: stone and brick, slate and cedar, wood soffits and fascia, big chimneys, and oaks and maples that have had ninety years to grow over the roof. They are beautiful houses with a great many ways in, and the river valley keeps them supplied with raccoons.",
-      "Mimico Creek runs through the middle, and the lakefront mixes 1920s cottages-turned-houses with 1950s bungalows and new builds. The streets in the middle of Etobicoke are 1950s and 60s neighbourhoods under mature trees, and the ones further west are a little younger, with the original wood trim now well weathered.",
-      "The north end is mostly postwar bungalows and semis with sixty-year-old soffit and vents, plus the hydro corridors and the Humber's west branch for wildlife to travel along. Whichever part of Etobicoke you're in, [something in the attic](/wildlife/something-in-the-attic) found a gap at the roofline, and on an older home there may be several.",
+      "The Humber River is the spine of Etobicoke, and the homes along it in the Kingsway, Humber Valley Village and Sunnylea were built from the 1930s to the 50s: stone and brick, slate and cedar, wood soffits and fascia, big chimneys, and oaks and maples that have had ninety years to grow over the roof. They are beautiful houses with a great many ways in, and the river valley keeps them supplied with raccoons.",
+      "Mimico Creek runs through the middle, and the lakefront in Mimico, Long Branch and Alderwood mixes 1920s cottages-turned-houses with 1950s bungalows and new builds. Islington and Princess Gardens are 1950s and 60s neighbourhoods under mature trees; Markland Wood and Eringate are a little younger, with the original wood trim now well weathered.",
+      "Rexdale, in the north, is mostly postwar bungalows and semis with sixty-year-old soffit and vents, plus the hydro corridors and the Humber's west branch for wildlife to travel along. Whichever part of Etobicoke you're in, [something in the attic](/wildlife/something-in-the-attic) found a gap at the roofline, and on an older home there may be several.",
     ],
     raccoons: [
-      "Raccoons are thick along the Humber and Mimico Creek, and the big old homes along the river are exactly what they look for from late winter to early summer, when the females want a quiet attic for their kits. They climb the trees that overhang the roof, pull a roof vent apart or lift the soffit at the eaves, and the first you hear is heavy footsteps after dark.",
+      "Raccoons are thick along the Humber and Mimico Creek, and the big old homes of the Kingsway and Humber Valley Village are exactly what they look for from late winter to early summer, when the females want a quiet attic for their kits. They climb the trees that overhang the roof, pull a roof vent apart or lift the soffit at the eaves, and the first you hear is heavy footsteps after dark.",
       "Kits are checked for before anything else, so the family leaves together, and then the opening is sealed and the vent, soffit or roof repaired to suit the house, which on these homes matters. [Raccoon removal](/wildlife/raccoons) here means the whole roofline, chimney included.",
     ],
     squirrels: [
-      "Daytime scampering is a squirrel, and Etobicoke's black and grey squirrels have more old trees to work with than almost anywhere in the city. They chew in at soffit corners, fascia edges and roof vents, and ninety-year-old wood trim along the Humber gives way quickly.",
+      "Daytime scampering is a squirrel, and Etobicoke's black and grey squirrels have more old trees to work with than almost anywhere in the city. They chew in at soffit corners, fascia edges and roof vents, and ninety-year-old wood trim in Sunnylea or the Kingsway gives way quickly.",
       "They nest in the insulation and raise young twice a year, so a squirrel in early spring or late summer is usually a mother with a litter. Every squirrel is confirmed out before the hole is sealed and the chewed trim repaired. Read more about [squirrel removal](/wildlife/squirrels).",
     ],
     otherWildlife: [
-      "Skunks den under decks, sheds and porch steps from the lakefront to the north end, with the creek valleys and the big gardens along the Humber giving them cover. Once the skunk is out, wire mesh is run along the base of the structure and set into the ground ([skunk removal](/wildlife/skunks)).",
+      "Skunks den under decks, sheds and porch steps from the lakefront to Rexdale, with the creek valleys and the big Kingsway gardens giving them cover. Once the skunk is out, wire mesh is run along the base of the structure and set into the ground ([skunk removal](/wildlife/skunks)).",
       "Starlings and sparrows nest in uncovered dryer and bathroom vents and in the uncapped chimneys of older homes; eggs and young are checked for before the opening is screened or capped ([bird removal](/wildlife/birds)). Bats roost behind fascia and in the attics of the older houses along the Humber and the lake. They are protected in Ontario, so we explain the method and timing to you before any work starts ([bat removal](/wildlife/bats)).",
     ],
     faqs: [
       {
-        question: "Do you cover all of Etobicoke?",
+        question: "Do you cover the Kingsway and Humber Valley?",
         answer:
-          "Yes. We cover all of Etobicoke: the streets along the Humber, the lakefront, the postwar neighbourhoods in the middle and the north end. Mississauga and the rest of Toronto are covered as well.",
+          "Yes. We cover all of Etobicoke: the Kingsway, Humber Valley Village, Princess Gardens and Sunnylea; Islington, Markland Wood and Eringate; Mimico, Long Branch and Alderwood on the lake; and Rexdale. Mississauga and the rest of Toronto are covered as well.",
       },
       {
         question: "How quickly can you get to Etobicoke?",
@@ -708,13 +766,14 @@ export const CITIES: City[] = [
     region: "peel-region",
     metaDescription:
       "Humane raccoon, squirrel & skunk removal in Caledon. Same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
-    cardLine: "Bolton, the Escarpment villages and the rural estates and farms between them.",
+    cardLine: "Bolton and Caledon East to the Escarpment villages and rural estates.",
     intro:
-      "Caledon is the rural top of Peel: Bolton's old village core and its newer subdivisions, the smaller villages along the Escarpment and the moraine, and estates and farms on big lots in between. Out here the list of animals is longer, and across all of Caledon we handle them humanely, seal the way in and repair the damage.",
+      "Caledon is the rural top of Peel: Bolton's old village core and its newer subdivisions, Caledon East, the Escarpment villages of Belfountain, Inglewood, Cheltenham and Alton, and estates and farms on big lots in between. Out here the list of animals is longer, and we handle all of them humanely, seal the way in and repair the damage.",
+    neighbourhoods: ["Bolton", "Caledon East", "Inglewood", "Cheltenham", "Belfountain", "Alton", "Palgrave", "Mono Mills", "Caledon Village"],
     problems: [
       "Caledon is mostly countryside: the Niagara Escarpment along the west side, the Oak Ridges Moraine across the east, the Caledon Hills and the Humber headwaters in between. That means more skunks, more bats and more raccoons than the suburbs to the south, and animals that have barns, sheds, garages and woodpiles to choose from before they ever try the house.",
-      "Bolton is the one real town, with a 19th-century village core on the Humber under mature trees and subdivisions from the 1980s to the 2010s around it: wood trim and open chimneys in the old part, aluminum soffit and roof vents in the new. The smaller villages across the township are smaller versions of the same mix.",
-      "The Escarpment villages are stone and brick heritage homes along the Credit River, with deep eaves, old chimneys and forest on every side. On the estate lots, a [raccoon in the attic](/wildlife/something-in-the-attic) is as likely to have come from the barn as from the woods, and the roofline is only one of the places that needs a look.",
+      "Bolton is the one real town, with a 19th-century village core on the Humber under mature trees and subdivisions from the 1980s to the 2010s around it: wood trim and open chimneys in the old part, aluminum soffit and roof vents in the new. Caledon East, Caledon Village, Palgrave and Mono Mills are smaller versions of the same mix.",
+      "The Escarpment villages of Belfountain, Inglewood, Cheltenham and Alton are stone and brick heritage homes on the Credit River, with deep eaves, old chimneys and forest on every side. On the estate lots, a [raccoon in the attic](/wildlife/something-in-the-attic) is as likely to have come from the barn as from the woods, and the roofline is only one of the places that needs a look.",
     ],
     raccoons: [
       "Raccoons are everywhere in Caledon, and from late winter to early summer the females look for a dry, quiet place for their kits: an attic, a barn loft, a garage ceiling or the space above a porch. Heavy footsteps after dark are the sign in a house; outside, a torn roof vent, lifted soffit or open chimney.",
@@ -732,7 +791,7 @@ export const CITIES: City[] = [
       {
         question: "Do you cover Bolton and the Escarpment villages?",
         answer:
-          "Yes. We cover all of Caledon: Bolton and its subdivisions, the villages on the Escarpment and the moraine, and the rural properties in between. Brampton and the rest of Peel are covered as well.",
+          "Yes. We cover all of Caledon: Bolton, Caledon East, Caledon Village, Palgrave and Mono Mills; Belfountain, Inglewood, Cheltenham and Alton on the Escarpment; and the rural properties in between. Brampton and the rest of Peel are covered as well.",
       },
       {
         question: "How quickly can you get to Caledon?",

@@ -1,6 +1,6 @@
 # Place names, batch 1 (the ad-traffic pages): review notes for the owner (Oct 13, 2026)
 
-**Waiting for the owner's "approved". Nothing is live.** Built by GNW Website 7 on the session branch `ccr-23993167-5bcogn` from the live branch (10f02c3). Approve as is, or name the numbers below to strike or change.
+**SUPERSEDED AND REVERTED, Oct 13: the owner read these notes and said the "no neighbourhoods anywhere" rule misread him (he meant no neighbourhood pages; naming a city's biggest neighbourhoods on its page is wanted). Every change below was reverted the same day, unmerged, except York on the Toronto hub. Kept as the record of what was tried.** Original header: Waiting for the owner's "approved". Nothing is live. Built by GNW Website 7 on the session branch `ccr-23993167-5bcogn` from the live branch (10f02c3). Approve as is, or name the numbers below to strike or change.
 
 The job: the owner's rule of Oct 12 (name only big areas; no neighbourhoods or small villages anywhere on the site) and the five answers of Oct 12, 6:15 PM, applied to the ten pages that carry, or will carry, Google Ads traffic. Batch 2 (the York and Durham city pages, the York and Durham hubs, the /service-areas index) follows in its own review.
 
