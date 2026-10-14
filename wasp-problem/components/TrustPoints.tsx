@@ -24,7 +24,10 @@ export function TrustPoints({ tone = "light" }: { tone?: "light" | "dark" }) {
   const link = "inline-flex min-h-11 -my-3 items-center underline decoration-yellow decoration-2 underline-offset-4";
   const points = [
     <a key="p" href="#pricing" className={link}>
-      Upfront pricing from&nbsp;<strong className="font-extrabold">${PRICING[0].amount}</strong>
+      <span>
+        Visible nest <strong className="font-extrabold">${PRICING[0].amount}</strong> &middot; Hidden nest{" "}
+        <strong className="font-extrabold">${PRICING[1].amount}</strong>
+      </span>
     </a>,
     <a key="g" href="#guarantee" className={link}>
       {GUARANTEE.name}
