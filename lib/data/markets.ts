@@ -123,12 +123,12 @@ export const MARKETS: Market[] = [
     brandName: "Good Neighbors York Region",
     heroHeading: "Wildlife Removal in York Region",
     hubTitle: "Wildlife Removal in York Region: Markham, Vaughan & Richmond Hill",
-    alsoCovered: ["King Township", "Thornhill"],
+    alsoCovered: ["King Township", "Thornhill", "East Gwillimbury", "Georgina"],
     status: "active",
     country: "CA",
     region: "Ontario",
     metro: "Greater Toronto Area",
-    serviceArea: ["Markham", "Richmond Hill", "Vaughan", "Thornhill", "Aurora", "Newmarket", "Stouffville", "King Township"],
+    serviceArea: ["Markham", "Richmond Hill", "Vaughan", "Thornhill", "Aurora", "Newmarket", "Stouffville", "King Township", "East Gwillimbury", "Georgina"],
     heroBlurb:
       "York Region climbs from the older streets of Thornhill and Markham, through the big newer subdivisions of Vaughan and Richmond Hill, up onto the Oak Ridges Moraine at Aurora, Newmarket, Stouffville and King Township. More trees, bigger lots and more open country mean more raccoons and squirrels at the roofline and more skunks under the deck. Across York, we get the animal out humanely, seal the entry point and repair what it damaged.",
     seoDescription:
@@ -137,13 +137,14 @@ export const MARKETS: Market[] = [
     // York facts only, neighbourhood names from the York city pages (the
     // owner's lists), King Township rather than its villages, plain
     // Thornhill, nothing about the business that the live site doesn't
-    // already say. Thornhill and King Township have no page of their own,
-    // so they are named, never linked.
+    // already say. Thornhill, King Township, East Gwillimbury and Georgina
+    // have no page of their own, so they are named, never linked (the owner
+    // covers all of York Region, Oct 14 2026).
     hubSections: [
       {
         heading: "Why York Region has so much wildlife",
         paragraphs: [
-          "The Oak Ridges Moraine runs across the middle of York Region, a broad band of hills, woodlots and kettle lakes, and the rivers that run through York's cities have their headwaters there. The Humber, the Don and the Rouge run south from it through Vaughan, Richmond Hill and Markham toward Lake Ontario; the Holland River and its branches run the other way, through Newmarket and the Holland Marsh to Lake Simcoe. Every one of those valleys is a travel route for raccoons, skunks and squirrels, and the conservation areas, forest tracts and golf courses between them give the animals somewhere to live within sight of the houses.",
+          "The Oak Ridges Moraine runs across the middle of York Region, a broad band of hills, woodlots and kettle lakes, and the rivers that run through York's cities have their headwaters there. The Humber, the Don and the Rouge run south from it through Vaughan, Richmond Hill and Markham toward Lake Ontario; the Holland River and its branches run the other way, through Newmarket, East Gwillimbury and the Holland Marsh to Lake Simcoe. Every one of those valleys is a travel route for raccoons, skunks and squirrels, and the conservation areas, forest tracts and golf courses between them give the animals somewhere to live within sight of the houses.",
           "The houses do the rest. Thornhill, Richmond Hill and Aurora grew up along Yonge Street, and Unionville, Markham Village, Woodbridge, Kleinburg and Newmarket are old towns and villages too, with century homes, wood trim, deep eaves and chimneys that were never capped. Around those old cores, most of York is new: the region had about 170,000 people when it was formed in 1971 and has well over a million today, and many of its subdivisions went up on the edge of farmland and woodlots where the animals already lived. A large new home, with a long roofline, a row of plastic roof vents and aluminum or vinyl soffit, gives a raccoon or a squirrel more places to try, not fewer.",
         ],
       },
@@ -156,6 +157,7 @@ export const MARKETS: Market[] = [
           "Further up Yonge Street, [Aurora](/service-areas/aurora) and [Newmarket](/service-areas/newmarket) each have an old core and newer edges. Aurora Estates and Hills of St Andrew are big properties against the moraine's woodlots, Aurora Village along Yonge is Victorian and Edwardian brick under century-old trees, and Aurora Highlands, Bayview Northeast and Bayview Wellington are newer. Newmarket's historic Main Street and Fairy Lake sit on the Holland River, with the larger homes of Stonehaven, Summerhill and Woodland Hill and the established streets of Glenway, Armitage, Huron Heights and Bristol-London around the old town.",
           "[Stouffville](/service-areas/stouffville), the main town in Whitchurch-Stouffville, is where the subdivisions give way to countryside. Ballantrae's homes sit on a golf course ringed by woods, cottages and newer houses share the shore of Musselman's Lake, the town centre has a village core with new streets around it, and the forest tracts and rural lots around Vandorf and Gormley are countryside outright.",
           "Thornhill and King Township have no page of their own, and both are covered. Thornhill goes back to the 1790s as a village on Yonge Street, and its heritage core is surrounded by quiet streets of 1950s to 80s homes under mature trees. King Township is the countryside on York's west side: farms, estates, woodlots and small villages spread across the moraine, with the Holland Marsh in the north. Out there a raccoon or a skunk may be living in a barn, a garage or under a porch long before it tries the house, so the outbuildings get a look too.",
+          "North of Newmarket, East Gwillimbury and Georgina take York Region up to Lake Simcoe, and both are covered too. East Gwillimbury is farmland and fast-growing new subdivisions along the Holland River; Georgina, on the lake's southeast shore, mixes cottages, year-round lakefront homes and older town streets, and an older cottage by the water has as many ways in as a century home.",
         ],
       },
       {
@@ -180,7 +182,7 @@ export const MARKETS: Market[] = [
       {
         question: "Which parts of York Region do you cover?",
         answer:
-          "Markham, Vaughan (Woodbridge included), Richmond Hill, Newmarket, Aurora and Stouffville each have a page of their own. Thornhill and King Township are covered too, rural roads included, along with the rest of York Region.",
+          "Markham, Vaughan (Woodbridge included), Richmond Hill, Newmarket, Aurora and Stouffville each have a page of their own. Thornhill, King Township, East Gwillimbury and Georgina are covered too, rural roads and the Lake Simcoe shore included: all of York Region.",
       },
       {
         question: "Do you cover Unionville, Kleinburg and Bayview Hill?",

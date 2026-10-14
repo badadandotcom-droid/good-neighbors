@@ -2,19 +2,20 @@
 
 **Waiting for the owner's "approved". Nothing is live.** Built by GNW Website 7 on the session branch `ccr-23993167-5bcogn`, on top of the live branch (9142e43). Approve as is, or name the numbers below to strike or change.
 
-Page: /service-areas/york-region. URL, title, H1 and meta description unchanged. Every other page is byte-for-byte unchanged (compare check: 1 page changed).
+Page: /service-areas/york-region. URL, title, H1 and meta description unchanged. One other page changes: the York card on the /service-areas index now lists East Gwillimbury and Georgina too. Every other page is byte-for-byte unchanged (compare check: 2 pages changed).
 
 ## What changed on the page
 - Four new sections between the city cards and the animal grid, with the same headings as the Toronto and Peel hubs: "Why York Region has so much wildlife", "York Region, part by part", "Which animal, and where", "How a visit works in York Region".
 - Six York questions after the seven standard ones (13 in all; the FAQ structured data matches).
 - The trust row under the hero buttons (the guarantee, insurance and 24/7 lines): the same component and wording as every other ad landing page. A hub shows it once it has long-form copy, so this closes the ads chat's point that the York hub had no trust row.
-- Structured data: the hub's area list now names Stouffville and King Township as well (it already had Markham, Richmond Hill, Vaughan, Thornhill, Aurora and Newmarket). Invisible on the page.
-- About 1,600 new words (main content 553 words before, 2,171 after as the crawl counts them; the Peel hub is 1,668, Toronto 1,549). York has six cities to Peel's three, which is most of the difference. Easy cuts are under question 2 at the end.
+- East Gwillimbury and Georgina (owner, Oct 14: "I do the entire York region") are named on the hub: in the list under the H1, in "We also cover", in a short paragraph of their own in "part by part", in the river sentence and in the first York question; the /service-areas index card shows them too. Their villages are not named, the same as King Township's.
+- Structured data: the hub's area list now names Stouffville, King Township, East Gwillimbury and Georgina as well (it already had Markham, Richmond Hill, Vaughan, Thornhill, Aurora and Newmarket). Invisible on the page.
+- About 1,670 new words (main content 553 words before, 2,246 after as the crawl counts them; the Peel hub is 1,668, Toronto 1,549). York has six cities to Peel's three, plus four more named towns, which is most of the difference. Kept at this length on purpose (owner, Oct 14: length is the website chat's call, whatever is best for SEO): depth on every York city and town is what a hub ranks on.
 - The hero paragraph (approved earlier) is unchanged.
 
 ## Speed and the phone first screen
 - Phone first screen (375 x 812): the H1, the guarantee line and the Call button all sit above the Call Now bar, at the same positions as the Peel and Toronto hubs. Pass.
-- Local Lighthouse, mobile, 5 runs each, same machine: York hub before score 97, LCP 2.6 s; after score 97, LCP 2.6 s. The Peel hub, as a control, read 2.7 s and 2.6 s in the same runs, and it measured 2.3 s on PageSpeed Insights live. The new text all sits below the first screen and does not slow the page. Local runs load no Google tag; the York hub is not on the late-tag list and nothing about the tag changed.
+- Local Lighthouse, mobile, 5 runs each, same machine: York hub before score 97, LCP 2.6 s; after score 97, LCP 2.6 s (and 97, 2.7 s in 3 runs after East Gwillimbury and Georgina were added). The Peel hub, as a control, read 2.7 s and 2.6 s in the same runs, and it measured 2.3 s on PageSpeed Insights live. The new text all sits below the first screen and does not slow the page. Local runs load no Google tag; the York hub is not on the late-tag list and nothing about the tag changed.
 
 ## Judgment calls (strike any by number)
 1. The structure mirrors the Toronto and Peel hubs (four sections with the same headings, six questions), so the hubs read as a set.
@@ -33,16 +34,17 @@ Page: /service-areas/york-region. URL, title, H1 and meta description unchanged.
 14. One sentence is reused from the live site on purpose: "Usually, we can solve the wildlife problem entirely from outside without needing to enter your home." (the approved how-we-work line, also on the Toronto and Peel hubs). Every other new sentence is new; a check against the other 33 pages found no other shared sentence.
 15. "Vaughan (Woodbridge included)" in the first York question: Woodbridge is part of Vaughan, so it is named with Vaughan rather than as a separate place.
 16. The word "guarantee" is nowhere in the new copy; the trust row and the guarantee block carry it in the exact wording. No prices, reviews, ratings, years in business, awards, "fully insured", "licensed" or "block and lock" (the crawl's banned-word check passed). Phone links, the form and tracking untouched.
+17. East Gwillimbury and Georgina are named as towns, without their villages (Keswick, Sutton, Holland Landing and the rest), the same treatment as King Township. Their paragraph: East Gwillimbury "farmland and fast-growing new subdivisions along the Holland River" (checked: on the East Holland River, the fastest-growing municipality in Canada from 2016 to 2021, +44.4%); Georgina "on the lake's southeast shore" (checked), with cottages, year-round lakefront homes and older town streets (general, not looked up street by street).
 
-## Questions for the owner
-1. "The rest of York Region": the hub has said since Oct 12 that you cover King Township, Thornhill "and the rest of York Region", which takes in East Gwillimbury and Georgina, up to Lake Simcoe. The new copy keeps that phrase in the first York question. Is that right? If not, I'll change both to name only the places you do cover.
-2. Length: about 1,600 new words, roughly 440 more than the Peel hub got. The easy cuts if it should be shorter: the population sentence in "Why York Region has so much wildlife" (about 40 words), the "Only heard it, never seen it?" paragraph (about 35), and the ravine question (about 65).
+## The owner's answers (Oct 14)
+1. "The rest of York Region": "Yes, I do the entire York region." So the hub keeps "all of York Region" and now names East Gwillimbury and Georgina too (item 17). Recorded in CLAUDE.md under "Place names".
+2. Length: the website chat's call, whatever is best for SEO and looks good. Kept at full length; nothing cut.
 
 ## The new text, exactly as it renders
 
 ### Why York Region has so much wildlife
 
-The Oak Ridges Moraine runs across the middle of York Region, a broad band of hills, woodlots and kettle lakes, and the rivers that run through York's cities have their headwaters there. The Humber, the Don and the Rouge run south from it through Vaughan, Richmond Hill and Markham toward Lake Ontario; the Holland River and its branches run the other way, through Newmarket and the Holland Marsh to Lake Simcoe. Every one of those valleys is a travel route for raccoons, skunks and squirrels, and the conservation areas, forest tracts and golf courses between them give the animals somewhere to live within sight of the houses.
+The Oak Ridges Moraine runs across the middle of York Region, a broad band of hills, woodlots and kettle lakes, and the rivers that run through York's cities have their headwaters there. The Humber, the Don and the Rouge run south from it through Vaughan, Richmond Hill and Markham toward Lake Ontario; the Holland River and its branches run the other way, through Newmarket, East Gwillimbury and the Holland Marsh to Lake Simcoe. Every one of those valleys is a travel route for raccoons, skunks and squirrels, and the conservation areas, forest tracts and golf courses between them give the animals somewhere to live within sight of the houses.
 
 The houses do the rest. Thornhill, Richmond Hill and Aurora grew up along Yonge Street, and Unionville, Markham Village, Woodbridge, Kleinburg and Newmarket are old towns and villages too, with century homes, wood trim, deep eaves and chimneys that were never capped. Around those old cores, most of York is new: the region had about 170,000 people when it was formed in 1971 and has well over a million today, and many of its subdivisions went up on the edge of farmland and woodlots where the animals already lived. A large new home, with a long roofline, a row of plastic roof vents and aluminum or vinyl soffit, gives a raccoon or a squirrel more places to try, not fewer.
 
@@ -59,6 +61,8 @@ Further up Yonge Street, [Aurora](/service-areas/aurora) and [Newmarket](/servic
 [Stouffville](/service-areas/stouffville), the main town in Whitchurch-Stouffville, is where the subdivisions give way to countryside. Ballantrae's homes sit on a golf course ringed by woods, cottages and newer houses share the shore of Musselman's Lake, the town centre has a village core with new streets around it, and the forest tracts and rural lots around Vandorf and Gormley are countryside outright.
 
 Thornhill and King Township have no page of their own, and both are covered. Thornhill goes back to the 1790s as a village on Yonge Street, and its heritage core is surrounded by quiet streets of 1950s to 80s homes under mature trees. King Township is the countryside on York's west side: farms, estates, woodlots and small villages spread across the moraine, with the Holland Marsh in the north. Out there a raccoon or a skunk may be living in a barn, a garage or under a porch long before it tries the house, so the outbuildings get a look too.
+
+North of Newmarket, East Gwillimbury and Georgina take York Region up to Lake Simcoe, and both are covered too. East Gwillimbury is farmland and fast-growing new subdivisions along the Holland River; Georgina, on the lake's southeast shore, mixes cottages, year-round lakefront homes and older town streets, and an older cottage by the water has as many ways in as a century home.
 
 ### Which animal, and where
 
@@ -81,7 +85,7 @@ Then we seal the opening the animal used and repair the damage it left: a torn r
 ### The six York questions (after the seven standard ones)
 
 **Q: Which parts of York Region do you cover?**
-Markham, Vaughan (Woodbridge included), Richmond Hill, Newmarket, Aurora and Stouffville each have a page of their own. Thornhill and King Township are covered too, rural roads included, along with the rest of York Region.
+Markham, Vaughan (Woodbridge included), Richmond Hill, Newmarket, Aurora and Stouffville each have a page of their own. Thornhill, King Township, East Gwillimbury and Georgina are covered too, rural roads and the Lake Simcoe shore included: all of York Region.
 
 **Q: Do you cover Unionville, Kleinburg and Bayview Hill?**
 Yes. Unionville, Cachet and Angus Glen in Markham; Kleinburg, Woodbridge and Islington Woods in Vaughan; Bayview Hill, Mill Pond and Oak Ridges in Richmond Hill; Aurora Estates and Hills of St Andrew in Aurora; Stonehaven in Newmarket; Ballantrae and Musselman's Lake in Stouffville; and everywhere in between.
@@ -99,7 +103,7 @@ Very likely. Raccoons, skunks and squirrels live in the valleys and woodlots, an
 Same-day service is available for requests received before 4 PM, subject to technician availability. Calls are answered 24 hours a day, 7 days a week; tell us where you are, and we confirm the timing with you before anyone sets out.
 
 ## Checks run on the final text
-Typecheck and lint clean; production build OK; crawl of all 34 sitemap pages: all 200, titles, H1s and descriptions unique, FAQ schema matching the rendered questions (13 on the York hub), phone links present, banned words absent, Problems: none; compare against the live build: only /service-areas/york-region changed; shared-sentence check: only the standard lines (the seven site-wide questions, the trust row, the guarantee block) and the one approved how-we-work sentence; phone first screen: pass; local Lighthouse before and after: unchanged; structured data: the hub's area list includes Stouffville and King Township.
+Typecheck and lint clean; production build OK; crawl of all 34 sitemap pages: all 200, titles, H1s and descriptions unique, FAQ schema matching the rendered questions (13 on the York hub), phone links present, banned words absent, Problems: none; compare against the live build: only /service-areas/york-region and the York card on /service-areas changed; shared-sentence check: only the standard lines (the seven site-wide questions, the trust row, the guarantee block) and the one approved how-we-work sentence; phone first screen: pass; local Lighthouse before and after: unchanged; structured data: the hub's area list includes Stouffville and King Township.
 
 ## Checked online (Oct 13)
 - The Oak Ridges Moraine designation covers parts of Newmarket, Aurora, Richmond Hill, King Township, Whitchurch-Stouffville, Vaughan, Markham and East Gwillimbury (O. Reg. 1/02 and 141/02). So the existing hero line ("up onto the Oak Ridges Moraine at Aurora, Newmarket, Stouffville and King Township") holds and stays as it is.
@@ -107,6 +111,7 @@ Typecheck and lint clean; production build OK; crawl of all 34 sitemap pages: al
 - The Holland Marsh straddles King Township and Bradford West Gwillimbury, from the moraine's northern edge near Schomberg to Cook's Bay (Wikipedia, hollandmarsh.org).
 - Thornhill: land grants of 1794 on both sides of Yonge Street; the village is split between Vaughan and Markham along Yonge (Wikipedia, Thornhill Historic, City of Vaughan).
 - York Region population: 169,200 in 1971 (York Region, "50 facts"); 1,173,334 in the 2021 census.
+- Georgina: 47,642 people in 2021, on the southeast shore of Lake Simcoe, York Region's northernmost municipality (Wikipedia, Town of Georgina). East Gwillimbury: 34,637 people in 2021, up 44.4% from 2016, on the East Holland River (Wikipedia).
 
 ## Not checked
 The live site itself (it cannot be fetched from this session; the local build stands in). The neighbourhood descriptions (housing eras, lot sizes, golf courses, the Rouge through Markham, the Humber through Kleinburg, Boyd Conservation Area and Woodbridge) come from the six York city pages, which were written and approved earlier; they were not looked up again. Bats in King Township (item 8) and Newmarket's Main Street sitting off Yonge (item 7) were not looked up.
