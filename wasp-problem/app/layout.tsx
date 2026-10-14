@@ -76,7 +76,8 @@ const OPEN_24_7 = {
 
 /** PestControl is a schema.org LocalBusiness subtype, so this is the LocalBusiness markup. */
 function localBusinessJsonLd() {
-  const amounts = PRICING.map((item) => item.amount);
+  // Visible and hidden nest: the two headline prices. Extra-nest and ladder fees are add-ons, not part of the range.
+  const amounts = [PRICING[0].amount, PRICING[1].amount];
   return {
     "@context": "https://schema.org",
     "@type": "PestControl",
