@@ -69,7 +69,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     heroSubheadline: "Wasp Nest Removal for Markham Homeowners",
     intro: [
       "Markham runs from the heritage homes along Main Street Unionville and Markham Village to newer neighbourhoods like Cornell, Berczy Village and Cathedraltown. In the newer subdivisions, wasps tend to get in through vinyl siding seams, soffit vents, and the openings around dryer vents and gas lines.",
-      "Older homes in the historic districts have wooden trim and fascia, which is where carpenter bees bore their round holes. Cedar decks, fences and pergolas draw them too. Properties near the Rouge Valley on Markham's east side often see hornet nests in trees and shrubs.",
+      "Older homes in the historic districts have wooden trim and fascia, which is where bees sometimes settle into small round holes. Cedar decks, fences and pergolas draw them too. Properties near the Rouge Valley on Markham's east side often see hornet nests in trees and shrubs.",
       "Tell us where the wasps are going in and out and roughly how high up — that's usually enough for us to tell you what's involved before we arrive.",
     ],
     extraFaq: {
@@ -126,7 +126,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     heroSubheadline: "Wasp Nest Removal on Both Sides of Yonge",
     intro: [
       "Thornhill sits on both sides of Yonge Street — the west side is part of Vaughan, the east side part of Markham — and we serve both. The older homes around Old Thornhill, near Yonge and Centre Street, have wooden trim, porches and brickwork where wasps find gaps to nest behind.",
-      "Newer areas like Thornhill Woods have tall two-storey walls with vinyl siding and soffit vents, a common spot for hidden nests. Homes backing onto ravines and golf courses often see hornets nesting in trees and hedges, and carpenter bees in cedar fences and decks.",
+      "Newer areas like Thornhill Woods have tall two-storey walls with vinyl siding and soffit vents, a common spot for hidden nests. Homes backing onto ravines and golf courses often see hornets nesting in trees and hedges, and bees in cedar fences and decks.",
       "Whichever side of Yonge you're on, call or text us and describe where the wasps are coming and going. A photo helps, if you can take one safely.",
     ],
     extraFaq: {
@@ -164,7 +164,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     heroSubheadline: "Wasp Nest Removal for Ajax Homeowners",
     intro: [
       "Ajax is mostly family homes, from the older streets around Pickering Village on Kingston Road to the newer subdivisions in the north end. Across the town, wasps typically get in through soffit vents, vinyl siding seams and the openings around exhaust vents and utility lines.",
-      "Homes near the waterfront and along Duffins Creek tend to see more hornet nests in trees and shrubs. Decks, fences, sheds and play structures are frequent spots for paper wasps, and cedar decks and fences attract carpenter bees.",
+      "Homes near the waterfront and along Duffins Creek tend to see more hornet nests in trees and shrubs. Decks, fences, sheds and play structures are frequent spots for paper wasps, and cedar decks and fences attract bees as well.",
       "Call us any time, day or night, or send a text — tell us where you're seeing the wasps and how high up, and we'll tell you what's involved.",
     ],
     extraFaq: {
@@ -182,7 +182,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
       "Wasp nest removal in Whitby and Brooklin — downtown, Port Whitby and the north end. Open 24/7. Call 1-800-800-WASP.",
     heroSubheadline: "Wasp Nest Removal for Whitby and Brooklin",
     intro: [
-      "Whitby's older homes around downtown, near Brock and Dundas, and down toward Port Whitby have wooden porches, trim and brickwork where wasps nest behind loose boards and in mortar gaps. Carpenter bees are drawn to the older wooden fascia and railings.",
+      "Whitby's older homes around downtown, near Brock and Dundas, and down toward Port Whitby have wooden porches, trim and brickwork where wasps nest behind loose boards and in mortar gaps. Bees are also drawn to the older wooden fascia and railings.",
       "In newer neighbourhoods like Williamsburg, Taunton North and Brooklin, nests are usually hidden behind vinyl siding or in soffit vents on two-storey walls. Brooklin's edge-of-town lots also see nests in sheds, fences and outbuildings.",
       "Call us day or night, or text us with what you're seeing. A photo of where the wasps are going in helps us plan the job.",
     ],
@@ -202,7 +202,7 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
     heroSubheadline: "Wasp Nest Removal for Newmarket Homeowners",
     intro: [
       "Newmarket's historic homes around Main Street have wooden soffits, trim and porches, and brick with the kind of gaps wasps use to get into walls. In neighbourhoods like Stonehaven, Summerhill and Woodland Hill, the usual spots are soffit vents, siding seams and roof peaks.",
-      "Homes near Fairy Lake and the trails along the Holland River often see hornet nests in trees and shrubs. Cedar decks, fences and pergolas attract carpenter bees, and sheds and garages are common for paper wasps.",
+      "Homes near Fairy Lake and the trails along the Holland River often see hornet nests in trees and shrubs. Cedar decks, fences and pergolas attract bees, and sheds and garages are common for paper wasps.",
       "Call us any time, or text and describe what you're seeing. Knowing roughly how high the nest is helps us tell you what's involved.",
     ],
     extraFaq: {
