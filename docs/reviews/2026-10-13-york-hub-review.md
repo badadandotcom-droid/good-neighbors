@@ -1,6 +1,6 @@
 # York hub long-form copy: review notes for the owner (Oct 13, 2026)
 
-**Waiting for the owner's "approved". Nothing is live.** Built by GNW Website 7 on the session branch `ccr-23993167-5bcogn`, on top of the live branch (9142e43). Approve as is, or name the numbers below to strike or change.
+**DONE: approved by the owner Oct 15, 2026, without strikes ("approved, merged, make it live"). Live the same day.** Built by GNW Website 7 on the session branch `ccr-23993167-5bcogn`, on top of the live branch (9142e43). Approve as is, or name the numbers below to strike or change.
 
 Page: /service-areas/york-region. URL, title, H1 and meta description unchanged. One other page changes: the York card on the /service-areas index now lists East Gwillimbury and Georgina too. Every other page is byte-for-byte unchanged (compare check: 2 pages changed).
 
