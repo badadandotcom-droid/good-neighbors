@@ -139,9 +139,10 @@ Note that a contrast check reading only the alpha in a colour value misses CSS
 - `claude/wasp-problem-website-h1a4xo` — was meant to be kept in sync, but nothing has been pushed to it since
   Oct 1 (22 commits behind production on Oct 16). Nothing in the repo deploys from it; ask Duane before reviving
   or deleting it.
-- Handoff docs: the next chat's handoff goes to the production branch through the PR, never only to a session
-  branch. A new chat starts from production and sees nothing else (Oct 16 lesson: handoffs 5 and 6 sat on session
-  branches, so chat 6 started without them).
+- Handoff docs: a new chat starts from the production branch and sees only what is merged there. The next chat's
+  handoff goes to production inside your PR (or a docs-only PR when no page is going out), never only on a
+  session branch (Oct 16: chats 5 and 6 each reported the handoff missing). If it truly cannot be merged yet, the
+  paste box must also name the branch and a `git show origin/<branch>:<path>` line.
 
 ## Expanding beyond the GTA
 
