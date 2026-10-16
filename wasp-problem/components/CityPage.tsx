@@ -13,6 +13,7 @@ import { FinalCta } from "@/components/FinalCta";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SectionHeading } from "@/components/SectionHeading";
 import { TollFreeNumber } from "@/components/TollFreeNumber";
+import { SameDayNote } from "@/components/SameDayNote";
 import { AVAILABILITY_24_7, SAME_DAY_SERVICE } from "@/lib/site";
 import { BASE_FAQS } from "@/lib/content";
 import { REVIEWS } from "@/lib/testimonials";
@@ -56,7 +57,7 @@ export function CityPage({ location }: { location: CityLocation }) {
             <TrustPoints />
           </div>
 
-          <p className="mx-auto mt-7 max-w-sm text-xs text-muted">*{SAME_DAY_SERVICE.disclaimer}</p>
+          <SameDayNote />
         </div>
       </section>
 

@@ -13,6 +13,7 @@ import { FaqAccordion } from "@/components/FaqAccordion";
 import { LeadFormSection } from "@/components/LeadFormSection";
 import { FinalCta } from "@/components/FinalCta";
 import { SiteFooter } from "@/components/SiteFooter";
+import { SameDayNote } from "@/components/SameDayNote";
 import { AVAILABILITY_24_7, SAME_DAY_SERVICE } from "@/lib/site";
 import { HOMEPAGE_FAQS } from "@/lib/content";
 import { REVIEWS } from "@/lib/testimonials";
@@ -32,17 +33,18 @@ export default function Home() {
             {SAME_DAY_SERVICE.headline}*
           </p>
 
-          <h1 className="sign-lockup mt-6 text-balance text-[1.7rem] leading-[1.05] uppercase min-[360px]:text-3xl sm:text-6xl">
-            Wasp Nest Removal{" "}
+          {/* The lawn-sign lockup is the brand look, not the heading (owner's call, Oct 2026). The H1 is the
+              service-and-area line under it, which names what people search for; the h1 base styles are
+              cleared so it looks exactly like the two plain lines it replaced. */}
+          <p className="sign-lockup mt-6 text-6xl leading-[0.95] uppercase sm:text-8xl">
+            Wasp{" "}
             <br />
-            in Toronto &amp; the GTA
+            Problem?
+          </p>
+          <h1 className="mx-auto mt-5 max-w-md font-sans tracking-normal text-wrap">
+            <span className="block text-xl font-bold sm:text-2xl">Professional Wasp Nest Removal</span>{" "}
+            <span className="mt-2 block text-base font-normal text-muted sm:text-lg">Serving Toronto &amp; the GTA</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-md text-xl font-bold sm:text-2xl">
-            Professional Wasp Nest Removal
-          </p>
-          <p className="mx-auto mt-2 max-w-md text-base text-muted sm:text-lg">
-            Serving Toronto &amp; the GTA
-          </p>
           <p className="mx-auto mt-4 max-w-md text-base font-bold sm:text-lg">{AVAILABILITY_24_7}</p>
 
           <div className="mt-8">
@@ -53,12 +55,7 @@ export default function Home() {
             <TrustPoints />
           </div>
 
-          <p className="mx-auto mt-7 max-w-sm text-xs text-muted">
-            {/* Homepage-only wording (city pages keep SAME_DAY_SERVICE.disclaimer): the 1-800 line takes calls only,
-                so "call or text" never sits next to it. The number stays on one line. */}
-            *Same-day service is based on availability. Call <span className="whitespace-nowrap">1-800-800-WASP</span> to confirm
-            for your area.
-          </p>
+          <SameDayNote />
         </div>
       </section>
 
