@@ -137,6 +137,10 @@ Note that a contrast check reading only the alpha in a colour value misses CSS
   deploy of that commit shows Ready. Committed or pushed to a session branch is not live — never
   report it as done (Oct 14 lesson: the ads chat found the live site unchanged).
 - `claude/wasp-problem-website-h1a4xo` — kept in sync; push to both.
+- Handoff docs: a new chat starts from the production branch and sees only what is merged there. A handoff
+  left on a session branch is invisible to it (Oct 16: chats 5 and 6 each reported the handoff missing).
+  Merge the doc first (docs-only PR, on the owner's OK), then give the paste box. If it cannot be merged yet,
+  the paste box must also name the branch and a `git show origin/<branch>:<path>` line.
 
 ## Expanding beyond the GTA
 
