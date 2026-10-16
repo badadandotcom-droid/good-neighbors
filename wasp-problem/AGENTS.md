@@ -242,10 +242,14 @@ Keyword Planner volumes). Facts that drive the plan:
 Homepage hero (owner's call, Oct 16): the big "WASP PROBLEM?" lawn-sign lockup stays as the
 brand look; it is a `<p>`, not a heading. The H1 is the line under it, "Professional Wasp Nest
 Removal / Serving Toronto & the GTA". Don't make the homepage look worse for ad score: the
-themed pages below carry the specific searches.
+themed pages below carry the specific searches. Owner's call (Oct 16): the H1 stays "Serving
+Toronto & the GTA"; the ads chat suggested "in Toronto & the GTA" to match the search phrase,
+and the owner said no — change the ad if anything, not the site.
 
-Pages to build. The ads chat's order (Oct 16): 1. cost page, 2. `/yellow-jacket-removal`, 3. a bee page whose URL, keywords and headline 1 it will send; the bee ad stays on `/#bees` until that page is live and the owner OKs the switch. The rest follow the list below. New URLs only — never rename the homepage or a city page.
-Status Oct 16: page 1, `/wasp-nest-removal-cost`, is built on a session branch and waiting for the owner's OK; nothing in this list is live yet. For each page, the ads chat sends the ad group's keywords and
+Pages to build. New URLs only — never rename the homepage or a city page. The ads chat's order (Oct 16):
+cost page first, `/yellow-jacket-removal` second, `/bee-removal` third (the list numbers below predate that).
+Status Oct 16: page 1, `/wasp-nest-removal-cost`, is built on branch `ccr-48cbf059-7xs6dz` and waiting for
+the owner's OK; nothing in this list is live yet. For each page, the ads chat sends the ad group's keywords and
 headline 1; the page title and H1 use that main phrase word for word. Show the owner, publish
 on the owner's OK, then tell the ads chat it's live so it can point that ad group at the page
 (never before).
@@ -256,15 +260,20 @@ on the owner's OK, then tell the ads chat it's live so it can point that ad grou
 2. `/wasp-nest-removal-cost` — the price table ($180 visible, $250 hidden, +$100 each extra nest,
    ladder fees), what changes the price, what is included, the 90-day service guarantee. Cost
    searches are hire-intent and convert; upfront pricing is the differentiator.
-3. Deepen `/toronto-wasp-removal` to 400–500 words (neighbourhoods, housing types, where nests
+3. `/bee-removal` — added Oct 16 on the owner's OK. A real page for the bee ad, because Google
+   ignores the `#bees` part of `/#bees` and scores the whole homepage (which is about wasps).
+   Bees stay generic: no honey, bumble or carpenter bee copy. Keep the "bees" anchor on the
+   homepage; the bee ad keeps linking to `/#bees` until this page is live and the owner OKs the
+   switch. Needs the ads chat's ad group name, keywords and headline 1 first.
+4. Deepen `/toronto-wasp-removal` to 400–500 words (neighbourhoods, housing types, where nests
    turn up). It carries "wasp removal toronto" (260/mo); the other city pages carry ~10/mo each
    and already score well — leave them as they are.
-4. `/wasps-in-wall-or-roof` — hidden nests: wall voids, behind siding, brick weep holes, soffits,
+5. `/wasps-in-wall-or-roof` — hidden nests: wall voids, behind siding, brick weep holes, soffits,
    roof edges, attics. Matches the "Wasps in Your Wall or Roof?" ad headline and the $250
    hidden-nest price.
-5. `/hornet-nest-removal` — bald-faced hornets and paper nests in trees, eaves and sheds.
-6. `/emergency-wasp-removal` — supports the 24/7 ad (see the open item above).
-7. Product & safety page (Drione; see the open item above). Best after the Dec 7 exam, since
+6. `/hornet-nest-removal` — bald-faced hornets and paper nests in trees, eaves and sheds.
+7. `/emergency-wasp-removal` — supports the 24/7 ad (see the open item above).
+8. Product & safety page (Drione; see the open item above). Best after the Dec 7 exam, since
    it describes commercial pesticide use.
 
 Every page: the first phone screen holds the H1 with the phrase, the flat price, the 90-day service guarantee and a big Call button (mobile Lighthouse LCP target: under 2.5 s); the search phrase is in the title, H1 and H2s; a "what you're seeing → what it

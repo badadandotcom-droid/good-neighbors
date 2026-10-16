@@ -2,10 +2,16 @@ Chat name: Wasp Problem Lead Website 6
 
 Written Oct 16, 2026 by Wasp Problem Lead Website 5. This chat is for Wasp Problem only: the site in
 `wasp-problem/`, live at www.waspproblem.ca. Good Neighbors Wildlife has its own chats; if Duane brings
-it up here, say this is the Wasp Problem website chat. Replaces `wasp-problem-lead-website-4.md`.
+it up here, say this is the Wasp Problem website chat. Replaces `wasp-problem-lead-website-5.md` (marked DONE).
+
+Model: Fable for page copy (judgment-heavy, paid ad traffic). Page 1's copy was drafted on Sonnet and has had no
+Fable pass yet; Duane can have it re-read on Fable before he OKs it. Sonnet is fine for lint, build, screenshots, merging.
 
 ## Start here
 
+0. PR #12 (docs only: `/bee-removal` in the roadmap, the H1 decision, chat 4's handoff) was open when chat 4
+   finished. Its branch `claude/wasp-problem-lead-website-4-0st8h5` is merged into the page-1 branch, so merging
+   the page-1 PR lands it too. Check PR #12's state first; if it merged on its own, nothing is lost.
 1. Read `wasp-problem/AGENTS.md` (rules, accounts, roadmap) and the Wasp Problem rules in the root `CLAUDE.md`.
 2. Page 1 is built but NOT live. It is on branch `ccr-48cbf059-7xs6dz`, which also holds this doc, and it waits
    for Duane's OK. To read or publish it: `git fetch origin ccr-48cbf059-7xs6dz`.
@@ -24,6 +30,8 @@ it up here, say this is the Wasp Problem website chat. Replaces `wasp-problem-le
 - Request form: Resend domain verified Oct 12; leads come from website@waspproblem.ca to
   duane@goodneighborswildlife.ca, subject "Wasp Problem lead — …". `/review` goes to the Google review link.
 - Brampton page is live but not featured; never point Google Ads at it.
+- Homepage H1 stays "Professional Wasp Nest Removal / Serving Toronto & the GTA" (Duane, Oct 16: if the ads chat
+  wants the phrase to match, the ad changes, not the site).
 
 ## Page 1: /wasp-nest-removal-cost (ad group "Wasp Nest Removal Cost") — BUILT, WAITING FOR DUANE'S OK
 
@@ -58,6 +66,12 @@ Waiting on Duane before publishing (he confirms each):
 3. Cities section says the price list is the same one shown on each city page.
 4. "What happens if you wait" copy.
 5. The page says nothing on free quotes, HST, hornets or yellow jackets, bees, or evenings and weekends, on purpose.
+6. Title: built "Wasp Nest Removal Cost: $180 Visible, $250 Hidden" (price in the title; the area is in the H1
+   subline and the description). Chat 4's plan was "Wasp Nest Removal Cost in Toronto & the GTA". H1 is "Wasp Nest
+   Removal Cost" with "Serving Toronto & the GTA" under it, as planned.
+7. Hero differs from chat 4's plan: no same-day badge, no TrustPoints list, no SameDayNote; two price tiles instead,
+   so the first phone screen holds the H1, prices, guarantee and Call button. Same-day appears only in an FAQ, with
+   "based on availability".
 
 After his OK: publish (steps above), then paste box for the ads chat: page live at
 https://www.waspproblem.ca/wasp-nest-removal-cost, so it can point the "Wasp Nest Removal Cost" ad group at it
