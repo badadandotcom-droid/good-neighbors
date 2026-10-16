@@ -235,10 +235,14 @@ Keyword Planner volumes). Facts that drive the plan:
 Homepage hero (owner's call, Oct 16): the big "WASP PROBLEM?" lawn-sign lockup stays as the
 brand look; it is a `<p>`, not a heading. The H1 is the line under it, "Professional Wasp Nest
 Removal / Serving Toronto & the GTA". Don't make the homepage look worse for ad score: the
-themed pages below carry the specific searches.
+themed pages below carry the specific searches. Owner's call (Oct 16): the H1 stays "Serving
+Toronto & the GTA"; the ads chat suggested "in Toronto & the GTA" to match the search phrase,
+and the owner said no — change the ad if anything, not the site.
 
-Pages to build, in this order. New URLs only — never rename the homepage or a city page.
-Status Oct 16: none built yet. For each page, the ads chat sends the ad group's keywords and
+Pages to build. New URLs only — never rename the homepage or a city page. Status Oct 16: none
+built yet. Which of pages 1 and 2 goes first is for the owner and the ads chat to pick (the ads
+chat leans to the cost page, which converts and already has its price table); don't start either
+until the ads chat names it. For each page, the ads chat sends the ad group's keywords and
 headline 1; the page title and H1 use that main phrase word for word. Show the owner, publish
 on the owner's OK, then tell the ads chat it's live so it can point that ad group at the page
 (never before).
@@ -249,15 +253,20 @@ on the owner's OK, then tell the ads chat it's live so it can point that ad grou
 2. `/wasp-nest-removal-cost` — the price table ($180 visible, $250 hidden, +$100 each extra nest,
    ladder fees), what changes the price, what is included, the 90-day service guarantee. Cost
    searches are hire-intent and convert; upfront pricing is the differentiator.
-3. Deepen `/toronto-wasp-removal` to 400–500 words (neighbourhoods, housing types, where nests
+3. `/bee-removal` — added Oct 16 on the owner's OK. A real page for the bee ad, because Google
+   ignores the `#bees` part of `/#bees` and scores the whole homepage (which is about wasps).
+   Bees stay generic: no honey, bumble or carpenter bee copy. Keep the "bees" anchor on the
+   homepage; the bee ad keeps linking to `/#bees` until this page is live and the owner OKs the
+   switch. Needs the ads chat's ad group name, keywords and headline 1 first.
+4. Deepen `/toronto-wasp-removal` to 400–500 words (neighbourhoods, housing types, where nests
    turn up). It carries "wasp removal toronto" (260/mo); the other city pages carry ~10/mo each
    and already score well — leave them as they are.
-4. `/wasps-in-wall-or-roof` — hidden nests: wall voids, behind siding, brick weep holes, soffits,
+5. `/wasps-in-wall-or-roof` — hidden nests: wall voids, behind siding, brick weep holes, soffits,
    roof edges, attics. Matches the "Wasps in Your Wall or Roof?" ad headline and the $250
    hidden-nest price.
-5. `/hornet-nest-removal` — bald-faced hornets and paper nests in trees, eaves and sheds.
-6. `/emergency-wasp-removal` — supports the 24/7 ad (see the open item above).
-7. Product & safety page (Drione; see the open item above). Best after the Dec 7 exam, since
+6. `/hornet-nest-removal` — bald-faced hornets and paper nests in trees, eaves and sheds.
+7. `/emergency-wasp-removal` — supports the 24/7 ad (see the open item above).
+8. Product & safety page (Drione; see the open item above). Best after the Dec 7 exam, since
    it describes commercial pesticide use.
 
 Every page: the search phrase in the title, H1 and H2s; a "what you're seeing → what it
