@@ -22,6 +22,13 @@ export const PRICING: readonly PriceLineItem[] = [
   },
 ] as const;
 
+/** One price line's amount by id. Throws at build time if the id is missing, so a renamed line fails loudly. */
+export function priceOf(id: string): number {
+  const item = PRICING.find((p) => p.id === id);
+  if (!item) throw new Error(`lib/pricing.ts has no "${id}" line`);
+  return item.amount;
+}
+
 export const NEST_TYPE_EXPLANATION = {
   visible:
     "Visible means the nest itself can be seen — for example, hanging under an eave or attached to a wall.",

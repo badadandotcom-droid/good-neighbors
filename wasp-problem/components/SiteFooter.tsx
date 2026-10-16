@@ -1,5 +1,7 @@
+import Link from "next/link";
 import { PhoneLink } from "@/components/PhoneLink";
 import { TextLink } from "@/components/TextLink";
+import { LANDING_PAGES } from "@/lib/landing-pages";
 import { INSURANCE, PHONE_LOCAL, PHONE_TOLLFREE } from "@/lib/site";
 
 const FOOTER_LINK =
@@ -31,6 +33,18 @@ export function SiteFooter() {
             Text us
           </TextLink>
         </p>
+
+        <nav aria-label="Services" className="mt-3">
+          <ul className="flex flex-wrap justify-center gap-x-5">
+            {LANDING_PAGES.map((page) => (
+              <li key={page.href}>
+                <Link href={page.href} prefetch={false} className={FOOTER_LINK}>
+                  {page.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
         <p className="mt-4 text-white/75">{INSURANCE}.</p>
         <p className="mt-2 text-xs text-white/60">WaspProblem.ca</p>

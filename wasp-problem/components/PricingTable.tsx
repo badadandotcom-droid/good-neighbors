@@ -1,15 +1,18 @@
+import Link from "next/link";
 import { PhoneLink } from "@/components/PhoneLink";
 import { SectionHeading } from "@/components/SectionHeading";
 import { PRICING, NEST_TYPE_EXPLANATION } from "@/lib/pricing";
 import { TollFreeNumber } from "@/components/TollFreeNumber";
+import { COST_PAGE } from "@/lib/cost-page";
 
-export function PricingTable() {
+/** `title` lets a landing page put its search phrase in this H2; everywhere else it reads "Pricing". */
+export function PricingTable({ title = "Pricing" }: { title?: string }) {
   return (
     <section id="pricing" className="bg-white px-5 py-16 sm:py-24">
       <div className="mx-auto max-w-xl">
         <SectionHeading
           eyebrow="Residential pricing"
-          title="Pricing"
+          title={title}
           lede="What we quote is what you pay."
         />
 
@@ -52,7 +55,15 @@ export function PricingTable() {
           More than one nest, or a nest that needs ladder access, adds to the total. We confirm
           your total price, including any required ladder fees, before starting work.{" "}
           <strong className="font-bold text-ink">Commercial</strong> and institutional properties
-          are quoted separately.
+          are quoted separately. See common jobs added up on our{" "}
+          <Link
+            href={COST_PAGE.href}
+            prefetch={false}
+            className="font-semibold text-ink underline decoration-yellow-deep decoration-2 underline-offset-4"
+          >
+            wasp nest removal cost
+          </Link>{" "}
+          page.
         </p>
 
         <div className="mt-8 text-center">
