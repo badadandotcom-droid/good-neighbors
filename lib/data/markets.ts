@@ -216,16 +216,93 @@ export const MARKETS: Market[] = [
     brandName: "Good Neighbors Durham Region",
     heroHeading: "Wildlife Removal in Durham Region",
     hubTitle: "Wildlife Removal in Durham Region: Pickering, Ajax, Whitby & Oshawa",
-    alsoCovered: ["Uxbridge", "Scugog", "Bowmanville", "Courtice"],
+    alsoCovered: ["Uxbridge", "Scugog", "Bowmanville", "Courtice", "Brock Township"],
     status: "active",
     country: "CA",
     region: "Ontario",
     metro: "Greater Toronto Area",
-    serviceArea: ["Pickering", "Ajax", "Whitby", "Oshawa"],
+    serviceArea: ["Pickering", "Ajax", "Whitby", "Oshawa", "Uxbridge", "Scugog", "Bowmanville", "Courtice", "Brock Township"],
     heroBlurb:
       "Durham Region runs along the lake from Pickering through Ajax and Whitby to Oshawa and Bowmanville, with the Rouge, Duffins Creek, Lynde Creek and Oshawa Creek cutting green corridors through it. Lakefront homes, postwar neighbourhoods and new subdivisions all get the same visitors. Wherever you are in Durham, we remove the animal humanely, seal the way in and repair the damage.",
     seoDescription:
       "Humane wildlife removal in Pickering, Ajax, Whitby and Oshawa. We seal the way in and repair the damage. Lifetime guarantee on every entry point we seal.",
+    // Long-form hub copy (Oct 2026), done the same way as Toronto, Peel and
+    // York: Durham facts only (checked online; sources in
+    // docs/reviews/2026-10-16-durham-hub-review.md), neighbourhood names from
+    // the four Durham city pages (the owner's lists), "Scugog" never Port
+    // Perry, Brock Township and Clarington without their villages, nothing
+    // about the business that the live site doesn't already say. Clarington,
+    // Bowmanville, Courtice, Uxbridge, Scugog and Brock Township have no page
+    // of their own, so they are named, never linked (the owner covers all of
+    // Durham Region, Oct 16 2026).
+    hubSections: [
+      {
+        heading: "Why Durham Region has so much wildlife",
+        paragraphs: [
+          "Duffins Creek, Lynde Creek, Oshawa Creek and Bowmanville Creek begin on the Oak Ridges Moraine and run south to Lake Ontario, through Pickering and Ajax, Whitby, Oshawa and Clarington in turn. Lynde Creek starts in Scugog, Oshawa Creek runs about 50 kilometres to the lake through the middle of its city, and Carruthers Creek rises south of the Moraine in Pickering and meets the lake at Richardson Point in Ajax. Each valley carries a line of woods and water through farmland and subdivisions alike, and raccoons, skunks and squirrels use those lines to move between the countryside and the backyards. The shore they reach is green too, from the Rouge valley on the western edge and Frenchman's Bay to the marsh at Lynde Shores, and Second Marsh, McLaughlin Bay Wildlife Reserve and Darlington Provincial Park add nearly 400 hectares more on the lake at Oshawa and Clarington.",
+          "Then there are the houses. Whitevale, Pickering Village and the heart of Brooklin are 19th-century villages, and McLaughlin and Centennial, on either side of downtown Oshawa, go back to the early 1900s; an animal there finds wood soffit and fascia with generations of weather on them, deep eaves and, often, a chimney with no cap. Around those cores the region has nearly tripled, from just under 250,000 people at the 1976 census to almost 700,000 in 2021, and much of the newest building sits at the edge of the countryside, on what was farmland or open field not long ago. Big new two-storeys have openings of their own, from plastic roof vents and aluminum soffit to the corner where a garage roof meets the house.",
+        ],
+      },
+      {
+        heading: "Durham Region, part by part",
+        paragraphs: [
+          "[Pickering](/service-areas/pickering) has a national park on its doorstep. Rosebank and Rouge Park are older homes on wooded lots that back onto Rouge National Urban Park, and Whitevale's 19th-century houses sit up on Duffins Creek. Amberlea, Dunbarton and Liverpool are 1970s to 90s subdivisions whose trees now reach the eaves, Bay Ridges is the 1960s neighbourhood on Frenchman's Bay, and Brock Ridge is newer still. Claremont, in the rural north, sits just below the Moraine, inside the Greenbelt.",
+          "In [Ajax](/service-areas/ajax), Riverside and Nottingham lead a run of 1990s to 2010s two-storeys that takes in Salem and Applecroft, with Riverside backing onto the Duffins Creek valley and Hermitage in between. The older parts are Pickering Village, a 19th-century settlement of brick and frame homes, and central Ajax, which grew from its wartime houses near the old munitions plant; Lakeside runs along the waterfront trail.",
+          "[Whitby](/service-areas/whitby), the regional seat, runs from the lake up to Brooklin, an old village of century homes under mature trees with a quarter-century of new subdivisions around it. Nearer the lake are the older streets along Lynde Creek, which ends in the Lynde Shores marsh, and Port Whitby on the harbour. Pringle Creek, Rolling Acres and Blue Grass Meadows fill the middle of town with 1980s and 90s homes, and Williamsburg and Taunton North, like the newer parts of Brooklin, went up on farmland in the north.",
+          "[Oshawa](/service-areas/oshawa), Durham's largest city, is built along Oshawa Creek. Its newest homes are the big two-storeys of Windfields and Kedron, up by Ontario Tech and Durham College, with open fields still beside them, while McLaughlin and Centennial, close to downtown, are its old brick and frame streets. Northglen, Samac and later Taunton filled in the north from the 1980s on, Pinecrest, Eastdale and Lakeview are the postwar streets, and Second Marsh, a provincially significant wetland, lies on the lake at the city's southeast end.",
+          "East of Oshawa, Courtice and Bowmanville are covered as well, both of them in Clarington, the municipality that forms the eastern edge of the GTA along the lake. Courtice sits right next to Oshawa. Bowmanville, Clarington's largest community, keeps a historic downtown on King Street, with newer streets around it and Bowmanville Creek and Soper Creek coming down from the Moraine.",
+          "North of the lakeshore, Uxbridge, Scugog and Brock Township are covered too, and up here Durham is mostly countryside. Uxbridge lies on the Oak Ridges Moraine, inside the Greenbelt; Scugog is mostly farmland, with Lake Scugog across its northeast; and Brock Township reaches the east shore of Lake Simcoe, so Durham Region runs from Lake Ontario all the way up to Lake Simcoe. Country lots have more to look at than the house: a barn, a drive shed or the space under a deck may be where the animal is living, so the visit takes them in along with the roofline.",
+        ],
+      },
+      {
+        heading: "Which animal, and where",
+        paragraphs: [
+          "From the Bay Ridges waterfront to the farm lanes of Brock Township, raccoons are part of life in Durham. Their sound is heavy and slow and comes after dark, sometimes with a thump, and between late winter and early summer the kits can be heard calling. On a newer two-storey in Riverside or Windfields they usually come in through a plastic roof vent or a lifted corner of soffit; on a century house in Whitevale or Pickering Village, an uncapped chimney or a gap in the old wood trim is just as likely. [Raccoon removal](/wildlife/raccoons) goes through the signs and the spring season in more detail.",
+          "A squirrel works by daylight, and its scampering is loudest soon after sunrise and again toward dusk. Old trees in McLaughlin, Port Whitby and old Brooklin carry squirrels onto the roof, and on newer streets the way in is gnawed through a soffit corner, a fascia board or the edge of a roof vent. One heard in spring or again in late summer may well have young in the insulation, and [squirrel removal](/wildlife/squirrels) explains why that matters before anything is sealed.",
+          "Skunks look for a den under a deck, a porch, a shed or the front steps, and Durham's creek valleys, lakeshore marshes and larger rural lots suit them well ([skunk removal](/wildlife/skunks)). Starlings and sparrows pick an open dryer or bathroom vent, or an old chimney, for their spring nests; we look for eggs or young before anything is covered ([bird removal](/wildlife/birds)).",
+          "In Durham, bats are mostly found in older houses, tucked behind loose fascia or in a gap in the attic, from Whitevale and Pickering Village to Port Whitby, old Brooklin and the streets near downtown Oshawa. Ontario protects them, so the timing is settled first and the method explained to you before anything is done ([bat removal](/wildlife/bats)).",
+          "Only a noise to go on? [Something in the attic](/wildlife/something-in-the-attic) and [something in the walls](/wildlife/something-in-the-walls) tell the animals apart by the sound and the hour, and the attic hatch can stay closed.",
+        ],
+      },
+      {
+        heading: "How a visit works in Durham Region",
+        paragraphs: [
+          "Usually, we can solve the wildlife problem entirely from outside without needing to enter your home. The first thing we look at is the whole roofline, vent by vent and corner by corner, because the hole an animal uses is often some distance from where the sound is, and a big Brooklin or Kedron roof sometimes has a second. Nothing is removed until we know which animal it is and whether it has young; a mother and her young leave together, humanely. You hear the price from us before any work is done.",
+          "With the animal gone, the opening it used is sealed and the damage it left is repaired: a torn roof vent, a soffit lifted at the corner, chewed fascia, a chimney that needs a cap, a vent that needs a cover, damaged shingles and roof boards, an eavestrough or siding, and soiled or flattened attic insulation, with the droppings and nesting cleaned out. Each repair is matched to the materials and colours already on the house, whether that means the wood trim of an older house in Port Whitby or the soffit of a new two-storey in Windfields, and a deck, porch or shed that a skunk dug under gets wire mesh buried along its base. [Damage repair](/wildlife/damage-repair) shows every repair we handle.",
+        ],
+      },
+    ],
+    hubFaqs: [
+      {
+        question: "Which parts of Durham Region do you cover?",
+        answer:
+          "All eight of its municipalities. Pickering, Ajax, Whitby and Oshawa have their own pages, and Clarington (home to Courtice and Bowmanville), Uxbridge, Scugog and Brock Township are covered just the same, rural roads and lakefront included.",
+      },
+      {
+        question: "Do you cover Rosebank, Brooklin and Windfields?",
+        answer:
+          "Yes, along with every neighbourhood around them: Rosebank, Rouge Park and Whitevale in Pickering; Riverside, Nottingham and Pickering Village in Ajax; Brooklin, Lynde Creek and Port Whitby in Whitby; and Windfields, Kedron and McLaughlin in Oshawa.",
+      },
+      {
+        question: "Do you cover the countryside in Uxbridge, Scugog and Brock Township?",
+        answer:
+          "Yes, all of the countryside is covered, from farms and estates to the homes around Lake Scugog and along the Lake Simcoe shore. Out there, same-day visits follow the usual rule: requests received before 4 PM, subject to technician availability.",
+      },
+      {
+        question: "Do homes near the lake or a creek see more wildlife?",
+        answer:
+          "Often, yes: raccoons and skunks live along the creek valleys, around the marshes at Lynde Shores and Second Marsh and by Frenchman's Bay, so a house at the water's edge or above a ravine is one of the first they come to. Nothing about the view or the trees needs to change. We deal with the opening the animal is using and whatever it damaged there, the same as on any other street.",
+      },
+      {
+        question: "Do you work on century homes in Whitevale, Pickering Village and old Brooklin?",
+        answer:
+          "Yes, with the care an older house deserves. On a century home, an animal usually gets in through the original wood soffit or fascia, the seam where an addition meets the old roof, or a chimney that never had a cap, and the repair is made in materials and colours matched to what is already there.",
+      },
+      {
+        question: "How quickly can you get to a Durham Region home?",
+        answer: `${DEFAULT_SAME_DAY_SERVICE.qualificationMessage} Calls from anywhere in the region are answered 24 hours a day, 7 days a week, and a visit time is agreed with you before anyone is on the road.`,
+      },
+    ],
   },
   {
     slug: "peel-region",
