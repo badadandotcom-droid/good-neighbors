@@ -69,18 +69,18 @@ export const SERVICE_AREAS = [
  * them overnight, so never promise a 24/7 or "day or night" reply to either —
  * the vetted wording is "usually within a few hours; overnight, first thing in
  * the morning". 24/7 is also about answering, not arrival — same-day service stays "based on
- * availability" (SAME_DAY_SERVICE) everywhere it appears.
+ * availability" (SameDayNote) everywhere it appears.
  */
 export const AVAILABILITY_24_7 = "Open 24/7 — call us anytime." as const;
 
 /**
  * Hero badge on the homepage and city pages. "Emergency" is owner-confirmed (urgent jobs —
  * a nest by the door, an allergy, a sting — are handled the same evening). The asterisk
- * still points to the disclaimer; never pair "emergency" with 24/7, which promises arrival.
+ * points to SameDayNote under the hero buttons; never pair "emergency" with 24/7, which
+ * promises arrival.
  */
 export const SAME_DAY_SERVICE = {
   headline: "Same-Day & Emergency Service",
-  disclaimer: "Based on availability. Call or text to confirm for your area.",
 } as const;
 
 /**

@@ -18,7 +18,7 @@ export function BeesSection() {
         <SectionHeading
           eyebrow="Bee removal"
           title="We Remove Bees Too"
-          lede="Bees going into a wall, under the soffit, into the ground, or boring round holes in wood — we handle those as well as wasps and hornets. Call or text and tell us where you're seeing them."
+          lede="Bees going into a wall, under the soffit, into the ground, or boring round holes in wood — we handle those as well as wasps and hornets. Call 1-800-800-WASP and tell us where you're seeing them."
         />
         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <PhoneLink location="bees" className="btn btn-dark min-h-14 w-full max-w-xs px-7 py-4 text-lg sm:w-auto">

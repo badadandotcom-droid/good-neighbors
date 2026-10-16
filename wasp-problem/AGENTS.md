@@ -131,6 +131,9 @@ Note that a contrast check reading only the alpha in a colour value misses CSS
 ## Branches
 
 - `claude/good-neighbors-website-17l0bw` — tracked by Vercel production. Commit here.
+  A change is "done" or "live" only once it is merged into this branch AND Vercel's production
+  deploy of that commit shows Ready. Committed or pushed to a session branch is not live — never
+  report it as done (Oct 14 lesson: the ads chat found the live site unchanged).
 - `claude/wasp-problem-website-h1a4xo` — kept in sync; push to both.
 
 ## Expanding beyond the GTA
@@ -155,10 +158,11 @@ Ads points at them. Add new pages alongside them.
 - [x] Turn on the request form — done Oct 1, 2026. `RESEND_API_KEY` + `LEAD_TO_EMAIL` set in
       Vercel (Production), redeployed, test request delivered to the inbox (not spam).
 - [x] `lead_form` marked as a key event in GA4 — done Oct 2, 2026 (starred next to `cta_call` / `cta_text`).
-- [ ] Verify waspproblem.ca in Resend (DNS records), THEN set `LEAD_FROM_EMAIL` =
-      `Wasp Problem <website@waspproblem.ca>` in Vercel and redeploy. Never set it before the
-      domain shows Verified — Resend rejects the sender and every lead fails. Lead subjects
-      start "Wasp Problem lead —" (owner's Gmail filter keys on it; don't change it).
+- [x] Verify waspproblem.ca in Resend — done Oct 12, 2026 (DNS records at GoDaddy; region North
+      Virginia). `LEAD_FROM_EMAIL` = `Wasp Problem <website@waspproblem.ca>` is set in Vercel
+      (Production) and redeployed; leads now arrive from website@waspproblem.ca. If the domain
+      ever stops showing Verified, Resend rejects the sender and every lead fails. Lead subjects
+      start "Wasp Problem lead —" (the owner's Gmail filter will key on it; don't change it).
 - [ ] Separate from Wasp Problem: check how Good Neighbors' own form is set up in Resend
       (it delivers to hello@goodneighborswildlife.ca from the same Resend account).
 - [ ] Reorder the Business Profile service areas so Toronto is first (owner's action).
@@ -205,7 +209,7 @@ Which login each service uses. Emails and sign-in method only — never password
 |---|---|---|---|
 | Resend (request form email) | duane@goodneighborswildlife.ca | "Log in with Google", from the **Work** (Good Neighbors) Chrome profile | Shared with Good Neighbors. Wasp Problem's key is named "Wasp Problem website" — don't delete it, the form stops sending. Requests go to `LEAD_TO_EMAIL` = duane@goodneighborswildlife.ca. |
 | Resend (unused) | badadandotcom@gmail.com | — | Created by mistake Oct 1, 2026. Not used; safe to ignore or delete. |
-| Vercel (hosting) | badadandotcom-droid team | the Chrome profile with the wasp picture | Project `wasp-problem`. Holds `RESEND_API_KEY` and `LEAD_TO_EMAIL`. |
+| Vercel (hosting) | badadandotcom-droid team | the Chrome profile with the wasp picture | Project `wasp-problem`. Holds `RESEND_API_KEY`, `LEAD_TO_EMAIL` and `LEAD_FROM_EMAIL`. |
 
 Chrome profiles: the one with the **wasp picture** is signed in to Google as
 badadandotcom@gmail.com, not a Wasp Problem address — there is no Wasp Problem email yet.
@@ -228,7 +232,16 @@ Keyword Planner volumes). Facts that drive the plan:
   in 90 days came from a "wasp nest removal cost" search.
 - Hire-intent clicks cost CA$11–12. The bee ad group sends traffic to the homepage, not /#bees.
 
+Homepage hero (owner's call, Oct 16): the big "WASP PROBLEM?" lawn-sign lockup stays as the
+brand look; it is a `<p>`, not a heading. The H1 is the line under it, "Professional Wasp Nest
+Removal / Serving Toronto & the GTA". Don't make the homepage look worse for ad score: the
+themed pages below carry the specific searches.
+
 Pages to build, in this order. New URLs only — never rename the homepage or a city page.
+Status Oct 16: none built yet. For each page, the ads chat sends the ad group's keywords and
+headline 1; the page title and H1 use that main phrase word for word. Show the owner, publish
+on the owner's OK, then tell the ads chat it's live so it can point that ad group at the page
+(never before).
 
 1. `/yellow-jacket-removal` — yellow jackets, ground wasps, nests in the lawn, under steps and
    in wall voids. Targets ~260/mo of mostly Low-competition searches (yellow jacket exterminator,
