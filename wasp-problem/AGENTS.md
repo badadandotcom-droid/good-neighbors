@@ -72,6 +72,8 @@ These are not style preferences. Breaking one is a real-world problem for the ow
   under 10 ft included; over 25 ft quoted separately).
   The $180 is a deliberate loss-leader anchor so the site can say "transparent
   pricing from $180" — do not "correct" it upward to match the others.
+  Owner-confirmed Oct 16 (relayed by chat 5, his words): a visible nest plus one extra nest is $280 ($180 + $100);
+  taking a visible nest down and away is part of the $180; the same price list applies in every city.
 - 90-day guarantee (`GUARANTEE` in `lib/site.ts`): *"If wasps return to the nest we
   treated within 90 days, we come back and deal with it at no additional charge."*
   The owner chose this wording over alternatives. Don't re-litigate it.
