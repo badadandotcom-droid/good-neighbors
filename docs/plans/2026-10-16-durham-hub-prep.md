@@ -12,7 +12,7 @@ For the Fable (or Opus) chat that writes the copy. Reading and fact-checking onl
 - Ajax: Riverside, Nottingham, Pickering Village, Lakeside, Applecroft, Hermitage, Salem, Central Ajax.
 - Whitby: Brooklin, Lynde Creek, Port Whitby, Pringle Creek, Rolling Acres, Blue Grass Meadows, Williamsburg, Taunton North.
 - Oshawa: Windfields, Kedron, McLaughlin, Northglen, Samac, Taunton, Pinecrest, Centennial, Eastdale, Lakeview.
-- Plus: Uxbridge, Scugog (never Port Perry), Bowmanville, Courtice. No village names. Not on the owner's list, so do not name: Brock Township (Beaverton, Cannington, Sunderland), Newcastle, Orono, Seaton, Blackstock. Ask the owner if he covers Brock and Clarington's other towns (he said Oct 14 that he covers all of York; he has not said it for Durham).
+- Plus: Uxbridge, Scugog (never Port Perry), Bowmanville, Courtice. No village names. Owner, Oct 16: "I'll cover all of Durham", so the hub says it covers all of Durham Region and also names Brock Township, the same way York's hub names East Gwillimbury and Georgina: as a township, without its villages (not Beaverton, Cannington or Sunderland). Clarington may be named as the municipality that holds Bowmanville and Courtice (make it a numbered judgment call in the review). Still not named: Newcastle, Orono, Seaton, Blackstock (villages or not on the owner's list). Where York's change touched them, do the Durham equivalents: the list under the H1 and "We also cover" (`alsoCovered`), the /service-areas index card, the structured-data area list, a line in the CLAUDE.md place-names rule.
 - City page links: /service-areas/pickering, /ajax, /whitby, /oshawa.
 
 ## Facts found online (Oct 16; standard web search, nothing else checked)
