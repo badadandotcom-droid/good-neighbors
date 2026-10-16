@@ -32,10 +32,10 @@ export default function Home() {
             {SAME_DAY_SERVICE.headline}*
           </p>
 
-          <h1 className="sign-lockup mt-6 text-6xl leading-[0.95] uppercase sm:text-8xl">
-            Wasp{" "}
+          <h1 className="sign-lockup mt-6 text-balance text-[1.7rem] leading-[1.05] uppercase min-[360px]:text-3xl sm:text-6xl">
+            Wasp Nest Removal{" "}
             <br />
-            Problem?
+            in Toronto &amp; the GTA
           </h1>
           <p className="mx-auto mt-5 max-w-md text-xl font-bold sm:text-2xl">
             Professional Wasp Nest Removal
@@ -53,7 +53,12 @@ export default function Home() {
             <TrustPoints />
           </div>
 
-          <p className="mx-auto mt-7 max-w-sm text-xs text-muted">*{SAME_DAY_SERVICE.disclaimer}</p>
+          <p className="mx-auto mt-7 max-w-sm text-xs text-muted">
+            {/* Homepage-only wording (city pages keep SAME_DAY_SERVICE.disclaimer): the 1-800 line takes calls only,
+                so "call or text" never sits next to it. The number stays on one line. */}
+            *Same-day service is based on availability. Call <span className="whitespace-nowrap">1-800-800-WASP</span> to confirm
+            for your area.
+          </p>
         </div>
       </section>
 

@@ -118,7 +118,7 @@ export const HOMEPAGE_FAQS = [
   },
   {
     q: "Is same-day service available?",
-    a: "Same-day service is available in many cases, based on availability. Call or text us and we'll tell you the earliest appointment for your area.",
+    a: "Same-day service is available in many cases, based on availability. Call 1-800-800-WASP and we'll tell you the earliest appointment for your area.",
   },
   {
     q: "What affects the price?",
