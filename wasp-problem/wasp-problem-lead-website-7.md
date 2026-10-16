@@ -32,6 +32,12 @@ merging.
   - Footer on every page links to both pages. The price table on the homepage and the city pages links to the cost
     page ("See common jobs added up on our wasp nest removal cost page").
   - PR #12 (chat 4's docs: `/bee-removal` in the roadmap, the H1 decision) is included.
+  - Confirmed live: Vercel's production status on the merge commit `aeb74b7` read "Deployment has completed"
+    (08:48 UTC). The built sitemap lists 17 pages, both new ones included.
+- Duane confirmed the cost page's open items (Oct 16, relayed by chat 5): a visible nest plus one extra nest is
+  $280; taking a visible nest down and away is part of the $180; the same price list applies in every city.
+  Recorded under Business facts in AGENTS.md. Still unanswered and live as built: a price for a nest in the
+  ground, and whether hornets use the same list (the site's price list names no species).
 - Checked before merging: eslint, tsc and build clean; every existing page's built HTML compared with the
   baseline (only the two intended links changed; schema identical); no horizontal scroll at 360/390/768/1280;
   H1, both prices, the guarantee and the Call button on the first screen at 360x640 and 390x844 with the request
@@ -76,6 +82,10 @@ merging.
   `cp -al`; Turbopack rejects a symlinked one), then compare `.next/server/app/*.html` text, head tags and JSON-LD.
   Only the position of `next-size-adjust` moves between builds.
 - Click events: read `window.dataLayer` with tel:/sms: navigation blocked (not a phone test).
+- Confirm "live" from here (waspproblem.ca and vercel.app are blocked): GitHub only shows commit statuses for a
+  PR's head, so reopen PR #14 (head = the production branch), read its status (`pull_request_read`
+  `get_status`): "Vercel – wasp-problem: Deployment has completed" on the merge commit means production is Ready.
+  Then close it again.
 - Another chat's work lives on its session branch until merged: `git ls-remote --heads origin` and
   `git ls-tree` across branches find it. Other Wasp Problem chats can be seen with the remote-session tools
   (list_sessions, list_events) and messaged with send_message.
