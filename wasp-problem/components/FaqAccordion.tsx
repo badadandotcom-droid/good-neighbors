@@ -17,9 +17,12 @@ function faqJsonLd(items: readonly FaqItem[]) {
 export function FaqAccordion({
   items,
   background = "surface",
+  title = "Questions",
 }: {
   items: readonly FaqItem[];
   background?: "surface" | "white";
+  /** Section heading; themed landing pages put their search phrase here. */
+  title?: string;
 }) {
   return (
     <section
@@ -31,7 +34,7 @@ export function FaqAccordion({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(items)) }}
       />
       <div className="mx-auto max-w-2xl">
-        <SectionHeading eyebrow="Good to know" title="Questions" />
+        <SectionHeading eyebrow="Good to know" title={title} />
         <div className="mt-10 flex flex-col gap-3">
           {items.map((item) => (
             <details key={item.q} className="group card px-5 py-2.5 open:pb-5 sm:px-6">

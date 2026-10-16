@@ -106,12 +106,14 @@ These are not style preferences. Breaking one is a real-world problem for the ow
 | Reviews and job photos | `lib/testimonials.ts` |
 | FAQ copy | `lib/content.ts` |
 | City landing pages | `lib/locations.ts` + `components/CityPage.tsx` |
+| Ad-group landing pages | `/wasp-nest-removal-cost`: `lib/cost-page.ts` + `components/CostPage.tsx`. `/yellow-jacket-removal`: `lib/yellow-jacket-page.ts` + `components/ProblemPage.tsx`, the shared layout for problem pages (the bee, wall/roof and hornet pages fit it too). First-screen prices: `components/HeroPrices.tsx`. Every live one is listed in `LANDING_PAGES` (`lib/landing-pages.ts`), which feeds the sitemap and the footer links on every page |
+| Title, description, canonical and share card for any page | `pageMetadata()` in `lib/page-metadata.ts` (city pages reach it through `locationMetadata()`) |
 | Homepage section order | `app/page.tsx` |
 | Online request form (Resend delivery, env vars) | `lib/leads.ts`, `app/actions.ts`, `components/LeadForm*.tsx` |
 | Link preview when the URL is texted/shared (image, og title/description) | `app/opengraph-image.tsx` (drawn at build time; assets in `assets/og/`), `SERVICE_REGION` + `SHARE_PREVIEW` in `lib/site.ts` |
 
 City pages don't inherit the `opengraph-image` file convention from the root — it is
-scoped per route segment, so `locationMetadata()` wires the share card explicitly.
+scoped per route segment, so `pageMetadata()` (which `locationMetadata()` calls) wires the share card explicitly.
 Don't "simplify" that away.
 
 The request form renders nowhere until `RESEND_API_KEY` and `LEAD_TO_EMAIL` are set in
@@ -134,7 +136,13 @@ Note that a contrast check reading only the alpha in a colour value misses CSS
   A change is "done" or "live" only once it is merged into this branch AND Vercel's production
   deploy of that commit shows Ready. Committed or pushed to a session branch is not live — never
   report it as done (Oct 14 lesson: the ads chat found the live site unchanged).
-- `claude/wasp-problem-website-h1a4xo` — kept in sync; push to both.
+- `claude/wasp-problem-website-h1a4xo` — was meant to be kept in sync, but nothing has been pushed to it since
+  Oct 1 (22 commits behind production on Oct 16). Nothing in the repo deploys from it; ask Duane before reviving
+  or deleting it.
+- Handoff docs: a new chat starts from the production branch and sees only what is merged there. The next chat's
+  handoff goes to production inside your PR (or a docs-only PR when no page is going out), never only on a
+  session branch (Oct 16: chats 5 and 6 each reported the handoff missing). If it truly cannot be merged yet, the
+  paste box must also name the branch and a `git show origin/<branch>:<path>` line.
 
 ## Expanding beyond the GTA
 
@@ -198,6 +206,12 @@ Ads points at them. Add new pages alongside them.
 - [ ] Google Business Profile: set hours to "Open 24 hours" if not already (calls are answered
       24/7) — drives "open now" searches in Maps (owner's action).
 - [ ] Licence wording — only after the December exam is passed.
+- [ ] Speed, which feeds Google Ads landing-page experience: mobile Lighthouse LCP (local, simulated) is 2.9 s on
+      `/wasp-nest-removal-cost`, 3.0 s on `/yellow-jacket-removal` and about 2.8 s on the homepage, against the 2.5 s
+      target. Fonts are all `display: swap` and nothing animates, so the delay is not a font block or a fade-in. On the cost page the LCP
+      element is the H1 text, and 2.4 s of the 2.9 s is render delay, not images or downloads (fonts 70 KB, CSS 8 KB,
+      JS 114 KB). Same cause site-wide, so one job for fonts and hydration JS. After a deploy, check the live URL in
+      PageSpeed Insights (blocked from the sandbox).
 - [ ] In Vercel → Settings → Domains, confirm bare `waspproblem.ca` redirects to `www.waspproblem.ca` and not the
       other way round (owner's action; the code now assumes www is primary).
 
@@ -235,32 +249,47 @@ Keyword Planner volumes). Facts that drive the plan:
 Homepage hero (owner's call, Oct 16): the big "WASP PROBLEM?" lawn-sign lockup stays as the
 brand look; it is a `<p>`, not a heading. The H1 is the line under it, "Professional Wasp Nest
 Removal / Serving Toronto & the GTA". Don't make the homepage look worse for ad score: the
-themed pages below carry the specific searches.
+themed pages below carry the specific searches. Owner's call (Oct 16): the H1 stays "Serving
+Toronto & the GTA"; the ads chat suggested "in Toronto & the GTA" to match the search phrase,
+and the owner said no — change the ad if anything, not the site.
 
-Pages to build, in this order. New URLs only — never rename the homepage or a city page.
-Status Oct 16: none built yet. For each page, the ads chat sends the ad group's keywords and
-headline 1; the page title and H1 use that main phrase word for word. Show the owner, publish
-on the owner's OK, then tell the ads chat it's live so it can point that ad group at the page
-(never before).
+Pages to build. New URLs only — never rename the homepage or a city page. The ads chat's order (Oct 16):
+cost page first, `/yellow-jacket-removal` second, `/bee-removal` third (the list numbers below predate that).
+Status Oct 16: `/wasp-nest-removal-cost` and `/yellow-jacket-removal` merged into production by chat 6 (Wasp
+Problem Lead Website 6). Next: `/bee-removal`.
 
-1. `/yellow-jacket-removal` — yellow jackets, ground wasps, nests in the lawn, under steps and
+How a page goes live (owner's call, Oct 16: "just do it ... go live ... make sure it's live"): don't wait for
+Duane's OK on a page that keeps every rule in this file. Build it, check it (lint, types, build, 360/390 first
+screen, events, copy grep, Lighthouse), publish it through a PR into production, confirm Vercel's production
+deploy shows Ready, then give Duane one paste box for the ads chat. If the ads chat has sent the ad group's
+keywords and headline 1, the page title and H1 use that main phrase word for word; if not, pick the phrase from
+the keyword numbers above and tell the ads chat in the paste box, so the ad group is built to match the page.
+Never point an ad group at a page before it is live. Don't hand Duane questions he can't answer (ad group
+details, which chat said what); ask only what truly needs him, like a price or a fact about his work.
+
+1. `/yellow-jacket-removal` (merged Oct 16) — yellow jackets, ground wasps, nests in the lawn, under steps and
    in wall voids. Targets ~260/mo of mostly Low-competition searches (yellow jacket exterminator,
    ground wasps, wasp nest in ground, yellow jacket nest removal).
-2. `/wasp-nest-removal-cost` — the price table ($180 visible, $250 hidden, +$100 each extra nest,
+2. `/wasp-nest-removal-cost` (merged Oct 16) — the price table ($180 visible, $250 hidden, +$100 each extra nest,
    ladder fees), what changes the price, what is included, the 90-day service guarantee. Cost
    searches are hire-intent and convert; upfront pricing is the differentiator.
-3. Deepen `/toronto-wasp-removal` to 400–500 words (neighbourhoods, housing types, where nests
+3. `/bee-removal` — added Oct 16 on the owner's OK. A real page for the bee ad, because Google
+   ignores the `#bees` part of `/#bees` and scores the whole homepage (which is about wasps).
+   Bees stay generic: no honey, bumble or carpenter bee copy. Keep the "bees" anchor on the
+   homepage; the bee ad keeps linking to `/#bees` until this page is live and the owner OKs the
+   switch. Needs the ads chat's ad group name, keywords and headline 1 first.
+4. Deepen `/toronto-wasp-removal` to 400–500 words (neighbourhoods, housing types, where nests
    turn up). It carries "wasp removal toronto" (260/mo); the other city pages carry ~10/mo each
    and already score well — leave them as they are.
-4. `/wasps-in-wall-or-roof` — hidden nests: wall voids, behind siding, brick weep holes, soffits,
+5. `/wasps-in-wall-or-roof` — hidden nests: wall voids, behind siding, brick weep holes, soffits,
    roof edges, attics. Matches the "Wasps in Your Wall or Roof?" ad headline and the $250
    hidden-nest price.
-5. `/hornet-nest-removal` — bald-faced hornets and paper nests in trees, eaves and sheds.
-6. `/emergency-wasp-removal` — supports the 24/7 ad (see the open item above).
-7. Product & safety page (Drione; see the open item above). Best after the Dec 7 exam, since
+6. `/hornet-nest-removal` — bald-faced hornets and paper nests in trees, eaves and sheds.
+7. `/emergency-wasp-removal` — supports the 24/7 ad (see the open item above).
+8. Product & safety page (Drione; see the open item above). Best after the Dec 7 exam, since
    it describes commercial pesticide use.
 
-Every page: the search phrase in the title, H1 and H2s; a "what you're seeing → what it
+Every page: the first phone screen holds the H1 with the phrase, the flat price, the 90-day service guarantee and a big Call button (mobile Lighthouse LCP target: under 2.5 s); the search phrase is in the title, H1 and H2s; a "what you're seeing → what it
 probably is" section; what happens if you wait; what we do; the prices that apply; the
 guarantee; an FAQ with FAQPage schema; links to the homepage and the city pages. Same rules as
 the rest of the site: never "licensed" or "certified", no "can't", 24/7 means calls only, bees

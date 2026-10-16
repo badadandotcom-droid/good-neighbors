@@ -133,3 +133,10 @@ export const HOMEPAGE_FAQS = [
     a: "If wasps return to the nest we treated within 90 days, we come back and deal with it at no additional charge. It covers the nest we treated, not a new or unrelated nest elsewhere on the property.",
   },
 ] as const;
+
+/** A homepage FAQ item, reused word for word on a landing page. Throws at build time if the homepage question is renamed. */
+export function homepageFaq(q: (typeof HOMEPAGE_FAQS)[number]["q"]): { q: string; a: string } {
+  const item = HOMEPAGE_FAQS.find((f) => f.q === q);
+  if (!item) throw new Error(`HOMEPAGE_FAQS has no question "${q}"`);
+  return { q: item.q, a: item.a };
+}
