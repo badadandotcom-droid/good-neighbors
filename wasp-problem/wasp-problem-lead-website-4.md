@@ -1,3 +1,5 @@
+DONE (Oct 16): superseded by wasp-problem-lead-website-5.md
+
 Chat name: Wasp Problem Lead Website 4
 
 Written Oct 16, 2026 by Wasp Problem Lead Website 3. This chat is for Wasp Problem only: the
