@@ -1,6 +1,6 @@
 # Durham hub long-form copy: review notes for the owner (Oct 16, 2026)
 
-**WAITING for the owner's "approved".** Built in GNW Website 9 on the session branch `ccr-e849fd80-mdl08d`, on top of GNW Website 8's branch (73e533b: the live branch at 03e8c3d plus docs only). Approve as is, or name the numbers below to strike or change.
+**APPROVED by the owner Oct 16 without strikes, and LIVE the same day (5:50 AM Toronto).** Built in GNW Website 9 on the session branch `ccr-e849fd80-mdl08d`, on top of GNW Website 8's branch (73e533b: the live branch at 03e8c3d plus docs only). Approve as is, or name the numbers below to strike or change.
 
 Page: /service-areas/durham-region. URL, title ("Wildlife Removal in Durham Region: Pickering, Ajax, Whitby & Oshawa"), H1, meta description and the hero paragraph unchanged. One other page changes: the Durham card on the /service-areas index now lists Brock Township too. Every other page should be byte-for-byte unchanged (the compare check lists exactly 2 pages: the Durham hub and /service-areas).
 
