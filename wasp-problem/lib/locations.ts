@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BRAND, SHARE_PREVIEW } from "@/lib/site";
+import { pageMetadata } from "@/lib/page-metadata";
 
 export type CityLocation = {
   slug: string;
@@ -289,31 +289,9 @@ export const CITY_LOCATIONS: readonly CityLocation[] = [
 ];
 
 export function locationMetadata(location: CityLocation): Metadata {
-  const url = new URL(location.href, BRAND.url).toString();
-  const ogTitle = `${location.metaTitle} | ${BRAND.name}`;
-
-  // The opengraph-image file convention only covers its own route segment (the
-  // homepage); city pages need the same brand card wired in explicitly or a
-  // shared link gets no preview at all.
-  const shareImage = { url: "/opengraph-image", width: 1200, height: 630, alt: SHARE_PREVIEW.imageAlt };
-  return {
+  return pageMetadata({
+    href: location.href,
     title: location.metaTitle,
     description: location.metaDescription,
-    alternates: { canonical: url },
-    openGraph: {
-      title: ogTitle,
-      description: location.metaDescription,
-      url,
-      siteName: BRAND.name,
-      type: "website",
-      locale: "en_CA",
-      images: [shareImage],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: ogTitle,
-      description: location.metaDescription,
-      images: [shareImage.url],
-    },
-  };
+  });
 }

@@ -106,12 +106,14 @@ These are not style preferences. Breaking one is a real-world problem for the ow
 | Reviews and job photos | `lib/testimonials.ts` |
 | FAQ copy | `lib/content.ts` |
 | City landing pages | `lib/locations.ts` + `components/CityPage.tsx` |
+| Ad-group landing pages | `/wasp-nest-removal-cost`: copy and figures in `lib/cost-page.ts`, page in `components/CostPage.tsx`; each new one is added to `THEMED_PAGES` in `app/sitemap.ts` |
+| Title, description, canonical and share card for any page | `pageMetadata()` in `lib/page-metadata.ts` (city pages reach it through `locationMetadata()`) |
 | Homepage section order | `app/page.tsx` |
 | Online request form (Resend delivery, env vars) | `lib/leads.ts`, `app/actions.ts`, `components/LeadForm*.tsx` |
 | Link preview when the URL is texted/shared (image, og title/description) | `app/opengraph-image.tsx` (drawn at build time; assets in `assets/og/`), `SERVICE_REGION` + `SHARE_PREVIEW` in `lib/site.ts` |
 
 City pages don't inherit the `opengraph-image` file convention from the root — it is
-scoped per route segment, so `locationMetadata()` wires the share card explicitly.
+scoped per route segment, so `pageMetadata()` (which `locationMetadata()` calls) wires the share card explicitly.
 Don't "simplify" that away.
 
 The request form renders nowhere until `RESEND_API_KEY` and `LEAD_TO_EMAIL` are set in
@@ -198,6 +200,11 @@ Ads points at them. Add new pages alongside them.
 - [ ] Google Business Profile: set hours to "Open 24 hours" if not already (calls are answered
       24/7) — drives "open now" searches in Maps (owner's action).
 - [ ] Licence wording — only after the December exam is passed.
+- [ ] Speed, which feeds Google Ads landing-page experience: mobile Lighthouse LCP (local, simulated) is 2.9 s on
+      `/wasp-nest-removal-cost` and about 2.8 s on the homepage, against the 2.5 s target. On the cost page the LCP
+      element is the H1 text, and 2.4 s of the 2.9 s is render delay, not images or downloads (fonts 70 KB, CSS 8 KB,
+      JS 114 KB). Same cause site-wide, so one job for fonts and hydration JS. After a deploy, check the live URL in
+      PageSpeed Insights (blocked from the sandbox).
 - [ ] In Vercel → Settings → Domains, confirm bare `waspproblem.ca` redirects to `www.waspproblem.ca` and not the
       other way round (owner's action; the code now assumes www is primary).
 
@@ -237,8 +244,8 @@ brand look; it is a `<p>`, not a heading. The H1 is the line under it, "Professi
 Removal / Serving Toronto & the GTA". Don't make the homepage look worse for ad score: the
 themed pages below carry the specific searches.
 
-Pages to build, in this order. New URLs only — never rename the homepage or a city page.
-Status Oct 16: none built yet. For each page, the ads chat sends the ad group's keywords and
+Pages to build. The ads chat's order (Oct 16): 1. cost page, 2. `/yellow-jacket-removal`, 3. a bee page whose URL, keywords and headline 1 it will send; the bee ad stays on `/#bees` until that page is live and the owner OKs the switch. The rest follow the list below. New URLs only — never rename the homepage or a city page.
+Status Oct 16: page 1, `/wasp-nest-removal-cost`, is built on a session branch and waiting for the owner's OK; nothing in this list is live yet. For each page, the ads chat sends the ad group's keywords and
 headline 1; the page title and H1 use that main phrase word for word. Show the owner, publish
 on the owner's OK, then tell the ads chat it's live so it can point that ad group at the page
 (never before).
@@ -260,7 +267,7 @@ on the owner's OK, then tell the ads chat it's live so it can point that ad grou
 7. Product & safety page (Drione; see the open item above). Best after the Dec 7 exam, since
    it describes commercial pesticide use.
 
-Every page: the search phrase in the title, H1 and H2s; a "what you're seeing → what it
+Every page: the first phone screen holds the H1 with the phrase, the flat price, the 90-day service guarantee and a big Call button (mobile Lighthouse LCP target: under 2.5 s); the search phrase is in the title, H1 and H2s; a "what you're seeing → what it
 probably is" section; what happens if you wait; what we do; the prices that apply; the
 guarantee; an FAQ with FAQPage schema; links to the homepage and the city pages. Same rules as
 the rest of the site: never "licensed" or "certified", no "can't", 24/7 means calls only, bees

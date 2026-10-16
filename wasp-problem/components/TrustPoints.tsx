@@ -1,7 +1,7 @@
 import { PRICING } from "@/lib/pricing";
 import { GUARANTEE, INSURANCE } from "@/lib/site";
 
-function Check() {
+export function Check() {
   return (
     <svg
       aria-hidden="true"
