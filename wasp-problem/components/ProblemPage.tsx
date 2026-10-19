@@ -44,6 +44,10 @@ export type ProblemPageContent = {
   wait: { title: string; paragraphs: readonly string[] };
   steps: { title: string; items: readonly string[] };
   pricingTitle: string;
+  /** The hidden-nest explainer under the price list, when the page's insect is not "wasps". Defaults to the shared one. */
+  hiddenNestExplanation?: string;
+  /** The guarantee sentence, when the page's insect is not "wasps". Defaults to the owner's shared wording. */
+  guaranteeSummary?: string;
   faqTitle: string;
   faqs: readonly { q: string; a: string }[];
   areas: { title: string; lede: string };
@@ -166,8 +170,8 @@ export function ProblemPage({ page }: { page: ProblemPageContent }) {
       </section>
 
       <TrustSection reviews={REVIEWS} />
-      <PricingTable title={page.pricingTitle} />
-      <GuaranteeSection />
+      <PricingTable title={page.pricingTitle} hiddenNestExplanation={page.hiddenNestExplanation} />
+      <GuaranteeSection summary={page.guaranteeSummary} />
       <FaqAccordion items={page.faqs} background="white" title={page.faqTitle} />
 
       {/* CITY AND HOMEPAGE LINKS */}

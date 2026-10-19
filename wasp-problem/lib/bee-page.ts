@@ -17,6 +17,11 @@ import { YELLOW_JACKET_PAGE } from "@/lib/yellow-jacket-page";
  *
  * Prices are the site's one residential price list, shown the same way on every landing page; the
  * total is confirmed on the phone before work starts.
+ *
+ * On this page the guarantee and the hidden-nest explainer say "bees" where the shared wording says
+ * "wasps" (owner, via the ads chat, Oct 19): step 4, the guarantee section, the guarantee FAQ, the
+ * pricing block and the cost FAQ. The shared wording itself is unchanged. The "still see bees" FAQ
+ * says "call us", not "call or text us".
  */
 
 const VISIBLE = priceOf("visible-nest");
@@ -24,12 +29,29 @@ const HIDDEN = priceOf("hidden-nest");
 const EXTRA = priceOf("additional-nest");
 const LADDER = priceOf("ladder-fee");
 
+/**
+ * Shared wording with "wasps" read as "bees". Throws at build time if the shared text no longer says
+ * "wasps", so an edit to the owner's wording gets looked at here too.
+ */
+function forBees(text: string): string {
+  if (!/\bwasps\b/.test(text)) throw new Error(`Expected "wasps" in: ${text}`);
+  return text.replace(/\bwasps\b/g, "bees");
+}
+
+/** A shared sentence with one phrase swapped. Throws at build time if the phrase is gone. */
+function reworded(text: string, from: string, to: string): string {
+  if (!text.includes(from)) throw new Error(`Expected "${from}" in: ${text}`);
+  return text.replace(from, to);
+}
+
 /** BASE_FAQS answer reused word for word under a bee question. */
 function baseAnswer(q: (typeof BASE_FAQS)[number]["q"]): string {
   const item = BASE_FAQS.find((f) => f.q === q);
   if (!item) throw new Error(`BASE_FAQS has no question "${q}"`);
   return item.a;
 }
+
+const GUARANTEE_FAQ = homepageFaq("What does the service guarantee cover?");
 
 export const BEE_PAGE: ProblemPageContent = {
   href: "/bee-removal",
@@ -93,16 +115,18 @@ export const BEE_PAGE: ProblemPageContent = {
       "Tell us your service address and where the bees are going in and out. Send a photo if you can take one safely.",
       "We go over the problem, what it will cost, and when we can get there.",
       "We treat the colony at the source: a small amount of product goes directly into the entrance the bees are using, whether that’s a wall, a soffit, the ground or holes in wood, not sprayed across your home or yard. Then we explain what to expect for your particular job.",
-      GUARANTEE.summary,
+      forBees(GUARANTEE.summary),
     ],
   },
 
   pricingTitle: "Bee Removal Prices",
+  hiddenNestExplanation: forBees(NEST_TYPE_EXPLANATION.hidden),
+  guaranteeSummary: forBees(GUARANTEE.summary),
   faqTitle: "Bee Removal Questions",
   faqs: [
     {
       q: "How much does bee removal cost?",
-      a: `Our residential prices work the same way for bees as for any nest: a visible nest is $${VISIBLE} and a hidden nest is $${HIDDEN}. ${NEST_TYPE_EXPLANATION.hidden} Each additional nest is $${EXTRA}, and a nest or entry point 10–25 ft up adds a $${LADDER} ladder fee. We confirm your total price before starting work.`,
+      a: `Our residential prices work the same way for bees as for any nest: a visible nest is $${VISIBLE} and a hidden nest is $${HIDDEN}. ${forBees(NEST_TYPE_EXPLANATION.hidden)} Each additional nest is $${EXTRA}, and a nest or entry point 10–25 ft up adds a $${LADDER} ladder fee. We confirm your total price before starting work.`,
     },
     {
       q: "Can you get bees out of a wall?",
@@ -127,8 +151,11 @@ export const BEE_PAGE: ProblemPageContent = {
     homepageFaq("Is same-day service available?"),
     homepageFaq("Do I need to be home?"),
     homepageFaq("What about my kids and pets?"),
-    { q: "What if I still see bees after the treatment?", a: baseAnswer("What if I still see activity?") },
-    homepageFaq("What does the service guarantee cover?"),
+    {
+      q: "What if I still see bees after the treatment?",
+      a: reworded(baseAnswer("What if I still see activity?"), "call or text us", "call us"),
+    },
+    { q: GUARANTEE_FAQ.q, a: forBees(GUARANTEE_FAQ.a) },
   ],
 
   areas: {
