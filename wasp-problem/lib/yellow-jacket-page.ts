@@ -39,7 +39,7 @@ export const YELLOW_JACKET_PAGE: ProblemPageContent = {
       "Yellow jackets are the wasps most likely to nest in the ground. A small hole in the lawn or a garden bed, a gap under a step or between patio stones, or a crack at the base of a wall can be the entrance to a nest with hundreds of wasps inside.",
       "They also nest inside walls, soffits and roof edges, where all you see is a steady line of wasps going in and out of one spot. Either way, the nest has to be treated where it is. Spraying the wasps you can see rarely reaches the colony.",
     ],
-    link: { lead: "Not sure if they’re wasps or bees?", text: "We remove bees too", href: "/#bees" },
+    link: { lead: "Not sure if they’re wasps or bees? See our", text: "bee removal page", href: "/bee-removal" },
   },
 
   signs: {

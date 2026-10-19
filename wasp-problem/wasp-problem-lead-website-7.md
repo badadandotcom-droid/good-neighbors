@@ -1,3 +1,5 @@
+DONE (Oct 19): superseded by wasp-problem-lead-website-8.md. Chat 7 published /bee-removal (next job 1 here).
+
 Chat name: Wasp Problem Lead Website 7
 
 Written Oct 16, 2026 by Wasp Problem Lead Website 6. This chat is for Wasp Problem only: the site in
