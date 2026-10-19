@@ -284,7 +284,10 @@ details, which chat said what); ask only what truly needs him, like a price or a
    wall. Bees stay generic: no honey, bumble or carpenter bee copy, no species at all. The homepage
    keeps its "bees" anchor and section; the bee ad keeps linking to `/#bees` until the owner OKs the
    switch to `/bee-removal`. Prices shown are the site's one residential list (owner-confirmed Oct 19:
-   bees are priced the same).
+   bees are priced the same). On this page only, the guarantee and the hidden-nest explainer say "bees"
+   where the shared wording says "wasps", and the "still see bees" FAQ says "call us" (owner via the ads
+   chat, Oct 19; `forBees()` in `lib/bee-page.ts`, through the `guaranteeSummary` / `hiddenNestExplanation`
+   fields). The shared wording in `lib/site.ts` and `lib/pricing.ts` is unchanged.
 4. Deepen `/toronto-wasp-removal` to 400–500 words (neighbourhoods, housing types, where nests
    turn up). It carries "wasp removal toronto" (260/mo); the other city pages carry ~10/mo each
    and already score well — leave them as they are.

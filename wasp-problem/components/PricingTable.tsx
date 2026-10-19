@@ -5,8 +5,17 @@ import { PRICING, NEST_TYPE_EXPLANATION } from "@/lib/pricing";
 import { TollFreeNumber } from "@/components/TollFreeNumber";
 import { COST_PAGE } from "@/lib/cost-page";
 
-/** `title` lets a landing page put its search phrase in this H2; everywhere else it reads "Pricing". */
-export function PricingTable({ title = "Pricing" }: { title?: string }) {
+/**
+ * `title` lets a landing page put its search phrase in this H2; everywhere else it reads "Pricing".
+ * `hiddenNestExplanation` lets a page word the hidden-nest explainer for its own insect (the bee page says "bees").
+ */
+export function PricingTable({
+  title = "Pricing",
+  hiddenNestExplanation = NEST_TYPE_EXPLANATION.hidden,
+}: {
+  title?: string;
+  hiddenNestExplanation?: string;
+}) {
   return (
     <section id="pricing" className="bg-white px-5 py-16 sm:py-24">
       <div className="mx-auto max-w-xl">
@@ -47,7 +56,7 @@ export function PricingTable({ title = "Pricing" }: { title?: string }) {
           </div>
           <div className="rounded-xl bg-surface px-5 py-4">
             <p className="text-xs font-bold tracking-[0.12em] text-muted uppercase">Hidden nest</p>
-            <p className="mt-1.5 text-sm leading-relaxed">{NEST_TYPE_EXPLANATION.hidden}</p>
+            <p className="mt-1.5 text-sm leading-relaxed">{hiddenNestExplanation}</p>
           </div>
         </div>
 

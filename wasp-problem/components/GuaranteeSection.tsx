@@ -1,6 +1,7 @@
 import { GUARANTEE } from "@/lib/site";
 
-export function GuaranteeSection() {
+/** `summary` lets a page word the guarantee for its own insect (the bee page says "bees"); everywhere else it is the owner's shared wording. */
+export function GuaranteeSection({ summary = GUARANTEE.summary }: { summary?: string }) {
   return (
     <section id="guarantee" className="bg-surface px-5 py-16 sm:py-24">
       <div className="card mx-auto max-w-2xl px-6 py-9 text-center shadow-card-lg sm:px-12 sm:py-12">
@@ -13,7 +14,7 @@ export function GuaranteeSection() {
         </div>
         <p className="mt-5 text-xs font-bold tracking-[0.14em] text-muted uppercase">Our commitment</p>
         <h2 className="mt-2 text-3xl leading-tight sm:text-4xl">{GUARANTEE.name}</h2>
-        <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed sm:text-lg">{GUARANTEE.summary}</p>
+        <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed sm:text-lg">{summary}</p>
       </div>
     </section>
   );
