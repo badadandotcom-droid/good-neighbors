@@ -1,3 +1,4 @@
+import { BEE_PAGE } from "@/lib/bee-page";
 import { COST_PAGE } from "@/lib/cost-page";
 import { YELLOW_JACKET_PAGE } from "@/lib/yellow-jacket-page";
 
@@ -8,4 +9,5 @@ import { YELLOW_JACKET_PAGE } from "@/lib/yellow-jacket-page";
 export const LANDING_PAGES: readonly { href: string; label: string }[] = [
   { href: COST_PAGE.href, label: "Wasp nest removal cost" },
   { href: YELLOW_JACKET_PAGE.href, label: "Yellow jacket removal" },
+  { href: BEE_PAGE.href, label: "Bee removal" },
 ];

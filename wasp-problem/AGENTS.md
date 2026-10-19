@@ -108,7 +108,7 @@ These are not style preferences. Breaking one is a real-world problem for the ow
 | Reviews and job photos | `lib/testimonials.ts` |
 | FAQ copy | `lib/content.ts` |
 | City landing pages | `lib/locations.ts` + `components/CityPage.tsx` |
-| Ad-group landing pages | `/wasp-nest-removal-cost`: `lib/cost-page.ts` + `components/CostPage.tsx`. `/yellow-jacket-removal`: `lib/yellow-jacket-page.ts` + `components/ProblemPage.tsx`, the shared layout for problem pages (the bee, wall/roof and hornet pages fit it too). First-screen prices: `components/HeroPrices.tsx`. Every live one is listed in `LANDING_PAGES` (`lib/landing-pages.ts`), which feeds the sitemap and the footer links on every page |
+| Ad-group landing pages | `/wasp-nest-removal-cost`: `lib/cost-page.ts` + `components/CostPage.tsx`. `/yellow-jacket-removal`: `lib/yellow-jacket-page.ts` and `/bee-removal`: `lib/bee-page.ts`, both on `components/ProblemPage.tsx`, the shared layout for problem pages (the wall/roof and hornet pages fit it too). First-screen prices: `components/HeroPrices.tsx`. Every live one is listed in `LANDING_PAGES` (`lib/landing-pages.ts`), which feeds the sitemap and the footer links on every page |
 | Title, description, canonical and share card for any page | `pageMetadata()` in `lib/page-metadata.ts` (city pages reach it through `locationMetadata()`) |
 | Homepage section order | `app/page.tsx` |
 | Online request form (Resend delivery, env vars) | `lib/leads.ts`, `app/actions.ts`, `components/LeadForm*.tsx` |
@@ -257,8 +257,8 @@ and the owner said no — change the ad if anything, not the site.
 
 Pages to build. New URLs only — never rename the homepage or a city page. The ads chat's order (Oct 16):
 cost page first, `/yellow-jacket-removal` second, `/bee-removal` third (the list numbers below predate that).
-Status Oct 16: `/wasp-nest-removal-cost` and `/yellow-jacket-removal` merged into production by chat 6 (Wasp
-Problem Lead Website 6). Next: `/bee-removal`.
+Status Oct 19: `/wasp-nest-removal-cost` and `/yellow-jacket-removal` merged into production by chat 6 (Wasp
+Problem Lead Website 6); `/bee-removal` merged by chat 7. Next: speed (the open item below), then the Toronto page.
 
 How a page goes live (owner's call, Oct 16: "just do it ... go live ... make sure it's live"): don't wait for
 Duane's OK on a page that keeps every rule in this file. Build it, check it (lint, types, build, 360/390 first
@@ -275,11 +275,14 @@ details, which chat said what); ask only what truly needs him, like a price or a
 2. `/wasp-nest-removal-cost` (merged Oct 16) — the price table ($180 visible, $250 hidden, +$100 each extra nest,
    ladder fees), what changes the price, what is included, the 90-day service guarantee. Cost
    searches are hire-intent and convert; upfront pricing is the differentiator.
-3. `/bee-removal` — added Oct 16 on the owner's OK. A real page for the bee ad, because Google
-   ignores the `#bees` part of `/#bees` and scores the whole homepage (which is about wasps).
-   Bees stay generic: no honey, bumble or carpenter bee copy. Keep the "bees" anchor on the
-   homepage; the bee ad keeps linking to `/#bees` until this page is live and the owner OKs the
-   switch. Needs the ads chat's ad group name, keywords and headline 1 first.
+3. `/bee-removal` (merged Oct 19) — a real page for the bee ad, because Google ignores the `#bees`
+   part of `/#bees` and scores the whole homepage (which is about wasps). Built from the ads chat's
+   brief: ad group "Bee Removal" (already in the account), headline 1 "Bee Removal", phrases bee
+   removal / bee removal near me / bee nest removal near me / bee removal company near me / bees in
+   wall. Bees stay generic: no honey, bumble or carpenter bee copy, no species at all. The homepage
+   keeps its "bees" anchor and section; the bee ad keeps linking to `/#bees` until the owner OKs the
+   switch to `/bee-removal`. Prices shown are the site's one residential list; if the owner says bees
+   are priced differently, change `lib/bee-page.ts`.
 4. Deepen `/toronto-wasp-removal` to 400–500 words (neighbourhoods, housing types, where nests
    turn up). It carries "wasp removal toronto" (260/mo); the other city pages carry ~10/mo each
    and already score well — leave them as they are.
