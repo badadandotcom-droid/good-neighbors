@@ -74,6 +74,8 @@ These are not style preferences. Breaking one is a real-world problem for the ow
   pricing from $180" — do not "correct" it upward to match the others.
   Owner-confirmed Oct 16 (relayed by chat 5, his words): a visible nest plus one extra nest is $280 ($180 + $100);
   taking a visible nest down and away is part of the $180; the same price list applies in every city.
+  Owner-confirmed Oct 19: bees are priced the same as wasps (same list, visible/hidden). Hornets and a nest in
+  the ground are still unasked; the list names no species, so assume the same unless he says otherwise.
 - 90-day guarantee (`GUARANTEE` in `lib/site.ts`): *"If wasps return to the nest we
   treated within 90 days, we come back and deal with it at no additional charge."*
   The owner chose this wording over alternatives. Don't re-litigate it.
@@ -281,8 +283,8 @@ details, which chat said what); ask only what truly needs him, like a price or a
    removal / bee removal near me / bee nest removal near me / bee removal company near me / bees in
    wall. Bees stay generic: no honey, bumble or carpenter bee copy, no species at all. The homepage
    keeps its "bees" anchor and section; the bee ad keeps linking to `/#bees` until the owner OKs the
-   switch to `/bee-removal`. Prices shown are the site's one residential list; if the owner says bees
-   are priced differently, change `lib/bee-page.ts`.
+   switch to `/bee-removal`. Prices shown are the site's one residential list (owner-confirmed Oct 19:
+   bees are priced the same).
 4. Deepen `/toronto-wasp-removal` to 400–500 words (neighbourhoods, housing types, where nests
    turn up). It carries "wasp removal toronto" (260/mo); the other city pages carry ~10/mo each
    and already score well — leave them as they are.

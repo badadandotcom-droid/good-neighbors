@@ -30,11 +30,10 @@ merging. The speed job (next job 1) is code, not copy: Sonnet.
 - The bee ad still links to `/#bees`. Switching it to `/bee-removal` is the ads chat's job, on Duane's OK, now
   that the page is live (the paste box asked for it).
 - Prices on the bee page are the site's one residential price list ($180 visible / $250 hidden / +$100 / $75
-  ladder), shown the same way as on the other landing pages; the FAQ says the total is confirmed before work
-  starts. Chat 7 told Duane: if bees are priced differently, say so and the page changes. No answer yet when
-  this was written; if he says they differ, that is a copy change in `lib/bee-page.ts` and possibly a
-  `heroPrices` switch in `ProblemPage`.
-- Still unanswered from chat 6: a price for a nest in the ground, and whether hornets use the same list.
+  ladder), shown the same way as on the other landing pages. Duane confirmed Oct 19: bees are priced the same.
+  Recorded under Business facts in AGENTS.md.
+- Still unanswered from chat 6: a price for a nest in the ground, and whether hornets use the same list (the
+  list names no species, so the hornet page can show it the same way).
 - Checked before merging: eslint, tsc, build clean; copy grep clean (no licensed/certified/exterminator/warranty/
   can't/species/24-7 reply promise); no horizontal scroll at 360/390/768/1280; H1, both prices, the guarantee and
   the hero Call button on the first screen at 360x640 and 390x844 with the request form on; `cta_call`/`cta_text`
