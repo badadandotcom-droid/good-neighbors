@@ -250,8 +250,9 @@ export const WILDLIFE: WildlifeEntry[] = [
     // Raccoon feces (droppings, latrine) cleanup, Oct 2026: asked for by the
     // owner through the ads chat for the "raccoon feces" searches. Long-form
     // copy in lib/data/situations.ts. Owner's answers (Oct 20 2026): the area
-    // is disinfected after the droppings come out; outdoor latrines (decks,
-    // flat roofs, garage roofs) are cleaned too, as a side note; photos are
+    // is disinfected after the droppings come out; the page is mainly about
+    // attics and other spaces inside the house, and outdoor latrines (decks,
+    // flat roofs, garage roofs) are cleaned too, as a side note only; photos are
     // the owner's own, added when he sends them (no stock). Not on the
     // /wildlife index: linked from the raccoon and attic pages instead.
     slug: "raccoon-feces-removal",
@@ -261,7 +262,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     seoTitle: "Raccoon Feces Removal in Toronto & GTA",
     heading: "Raccoon Feces Removal in Toronto",
     metaDescription:
-      "Raccoon feces in the attic, on a deck or roof? We clean out the droppings and latrine, disinfect, replace soiled insulation and seal the way in. Toronto & GTA.",
+      "Raccoon feces in the attic? We clean out the droppings and latrine, disinfect the area, replace soiled insulation and seal the opening it used. Toronto & GTA.",
     summary: "Raccoon droppings and latrines cleaned out, the area disinfected, and the way in sealed.",
     intro:
       "Raccoons go back to the same spot again and again, and the droppings build up into a latrine. We clean it out, disinfect the area and seal the way the raccoon came in.",
@@ -269,9 +270,9 @@ export const WILDLIFE: WildlifeEntry[] = [
       "A pile of dark droppings in one spot that keeps growing",
       "A strong, musty smell from the attic",
       "Stained or flattened insulation",
-      "Droppings on a deck, a flat roof or a garage roof",
+      "Droppings on the attic floor or on top of the insulation",
     ],
-    commonAreas: ["Attics", "Flat roofs and garage roofs", "Decks", "Chimneys"],
+    commonAreas: ["Attics", "Above garages", "Chimneys", "Decks and flat roofs"],
     approach:
       "If a raccoon is still living there, we check for young and remove the family humanely first. Then the droppings come out, the area is disinfected and the opening is sealed.",
     iconId: "raccoon",
