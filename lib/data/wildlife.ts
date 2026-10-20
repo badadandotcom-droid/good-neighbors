@@ -282,7 +282,7 @@ export const WILDLIFE: WildlifeEntry[] = [
       heading: "Cleanup, insulation and repair after a raccoon latrine",
       paragraphs: [
         "A latrine is only half of it. The raccoon got in somewhere, and until that opening is closed it can come back to the same spot.",
-        "Once the droppings are out and the area is disinfected, we seal the way in and repair the damage around it: a torn roof vent, a lifted soffit, chewed fascia or a missing chimney cap, matched to your home's existing materials and colours.",
+        "Once the droppings are out and the area is disinfected, the opening is sealed and the damage around it repaired: a torn roof vent, a lifted soffit, chewed fascia or a missing chimney cap, matched to your home's existing materials and colours.",
       ],
       linkLabel: "Raccoon damage repair",
     },

@@ -1,9 +1,10 @@
 import type { FaqItem } from "@/lib/types";
-import { DEFAULT_SAME_DAY_SERVICE, GUARANTEE } from "@/lib/config/site";
+import { DEFAULT_SAME_DAY_SERVICE, GUARANTEE, INSURANCE } from "@/lib/config/site";
 
 /**
  * ============================================================================
- * SITUATION PAGES — "something in the attic" and "something in the walls"
+ * SITUATION PAGES — "something in the attic" and "something in the walls",
+ * and (Oct 2026) raccoon feces removal
  * ============================================================================
  * These two pages are the landing pages for the most valuable searches
  * ("squirrel in attic", "raccoon in attic", "squirrel in wall", "noises in
@@ -64,6 +65,7 @@ export interface SituationContent {
 }
 
 const SAME_DAY = DEFAULT_SAME_DAY_SERVICE.qualificationMessage;
+const INSURANCE_FAQ = { question: INSURANCE.faqQuestion, answer: INSURANCE.faqAnswer };
 
 export const SITUATIONS: SituationContent[] = [
   {
@@ -295,6 +297,116 @@ export const SITUATIONS: SituationContent[] = [
         question: "Do you handle mice or rats?",
         answer:
           "No. Light, constant skittering and gnawing at night, with tiny droppings, is a pest-control job.",
+      },
+    ],
+  },
+  {
+    // Raccoon feces (droppings, latrine) cleanup. Facts checked online Oct 20
+    // 2026 (sources in docs/reviews/2026-10-20-raccoon-feces-review.md): CDC,
+    // California and King County public health, BCCDC, Cornell, University of
+    // Illinois Extension. Household disinfectants do not kill roundworm eggs,
+    // so the page says the area is disinfected (owner-confirmed) but never that
+    // disinfecting kills the eggs. Attics first; outside as a side note only.
+    slug: "raccoon-feces-removal",
+    subhead:
+      "A pile of dark droppings that keeps growing in one corner of the attic usually means a raccoon has made a latrine there. We clean it out, disinfect the area, replace the soiled insulation and seal the way in.",
+    trustRow: true,
+    sections: [
+      {
+        heading: "What raccoon feces look like",
+        paragraphs: [
+          "Raccoon feces are dark and tube-shaped, a few inches long and about as wide as a nickel, and they often have seeds or bits of undigested food in them. They smell stronger than dog or cat droppings, and in an attic the smell often reaches the rooms below before anyone has seen the droppings themselves.",
+          "What gives raccoon poop away is where it is and how much of it there is. A raccoon goes back to the same spot every time, so instead of a dropping here and there you find a heap in one place, getting bigger week by week. If you're not sure what you're looking at, take a photo from a safe distance; you can attach up to five when you [send us a request](/contact).",
+        ],
+      },
+      {
+        heading: "The raccoon latrine: why it's always the same spot",
+        paragraphs: [
+          "Raccoons don't leave droppings at random. They choose a toilet area and use it night after night, and other raccoons use the same spot, so the droppings pile up in one place. That spot is called a latrine. Outdoors it is often somewhere raised and flat, such as a fallen log, a woodpile or a deck; in a house, it is usually one corner of the attic.",
+          "A latrine keeps growing for as long as a raccoon is living there. Cleaning it up while the raccoon is still coming and going lasts one night, which is why the cleanup comes after the raccoon is out and is finished by sealing the way in.",
+        ],
+      },
+      {
+        heading: "Where raccoon droppings turn up in a house",
+        paragraphs: [
+          "Most of the raccoon latrines we clean up in Toronto and the GTA are in attics, on top of the insulation or along the attic floor. Raccoons also leave droppings above a garage and inside a chimney. Wherever a latrine has been, the insulation or material underneath it is soiled as well, so the cleanup takes that out along with the droppings on top.",
+          "Outside, raccoons use decks, porch roofs, flat roofs and garage roofs the same way, and we clean those up too. Most of our work, though, is in the attic, where a latrine is out of sight and can go unnoticed for a long time.",
+        ],
+      },
+      {
+        heading: "Why raccoon poop needs a careful cleanup",
+        paragraphs: [
+          "Raccoon droppings can contain the eggs of raccoon roundworm, a parasite common in raccoons. The eggs are far too small to see. They are not infectious when fresh, but after a few weeks in the droppings or the soil they are, and they can last for years, so an old latrine needs the same care as a new one.",
+          "Infection in people is rare, but public health agencies take it seriously. The eggs are picked up by accident, by swallowing them from hands, toys or anything else that touched the droppings, so young children and pets are the ones to keep away. It is a careful job, not a quick sweep with a broom.",
+        ],
+      },
+      {
+        heading: "If you find raccoon droppings",
+        paragraphs: [
+          "Leave them where they are and keep children and pets away from the spot. Don't touch them with bare hands, don't vacuum them, and try not to stir up the dust around them. If they're in the attic, keep the hatch closed; there's no need to go up and look.",
+          "If a raccoon is still living there, it comes out first, humanely and with any young checked for: [raccoon removal](/wildlife/raccoons) covers the signs, and [noises in the attic](/wildlife/something-in-the-attic) will help you tell a raccoon from a squirrel. Then the cleanup can be done once, properly.",
+        ],
+      },
+    ],
+    process: {
+      heading: "How raccoon feces removal works",
+      intro:
+        "Removing a raccoon latrine from an attic means working inside it, so we take care with the hatch and the rooms below. A visit goes like this.",
+      steps: [
+        "We find the latrine and any other droppings, and work out where the raccoon has been getting in.",
+        "If a raccoon is still living there, we check for young first and remove the family humanely before any cleanup starts.",
+        "The droppings come out, together with any insulation and nesting material they have soiled.",
+        "The area is disinfected, and new insulation goes in where the old was taken out.",
+        `The opening the raccoon used is sealed. ${GUARANTEE.short}`,
+        "Any damage at the opening is repaired, matched to your home's existing materials and colours.",
+      ],
+      outro: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week.`,
+    },
+    faqHeading: "Questions about raccoon feces and cleanup",
+    faqs: [
+      {
+        question: "What does raccoon poop look like?",
+        answer:
+          "Dark, tube-shaped and usually in a pile, often with seeds or bits of food in it, and with a stronger smell than a dog's or a cat's. One dropping on its own is hard to tell apart; a heap in the same spot usually points to a raccoon.",
+      },
+      {
+        question: "Is raccoon poop dangerous?",
+        answer:
+          "It can contain the eggs of raccoon roundworm, so it should be handled with care. Infection in people is rare, and it happens when the eggs are swallowed, which is why the advice is to keep children and pets away and leave the droppings alone until they're cleaned up.",
+      },
+      {
+        question: "Can I clean up raccoon droppings myself?",
+        answer:
+          "Public health agencies publish steps for doing it yourself, with gloves, a mask and care not to raise dust. An attic latrine is harder: the droppings are on and in the insulation, the space is tight and dusty, and the raccoon may still be using it. That kind of cleanup is better left to us.",
+      },
+      {
+        question: "Do you disinfect the area?",
+        answer:
+          "Yes. Once the droppings and the soiled insulation are out, the area is disinfected, and new insulation goes in where it's needed.",
+      },
+      {
+        question: "Do you replace attic insulation soiled by raccoon feces?",
+        answer:
+          "Yes. Insulation under a latrine, or flattened where the raccoon was living, is removed and replaced, so the attic is back to how it should be.",
+      },
+      {
+        question: "Do you clean up raccoon latrines outside?",
+        answer:
+          "Yes, on decks, porch roofs, flat roofs and garage roofs too, though most of the raccoon cleanups we do are in attics.",
+      },
+      {
+        question: "Will the raccoon come back to the same spot?",
+        answer: `Raccoons return to a latrine they know, which is why sealing the opening is part of the job. ${GUARANTEE.full}`,
+      },
+      {
+        question: "How much does raccoon feces removal cost?",
+        answer:
+          "It depends on the size of the latrine, how much insulation has to come out and what the raccoon damaged getting in. We explain the price first, before any work begins.",
+      },
+      INSURANCE_FAQ,
+      {
+        question: "How soon can you come?",
+        answer: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week, and if a raccoon is still in the attic, getting it out safely comes first.`,
       },
     ],
   },
