@@ -204,6 +204,10 @@ export interface WildlifeEntry {
   repair?: RepairSection;
   /** Show the guarantee, insurance and 24/7 lines under the hero buttons, as the homepage and city pages do. */
   trustRow?: boolean;
+  /** Situation pages only: leave the page off the /wildlife index's "where, not what" cards; it is reached through links and the sitemap. */
+  unlisted?: boolean;
+  /** Structured-data service type, when the default ("<Animal> removal" or "Wildlife removal") would not describe the page. */
+  serviceType?: string;
 }
 
 export interface FaqItem {

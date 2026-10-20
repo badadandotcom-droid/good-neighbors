@@ -79,7 +79,7 @@ export function SituationPage({
       <JsonLd
         data={serviceJsonLd({
           name: entry.heading,
-          serviceType: isSpecies ? `${entry.singular} removal` : "Wildlife removal",
+          serviceType: entry.serviceType ?? (isSpecies ? `${entry.singular} removal` : "Wildlife removal"),
           description: entry.metaDescription,
           path,
         })}
@@ -270,7 +270,9 @@ export function SituationPage({
                   <span className="w-8 shrink-0 font-display text-2xl leading-none text-brass-400" aria-hidden="true">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <p className="text-[15px] leading-relaxed text-ink-700 sm:text-base">{step}</p>
+                  <p className="text-[15px] leading-relaxed text-ink-700 sm:text-base">
+                    <RichText text={step} />
+                  </p>
                 </li>
               ))}
             </ol>

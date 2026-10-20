@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/shared/Container";
+import { RichText } from "@/components/shared/RichText";
 import { ShieldCheckIcon } from "@/components/shared/GuaranteeLine";
 import { GUARANTEE } from "@/lib/config/site";
 import { DAMAGE_REPAIR_PATH } from "@/lib/data/repairs";
@@ -34,7 +35,7 @@ export function RepairSection({
           <div className="mt-6 flex max-w-xl flex-col gap-4">
             {section.paragraphs.map((p) => (
               <p key={p} className="text-[15px] leading-relaxed text-ink-700 text-pretty sm:text-base">
-                {p}
+                <RichText text={p} />
               </p>
             ))}
           </div>

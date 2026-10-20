@@ -89,7 +89,7 @@ export const SPECIES_PAGES: SituationContent[] = [
         "We confirm it's a raccoon and check for kits.",
         "Humane removal from outside, with mother and young kept together.",
         `We seal the entry point. ${GUARANTEE.short}`,
-        "We repair the damage: roof boards and shingles, soffits, fascia, roof vents and chimney caps, plus flattened or soiled attic insulation, matched to your home's existing materials and colours.",
+        "We repair the damage: roof boards and shingles, soffits, fascia, roof vents and chimney caps, plus flattened or soiled attic insulation, matched to your home's existing materials and colours. Where the raccoon left droppings, [raccoon feces removal](/wildlife/raccoon-feces-removal) explains the cleanup.",
       ],
       outro: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week.`,
     },

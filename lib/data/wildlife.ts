@@ -118,6 +118,7 @@ export const WILDLIFE: WildlifeEntry[] = [
       ],
       linkLabel: "How we seal and repair after wildlife",
     },
+    trustRow: true,
   },
   {
     slug: "birds",
@@ -209,6 +210,7 @@ export const WILDLIFE: WildlifeEntry[] = [
       paragraphs: [
         "Whatever was living in the attic usually leaves something behind: flattened or soiled insulation, droppings, nesting material, and an opening at the roofline where it came and went.",
         "Once the animal is out, we seal that opening and repair the damage around it, from the roof and soffits to the vents. Inside the attic, we clean out the droppings and nesting material and remove and replace insulation where it's needed.",
+        "If a raccoon has been using the attic as a latrine, [raccoon latrine cleanup](/wildlife/raccoon-feces-removal) explains what's involved.",
       ],
       linkLabel: "Attic and roof damage repair",
     },
@@ -244,6 +246,46 @@ export const WILDLIFE: WildlifeEntry[] = [
       linkLabel: "Wildlife damage repair",
     },
   },
+  {
+    // Raccoon feces (droppings, latrine) cleanup, Oct 2026: asked for by the
+    // owner through the ads chat for the "raccoon feces" searches. Long-form
+    // copy in lib/data/situations.ts. Owner's answers (Oct 20 2026): the area
+    // is disinfected after the droppings come out; outdoor latrines (decks,
+    // flat roofs, garage roofs) are cleaned too, as a side note; photos are
+    // the owner's own, added when he sends them (no stock). Not on the
+    // /wildlife index: linked from the raccoon and attic pages instead.
+    slug: "raccoon-feces-removal",
+    category: "situation",
+    name: "Raccoon Feces Removal",
+    singular: "raccoon",
+    seoTitle: "Raccoon Feces Removal in Toronto & GTA",
+    heading: "Raccoon Feces Removal in Toronto",
+    metaDescription:
+      "Raccoon feces in the attic, on a deck or roof? We clean out the droppings and latrine, disinfect, replace soiled insulation and seal the way in. Toronto & GTA.",
+    summary: "Raccoon droppings and latrines cleaned out, the area disinfected, and the way in sealed.",
+    intro:
+      "Raccoons go back to the same spot again and again, and the droppings build up into a latrine. We clean it out, disinfect the area and seal the way the raccoon came in.",
+    commonSigns: [
+      "A pile of dark droppings in one spot that keeps growing",
+      "A strong, musty smell from the attic",
+      "Stained or flattened insulation",
+      "Droppings on a deck, a flat roof or a garage roof",
+    ],
+    commonAreas: ["Attics", "Flat roofs and garage roofs", "Decks", "Chimneys"],
+    approach:
+      "If a raccoon is still living there, we check for young and remove the family humanely first. Then the droppings come out, the area is disinfected and the opening is sealed.",
+    iconId: "raccoon",
+    unlisted: true,
+    serviceType: "Raccoon feces removal",
+    repair: {
+      heading: "Cleanup, insulation and repair after a raccoon latrine",
+      paragraphs: [
+        "A latrine is only half of it. The raccoon got in somewhere, and until that opening is closed it can come back to the same spot.",
+        "Once the droppings are out and the area is disinfected, we seal the way in and repair the damage around it: a torn roof vent, a lifted soffit, chewed fascia or a missing chimney cap, matched to your home's existing materials and colours.",
+      ],
+      linkLabel: "Raccoon damage repair",
+    },
+  },
 ];
 
 export function getWildlifeBySlug(slug: string): WildlifeEntry | undefined {
@@ -255,5 +297,5 @@ export function getSpeciesEntries(): WildlifeEntry[] {
 }
 
 export function getSituationEntries(): WildlifeEntry[] {
-  return WILDLIFE.filter((w) => w.category === "situation");
+  return WILDLIFE.filter((w) => w.category === "situation" && !w.unlisted);
 }
