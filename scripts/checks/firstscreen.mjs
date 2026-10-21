@@ -15,7 +15,7 @@ const PAGES = [
   "/service-areas/toronto", "/service-areas/scarborough", "/service-areas/north-york", "/service-areas/etobicoke",
   "/service-areas/peel-region", "/service-areas/brampton", "/service-areas/mississauga", "/service-areas/caledon",
   "/service-areas/pickering", "/service-areas/ajax", "/service-areas/whitby", "/service-areas/oshawa",
-  "/service-areas/durham-region", "/wildlife/raccoon-feces-removal",
+  "/service-areas/durham-region", "/wildlife/raccoon-feces-removal", "/wildlife/skunks",
   "/service-areas/york-region", "/service-areas/markham", "/service-areas/vaughan", "/service-areas/richmond-hill",
   "/service-areas/newmarket", "/service-areas/aurora", "/service-areas/stouffville",
 ];

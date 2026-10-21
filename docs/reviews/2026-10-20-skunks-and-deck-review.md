@@ -1,6 +1,6 @@
 # Skunk page long-form and the feces page deck section: review notes (Oct 20, 2026)
 
-**WAITING for the owner's "approved".** Built in GNW Website 9 on the session branch `ccr-e849fd80-mdl08d`. From the side chat "Semrush negatives 2", 8:10 PM note (it replaces tonight's earlier notes). This replaces the earlier addendum in docs/reviews/2026-10-20-raccoon-feces-review.md: the deck section described there is rewritten and moved up.
+**APPROVED by the owner without strikes, and LIVE (Oct 20, 8:46 PM Toronto).** Built in GNW Website 9 on the session branch `ccr-e849fd80-mdl08d`. From the side chat "Semrush negatives 2", 8:10 PM note (it replaces tonight's earlier notes). This replaces the earlier addendum in docs/reviews/2026-10-20-raccoon-feces-review.md: the deck section described there is rewritten and moved up.
 
 ## What changes (URLs, titles and H1s unchanged on both pages)
 - /wildlife/raccoon-feces-removal: no "latrine" anywhere; a deck and patio section second from the top ("Raccoon poop on your deck or patio": patio furniture, raccoons under the deck, why they keep coming back, how to get rid of raccoons under a deck, what we do, the guarantee line, a link to the skunk page); attics stay as the other main case; the question "How do I stop raccoons from pooping on my deck?". 1,730 words.
