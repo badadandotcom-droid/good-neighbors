@@ -210,7 +210,7 @@ export const WILDLIFE: WildlifeEntry[] = [
       paragraphs: [
         "Whatever was living in the attic usually leaves something behind: flattened or soiled insulation, droppings, nesting material, and an opening at the roofline where it came and went.",
         "Once the animal is out, we seal that opening and repair the damage around it, from the roof and soffits to the vents. Inside the attic, we clean out the droppings and nesting material and remove and replace insulation where it's needed.",
-        "If a raccoon has been using the attic as a latrine, [raccoon latrine cleanup](/wildlife/raccoon-feces-removal) explains what's involved.",
+        "If a raccoon has been leaving droppings in the attic, [raccoon feces cleanup](/wildlife/raccoon-feces-removal) explains what's involved.",
       ],
       linkLabel: "Attic and roof damage repair",
     },
@@ -247,12 +247,12 @@ export const WILDLIFE: WildlifeEntry[] = [
     },
   },
   {
-    // Raccoon feces (droppings, latrine) cleanup, Oct 2026: asked for by the
+    // Raccoon feces (droppings) cleanup, Oct 2026: asked for by the
     // owner through the ads chat for the "raccoon feces" searches. Long-form
     // copy in lib/data/situations.ts. Owner's answers (Oct 20 2026): the area
     // is disinfected after the droppings come out; the page is mainly about
-    // attics and other spaces inside the house, and outdoor latrines (decks,
-    // flat roofs, garage roofs) are cleaned too, as a side note only; photos are
+    // attics and other spaces inside the house, then decks and patios (owner,
+    // Oct 20, via the side chat); no "latrine" anywhere (owner's call); photos are
     // the owner's own, added when he sends them (no stock). Not on the
     // /wildlife index: linked from the raccoon and attic pages instead.
     slug: "raccoon-feces-removal",
@@ -262,15 +262,15 @@ export const WILDLIFE: WildlifeEntry[] = [
     seoTitle: "Raccoon Feces Removal in Toronto & GTA",
     heading: "Raccoon Feces Removal in Toronto",
     metaDescription:
-      "Raccoon feces in the attic? We clean out the droppings and latrine, disinfect the area, replace soiled insulation and seal the opening it used. Toronto & GTA.",
-    summary: "Raccoon droppings and latrines cleaned out, the area disinfected, and the way in sealed.",
+      "Raccoon feces in the attic or on the deck? We clean out the droppings, disinfect the area, replace soiled insulation and seal where it got in. Toronto & GTA.",
+    summary: "Raccoon droppings cleaned out of attics and off decks, the area disinfected, and the way in sealed.",
     intro:
-      "Raccoons go back to the same spot again and again, and the droppings build up into a latrine. We clean it out, disinfect the area and seal the way the raccoon came in.",
+      "Raccoons go back to the same spot again and again, and the droppings build up there. We clean them out, disinfect the area and seal the way the raccoon came in.",
     commonSigns: [
       "A pile of dark droppings in one spot that keeps growing",
       "A strong, musty smell from the attic",
       "Stained or flattened insulation",
-      "Droppings on the attic floor or on top of the insulation",
+      "Droppings on the attic floor, on top of the insulation or on a deck",
     ],
     commonAreas: ["Attics", "Above garages", "Chimneys", "Decks and flat roofs"],
     approach:
@@ -279,9 +279,9 @@ export const WILDLIFE: WildlifeEntry[] = [
     unlisted: true,
     serviceType: "Raccoon feces removal",
     repair: {
-      heading: "Cleanup, insulation and repair after a raccoon latrine",
+      heading: "Cleanup, insulation and repair after raccoon droppings",
       paragraphs: [
-        "A latrine is only half of it. The raccoon got in somewhere, and until that opening is closed it can come back to the same spot.",
+        "The droppings are only half of it. The raccoon got in somewhere, and until that opening is closed it can come back to the same spot.",
         "Once the droppings are out and the area is disinfected, the opening is sealed and the damage around it repaired: a torn roof vent, a lifted soffit, chewed fascia or a missing chimney cap, matched to your home's existing materials and colours.",
       ],
       linkLabel: "Raccoon damage repair",

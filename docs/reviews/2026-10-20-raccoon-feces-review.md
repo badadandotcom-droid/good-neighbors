@@ -165,3 +165,25 @@ Web search summaries only: the CDC site is blocked from a cloud session and page
 - PageSpeed Insights and the live site (a cloud session cannot reach them).
 - The smell reaching the rooms below (judgment call 6).
 - What the sources say word for word: only search summaries were read.
+
+## Addendum, Oct 20, 8:30 PM Toronto: no "latrine", and a deck and patio section (WAITING for "approved")
+From the side chat "Semrush negatives 2" (8:15 PM): your call, no "latrine" on the page, and more on decks and patios. URL, title and H1 unchanged. Only the feces page and the attic page change (compare check); crawl Problems: none; phone first screen passes; every new sentence is new to the site. The older attic, walls and raccoon pages still say "latrine" once each in their own copy (not touched; say if you want those gone too).
+
+New section, "Raccoon poop on a deck or patio" (after "Where raccoon droppings turn up in a house"):
+- Decks and patios are the other place raccoon droppings turn up. A raccoon crossing the yard at night tends to pick one corner of the deck, the top of the steps or the edge of the patio and come back to it, so the droppings build up there. A hole or loose soil along the base of the deck as well usually means a raccoon is living underneath it.
+- We clean up raccoon droppings on decks and patios with the same care, and the area is disinfected afterwards. If a raccoon is living under the deck, it comes out first, with any young checked for; then wire mesh is fixed along the base and dug into the ground, so the space under the deck stays closed. The raccoon page has more on [raccoons under decks and in sheds](/wildlife/raccoons).
+
+Question changed: "Do you clean up raccoon poop on a deck or patio?" Yes. Droppings on a deck, a patio, a porch roof, a flat roof or a garage roof are cleaned up and the area disinfected, and if a raccoon is living under the deck, it is removed first and the base of the deck closed off with wire mesh.
+
+Wording swaps (every "latrine" replaced):
+- Meta description: "Raccoon feces in the attic or on the deck? We clean out the droppings, disinfect the area, replace soiled insulation and seal where it got in. Toronto & GTA." (157 characters)
+- Under the H1: "...usually means a raccoon is using that spot as its toilet."
+- Heading "The raccoon latrine: why it's always the same spot" becomes "Why raccoons always use the same spot"; "That spot is called a latrine. Outdoors it is often" becomes "Outdoors that spot is often"; "A latrine keeps growing" becomes "The pile keeps growing".
+- "Most of the raccoon droppings we clean up in Toronto and the GTA are in attics"; "Wherever the droppings have built up, the insulation or material underneath is soiled as well".
+- The roof paragraph: "Up on the roof, raccoons use porch roofs, flat roofs and garage roofs the same way, and we clean those up too. Most of our work, though, is in the attic, where the droppings are out of sight and can go unnoticed for a long time."
+- "so old droppings need the same care as fresh ones."
+- Process: "Cleaning raccoon droppings out of an attic means working inside it, so we take care with the hatch and the rooms below."; step 1 "We find the droppings, and work out where the raccoon has been getting in."
+- Questions: "An attic is harder: ..."; "Insulation under the droppings, or flattened ..."; "Raccoons return to a spot they know, ..."; "It depends on how much has built up, ...".
+- Repair block: heading "Cleanup, insulation and repair after raccoon droppings"; "The droppings are only half of it."
+- Attic page link line: "If a raccoon has been leaving droppings in the attic, [raccoon feces cleanup](/wildlife/raccoon-feces-removal) explains what's involved."
+- Not checked online: the deck habits (one corner, the top of the steps, a hole or loose soil at the base). Public-health sources list decks, porches and patios as common spots; the rest is plain description, kept general.
