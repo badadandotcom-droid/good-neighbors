@@ -306,11 +306,11 @@ export const SITUATIONS: SituationContent[] = [
     // California and King County public health, BCCDC, Cornell, University of
     // Illinois Extension. Household disinfectants do not kill roundworm eggs,
     // so the page says the area is disinfected (owner-confirmed) but never that
-    // disinfecting kills the eggs. Attics first, then decks and patios (owner, Oct 20
-    // 2026, via the side chat). The word "latrine" is not used (owner's call, Oct 20).
+    // disinfecting kills the eggs. Decks and patios lead, attics are the other main
+    // case (owner, Oct 20 2026, 8:10 PM note via the side chat). The word "latrine" is not used (owner's call, Oct 20).
     slug: "raccoon-feces-removal",
     subhead:
-      "A pile of dark droppings that keeps growing in one corner of the attic usually means a raccoon is using that spot as its toilet. We clean it out, disinfect the area, replace the soiled insulation and seal the way in.",
+      "Raccoons keep pooping in the same spot, whether that's a corner of the deck or a corner of the attic. We clean it up, disinfect the area, get the raccoon out and seal the way back in.",
     trustRow: true,
     sections: [
       {
@@ -321,7 +321,16 @@ export const SITUATIONS: SituationContent[] = [
         ],
       },
       {
-        heading: "Why raccoons always use the same spot",
+        heading: "Raccoon poop on your deck or patio",
+        paragraphs: [
+          "If raccoons keep pooping on your deck, it is rarely by chance. A raccoon picks one spot, a corner of the deck, the top of the steps, the edge of the patio or even a cushion on the patio furniture, and comes back to it night after night, so the droppings build up there.",
+          "The usual reason is that the raccoon is living close by, very often under the deck itself. A hole or loose soil at the edge of the deck, or a gap under the steps, is the sign to look for. While it lives there, a clean deck lasts until the next night, which is why cleaning alone rarely stops raccoons from pooping on a deck.",
+          "How to get rid of raccoons under a deck comes down to two things: getting the raccoon out without leaving any young behind, and closing the space so it can't dig back in. So we clean up the droppings on the deck, the patio and the patio furniture and disinfect the area; if a raccoon is living under the deck, we check for young and get it out humanely; then the space under the deck is screened off with wire mesh fixed around the base and buried in the soil.",
+          `${GUARANTEE.short} If it turns out to be a skunk under the deck instead, [skunk removal](/wildlife/skunks) explains how that one is handled.`,
+        ],
+      },
+      {
+        heading: "Why raccoons keep using the same spot",
         paragraphs: [
           "Raccoons don't leave droppings at random. They choose a toilet area and use it night after night, and other raccoons use the same spot, so the droppings pile up in one place. Outdoors that spot is often somewhere raised and flat, such as a fallen log, a woodpile or a deck; in a house, it is usually one corner of the attic.",
           "The pile keeps growing for as long as a raccoon is living there. Cleaning it up while the raccoon is still coming and going lasts one night, which is why the cleanup comes after the raccoon is out and is finished by sealing the way in.",
@@ -330,15 +339,8 @@ export const SITUATIONS: SituationContent[] = [
       {
         heading: "Where raccoon droppings turn up in a house",
         paragraphs: [
-          "Most of the raccoon droppings we clean up in Toronto and the GTA are in attics, on top of the insulation or along the attic floor. Raccoons also leave droppings above a garage and inside a chimney. Wherever the droppings have built up, the insulation or material underneath is soiled as well, so the cleanup takes that out along with the droppings on top.",
-          "Up on the roof, raccoons use porch roofs, flat roofs and garage roofs the same way, and we clean those up too. Most of our work, though, is in the attic, where the droppings are out of sight and can go unnoticed for a long time.",
-        ],
-      },
-      {
-        heading: "Raccoon poop on a deck or patio",
-        paragraphs: [
-          "Decks and patios are the other place raccoon droppings turn up. A raccoon crossing the yard at night tends to pick one corner of the deck, the top of the steps or the edge of the patio and come back to it, so the droppings build up there. A hole or loose soil along the base of the deck as well usually means a raccoon is living underneath it.",
-          "We clean up raccoon droppings on decks and patios with the same care, and the area is disinfected afterwards. If a raccoon is living under the deck, it comes out first, with any young checked for; then wire mesh is fixed along the base and dug into the ground, so the space under the deck stays closed. The raccoon page has more on [raccoons under decks and in sheds](/wildlife/raccoons).",
+          "Inside the house, raccoon droppings in Toronto and the GTA are usually in the attic, on top of the insulation or along the attic floor. Raccoons also leave droppings above a garage and inside a chimney. Wherever the droppings have built up, the insulation or material underneath is soiled as well, so the cleanup takes that out along with the droppings on top.",
+          "Up on the roof, raccoons use porch roofs, flat roofs and garage roofs the same way, and we clean those up too. The attic matters most indoors, because the droppings there are out of sight and can go unnoticed for a long time.",
         ],
       },
       {
@@ -398,9 +400,9 @@ export const SITUATIONS: SituationContent[] = [
           "Yes. Insulation under the droppings, or flattened where the raccoon was living, is removed and replaced, so the attic is back to how it should be.",
       },
       {
-        question: "Do you clean up raccoon poop on a deck or patio?",
+        question: "How do I stop raccoons from pooping on my deck?",
         answer:
-          "Yes. Droppings on a deck, a patio, a porch roof, a flat roof or a garage roof are cleaned up and the area disinfected, and if a raccoon is living under the deck, it is removed first and the base of the deck closed off with wire mesh.",
+          "Find out where the raccoon is living. If it's under the deck, the droppings will keep coming until it is out and the space under the deck is closed. We do both, and clean up and disinfect the deck, the patio and the patio furniture; droppings on a porch roof, a flat roof or a garage roof are cleaned up too.",
       },
       {
         question: "Will the raccoon come back to the same spot?",

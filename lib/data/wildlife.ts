@@ -251,8 +251,8 @@ export const WILDLIFE: WildlifeEntry[] = [
     // owner through the ads chat for the "raccoon feces" searches. Long-form
     // copy in lib/data/situations.ts. Owner's answers (Oct 20 2026): the area
     // is disinfected after the droppings come out; the page is mainly about
-    // attics and other spaces inside the house, then decks and patios (owner,
-    // Oct 20, via the side chat); no "latrine" anywhere (owner's call); photos are
+    // decks and patios first, then attics and the inside of the house (owner,
+    // Oct 20, 8:10 PM note via the side chat); no "latrine" anywhere (owner's call); photos are
     // the owner's own, added when he sends them (no stock). Not on the
     // /wildlife index: linked from the raccoon and attic pages instead.
     slug: "raccoon-feces-removal",

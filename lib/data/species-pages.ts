@@ -354,6 +354,106 @@ export const SPECIES_PAGES: SituationContent[] = [
       },
     ],
   },
+  {
+    // Skunks long-form (Oct 2026, owner via the side chat "Semrush negatives 2",
+    // for a skunk-under-deck ad test). Facts: mating mid-February to mid-March,
+    // young born May and June, out with the mother at about two months (AIWC,
+    // an Ontario wildlife centre); a one-way door only once the young can
+    // follow their mother (Toronto Wildlife Centre). One-way doors are the
+    // owner's method. No smell-removal service (owner).
+    slug: "skunks",
+    subhead:
+      "A skunk under the deck, the porch or the shed is a ground-level problem with a calm, step-by-step fix: find the den, check for young, let the skunk out and close the space behind it.",
+    trustRow: true,
+    signs: {
+      heading: "Signs of a skunk under your deck",
+      intro: "Most people never see the skunk. They smell it near the deck at night, or find a fresh hole dug at the edge.",
+    },
+    sections: [
+      {
+        heading: "A skunk under the deck",
+        paragraphs: [
+          "Skunks don't climb into attics the way raccoons do. They dig. The space under a deck is dry, sheltered and right at ground level, and a skunk can dig in under the edge of almost any deck that is open at the bottom. A skunk den under the deck is usually quiet by day: the skunk sleeps underneath, comes out around dusk and is back before dawn.",
+          "The signs are at the edge of the deck: a fresh hole or a shallow trench dug under the frame, loose soil pushed out, and tracks in soft ground or snow. The smell is often what people notice first, a skunk odour near the deck even when nobody has seen the animal. Small cone-shaped holes in the lawn nearby are a skunk digging for grubs at night.",
+          "A skunk living under your deck is not a danger to the house, and it rarely does damage. The reasons to deal with it are the smell, a pet that meets it in the yard, and, in spring, a family of young being raised under the boards.",
+        ],
+      },
+      {
+        heading: "Skunks under porches, sheds and front steps",
+        paragraphs: [
+          "Porches, sheds and front steps give a skunk the same thing a deck does: a dry roof at ground level with soil underneath to dig. A shed on blocks or a porch with an open lattice is easy to get under, and so is the gap under a set of concrete front steps. They are handled exactly the way a skunk under the deck is.",
+        ],
+      },
+      {
+        heading: "Skunk babies in spring",
+        paragraphs: [
+          "Skunks mate from about mid-February to mid-March, and the young are born in May and June. A mother raises them under a deck or shed for the first several weeks, and they start following her out at night when they are about two months old.",
+          "That is why we check for young before any work begins. If the space under the deck were closed while the babies were inside, the mother could not get back to them and they would not survive on their own. A one-way door goes on only once the young are old enough to follow their mother out.",
+        ],
+      },
+      {
+        heading: "How a skunk leaves without a fuss",
+        paragraphs: [
+          "Skunks are calm animals and spray mostly when they feel cornered, so nothing about this is rushed or forced. Once we know where the skunk goes in and whether there are young, a one-way door is fitted over the entry. The skunk goes out at dusk as it always does and cannot get back in. When we are sure the space is empty, the door comes off and the space is closed for good.",
+          "If it is a raccoon under the deck rather than a skunk, the job is much the same; [raccoon removal](/wildlife/raccoons) covers raccoons under decks and in sheds.",
+        ],
+      },
+    ],
+    process: {
+      heading: "Skunk under deck removal, step by step",
+      intro:
+        "Usually, we can solve the wildlife problem entirely from outside without needing to enter your home. With a skunk under the deck, it goes like this.",
+      steps: [
+        "We find the den and every way in along the deck, porch or shed.",
+        "We check for young; in late spring and early summer nothing is closed until the babies are old enough to follow their mother out.",
+        "A one-way door goes over the entry, so the skunk can leave at dusk but not come back.",
+        `Once the space is empty, wire mesh is fixed along the base and dug into the ground. ${GUARANTEE.short}`,
+      ],
+      outro: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week.`,
+    },
+    faqHeading: "Questions about skunks under decks",
+    faqs: [
+      {
+        question: "I have a skunk under my deck. What should I do?",
+        answer:
+          "Leave it alone and don't block the hole: a skunk shut in, or a mother shut out from her babies, is the one thing that makes this harder. Keep pets in at dusk and dawn, and call or send a request; a photo of the hole helps.",
+        link: { href: "/contact", label: "Send a request with photos" },
+      },
+      {
+        question: "How do I know it's a skunk living under my deck?",
+        answer:
+          "A skunk smell near the deck, a fresh hole or loose soil at the edge, and small cone-shaped holes in the lawn are the usual signs. Raccoons den under decks too; our technician confirms which it is on site.",
+      },
+      {
+        question: "Will the skunk spray?",
+        answer:
+          "Skunks are calm by nature and spray when they feel cornered. The one-way door lets the skunk leave in its own time, which is the calmest way to do it.",
+      },
+      {
+        question: "What about skunk babies under the deck?",
+        answer:
+          "Skunk babies are born in May and June. We check for young before any work begins, and the space isn't closed until they're old enough to leave with their mother.",
+      },
+      {
+        question: "Do you also get skunks out from under porches and sheds?",
+        answer: "Yes. A skunk under a porch, a shed or the front steps is handled the same way as a skunk under the deck.",
+      },
+      {
+        question: "Will the skunk come back?",
+        answer: `Not into the space we closed off. ${GUARANTEE.full}`,
+      },
+      {
+        question: "How much does skunk removal cost?",
+        answer:
+          "It depends on the number of entry points and how much of the deck, porch or shed needs screening. The price is explained to you first, before any work begins.",
+      },
+      INSURANCE_FAQ,
+      {
+        question: "How soon can you come?",
+        answer: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week, and the visit starts at the deck, not inside the house.`,
+      },
+    ],
+  },
 ];
 
 export function getSpeciesPageContent(slug: string): SituationContent | undefined {

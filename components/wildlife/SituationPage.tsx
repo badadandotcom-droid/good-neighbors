@@ -46,7 +46,10 @@ export function SituationPage({
   const isSpecies = entry.category === "species";
   const visitSteps = [
     { term: "On arrival", detail: `We confirm the ${entry.singular.toLowerCase()} activity and check how it's getting in.` },
-    { term: "During the visit", detail: "Removal is handled humanely, with care taken around your roofline and finishes." },
+    {
+      term: "During the visit",
+      detail: entry.visitNote ?? "Removal is handled humanely, with care taken around your roofline and finishes.",
+    },
     { term: "Before we leave", detail: "We'll explain what we found, what we did, and how the animal got in." },
   ];
 
