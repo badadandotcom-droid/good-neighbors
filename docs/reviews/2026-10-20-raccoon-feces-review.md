@@ -1,6 +1,6 @@
 # Raccoon feces removal page: review notes for the owner (Oct 20, 2026)
 
-**APPROVED by the owner Oct 21 without strikes, and LIVE the same day (Oct 20, 8:01 PM Toronto).** Built in GNW Website 9 on the session branch `ccr-e849fd80-mdl08d`, on top of the live branch (37d76c5). Approve as is, or name the numbers below to strike or change.
+**APPROVED by the owner Oct 20 without strikes, and LIVE the same day (Oct 20, 8:01 PM Toronto).** Built in GNW Website 9 on the session branch `ccr-e849fd80-mdl08d`, on top of the live branch (37d76c5). Approve as is, or name the numbers below to strike or change.
 
 Asked for by the ads side (side chat "Semrush negatives 2" and the ads chat, Oct 20): a new page for the "raccoon feces" searches (about 1,300 a month in Canada; "what does raccoon feces look like" 390; "pictures of raccoon feces" 390; "raccoon feces removal" 110; "raccoon latrine removal toronto" 70; "raccoon feces cleanup toronto" 50), plus the trust row on /wildlife/skunks.
 
