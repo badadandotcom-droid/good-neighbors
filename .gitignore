@@ -42,3 +42,4 @@ next-env.d.ts
 
 # python cache (scripts/icon/gen.py)
 __pycache__/
+.scratch/
