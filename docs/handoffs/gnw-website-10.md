@@ -1,14 +1,29 @@
-Chat name: GNW Website 9
+Chat name: GNW Website 10
 
-# Handoff: Good Neighbors Wildlife website (Oct 16 2026; written by GNW Website 8 at its close, for GNW Website 9)
+# Handoff: Good Neighbors Wildlife website (Oct 22 2026; written by GNW Website 9 at its close, for GNW Website 10)
 
-Previous chat: GNW Website 8 (before it, GNW Website 7).
-(Chat names are job name + number, copied exactly. At every handoff this file is renamed after the chat that will read it, docs/handoffs/gnw-website-<n>.md, and its first line becomes "Chat name: <that name>" (the owner's open-and-close routine, Oct 15). It used to be docs/handoffs/2026-10-11-gnw-handoff.md; the history is in git.)
-Scheduled checks: none. GNW Website 7 and GNW Website 8 set none, so there is nothing to move.
+Previous chat: GNW Website 9 (before it, GNW Website 8). Renamed from docs/handoffs/gnw-website-9.md; the history is in git.
+Scheduled checks: none. GNW Website 9 set none, so there is nothing to move.
 
-**Status (GNW Website 9, Oct 16, 5:50 AM Toronto):** the Durham hub copy is LIVE. The owner approved it without striking any of the 24 judgment calls, and the live branch was fast-forwarded to the session branch `ccr-e849fd80-mdl08d` (the hub commit c078cfc and the docs commit after it). Step 5 of "Start here" went in the same push: the hub is on the landing-page list in CLAUDE.md and in `scripts/checks/firstscreen.mjs` (28 pages, all pass). The live note for the ads chat went to the owner (under "Relay notes"). The copy was written by an Opus subagent in this chat (the owner chose Opus) and reviewed and checked by this chat. Next: /wildlife/bats (item 2).
+## Start here (GNW Website 10)
+0. Say which model the chat is on first. Branch: this file is on GNW Website 9's session branch `ccr-e849fd80-mdl08d`, which equals the live branch `claude/good-neighbors-v2-visual-redesign` (both at the commit that added this file's rename, or one docs commit ahead of live). Start your own session branch from `origin/claude/good-neighbors-v2-visual-redesign` (fetch first) and check `git merge-base --is-ancestor origin/claude/good-neighbors-v2-visual-redesign HEAD`. Nothing is waiting for approval.
+1. FIRST: the owner has a note from the ads chat to paste. Act on it first (relay rule in CLAUDE.md).
+2. The owner is not sure which of GNW Website 9's notes were sent. Read them back to the owner from "Relay notes" below and ask which went; these are the ones that matter, newest first:
+   - Oct 20, 8:46 PM: two LIVE notes for the side chat "Semrush negatives 2": /wildlife/raccoon-feces-removal (title "Raccoon Feces Removal in Toronto & GTA", H1 "Raccoon Feces Removal in Toronto"; no "latrine"; deck and patio section) and /wildlife/skunks (title "Skunk Removal in Toronto: Decks, Porches & Sheds", H1 "Skunk Removal in Toronto"; long-form). Needed back from them: PageSpeed Insights mobile on both.
+   - Oct 20, 8:01 PM: the first LIVE note for the feces page (first headed "For the ads chat" by mistake, re-sent as "For Semrush negatives 2"). Superseded by the 8:46 PM notes.
+   - Oct 18, 11:56 AM: LIVE note for the ads chat: the review short link https://www.goodneighborswildlife.ca/review (302 to the Good Neighbors Google review form). The ads chat (Google Ads/website 15) was to test it.
+   - Oct 16, 5:50 AM: LIVE note for the ads chat: the Durham hub long-form copy (the ads chat switches on the hub's two Durham ad groups after it). Needed back: PageSpeed Insights mobile on /service-areas/durham-region.
+   If a note was never sent, give it again in one box (the text is in "Relay notes").
+3. Next jobs, the owner's call: /wildlife/bats (under 250 words; six bat ad groups land on it), the owner's own photos for /wildlife/raccoon-feces-removal when sent (a "Pictures of raccoon feces" part in "What raccoon feces look like" needs a small template addition; no stock photos), and the open question whether the older attic, walls and raccoon pages should lose their one "latrine" each.
+4. Model: Sonnet for reading and planning; writing on Opus (the owner chose Opus in GNW Website 9) or Fable. Routine fact-finding can go to a Sonnet subagent.
+5. Checks: scripts/checks/README.md. The scratch tools (Lighthouse, playwright-core) are gone with the container: `npm init -y && npm i playwright-core lighthouse chrome-launcher` in the scratchpad, copy the scripts beside them, `CHROME_PATH=/opt/pw-browsers/chromium`. The phone first-screen list now has 30 pages (the Durham hub, the feces page and skunks added).
 
-## Start here (GNW Website 9)
+## Done in GNW Website 9 (Oct 16 to 20), all LIVE
+- Oct 16: Durham hub long-form copy, trust row, Brock Township (review: docs/reviews/2026-10-16-durham-hub-review.md).
+- Oct 18: /review short link (302 to https://g.page/r/CUl3yt5_mvGVEBM/review), rule in CLAUDE.md.
+- Oct 20: /wildlife/raccoon-feces-removal (reviews: docs/reviews/2026-10-20-raccoon-feces-review.md and docs/reviews/2026-10-20-skunks-and-deck-review.md); /wildlife/skunks long-form with the trust row; one link line each on the raccoon and attic pages. Rules for both pages are in CLAUDE.md.
+
+## Start here (GNW Website 9; done, kept as the record)
 0. This file is on GNW Website 8's session branch `ccr-ddfff611-1hl2s0`, not on the live branch: `git fetch origin ccr-ddfff611-1hl2s0`. That branch is the live branch (03e8c3d, Oct 16) plus two or three docs-only commits (this file, the Durham prep notes); no site code differs from live. Start your session branch from `origin/ccr-ddfff611-1hl2s0` (check `git merge-base --is-ancestor origin/claude/good-neighbors-v2-visual-redesign HEAD` is true, so going live later is still a fast-forward). The default branch is older than the live site; never start from it.
 0a. What GNW Website 8 did (Oct 16): read the old handoff; reset its session branch to the live branch; wrote `docs/plans/2026-10-16-durham-hub-prep.md` (the allowed place names, the facts found online with their sources, what is still unchecked); took the "before" measurements (below). It then started an Opus writing run in the same chat by mistake: the owner had been told the writing would go in a new chat on Fable or Opus, and said so. The run was stopped before it wrote anything (working tree clean). So NO Durham copy exists yet; the job below is untouched. Lesson, now a rule here: when the plan is "the writing goes in a new chat", stop at the handoff, and name the next chat in the handoff box.
 0b. Model: say first thing which model this chat is on. On Oct 16 a Fable subagent was refused with "You've hit your monthly spend limit", so Fable may not be available; Opus (the owner's choice for the York hub) is the fallback. Tell the owner which one this chat is on before writing; the owner decides.
