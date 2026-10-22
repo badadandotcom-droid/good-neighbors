@@ -321,7 +321,9 @@ export const SITUATIONS: SituationContent[] = [
     slug: "raccoon-feces-removal",
     subhead:
       "Raccoons keep pooping in the same spot, whether that's a corner of the deck or a corner of the attic. We clean it up, disinfect the area, get the raccoon out and seal the way back in.",
-    trustRow: true,
+    // Owner, Oct 22 2026: no lifetime guarantee on this page (insurance and
+    // 24/7 lines only; no guarantee sentence in the copy or the questions).
+    trustRow: "no-guarantee",
     sections: [
       {
         heading: "What raccoon feces look like",
@@ -336,7 +338,7 @@ export const SITUATIONS: SituationContent[] = [
           "If raccoons keep pooping on your deck, it is rarely by chance. A raccoon picks one spot, a corner of the deck, the top of the steps, the edge of the patio or even a cushion on the patio furniture, and comes back to it night after night, so the droppings build up there.",
           "The usual reason is that the raccoon is living close by, very often under the deck itself. A hole or loose soil at the edge of the deck, or a gap under the steps, is the sign to look for. While it lives there, a clean deck lasts until the next night, which is why cleaning alone rarely stops raccoons from pooping on a deck.",
           "How to get rid of raccoons under a deck comes down to two things: getting the raccoon out without leaving any young behind, and closing the space so it can't dig back in. So we clean up the droppings on the deck, the patio and the patio furniture and disinfect the area; if a raccoon is living under the deck, we check for young and get it out humanely; then the space under the deck is screened off with wire mesh fixed around the base and buried in the soil.",
-          `${GUARANTEE.short} If it turns out to be a skunk under the deck instead, [skunk removal](/wildlife/skunks) explains how that one is handled.`,
+          "If it turns out to be a skunk under the deck instead, [skunk removal](/wildlife/skunks) explains how that one is handled.",
         ],
       },
       {
@@ -377,7 +379,7 @@ export const SITUATIONS: SituationContent[] = [
         "If a raccoon is still living there, we check for young first and remove the family humanely before any cleanup starts.",
         "The droppings come out, together with any insulation and nesting material they have soiled.",
         "The area is disinfected, and new insulation goes in where the old was taken out.",
-        `The opening the raccoon used is sealed. ${GUARANTEE.short}`,
+        "The opening the raccoon used is sealed.",
         "Any damage at the opening is repaired, matched to your home's existing materials and colours.",
       ],
       outro: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week.`,
@@ -416,7 +418,7 @@ export const SITUATIONS: SituationContent[] = [
       },
       {
         question: "Will the raccoon come back to the same spot?",
-        answer: `Raccoons return to a spot they know, which is why sealing the opening is part of the job. ${GUARANTEE.full}`,
+        answer: "Raccoons return to a spot they know, which is why sealing the opening is part of the job. How the opening is sealed and the damage around it repaired is explained on the damage repair page.",
       },
       {
         question: "How much does raccoon feces removal cost?",

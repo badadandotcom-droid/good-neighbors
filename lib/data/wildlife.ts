@@ -285,6 +285,9 @@ export const WILDLIFE: WildlifeEntry[] = [
         "Once the droppings are out and the area is disinfected, the opening is sealed and the damage around it repaired: a torn roof vent, a lifted soffit, chewed fascia or a missing chimney cap, matched to your home's existing materials and colours.",
       ],
       linkLabel: "Raccoon damage repair",
+      // Owner, Oct 22 2026: the lifetime guarantee is off this page (the
+      // cleanup is not a sealing job); the trust row shows insurance and 24/7 only.
+      guarantee: false,
     },
   },
   {

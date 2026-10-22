@@ -48,6 +48,15 @@ Dead-animal pickup is a job on its own, outside or inside the house, and nothing
 - Calls 4 to 8, 12 and 18 all answered by the owner on Oct 22. Open: his wider point that other pages show the lifetime guarantee next to work that seals nothing (the guarantee is only for entry points we seal, a soffit or a hole from outside); an audit of where the guarantee appears on the site is proposed.
 - The feces page retitle to "Raccoon Poop Removal in Toronto" (the ads chat's suggestion, Oct 21): not done; the owner's call.
 
+## Addendum, Oct 22, 1:30 AM: the guarantee off the feces page too (owner's instruction)
+Owner, Oct 22: the lifetime guarantee is for animals living in the house that got in somehow and the way we seal; take it off the dead-animal page, the feces page and anything not directly about that; audit the rest later. Done on /wildlife/raccoon-feces-removal (a live ad landing page, so the ads chat is told in the live note):
+- Trust row: insurance and 24/7 lines only (the guarantee line gone).
+- The sealing-and-repair block keeps its two paragraphs and its link; the lifetime-guarantee box beside them is gone (`guarantee: false` on the section; the component now allows it).
+- Three sentences changed: the deck section's "Lifetime guarantee on every entry point we seal." is gone (the sentence after it, about a skunk under the deck, stays); process step 5 is now "The opening the raccoon used is sealed."; the question "Will the raccoon come back to the same spot?" now answers "Raccoons return to a spot they know, which is why sealing the opening is part of the job. How the opening is sealed and the damage around it repaired is explained on the damage repair page."
+- The word "guarantee" is nowhere on either page (checked in Node). URL, title, H1 and meta description of the feces page unchanged. The phone first-screen check accepts both pages without the guarantee line.
+- Judgment call 21: the feces page still says sealing the opening is part of the cleanup job (the owner's Oct 20 description of that job); only the guarantee wording came off. Strike if the feces job should also call sealing separate work.
+- For the ads side: the live "Toronto Raccoon Poop Removal" ad group carries the headline "Lifetime Re-Entry Guarantee" and the Postal Codes ads carry guarantee lines on the same pages; those are the ads chat's to change.
+
 ## Full text as rendered
 **URL:** /wildlife/dead-animal-removal
 **Title:** Dead Animal Removal on Your Property in Toronto (shows as "Dead Animal Removal on Your Property in Toronto | Good Neighbors Wildlife")

@@ -9,8 +9,9 @@ import { cn } from "@/lib/utils";
 
 /**
  * "We don't just remove the animal" — the page's own sealing + repair copy,
- * the lifetime guarantee in the owner's exact wording, and a link to the
- * damage repair page. Each page passes its own heading and paragraphs.
+ * the lifetime guarantee in the owner's exact wording (unless the section
+ * sets `guarantee: false`), and a link to the damage repair page. Each page
+ * passes its own heading and paragraphs.
  */
 export function RepairSection({
   section,
@@ -48,13 +49,15 @@ export function RepairSection({
           </Link>
         </div>
 
-        <aside className="lg:col-span-5 lg:self-center">
-          <div className="rounded-sm bg-pine-700 p-7 text-bone-50 sm:p-9">
-            <ShieldCheckIcon className="h-8 w-8 text-brass-300" />
-            <h3 className="mt-4 font-display text-2xl leading-tight text-bone-50">Lifetime guarantee</h3>
-            <p className="mt-3 text-[15px] leading-relaxed text-pine-100 text-pretty">{GUARANTEE.full}</p>
-          </div>
-        </aside>
+        {section.guarantee !== false && (
+          <aside className="lg:col-span-5 lg:self-center">
+            <div className="rounded-sm bg-pine-700 p-7 text-bone-50 sm:p-9">
+              <ShieldCheckIcon className="h-8 w-8 text-brass-300" />
+              <h3 className="mt-4 font-display text-2xl leading-tight text-bone-50">Lifetime guarantee</h3>
+              <p className="mt-3 text-[15px] leading-relaxed text-pine-100 text-pretty">{GUARANTEE.full}</p>
+            </div>
+          </aside>
+        )}
       </Container>
     </section>
   );

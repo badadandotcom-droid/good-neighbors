@@ -168,6 +168,12 @@ export interface RepairSection {
   paragraphs: string[];
   /** Anchor text for the link to the damage repair page — varied per page. */
   linkLabel: string;
+  /**
+   * `false` leaves out the lifetime-guarantee box (owner, Oct 22 2026): the
+   * guarantee is for the entry points we seal, so it stays off pages about
+   * work that seals nothing as its own job (raccoon feces cleanup).
+   */
+  guarantee?: boolean;
 }
 
 export interface WildlifeEntry {
