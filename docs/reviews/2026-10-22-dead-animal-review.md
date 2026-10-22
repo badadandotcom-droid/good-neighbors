@@ -34,7 +34,7 @@ Dead-animal pickup is a job on its own, outside or inside the house, and nothing
 9. "Your property, not the road": Toronto's rule paraphrased from the City's page (large animals on public property through 311; may help on private property; small animals not collected; pick-up times vary); the other GTA cities summed up as "each has its own version". The FAQ answer says "On your property it depends", because the City may assist when the owner is unknown; it would be untrue to say the City never comes onto private property.
 10. Smell duration ("a week or so" for a small animal, "several weeks" for a raccoon): the two sources above.
 11. Two animal facts stated as common knowledge, not checked against a scientific source: squirrels fall into wall cavities from the attic and cannot climb out; a young raccoon can be left behind when its mother is gone. Both are standard in the wildlife-control trade; strike either if unsure.
-12. The bat paragraph and question: from the City's bat page. "We remove bats from the house; we don't test them" is the website chat's wording of what the owner does and does not do; the bat page (/wildlife/bats) is the owner-confirmed source that bats are handled. CONFIRM the testing line.
+12. The bat paragraph and question: from the City's bat page. OWNER, Oct 22: the "we don't test them" sentence cut (too much information); the paragraph ends on the public-health advice, and the question ends "Once that's done, we remove it."
 13. Sick, injured or stuck animal: one paragraph and one question, worded so it does not read as rescue ("We are not a wildlife rescue, so we don't take in or treat animals"). From the owner's Oct 19 statement. "Rescue" and "injured" appear on the page in that sentence only; both are blocked ad negatives, which concerns the ads, not the page.
 14. No smell-removal service anywhere, and the word "odour" nowhere on the page (it is a blocked ad negative and the owner does not want that work). The page says the smell fades on its own once the animal is out and the spot is cleaned, which is what the sources say.
 15. Length: about 1,960 words with the questions. Easy cuts if the owner wants it nearer 900: the third paragraph of "The smell of a dead animal in the house" (the pet), the third paragraph of "Where dead animals turn up" (repeats the entry-point point made later), the second paragraph of "Why the smell lasts so long" (waiting it out), and the questions "Do you have to cut into the wall?" and "How do you find a dead animal inside a wall?" (both answered in the copy).
@@ -45,7 +45,7 @@ Dead-animal pickup is a job on its own, outside or inside the house, and nothing
 20. Meta description ends "Your property, not the road. Toronto & GTA." (158 characters).
 
 ## Still the owner's
-- Confirm calls 5, 6, 7, 8, 12 and 18 (what we actually do on a dead-animal visit).
+- Confirm calls 5, 6, 7 and 8 (what we actually do on a dead-animal visit). Calls 12 and 18 answered Oct 22.
 - Whether the guarantee box stays on this page (call 4).
 - The feces page retitle to "Raccoon Poop Removal in Toronto" (the ads chat's suggestion, Oct 21): not done; the owner's call.
 
@@ -66,7 +66,7 @@ Lifetime guarantee on every entry point we seal. · $5 million liability insuran
 
 It usually starts as a faint, sweetish, rotten smell in one room that you can't trace to the garbage or the drains. Over a day or two it gets stronger, it's worse in the afternoon when the house warms up, and it seems to come from a wall, a ceiling or a vent rather than from anything in the room.
 
-Two other signs often go with it. Flies gather at one window or around one spot, because they have found the animal before you have. And the scratching or scurrying you were hearing a few days ago has gone quiet. A squirrel that was running through the attic at dawn and then stopped, followed by a smell a few days later, is the most common story we hear.
+Two other signs often go with it. Flies gather at one window or around one spot, because they have found the animal before you have. And the scratching or scurrying you were hearing a few days ago has gone quiet. A squirrel that was running through the attic at dawn and then stopped, followed by a smell a few days later, is a typical sequence.
 
 A pet is often the first to notice. A dog or cat that keeps sniffing at one spot on a wall or at the bottom of a vent is usually pointing at the place.
 
@@ -96,7 +96,7 @@ What no city service does is come into your house for it. Nobody from 311 will g
 
 Don't handle a dead wild animal with bare hands, and keep children and pets away from it. A raccoon's droppings around the spot can carry roundworm eggs, and any carcass draws flies and then maggots within a day or two in warm weather. Close the room off if the smell is bad, open a window, and leave the wall and the attic alone; there's no need to go up and look.
 
-A dead bat is a special case. Never touch a bat, alive or dead. If a bat is found in a room where someone was sleeping, or there is any chance a person or a pet had contact with it, call 311 or Toronto Public Health before anything else, because the bat may need to be sent for rabies testing. We remove bats from the house; we don't test them.
+A dead bat is a special case. Never touch a bat, alive or dead. If a bat is found in a room where someone was sleeping, or there is any chance a person or a pet had contact with it, call 311 or Toronto Public Health before anything else, because the bat may need to be sent for rabies testing.
 
 If the animal is not dead but sick, injured or stuck and unable to move, we can still come and remove it from your property. We are not a wildlife rescue, so we don't take in or treat animals, but we will get it out of your house or your yard.
 
@@ -159,7 +159,7 @@ It should be handled with gloves and bagged, never picked up bare-handed, and th
 
 **What if the dead animal is a bat?**
 
-Don't touch it. If anyone, or a pet, may have had contact with it, or it was found in a room where someone was sleeping, call 311 or Toronto Public Health first, because it may need rabies testing. We'll remove the bat and check how bats are getting into the house.
+Don't touch it. If anyone, or a pet, may have had contact with it, or it was found in a room where someone was sleeping, call 311 or Toronto Public Health first, because it may need rabies testing. Once that's done, we remove it.
 
 **What if the animal is still alive but not moving?**
 

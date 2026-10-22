@@ -445,7 +445,7 @@ export const SITUATIONS: SituationContent[] = [
         heading: "The smell of a dead animal in the house",
         paragraphs: [
           "It usually starts as a faint, sweetish, rotten smell in one room that you can't trace to the garbage or the drains. Over a day or two it gets stronger, it's worse in the afternoon when the house warms up, and it seems to come from a wall, a ceiling or a vent rather than from anything in the room.",
-          "Two other signs often go with it. Flies gather at one window or around one spot, because they have found the animal before you have. And the scratching or scurrying you were hearing a few days ago has gone quiet. A squirrel that was running through the attic at dawn and then stopped, followed by a smell a few days later, is the most common story we hear.",
+          "Two other signs often go with it. Flies gather at one window or around one spot, because they have found the animal before you have. And the scratching or scurrying you were hearing a few days ago has gone quiet. A squirrel that was running through the attic at dawn and then stopped, followed by a smell a few days later, is a typical sequence.",
           "A pet is often the first to notice. A dog or cat that keeps sniffing at one spot on a wall or at the bottom of a vent is usually pointing at the place.",
         ],
       },
@@ -476,7 +476,7 @@ export const SITUATIONS: SituationContent[] = [
         heading: "Keep your distance until it's out",
         paragraphs: [
           "Don't handle a dead wild animal with bare hands, and keep children and pets away from it. A raccoon's droppings around the spot can carry roundworm eggs, and any carcass draws flies and then maggots within a day or two in warm weather. Close the room off if the smell is bad, open a window, and leave the wall and the attic alone; there's no need to go up and look.",
-          "A dead bat is a special case. Never touch a bat, alive or dead. If a bat is found in a room where someone was sleeping, or there is any chance a person or a pet had contact with it, call 311 or Toronto Public Health before anything else, because the bat may need to be sent for rabies testing. We remove bats from the house; we don't test them.",
+          "A dead bat is a special case. Never touch a bat, alive or dead. If a bat is found in a room where someone was sleeping, or there is any chance a person or a pet had contact with it, call 311 or Toronto Public Health before anything else, because the bat may need to be sent for rabies testing.",
           "If the animal is not dead but sick, injured or stuck and unable to move, we can still come and remove it from your property. We are not a wildlife rescue, so we don't take in or treat animals, but we will get it out of your house or your yard.",
         ],
       },
@@ -537,7 +537,7 @@ export const SITUATIONS: SituationContent[] = [
       {
         question: "What if the dead animal is a bat?",
         answer:
-          "Don't touch it. If anyone, or a pet, may have had contact with it, or it was found in a room where someone was sleeping, call 311 or Toronto Public Health first, because it may need rabies testing. We'll remove the bat and check how bats are getting into the house.",
+          "Don't touch it. If anyone, or a pet, may have had contact with it, or it was found in a room where someone was sleeping, call 311 or Toronto Public Health first, because it may need rabies testing. Once that's done, we remove it.",
       },
       {
         question: "What if the animal is still alive but not moving?",
