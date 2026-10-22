@@ -3,11 +3,11 @@
 New page `/wildlife/dead-animal-removal`, built on the session branch `claude/gnw-website-10` on top of the live branch, waiting for the owner's "approved". Asked for by the owner through the ads chat (Oct 19: "advertise dead animal removal"; Oct 21–22: PRIORITY, a paused Toronto ad group already points at this URL and its ad is disapproved until the page exists).
 
 ## What was built
-- The page: an unlisted "situation" entry in `lib/data/wildlife.ts` (title, H1, meta description, hero facts, the sealing-and-repair block) and the long-form copy in `lib/data/situations.ts` (six sections, the visit steps, six process steps, eleven questions). It renders on the shared long-form template with the trust row under the hero buttons.
+- The page: an unlisted "situation" entry in `lib/data/wildlife.ts` (title, H1, meta description, hero facts) and the long-form copy in `lib/data/situations.ts` (six sections, the visit steps, six process steps, eleven questions). It renders on the shared long-form template with the trust row under the hero buttons, WITHOUT the guarantee line (owner, Oct 22: insurance and 24/7 only) and without the sealing-and-repair block, so the word "guarantee" is nowhere on the page.
 - Not on the /wildlife index and not in the main menu. In the sitemap (automatic for every wildlife entry). One quiet footer link, "Dead Animal Removal", in the Wildlife Removal column after "Damage Repair" (`components/layout/Footer.tsx`).
-- One small template addition: the long-form template's three "On arrival / During the visit / Before we leave" lines were written for a live animal ("We confirm the animal activity and check how it's getting in"), so a page can now give its own three lines (`visitSteps` in `lib/data/situations.ts`, used in `components/wildlife/SituationPage.tsx`). Every other page renders as before.
+- Two small template additions: the trust row can leave the guarantee line out (`guarantee={false}` on `components/shared/TrustRow.tsx`; a long-form page asks for it with `trustRow: "no-guarantee"`), and the long-form template's three "On arrival / During the visit / Before we leave" lines were written for a live animal ("We confirm the animal activity and check how it's getting in"), so a page can now give its own three lines (`visitSteps` in `lib/data/situations.ts`, used in `components/wildlife/SituationPage.tsx`). Every other page renders as before.
 - The page is on the phone first-screen list (`scripts/checks/firstscreen.mjs`) and on the landing-page list in CLAUDE.md, because the ad group already exists.
-- Counts: title 47 characters; meta description 158; main text about 1,960 words including the questions (the feces page is 1,463, the raccoon page 1,785). Over the 900 the ads chat asked for; easy cuts are listed under judgment call 15.
+- Counts: title 47 characters; meta description 158; main text about 1,820 words including the questions (the feces page is 1,463, the raccoon page 1,785). Over the 900 the ads chat asked for; easy cuts are listed under judgment call 15.
 
 ## Checks run (no build possible: see below)
 - The copy evaluates in Node (so the data files parse), banned-word scan clean (no fully insured, bonded, licensed, reviews, ratings, warranty, prices, "latrine", "odour"), the only guarantee sentence is the owner's exact wording, and the only sentences shared with another page are the five standard lines every page shares on purpose (same-day, 24/7, the guarantee, "we explain the price first", the insurance answer).
@@ -25,12 +25,12 @@ Dead-animal pickup is a job on its own, outside or inside the house, and nothing
 ## Judgment calls (strike any)
 1. Title and H1 "Dead Animal Removal on Your Property in Toronto": the ads chat's wording from Oct 19 ("on your property", because road removals are the city's), with Toronto as every page has. The ad's pinned headline is "Dead Animal Removal Toronto"; the H1 contains those words in that order with "on your property" between them.
 2. Footer link text "Dead Animal Removal", without "sick". The owner's phrase was "sick or dead animal removal"; "sick" in a footer link risks reading as wildlife rescue (the site's rule). Sick, injured and stuck animals are covered in the copy and a question instead (call 13).
-3. The trust row under the buttons (the ads chat asked for it; the phone first-screen check needs the guarantee line). Its guarantee line is the company statement about entry points we seal, and the page says plainly that sealing is separate work.
-4. The sealing-and-repair block near the foot of the page, with the lifetime-guarantee box every repair block carries. Kept because an animal that died inside the house got in somewhere and the next one will too, and because the guarantee is true of any entry point we seal. The owner's note says pickup alone has no guarantee line; if he would rather this page carried no guarantee box at all, the block comes off (one line of data) and the "Do you seal the way in?" answer loses its second sentence.
-5. "Cleaned and disinfected": disinfecting was confirmed for the feces jobs (Oct 20); assumed the spot where an animal died is treated the same way. CONFIRM.
-6. Soiled attic insulation comes out with the animal: assumed from the feces job. CONFIRM.
-7. Inside a wall or duct: "a small opening cut into the drywall at the right spot" and "closed up afterwards". Assumed we patch the opening we make. CONFIRM; if we leave the patching to the homeowner, the two sentences change to say so.
-8. "Removed from your property in a sealed bag": assumed. CONFIRM.
+3. The trust row under the buttons, insurance and 24/7 lines only. OWNER, Oct 22: no lifetime guarantee on this page, because the job seals nothing. The phone first-screen check now accepts this page without the guarantee line (H1 and Call button still have to sit above the bar).
+4. OWNER, Oct 22: the sealing-and-repair block and its guarantee box are OFF this page, and the "Do you seal the way in?" answer now points to the damage repair page instead of quoting the guarantee. The "After the animal is out" section still says the way in is separate work we can do on the same visit.
+5. "Cleaned and disinfected": CONFIRMED by the owner, Oct 22.
+6. Soiled attic insulation comes out with the animal: CONFIRMED by the owner, Oct 22.
+7. Inside a wall or duct: a small opening cut at the right spot and patched afterwards: CONFIRMED by the owner, Oct 22.
+8. "Removed from your property in a sealed bag": CONFIRMED by the owner, Oct 22.
 9. "Your property, not the road": Toronto's rule paraphrased from the City's page (large animals on public property through 311; may help on private property; small animals not collected; pick-up times vary); the other GTA cities summed up as "each has its own version". The FAQ answer says "On your property it depends", because the City may assist when the owner is unknown; it would be untrue to say the City never comes onto private property.
 10. Smell duration ("a week or so" for a small animal, "several weeks" for a raccoon): the two sources above.
 11. Two animal facts stated as common knowledge, not checked against a scientific source: squirrels fall into wall cavities from the attic and cannot climb out; a young raccoon can be left behind when its mother is gone. Both are standard in the wildlife-control trade; strike either if unsure.
@@ -45,8 +45,7 @@ Dead-animal pickup is a job on its own, outside or inside the house, and nothing
 20. Meta description ends "Your property, not the road. Toronto & GTA." (158 characters).
 
 ## Still the owner's
-- Confirm calls 5, 6, 7 and 8 (what we actually do on a dead-animal visit). Calls 12 and 18 answered Oct 22.
-- Whether the guarantee box stays on this page (call 4).
+- Calls 4 to 8, 12 and 18 all answered by the owner on Oct 22. Open: his wider point that other pages show the lifetime guarantee next to work that seals nothing (the guarantee is only for entry points we seal, a soffit or a hole from outside); an audit of where the guarantee appears on the site is proposed.
 - The feces page retitle to "Raccoon Poop Removal in Toronto" (the ads chat's suggestion, Oct 21): not done; the owner's call.
 
 ## Full text as rendered
@@ -60,7 +59,7 @@ Dead-animal pickup is a job on its own, outside or inside the house, and nothing
 
 [Call button] [Get Help Now]
 
-Lifetime guarantee on every entry point we seal. · $5 million liability insurance · Calls answered 24/7
+$5 million liability insurance · Calls answered 24/7
 
 ## The smell of a dead animal in the house
 
@@ -125,16 +124,6 @@ Most of the job is finding the animal. Once we know where it is, getting it out 
 
 *Same-day service is available for requests received before 4 PM, subject to technician availability. Calls are answered 24 hours a day, 7 days a week.*
 
-## Sealing & repair: After the animal is out: the way it got in
-
-An animal that died inside your attic, a wall or a vent got in somewhere, and that opening is still open. Removing the animal is a job on its own; closing the opening is separate work, and we can do it on the same visit if you'd like.
-
-When we seal an entry point, the damage around it is repaired as well: a torn roof vent, a lifted soffit, chewed fascia or a missing chimney cap, matched to your home's existing materials and colours.
-
-[Sealing and damage repair →]
-
-**Lifetime guarantee** (box): Every entry point we seal comes with a lifetime guarantee, for as long as you own your home. If an animal gets back in through it, we come back and take care of it at no charge. Full terms are written on your invoice.
-
 ## Questions about dead animal removal
 
 **Isn't dead animal removal the city's job?**
@@ -167,7 +156,7 @@ A sick, injured or stuck animal that can't move is still our job. We remove it f
 
 **Do you seal the way the animal got in?**
 
-Removing the animal and sealing the entry point are two separate jobs, and we can do both on the same visit. Every entry point we seal comes with a lifetime guarantee, for as long as you own your home. If an animal gets back in through it, we come back and take care of it at no charge. Full terms are written on your invoice.
+Removing the animal and sealing the entry point are two separate jobs, and we can do both on the same visit. Sealing, and the repair around it, is explained on the damage repair page.
 
 **How much does dead animal removal cost?**
 

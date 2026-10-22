@@ -292,8 +292,9 @@ export const WILDLIFE: WildlifeEntry[] = [
     // chat (Oct 19) for the "dead animal removal" searches; a Toronto ad
     // group lands here. Owner's facts (Oct 19 2026): pickup is a job on its
     // own, inside or outside the house; nothing is sealed as part of it, so
-    // no guarantee line in the copy, and sealing the way in is offered as
-    // separate work. Street and road removals are the city's. "On your
+    // no guarantee on the page at all (owner, Oct 22: trust row without the
+    // guarantee line, no sealing-and-repair block) and sealing the way in is
+    // offered as separate work in the copy. Street and road removals are the city's. "On your
     // property" in the title and H1 (ads chat, Oct 19). No smell-removal
     // promises (owner, Oct 21). Long-form copy in lib/data/situations.ts.
     // Not on the /wildlife index or in the main menu: reached from the ads,
@@ -321,14 +322,6 @@ export const WILDLIFE: WildlifeEntry[] = [
     iconId: "inspection",
     unlisted: true,
     serviceType: "Dead animal removal",
-    repair: {
-      heading: "After the animal is out: the way it got in",
-      paragraphs: [
-        "An animal that died inside your attic, a wall or a vent got in somewhere, and that opening is still open. Removing the animal is a job on its own; closing the opening is separate work, and we can do it on the same visit if you'd like.",
-        "When we seal an entry point, the damage around it is repaired as well: a torn roof vent, a lifted soffit, chewed fascia or a missing chimney cap, matched to your home's existing materials and colours.",
-      ],
-      linkLabel: "Sealing and damage repair",
-    },
   },
 ];
 

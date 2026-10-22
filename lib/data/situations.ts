@@ -55,8 +55,12 @@ export interface SituationContent {
    * entry's `relatedNote` beneath.
    */
   signs?: { heading: string; intro: string };
-  /** Show the guarantee, insurance and 24/7 lines under the hero buttons, as the homepage and city pages do. */
-  trustRow?: boolean;
+  /**
+   * Show the guarantee, insurance and 24/7 lines under the hero buttons, as
+   * the homepage and city pages do. "no-guarantee" shows the insurance and
+   * 24/7 lines only (dead animal removal, Oct 2026: the job seals nothing).
+   */
+  trustRow?: boolean | "no-guarantee";
   sections: SituationSection[];
   /** "How we get animals out…": the live site's three-step wording plus the plain-words list. */
   process?: { heading: string; intro: string; steps: string[]; outro: string };
@@ -439,7 +443,10 @@ export const SITUATIONS: SituationContent[] = [
     slug: "dead-animal-removal",
     subhead:
       "A dead raccoon or squirrel in the attic, inside a wall, in a vent or under the deck. We find where it died, remove it and clean the spot, on your property in Toronto and across the GTA.",
-    trustRow: true,
+    // Owner, Oct 22 2026: no lifetime guarantee on this page (nothing is
+    // sealed as part of the job), so the trust row shows insurance and 24/7
+    // only and the page has no sealing-and-repair block.
+    trustRow: "no-guarantee",
     sections: [
       {
         heading: "The smell of a dead animal in the house",
@@ -546,7 +553,8 @@ export const SITUATIONS: SituationContent[] = [
       },
       {
         question: "Do you seal the way the animal got in?",
-        answer: `Removing the animal and sealing the entry point are two separate jobs, and we can do both on the same visit. ${GUARANTEE.full}`,
+        answer:
+          "Removing the animal and sealing the entry point are two separate jobs, and we can do both on the same visit. Sealing, and the repair around it, is explained on the damage repair page.",
       },
       {
         question: "How much does dead animal removal cost?",

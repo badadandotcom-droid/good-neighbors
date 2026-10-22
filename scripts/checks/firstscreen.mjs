@@ -9,6 +9,8 @@ import fs from "node:fs";
 const outDir = process.argv[2] ?? "firstscreen";
 fs.mkdirSync(outDir, { recursive: true });
 const GUARANTEE = "Lifetime guarantee on every entry point we seal";
+// Pages with no guarantee line by design (owner, Oct 22 2026): the H1 and the Call button must still sit above the bar.
+const NO_GUARANTEE = new Set(["/wildlife/dead-animal-removal"]);
 const PAGES = [
   "/wildlife/something-in-the-attic", "/wildlife/something-in-the-walls", "/wildlife/raccoons", "/wildlife/squirrels",
   "/wildlife/birds", "/wildlife/bats", "/wildlife/damage-repair", "/contact",
@@ -45,7 +47,7 @@ for (const p of PAGES) {
     };
   }, GUARANTEE);
   const ok = (y) => y !== null && y <= m.fold;
-  rows.push({ path: p, h1: m.h1, guarantee: m.guarantee ?? "none", call: m.call, fold: m.fold, pass: ok(m.h1) && ok(m.guarantee) && ok(m.call) });
+  rows.push({ path: p, h1: m.h1, guarantee: m.guarantee ?? "none", call: m.call, fold: m.fold, pass: ok(m.h1) && (NO_GUARANTEE.has(p) || ok(m.guarantee)) && ok(m.call) });
   await page.screenshot({ path: `${outDir}/${p.replace(/^\//, "").replace(/\//g, "__")}.png` });
   await page.close();
 }

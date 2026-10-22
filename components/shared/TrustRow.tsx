@@ -17,12 +17,17 @@ import { ALWAYS_ON_CALL, INSURANCE } from "@/lib/config/site";
  * orders around these: 1 back link, 2 badge or kicker, 3 H1, 4 guarantee,
  * 5 buttons, 6 insurance, 7 24/7, 8 and up the explanatory text.
  * From `sm` up nothing changes: the lines sit in one row under the buttons.
+ *
+ * `guarantee={false}` leaves the guarantee line out (owner, Oct 22 2026): the
+ * lifetime guarantee is for the entry points we seal, so a page about a job
+ * that seals nothing (dead animal removal) shows only the insurance and 24/7
+ * lines. Every other page keeps all three.
  */
-export function TrustRow({ mobileOrder = false }: { mobileOrder?: boolean }) {
+export function TrustRow({ mobileOrder = false, guarantee = true }: { mobileOrder?: boolean; guarantee?: boolean }) {
   if (mobileOrder) {
     return (
       <div className="contents sm:mt-4 sm:flex sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-2">
-        <GuaranteeLine className="order-4 mt-3 text-balance sm:order-none sm:mt-0" />
+        {guarantee && <GuaranteeLine className="order-4 mt-3 text-balance sm:order-none sm:mt-0" />}
         <p className="order-6 mt-4 text-sm font-medium text-pine-700 sm:order-none sm:mt-0">{INSURANCE.line}</p>
         {ALWAYS_ON_CALL.enabled && (
           <p className="order-7 mt-2 text-sm text-stone-500 sm:order-none sm:mt-0">{ALWAYS_ON_CALL.heroLabel}</p>
@@ -33,7 +38,7 @@ export function TrustRow({ mobileOrder = false }: { mobileOrder?: boolean }) {
 
   return (
     <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6">
-      <GuaranteeLine />
+      {guarantee && <GuaranteeLine />}
       <p className="text-sm font-medium text-pine-700">{INSURANCE.line}</p>
       {ALWAYS_ON_CALL.enabled && <p className="text-sm text-stone-500">{ALWAYS_ON_CALL.heroLabel}</p>}
     </div>

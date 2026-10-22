@@ -118,7 +118,7 @@ export function SituationPage({
               <p className="order-8 mt-8 font-display text-xl leading-snug text-pine-600 text-pretty sm:mt-6 sm:text-2xl">{content.subhead}</p>
               <p className="order-9 mt-4 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">{entry.intro}</p>
               {ctas}
-              {content.trustRow && <TrustRow mobileOrder />}
+              {content.trustRow && <TrustRow mobileOrder guarantee={content.trustRow !== "no-guarantee"} />}
             </div>
             <div className={cn("lg:col-span-5", hero?.imageOnLeft && "lg:order-1")}>
               <PhotoPlaceholder
@@ -150,7 +150,7 @@ export function SituationPage({
             <p className="order-8 mt-8 font-display text-xl leading-snug text-pine-600 text-pretty sm:mt-6 sm:text-2xl">{content.subhead}</p>
             {content.keepLine && <p className="order-9 mt-3 text-lg leading-relaxed text-ink-700">{content.keepLine}</p>}
             {ctas}
-            {content.trustRow && <TrustRow mobileOrder />}
+            {content.trustRow && <TrustRow mobileOrder guarantee={content.trustRow !== "no-guarantee"} />}
           </Container>
         </section>
       )}
