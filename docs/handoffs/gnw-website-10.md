@@ -6,6 +6,7 @@ Previous chat: GNW Website 9 (before it, GNW Website 8). Renamed from docs/hando
 Scheduled checks: none. GNW Website 9 set none, so there is nothing to move.
 
 ## Start here (GNW Website 10)
+00. Start this chat INSIDE the GNWW Project (owner, Oct 22): then it can read the ads chat's docs (claude/sync-log.md and the rest) directly instead of the owner pasting them. GNW Website 9 was not in the project and could not see them. Check at the start that the project docs are readable; if not, tell the owner in one line.
 0. Say which model the chat is on first. Branch: this file is on GNW Website 9's session branch `ccr-e849fd80-mdl08d`, which equals the live branch `claude/good-neighbors-v2-visual-redesign` (both at the commit that added this file's rename, or one docs commit ahead of live). Start your own session branch from `origin/claude/good-neighbors-v2-visual-redesign` (fetch first) and check `git merge-base --is-ancestor origin/claude/good-neighbors-v2-visual-redesign HEAD`. Nothing is waiting for approval.
 1. FIRST: the owner has a note from the ads chat to paste. Act on it first (relay rule in CLAUDE.md).
 2. The owner is not sure which of GNW Website 9's notes were sent. Read them back to the owner from "Relay notes" below and ask which went; these are the ones that matter, newest first:
