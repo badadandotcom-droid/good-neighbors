@@ -1,6 +1,6 @@
 # Review: dead animal removal page (GNW Website 10, Oct 22 2026)
 
-New page `/wildlife/dead-animal-removal`, built on the session branch `claude/gnw-website-10` on top of the live branch, waiting for the owner's "approved". Asked for by the owner through the ads chat (Oct 19: "advertise dead animal removal"; Oct 21–22: PRIORITY, a paused Toronto ad group already points at this URL and its ad is disapproved until the page exists).
+New page `/wildlife/dead-animal-removal`, built on the session branch `claude/gnw-website-10` on top of the live branch. APPROVED by the owner Oct 22, 1:33 AM, no judgment calls struck (the feces-page change in the addendum approved too). Asked for by the owner through the ads chat (Oct 19: "advertise dead animal removal"; Oct 21–22: PRIORITY, a paused Toronto ad group already points at this URL and its ad is disapproved until the page exists).
 
 ## What was built
 - The page: an unlisted "situation" entry in `lib/data/wildlife.ts` (title, H1, meta description, hero facts) and the long-form copy in `lib/data/situations.ts` (six sections, the visit steps, six process steps, eleven questions). It renders on the shared long-form template with the trust row under the hero buttons, WITHOUT the guarantee line (owner, Oct 22: insurance and 24/7 only) and without the sealing-and-repair block, so the word "guarantee" is nowhere on the page.

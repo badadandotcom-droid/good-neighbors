@@ -26,6 +26,7 @@ Scheduled checks: none. GNW Website 9 set none, so there is nothing to move.
 - The ads chat's Oct 19 item "per entry point next to the October special price on the site" cannot be done: the site has no prices. Raised with the owner.
 - BUILT, waiting for "approved": the dead-animal page (review: docs/reviews/2026-10-22-dead-animal-review.md, 20 judgment calls, full text; the facts and their sources are in it). Footer link, sitemap, landing-page lists, a `visitSteps` override on the long-form template.
 - Owner's answers (Oct 22, 1:23–1:28 AM): calls 5–8 yes to all; "most common story we hear" untrue (now "a typical sequence"); the bat testing line cut; NO lifetime guarantee on the dead-animal page or the feces page (trust row without the guarantee line, no guarantee box, no guarantee sentence; both done, review addendum); his wider rule: the guarantee is for animals living in the house and the way in we seal; an audit of the other pages later, when he says (most pages keep it, a couple lose it).
+- APPROVED by the owner Oct 22, 1:33 AM: the dead-animal page and the feces-page change, every judgment call as recommended (no strikes). Go-live waits only on the build checks.
 - NOT RUN (npm registry unreachable from the cloud session all night; DNS failed and the proxy refused the host): install, lint, typecheck, build, crawl, compare, phone first screen, Lighthouse. Must run before go-live. The copy was evaluated in Node and scanned for banned words, exact guarantee wording and shared sentences instead.
 
 ## Done in GNW Website 9 (Oct 16 to 20), all LIVE
