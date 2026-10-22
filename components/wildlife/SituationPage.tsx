@@ -44,7 +44,7 @@ export function SituationPage({
   const phone = getPhone();
   const path = `/wildlife/${entry.slug}`;
   const isSpecies = entry.category === "species";
-  const visitSteps = [
+  const visitSteps = content.visitSteps ?? [
     { term: "On arrival", detail: `We confirm the ${entry.singular.toLowerCase()} activity and check how it's getting in.` },
     {
       term: "During the visit",

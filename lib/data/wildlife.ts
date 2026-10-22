@@ -287,6 +287,49 @@ export const WILDLIFE: WildlifeEntry[] = [
       linkLabel: "Raccoon damage repair",
     },
   },
+  {
+    // Dead animal removal, Oct 2026: asked for by the owner through the ads
+    // chat (Oct 19) for the "dead animal removal" searches; a Toronto ad
+    // group lands here. Owner's facts (Oct 19 2026): pickup is a job on its
+    // own, inside or outside the house; nothing is sealed as part of it, so
+    // no guarantee line in the copy, and sealing the way in is offered as
+    // separate work. Street and road removals are the city's. "On your
+    // property" in the title and H1 (ads chat, Oct 19). No smell-removal
+    // promises (owner, Oct 21). Long-form copy in lib/data/situations.ts.
+    // Not on the /wildlife index or in the main menu: reached from the ads,
+    // one footer link, the sitemap and search.
+    slug: "dead-animal-removal",
+    category: "situation",
+    name: "Dead Animal Removal",
+    singular: "animal",
+    seoTitle: "Dead Animal Removal on Your Property in Toronto",
+    heading: "Dead Animal Removal on Your Property in Toronto",
+    metaDescription:
+      "Dead raccoon or squirrel in the attic, a wall, a vent or under the deck? We find it, remove it and clean the spot. Your property, not the road. Toronto & GTA.",
+    summary: "A dead animal found, removed and the spot cleaned: attic, wall, chimney, vent, under a deck or in the yard.",
+    intro:
+      "A dead animal in the house makes itself known by smell long before anyone sees it. We find where it died, remove it and clean and disinfect the spot.",
+    commonSigns: [
+      "A smell that gets stronger as the day warms up",
+      "Flies gathering at one window or in one room",
+      "Scratching or scurrying that stopped a few days ago",
+      "A pet that keeps sniffing at one spot on a wall",
+    ],
+    commonAreas: ["Attics", "Inside walls", "Chimneys", "Vents and ducts", "Under decks and sheds"],
+    approach:
+      "We track the smell, the flies and where the animal was last heard to the spot where it died, remove it, and clean and disinfect the area.",
+    iconId: "inspection",
+    unlisted: true,
+    serviceType: "Dead animal removal",
+    repair: {
+      heading: "After the animal is out: the way it got in",
+      paragraphs: [
+        "An animal that died inside your attic, a wall or a vent got in somewhere, and that opening is still open. Removing the animal is a job on its own; closing the opening is separate work, and we can do it on the same visit if you'd like.",
+        "When we seal an entry point, the damage around it is repaired as well: a torn roof vent, a lifted soffit, chewed fascia or a missing chimney cap, matched to your home's existing materials and colours.",
+      ],
+      linkLabel: "Sealing and damage repair",
+    },
+  },
 ];
 
 export function getWildlifeBySlug(slug: string): WildlifeEntry | undefined {

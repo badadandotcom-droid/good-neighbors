@@ -60,6 +60,12 @@ export interface SituationContent {
   sections: SituationSection[];
   /** "How we get animals out…": the live site's three-step wording plus the plain-words list. */
   process?: { heading: string; intro: string; steps: string[]; outro: string };
+  /**
+   * Replaces the template's three "On arrival / During the visit / Before we
+   * leave" lines, which are written for a live animal and how it is getting
+   * in (dead animal removal, Oct 2026).
+   */
+  visitSteps?: { term: string; detail: string }[];
   faqHeading: string;
   faqs: FaqItem[];
 }
@@ -417,6 +423,140 @@ export const SITUATIONS: SituationContent[] = [
       {
         question: "How soon can you come?",
         answer: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week, and if a raccoon is still in the attic, getting it out safely comes first.`,
+      },
+    ],
+  },
+  {
+    // Dead animal removal. Facts checked online Oct 22 2026 (sources in
+    // docs/reviews/2026-10-22-dead-animal-review.md): the City of Toronto's
+    // dead-animal page (what the City collects and where), Toronto's bat page
+    // (a dead bat is a public-health matter), and two pest-industry pages on
+    // how long the smell lasts. Owner's facts (Oct 19-21 2026): pickup is its
+    // own job, inside or outside the house; nothing is sealed as part of it,
+    // so the copy has no guarantee line and offers sealing as separate work;
+    // a stuck or injured animal that cannot move is also our job; street and
+    // road removals are the city's; no smell-removal promises.
+    slug: "dead-animal-removal",
+    subhead:
+      "A dead raccoon or squirrel in the attic, inside a wall, in a vent or under the deck. We find where it died, remove it and clean the spot, on your property in Toronto and across the GTA.",
+    trustRow: true,
+    sections: [
+      {
+        heading: "The smell of a dead animal in the house",
+        paragraphs: [
+          "It usually starts as a faint, sweetish, rotten smell in one room that you can't trace to the garbage or the drains. Over a day or two it gets stronger, it's worse in the afternoon when the house warms up, and it seems to come from a wall, a ceiling or a vent rather than from anything in the room.",
+          "Two other signs often go with it. Flies gather at one window or around one spot, because they have found the animal before you have. And the scratching or scurrying you were hearing a few days ago has gone quiet. A squirrel that was running through the attic at dawn and then stopped, followed by a smell a few days later, is the most common story we hear.",
+          "A pet is often the first to notice. A dog or cat that keeps sniffing at one spot on a wall or at the bottom of a vent is usually pointing at the place.",
+        ],
+      },
+      {
+        heading: "Where dead animals turn up",
+        paragraphs: [
+          "Inside a house, the animal is most often a squirrel or a raccoon, and most often in the attic or in a wall. Squirrels fall into wall cavities from the attic and can't climb back out. Raccoons that were living in the attic sometimes die there, especially an old animal or one that was sick, and a young one can be left behind when its mother is gone.",
+          "The other places are the chimney, a dryer or bathroom vent and the duct behind it, the space above a garage ceiling, and a crawl space. Outside, a dead animal is found under the deck or shed, in a window well, in the garage or lying in the yard, where it's easy to see but no one wants to pick up.",
+          "If a dead animal is inside a wall or a vent, it almost always got into the house through a gap in the roof, the soffit or a vent cover. Finding that gap is part of the job, because the next animal will use it too.",
+        ],
+      },
+      {
+        heading: "Why the smell lasts so long",
+        paragraphs: [
+          "The smell comes from the body breaking down, and it lasts as long as the body stays moist. A small animal in a warm wall may stop smelling in a week or so; a raccoon can take several weeks, and it fades slowly as the body dries out. Warmth makes it stronger and faster, which is why the smell is worst on a warm afternoon or when the heating comes on.",
+          "Waiting for it to pass is an option people try. The trouble is that a raccoon takes weeks, the flies keep coming, and the stain and the smell soak into insulation, drywall and framing the longer it stays. Taking the animal out is the only thing that ends it quickly; once it's out and the spot is cleaned, the smell left in the room fades on its own over the following days.",
+          "Inside a wall, the animal usually has to be reached through a small opening cut into the drywall at the right spot. We work out where it is first, from the smell, the flies and where it was last heard, so the opening is cut once, in the right place, and not three times along the wall.",
+        ],
+      },
+      {
+        heading: "Your property, not the road",
+        paragraphs: [
+          "A dead animal on a road, a sidewalk or in a park is the city's to pick up. In Toronto, the City collects large dead animals such as raccoons and skunks from public property through 311, and can sometimes help with one lying in the open on private property, though pick-up times vary and small animals such as squirrels are not collected at all. Each city and town in the GTA has its own version of this rule.",
+          "What no city service does is come into your house for it. Nobody from 311 will go up into the attic, cut into a wall, reach into a chimney or a dryer vent, crawl under the deck, or clean and disinfect the spot afterwards. That is the part we do: a dead animal on your property, inside the house or out, found, removed and the place it died cleaned up.",
+        ],
+      },
+      {
+        heading: "Keep your distance until it's out",
+        paragraphs: [
+          "Don't handle a dead wild animal with bare hands, and keep children and pets away from it. A raccoon's droppings around the spot can carry roundworm eggs, and any carcass draws flies and then maggots within a day or two in warm weather. Close the room off if the smell is bad, open a window, and leave the wall and the attic alone; there's no need to go up and look.",
+          "A dead bat is a special case. Never touch a bat, alive or dead. If a bat is found in a room where someone was sleeping, or there is any chance a person or a pet had contact with it, call 311 or Toronto Public Health before anything else, because the bat may need to be sent for rabies testing. We remove bats from the house; we don't test them.",
+          "If the animal is not dead but sick, injured or stuck and unable to move, we can still come and remove it from your property. We are not a wildlife rescue, so we don't take in or treat animals, but we will get it out of your house or your yard.",
+        ],
+      },
+      {
+        heading: "After the animal is out",
+        paragraphs: [
+          "The spot where the animal died is cleaned and disinfected. If it was lying on attic insulation, the soiled insulation comes out with it. Inside a wall, the cavity is cleaned through the opening we made, and the opening is closed up afterwards.",
+          "The way in is a separate question. An animal that died in your attic or a wall got in through a gap somewhere, and that gap is still open. Removing the animal doesn't close it; we tell you where it is, and if you'd like, we seal it and repair the damage around it on the same visit. Sealing is covered under [damage repair](/wildlife/damage-repair), and if there are still live animals in the house, [raccoon removal](/wildlife/raccoons) and [squirrel removal](/wildlife/squirrels) explain how they come out first.",
+        ],
+      },
+    ],
+    visitSteps: [
+      { term: "On arrival", detail: "We find where the animal is from the smell, the flies and where it was last heard, and check how it got in." },
+      { term: "During the visit", detail: "The animal is removed and bagged, and the spot it died in is cleaned and disinfected." },
+      { term: "Before we leave", detail: "We'll explain what we found, what we did, and where the animal got in." },
+    ],
+    process: {
+      heading: "How dead animal removal works",
+      intro:
+        "Most of the job is finding the animal. Once we know where it is, getting it out and cleaning the spot is usually done in one visit.",
+      steps: [
+        "We find where the animal is: in the attic, in a wall cavity, in a chimney or vent, or under a deck or shed.",
+        "If it's inside a wall or a duct, we open the smallest space needed to reach it, in the right place.",
+        "The animal is removed from your property in a sealed bag.",
+        "The spot is cleaned and disinfected, and any insulation it was lying on is taken out.",
+        "The opening we made is closed up again.",
+        "We show you where the animal got in. Sealing that entry point, with the repair around it, is separate work that we can do on the same visit.",
+      ],
+      outro: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week.`,
+    },
+    faqHeading: "Questions about dead animal removal",
+    faqs: [
+      {
+        question: "Isn't dead animal removal the city's job?",
+        answer:
+          "On a road, a sidewalk or in a park, yes: in Toronto you call 311, and other GTA cities have their own service. On your property it depends, and no city crew will go into your attic, open a wall or reach into a vent. That's what we're for.",
+      },
+      {
+        question: "How do you find a dead animal inside a wall?",
+        answer:
+          "From the smell, which is strongest closest to the animal, from where flies are gathering, and from where you last heard it moving. Those three usually narrow it down to one section of wall or ceiling, and we open only that spot.",
+      },
+      {
+        question: "Do you have to cut into the wall?",
+        answer:
+          "If the animal is inside a wall or a duct, usually yes: a small opening at the right spot is the only way to reach it. We make it as small as possible, clean the cavity through it and close it up afterwards.",
+      },
+      {
+        question: "Will the smell go away once the animal is removed?",
+        answer:
+          "Yes. The smell comes from the body, so once it's out and the spot is cleaned and disinfected, what's left in the room fades over the following days. Open the windows when you can; it goes faster with fresh air.",
+      },
+      {
+        question: "Is a dead raccoon dangerous to handle?",
+        answer:
+          "It should be handled with gloves and bagged, never picked up bare-handed, and the droppings around it can carry roundworm eggs. Keep children and pets away from it until it's gone.",
+      },
+      {
+        question: "What if the dead animal is a bat?",
+        answer:
+          "Don't touch it. If anyone, or a pet, may have had contact with it, or it was found in a room where someone was sleeping, call 311 or Toronto Public Health first, because it may need rabies testing. We'll remove the bat and check how bats are getting into the house.",
+      },
+      {
+        question: "What if the animal is still alive but not moving?",
+        answer:
+          "A sick, injured or stuck animal that can't move is still our job. We remove it from your property. We're not a wildlife rescue, so we don't take in or treat animals.",
+      },
+      {
+        question: "Do you seal the way the animal got in?",
+        answer: `Removing the animal and sealing the entry point are two separate jobs, and we can do both on the same visit. ${GUARANTEE.full}`,
+      },
+      {
+        question: "How much does dead animal removal cost?",
+        answer:
+          "It depends on whether the animal is inside the house or outside, and on whether a wall or a duct has to be opened to reach it. We explain the price first, before any work begins.",
+      },
+      INSURANCE_FAQ,
+      {
+        question: "How soon can you come?",
+        answer: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week.`,
       },
     ],
   },

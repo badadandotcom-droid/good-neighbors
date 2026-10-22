@@ -19,6 +19,14 @@ Scheduled checks: none. GNW Website 9 set none, so there is nothing to move.
 4. Model: Sonnet for reading and planning; writing on Opus (the owner chose Opus in GNW Website 9) or Fable. Routine fact-finding can go to a Sonnet subagent.
 5. Checks: scripts/checks/README.md. The scratch tools (Lighthouse, playwright-core) are gone with the container: `npm init -y && npm i playwright-core lighthouse chrome-launcher` in the scratchpad, copy the scripts beside them, `CHROME_PATH=/opt/pw-browsers/chromium`. The phone first-screen list now has 30 pages (the Durham hub, the feces page and skunks added).
 
+## GNW Website 10 (Oct 22, inside the GNWW Project; on Fable 5.1)
+- Project docs readable: yes. Session branch `claude/gnw-website-10` from the live branch (pushed; the live branch untouched).
+- The ads chat's notes read directly from the Project (claude/sync-log-2026-10-21.md and -22.md): PRIORITY the dead-animal page at /wildlife/dead-animal-removal; owner's call on retitling the feces page to "Raccoon Poop Removal in Toronto"; Postal Codes campaign live on the same landing pages; Peel, York, Durham paused.
+- Which GNW Website 9 notes reached the ads side (from its docs): review link yes; feces page yes (poop ad group live on it); skunks yes (Semrush negatives 3, Oct 22); Durham hub NO (the ads chat still listed it as owed on Oct 22), so the Durham live note was given again on Oct 22, 1:20 AM.
+- The ads chat's Oct 19 item "per entry point next to the October special price on the site" cannot be done: the site has no prices. Raised with the owner.
+- BUILT, waiting for "approved": the dead-animal page (review: docs/reviews/2026-10-22-dead-animal-review.md, 20 judgment calls, full text; the facts and their sources are in it). Footer link, sitemap, landing-page lists, a `visitSteps` override on the long-form template.
+- NOT RUN (npm registry unreachable from the cloud session all night; DNS failed and the proxy refused the host): install, lint, typecheck, build, crawl, compare, phone first screen, Lighthouse. Must run before go-live. The copy was evaluated in Node and scanned for banned words, exact guarantee wording and shared sentences instead.
+
 ## Done in GNW Website 9 (Oct 16 to 20), all LIVE
 - Oct 16: Durham hub long-form copy, trust row, Brock Township (review: docs/reviews/2026-10-16-durham-hub-review.md).
 - Oct 18: /review short link (302 to https://g.page/r/CUl3yt5_mvGVEBM/review), rule in CLAUDE.md.

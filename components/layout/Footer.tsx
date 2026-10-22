@@ -38,6 +38,9 @@ export function Footer() {
             { label: "All Wildlife Services", href: "/wildlife" },
             ...species.map((s) => ({ label: s.name, href: `/wildlife/${s.slug}` })),
             { label: "Damage Repair", href: DAMAGE_REPAIR_PATH },
+            // The one quiet link to the dead-animal page (owner, Oct 2026): not in the
+            // main menu or on the /wildlife index; the ads and search land on it directly.
+            { label: "Dead Animal Removal", href: "/wildlife/dead-animal-removal" },
           ]}
         />
 
