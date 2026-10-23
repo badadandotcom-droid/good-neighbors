@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
         // here fixes every link already sent. No in-between page, and /review
         // stays out of the sitemap.
         source: "/review",
-        destination: "https://g.page/r/CUl3yt5_mvGVEBM/review",
+        destination: "https://g.page/r/CUl3yt5_mvGVEAI/review",
         statusCode: 302,
       },
     ];
