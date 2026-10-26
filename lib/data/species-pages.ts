@@ -375,7 +375,7 @@ export const SPECIES_PAGES: SituationContent[] = [
         paragraphs: [
           "Skunks don't climb into attics the way raccoons do. They dig. The space under a deck is dry, sheltered and right at ground level, and a skunk can dig in under the edge of almost any deck that is open at the bottom. A skunk den under the deck is usually quiet by day: the skunk sleeps underneath, comes out around dusk and is back before dawn.",
           "The signs are at the edge of the deck: a fresh hole or a shallow trench dug under the frame, loose soil pushed out, and tracks in soft ground or snow. The smell is often what people notice first, a skunk odour near the deck even when nobody has seen the animal. Small cone-shaped holes in the lawn nearby are a skunk digging for grubs at night.",
-          "A skunk living under your deck is not a danger to the house, and it rarely does damage. The reasons to deal with it are the smell, a pet that meets it in the yard, and, in spring, a family of young being raised under the boards.",
+          "A skunk living under your deck does damage to the ground. The den it digs hollows out the soil under the edge of the deck, shed or porch, and over time the posts can settle, the boards sit unevenly, and water gets into ground that used to be packed firm, which is why our fix ends with wire mesh set into the ground, not just a closed hole. The other reasons to deal with it are the smell, a pet that meets it in the yard, and, in spring, a family of young being raised under the boards.",
         ],
       },
       {
