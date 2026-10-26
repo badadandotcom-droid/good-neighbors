@@ -1,9 +1,11 @@
-Chat name: GNW Website 10
+Chat name: GNW Website 11
 
-# Handoff: Good Neighbors Wildlife website (Oct 22 2026; written by GNW Website 9 at its close, for GNW Website 10)
+# Handoff: Good Neighbors Wildlife website (Oct 26 2026; written by GNW Website 10 at its close, for GNW Website 11)
 
-Previous chat: GNW Website 9 (before it, GNW Website 8). Renamed from docs/handoffs/gnw-website-9.md; the history is in git.
-Scheduled checks: none. GNW Website 9 set none, so there is nothing to move.
+Previous chat: GNW Website 10 (before it, GNW Website 9). Renamed from docs/handoffs/gnw-website-10.md; the history is in git.
+Scheduled checks: none. GNW Website 10 set one (an npm retry) and deleted it, so there is nothing to move.
+
+FIRST JOB (owner, Oct 26): the guarantee audit, "Start here (GNW Website 11, or later in this chat)", item 2 below. Start from the live branch on a new session branch; in this cloud setup run npm through the proxy (see the GNW Website 10 section). Say the model first (Fable at High effort for this job), explain the plan in a line or two and ask "Ready to start?".
 
 ## Start here (GNW Website 10)
 00. Start this chat INSIDE the GNWW Project (owner, Oct 22): then it can read the ads chat's docs (claude/sync-log.md and the rest) directly instead of the owner pasting them. GNW Website 9 was not in the project and could not see them. Check at the start that the project docs are readable; if not, tell the owner in one line.
