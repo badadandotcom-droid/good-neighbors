@@ -127,8 +127,13 @@ export const DEFAULT_SAME_DAY_SERVICE: SameDayServiceConfig = {
  */
 export const ALWAYS_ON_CALL = {
   enabled: true,
-  /** Shown directly under the homepage positioning line when enabled. */
-  heroLabel: "Calls answered 24/7.",
+  /**
+   * The 24/7 line in the trust row under every hero's Call button (owner,
+   * Oct 27 2026: a day of ad clicks brought no calls, so the button says
+   * "Call" and this line says a person picks up; it sits right under the
+   * button on a phone). Ads claim "Calls answered 24/7"; this keeps it true.
+   */
+  heroLabel: "A real person answers 24/7.",
   /** Replaces CONTACT.hoursNote on the Contact page when enabled. */
   contactLabel: "Calls answered 24 hours a day, 7 days a week.",
 };

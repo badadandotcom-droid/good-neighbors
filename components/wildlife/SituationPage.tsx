@@ -5,7 +5,7 @@ import { CTAButton } from "@/components/shared/CTAButton";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { FAQAccordion } from "@/components/shared/FAQAccordion";
-import { TrustRow } from "@/components/shared/TrustRow";
+import { CallNote, TrustRow } from "@/components/shared/TrustRow";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
 import { RepairSection } from "@/components/shared/RepairSection";
@@ -62,8 +62,9 @@ export function SituationPage({
         eventMeta={{ location: `wildlife-${entry.slug}` }}
         className="w-full sm:w-auto"
       >
-        {phone.display}
+        Call {phone.display}
       </CTAButton>
+      <CallNote />
       <CTAButton
         href="/contact"
         variant="outline"

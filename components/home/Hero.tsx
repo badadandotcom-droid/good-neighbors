@@ -50,7 +50,7 @@ export function Hero({ market }: { market?: Market }) {
               eventMeta={{ location: "hero" }}
               className="w-full sm:w-auto"
             >
-              {phone.display}
+              Call {phone.display}
             </CTAButton>
             <CTAButton
               href="/contact"

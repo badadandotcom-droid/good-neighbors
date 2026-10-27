@@ -15,7 +15,7 @@ import { getFeaturedFaqs } from "@/lib/data/faq";
 import { getPhone } from "@/lib/config/resolvers";
 import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/seo";
 import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
-import { TrustRow } from "@/components/shared/TrustRow";
+import { CallNote, TrustRow } from "@/components/shared/TrustRow";
 import type { City, IllustrationId } from "@/lib/types";
 
 /**
@@ -90,8 +90,9 @@ export function CityPage({ city }: { city: City }) {
               eventMeta={{ location: `city-${city.slug}` }}
               className="w-full sm:w-auto"
             >
-              {phone.display}
+              Call {phone.display}
             </CTAButton>
+            <CallNote />
             <CTAButton
               href="/contact"
               variant="outline"

@@ -7,7 +7,7 @@ import { Illustration } from "@/components/illustrations/Illustration";
 import { FAQAccordion } from "@/components/shared/FAQAccordion";
 import { DamageRepairBanner } from "@/components/shared/DamageRepairBanner";
 import { GuaranteeBlock } from "@/components/shared/GuaranteeBlock";
-import { TrustRow } from "@/components/shared/TrustRow";
+import { CallNote, TrustRow } from "@/components/shared/TrustRow";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { RichText } from "@/components/shared/RichText";
 import { cityHref, getCityBySlug, getPlannedCitiesForRegion, listJoin } from "@/lib/data/cities";
@@ -111,8 +111,9 @@ export function MarketHub({ market }: { market: Market }) {
               eventMeta={{ location: `market-${market.slug}` }}
               className="w-full sm:w-auto"
             >
-              {phone.display}
+              Call {phone.display}
             </CTAButton>
+            <CallNote />
             <CTAButton
               href="/contact"
               variant="outline"

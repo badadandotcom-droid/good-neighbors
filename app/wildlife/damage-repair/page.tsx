@@ -4,7 +4,7 @@ import { CTAButton } from "@/components/shared/CTAButton";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
 import { ShieldCheckIcon } from "@/components/shared/GuaranteeLine";
-import { TrustRow } from "@/components/shared/TrustRow";
+import { CallNote, TrustRow } from "@/components/shared/TrustRow";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { FinalCTA } from "@/components/home/FinalCTA";
@@ -112,8 +112,9 @@ export default function DamageRepairPage() {
                 eventMeta={{ location: "damage-repair" }}
                 className="w-full sm:w-auto"
               >
-                {phone.display}
+                Call {phone.display}
               </CTAButton>
+              <CallNote />
               <CTAButton
                 href="/contact"
                 variant="outline"

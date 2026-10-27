@@ -7,7 +7,7 @@ import { CTAButton } from "@/components/shared/CTAButton";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { FinalCTA } from "@/components/home/FinalCTA";
-import { TrustRow } from "@/components/shared/TrustRow";
+import { CallNote, TrustRow } from "@/components/shared/TrustRow";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { RepairSection } from "@/components/shared/RepairSection";
 import { RichText } from "@/components/shared/RichText";
@@ -113,8 +113,9 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
                 eventMeta={{ location: `wildlife-${entry.slug}` }}
                 className="w-full sm:w-auto"
               >
-                {phone.display}
+                Call {phone.display}
               </CTAButton>
+              <CallNote />
               <CTAButton
                 href="/contact"
                 variant="outline"
