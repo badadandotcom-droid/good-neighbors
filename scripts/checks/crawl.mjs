@@ -16,6 +16,12 @@ const GUARANTEE_SHORT = "Lifetime guarantee on every entry point we seal.";
 const GUARANTEE_FULL =
   "Every entry point we seal comes with a lifetime guarantee, for as long as you own your home. If an animal gets back in through it, we come back and take care of it at no charge. Full terms are written on your invoice.";
 
+// The one allowed mention of reviews: the real Google rating line from
+// GOOGLE_RATING (lib/config/site.ts), "5.0 on Google · 4 reviews" (owner, Oct 27
+// 2026). It is removed before the banned-words test; any other "review" or
+// "rating" on a page still fails.
+const RATING_LINE = /\b\d\.\d on Google · \d+ reviews?\b/g;
+
 const BANNED = [
   /fully insured/i,
   /\bbonded\b/i,
@@ -97,7 +103,8 @@ for (const p of urls) {
   const bodyText = stripTags(
     html.replace(/<script[\s\S]*?<\/script>/g, " ").replace(/<style[\s\S]*?<\/style>/g, " ").replace(/<svg[\s\S]*?<\/svg>/g, " "),
   );
-  const banned = BANNED.filter((re) => re.test(bodyText) || re.test(title) || re.test(description)).map((re) => re.source);
+  const bodyForBanned = bodyText.replace(RATING_LINE, " ");
+  const banned = BANNED.filter((re) => re.test(bodyForBanned) || re.test(title) || re.test(description)).map((re) => re.source);
   // Every sentence that mentions a guarantee must be the owner's exact wording.
   // Block boundaries count as sentence boundaries so a heading never runs into
   // the paragraph after it.

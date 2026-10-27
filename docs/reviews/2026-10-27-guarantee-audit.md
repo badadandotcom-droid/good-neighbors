@@ -55,3 +55,38 @@ The repair list on /wildlife/damage-repair ends with "Decks, porches and sheds: 
 
 ## Checks
 Counts come from the Oct 27 local build (the live build after faa24f1): every page's visible text searched for the five spots. Nothing was measured for speed or first screen because nothing changed.
+
+## Addendum: the owner's answers and what was built (Oct 27, 7:13 AM Toronto)
+Owner: skunks lose it; birds lose it entirely ("a different scenario"); question 3 follows question 1. Same morning, approved through ADS 27 (7:10 AM): the real Google rating near the Call button, and "Get Help Now" as a plain text link on phones. Built together on `claude/gnw-website-11`, waiting for "approved".
+
+### Every new or changed sentence
+Skunks (/wildlife/skunks):
+- Meta description (was "…we seal the ground under your deck, porch or shed. Lifetime guarantee on every entry point we seal."): "Humane skunk removal in Toronto. Once the skunk is out, we close off the ground under your deck, porch or shed with wire mesh dug in, so nothing digs back in." (158 characters)
+- Trust row: insurance, 24/7 and rating lines; no guarantee line.
+- Step 4 of "How we remove skunks": "Once the space is empty, wire mesh is fixed along the base and dug into the ground." (the guarantee sentence after it removed)
+- The dark guarantee box under "Skunk removal and ground sealing under decks, porches and sheds": removed.
+- "Will the skunk come back?" (was "Not into the space we closed off." + the full guarantee): "Not into the space we closed off. The mesh runs along the whole base of the deck, porch or shed and down into the ground, so there is no opening left to dig back through, and the skunk has to den somewhere else."
+
+Birds (/wildlife/birds):
+- Meta description (was "…Eggs and young checked first. Lifetime guarantee on every entry point we seal."): "Pigeon and bird removal in Toronto: roofs, ledges, balconies, vents and chimneys. Eggs and young checked first; vents screened and chimneys capped after." (153 characters)
+- Trust row: no guarantee line.
+- Step 4 of "How we remove birds": "We screen the vent, cap the chimney or seal the gap the birds were using." (the guarantee sentence after it removed)
+- The dark guarantee box under "Bird removal and vent, chimney and soffit repair": removed.
+- "Will the birds come back?" (was "Not through the opening we sealed." + the full guarantee): "Not through a vent we screened or a chimney we capped: that way in is closed. An open ledge, roof edge or balcony is different, because nothing is sealed there; the birds and the nest are removed, and screening the whole balcony, when you want it, is a separate job we quote on its own."
+
+Damage repair (/wildlife/damage-repair):
+- "Decks, porches and sheds: Ground sealed with wire mesh dug into the soil" removed from the "Repairs we handle" list (it sat right above the guarantee band; a note saying it is not guaranteed would be a guarantee sentence in other words, which the never-paraphrase rule and the crawl check both refuse). The structured-data offer list loses the same entry.
+- The skunk card under "Common damage" (was "…we seal the ground along the base of the deck, porch or shed with wire mesh dug into the soil."): "Skunks dig rather than chew. Once the skunk is out, we close off the ground along the base of the deck, porch or shed with wire mesh dug into the soil: a barrier in the ground, not an entry point into the house."
+
+Google rating (homepage and the 30 landing pages with a trust row; not /contact):
+- One line, five stars and "5.0 on Google · 4 reviews", linked to /review (opens in a new tab). On phones directly under "A real person answers 24/7." under the Call button; from `sm` up the fourth item in the trust row.
+- Judgment call 1: linked to /review, the site's own redirect to the Business Profile review form, because that is the Google review page the site already uses; if the owner would rather it open the listing itself, that URL is needed.
+- Judgment call 2: NOT CHECKED FROM HERE. The figures (5.0, 4 reviews) come from the ads chat's note, approved by the owner; Google is blocked from this session, so the website chat could not open the Business Profile to confirm them. The owner or the ads chat should glance at the listing once the line is live.
+- Judgment call 3: not put into structured data (Google ignores self-serving aggregate ratings on a LocalBusiness, and marking it up invites a manual action).
+- The crawl check now allows exactly this one line and still fails on any other "review" or "rating" wording.
+
+"Get Help Now" on phones (homepage and the 30 landing pages):
+- A plain underlined text link under the rating line; from `sm` up the outline button it always was. Same /contact link and the same cta_get_help_now event. The sticky Call Now / Get Help Now bar is unchanged.
+
+### Checks (Oct 27, local build, against the live build faa24f1)
+Lint, typecheck, build: clean. Crawl: 36 pages, all 200, no duplicates, Problems: none (an earlier draft with a "not covered by the lifetime guarantee" note on the deck entry failed the exact-wording check, which is why the entry was removed instead). Compare: 31 pages changed (homepage, 20 service-area pages, 10 wildlife pages), 5 unchanged (/contact, /about, /faq, the two indexes, privacy, thank-you). Phone first screen: all 31 landing pages pass (skunks and birds added to the no-guarantee set in `scripts/checks/firstscreen.mjs`). Screenshots at 375 x 812 (Toronto, raccoons, squirrels, skunks, birds, homepage) and 1280 (Toronto) shown to the owner. Not run: Lighthouse (the hero gained one short line and an SVG of five stars; nothing render-blocking).

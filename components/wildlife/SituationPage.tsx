@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/shared/Container";
 import { CTAButton } from "@/components/shared/CTAButton";
+import { HelpLink } from "@/components/shared/HelpLink";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { FAQAccordion } from "@/components/shared/FAQAccordion";
@@ -13,7 +14,6 @@ import { RichText } from "@/components/shared/RichText";
 import { RelatedWildlife } from "@/components/wildlife/RelatedWildlife";
 import { getPhone } from "@/lib/config/resolvers";
 import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/seo";
-import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
 import type { SituationContent } from "@/lib/data/situations";
 import type { WildlifeEntry } from "@/lib/types";
 import { cn } from "@/lib/utils";
@@ -65,16 +65,7 @@ export function SituationPage({
         Call {phone.display}
       </CTAButton>
       <CallNote />
-      <CTAButton
-        href="/contact"
-        variant="outline"
-        size="lg"
-        event="cta_get_help_now"
-        eventMeta={{ location: `wildlife-${entry.slug}` }}
-        className="w-full font-semibold sm:w-auto"
-      >
-        {PRIMARY_CTA_LABEL}
-      </CTAButton>
+      <HelpLink location={`wildlife-${entry.slug}`} />
     </div>
   );
 

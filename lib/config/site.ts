@@ -138,6 +138,26 @@ export const ALWAYS_ON_CALL = {
   contactLabel: "Calls answered 24 hours a day, 7 days a week.",
 };
 
+/**
+ * ----------------------------------------------------------------------------
+ * GOOGLE RATING — the real Business Profile rating, nothing else.
+ * ----------------------------------------------------------------------------
+ * Owner, Oct 27 2026 (via the ads chat, ADS 27): the listing has real reviews
+ * now, so the rating is shown near the Call button on the homepage and every
+ * landing page, linked to the Google review page (/review, the site's own
+ * redirect to the Business Profile). Only the real rating and count, ever:
+ * update `count` (and `rating` if it moves) as reviews come in, and set
+ * `enabled` to false rather than show a number that is not true. No review
+ * widgets, no quoted reviews. Not put into structured data: Google ignores
+ * self-serving aggregate ratings on a LocalBusiness.
+ */
+export const GOOGLE_RATING: { enabled: boolean; rating: string; count: number; href: string } = {
+  enabled: true,
+  rating: "5.0",
+  count: 4,
+  href: "/review",
+};
+
 /** Placeholder for future analytics/tracking wiring — see lib/analytics.ts */
 export const ANALYTICS = {
   /**

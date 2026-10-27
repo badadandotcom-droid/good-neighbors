@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/shared/Container";
 import { CTAButton } from "@/components/shared/CTAButton";
+import { HelpLink } from "@/components/shared/HelpLink";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
 import { ShieldCheckIcon } from "@/components/shared/GuaranteeLine";
@@ -9,7 +10,7 @@ import { JsonLd } from "@/components/shared/JsonLd";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { getPhone } from "@/lib/config/resolvers";
-import { GUARANTEE, PRIMARY_CTA_LABEL } from "@/lib/config/site";
+import { GUARANTEE } from "@/lib/config/site";
 import { getActiveMarkets, marketHref } from "@/lib/data/markets";
 import { DAMAGE_REPAIR_PATH, REPAIR_SERVICES } from "@/lib/data/repairs";
 import { breadcrumbJsonLd, pageMetadata, serviceJsonLd } from "@/lib/seo";
@@ -56,7 +57,7 @@ const DAMAGE_TYPES: { title: string; body: string; href: string; linkLabel: stri
   },
   {
     title: "Skunks under decks, porches and sheds",
-    body: "Skunks dig rather than chew. Once the skunk is out, we seal the ground along the base of the deck, porch or shed with wire mesh dug into the soil.",
+    body: "Skunks dig rather than chew. Once the skunk is out, we close off the ground along the base of the deck, porch or shed with wire mesh dug into the soil: a barrier in the ground, not an entry point into the house.",
     href: "/wildlife/skunks",
     linkLabel: "Skunk removal in Toronto",
   },
@@ -115,16 +116,7 @@ export default function DamageRepairPage() {
                 Call {phone.display}
               </CTAButton>
               <CallNote />
-              <CTAButton
-                href="/contact"
-                variant="outline"
-                size="lg"
-                event="cta_get_help_now"
-                eventMeta={{ location: "damage-repair" }}
-                className="w-full font-semibold sm:w-auto"
-              >
-                {PRIMARY_CTA_LABEL}
-              </CTAButton>
+              <HelpLink location="damage-repair" />
             </div>
             <TrustRow mobileOrder />
           </div>

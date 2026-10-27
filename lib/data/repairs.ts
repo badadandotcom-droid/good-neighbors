@@ -27,5 +27,9 @@ export const REPAIR_SERVICES: RepairService[] = [
   { name: "Attic insulation", detail: "Soiled or flattened insulation removed and replaced." },
   { name: "Attic cleanup", detail: "Droppings and nesting material cleaned out." },
   { name: "Walls and ceilings", detail: "Drywall repaired inside the home." },
-  { name: "Decks, porches and sheds", detail: "Ground sealed with wire mesh dug into the soil." },
+  // "Decks, porches and sheds" (ground sealed with wire mesh after a skunk) was
+  // removed from this list on Oct 27 2026 (owner): the list sits right above
+  // the lifetime-guarantee band, and ground sealing is a barrier in the soil,
+  // not an entry point we seal, so it is outside the guarantee. The skunk page
+  // describes the mesh; the damage-repair page keeps its skunk card.
 ];

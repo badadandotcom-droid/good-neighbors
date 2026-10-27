@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/shared/Container";
 import { CTAButton } from "@/components/shared/CTAButton";
+import { HelpLink } from "@/components/shared/HelpLink";
 import { SameDayBadge } from "@/components/shared/SameDayBadge";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { FAQAccordion } from "@/components/shared/FAQAccordion";
@@ -93,16 +94,7 @@ export function CityPage({ city }: { city: City }) {
               Call {phone.display}
             </CTAButton>
             <CallNote />
-            <CTAButton
-              href="/contact"
-              variant="outline"
-              size="lg"
-              event="cta_get_help_now"
-              eventMeta={{ location: `city-${city.slug}` }}
-              className="w-full font-semibold sm:w-auto"
-            >
-              {PRIMARY_CTA_LABEL}
-            </CTAButton>
+            <HelpLink location={`city-${city.slug}`} />
           </div>
 
           <TrustRow mobileOrder />

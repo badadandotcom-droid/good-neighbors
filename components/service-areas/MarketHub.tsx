@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/shared/Container";
 import { CTAButton } from "@/components/shared/CTAButton";
+import { HelpLink } from "@/components/shared/HelpLink";
 import { SameDayBadge } from "@/components/shared/SameDayBadge";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { FAQAccordion } from "@/components/shared/FAQAccordion";
@@ -114,16 +115,7 @@ export function MarketHub({ market }: { market: Market }) {
               Call {phone.display}
             </CTAButton>
             <CallNote />
-            <CTAButton
-              href="/contact"
-              variant="outline"
-              size="lg"
-              event="cta_get_help_now"
-              eventMeta={{ location: `market-${market.slug}` }}
-              className="w-full font-semibold sm:w-auto"
-            >
-              {PRIMARY_CTA_LABEL}
-            </CTAButton>
+            <HelpLink location={`market-${market.slug}`} />
           </div>
 
           {longForm && <TrustRow mobileOrder />}

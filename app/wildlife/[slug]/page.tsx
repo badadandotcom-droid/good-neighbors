@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Container } from "@/components/shared/Container";
 import { CTAButton } from "@/components/shared/CTAButton";
+import { HelpLink } from "@/components/shared/HelpLink";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { FinalCTA } from "@/components/home/FinalCTA";
@@ -18,7 +19,6 @@ import { getSpeciesPageContent } from "@/lib/data/species-pages";
 import { WILDLIFE, getWildlifeBySlug } from "@/lib/data/wildlife";
 import { getPhone } from "@/lib/config/resolvers";
 import { breadcrumbJsonLd, pageMetadata, serviceJsonLd } from "@/lib/seo";
-import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
 import { cn } from "@/lib/utils";
 
 export function generateStaticParams() {
@@ -116,16 +116,7 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
                 Call {phone.display}
               </CTAButton>
               <CallNote />
-              <CTAButton
-                href="/contact"
-                variant="outline"
-                size="lg"
-                event="cta_get_help_now"
-                eventMeta={{ location: `wildlife-${entry.slug}` }}
-                className="w-full font-semibold sm:w-auto"
-              >
-                {PRIMARY_CTA_LABEL}
-              </CTAButton>
+              <HelpLink location={`wildlife-${entry.slug}`} />
             </div>
             {entry.trustRow && <TrustRow mobileOrder />}
           </div>

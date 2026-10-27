@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { CTAButton } from "@/components/shared/CTAButton";
+import { HelpLink } from "@/components/shared/HelpLink";
 import { Container } from "@/components/shared/Container";
 import { Illustration } from "@/components/illustrations/Illustration";
-import { TrustRow } from "@/components/shared/TrustRow";
+import { CallNote, TrustRow } from "@/components/shared/TrustRow";
 import { SameDayBadge } from "@/components/shared/SameDayBadge";
 import { getHeroHeadline, getPhone, getPositioningLine } from "@/lib/config/resolvers";
-import { PRIMARY_CTA_LABEL } from "@/lib/config/site";
 import { frauncesItalic } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import type { Market } from "@/lib/types";
@@ -52,19 +52,11 @@ export function Hero({ market }: { market?: Market }) {
             >
               Call {phone.display}
             </CTAButton>
-            <CTAButton
-              href="/contact"
-              variant="outline"
-              size="lg"
-              event="cta_get_help_now"
-              eventMeta={{ location: "hero" }}
-              className="w-full font-semibold sm:w-auto"
-            >
-              {PRIMARY_CTA_LABEL}
-            </CTAButton>
+            <CallNote />
+            <HelpLink location="hero" />
           </div>
 
-          <TrustRow />
+          <TrustRow withCallNote />
         </div>
 
         <div className="relative lg:col-span-5 lg:-mr-6 xl:-mr-16">

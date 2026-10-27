@@ -95,7 +95,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     seoTitle: "Skunk Removal in Toronto: Decks, Porches & Sheds",
     heading: "Skunk Removal in Toronto",
     metaDescription:
-      "Humane skunk removal in Toronto. Once the skunk is out, we seal the ground under your deck, porch or shed. Lifetime guarantee on every entry point we seal.",
+      "Humane skunk removal in Toronto. Once the skunk is out, we close off the ground under your deck, porch or shed with wire mesh dug in, so nothing digs back in.",
     summary: "Ground-level diggers that den under decks, porches and sheds rather than in attics.",
     intro:
       "Skunks are a ground-level problem. They dig in under decks, porches, sheds and front steps, and in spring a female may raise her young there. They're not aggressive by nature, so a calm, careful approach matters more with skunks than with almost any other animal.",
@@ -117,6 +117,10 @@ export const WILDLIFE: WildlifeEntry[] = [
         "The work is kept low and tidy, with care for your deck, landscaping and garden.",
       ],
       linkLabel: "How we seal and repair after wildlife",
+      // Owner, Oct 27 2026: the lifetime guarantee is off this page (the skunk
+      // never lives in the house, and the mesh seals the ground, not an opening
+      // into the house); the trust row shows insurance and 24/7 only.
+      guarantee: false,
     },
     trustRow: true,
   },
@@ -128,7 +132,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     seoTitle: "Bird Removal in Toronto: Vents, Chimneys & Eaves",
     heading: "Bird Removal in Toronto",
     metaDescription:
-      "Pigeon and bird removal in Toronto: roofs, ledges, balconies, vents and chimneys. Eggs and young checked first. Lifetime guarantee on every entry point we seal.",
+      "Pigeon and bird removal in Toronto: roofs, ledges, balconies, vents and chimneys. Eggs and young checked first; vents screened and chimneys capped after.",
     summary: "Nesting in vents, chimneys, and eaves — most often a seasonal, fast-moving situation.",
     intro:
       "Birds most often turn up nesting in bathroom or dryer vents, chimneys, or under eaves. It's usually a seasonal situation tied to nesting season, and it can move quickly from 'a bit of noise' to a blocked vent or chimney that needs prompt attention.",
@@ -154,6 +158,11 @@ export const WILDLIFE: WildlifeEntry[] = [
         "Once the birds are out and the nest is cleaned out, we screen the vent or cap the chimney and repair what the nesting damaged: vent covers and screens, chimney caps, soffits, fascia and eavestroughs, matched to your home's existing materials and colours. Where birds got into the attic, the droppings and nesting material are cleaned out and soiled insulation is replaced.",
       ],
       linkLabel: "Vent, chimney and soffit repair after birds",
+      // Owner, Oct 27 2026: the lifetime guarantee is off this page (pigeons on
+      // an open ledge, roof edge or balcony: nothing is sealed there, and the
+      // page is one page for every bird job); the trust row shows insurance
+      // and 24/7 only.
+      guarantee: false,
     },
     trustRow: true,
   },

@@ -248,7 +248,9 @@ export const SPECIES_PAGES: SituationContent[] = [
     slug: "birds",
     subhead:
       "Pigeons on the roof or the balcony all year, starlings in the dryer vent every spring, a nest in the chimney: what can be done about each, and when.",
-    trustRow: true,
+    // Owner, Oct 27 2026: no lifetime guarantee on this page (open ledges and
+    // balconies seal nothing): insurance and 24/7 lines only.
+    trustRow: "no-guarantee",
     signs: {
       heading: "Signs of birds in or on your home",
       intro:
@@ -300,7 +302,7 @@ export const SPECIES_PAGES: SituationContent[] = [
         "An inspection of the vents, chimney, soffits and roof, and the ledge or balcony if pigeons are the problem, to find every spot the birds use.",
         "We identify the birds and check for eggs or young before work begins. If the nest is protected, we'll explain what can be done and when.",
         "Humane removal, and the nest cleaned out of the vent, chimney, soffit or attic.",
-        `We screen the vent, cap the chimney or seal the gap the birds were using. ${GUARANTEE.short}`,
+        "We screen the vent, cap the chimney or seal the gap the birds were using.",
         "We repair the damage: vent covers and screens, chimney caps, soffits, fascia and eavestroughs, plus soiled attic insulation, matched to your home's existing materials and colours.",
       ],
       outro: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week.`,
@@ -345,7 +347,8 @@ export const SPECIES_PAGES: SituationContent[] = [
       },
       {
         question: "Will the birds come back?",
-        answer: `Not through the opening we sealed. ${GUARANTEE.full}`,
+        answer:
+          "Not through a vent we screened or a chimney we capped: that way in is closed. An open ledge, roof edge or balcony is different, because nothing is sealed there; the birds and the nest are removed, and screening the whole balcony, when you want it, is a separate job we quote on its own.",
       },
       INSURANCE_FAQ,
       {
@@ -364,7 +367,9 @@ export const SPECIES_PAGES: SituationContent[] = [
     slug: "skunks",
     subhead:
       "A skunk under the deck, the porch or the shed is a ground-level problem with a calm, step-by-step fix: find the den, check for young, let the skunk out and close the space behind it.",
-    trustRow: true,
+    // Owner, Oct 27 2026: no lifetime guarantee on this page (the mesh seals the
+    // ground, not an opening into the house): insurance and 24/7 lines only.
+    trustRow: "no-guarantee",
     signs: {
       heading: "Signs of a skunk under your deck",
       intro: "Most people never see the skunk. They smell it near the deck at night, or find a fresh hole dug at the edge.",
@@ -407,7 +412,7 @@ export const SPECIES_PAGES: SituationContent[] = [
         "We find the den and every way in along the deck, porch or shed.",
         "We check for young; in late spring and early summer nothing is closed until the babies are old enough to follow their mother out.",
         "A one-way door goes over the entry, so the skunk can leave at dusk but not come back.",
-        `Once the space is empty, wire mesh is fixed along the base and dug into the ground. ${GUARANTEE.short}`,
+        "Once the space is empty, wire mesh is fixed along the base and dug into the ground.",
       ],
       outro: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week.`,
     },
@@ -440,7 +445,8 @@ export const SPECIES_PAGES: SituationContent[] = [
       },
       {
         question: "Will the skunk come back?",
-        answer: `Not into the space we closed off. ${GUARANTEE.full}`,
+        answer:
+          "Not into the space we closed off. The mesh runs along the whole base of the deck, porch or shed and down into the ground, so there is no opening left to dig back through, and the skunk has to den somewhere else.",
       },
       {
         question: "How much does skunk removal cost?",
