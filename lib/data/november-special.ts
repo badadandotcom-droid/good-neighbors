@@ -10,8 +10,9 @@ import type { FaqItem } from "@/lib/types";
  * The ad's pinned headline is "November Special: $699 + HST", so the H1 and
  * the price line match it word for word. The price is per entry point:
  * humane removal of every animal that came in through one opening, and that
- * opening sealed, for any animal inside the house. Additional entry points
- * are quoted before they are sealed; their figure is never on the site.
+ * opening sealed, for any animal inside the house. The page says it covers
+ * one hole and stops there (owner, Oct 28): a second hole is quoted on site,
+ * never on the page.
  *
  * Off the site menus, off the /wildlife index, out of the sitemap and
  * `noindex`: the page is reached from the ad only (the offer is dated, and a
@@ -37,7 +38,6 @@ export const NOVEMBER_SPECIAL = {
   kicker: "November 2026",
   /** Directly under the H1, exactly as the ads chat asked. */
   priceLine: "November special: $699 plus HST per entry point. Normally $850.",
-  additionalLine: "Additional entry points found during the job are quoted before they're sealed.",
   subhead:
     "A raccoon, squirrel or bird in the attic, the walls, the roof or a vent: in November, every animal that came in through one opening is removed humanely and that opening is sealed, for one price.",
   intro:
@@ -54,8 +54,7 @@ export const NOVEMBER_SPECIAL = {
     {
       heading: "What “per entry point” means",
       paragraphs: [
-        "An entry point is one opening an animal is using to get in and out: a torn roof vent, a soffit corner pushed up, a gap chewed at the fascia, a chimney with no cap. Most homes have one. Some have two, because a squirrel that found one weak spot along the roofline often found another, or a raccoon pulled open a second vent when the first was blocked.",
-        "The special price covers one. If our inspection finds a second opening in use, we tell you before anything is sealed and give you the price for it in plain figures, so you can decide. Nothing is closed up without your yes, and nothing goes on the invoice that you didn't agree to first.",
+        "An entry point is one opening an animal is using to get in and out: a torn roof vent, a soffit corner pushed up, a gap chewed at the fascia, a chimney with no cap. The special covers one.",
         "The special is the removal and the seal: the animals out, the opening closed. Anything else the job needs is quoted on site, before it's done.",
       ],
     },
@@ -97,7 +96,7 @@ export const NOVEMBER_SPECIAL = {
     {
       question: "What does “per entry point” mean?",
       answer:
-        "One opening the animal is using to get in and out. The $699 plus HST covers removing every animal that came in through that one opening and sealing it. If the inspection finds a second opening in use, we quote it before it's sealed, and you decide.",
+        "One opening the animal is using to get in and out. The $699 plus HST covers removing every animal that came in through that one opening and sealing it.",
     },
     {
       question: "Is HST included in the $699?",

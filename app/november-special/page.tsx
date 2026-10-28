@@ -20,9 +20,9 @@ import { breadcrumbJsonLd, faqJsonLd, pageMetadata, serviceJsonLd } from "@/lib/
  * lib/data/november-special.ts. Reached from the test ad only: not in the
  * menus, not on the /wildlife index, not in the sitemap, and `noindex`
  * (the offer is dated). The hero keeps the landing-page order on a phone
- * (H1, price lines, guarantee line, Call button, 24/7 and rating, Get Help
+ * (H1, price line, guarantee line, Call button, 24/7 and rating, Get Help
  * Now, insurance), with the price line directly under the H1 as the ads
- * chat asked; the price lines take order 4 ahead of the guarantee line.
+ * chat asked; the price line takes order 4 ahead of the guarantee line.
  */
 export const metadata: Metadata = {
   ...pageMetadata({
@@ -66,10 +66,7 @@ export default function NovemberSpecialPage() {
             {c.kicker}
           </p>
           <h1 className="order-3 mt-3 text-balance font-display text-[2.125rem] leading-[1.04] text-charcoal sm:text-5xl">{c.h1}</h1>
-          <div className="order-4 mt-3 flex flex-col gap-1 sm:mt-5">
-            <p className="font-display text-lg leading-snug text-pine-700 sm:text-xl">{c.priceLine}</p>
-            <p className="text-sm leading-relaxed text-ink-700">{c.additionalLine}</p>
-          </div>
+          <p className="order-4 mt-3 font-display text-lg leading-snug text-pine-700 sm:mt-5 sm:text-xl">{c.priceLine}</p>
           <p className="order-8 mt-8 font-display text-xl leading-snug text-pine-600 text-pretty sm:mt-6 sm:text-2xl">{c.subhead}</p>
           <p className="order-9 mt-3 text-lg leading-relaxed text-ink-700">{c.intro}</p>
           <div className="order-5 mt-5 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
