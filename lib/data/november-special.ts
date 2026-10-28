@@ -48,7 +48,7 @@ export const NOVEMBER_SPECIAL = {
       heading: "What the November special covers",
       paragraphs: [
         "The special is for an animal inside the house: the attic, a wall or ceiling, the roof, a soffit, a chimney or a vent. For $699 plus HST per entry point, we remove every animal that came in through that opening, mother and young together, and we seal the opening it was using. The regular price for the same work is $850 plus HST.",
-        "It is the same service we do all year, done to the same standard. We inspect the whole roofline first, check for babies before any removal, get the animals out humanely and from outside wherever we can, and close the way in with materials matched to your home, so the repair doesn't show. The only thing November changes is the price.",
+        "It is the same service we do all year, done to the same standard. We inspect the whole roofline first, check for babies before any removal, get the animals out humanely and from outside wherever we can, and close the way in so nothing gets back through it. The only thing November changes is the price.",
       ],
     },
     {
@@ -56,7 +56,7 @@ export const NOVEMBER_SPECIAL = {
       paragraphs: [
         "An entry point is one opening an animal is using to get in and out: a torn roof vent, a soffit corner pushed up, a gap chewed at the fascia, a chimney with no cap. Most homes have one. Some have two, because a squirrel that found one weak spot along the roofline often found another, or a raccoon pulled open a second vent when the first was blocked.",
         "The special price covers one. If our inspection finds a second opening in use, we tell you before anything is sealed and give you the price for it in plain figures, so you can decide. Nothing is closed up without your yes, and nothing goes on the invoice that you didn't agree to first.",
-        "What the special doesn't include is the work that sometimes follows a removal: attic cleanup and new insulation where the old is soiled, roof or soffit repair beyond the sealed opening, a new chimney cap. Each of those is quoted on its own, before it's done, and you can take it or leave it. Animals outside the house, under a deck, in a yard or on a balcony, are a different job and are priced per visit.",
+        "The special is the removal and the seal: the animals out, the opening closed. Anything else the job needs is quoted on site, before it's done.",
       ],
     },
     {
@@ -72,7 +72,7 @@ export const NOVEMBER_SPECIAL = {
       heading: "Why not to wait until December",
       paragraphs: [
         "An animal that moves in during the fall is settling in for the winter, and the cost of waiting climbs with every week: more soiled insulation, a second opening chewed to make a draught-free den, a roof edge that lets water in at the first thaw. Raccoon droppings in an attic can carry raccoon roundworm, so the attic is not a place to go and look.",
-        "November is also the calm month. The spring young are grown and no new litters are due until late winter, which makes a removal simpler for the animals and for you. The special runs from November 1 to November 30, 2026, and the price is set when you book: a job booked on the 30th keeps the November price even if the sealing visit falls in December.",
+        "November is also the calm month. The spring young are grown and no new litters are due until late winter, which makes a removal simpler for the animals and for you. The special runs from November 1 to November 30, 2026.",
       ],
     },
   ],
@@ -81,11 +81,11 @@ export const NOVEMBER_SPECIAL = {
     heading: "How a November visit works",
     intro: "Most in-house removals are done entirely from outside. Here is the sequence, and where the price gets confirmed.",
     steps: [
-      "You call, at any hour. We ask what you've heard and where, and we confirm the special: $699 plus HST for one entry point, with any second opening quoted before it's sealed.",
+      "You call, at any hour. We ask what you've heard and where, and we confirm the special: $699 plus HST for one entry point, the animals out and the opening sealed.",
       "A full inspection of the roofline and the openings on the house, to find every entry point and not just the one nearest the noise.",
       "We identify the animal and check for babies first. In November newborn young are rare, but young of the year may still be inside with their mother.",
       "Humane removal from outside, usually with a one-way door over the opening, so the animals leave on their own and can't get back in. We check in with you the next day to hear whether the house has gone quiet.",
-      `Once it has, the door comes off and the opening is sealed with materials matched to your home. ${GUARANTEE.short}`,
+      `Once it has, the door comes off and the opening is sealed. ${GUARANTEE.short}`,
       "Before we leave we show you what we found, what we did and how the animal got in, and the invoice shows exactly the price you agreed to, plus HST.",
     ],
     outro:
@@ -107,17 +107,12 @@ export const NOVEMBER_SPECIAL = {
     {
       question: "Is this the same service as the regular price?",
       answer:
-        "Yes, exactly the same. The same inspection, the same humane removal, the same sealing with matched materials and the same follow-up. The regular price is $850 plus HST; in November it's $699 plus HST per entry point.",
+        "Yes, exactly the same. The same inspection, the same humane removal, the same seal and the same follow-up. The regular price is $850 plus HST; in November it's $699 plus HST per entry point.",
     },
     {
       question: "What if there are babies?",
       answer:
         "We check before anything is removed. If young are inside, the removal is done so the mother and her young leave together, and that is part of the special, not an extra. In November newborn young are rare; it's usually young of the year still living with their mother.",
-    },
-    {
-      question: "Does the special include cleanup, insulation or roof repair?",
-      answer:
-        "No. The special covers the removal and the sealed opening. Attic cleanup, new insulation, roof or soffit repair beyond the opening and a chimney cap are each quoted separately, before they're done, and you can take them or leave them.",
     },
     {
       question: "Does the special price apply at night?",
@@ -127,7 +122,7 @@ export const NOVEMBER_SPECIAL = {
     {
       question: "When does the special end?",
       answer:
-        "November 30, 2026. The price is set when you book, so a job booked in November keeps the November price even if the sealing visit falls in early December.",
+        "November 30, 2026. After that, in-house removals go back to the regular price of $850 plus HST per entry point.",
     },
     {
       question: "Will the animal come back?",

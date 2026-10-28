@@ -3,7 +3,7 @@
 WAITING FOR THE OWNER'S "approved". Built on the session branch `claude/gnw-website-14` on top of the live branch at 801d5a5. Goes live Nov 1, not before (the live branch is fast-forwarded that morning); taken down Dec 1.
 
 ## What was built
-- New page **/november-special** (`app/november-special/page.tsx`, copy in `lib/data/november-special.ts`): the one page on the site with a price, for the ads chat's November test ad (ADS 35's brief of Oct 28, 1:10 AM, followed word for word where it gave words). Title "November Special: $699 + HST per Entry Point" (70 characters with the brand suffix), H1 the same, meta description 160 characters. 1,547 words in the main content, four sections, the lifetime-guarantee box, a six-step "How a November visit works", nine questions (FAQ schema matches). Figures on the page: $699, $850 and the $5 million insurance line, nothing else.
+- New page **/november-special** (`app/november-special/page.tsx`, copy in `lib/data/november-special.ts`): the one page on the site with a price, for the ads chat's November test ad (ADS 35's brief of Oct 28, 1:10 AM, followed word for word where it gave words). Title "November Special: $699 + HST per Entry Point" (70 characters with the brand suffix), H1 the same, meta description 160 characters. 1,397 words in the main content, four sections, the lifetime-guarantee box, a six-step "How a November visit works", eight questions (FAQ schema matches). Figures on the page: $699, $850 and the $5 million insurance line, nothing else.
 - Reached from the ad only: not in the menus, not on the /wildlife index, not in the sitemap, `noindex, follow` (out of Google's index, its links still count).
 - Phone hero order: kicker "November 2026", H1, the price line and the "Additional entry points" line directly under it, the guarantee line, the Call button, "A real person answers 24/7." and the rating line, Get Help Now, insurance, then the two intro sentences. Trust row from `sm` up as on every landing page.
 - Checks changed: `scripts/checks/crawl.mjs` now crawls `EXTRA_PATHS` (this page) on top of the sitemap and allows exactly $699 and $850 on this one page (the dollar-figure ban stays on every other page; the handoff's guess that a figure would pass was wrong: the ban rejects any dollar figure except $5 million). `scripts/checks/firstscreen.mjs` lists the page (33 landing pages). README updated.
@@ -17,19 +17,19 @@ WAITING FOR THE OWNER'S "approved". Built on the session branch `claude/gnw-webs
 5. **The regular price is named** ("Normally $850"; "The regular price for the same work is $850 plus HST") as the ad does. Both figures come from your pricing rules.
 6. **"Mother and young together" and "check for babies first"** are said as on the attic page. Step 3 and the babies FAQ add "In November newborn young are rare; it's usually young of the year still with their mother": raccoons and squirrels in Toronto have spring litters, squirrels sometimes a late-summer second litter, so by November the young are grown or near it. General knowledge, not checked to a source; cut the sentence if you'd rather not say it.
 7. **The one-way door is named** in step 4 ("usually with a one-way door over the opening") and the day-after check-in with it. The site only says "one-way door" on the skunk page today; your one-way-door sequence (Oct 19) makes it true for in-house jobs. If some in-house jobs are done another way, "usually" covers it; strike the clause if you'd rather keep the method off the page.
-8. **What the special does not include** is spelled out: attic cleanup and new insulation, roof or soffit repair beyond the sealed opening, a chimney cap (each quoted separately, "take it or leave it"); animals outside the house priced per visit; skunks, dead animals and raccoon droppings named as other jobs with links. This is to keep the page honest under Google Ads' landing-page rules and your "price explained first" claim. The $250 additional-entry-point figure is nowhere on the page, as you said.
-9. **"The price is set when you book"**: the page says a job booked in November keeps the November price even if the sealing visit falls in early December (the one-way door takes a few days). This is a promise I added so the "When does the special end?" answer is clear; strike it if you'd rather the special apply only to visits in November.
+8. **What the special covers, said simply** (owner, Oct 28, 2:57–3:00 AM): the animals out and the opening sealed; "Anything else the job needs is quoted on site, before it's done." The first draft listed what is not included (cleanup, insulation, repair to look as before, a chimney cap) and the owner struck it: he tells people on site, it's obvious. No sentence on the page says how a sealed spot will look. Skunks, dead animals and raccoon droppings are still named as other jobs with links. The $250 additional-entry-point figure is nowhere on the page.
+9. **Struck by the owner (Oct 28, 2:57 AM)**: the first draft's "the price is set when you book" promise (a November booking keeping the price into December). Gone from the section and the "When does the special end?" answer, which now says the regular price returns after November 30.
 10. **Night visits**: "The special price is for visits between 7 AM and 9 PM. A visit between 9 PM and 7 AM is emergency service; call us for the details and the price." No figure, as everywhere. Your same-night offer (book by 9 PM, we come tonight at the same price) is NOT on the page: the site has never said it and it would be a new public claim; say so if you want it added.
 11. **Bats are not named.** The ad says "Raccoons, Squirrels & More"; the page names raccoons, squirrels and birds in vents. A bat job in November has its own timing and the bats page is still a stub, so I left bats out rather than promise the special on them. Say so if bats are covered.
-12. **Nine questions** rather than five or six (the handoff's guess): "per entry point", HST, same service as the regular price, babies, what's not included, night visits, when it ends, will it come back (the exact guarantee wording), insurance. Each is one the ad's reader will have before calling; cut any.
+12. **Eight questions** rather than five or six (the handoff's guess): "per entry point", HST, same service as the regular price, babies, night visits, when it ends, will it come back (the exact guarantee wording), insurance. Each is one the ad's reader will have before calling; cut any.
 13. **"Why not to wait until December"**: one section on what waiting costs (soiled insulation, a second opening, water at the thaw; raccoon roundworm said once, as on the raccoon page) and why November is the calm month (no litters due). Calm, no scare words.
 14. **Same-day wording, fresh**: the intro ("Technicians go out the same day at any hour, a real person answers the phone around the clock"), the process outro ("In November the calls come at every hour, and so do we: the same day, day or night. A visit between 9 PM and 7 AM is emergency service, so call for the details and the price; someone picks up the phone around the clock.") and the night FAQ. No "4 PM", no "subject to availability", no "fastest", "cheapest", "discreet", "licensed", "fully insured".
 15. **Structured data**: Service ("Wildlife removal"), breadcrumb and FAQPage, the same three as every landing page. No Offer schema (a price in structured data on a noindex page gains nothing and invites a Google Ads policy reviewer to read the page as a price list).
 16. **Dec 1 takedown**: a 302 from /november-special to /wildlife/something-in-the-attic (recommended in chat Oct 28, 2:27 AM; no answer yet), pushed Dec 1. Scheduled checks for Nov 1 (go live, live note) and Dec 1 (take down) are set in this chat once you approve.
 
-## Checks (Oct 28, 2:33–2:37 AM Toronto, local production build, cloud machine)
+## Checks (Oct 28, 2:33–3:05 AM Toronto, re-run after the owner's wording cuts, local production build, cloud machine)
 - Typecheck, lint (`npx eslint . --ignore-pattern '.scratch/**'`), build: pass.
-- Crawl: 37 pages (36 sitemap pages + /november-special), Problems: none; every title, H1 and description unique; FAQ schema matches the nine rendered questions; `<meta name="robots" content="noindex, follow"/>`; "fastest", "cheapest", "discreet", "licensed", "fully insured", "$250", "$599", "relocat" nowhere on the page; the page is linked from no other page; not in the sitemap.
+- Crawl: 37 pages (36 sitemap pages + /november-special), Problems: none; every title, H1 and description unique; FAQ schema matches the eight rendered questions; `<meta name="robots" content="noindex, follow"/>`; "fastest", "cheapest", "discreet", "licensed", "fully insured", "$250", "$599", "relocat" nowhere on the page; the page is linked from no other page; not in the sitemap.
 - Compare against the live branch (801d5a5): only november-special changed (a 404 before); the other 36 pages byte-for-byte unchanged.
 - Phone first screen (375 x 812): all 33 landing pages pass; /november-special H1 bottom 311, guarantee 474, Call button 550, bar at 738.
 - Screenshots (phone first screen, full phone, full desktop) shown to the owner in chat.
@@ -64,7 +64,7 @@ A real person answers 24/7.
 
 The special is for an animal inside the house: the attic, a wall or ceiling, the roof, a soffit, a chimney or a vent. For $699 plus HST per entry point, we remove every animal that came in through that opening, mother and young together, and we seal the opening it was using. The regular price for the same work is $850 plus HST.
 
-It is the same service we do all year, done to the same standard. We inspect the whole roofline first, check for babies before any removal, get the animals out humanely and from outside wherever we can, and close the way in with materials matched to your home, so the repair doesn't show. The only thing November changes is the price.
+It is the same service we do all year, done to the same standard. We inspect the whole roofline first, check for babies before any removal, get the animals out humanely and from outside wherever we can, and close the way in so nothing gets back through it. The only thing November changes is the price.
 
 ### Lifetime guarantee
 
@@ -76,7 +76,7 @@ An entry point is one opening an animal is using to get in and out: a torn roof 
 
 The special price covers one. If our inspection finds a second opening in use, we tell you before anything is sealed and give you the price for it in plain figures, so you can decide. Nothing is closed up without your yes, and nothing goes on the invoice that you didn't agree to first.
 
-What the special doesn't include is the work that sometimes follows a removal: attic cleanup and new insulation where the old is soiled, roof or soffit repair beyond the sealed opening, a new chimney cap. Each of those is quoted on its own, before it's done, and you can take it or leave it. Animals outside the house, under a deck, in a yard or on a balcony, are a different job and are priced per visit.
+The special is the removal and the seal: the animals out, the opening closed. Anything else the job needs is quoted on site, before it's done.
 
 ## The animals it covers
 
@@ -92,17 +92,17 @@ A skunk under the deck, a dead animal in a wall and raccoon droppings on a patio
 
 An animal that moves in during the fall is settling in for the winter, and the cost of waiting climbs with every week: more soiled insulation, a second opening chewed to make a draught-free den, a roof edge that lets water in at the first thaw. Raccoon droppings in an attic can carry raccoon roundworm, so the attic is not a place to go and look.
 
-November is also the calm month. The spring young are grown and no new litters are due until late winter, which makes a removal simpler for the animals and for you. The special runs from November 1 to November 30, 2026, and the price is set when you book: a job booked on the 30th keeps the November price even if the sealing visit falls in December.
+November is also the calm month. The spring young are grown and no new litters are due until late winter, which makes a removal simpler for the animals and for you. The special runs from November 1 to November 30, 2026.
 
 ## How a November visit works
 
 Most in-house removals are done entirely from outside. Here is the sequence, and where the price gets confirmed.
 
-- 01You call, at any hour. We ask what you've heard and where, and we confirm the special: $699 plus HST for one entry point, with any second opening quoted before it's sealed.
+- 01You call, at any hour. We ask what you've heard and where, and we confirm the special: $699 plus HST for one entry point, the animals out and the opening sealed.
 - 02A full inspection of the roofline and the openings on the house, to find every entry point and not just the one nearest the noise.
 - 03We identify the animal and check for babies first. In November newborn young are rare, but young of the year may still be inside with their mother.
 - 04Humane removal from outside, usually with a one-way door over the opening, so the animals leave on their own and can't get back in. We check in with you the next day to hear whether the house has gone quiet.
-- 05Once it has, the door comes off and the opening is sealed with materials matched to your home. Lifetime guarantee on every entry point we seal.
+- 05Once it has, the door comes off and the opening is sealed. Lifetime guarantee on every entry point we seal.
 - 06Before we leave we show you what we found, what we did and how the animal got in, and the invoice shows exactly the price you agreed to, plus HST.
 In November the calls come at every hour, and so do we: the same day, day or night. A visit between 9 PM and 7 AM is emergency service, so call for the details and the price; someone picks up the phone around the clock.
 
@@ -115,19 +115,16 @@ One opening the animal is using to get in and out. The $699 plus HST covers remo
 No. Every price we quote is plus HST, and the invoice shows the HST as its own line, so the total is never a surprise.
 
 **Q: Is this the same service as the regular price?**
-Yes, exactly the same. The same inspection, the same humane removal, the same sealing with matched materials and the same follow-up. The regular price is $850 plus HST; in November it's $699 plus HST per entry point.
+Yes, exactly the same. The same inspection, the same humane removal, the same seal and the same follow-up. The regular price is $850 plus HST; in November it's $699 plus HST per entry point.
 
 **Q: What if there are babies?**
 We check before anything is removed. If young are inside, the removal is done so the mother and her young leave together, and that is part of the special, not an extra. In November newborn young are rare; it's usually young of the year still living with their mother.
-
-**Q: Does the special include cleanup, insulation or roof repair?**
-No. The special covers the removal and the sealed opening. Attic cleanup, new insulation, roof or soffit repair beyond the opening and a chimney cap are each quoted separately, before they're done, and you can take them or leave them.
 
 **Q: Does the special price apply at night?**
 The special price is for visits between 7 AM and 9 PM. A visit between 9 PM and 7 AM is emergency service; call us for the details and the price, and we'll tell you the difference before you decide.
 
 **Q: When does the special end?**
-November 30, 2026. The price is set when you book, so a job booked in November keeps the November price even if the sealing visit falls in early December.
+November 30, 2026. After that, in-house removals go back to the regular price of $850 plus HST per entry point.
 
 **Q: Will the animal come back?**
 Not through the opening we sealed. Every entry point we seal comes with a lifetime guarantee, for as long as you own your home. If an animal gets back in through it, we come back and take care of it at no charge. Full terms are written on your invoice.
