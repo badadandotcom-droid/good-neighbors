@@ -8,6 +8,11 @@ FIRST: say the model. The owner's standing call is Fable for website writing; Fa
 
 Scheduled checks: none set yet. Set two in this chat at the start (send_later, so they land here; the owner approved the November page, so the go-live itself needs no further yes): Nov 1 at 12:05 AM Toronto (put the November page live and send the live note; it is Saturday night, when the owner is usually up, so the note reaches the ads chat the same night) and Dec 1 at 12:05 AM (take it down). List them here when set. If this chat hands off before they fire, the next chat cancels them and sets them again in itself.
 
+Set by GNW Website 16 (Oct 28, 1:40 PM; the owner's yes at 1:35 PM), both firing into GNW Website 16:
+- Nov 1, 12:05 AM Toronto (2026-11-01T04:05Z), "Nov 1: November page live (GNW Website 16)", `trig_01KHGbjxLe4kVzZurtknpVKr`.
+- Dec 1, 12:05 AM Toronto (2026-12-01T05:05Z), "Dec 1: November page down (GNW Website 16)", `trig_01SSzon4tz8bS77YNsBgyn19`.
+If GNW Website 16 hands off before they fire, the next chat deletes both (`delete_trigger`) and sets them again in itself.
+
 ## Start here (GNW Website 16)
 1. Act first on any note the owner pastes from the ads chat. The next ads chat is ADS 36 (ADS 35 handed off at 9:25 AM; ADS 36 was not in the owner's recent chats at 1:20 PM).
 2. Set the two scheduled checks above.
