@@ -20,16 +20,16 @@ Cleanup in the same visit: yes. The board: the company deals with it when the cu
 5. Netting: competitors describe UV-stabilised polyethylene or nylon netting with stainless hardware; low-visibility is the selling point; none states a mesh size or colour. The page says black, "a mesh too small for a pigeon and open enough to see straight through", fixed with anchors and a tensioned cable. NOT CHECKED: the owner's own netting (brand, mesh size, how he fixes it). Judgment call 6.
 6. Wetting droppings before lifting them is the standard safe-cleaning advice (worker-safety guidance, several sources); Health Canada's page does not give cleaning advice. The page presents it as "the sensible way", not as Health Canada's.
 
-## Judgment calls (strike any)
+## Judgment calls (owner's answers of Oct 28, 12:15 AM folded in: 3 changed, 4 changed, 6, 7 and 9 kept)
 1. **URL /wildlife/balcony-pigeons** rather than /pigeons-on-balcony: "balcony" and "pigeon" are in nearly every keyword in the ads chat's list (netting, control, nest removal); "pigeons on balcony" reported no searches.
 2. **Title** "Pigeons on Your Balcony: Removal, Cleanup & Netting in Toronto" carries all three ad groups' words. **H1** "Balcony Pigeon Removal and Netting in Toronto" is short enough for the first phone screen (four lines at 375 px).
-3. **"The nest comes out, dead birds and chicks with it"** in the subhead, on the first screen: the owner's brief put dead birds and chicks in the package. It is blunt for a hero line; strike it to "The nest comes out, the droppings are cleaned and disinfected..." if it reads too hard.
-4. **Live eggs or chicks**: the page says "any live eggs or chicks are dealt with humanely and we explain how before anything is done". The owner did not say what happens to live chicks on a balcony, so the page promises only an explanation. Tell me the practice and it can say it.
+3. **Hero line**: the owner struck "and chicks" (Oct 28, 12:15 AM: "a bit too hard"); it now reads "The nest comes out, dead birds with it". The FAQ "Do you remove dead pigeons and chicks?" keeps the word, lower on the page.
+4. **Live eggs or chicks**: the owner relocates them (Oct 28, 12:15 AM, after his own research on what is required). The page now says "any live eggs or chicks go with us and are relocated rather than left on the balcony". Note: the Oct 12 birds rule in CLAUDE.md says "no relocation promises"; the owner's statement for pigeons on balconies overrides it for this page, and the rule gets that exception when the page goes live.
 5. **Spikes and wire** are named ("stainless-steel spikes or a tensioned wire along the edge") for railings, ledges, lintels and narrow terraces. The owner confirmed spikes and wire as options; "stainless-steel" is the usual product and can be cut to "spikes".
 6. **Netting described** as black, mesh too small for a pigeon, see-through, fixed to the slab and walls with small anchors and a tensioned cable, clear of the door. If the owner fixes it differently, this sentence changes.
 7. **The board paragraph** promises: a description of the netting, its colour and how it attaches, proof of the $5 million liability insurance, and a call to the management office when the customer prefers. This is the "high level" the owner asked for; it is a service promise, so the office must be ready to do it.
 8. **The cleanup never waits for the board**: "the nest and the cleanup don't wait for it: they're done on the first visit, and the netting goes up as soon as the building has said yes." Said in the board section and the first FAQ.
-9. **Tenants**: one paragraph says a tenant can call about the nest and cleanup, and the netting is agreed with the unit's owner or the property manager. The owner did not raise tenants; strike it if he does not take tenant calls.
+9. **Tenants**: kept. The owner takes tenant calls (Oct 28, 12:15 AM: "I'll take any type of calls"); the paragraph says a tenant can call about the nest and cleanup, and the netting is agreed with the unit's owner or the property manager.
 10. **Why a balcony gets chosen** ("a unit that is empty or rented out, the owners travel"): observation, no source; written so it blames nobody.
 11. **Droppings "eat into paint, sealed concrete and metal"**: pigeon droppings are acidic and corrode finishes; widely stated by cleaning and pest sources, not checked to a public-health page.
 12. **"Health Canada" named twice** on the page (the dust and the netting). Naming the source makes the health paragraph calm rather than scary; cut the second mention if it reads like leaning on them.
@@ -53,7 +53,7 @@ Cleanup in the same visit: yes. The board: the company deals with it when the cu
 ## The full text, as rendered
 ## H1: Balcony Pigeon Removal and Netting in Toronto
 
-Pigeons nesting on a condo or apartment balcony in Toronto. The nest comes out, dead birds and chicks with it, the droppings are cleaned and disinfected, and netting goes up so they don't come back, usually all in one visit.
+Pigeons nesting on a condo or apartment balcony in Toronto. The nest comes out, dead birds with it, the droppings are cleaned and disinfected, and netting goes up so they don't come back, usually all in one visit.
 
 A real person answers 24/7.
 
@@ -91,7 +91,7 @@ The usual reasons a balcony gets chosen are ordinary ones: it belongs to a unit 
 
 A pigeon nest starts as a loose ring of twigs, straw and whatever is lying about, and a pair reuses it for brood after brood. Pigeons don't clean a nest, so the droppings of each set of young build up under the next, and after a year the nest is a hard, cemented mound rather than a ring of twigs. Unhatched eggs and chicks that didn't survive stay in it too; that is simply how a pigeon nest ages, and we take all of it away, dead birds and chicks included.
 
-Pigeons are not a protected bird in Ontario, so there is no waiting for the young to fly before the nest can go. We still look before we touch anything. The adults are moved on without harm, any live eggs or chicks are dealt with humanely and we explain how before anything is done, and the whole nest, with everything under it, is bagged and carried out of the building. If the bird on your balcony turns out to be something else, a mourning dove or a robin, say, that nest is protected while it is in use, and we'll tell you what can be done and when.
+Pigeons are not a protected bird in Ontario, so there is no waiting for the young to fly before the nest can go. We still look before we touch anything. The adults are moved on without harm, any live eggs or chicks go with us and are relocated rather than left on the balcony, and the whole nest, with everything under it, is bagged and carried out of the building. If the bird on your balcony turns out to be something else, a mourning dove or a robin, say, that nest is protected while it is in use, and we'll tell you what can be done and when.
 
 ## Cleaning and disinfecting the droppings
 

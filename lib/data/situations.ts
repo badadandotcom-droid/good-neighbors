@@ -587,7 +587,7 @@ export const SITUATIONS: SituationContent[] = [
     // depending on the balcony. No lifetime guarantee anywhere on the page.
     slug: "balcony-pigeons",
     subhead:
-      "Pigeons nesting on a condo or apartment balcony in Toronto. The nest comes out, dead birds and chicks with it, the droppings are cleaned and disinfected, and netting goes up so they don't come back, usually all in one visit.",
+      "Pigeons nesting on a condo or apartment balcony in Toronto. The nest comes out, dead birds with it, the droppings are cleaned and disinfected, and netting goes up so they don't come back, usually all in one visit.",
     trustRow: "no-guarantee",
     signs: {
       heading: "Signs that pigeons have moved onto your balcony",
@@ -607,7 +607,7 @@ export const SITUATIONS: SituationContent[] = [
         heading: "The nest, the eggs and the young",
         paragraphs: [
           "A pigeon nest starts as a loose ring of twigs, straw and whatever is lying about, and a pair reuses it for brood after brood. Pigeons don't clean a nest, so the droppings of each set of young build up under the next, and after a year the nest is a hard, cemented mound rather than a ring of twigs. Unhatched eggs and chicks that didn't survive stay in it too; that is simply how a pigeon nest ages, and we take all of it away, dead birds and chicks included.",
-          "Pigeons are not a protected bird in Ontario, so there is no waiting for the young to fly before the nest can go. We still look before we touch anything. The adults are moved on without harm, any live eggs or chicks are dealt with humanely and we explain how before anything is done, and the whole nest, with everything under it, is bagged and carried out of the building. If the bird on your balcony turns out to be something else, a mourning dove or a robin, say, that nest is protected while it is in use, and we'll tell you what can be done and when.",
+          "Pigeons are not a protected bird in Ontario, so there is no waiting for the young to fly before the nest can go. We still look before we touch anything. The adults are moved on without harm, any live eggs or chicks go with us and are relocated rather than left on the balcony, and the whole nest, with everything under it, is bagged and carried out of the building. If the bird on your balcony turns out to be something else, a mourning dove or a robin, say, that nest is protected while it is in use, and we'll tell you what can be done and when.",
         ],
       },
       {
