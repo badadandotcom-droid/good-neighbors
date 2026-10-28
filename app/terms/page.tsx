@@ -42,9 +42,11 @@ export default function TermsPage() {
             <h2 className="font-display text-xl text-charcoal">Same-day service</h2>
             <p className="mt-2">
               Same-day service is offered at any hour, day or night, across our service area. A night visit is an
-              emergency call and is priced as one; the price is explained before anyone sets out. If something
-              outside our control, such as severe weather or a road closure, keeps us from reaching you the same
-              day, we tell you right away and agree on the earliest time.
+              emergency call and is priced as one; the price is explained before anyone sets out. Once in a while,
+              something outside our control can keep us from reaching you the same day: severe weather, a road
+              closure, a technician falling ill, several emergency calls coming in at the same moment, or a job
+              that cannot be done safely until daylight, such as roof work in ice or high wind. If that happens,
+              we tell you right away, explain why, and agree on the earliest time we can be there.
             </p>
           </div>
           <div>
