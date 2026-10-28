@@ -5,6 +5,28 @@ Chat name: GNW Website 15
 Previous chat: GNW Website 14 (before it, GNW Website 13). Renamed from docs/handoffs/gnw-website-14.md and cut down to what is current (it had grown to 105 KB, about 40,000 tokens to read at every chat start). The full record of GNW Website 7 to 13 is in git: `git show 801d5a5:docs/handoffs/gnw-website-14.md`; every page's decisions are also in its review file in docs/reviews/.
 Scheduled checks: none yet. GNW Website 15 sets two in its own chat once the owner approves the November page (job A): Nov 1, early morning Toronto (go live and the live note) and Dec 1 (take the page down). List them here when set.
 
+## After the handoff (from GNW Website 14, Oct 28, 12:41 PM; read this first)
+- After the owner had started GNW Website 15, GNW Website 14 drafted a reply note to ADS 35 (12:32 PM). The owner has NOT pasted it to the ads chat. GNW Website 15 owns it now: get the owner's answers to calls 1 to 3 in docs/reviews/2026-10-28-november-special-review.md, change the note where an answer differs from the defaults it assumes (regular price off; "every animal"; the guarantee line stays), head it "from GNW Website 15" with the time it is given, and give it to the owner in one code box. If the owner's answers mean the page changes, rebuild and run the checks first.
+- Nothing else changed after the handoff: the November page and its review are as described below. GNW Website 14 is closed.
+- The draft, word for word:
+
+```
+For the ads chat (reply to ADS 35's note of Wed Oct 28, 9:25 AM), from GNW Website 14, Wed Oct 28, 12:32 PM
+
+A. /november-special is rebuilt to your note: the price and what it covers, nothing else. Built and waiting for Duane's approval; not live. It goes live Nov 1, and the live note follows then.
+- Title and H1: November Special: $699 + HST
+- Under it: "Covers removing every animal that got into your home through one entry hole, and sealing that hole." Changed from "one animal": Duane's price covers every animal that came in through that hole, babies included.
+- Then the same Call button (416-900-WILD), "A real person answers 24/7.", the Google rating line, Get Help Now (photos and text) and trust row as the other landing pages. No regular price, no extra entry-point pricing, no FAQs, no "starting at" or "from".
+- Noindex, out of the sitemap, off the menus and the /wildlife index: reached from the ad only. Google Ads does not need it indexed.
+- Two things in the ad text from 1:10 AM need to match the page:
+  1. "Normally $850" is not on the page. Drop the headline "Normally $850, Now $699 + HST" and "normally $850" in description 1 too. Canada's Competition Act allows a "normally $X" claim only if most sales were at $X, or $X was the real price for most of the months around the ad. $850 only became the regular price Oct 16, and October was $599 all month.
+  2. The page keeps the one standard trust-row line "Lifetime guarantee on every entry point we seal." until Duane decides. If he takes it off, drop the headline "Lifetime Re-Entry Guarantee" and description 2 as well.
+
+B. Received. The three pages go to the next website chat, GNW Website 15, with your note word for word. Each page gets its own live note (URL, title, H1, trust row, banned words).
+
+Needed back: the in-house ad group names for the November page before Nov 1, for the landing-page list.
+```
+
 FIRST: say the model. The owner's standing call is Fable for website writing; Fable ran out on Oct 28 until Sunday, so Opus 5.5 at Max effort is the fallback (owner, Oct 28, 9:23 AM). Explain the plan in a line or two and ask "Ready to start?". Follow the first rule in CLAUDE.md, "Best result first".
 
 ## Start here (GNW Website 15)
@@ -49,4 +71,4 @@ When each is live, send: URL, title, H1, and a line confirming the trust row and
 - Built /november-special for ADS 35's November test ad: first a 1,547-word page (2:33 AM, Fable), cut by the owner (2:57 AM to 9:22 AM), then rebuilt to ADS 35's 9:25 AM note as a 94-word page (Opus): title and H1 "November Special: $699 + HST", the line "Covers removing every animal that got into your home through one entry hole, and sealing that hole.", the standard landing-page hero and trust row, the closing band; noindex, off the menus, the /wildlife index and the sitemap. Review with the three open calls: docs/reviews/2026-10-28-november-special-review.md. Checks passed (crawl 38 pages, Problems: none; compare: only the new page; first screen 33 of 33).
 - Check scripts: crawl.mjs gained `EXTRA_PATHS` (pages crawled outside the sitemap) and `ALLOWED_FIGURES` (a price allowed on /november-special only: $699 and $850; GNW Website 13's guess that "$699" would pass the old dollar-figure ban was wrong); firstscreen.mjs lists the page (33); README updated.
 - Fact checked for call 1: the Competition Act's ordinary-selling-price tests (Competition Bureau, "Ordinary selling price"; BLG, May 2025).
-- Relay: Oct 28, 12:32 PM, reply to ADS 35's 9:25 AM note, given to the owner: the page rebuilt to their note, waiting for the owner's approval, live Nov 1; "every animal" instead of "one animal" (the price covers every animal through the one hole); the ad should drop "Normally $850" (Competition Act) and, if the owner takes the guarantee line off the page, its guarantee headline and description 2; part B goes to GNW Website 15, each page with its own live note. Needed back: the in-house ad group names before Nov 1. If the owner's answers change calls 1 to 3, send a corrected note. The live note follows on Nov 1.
+- Relay: a reply note to ADS 35 drafted Oct 28, 12:32 PM, after GNW Website 15 had started, and NOT sent (the owner had not pasted it); GNW Website 15 owns it (see "After the handoff" at the top). The live note follows on Nov 1. ADS 35 still owes the in-house ad group names before Nov 1.
