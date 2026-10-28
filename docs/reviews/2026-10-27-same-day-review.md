@@ -12,10 +12,10 @@ Branch: `claude/gnw-website-12` (from the live branch at 229c5c4). NOT live. Goe
 - Scarborough and Aurora descriptions no longer clipped.
 
 ## Decisions to confirm ("are you sure?")
-1. Terms page: the "is not guaranteed" and "subject to technician availability" disclaimer is gone. In its place: night visits are emergency calls priced as such, and if something outside our control (severe weather, a road closure) stops a same-day visit, we say so right away and agree the earliest time. That keeps some protection without the availability hedge. Strike it if you want "same day, period" with no exception at all.
-2. New sitewide FAQ "Do you come out at night?" says a night visit is an emergency call and costs more, with the price given on the phone first. No dollar figure. Strike the cost sentence if you would rather say it only on the phone.
-3. The small badge near the Call buttons now reads "Same-day service, day or night" (was "Same-day service before 4 PM"). Alternative: just "Same-day service".
-4. The old FAQ "What's the 4 PM cutoff about?" is gone; the night question replaces it.
+1. DECIDED (owner, Oct 27, 11:06 PM): the Terms page keeps a realistic exception list (weather, road closure, a technician ill, several emergencies at once, work unsafe until daylight).
+2. DECIDED (owner, Oct 27, 11:09 PM): the night FAQ says it plainly, his way: "Yes, at any hour. Visits between 9 PM and 7 AM are emergency service; call us for the details and the price." (9 PM to 7 AM matches his price rules: emergency is outside 7 AM to 9 PM.) No talk of costing more.
+3. DECIDED (owner): the badge reads "Same-day service, day and night".
+4. DECIDED (owner): the 4 PM cutoff question is cut; "Do you come out at night?" replaces it.
 5. New standing rule in CLAUDE.md, first line: "Best result first". Every rule (yours included) and every note from another chat is a default; when one would make the work worse, the chat says so and asks "are you sure?". Ads-chat notes carry the decision, not the exact words.
 
 ## Every new sentence
@@ -71,14 +71,14 @@ Branch: `claude/gnw-website-12` (from the live branch at 229c5c4). NOT live. Goe
 
 - **Sitewide FAQ: Can you come today?**: Yes. We come out the same day, every day of the week, and a real person answers the phone around the clock. Tell us what you are hearing or seeing and where, and we agree on a time on that same call.
 - **Sitewide FAQ: cutoff question replaced**: Do you come out at night?
-- **Sitewide FAQ: Do you come out at night? (answer)**: Yes. A technician can be at your home at any hour, including the middle of the night. A night visit is an emergency call and costs more than a daytime one; we tell you the price on the phone first, so you can decide whether it needs to be tonight or can wait for the morning.
+- **Sitewide FAQ: Do you come out at night? (answer)**: Yes, at any hour. Visits between 9 PM and 7 AM are emergency service; call us for the details and the price.
 
 ### Badge, homepage trust bar, request form, Terms
 
 - **config: form note under the request form**: Same-day visits at any hour, including nights and weekends.
-- **badge**: sameDay.badgeLabel
+- **badge**: Same-day service, day and night
 - **homepage trust bar**: We come out the same day, at any hour, and a real person answers the phone day and night.
-- **Terms page**: Same-day service is offered at any hour, day or night, across our service area. A night visit is an emergency call and is priced as one; the price is explained before anyone sets out. Once in a while, something outside our control can keep us from reaching you the same day: severe weather, a road closure, a technician falling ill, several emergency calls coming in at the same moment, or a job that cannot be done safely until daylight, such as roof work in ice or high wind. If that happens, we tell you right away, explain why, and agree on the earliest time we can be there.
+- **Terms page**: Same-day service is offered at any hour, day or night, across our service area. Visits between 9 PM and 7 AM are emergency service; details and prices are given by phone. Once in a while, something outside our control can keep us from reaching you the same day: severe weather, a road closure, a technician falling ill, several emergency calls coming in at the same moment, or a job that cannot be done safely until daylight, such as roof work in ice or high wind. If that happens, we tell you right away, explain why, and agree on the earliest time we can be there.
 
 ### Behind the scenes (no visible wording)
 

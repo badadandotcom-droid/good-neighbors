@@ -94,8 +94,8 @@ export const CONTACT = {
  * ----------------------------------------------------------------------------
  * SAME-DAY SERVICE — the switch and the shared short labels.
  * Owner, Oct 27 2026: same day, at any hour, day or night; technicians go out
- * overnight (a night visit is an emergency call, priced higher and explained
- * on the phone first; no prices on the site). No 4 PM cutoff and no
+ * overnight (visits between 9 PM and 7 AM are emergency service, details
+ * and prices by phone; no prices on the site). No 4 PM cutoff and no
  * "subject to availability" anywhere. Page copy words the promise its own way
  * on each page (cities, hubs, animal pages, FAQ), so those sentences live in
  * the data files; this config keeps the badge, the positioning line, the
@@ -110,7 +110,7 @@ export const CONTACT = {
  */
 export const DEFAULT_SAME_DAY_SERVICE: SameDayServiceConfig = {
   enabled: true,
-  badgeLabel: "Same-day service, day or night",
+  badgeLabel: "Same-day service, day and night",
   headlinePhrase: "Same-Day Service",
   fallbackHeadlinePhrase: "Fast Response",
   qualificationMessage:
@@ -125,8 +125,8 @@ export const DEFAULT_SAME_DAY_SERVICE: SameDayServiceConfig = {
  * ----------------------------------------------------------------------------
  * "Calls answered 24/7" means a real person answers around the clock. Since
  * Oct 27 2026 (owner) technicians also go out at any hour, day or night; a
- * night visit is an emergency call, priced higher and explained before anyone
- * sets out. Form replies are not instant. The same-day promise itself lives in
+ * visits between 9 PM and 7 AM are emergency service, details and prices by
+ * phone. Form replies are not instant. The same-day promise itself lives in
  * DEFAULT_SAME_DAY_SERVICE and has its own toggle. `enabled: true` reflects the client's
  * explicit confirmation that phone coverage is actually staffed around the
  * clock — do not flip this back off without an equally explicit instruction.

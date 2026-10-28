@@ -21,9 +21,9 @@ single edit propagates everywhere.
 ## Same-day service — `lib/config/site.ts` → `DEFAULT_SAME_DAY_SERVICE`
 
 Real (owner, Oct 27 2026): same day, at any hour, day or night, with no
-4 PM cutoff and no availability hedge. Technicians go out overnight; a night
-visit is an emergency call, priced higher and explained first (no prices on
-the site). The badge, positioning line and form note come from this config;
+4 PM cutoff and no availability hedge. Technicians go out overnight; visits
+between 9 PM and 7 AM are emergency service, details and prices by phone (no
+prices on the site). The badge, positioning line and form note come from this config;
 page copy words the promise its own way on each page. Turning
 `enabled: false` (globally or per-market) is untested against real traffic
 and should be smoke-tested before relying on it seasonally.
@@ -36,7 +36,7 @@ that phone coverage is actually staffed around the clock. Live copy:
 homepage hero, and "Calls answered 24 hours a day, 7 days a week."
 replacing the Contact page hours note. This means human phone answering
 around the clock, and since Oct 27 2026 technicians also go out at any hour
-(night visits are emergency calls). Form replies are not instant. Same-day *visit* availability stays a separate,
+(9 PM to 7 AM is emergency service). Form replies are not instant. Same-day *visit* availability stays a separate,
 independently-toggled promise (`DEFAULT_SAME_DAY_SERVICE`). Do not flip
 `enabled` back to `false` without an equally explicit instruction.
 

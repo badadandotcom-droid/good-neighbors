@@ -17,7 +17,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     question: "Do you come out at night?",
-    answer: "Yes. A technician can be at your home at any hour, including the middle of the night. A night visit is an emergency call and costs more than a daytime one; we tell you the price on the phone first, so you can decide whether it needs to be tonight or can wait for the morning.",
+    answer: "Yes, at any hour. Visits between 9 PM and 7 AM are emergency service; call us for the details and the price.",
     featured: true,
     sameDaySpecific: true,
   },
