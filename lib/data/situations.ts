@@ -156,7 +156,7 @@ export const SITUATIONS: SituationContent[] = [
         `We seal the entry points. ${GUARANTEE.short}`,
         "Cleanup, insulation and roof repair, matched to your home's existing materials and colours.",
       ],
-      outro: "Noises in the attic tend to start at night. Call when you hear them: a real person answers 24 hours a day, and a technician comes out the same day.",
+      outro: "Call when you hear the noise, whatever the hour: a real person answers 24 hours a day, and a technician comes out the same day.",
     },
     faqHeading: "Questions about noises in the attic",
     faqs: [
@@ -381,7 +381,7 @@ export const SITUATIONS: SituationContent[] = [
         "The opening the raccoon used is sealed.",
         "Any damage at the opening is repaired, matched to your home's existing materials and colours.",
       ],
-      outro: "Cleanup visits happen the same day, at whatever hour suits you, and the phone is answered around the clock.",
+      outro: "We can do the cleanup the same day you call, at whatever hour suits you, and the phone is answered around the clock.",
     },
     faqHeading: "Questions about raccoon feces and cleanup",
     faqs: [

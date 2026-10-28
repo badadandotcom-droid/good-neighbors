@@ -304,7 +304,7 @@ export const SPECIES_PAGES: SituationContent[] = [
         "We screen the vent, cap the chimney or seal the gap the birds were using.",
         "We repair the damage: vent covers and screens, chimney caps, soffits, fascia and eavestroughs, plus soiled attic insulation, matched to your home's existing materials and colours.",
       ],
-      outro: "Same-day visits for bird problems too, day or night, with the phone answered around the clock.",
+      outro: "A technician can be at the balcony, roof or vent the same day, at any hour, and the phone is answered around the clock.",
     },
     faqHeading: "Questions about birds",
     faqs: [
@@ -413,7 +413,7 @@ export const SPECIES_PAGES: SituationContent[] = [
         "A one-way door goes over the entry, so the skunk can leave at dusk but not come back.",
         "Once the space is empty, wire mesh is fixed along the base and dug into the ground.",
       ],
-      outro: "Skunks come and go at night, and so can we: same-day visits at any hour, with calls answered 24 hours a day, 7 days a week.",
+      outro: "Call as soon as you spot it: a technician comes out the same day, at any hour, and someone answers the phone 24 hours a day, 7 days a week.",
     },
     faqHeading: "Questions about skunks under decks",
     faqs: [

@@ -105,11 +105,6 @@ export const CITIES: City[] = [
         answer:
           "Yes. We cover all of Brampton, from the Castlemore estates, Springdale and Sandringham-Wellington in the northeast to Mount Pleasant and Fletcher's Meadow in the west, plus Snelgrove, Heart Lake, Professor's Lake, Bramalea, Peel Village and downtown. Just outside the city, Caledon and Bolton are covered too.",
       },
-      {
-        question: "How quickly can you get to Brampton?",
-        answer:
-          "Same day, at whatever hour you call. A real person picks up 24 hours a day, and we settle on a time together before a technician heads to Brampton.",
-      },
     ],
     nearby: ["mississauga", "caledon", "vaughan", "etobicoke"],
   },
@@ -160,11 +155,6 @@ export const CITIES: City[] = [
         answer:
           "Yes. We cover all of Mississauga: the lakefront neighbourhoods of Lorne Park, Mineola, Port Credit, Clarkson and Lakeview; Cooksville, Applewood and Sheridan in the middle of the city; and Erin Mills, Streetsville, Meadowvale and Churchill Meadows to the north and west.",
       },
-      {
-        question: "How quickly can you get to Mississauga?",
-        answer:
-          "We come out the day you call, morning or midnight. The phone is answered around the clock, and you hear the arrival time from us before anyone leaves for Mississauga.",
-      },
     ],
     nearby: ["brampton", "etobicoke", "caledon"],
   },
@@ -174,7 +164,7 @@ export const CITIES: City[] = [
     region: "toronto",
     featured: true,
     metaDescription:
-      "Humane raccoon & squirrel removal across Scarborough. Same day, 24/7. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+      "Humane raccoon & squirrel removal across Scarborough. Same-day visits, day and night. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
     cardLine: "The Bluffs and Guildwood to Agincourt and Malvern.",
     intro:
       "Scarborough's postwar bungalows, the wooded lots of Guildwood and the ravines of the Rouge and Highland Creek make it one of the busiest parts of Toronto for raccoons and squirrels. From the Bluffs to Malvern, we get the animal out humanely, seal the entry point and repair what it damaged.",
@@ -214,11 +204,6 @@ export const CITIES: City[] = [
         question: "Do you cover Guildwood and the Bluffs?",
         answer:
           "Yes. We cover all of Scarborough: Guildwood, Cliffside, Birch Cliff and the Scarborough Bluffs along the lake; Highland Creek, West Hill and the Rouge in the east; Scarborough Village, Bendale and Wexford in the middle; and Agincourt and Malvern to the north. North York, East York and the rest of Toronto are covered as well.",
-      },
-      {
-        question: "How quickly can you get to Scarborough?",
-        answer:
-          "The day you reach us. Call at noon or at two in the morning and someone answers; we agree on a time with you, and a technician comes out to Scarborough that day or that night.",
       },
     ],
     nearby: ["north-york", "pickering", "markham"],
@@ -267,11 +252,6 @@ export const CITIES: City[] = [
         answer:
           "Yes. We cover all of Markham: Unionville, Cachet and Angus Glen; Thornhill; Berczy, Wismer, Cornell and Box Grove; and Markham Village and Milliken. Stouffville and Richmond Hill next door are covered as well.",
       },
-      {
-        question: "How quickly can you get to Markham?",
-        answer:
-          "A technician can be in Markham the same day, whatever the hour. Calls go to a real person day and night, and we confirm when we are coming before we leave.",
-      },
     ],
     nearby: ["richmond-hill", "scarborough", "stouffville", "vaughan"],
   },
@@ -318,11 +298,6 @@ export const CITIES: City[] = [
         answer:
           "Yes. We cover all of Vaughan: Kleinburg, Woodbridge and Islington Woods; Thornhill; Maple, Vellore Village, Patterson and Sonoma Heights; and Concord. King City to the north is covered too.",
       },
-      {
-        question: "How quickly can you get to Vaughan?",
-        answer:
-          "Same day, around the clock. If you hear something at night, call: we answer, talk it through with you, and send a technician to Vaughan that night if it can't wait for morning.",
-      },
     ],
     nearby: ["richmond-hill", "markham", "brampton", "etobicoke"],
   },
@@ -360,11 +335,6 @@ export const CITIES: City[] = [
         answer:
           "Yes. We cover all of Richmond Hill: Bayview Hill, Mill Pond and Richvale; Oak Ridges, Jefferson and Lake Wilcox on the moraine; and Doncrest and Westbrook. Aurora and King City are covered as well.",
       },
-      {
-        question: "How quickly can you get to Richmond Hill?",
-        answer:
-          "On the day you call, at any hour. We answer the phone ourselves, day and night, and the visit time is set with you before anyone heads out to Richmond Hill.",
-      },
     ],
     nearby: ["markham", "vaughan", "aurora", "stouffville"],
   },
@@ -400,11 +370,6 @@ export const CITIES: City[] = [
         question: "Do you cover Stonehaven and Glenway?",
         answer:
           "Yes. We cover all of Newmarket: Stonehaven, Summerhill and Woodland Hill; Glenway and Armitage; Huron Heights and Bristol-London; and the Main Street and Fairy Lake area. Aurora, just south, is covered too.",
-      },
-      {
-        question: "How quickly can you get to Newmarket?",
-        answer:
-          "Newmarket gets same-day visits at any hour, the same as everywhere else we work. Every call is answered, and you know when the technician will arrive before they set off.",
       },
     ],
     nearby: ["aurora", "richmond-hill", "stouffville"],
@@ -453,11 +418,6 @@ export const CITIES: City[] = [
         answer:
           "Yes. We cover all of North York: York Mills, the Bridle Path, Hoggs Hollow and Armour Heights; Bayview Village and Don Mills; Willowdale, Newtonbrook, Bathurst Manor and Downsview. Scarborough, East York and the rest of Toronto are covered as well.",
       },
-      {
-        question: "How quickly can you get to North York?",
-        answer:
-          "Same day, any time of day or night. Calls are picked up by a person, not a machine, and we agree the timing with you on that first call.",
-      },
     ],
     nearby: ["scarborough", "etobicoke", "vaughan", "markham"],
   },
@@ -493,11 +453,6 @@ export const CITIES: City[] = [
         question: "Do you cover Rosebank and Bay Ridges?",
         answer:
           "Yes. We cover all of Pickering: Rosebank, Rouge Park and Whitevale; Amberlea, Dunbarton and Liverpool; Bay Ridges on the waterfront; and Brock Ridge. Ajax and Scarborough on either side are covered as well.",
-      },
-      {
-        question: "How quickly can you get to Pickering?",
-        answer:
-          "We can be in Pickering the day you call, late at night included. A real person answers 24/7 and tells you when to expect the technician before anyone sets out.",
       },
     ],
     nearby: ["ajax", "scarborough", "whitby", "markham"],
@@ -535,11 +490,6 @@ export const CITIES: City[] = [
         answer:
           "Yes. We cover all of Ajax: Pickering Village and central Ajax; Lakeside on the waterfront; Riverside, Nottingham, Salem, Applecroft and Hermitage. Pickering and Whitby on either side are covered as well.",
       },
-      {
-        question: "How quickly can you get to Ajax?",
-        answer:
-          "The same day, at any hour. When you call, a person answers, asks what you are seeing and hearing, and gives you a time for the visit to your Ajax home.",
-      },
     ],
     nearby: ["pickering", "whitby", "oshawa", "scarborough"],
   },
@@ -576,11 +526,6 @@ export const CITIES: City[] = [
         answer:
           "Yes. We cover all of Oshawa: Windfields, Kedron, Taunton, Northglen and Samac in the north; McLaughlin, Centennial and Pinecrest in the middle; and Eastdale and Lakeview to the south. Whitby next door and Bowmanville to the east are covered as well.",
       },
-      {
-        question: "How quickly can you get to Oshawa?",
-        answer:
-          "The same day, day or night. Oshawa calls are answered around the clock, and once we know what is going on we tell you when the technician will be at your door.",
-      },
     ],
     nearby: ["whitby", "ajax", "pickering"],
   },
@@ -616,11 +561,6 @@ export const CITIES: City[] = [
         question: "Do you cover Brooklin?",
         answer:
           "Yes. We cover all of Whitby: Brooklin, Taunton North and Williamsburg in the north; Rolling Acres, Blue Grass Meadows and Pringle Creek in the middle; and Lynde Creek, downtown and Port Whitby to the south. Ajax and Oshawa on either side are covered too.",
-      },
-      {
-        question: "How quickly can you get to Whitby?",
-        answer:
-          "A technician comes out the day you call, whether that is first thing in the morning or after midnight. Someone always answers, and the time is confirmed with you before the visit.",
       },
     ],
     nearby: ["oshawa", "ajax", "pickering"],
@@ -670,11 +610,6 @@ export const CITIES: City[] = [
         answer:
           "Yes. We cover all of Etobicoke: the Kingsway, Humber Valley Village, Princess Gardens and Sunnylea; Islington, Markland Wood and Eringate; Mimico, Long Branch and Alderwood on the lake; and Rexdale. Mississauga and the rest of Toronto are covered as well.",
       },
-      {
-        question: "How quickly can you get to Etobicoke?",
-        answer:
-          "Same day, every day, around the clock. Call whenever you notice it; a person picks up, and we set the visit time for your Etobicoke home together.",
-      },
     ],
     nearby: ["mississauga", "north-york", "brampton", "vaughan"],
   },
@@ -683,7 +618,7 @@ export const CITIES: City[] = [
     name: "Aurora",
     region: "york-region",
     metaDescription:
-      "Humane raccoon & squirrel removal in Aurora, out the same day. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453) any time.",
+      "Humane raccoon & squirrel removal in Aurora, the same day, even late at night. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
     cardLine: "Aurora Estates and Hills of St Andrew to Aurora Village and Bayview Wellington.",
     intro:
       "Aurora sits on the Oak Ridges Moraine, with the big properties of Aurora Estates and Hills of St Andrew, the century homes of Aurora Village along Yonge Street, and newer streets in Bayview Northeast and Bayview Wellington. We remove the animal humanely, seal the entry point and repair the damage.",
@@ -710,11 +645,6 @@ export const CITIES: City[] = [
         question: "Do you cover Aurora Estates and Hills of St Andrew?",
         answer:
           "Yes. We cover all of Aurora: Aurora Estates, Hills of St Andrew and Aurora Highlands; Aurora Village along Yonge Street; and Bayview Northeast and Bayview Wellington. Newmarket, Richmond Hill and King City are covered too.",
-      },
-      {
-        question: "How quickly can you get to Aurora?",
-        answer:
-          "Any hour, the same day. Phone us at breakfast or in the middle of the night; someone answers, and the technician's arrival time in Aurora is agreed with you before they leave.",
       },
     ],
     nearby: ["newmarket", "richmond-hill", "stouffville"],
@@ -752,11 +682,6 @@ export const CITIES: City[] = [
         answer:
           "Yes. We cover all of Whitchurch-Stouffville: Ballantrae, Musselman's Lake, the town centre, Vandorf and Gormley, including the rural properties between them. Markham, Richmond Hill and Aurora next door are covered as well.",
       },
-      {
-        question: "How quickly can you get to Stouffville?",
-        answer:
-          "The same day, at any hour, rural lots included. A real person takes every call, and we tell you when the technician will reach Stouffville before anyone sets out.",
-      },
     ],
     nearby: ["markham", "aurora", "richmond-hill", "newmarket"],
   },
@@ -792,11 +717,6 @@ export const CITIES: City[] = [
         question: "Do you cover Bolton and the Escarpment villages?",
         answer:
           "Yes. We cover all of Caledon: Bolton, Caledon East, Caledon Village, Palgrave and Mono Mills; Belfountain, Inglewood, Cheltenham and Alton on the Escarpment; and the rural properties in between. Brampton and the rest of Peel are covered as well.",
-      },
-      {
-        question: "How quickly can you get to Caledon?",
-        answer:
-          "Same-day visits reach rural Caledon addresses too, at any hour of the day or night. Calls are answered 24 hours a day, and we agree a time with you before heading out.",
       },
     ],
     nearby: ["brampton", "vaughan", "mississauga"],

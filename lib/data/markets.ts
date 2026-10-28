@@ -110,10 +110,6 @@ export const MARKETS: Market[] = [
         answer:
           "Yes. Repairs are matched to your home's existing materials and colours, so the fix blends in with the rest of the house.",
       },
-      {
-        question: "How quickly can you get to a Toronto home?",
-        answer: "The same day, at any hour, in every part of the city. Calls are answered 24 hours a day, 7 days a week, and we confirm the timing with you when you call or send a request.",
-      },
     ],
   },
   {
@@ -191,7 +187,7 @@ export const MARKETS: Market[] = [
       {
         question: "Do you come out to rural properties in King Township and Stouffville?",
         answer:
-          "Yes. Farms, estates, woodlots and lake properties are all covered. A long driveway changes nothing: same-day visits at any hour reach the countryside just as they reach town.",
+          "Yes. Farms, estates, woodlots and lake properties are all covered. Rural homes get the same service as town: a technician the same day, at any hour.",
       },
       {
         question: "Our house is only a few years old. How did an animal get in?",
@@ -202,10 +198,6 @@ export const MARKETS: Market[] = [
         question: "We back onto a ravine or a woodlot. Is that why the animals keep coming?",
         answer:
           "Very likely. Raccoons, skunks and squirrels live in the valleys and woodlots, and the houses along the edge are the nearest roofs, decks and sheds. It doesn't change the visit, and there is nothing you need to do about the trees or the ravine: the work is on the opening the animal used and the damage it caused.",
-      },
-      {
-        question: "How quickly can you get to a York Region home?",
-        answer: "A technician can reach any York Region home the day you call, day or night. Tell us where you are, and we confirm the timing with you before anyone sets out.",
       },
     ],
   },
@@ -285,7 +277,7 @@ export const MARKETS: Market[] = [
       {
         question: "Do you cover the countryside in Uxbridge, Scugog and Brock Township?",
         answer:
-          "Yes, all of the countryside is covered, from farms and estates to the homes around Lake Scugog and along the Lake Simcoe shore. A call from a farm gets the same answer as a call from town: a technician that day, at whatever hour you need one.",
+          "Yes, all of the countryside is covered, from farms and estates to the homes around Lake Scugog and along the Lake Simcoe shore. A call from a farm is handled exactly like a call from town, the same day and at any hour.",
       },
       {
         question: "Do homes near the lake or a creek see more wildlife?",
@@ -296,10 +288,6 @@ export const MARKETS: Market[] = [
         question: "Do you work on century homes in Whitevale, Pickering Village and old Brooklin?",
         answer:
           "Yes, with the care an older house deserves. On a century home, an animal usually gets in through the original wood soffit or fascia, the seam where an addition meets the old roof, or a chimney that never had a cap, and the repair is made in materials and colours matched to what is already there.",
-      },
-      {
-        question: "How quickly can you get to a Durham Region home?",
-        answer: "Same day, around the clock, from Pickering to Brock Township. Calls from anywhere in the region are answered 24 hours a day, 7 days a week, and a visit time is agreed with you before anyone is on the road.",
       },
     ],
   },
@@ -370,7 +358,7 @@ export const MARKETS: Market[] = [
       {
         question: "Do you come out to rural Caledon?",
         answer:
-          "Yes. Farms, estates and the villages are all covered. Rural addresses get the same-day, any-hour service the towns get; distance doesn't push the visit to another day.",
+          "Yes. Farms, estates and the villages are all covered. Rural addresses are served the same day, at any hour, just like the towns.",
       },
       {
         question: "What's the most common wildlife problem in a Peel home?",
@@ -381,10 +369,6 @@ export const MARKETS: Market[] = [
         question: "Does it matter whether the house is new or old?",
         answer:
           "Only in where the animal gets in. Older homes have wood trim, big trees and uncapped chimneys; newer ones have plastic roof vents, vinyl soffit and a garage roof that makes an easy climb. The visit is the same on both: find every opening, get the animal out, seal and repair.",
-      },
-      {
-        question: "How quickly can you get to a Peel home?",
-        answer: "We come out the day you call, at any hour, anywhere in Peel. The phone is answered 24 hours a day, 7 days a week, and the timing is confirmed with you before anyone heads out.",
       },
     ],
   },
