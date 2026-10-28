@@ -569,6 +569,153 @@ export const SITUATIONS: SituationContent[] = [
       },
     ],
   },
+  {
+    // Balcony pigeons long-form (Oct 27 2026, GNW Website 13; the owner's
+    // brief via the ads chat). Facts checked: pigeons breed in any month, one
+    // to three eggs, about 18 days to hatch, the young in the nest four weeks
+    // or so, up to six broods a year, and an old nest holds the droppings of
+    // every brood plus unhatched eggs and dead nestlings (Cornell Lab);
+    // histoplasmosis grows in old droppings and is breathed in as dust when
+    // dry droppings are disturbed, with most infections mild or symptomless
+    // and the risk mainly to weakened immune systems, and netting across the
+    // balcony front is the barrier Health Canada names for balconies (Health
+    // Canada, pigeons); an Ontario condo balcony is an exclusive-use common
+    // element, so alterations need the board's approval (FirstService
+    // Residential's Ontario guide). The owner's answers of Oct 27: cleanup in
+    // the same visit; the company deals with the board when the owner wants
+    // it to; no size or height limit, priced per job; netting, spikes or wire
+    // depending on the balcony. No lifetime guarantee anywhere on the page.
+    slug: "balcony-pigeons",
+    subhead:
+      "Pigeons nesting on a condo or apartment balcony in Toronto. The nest comes out, dead birds and chicks with it, the droppings are cleaned and disinfected, and netting goes up so they don't come back, usually all in one visit.",
+    trustRow: "no-guarantee",
+    signs: {
+      heading: "Signs that pigeons have moved onto your balcony",
+      intro:
+        "A pigeon that lands once is passing through. A pair that is there every morning, in the same corner, has chosen your balcony, and the nest is usually already started by the time anyone looks behind the planter.",
+    },
+    sections: [
+      {
+        heading: "Why pigeons choose a balcony",
+        paragraphs: [
+          "A pigeon is a cliff bird by nature, and a balcony is the best cliff in the city: a flat floor, a ceiling against the rain, a wall on three sides and a view of every rooftop around it. Once a pair finds one that nobody uses much, with a planter or a stored chair to nest behind, they settle in.",
+          "They don't keep to a season. Pigeons breed in every month of the year in Toronto, two eggs at a time as a rule, hatching in about eighteen days, with the young in the nest for four weeks or so before the next clutch is laid in the same spot. A pair can raise five or six broods in a year, so a balcony left to them in spring is well and truly theirs by fall.",
+          "The usual reasons a balcony gets chosen are ordinary ones: it belongs to a unit that is empty or rented out, the owners travel, or it is the one balcony on the floor nobody sits on. None of that is a fault. It just means the pigeons were there longer before anyone noticed, and there is more to clean.",
+        ],
+      },
+      {
+        heading: "The nest, the eggs and the young",
+        paragraphs: [
+          "A pigeon nest starts as a loose ring of twigs, straw and whatever is lying about, and a pair reuses it for brood after brood. Pigeons don't clean a nest, so the droppings of each set of young build up under the next, and after a year the nest is a hard, cemented mound rather than a ring of twigs. Unhatched eggs and chicks that didn't survive stay in it too; that is simply how a pigeon nest ages, and we take all of it away, dead birds and chicks included.",
+          "Pigeons are not a protected bird in Ontario, so there is no waiting for the young to fly before the nest can go. We still look before we touch anything. The adults are moved on without harm, any live eggs or chicks are dealt with humanely and we explain how before anything is done, and the whole nest, with everything under it, is bagged and carried out of the building. If the bird on your balcony turns out to be something else, a mourning dove or a robin, say, that nest is protected while it is in use, and we'll tell you what can be done and when.",
+        ],
+      },
+      {
+        heading: "Cleaning and disinfecting the droppings",
+        paragraphs: [
+          "Pigeon droppings pile up fast under a nest and along the railing, and they are harder to shift than they look. Wet, they smear into the grooves of the floor and the weave of patio furniture; dry, they set like plaster and eat into paint, sealed concrete and metal. A hose spreads them without removing them, and a dry scrape sends the dust into the air.",
+          "That dust is the reason we clean the way we do. Health Canada notes that a fungus can grow in old pigeon droppings and be breathed in when dry droppings are disturbed; most people who breathe in a little feel nothing or have a mild, flu-like illness, and the real risk is to people whose immune systems are weakened. The sensible way to clean a balcony is to wet the droppings down first, lift them, bag them and disinfect the surface afterwards, which is what we do, in the same visit as the nest.",
+          "We clean the floor, the railing, the walls behind the nest and whatever was left out there, and disinfect the area once the droppings are gone. Planters, furniture and anything else that can be saved are cleaned; anything that can't is bagged with the rest, with your say-so.",
+        ],
+      },
+      {
+        heading: "Netting, spikes or wire: keeping them off",
+        paragraphs: [
+          "With the nest gone, the pigeons will try to come back, because the balcony is still the same good cliff. What keeps them off depends on the balcony. On most condo balconies the answer is netting across the open front, from the ceiling slab down to the railing or the floor, so there is simply nowhere to land; it's the method Health Canada itself names for balconies. The netting we fit is black, with a mesh too small for a pigeon and open enough to see straight through, and black disappears against the shade of a balcony, from the street and from your sofa, in a way that white or green netting never does.",
+          "It's fixed to the slab and the walls with small anchors and a tensioned cable, pulled taut so it doesn't flap or sag, and it stays clear of the door, the railing and the view. You can still open the door, water the plants and sit out there; what you can't do is lean out over the railing, and the pigeons can't get in.",
+          "Where netting isn't the right fit, on a railing, a ledge, a lintel or a narrow top-floor terrace, stainless-steel spikes or a tensioned wire along the edge stop the birds landing on the one spot they want. Sometimes it's a mix. We look at the balcony first and tell you which, and why, before anything is ordered.",
+        ],
+      },
+      {
+        heading: "Your condo board, and what it sees",
+        paragraphs: [
+          "In an Ontario condo the balcony is usually common property that your unit has the exclusive use of, so the board has a say in anything fixed to it, and most buildings ask that netting be approved before it goes up. Some buildings already have a standing rule for pigeon netting and know exactly what they'll accept. When a board does turn netting down, it is usually over how it looked from the street, which is why the colour matters.",
+          "We take care of that side for you. Before the visit we give you what a board or property manager normally asks for: a short description of the netting and how it attaches, its colour, and proof of our $5 million liability insurance. If you'd rather we spoke to the management office directly, we do that. If your building wants to approve the netting first, the nest and the cleanup don't wait for it: they're done on the first visit, and the netting goes up as soon as the building has said yes.",
+          "If you rent, the same applies with your landlord or the property manager in the board's place. A tenant can call us about the nest and the cleanup, and the netting is agreed with whoever owns the unit.",
+        ],
+      },
+    ],
+    visitSteps: [
+      { term: "On arrival", detail: "We look at the balcony, the nest and where the birds land, and check the nest for eggs and young." },
+      {
+        term: "During the visit",
+        detail: "The birds are moved on, the nest and everything in it is bagged, the balcony is cleaned and disinfected, and the netting, spikes or wire go up.",
+      },
+      { term: "Before we leave", detail: "We walk you through what we found, what came out and what is keeping the pigeons off." },
+    ],
+    process: {
+      heading: "How a balcony visit works",
+      intro:
+        "Everything is done from your balcony, through your unit, and in a single visit when the building allows it. Here is the order of things.",
+      steps: [
+        "A look at the balcony and the ones beside it, to see where the birds land, where they nest and how they get in.",
+        "The nest is checked for eggs and young, then the adults are moved on without harm.",
+        "The nest comes out whole, with the eggs, any chicks that didn't survive and the mound of droppings under it, and leaves through your unit in sealed bags.",
+        "The floor, railing, walls and furniture are cleaned, the droppings wetted and lifted rather than scraped dry, and the whole area disinfected.",
+        "Netting is fitted across the open front, or spikes or wire where netting isn't the right fit, taut and clear of the door and the view.",
+        "Any paperwork the board wants is supplied, before or after, and we speak to the management office if you'd rather we did.",
+      ],
+      outro:
+        "We're at balconies at any hour of the day; a visit between 9 PM and 7 AM is emergency service, so call for the details and the price, and the phone is answered whenever you ring.",
+    },
+    faqHeading: "Questions about pigeons on balconies",
+    faqs: [
+      {
+        question: "Is the cleanup done in the same visit as the nest?",
+        answer:
+          "Yes. The nest, the droppings and the disinfecting are one job on one visit, and in most buildings the netting goes up the same day. The only thing that can split it is a board that wants to approve the netting first; the cleanup still happens on day one.",
+      },
+      {
+        question: "Do you deal with the condo board, or do I?",
+        answer:
+          "Either. We give you what the board or property manager asks for, a description of the netting, its colour, how it's fixed and proof of our $5 million liability insurance, and if you'd rather not be the go-between, we contact the management office ourselves.",
+      },
+      {
+        question: "Will the netting be visible from inside or from the street?",
+        answer:
+          "Barely. It's black, which vanishes into the shadow of the balcony, and the mesh is open enough to look straight through. From the street a netted balcony looks like any other; from inside you notice it for a day or two and then stop seeing it.",
+      },
+      {
+        question: "Can I still use my balcony with netting on it?",
+        answer:
+          "Yes. It's fitted to the slab and the walls, not across the door, so you open the door, step out, sit and water the plants as before. What's gone is the landing strip along the railing.",
+      },
+      {
+        question: "My balcony is large, or on a high floor. Is that a problem?",
+        answer:
+          "No. There's no limit on size or height; a wraparound terrace on the fortieth floor is a balcony like any other to us, just a bigger one. Every job is priced on its own, once we've seen it.",
+      },
+      {
+        question: "Do you remove dead pigeons and chicks?",
+        answer:
+          "Yes, as part of the nest. An old nest nearly always holds unhatched eggs and chicks that didn't survive, and a dead adult on the balcony floor is picked up with the rest. Everything leaves in sealed bags.",
+      },
+      {
+        question: "Are pigeons protected? Can the nest be removed?",
+        answer:
+          "Pigeons are one of the few birds that aren't protected in Ontario, so a pigeon nest can be removed when you call, young or not. Most other birds are protected while the nest is in use; if the bird on your balcony is a mourning dove or a robin, that nest waits until the young have flown, and we'll tell you what to do in the meantime.",
+      },
+      {
+        question: "Will the pigeons come back?",
+        answer:
+          "Not onto a balcony they can't land on. The netting, spikes or wire take away the landing spot, which is what they were there for, and a pair that can't land moves on to the next building. A balcony is open to the sky rather than sealed like a vent, so the barrier is what does the work, and we fit it so it stays taut and in place.",
+      },
+      {
+        question: "How much does balcony pigeon removal cost?",
+        answer:
+          "It depends on the size of the nest and the cleanup, the size of the balcony and which barrier suits it. We price each job on its own and tell you the figure before any work starts.",
+      },
+      INSURANCE_FAQ,
+      {
+        question: "Can you come out today?",
+        answer: "Yes, today, at whatever hour you call. A real person picks up around the clock and settles a time with you before anyone heads out.",
+      },
+      {
+        question: "Do you come at night?",
+        answer: "We do. Between 9 PM and 7 AM a visit is emergency service, so call and we'll go through the details and the price with you.",
+      },
+    ],
+  },
 ];
 
 export function getSituationContent(slug: string): SituationContent | undefined {

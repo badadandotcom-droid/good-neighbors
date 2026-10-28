@@ -267,7 +267,7 @@ export const SPECIES_PAGES: SituationContent[] = [
       {
         heading: "Pigeons on a condo or apartment balcony",
         paragraphs: [
-          "A balcony is a ledge with a roof over it, and a pair of pigeons will nest behind a planter or in the corner by the wall and keep coming back. The usual job is removing the birds and the nest, with eggs and young checked for first. Screening the whole balcony so nothing can land there is a larger, separate job that we quote on its own. Depending on the building, your property manager or condo board may need to be involved before anything is fixed to the outside; we'll tell you if that applies.",
+          "A balcony is a ledge with a roof over it, and a pair of pigeons will nest behind a planter or in the corner by the wall and keep coming back. The usual job is removing the birds and the nest, with eggs and young checked for first. Screening the whole balcony so nothing can land there is a larger, separate job that we quote on its own. Depending on the building, your property manager or condo board may need to be involved before anything is fixed to the outside; we'll tell you if that applies. The whole job, from the nest and the droppings to the netting that keeps them off, is on its own page: [pigeons on your balcony](/wildlife/balcony-pigeons).",
         ],
       },
       {
@@ -347,7 +347,8 @@ export const SPECIES_PAGES: SituationContent[] = [
       {
         question: "Will the birds come back?",
         answer:
-          "Not through a vent we screened or a chimney we capped: that way in is closed. An open ledge, roof edge or balcony is different, because nothing is sealed there; the birds and the nest are removed, and screening the whole balcony, when you want it, is a separate job we quote on its own.",
+          "Not through a vent we screened or a chimney we capped: that way in is closed. An open ledge, roof edge or balcony is different, because nothing is sealed there; the birds and the nest are removed, and netting the whole balcony, when you want it, is a separate job we quote on its own.",
+        link: { href: "/wildlife/balcony-pigeons", label: "Balcony pigeon removal and netting" },
       },
       INSURANCE_FAQ,
       {

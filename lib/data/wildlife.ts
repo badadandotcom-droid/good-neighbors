@@ -335,6 +335,49 @@ export const WILDLIFE: WildlifeEntry[] = [
     unlisted: true,
     serviceType: "Dead animal removal",
   },
+  {
+    // Balcony pigeons, Oct 2026: asked for by the owner through the ads chat
+    // (Oct 27) as the landing page for the pigeon / balcony-netting campaign,
+    // separate from /wildlife/birds. Owner's facts (Oct 27 2026): one package,
+    // nest removal (dead birds and chicks included), droppings cleanup and
+    // disinfecting, then a barrier so they don't come back; black
+    // low-visibility netting is the usual condo answer, spikes or wire where
+    // the balcony suits them better; the cleanup happens in the same visit;
+    // no limit on balcony size or height, priced per job; the company deals
+    // with the condo board when the owner wants it to. No lifetime guarantee
+    // anywhere on the page (netting is a barrier, not an entry point we seal;
+    // same reasoning as /wildlife/birds): trustRow "no-guarantee" in
+    // lib/data/situations.ts, no repair block. No stock photos: the hero is
+    // the illustration; the owner's own photos are added when he sends them.
+    // Not on the /wildlife index (`unlisted`): reached from the ads, the
+    // birds page, the sitemap and search. Long-form copy in
+    // lib/data/situations.ts.
+    slug: "balcony-pigeons",
+    category: "situation",
+    name: "Balcony Pigeons",
+    singular: "pigeon",
+    seoTitle: "Pigeons on Your Balcony: Removal, Cleanup & Netting in Toronto",
+    heading: "Balcony Pigeon Removal and Netting in Toronto",
+    metaDescription:
+      "Pigeons nesting on your Toronto condo balcony? We remove the nest, clean and disinfect the droppings and fit black low-visibility netting so they don't return.",
+    summary: "Pigeons on a condo or apartment balcony: the nest out, the droppings cleaned and disinfected, and netting fitted so they don't return.",
+    intro:
+      "A pair of pigeons that settles on a balcony treats it as home. We take out the nest, clean and disinfect what they left behind and fit netting so the balcony is yours again.",
+    commonSigns: [
+      "The same two pigeons on the railing or the balcony floor every day, and back within minutes of being shooed",
+      "A nest of twigs and straw behind a planter, under a chair or in the corner by the wall",
+      "Droppings collecting on the floor, the railing and the furniture faster than you can clean them",
+      "Cooing early in the morning, and a thin squeaking once there are chicks",
+      "Feathers, down and bits of nesting material blowing against the door",
+    ],
+    commonAreas: ["Condo and apartment balconies", "Covered terraces", "Balcony corners and planters", "Railings and ledges", "Rooftop patios"],
+    approach:
+      "We check the nest for eggs and young, move the birds on and remove the nest, clean and disinfect the balcony, and fit netting, spikes or wire so they don't come back.",
+    relatedNote: "Pigeons on a roof edge or a ledge, or birds in a vent or chimney? See [bird removal](/wildlife/birds).",
+    iconId: "bird",
+    unlisted: true,
+    serviceType: "Balcony pigeon removal and netting",
+  },
 ];
 
 export function getWildlifeBySlug(slug: string): WildlifeEntry | undefined {

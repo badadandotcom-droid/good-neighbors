@@ -10,14 +10,14 @@ const outDir = process.argv[2] ?? "firstscreen";
 fs.mkdirSync(outDir, { recursive: true });
 const GUARANTEE = "Lifetime guarantee on every entry point we seal";
 // Pages with no guarantee line by design (owner, Oct 22 2026): the H1 and the Call button must still sit above the bar.
-const NO_GUARANTEE = new Set(["/wildlife/dead-animal-removal", "/wildlife/raccoon-feces-removal", "/wildlife/skunks", "/wildlife/birds"]);
+const NO_GUARANTEE = new Set(["/wildlife/dead-animal-removal", "/wildlife/raccoon-feces-removal", "/wildlife/skunks", "/wildlife/birds", "/wildlife/balcony-pigeons"]);
 const PAGES = [
   "/wildlife/something-in-the-attic", "/wildlife/something-in-the-walls", "/wildlife/raccoons", "/wildlife/squirrels",
   "/wildlife/birds", "/wildlife/bats", "/wildlife/damage-repair", "/contact",
   "/service-areas/toronto", "/service-areas/scarborough", "/service-areas/north-york", "/service-areas/etobicoke",
   "/service-areas/peel-region", "/service-areas/brampton", "/service-areas/mississauga", "/service-areas/caledon",
   "/service-areas/pickering", "/service-areas/ajax", "/service-areas/whitby", "/service-areas/oshawa",
-  "/service-areas/durham-region", "/wildlife/raccoon-feces-removal", "/wildlife/skunks", "/wildlife/dead-animal-removal",
+  "/service-areas/durham-region", "/wildlife/raccoon-feces-removal", "/wildlife/skunks", "/wildlife/dead-animal-removal", "/wildlife/balcony-pigeons",
   "/service-areas/york-region", "/service-areas/markham", "/service-areas/vaughan", "/service-areas/richmond-hill",
   "/service-areas/newmarket", "/service-areas/aurora", "/service-areas/stouffville",
 ];
