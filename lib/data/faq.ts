@@ -1,22 +1,23 @@
 import type { FaqItem } from "@/lib/types";
-import { DEFAULT_SAME_DAY_SERVICE, GUARANTEE, INSURANCE } from "@/lib/config/site";
+import { GUARANTEE, INSURANCE } from "@/lib/config/site";
 import { DAMAGE_REPAIR_PATH } from "@/lib/data/repairs";
 
 /**
- * FAQ copy references the same-day cutoff via DEFAULT_SAME_DAY_SERVICE so it
- * never drifts out of sync with the centralized config. `featured: true`
+ * Same-day answers are written out in full (owner, Oct 27 2026: same day at
+ * any hour, no 4 PM cutoff, no availability hedge; each page words it its own
+ * way, never one stock sentence repeated). `featured: true`
  * items appear in the homepage FAQ preview; the full list renders on /faq.
  */
 export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Can you come today?",
-    answer: `In most cases, yes. ${DEFAULT_SAME_DAY_SERVICE.qualificationMessage} If same-day service isn't available in your area right now, we'll tell you upfront and get you the next available time.`,
+    answer: "Yes. We come out the same day, every day of the week, and a real person answers the phone around the clock. Tell us what you are hearing or seeing and where, and we agree on a time on that same call.",
     featured: true,
     sameDaySpecific: true,
   },
   {
-    question: `What's the ${DEFAULT_SAME_DAY_SERVICE.cutoffLabel} cutoff about?`,
-    answer: `Requests received before ${DEFAULT_SAME_DAY_SERVICE.cutoffLabel} local time give us the best chance of reaching your property the same day. Requests after that are usually scheduled for the next available slot — we'll confirm timing when you contact us.`,
+    question: "Do you come out at night?",
+    answer: "Yes. A technician can be at your home at any hour, including the middle of the night. A night visit is an emergency call and costs more than a daytime one; we tell you the price on the phone first, so you can decide whether it needs to be tonight or can wait for the morning.",
     featured: true,
     sameDaySpecific: true,
   },

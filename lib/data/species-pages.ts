@@ -1,4 +1,4 @@
-import { DEFAULT_SAME_DAY_SERVICE, GUARANTEE, INSURANCE } from "@/lib/config/site";
+import { GUARANTEE, INSURANCE } from "@/lib/config/site";
 import type { SituationContent } from "@/lib/data/situations";
 
 /**
@@ -30,7 +30,6 @@ import type { SituationContent } from "@/lib/data/situations";
  * FAQ answers carry no links (they go into the structured data as written).
  */
 
-const SAME_DAY = DEFAULT_SAME_DAY_SERVICE.qualificationMessage;
 const INSURANCE_FAQ = { question: INSURANCE.faqQuestion, answer: INSURANCE.faqAnswer };
 
 export const SPECIES_PAGES: SituationContent[] = [
@@ -91,7 +90,7 @@ export const SPECIES_PAGES: SituationContent[] = [
         `We seal the entry point. ${GUARANTEE.short}`,
         "We repair the damage: roof boards and shingles, soffits, fascia, roof vents and chimney caps, plus flattened or soiled attic insulation, matched to your home's existing materials and colours. Where the raccoon left droppings, [raccoon feces removal](/wildlife/raccoon-feces-removal) explains the cleanup.",
       ],
-      outro: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week.`,
+      outro: "Raccoons move around at night, so night calls are normal for us. We come out the same day at any hour, and the phone is answered 24 hours a day, 7 days a week.",
     },
     faqHeading: "Questions about raccoons",
     faqs: [
@@ -133,7 +132,7 @@ export const SPECIES_PAGES: SituationContent[] = [
       INSURANCE_FAQ,
       {
         question: "How quickly can you get here?",
-        answer: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week, and we confirm the timing with you before anyone is sent out.`,
+        answer: "Today. Call at any hour and a technician can be on the way that day or that night; we confirm the timing with you before anyone is sent out.",
       },
     ],
   },
@@ -194,7 +193,7 @@ export const SPECIES_PAGES: SituationContent[] = [
         `We seal the entry point. ${GUARANTEE.short}`,
         "We repair what they chewed: soffits, fascia boards, roof edges, roof vents, eavestroughs and siding, finished to match the rest of your home.",
       ],
-      outro: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week.`,
+      outro: "Squirrels keep daytime hours, but you can call us whenever you hear them: a person answers 24 hours a day, and we come out the same day.",
     },
     faqHeading: "Questions about squirrels",
     faqs: [
@@ -240,7 +239,7 @@ export const SPECIES_PAGES: SituationContent[] = [
       INSURANCE_FAQ,
       {
         question: "How quickly can you get here?",
-        answer: `${SAME_DAY} The phone is answered 24 hours a day, 7 days a week, and we confirm the timing with you when you call or send a request.`,
+        answer: "The same day, whatever time you reach us. The phone is answered 24 hours a day, 7 days a week, and we confirm the timing with you when you call or send a request.",
       },
     ],
   },
@@ -305,7 +304,7 @@ export const SPECIES_PAGES: SituationContent[] = [
         "We screen the vent, cap the chimney or seal the gap the birds were using.",
         "We repair the damage: vent covers and screens, chimney caps, soffits, fascia and eavestroughs, plus soiled attic insulation, matched to your home's existing materials and colours.",
       ],
-      outro: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week.`,
+      outro: "Same-day visits for bird problems too, day or night, with the phone answered around the clock.",
     },
     faqHeading: "Questions about birds",
     faqs: [
@@ -353,7 +352,7 @@ export const SPECIES_PAGES: SituationContent[] = [
       INSURANCE_FAQ,
       {
         question: "How quickly can you get here?",
-        answer: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week, and we confirm the timing with you before anyone is sent out.`,
+        answer: "Whichever hour you call, a technician comes out that same day. Calls are answered 24 hours a day, 7 days a week, and a time is agreed with you before anyone sets out.",
       },
     ],
   },
@@ -414,7 +413,7 @@ export const SPECIES_PAGES: SituationContent[] = [
         "A one-way door goes over the entry, so the skunk can leave at dusk but not come back.",
         "Once the space is empty, wire mesh is fixed along the base and dug into the ground.",
       ],
-      outro: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week.`,
+      outro: "Skunks come and go at night, and so can we: same-day visits at any hour, with calls answered 24 hours a day, 7 days a week.",
     },
     faqHeading: "Questions about skunks under decks",
     faqs: [
@@ -456,7 +455,7 @@ export const SPECIES_PAGES: SituationContent[] = [
       INSURANCE_FAQ,
       {
         question: "How soon can you come?",
-        answer: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week, and the visit starts at the deck, not inside the house.`,
+        answer: "The same day, at any hour of the day or night. The visit starts at the deck, not inside the house.",
       },
     ],
   },

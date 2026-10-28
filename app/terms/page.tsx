@@ -41,8 +41,10 @@ export default function TermsPage() {
           <div>
             <h2 className="font-display text-xl text-charcoal">Same-day service</h2>
             <p className="mt-2">
-              Same-day service, where offered, is subject to technician availability and is not guaranteed.
-              Availability may vary by location and season.
+              Same-day service is offered at any hour, day or night, across our service area. A night visit is an
+              emergency call and is priced as one; the price is explained before anyone sets out. If something
+              outside our control, such as severe weather or a road closure, keeps us from reaching you the same
+              day, we tell you right away and agree on the earliest time.
             </p>
           </div>
           <div>

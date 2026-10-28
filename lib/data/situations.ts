@@ -1,5 +1,5 @@
 import type { FaqItem } from "@/lib/types";
-import { DEFAULT_SAME_DAY_SERVICE, GUARANTEE, INSURANCE } from "@/lib/config/site";
+import { GUARANTEE, INSURANCE } from "@/lib/config/site";
 
 /**
  * ============================================================================
@@ -74,7 +74,6 @@ export interface SituationContent {
   faqs: FaqItem[];
 }
 
-const SAME_DAY = DEFAULT_SAME_DAY_SERVICE.qualificationMessage;
 const INSURANCE_FAQ = { question: INSURANCE.faqQuestion, answer: INSURANCE.faqAnswer };
 
 export const SITUATIONS: SituationContent[] = [
@@ -157,7 +156,7 @@ export const SITUATIONS: SituationContent[] = [
         `We seal the entry points. ${GUARANTEE.short}`,
         "Cleanup, insulation and roof repair, matched to your home's existing materials and colours.",
       ],
-      outro: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week.`,
+      outro: "Noises in the attic tend to start at night. Call when you hear them: a real person answers 24 hours a day, and a technician comes out the same day.",
     },
     faqHeading: "Questions about noises in the attic",
     faqs: [
@@ -382,7 +381,7 @@ export const SITUATIONS: SituationContent[] = [
         "The opening the raccoon used is sealed.",
         "Any damage at the opening is repaired, matched to your home's existing materials and colours.",
       ],
-      outro: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week.`,
+      outro: "Cleanup visits happen the same day, at whatever hour suits you, and the phone is answered around the clock.",
     },
     faqHeading: "Questions about raccoon feces and cleanup",
     faqs: [
@@ -428,7 +427,7 @@ export const SITUATIONS: SituationContent[] = [
       INSURANCE_FAQ,
       {
         question: "How soon can you come?",
-        answer: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week, and if a raccoon is still in the attic, getting it out safely comes first.`,
+        answer: "The day you call, day or night. If a raccoon is still in the attic, getting it out safely comes first.",
       },
     ],
   },
@@ -514,7 +513,7 @@ export const SITUATIONS: SituationContent[] = [
         "The opening we made is closed up again.",
         "We show you where the animal got in. Sealing that entry point, with the repair around it, is separate work that we can do on the same visit.",
       ],
-      outro: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week.`,
+      outro: "Pickups happen the same day, at any hour, and someone answers the phone 24 hours a day, 7 days a week.",
     },
     faqHeading: "Questions about dead animal removal",
     faqs: [
@@ -566,7 +565,7 @@ export const SITUATIONS: SituationContent[] = [
       INSURANCE_FAQ,
       {
         question: "How soon can you come?",
-        answer: `${SAME_DAY} Calls are answered 24 hours a day, 7 days a week.`,
+        answer: "Today, whatever the hour. Call and a real person answers, day or night.",
       },
     ],
   },

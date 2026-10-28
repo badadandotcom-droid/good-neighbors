@@ -15,13 +15,16 @@ single edit propagates everywhere.
 | Legal name | ✅ Real: `Good Neighbors Wildlife Inc.` | Confirmed registered legal entity name. Used only in the footer copyright line — every customer-facing "Good Neighbors" / "Good Neighbors Wildlife" mention elsewhere uses the separate trading name and is unaffected. |
 | Production domain | ✅ Real: `https://www.goodneighborswildlife.ca` | Confirmed by the client. Used for canonical URLs, sitemap, Open Graph, and JSON-LD. |
 | Physical address | Not published | `CONTACT.address` is `null` by design — add a real address object (and wire it into `lib/seo.ts` `localBusinessJsonLd`) only once one exists. |
-| Operating hours | ✅ Real: "Calls answered 24 hours a day, 7 days a week." | Live as of the client's confirmation that phone coverage is actually staffed around the clock — see `ALWAYS_ON_CALL` below. Same-day *visit* availability (before the 4 PM cutoff) remains a separate, independently-toggled promise. |
+| Operating hours | ✅ Real: "Calls answered 24 hours a day, 7 days a week." | Live as of the client's confirmation that phone coverage is actually staffed around the clock — see `ALWAYS_ON_CALL` below. Same-day visits at any hour (owner, Oct 27 2026; no cutoff) remain a separate, independently-toggled promise. |
 | Social links | `null` (Instagram, Facebook, Google Business Profile) | Not rendered anywhere while null; add real URLs when accounts exist. |
 
 ## Same-day service — `lib/config/site.ts` → `DEFAULT_SAME_DAY_SERVICE`
 
-Fully centralized and already accurate to the brief (before-4-PM cutoff,
-subject to availability). Nothing fake here — just flag that turning
+Real (owner, Oct 27 2026): same day, at any hour, day or night, with no
+4 PM cutoff and no availability hedge. Technicians go out overnight; a night
+visit is an emergency call, priced higher and explained first (no prices on
+the site). The badge, positioning line and form note come from this config;
+page copy words the promise its own way on each page. Turning
 `enabled: false` (globally or per-market) is untested against real traffic
 and should be smoke-tested before relying on it seasonally.
 
@@ -32,8 +35,8 @@ that phone coverage is actually staffed around the clock. Live copy:
 "Calls answered 24/7." directly under the positioning line on the
 homepage hero, and "Calls answered 24 hours a day, 7 days a week."
 replacing the Contact page hours note. This means human phone answering
-around the clock — not 24-hour technician dispatch, overnight visits, or
-instant form replies. Same-day *visit* availability stays a separate,
+around the clock, and since Oct 27 2026 technicians also go out at any hour
+(night visits are emergency calls). Form replies are not instant. Same-day *visit* availability stays a separate,
 independently-toggled promise (`DEFAULT_SAME_DAY_SERVICE`). Do not flip
 `enabled` back to `false` without an equally explicit instruction.
 

@@ -1,5 +1,4 @@
 import type { Market } from "@/lib/types";
-import { DEFAULT_SAME_DAY_SERVICE } from "@/lib/config/site";
 
 /**
  * ============================================================================
@@ -113,7 +112,7 @@ export const MARKETS: Market[] = [
       },
       {
         question: "How quickly can you get to a Toronto home?",
-        answer: `${DEFAULT_SAME_DAY_SERVICE.qualificationMessage} Calls are answered 24 hours a day, 7 days a week, and we confirm the timing with you when you call or send a request.`,
+        answer: "The same day, at any hour, in every part of the city. Calls are answered 24 hours a day, 7 days a week, and we confirm the timing with you when you call or send a request.",
       },
     ],
   },
@@ -192,7 +191,7 @@ export const MARKETS: Market[] = [
       {
         question: "Do you come out to rural properties in King Township and Stouffville?",
         answer:
-          "Yes. Farms, estates, woodlots and lake properties are all covered. Same-day service works the same way out there as in town: requests received before 4 PM, subject to technician availability.",
+          "Yes. Farms, estates, woodlots and lake properties are all covered. A long driveway changes nothing: same-day visits at any hour reach the countryside just as they reach town.",
       },
       {
         question: "Our house is only a few years old. How did an animal get in?",
@@ -206,7 +205,7 @@ export const MARKETS: Market[] = [
       },
       {
         question: "How quickly can you get to a York Region home?",
-        answer: `${DEFAULT_SAME_DAY_SERVICE.qualificationMessage} Calls are answered 24 hours a day, 7 days a week; tell us where you are, and we confirm the timing with you before anyone sets out.`,
+        answer: "A technician can reach any York Region home the day you call, day or night. Tell us where you are, and we confirm the timing with you before anyone sets out.",
       },
     ],
   },
@@ -286,7 +285,7 @@ export const MARKETS: Market[] = [
       {
         question: "Do you cover the countryside in Uxbridge, Scugog and Brock Township?",
         answer:
-          "Yes, all of the countryside is covered, from farms and estates to the homes around Lake Scugog and along the Lake Simcoe shore. Out there, same-day visits follow the usual rule: requests received before 4 PM, subject to technician availability.",
+          "Yes, all of the countryside is covered, from farms and estates to the homes around Lake Scugog and along the Lake Simcoe shore. A call from a farm gets the same answer as a call from town: a technician that day, at whatever hour you need one.",
       },
       {
         question: "Do homes near the lake or a creek see more wildlife?",
@@ -300,7 +299,7 @@ export const MARKETS: Market[] = [
       },
       {
         question: "How quickly can you get to a Durham Region home?",
-        answer: `${DEFAULT_SAME_DAY_SERVICE.qualificationMessage} Calls from anywhere in the region are answered 24 hours a day, 7 days a week, and a visit time is agreed with you before anyone is on the road.`,
+        answer: "Same day, around the clock, from Pickering to Brock Township. Calls from anywhere in the region are answered 24 hours a day, 7 days a week, and a visit time is agreed with you before anyone is on the road.",
       },
     ],
   },
@@ -371,7 +370,7 @@ export const MARKETS: Market[] = [
       {
         question: "Do you come out to rural Caledon?",
         answer:
-          "Yes. Farms, estates and the villages are all covered, and same-day service applies to rural addresses on the same terms as the towns: requests before 4 PM, subject to technician availability.",
+          "Yes. Farms, estates and the villages are all covered. Rural addresses get the same-day, any-hour service the towns get; distance doesn't push the visit to another day.",
       },
       {
         question: "What's the most common wildlife problem in a Peel home?",
@@ -385,7 +384,7 @@ export const MARKETS: Market[] = [
       },
       {
         question: "How quickly can you get to a Peel home?",
-        answer: `${DEFAULT_SAME_DAY_SERVICE.qualificationMessage} The phone is answered 24 hours a day, 7 days a week, and the timing is confirmed with you before anyone heads out.`,
+        answer: "We come out the day you call, at any hour, anywhere in Peel. The phone is answered 24 hours a day, 7 days a week, and the timing is confirmed with you before anyone heads out.",
       },
     ],
   },

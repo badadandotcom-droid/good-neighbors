@@ -28,10 +28,8 @@ export interface PhoneConfig {
 /** Centralized same-day service policy. See lib/config/site.ts for defaults and resolution. */
 export interface SameDayServiceConfig {
   enabled: boolean;
-  /** 24-hour local cutoff, e.g. 16 for 4:00 PM */
-  cutoffHour: number;
-  /** Human label for the cutoff, e.g. "4 PM" */
-  cutoffLabel: string;
+  /** The small badge near the Call buttons when enabled, e.g. "Same-day service, day or night" */
+  badgeLabel: string;
   /** Short phrase used in "Humane. Local. {phrase}." when enabled */
   headlinePhrase: string;
   /** Short phrase used in "Humane. Local. {phrase}." when disabled */

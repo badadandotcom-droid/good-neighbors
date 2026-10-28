@@ -17,7 +17,7 @@ export function TrustBar({ market }: { market?: Market }) {
     },
     {
       title: sameDay.enabled ? "Same-Day Service" : "Fast Response",
-      body: sameDay.enabled ? sameDay.qualificationMessage : sameDay.disabledMessage,
+      body: sameDay.enabled ? "We come out the same day, at any hour, and a real person answers the phone day and night." : sameDay.disabledMessage,
     },
     {
       title: "Care for your home",

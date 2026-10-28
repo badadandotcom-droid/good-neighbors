@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 /** Small inline badge used near CTAs — always derived from centralized same-day config. */
 export function SameDayBadge({ market, className }: { market?: Market; className?: string }) {
   const sameDay = getSameDayConfig(market);
-  const label = sameDay.enabled ? `Same-day service before ${sameDay.cutoffLabel}` : sameDay.fallbackHeadlinePhrase;
+  const label = sameDay.enabled ? sameDay.badgeLabel : sameDay.fallbackHeadlinePhrase;
 
   return (
     <span

@@ -200,7 +200,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     seoTitle: "Squirrel or Raccoon in the Attic? Removal in Toronto & GTA",
     heading: "Something in Your Attic? Squirrel & Raccoon Removal in Toronto",
     metaDescription:
-      "Scratching or thumping in the attic? Squirrels by day, raccoons by night. Humane removal from outside your home, same-day before 4 PM. Call 416-900-WILD.",
+      "Scratching or thumping in the attic? Squirrels by day, raccoons by night. Humane removal from outside your home, the same day, even at night. Call 416-900-WILD.",
     summary: "Hearing movement overhead? You don't need to know what it is before you call.",
     intro:
       "Scratching, thumping or running overhead, by day or at night? It's usually a squirrel or a raccoon, and it's usually solved from outside your home. You don't need to identify the animal yourself.",
@@ -232,7 +232,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     seoTitle: "Animal in Your Walls? Squirrel, Raccoon & Bird Removal in Toronto",
     heading: "Something in Your Walls? Squirrel, Raccoon & Bird Removal in Toronto",
     metaDescription:
-      "Scratching in a wall or ceiling in Toronto? Usually a squirrel, raccoon or bird from outside. Humane removal, same-day before 4 PM. Call 416-900-WILD.",
+      "Scratching in a wall or ceiling in Toronto? Usually a squirrel, raccoon or bird from outside. Humane removal, same-day around the clock. Call 416-900-WILD.",
     summary: "Movement or scratching inside a wall cavity, most active early morning or after dark.",
     intro:
       "Scratching inside a wall, a ceiling or a vent? Here is what's usually behind it, and why opening the wall is the last resort, not the first step.",

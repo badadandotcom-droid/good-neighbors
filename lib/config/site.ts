@@ -92,7 +92,14 @@ export const CONTACT = {
 
 /**
  * ----------------------------------------------------------------------------
- * SAME-DAY SERVICE — centrally configurable, never hard-coded elsewhere.
+ * SAME-DAY SERVICE — the switch and the shared short labels.
+ * Owner, Oct 27 2026: same day, at any hour, day or night; technicians go out
+ * overnight (a night visit is an emergency call, priced higher and explained
+ * on the phone first; no prices on the site). No 4 PM cutoff and no
+ * "subject to availability" anywhere. Page copy words the promise its own way
+ * on each page (cities, hubs, animal pages, FAQ), so those sentences live in
+ * the data files; this config keeps the badge, the positioning line, the
+ * request-form note and the disabled fallback.
  * ----------------------------------------------------------------------------
  * Toggle `enabled` to false (globally, or per-market via Market.sameDayService)
  * to automatically swap every "Same-Day Service" claim on the site for the
@@ -103,12 +110,11 @@ export const CONTACT = {
  */
 export const DEFAULT_SAME_DAY_SERVICE: SameDayServiceConfig = {
   enabled: true,
-  cutoffHour: 16,
-  cutoffLabel: "4 PM",
+  badgeLabel: "Same-day service, day or night",
   headlinePhrase: "Same-Day Service",
   fallbackHeadlinePhrase: "Fast Response",
   qualificationMessage:
-    "Same-day service is available for requests received before 4 PM, subject to technician availability.",
+    "Same-day visits at any hour, including nights and weekends.",
   disabledMessage:
     "We respond quickly to every request. Current availability will be confirmed when you contact us.",
 };
@@ -117,11 +123,11 @@ export const DEFAULT_SAME_DAY_SERVICE: SameDayServiceConfig = {
  * ----------------------------------------------------------------------------
  * ALWAYS-ON-CALL LINE.
  * ----------------------------------------------------------------------------
- * "Calls answered 24/7" means the phone is answered around the clock — it
- * does NOT mean technicians provide 24-hour on-site dispatch, overnight
- * visits, or instant form replies. Same-day *visit* availability is a
- * separate promise (see DEFAULT_SAME_DAY_SERVICE) and stays subject to its
- * own toggle regardless of this flag. `enabled: true` reflects the client's
+ * "Calls answered 24/7" means a real person answers around the clock. Since
+ * Oct 27 2026 (owner) technicians also go out at any hour, day or night; a
+ * night visit is an emergency call, priced higher and explained before anyone
+ * sets out. Form replies are not instant. The same-day promise itself lives in
+ * DEFAULT_SAME_DAY_SERVICE and has its own toggle. `enabled: true` reflects the client's
  * explicit confirmation that phone coverage is actually staffed around the
  * clock — do not flip this back off without an equally explicit instruction.
  */

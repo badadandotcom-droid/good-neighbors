@@ -64,7 +64,7 @@ export const CITIES: City[] = [
     region: "peel-region",
     featured: true,
     metaDescription:
-      "Raccoon or squirrel in a Brampton attic? Humane removal, same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+      "Raccoon or squirrel in a Brampton attic? Humane removal, same-day at any hour. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
     cardLine: "Castlemore and Peel Village to Springdale and Mount Pleasant.",
     intro:
       "Brampton gives wildlife a lot to work with: the mature maples over the Castlemore estates and Peel Village, street after street of vinyl-soffit homes in Springdale and Fletcher's Meadow, and creek valleys that run right through the city. If something is scratching overhead, we come out, get the animal out humanely, seal the way in and repair the damage.",
@@ -108,7 +108,7 @@ export const CITIES: City[] = [
       {
         question: "How quickly can you get to Brampton?",
         answer:
-          "Same-day service is available for requests received before 4 PM, subject to technician availability. Calls are answered 24 hours a day, 7 days a week, and we confirm timing with you when you get in touch.",
+          "Same day, at whatever hour you call. A real person picks up 24 hours a day, and we settle on a time together before a technician heads to Brampton.",
       },
     ],
     nearby: ["mississauga", "caledon", "vaughan", "etobicoke"],
@@ -119,7 +119,7 @@ export const CITIES: City[] = [
     region: "peel-region",
     featured: true,
     metaDescription:
-      "Mississauga raccoon & squirrel removal, humane and same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+      "Mississauga raccoon & squirrel removal, humane and same-day, day or night. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
     cardLine: "Lorne Park and Port Credit to Streetsville and Meadowvale.",
     intro:
       "From the deep, treed lots of Lorne Park and Mineola to the newer streets of Churchill Meadows, Mississauga has every kind of home a raccoon or squirrel could want. Wherever you are, from Port Credit to Meadowvale, we remove the animal humanely, seal the entry point and repair the damage it caused.",
@@ -163,7 +163,7 @@ export const CITIES: City[] = [
       {
         question: "How quickly can you get to Mississauga?",
         answer:
-          "Requests received before 4 PM are eligible for same-day service, subject to technician availability. The phone is answered around the clock, and we confirm the timing with you when you call or send a request.",
+          "We come out the day you call, morning or midnight. The phone is answered around the clock, and you hear the arrival time from us before anyone leaves for Mississauga.",
       },
     ],
     nearby: ["brampton", "etobicoke", "caledon"],
@@ -174,7 +174,7 @@ export const CITIES: City[] = [
     region: "toronto",
     featured: true,
     metaDescription:
-      "Humane raccoon & squirrel removal across Scarborough. Same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+      "Humane raccoon & squirrel removal across Scarborough. Same day, 24/7. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
     cardLine: "The Bluffs and Guildwood to Agincourt and Malvern.",
     intro:
       "Scarborough's postwar bungalows, the wooded lots of Guildwood and the ravines of the Rouge and Highland Creek make it one of the busiest parts of Toronto for raccoons and squirrels. From the Bluffs to Malvern, we get the animal out humanely, seal the entry point and repair what it damaged.",
@@ -218,7 +218,7 @@ export const CITIES: City[] = [
       {
         question: "How quickly can you get to Scarborough?",
         answer:
-          "If your request comes in before 4 PM, same-day service is available, subject to technician availability. We answer the phone 24 hours a day, 7 days a week, and we confirm the time with you before anyone is sent out.",
+          "The day you reach us. Call at noon or at two in the morning and someone answers; we agree on a time with you, and a technician comes out to Scarborough that day or that night.",
       },
     ],
     nearby: ["north-york", "pickering", "markham"],
@@ -228,7 +228,7 @@ export const CITIES: City[] = [
     name: "Markham",
     region: "york-region",
     metaDescription:
-      "Humane raccoon & squirrel removal across Markham. Same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+      "Humane raccoon & squirrel removal across Markham. Out the same day, any hour. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
     cardLine: "Unionville and Angus Glen to Cornell and Milliken.",
     intro:
       "Markham mixes the heritage streets of Unionville, the big newer homes of Cachet and Angus Glen, and the tight subdivisions of Milliken and Cornell, with the Rouge River threading through all of it. When something moves in overhead, we get it out humanely, seal the way in and repair the damage.",
@@ -270,7 +270,7 @@ export const CITIES: City[] = [
       {
         question: "How quickly can you get to Markham?",
         answer:
-          "Requests that reach us before 4 PM qualify for same-day service, subject to technician availability. Someone answers the phone 24 hours a day, 7 days a week, and we confirm the timing with you before a technician is sent.",
+          "A technician can be in Markham the same day, whatever the hour. Calls go to a real person day and night, and we confirm when we are coming before we leave.",
       },
     ],
     nearby: ["richmond-hill", "scarborough", "stouffville", "vaughan"],
@@ -280,7 +280,7 @@ export const CITIES: City[] = [
     name: "Vaughan",
     region: "york-region",
     metaDescription:
-      "Raccoon or squirrel in a Vaughan attic? Humane removal, same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+      "Raccoon or squirrel in a Vaughan attic? Humane removal, same-day, even at night. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
     cardLine: "Kleinburg and Woodbridge to Maple, Vellore and Thornhill.",
     intro:
       "Vaughan runs from the estate lots of Kleinburg on the Humber, through Woodbridge's old village and newer streets, to the big subdivisions of Maple and Vellore Village. Different houses, same answer: we get the animal out humanely, seal the entry point and repair the damage.",
@@ -321,7 +321,7 @@ export const CITIES: City[] = [
       {
         question: "How quickly can you get to Vaughan?",
         answer:
-          "For requests received before 4 PM, same-day service is available, subject to technician availability. We answer calls around the clock and confirm the timing with you when you get in touch.",
+          "Same day, around the clock. If you hear something at night, call: we answer, talk it through with you, and send a technician to Vaughan that night if it can't wait for morning.",
       },
     ],
     nearby: ["richmond-hill", "markham", "brampton", "etobicoke"],
@@ -332,7 +332,7 @@ export const CITIES: City[] = [
     region: "york-region",
     seoTitle: "Richmond Hill Raccoon & Squirrel Removal",
     metaDescription:
-      "Humane raccoon & squirrel removal in Richmond Hill, same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+      "Humane raccoon & squirrel removal in Richmond Hill, same-day, whatever the hour. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
     cardLine: "Bayview Hill and Mill Pond to Oak Ridges and Lake Wilcox.",
     intro:
       "Richmond Hill sits on the Oak Ridges Moraine, with the big lots of Bayview Hill, the older streets around Mill Pond and the lakeside homes of Oak Ridges and Lake Wilcox all sharing the same woods and wildlife. We remove the animal humanely, seal the way in and repair what it damaged.",
@@ -363,7 +363,7 @@ export const CITIES: City[] = [
       {
         question: "How quickly can you get to Richmond Hill?",
         answer:
-          "Same-day service is available for requests received before 4 PM, subject to technician availability, and the phone is answered 24 hours a day. We confirm the time with you before anyone is sent out.",
+          "On the day you call, at any hour. We answer the phone ourselves, day and night, and the visit time is set with you before anyone heads out to Richmond Hill.",
       },
     ],
     nearby: ["markham", "vaughan", "aurora", "stouffville"],
@@ -373,7 +373,7 @@ export const CITIES: City[] = [
     name: "Newmarket",
     region: "york-region",
     metaDescription:
-      "Humane raccoon & squirrel removal in Newmarket, same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+      "Humane raccoon & squirrel removal in Newmarket, same day, 24 hours a day. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
     cardLine: "Historic Main Street to Stonehaven, Glenway and Woodland Hill.",
     intro:
       "Newmarket has a historic core along Main Street and Fairy Lake, established neighbourhoods like Glenway and Huron Heights, and newer estates in Stonehaven and Summerhill, with the Holland River running through the middle. Whatever is in the attic, we get it out humanely, seal the entry point and repair the damage.",
@@ -404,7 +404,7 @@ export const CITIES: City[] = [
       {
         question: "How quickly can you get to Newmarket?",
         answer:
-          "If your request reaches us before 4 PM, it qualifies for same-day service, subject to technician availability. Calls are answered 24 hours a day, 7 days a week, and we confirm timing with you when you reach us.",
+          "Newmarket gets same-day visits at any hour, the same as everywhere else we work. Every call is answered, and you know when the technician will arrive before they set off.",
       },
     ],
     nearby: ["aurora", "richmond-hill", "stouffville"],
@@ -414,7 +414,7 @@ export const CITIES: City[] = [
     name: "North York",
     region: "toronto",
     metaDescription:
-      "Humane raccoon & squirrel removal in North York. Same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+      "Humane raccoon & squirrel removal in North York. Same-day visits, day or night. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
     cardLine: "York Mills and the Bridle Path to Willowdale and Don Mills.",
     intro:
       "North York is ravine country: the Don Valley and its branches run through York Mills, Hoggs Hollow and Bayview Village, and the mid-century homes of Willowdale, Don Mills and Bathurst Manor sit under trees planted seventy years ago. We remove the animal humanely, seal the way in and repair the damage.",
@@ -456,7 +456,7 @@ export const CITIES: City[] = [
       {
         question: "How quickly can you get to North York?",
         answer:
-          "Same-day service covers requests received before 4 PM, subject to technician availability. The phone is answered 24 hours a day, and we confirm the timing with you when you get in touch.",
+          "Same day, any time of day or night. Calls are picked up by a person, not a machine, and we agree the timing with you on that first call.",
       },
     ],
     nearby: ["scarborough", "etobicoke", "vaughan", "markham"],
@@ -466,7 +466,7 @@ export const CITIES: City[] = [
     name: "Pickering",
     region: "durham-region",
     metaDescription:
-      "Raccoon & squirrel removal in Pickering, humane and same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+      "Raccoon & squirrel removal in Pickering, humane and on site the same day. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
     cardLine: "Rosebank and Bay Ridges to Amberlea and Brock Ridge.",
     intro:
       "Pickering is squeezed between Rouge National Urban Park on one side, Duffins Creek on the other and the lake along the bottom, with the wooded lots of Rosebank and the lakefront streets of Bay Ridges right in the middle of it. We get the animal out humanely, seal the entry point and repair the damage.",
@@ -497,7 +497,7 @@ export const CITIES: City[] = [
       {
         question: "How quickly can you get to Pickering?",
         answer:
-          "If your request comes in before 4 PM, it qualifies for same-day service, subject to technician availability. Calls are answered 24 hours a day, 7 days a week, and we confirm the time with you before a technician heads out.",
+          "We can be in Pickering the day you call, late at night included. A real person answers 24/7 and tells you when to expect the technician before anyone sets out.",
       },
     ],
     nearby: ["ajax", "scarborough", "whitby", "markham"],
@@ -507,7 +507,7 @@ export const CITIES: City[] = [
     name: "Ajax",
     region: "durham-region",
     metaDescription:
-      "Humane raccoon & squirrel removal in Ajax, same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453) any time.",
+      "Humane raccoon & squirrel removal in Ajax, same-day, nights included. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
     cardLine: "The lakefront and Pickering Village to Riverside and Nottingham.",
     intro:
       "Ajax runs from the lakefront in Lakeside up past the old homes of Pickering Village and central Ajax to the newer streets of Riverside and Nottingham, with Duffins Creek along its western edge. Wherever the noise is coming from, we remove the animal humanely, seal the way in and repair the damage.",
@@ -538,7 +538,7 @@ export const CITIES: City[] = [
       {
         question: "How quickly can you get to Ajax?",
         answer:
-          "Same-day service is available when your request reaches us before 4 PM, subject to technician availability. The phone is answered 24 hours a day, 7 days a week, and the timing is confirmed with you before anyone is dispatched.",
+          "The same day, at any hour. When you call, a person answers, asks what you are seeing and hearing, and gives you a time for the visit to your Ajax home.",
       },
     ],
     nearby: ["pickering", "whitby", "oshawa", "scarborough"],
@@ -548,7 +548,7 @@ export const CITIES: City[] = [
     name: "Oshawa",
     region: "durham-region",
     metaDescription:
-      "Humane raccoon & squirrel removal in Oshawa, same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453) any time.",
+      "Humane raccoon & squirrel removal in Oshawa, the same day you call. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453), 24/7.",
     cardLine: "Windfields and Kedron to McLaughlin, Centennial and Lakeview.",
     intro:
       "Oshawa has a century of housing in one city: the older streets of McLaughlin and Centennial north and south of downtown, the postwar blocks of Eastdale and Lakeview, and brand-new subdivisions in Windfields and Kedron up near the university. We get the animal out humanely, seal the entry point and repair the damage.",
@@ -579,7 +579,7 @@ export const CITIES: City[] = [
       {
         question: "How quickly can you get to Oshawa?",
         answer:
-          "Same-day service is on offer for requests received before 4 PM, subject to technician availability. The phone is answered 24 hours a day, 7 days a week, and we confirm the timing with you before a technician is on the way.",
+          "The same day, day or night. Oshawa calls are answered around the clock, and once we know what is going on we tell you when the technician will be at your door.",
       },
     ],
     nearby: ["whitby", "ajax", "pickering"],
@@ -589,7 +589,7 @@ export const CITIES: City[] = [
     name: "Whitby",
     region: "durham-region",
     metaDescription:
-      "Humane raccoon & squirrel removal in Whitby and Brooklin. Same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+      "Humane raccoon & squirrel removal in Whitby and Brooklin. Same-day, late nights too. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
     cardLine: "Brooklin and Lynde Creek to Port Whitby and Taunton North.",
     intro:
       "Whitby stretches from the harbour at Port Whitby, past the older streets around Lynde Creek and Pringle Creek, up to Brooklin's village core and the new subdivisions around it. Wherever the noise is, we remove the animal humanely, seal the way in and repair what it damaged.",
@@ -620,7 +620,7 @@ export const CITIES: City[] = [
       {
         question: "How quickly can you get to Whitby?",
         answer:
-          "If your request reaches us before 4 PM, same-day service is available, subject to technician availability. Calls are answered around the clock, and we confirm the time with you before sending anyone out.",
+          "A technician comes out the day you call, whether that is first thing in the morning or after midnight. Someone always answers, and the time is confirmed with you before the visit.",
       },
     ],
     nearby: ["oshawa", "ajax", "pickering"],
@@ -630,7 +630,7 @@ export const CITIES: City[] = [
     name: "Etobicoke",
     region: "toronto",
     metaDescription:
-      "Humane raccoon & squirrel removal in Etobicoke. Same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+      "Humane raccoon & squirrel removal in Etobicoke. Same-day service, any hour. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
     cardLine: "The Kingsway and Humber Valley to Mimico, Long Branch and Rexdale.",
     intro:
       "Etobicoke is old trees and old rooflines: the Kingsway, Humber Valley Village and Sunnylea along the Humber, the lakefront streets of Mimico and Long Branch, and the postwar subdivisions of Markland Wood, Alderwood and Rexdale. We get the animal out humanely, seal the way in and repair the damage.",
@@ -673,7 +673,7 @@ export const CITIES: City[] = [
       {
         question: "How quickly can you get to Etobicoke?",
         answer:
-          "Same-day service covers requests that come in before 4 PM, subject to technician availability. Someone answers the phone 24 hours a day, 7 days a week, and we confirm the timing with you before anyone is sent.",
+          "Same day, every day, around the clock. Call whenever you notice it; a person picks up, and we set the visit time for your Etobicoke home together.",
       },
     ],
     nearby: ["mississauga", "north-york", "brampton", "vaughan"],
@@ -683,7 +683,7 @@ export const CITIES: City[] = [
     name: "Aurora",
     region: "york-region",
     metaDescription:
-      "Humane raccoon & squirrel removal in Aurora, same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453) any time.",
+      "Humane raccoon & squirrel removal in Aurora, out the same day. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453) any time.",
     cardLine: "Aurora Estates and Hills of St Andrew to Aurora Village and Bayview Wellington.",
     intro:
       "Aurora sits on the Oak Ridges Moraine, with the big properties of Aurora Estates and Hills of St Andrew, the century homes of Aurora Village along Yonge Street, and newer streets in Bayview Northeast and Bayview Wellington. We remove the animal humanely, seal the entry point and repair the damage.",
@@ -714,7 +714,7 @@ export const CITIES: City[] = [
       {
         question: "How quickly can you get to Aurora?",
         answer:
-          "Requests received before 4 PM qualify for same-day service, subject to technician availability. The phone is answered 24 hours a day, and the timing is confirmed with you before a technician is dispatched.",
+          "Any hour, the same day. Phone us at breakfast or in the middle of the night; someone answers, and the technician's arrival time in Aurora is agreed with you before they leave.",
       },
     ],
     nearby: ["newmarket", "richmond-hill", "stouffville"],
@@ -724,7 +724,7 @@ export const CITIES: City[] = [
     name: "Stouffville",
     region: "york-region",
     metaDescription:
-      "Humane raccoon & squirrel removal in Stouffville. Same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+      "Humane raccoon & squirrel removal in Stouffville. Same-day, even overnight. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
     cardLine: "Ballantrae and Musselman's Lake to the town centre and Vandorf.",
     intro:
       "Stouffville is where the suburbs end and the moraine begins: the golf-course homes of Ballantrae, the cottages and older houses around Musselman's Lake, the town centre's village streets and new subdivisions, and the rural lots of Vandorf and Gormley. We get the animal out humanely, seal the way in and repair the damage.",
@@ -755,7 +755,7 @@ export const CITIES: City[] = [
       {
         question: "How quickly can you get to Stouffville?",
         answer:
-          "Same-day service is available for requests that reach us before 4 PM, subject to technician availability. Calls are answered 24 hours a day, 7 days a week, and we confirm timing with you when you get in touch, rural lots included.",
+          "The same day, at any hour, rural lots included. A real person takes every call, and we tell you when the technician will reach Stouffville before anyone sets out.",
       },
     ],
     nearby: ["markham", "aurora", "richmond-hill", "newmarket"],
@@ -765,7 +765,7 @@ export const CITIES: City[] = [
     name: "Caledon",
     region: "peel-region",
     metaDescription:
-      "Humane raccoon, squirrel & skunk removal in Caledon. Same-day before 4 PM. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
+      "Humane raccoon, squirrel & skunk removal in Caledon. Same day, any hour. Lifetime guarantee on every entry point we seal. Call 416-900-WILD (9453).",
     cardLine: "Bolton and Caledon East to the Escarpment villages and rural estates.",
     intro:
       "Caledon is the rural top of Peel: Bolton's old village core and its newer subdivisions, Caledon East, the Escarpment villages of Belfountain, Inglewood, Cheltenham and Alton, and estates and farms on big lots in between. Out here the list of animals is longer, and we handle all of them humanely, seal the way in and repair the damage.",
@@ -796,7 +796,7 @@ export const CITIES: City[] = [
       {
         question: "How quickly can you get to Caledon?",
         answer:
-          "Requests received before 4 PM are eligible for same-day service, subject to technician availability, and that includes rural addresses. Calls are answered 24 hours a day, 7 days a week, and we confirm the timing with you before heading out.",
+          "Same-day visits reach rural Caledon addresses too, at any hour of the day or night. Calls are answered 24 hours a day, and we agree a time with you before heading out.",
       },
     ],
     nearby: ["brampton", "vaughan", "mississauga"],
