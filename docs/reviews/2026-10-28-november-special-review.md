@@ -1,6 +1,6 @@
 # Review: the November special test page, /november-special (Oct 28 2026, GNW Website 14; built on Fable 5.1, cut down on Opus 5.5)
 
-WAITING FOR THE OWNER'S "approved" and his answers to calls 1–3. Branch `claude/gnw-website-14`, on top of the live branch at 801d5a5. Live Nov 1, not before; taken down Dec 1.
+APPROVED by the owner, Oct 28 2026, 1:11 PM, in GNW Website 15 ("I'll take all your suggestions"): call 1, "Normally $850" stays off the page and comes out of the ad too; call 2, "every animal" stays; call 3, the guarantee line stays; calls 4 to 6 as written. Branch `claude/gnw-website-14`, on top of the live branch at 801d5a5. Live Nov 1, not before; taken down Dec 1.
 
 ## How it got here
 - 2:33 AM (Fable): a 1,547-word page from ADS 35's brief of 1:10 AM (price line, "Additional entry points" line, four sections, a six-step visit, nine questions).
@@ -32,6 +32,7 @@ WAITING FOR THE OWNER'S "approved" and his answers to calls 1–3. Branch `claud
 - Phone first screen (375 x 812): all 33 landing pages pass; /november-special H1 bottom 252 px, guarantee line 390, Call button 466, bar at 738.
 - Screenshots (phone and desktop) shown to the owner.
 - Check scripts changed for this page: crawl.mjs crawls it by hand (`EXTRA_PATHS`) and allows a price on this page only (`ALLOWED_FIGURES`: $699 and $850); firstscreen.mjs lists it (33 pages); README.
+- After the approval (GNW Website 15): `ALLOWED_FIGURES` in crawl.mjs cut to $699 only, so a $850 on the page now fails the crawl (call 1). Not re-run after that change (syntax checked; the page has no $850 and the 9:35 AM crawl found none); every check runs again on Nov 1 before go-live.
 - Not run: Lighthouse (smaller than any landing page, no images); PageSpeed Insights (cloud session; the ads chat runs it after Nov 1). Not checked from here: the live site.
 
 ## Every word on the page (rendered from the built page; the 24/7 line shows twice because the phone copy and the desktop copy are both in the HTML, one hidden at each width)

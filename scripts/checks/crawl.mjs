@@ -70,10 +70,11 @@ function normalize(html) {
 
 // Pages crawled on top of the sitemap: live pages kept out of the sitemap on
 // purpose (noindex offers reached from an ad only). The November special page
-// (owner, Oct 28 2026) is the one page allowed a price: exactly $699 and $850,
-// nothing else; every other page keeps the no-dollar-figure rule.
+// (owner, Oct 28 2026) is the one page allowed a price: exactly $699, nothing
+// else ("Normally $850" stays off it: owner, Oct 28, 1:11 PM); every other
+// page keeps the no-dollar-figure rule.
 const EXTRA_PATHS = ["/november-special"];
-const ALLOWED_FIGURES = { "/november-special": [/\$699\b/g, /\$850\b/g] };
+const ALLOWED_FIGURES = { "/november-special": [/\$699\b/g] };
 
 const sitemap = await (await fetch(`${base}/sitemap.xml`)).text();
 const urls = [...new Set([...[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname), ...EXTRA_PATHS])];
