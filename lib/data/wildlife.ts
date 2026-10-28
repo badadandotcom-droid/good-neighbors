@@ -264,12 +264,15 @@ export const WILDLIFE: WildlifeEntry[] = [
     // Oct 20, 8:10 PM note via the side chat); no "latrine" anywhere (owner's call); photos are
     // the owner's own, added when he sends them (no stock). Not on the
     // /wildlife index: linked from the raccoon and attic pages instead.
+    // "Poop" sits beside "Feces" in the name, title and H1 (owner, Oct 28 2026,
+    // 1:57 PM): people search both, Google treats them as one search, and the
+    // ad group is "Raccoon Poop Removal"; one page for the job, never two.
     slug: "raccoon-feces-removal",
     category: "situation",
-    name: "Raccoon Feces Removal",
+    name: "Raccoon Poop & Feces Removal",
     singular: "raccoon",
-    seoTitle: "Raccoon Feces Removal in Toronto & GTA",
-    heading: "Raccoon Feces Removal in Toronto",
+    seoTitle: "Raccoon Poop & Feces Removal in Toronto & GTA",
+    heading: "Raccoon Poop and Feces Removal in Toronto",
     metaDescription:
       "Raccoon feces in the attic or on the deck? We clean out the droppings, disinfect the area, replace soiled insulation and seal where it got in. Toronto & GTA.",
     summary: "Raccoon droppings cleaned out of attics and off decks, the area disinfected, and the way in sealed.",
