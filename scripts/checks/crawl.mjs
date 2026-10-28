@@ -68,8 +68,15 @@ function normalize(html) {
     .replace(/<script[^>]*src="\/_next\/[^"]*"[^>]*><\/script>/g, "");
 }
 
+// Pages crawled on top of the sitemap: live pages kept out of the sitemap on
+// purpose (noindex offers reached from an ad only). The November special page
+// (owner, Oct 28 2026) is the one page allowed a price: exactly $699 and $850,
+// nothing else; every other page keeps the no-dollar-figure rule.
+const EXTRA_PATHS = ["/november-special"];
+const ALLOWED_FIGURES = { "/november-special": [/\$699\b/g, /\$850\b/g] };
+
 const sitemap = await (await fetch(`${base}/sitemap.xml`)).text();
-const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname);
+const urls = [...new Set([...[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname), ...EXTRA_PATHS])];
 const report = [];
 const seen = { title: new Map(), h1: new Map(), description: new Map() };
 
@@ -103,8 +110,11 @@ for (const p of urls) {
   const bodyText = stripTags(
     html.replace(/<script[\s\S]*?<\/script>/g, " ").replace(/<style[\s\S]*?<\/style>/g, " ").replace(/<svg[\s\S]*?<\/svg>/g, " "),
   );
-  const bodyForBanned = bodyText.replace(RATING_LINE, " ");
-  const banned = BANNED.filter((re) => re.test(bodyForBanned) || re.test(title) || re.test(description)).map((re) => re.source);
+  const allowFigures = (s) => (ALLOWED_FIGURES[p] ?? []).reduce((t, re) => t.replace(re, " "), s);
+  const bodyForBanned = allowFigures(bodyText.replace(RATING_LINE, " "));
+  const banned = BANNED.filter((re) => re.test(bodyForBanned) || re.test(allowFigures(title)) || re.test(allowFigures(description))).map(
+    (re) => re.source,
+  );
   // Every sentence that mentions a guarantee must be the owner's exact wording.
   // Block boundaries count as sentence boundaries so a heading never runs into
   // the paragraph after it.

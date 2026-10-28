@@ -19,7 +19,7 @@ const PAGES = [
   "/service-areas/pickering", "/service-areas/ajax", "/service-areas/whitby", "/service-areas/oshawa",
   "/service-areas/durham-region", "/wildlife/raccoon-feces-removal", "/wildlife/skunks", "/wildlife/dead-animal-removal", "/wildlife/balcony-pigeons",
   "/service-areas/york-region", "/service-areas/markham", "/service-areas/vaughan", "/service-areas/richmond-hill",
-  "/service-areas/newmarket", "/service-areas/aurora", "/service-areas/stouffville",
+  "/service-areas/newmarket", "/service-areas/aurora", "/service-areas/stouffville", "/november-special",
 ];
 
 const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromium", args: ["--no-sandbox"] });
