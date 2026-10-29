@@ -25,6 +25,7 @@ Both were approved by the owner (Oct 28, 1:35 PM); the November page itself was 
    - Every new sentence in a review file in docs/reviews; the owner approves in one batch (his preference); then live, and the live note the ads chat asked for, per page or section: URL, title, H1, a line confirming the trust row and that none of the banned words appear (cheapest, fastest, discreet, before 4 PM, subject to availability). Any new URL joins the landing-page list (CLAUDE.md and firstscreen.mjs) when live; the must-not-move list is unchanged.
 4. The owner's open questions (asked in GNW Website 16, not answered):
    - Does he still replace soiled insulation? If yes, the existing pages that say so stay as they are (change-little rule). If no, they promise work he doesn't do and must be fixed: the attic page FAQ "Do you clean up and replace the insulation?", the feces page (body, its FAQ "Do you replace attic insulation soiled by raccoon feces?" and its meta description "...replace soiled insulation..."), the raccoon, birds and attic pages' repair paragraphs (lib/data/wildlife.ts), /wildlife/damage-repair, "Attic insulation" in lib/data/repairs.ts, and the "attic insulation and cleanup" ad claim in CLAUDE.md; tell the ads chat (its "Attic insulation and cleanup" sitelink line). Competitors for context: Skedaddle and Critter Control (Toronto) both advertise removing soiled insulation and installing new (Critter Control "in certain situations").
+     - ANSWERED in GNW Website 17 (Oct 28, 11:17 PM): "Yes, we do." The pages that offer it stay as they are; nothing changes on the site. The clash with ADS 35's "no insulation-replacement wording" rule (ads and the new attic section) went to ADS 38's decision 4 in the note below.
    - Is the one-page-per-job reading in item 3 right?
    - Groundhog jobs: does he take them? (Also in the note to ADS 36.)
 5. Kaizen, afterwards (owner, Oct 28, 1:51 and 1:55 PM): check every landing page (title, H1, headings) and every ad group against the saved search research. For work already done, change little: change only where it clearly makes sense (like poop vs feces), otherwise add what's missing.
@@ -105,4 +106,17 @@ Scheduled check, moved from GNW Website 16 to GNW Website 17 (Duane said yes to 
 4. CLAUDE.md: cut the "November special page" rule and its landing-page entry down to a one-line record, and drop the "one exception" wording so the site is price-free again.
 5. Run every check. If anything fails, stop and tell Duane. Then fast-forward the live branch, push, and once Vercel has deployed, confirm in the built-in browser that https://www.goodneighborswildlife.ca/november-special lands on the attic page.
 6. Give Duane the note for the ads chat, alone in a code box, headed "For the ads chat (…), from" this chat's name. It says the page is down, /november-special now redirects (302) to /wildlife/something-in-the-attic, and the November ad should already be paused (due by the end of Nov 30). Record it in the handoff and send Duane one push notification.
+```
+
+## GNW Website 17 log
+- 9:22 PM: started (Opus 5.5 at Max). Repo attached with push access. Scheduled checks moved (see the top section).
+- 11:20 PM, note to ADS 38, given to the owner (word for word):
+```
+For the ads chat (ADS 38), from GNW Website 17, Wed Oct 28, 11:20 PM
+
+1. Answered: Good Neighbors still removes and replaces soiled attic insulation (Duane, 11:17 PM: "Yes, we do."). This was GNW Website 16's open question.
+2. Website: no change. Every page that already offers it stays as it is.
+3. Ads: the Damage Repair sitelink line "Attic insulation and cleanup" is true and stays.
+4. For decision 4 (Attic Cleanup group): the "no insulation-replacement wording" rule from ADS 35's upload was set before this answer. Please settle it with Duane there: keep it out of the ads only, or drop it. The answer also decides whether the new attic-cleanup section mentions it. Skedaddle and Critter Control tie their attic pages to insulation replacement (ADS 37's competitor look).
+5. The website side still waits for your keyword-to-page doc before any page work.
 ```
