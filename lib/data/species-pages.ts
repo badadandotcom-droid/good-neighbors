@@ -400,7 +400,7 @@ export const SPECIES_PAGES: SituationContent[] = [
         heading: "How a skunk leaves without a fuss",
         paragraphs: [
           "Skunks are calm animals and spray mostly when they feel cornered, so nothing about this is rushed or forced. Once we know where the skunk goes in and whether there are young, a one-way door is fitted over the entry. The skunk goes out as it always does and cannot get back in. When we are sure the space is empty, the door comes off and the space is closed for good.",
-          "If it is a raccoon under the deck rather than a skunk, the job is much the same; [raccoon removal](/wildlife/raccoons) covers raccoons under decks and in sheds.",
+          "If it is a raccoon under the deck rather than a skunk, the job is much the same; raccoon removal covers [raccoons under decks and in sheds](/wildlife/raccoon-under-deck).",
         ],
       },
     ],
