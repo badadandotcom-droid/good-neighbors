@@ -88,7 +88,7 @@ export const SPECIES_PAGES: SituationContent[] = [
         "We confirm it's a raccoon and check for kits.",
         "Humane removal from outside, with mother and young kept together.",
         `We seal the entry point. ${GUARANTEE.short}`,
-        "We repair the damage: roof boards and shingles, soffits, fascia, roof vents and chimney caps, plus flattened or soiled attic insulation, matched to your home's existing materials and colours. Where the raccoon left droppings, [raccoon feces removal](/wildlife/raccoon-feces-removal) explains the cleanup.",
+        "We repair the damage: roof boards and shingles, soffits, fascia, roof vents and chimney caps, matched to your home's existing materials and colours.",
       ],
       outro: "Raccoons move around at night, so night calls are normal for us. We come out the same day at any hour, and the phone is answered 24 hours a day, 7 days a week.",
     },
@@ -108,7 +108,7 @@ export const SPECIES_PAGES: SituationContent[] = [
       {
         question: "Are raccoons dangerous?",
         answer:
-          "Raccoons avoid people and will almost always keep their distance. A cornered raccoon, or a mother with kits, will defend herself, so don't try to handle one, and keep pets away from where it comes and goes. Raccoon droppings can carry roundworm, which is why the attic cleanup is part of the job rather than something left to you.",
+          "Raccoons avoid people and will almost always keep their distance. A cornered raccoon, or a mother with kits, will defend herself, so don't try to handle one, and keep pets away from where it comes and goes. Raccoon droppings can carry roundworm, so leave them alone.",
       },
       {
         question: "What happens to the raccoon babies?",
@@ -302,7 +302,7 @@ export const SPECIES_PAGES: SituationContent[] = [
         "We identify the birds and check for eggs or young before work begins. If the nest is protected, we'll explain what can be done and when.",
         "Humane removal, and the nest cleaned out of the vent, chimney, soffit or attic.",
         "We screen the vent, cap the chimney or seal the gap the birds were using.",
-        "We repair the damage: vent covers and screens, chimney caps, soffits, fascia and eavestroughs, plus soiled attic insulation, matched to your home's existing materials and colours.",
+        "We repair the damage: vent covers and screens, chimney caps, soffits, fascia and eavestroughs, matched to your home's existing materials and colours.",
       ],
       outro: "A technician can be at the balcony, roof or vent the same day, at any hour, and the phone is answered around the clock.",
     },
@@ -399,7 +399,7 @@ export const SPECIES_PAGES: SituationContent[] = [
       {
         heading: "How a skunk leaves without a fuss",
         paragraphs: [
-          "Skunks are calm animals and spray mostly when they feel cornered, so nothing about this is rushed or forced. Once we know where the skunk goes in and whether there are young, a one-way door is fitted over the entry. The skunk goes out at dusk as it always does and cannot get back in. When we are sure the space is empty, the door comes off and the space is closed for good.",
+          "Skunks are calm animals and spray mostly when they feel cornered, so nothing about this is rushed or forced. Once we know where the skunk goes in and whether there are young, a one-way door is fitted over the entry. The skunk goes out as it always does and cannot get back in. When we are sure the space is empty, the door comes off and the space is closed for good.",
           "If it is a raccoon under the deck rather than a skunk, the job is much the same; [raccoon removal](/wildlife/raccoons) covers raccoons under decks and in sheds.",
         ],
       },
@@ -411,7 +411,7 @@ export const SPECIES_PAGES: SituationContent[] = [
       steps: [
         "We find the den and every way in along the deck, porch or shed.",
         "We check for young; in late spring and early summer nothing is closed until the babies are old enough to follow their mother out.",
-        "A one-way door goes over the entry, so the skunk can leave at dusk but not come back.",
+        "A one-way door goes over the entry, so the skunk can leave but not come back.",
         "Once the space is empty, wire mesh is fixed along the base and dug into the ground.",
       ],
       outro: "Call as soon as you spot it: a technician comes out the same day, at any hour, and someone answers the phone 24 hours a day, 7 days a week.",

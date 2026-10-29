@@ -52,8 +52,8 @@ const DAMAGE_TYPES: { title: string; body: string; href: string; linkLabel: stri
   {
     title: "Attic insulation and cleanup",
     body: "An animal living in an attic leaves droppings, nesting material and flattened insulation behind. We clean the attic out and remove and replace insulation where it's needed.",
-    href: "/wildlife/something-in-the-attic",
-    linkLabel: "Something in your attic?",
+    href: "/wildlife/attic-cleanup",
+    linkLabel: "Attic cleanup services",
   },
   {
     title: "Skunks under decks, porches and sheds",

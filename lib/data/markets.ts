@@ -80,7 +80,7 @@ export const MARKETS: Market[] = [
         heading: "How a visit works in Toronto",
         paragraphs: [
           "Usually, we can solve the wildlife problem entirely from outside without needing to enter your home. The visit starts with a full inspection of the roofline, because the opening is often nowhere near where you hear the noise, and on an older home there may be more than one. We identify the animal, check for young, and remove it humanely, with mother and young kept together.",
-          "Then we seal the entry point and repair what the animal damaged: roof boards and shingles, soffits, fascia, roof vents, chimney caps, eavestroughs, siding, and flattened or soiled attic insulation, matched to your home's existing materials and colours, which on a Kingsway or York Mills home matters. See [damage repair](/wildlife/damage-repair) for the full list.",
+          "Then we seal the entry point and repair what the animal damaged: roof boards and shingles, soffits, fascia, roof vents, chimney caps, eavestroughs and siding, matched to your home's existing materials and colours, which on a Kingsway or York Mills home matters. See [damage repair](/wildlife/damage-repair) for the full list.",
         ],
       },
     ],
@@ -169,7 +169,7 @@ export const MARKETS: Market[] = [
         heading: "How a visit works in York Region",
         paragraphs: [
           "Usually, we can solve the wildlife problem entirely from outside without needing to enter your home. On a York Region house that starts with the whole roofline, every slope, vent and corner of it, because the opening is often on the far side from the noise, and a large roof can have more than one. We confirm which animal it is, check for young before anything is removed, and see mother and young out together, humanely. The price is explained before any work begins.",
-          "Then we seal the opening the animal used and repair the damage it left: a torn roof vent, a chewed soffit or fascia board, shingles and roof boards, a chimney cap or vent cover, an eavestrough or a piece of siding, and attic insulation that has been soiled or flattened. Repairs are matched to your home's existing materials and colours, on a heritage house in Unionville as much as a new build in Vellore Village, and where a skunk has dug in, the ground along the deck or shed is sealed with wire mesh set into the soil. [Damage repair](/wildlife/damage-repair) has the complete list.",
+          "Then we seal the opening the animal used and repair the damage it left: a torn roof vent, a chewed soffit or fascia board, shingles and roof boards, a chimney cap or vent cover, and an eavestrough or a piece of siding. Repairs are matched to your home's existing materials and colours, on a heritage house in Unionville as much as a new build in Vellore Village, and where a skunk has dug in, the ground along the deck or shed is sealed with wire mesh set into the soil. [Damage repair](/wildlife/damage-repair) has the complete list.",
         ],
       },
     ],
@@ -259,7 +259,7 @@ export const MARKETS: Market[] = [
         heading: "How a visit works in Durham Region",
         paragraphs: [
           "Usually, we can solve the wildlife problem entirely from outside without needing to enter your home. The first thing we look at is the whole roofline, vent by vent and corner by corner, because the hole an animal uses is often some distance from where the sound is, and a big Brooklin or Kedron roof sometimes has a second. Nothing is removed until we know which animal it is and whether it has young; a mother and her young leave together, humanely. You hear the price from us before any work is done.",
-          "With the animal gone, the opening it used is sealed and the damage it left is repaired: a torn roof vent, a soffit lifted at the corner, chewed fascia, a chimney that needs a cap, a vent that needs a cover, damaged shingles and roof boards, an eavestrough or siding, and soiled or flattened attic insulation, with the droppings and nesting cleaned out. Each repair is matched to the materials and colours already on the house, whether that means the wood trim of an older house in Port Whitby or the soffit of a new two-storey in Windfields, and a deck, porch or shed that a skunk dug under gets wire mesh buried along its base. [Damage repair](/wildlife/damage-repair) shows every repair we handle.",
+          "With the animal gone, the opening it used is sealed and the damage it left is repaired: a torn roof vent, a soffit lifted at the corner, chewed fascia, a chimney that needs a cap, a vent that needs a cover, damaged shingles and roof boards, and an eavestrough or siding. Each repair is matched to the materials and colours already on the house, whether that means the wood trim of an older house in Port Whitby or the soffit of a new two-storey in Windfields, and a deck, porch or shed that a skunk dug under gets wire mesh buried along its base. [Damage repair](/wildlife/damage-repair) shows every repair we handle.",
         ],
       },
     ],
@@ -340,7 +340,7 @@ export const MARKETS: Market[] = [
         heading: "How a visit works in Peel",
         paragraphs: [
           "Usually, we can solve the wildlife problem entirely from outside without needing to enter your home. We start with the whole roofline, not just the corner the noise came from, because the opening is often somewhere else, and on a big Castlemore or Lorne Park roof there may be more than one. We confirm which animal it is, check for young before anything is removed, and get the family out together, humanely.",
-          "Then we seal the entry point and repair what the animal damaged: the roof vent, soffit or fascia, torn shingles and roof boards, the chimney cap, the eavestrough or siding, and attic insulation that has been flattened or soiled, matched to your home's existing materials and colours, on a Mineola rebuild and a Bolton two-storey alike. The full list is on [damage repair](/wildlife/damage-repair).",
+          "Then we seal the entry point and repair what the animal damaged: the roof vent, soffit or fascia, torn shingles and roof boards, the chimney cap, and the eavestrough or siding, matched to your home's existing materials and colours, on a Mineola rebuild and a Bolton two-storey alike. The full list is on [damage repair](/wildlife/damage-repair).",
         ],
       },
     ],

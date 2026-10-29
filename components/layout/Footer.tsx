@@ -41,6 +41,12 @@ export function Footer() {
             // The one quiet link to the dead-animal page (owner, Oct 2026): not in the
             // main menu or on the /wildlife index; the ads and search land on it directly.
             { label: "Dead Animal Removal", href: "/wildlife/dead-animal-removal" },
+            // Quiet links (owner, Oct 28 2026, ADS 38 rule 3: no orphan pages, a low-key link
+            // from the main site). Off the main menu and the /wildlife index.
+            { label: "Dead Bird Removal", href: "/wildlife/dead-bird-removal" },
+            { label: "Attic Cleanup", href: "/wildlife/attic-cleanup" },
+            { label: "Raccoon Under a Deck", href: "/wildlife/raccoon-under-deck" },
+            { label: "Raccoon Poop & Feces Removal", href: "/wildlife/raccoon-feces-removal" },
           ]}
         />
 

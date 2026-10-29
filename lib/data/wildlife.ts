@@ -1,4 +1,7 @@
 import type { WildlifeEntry } from "@/lib/types";
+import { RACCOON_UNDER_DECK_ENTRY } from "@/lib/data/raccoon-under-deck";
+import { ATTIC_CLEANUP_ENTRY } from "@/lib/data/attic-cleanup";
+import { DEAD_BIRD_REMOVAL_ENTRY } from "@/lib/data/dead-bird-removal";
 
 /**
  * Wildlife service architecture: species pages and "situation" pages
@@ -47,7 +50,7 @@ export const WILDLIFE: WildlifeEntry[] = [
       heading: "Raccoon removal and roof damage repair",
       paragraphs: [
         "Raccoons rarely find a way in. They make one. A lifted section of shingles, a torn roof vent or a soffit pried loose is often the first sign one has moved in.",
-        "Once the raccoon and any young are out, we seal the opening and repair what it damaged: roof boards and shingles, soffits, fascia and roof vents, matched to your home's existing materials and colours. If the attic insulation has been flattened or soiled, we clean out the droppings and nesting material and replace the insulation too.",
+        "Once the raccoon and any young are out, we seal the opening and repair what it damaged: roof boards and shingles, soffits, fascia and roof vents, matched to your home's existing materials and colours.",
       ],
       linkLabel: "Raccoon and squirrel damage repair",
     },
@@ -155,7 +158,7 @@ export const WILDLIFE: WildlifeEntry[] = [
       heading: "Bird removal and vent, chimney and soffit repair",
       paragraphs: [
         "Birds don't make the opening; they find it. An uncovered dryer or bathroom vent, a chimney without a cap, a torn gable-vent screen or a gap where the soffit meets the wall is all a starling or a pigeon needs.",
-        "Once the birds are out and the nest is cleaned out, we screen the vent or cap the chimney and repair what the nesting damaged: vent covers and screens, chimney caps, soffits, fascia and eavestroughs, matched to your home's existing materials and colours. Where birds got into the attic, the droppings and nesting material are cleaned out and soiled insulation is replaced.",
+        "Once the birds are out and the nest is cleaned out, we screen the vent or cap the chimney and repair what the nesting damaged: vent covers and screens, chimney caps, soffits, fascia and eavestroughs, matched to your home's existing materials and colours.",
       ],
       linkLabel: "Vent, chimney and soffit repair after birds",
       // Owner, Oct 27 2026: the lifetime guarantee is off this page (pigeons on
@@ -215,11 +218,10 @@ export const WILDLIFE: WildlifeEntry[] = [
       "Our technicians identify the species from the signs present, confirm how it's getting in, and handle the removal — then let you know what they found and what, if anything, should happen next.",
     iconId: "attic",
     repair: {
-      heading: "Attic cleanup, insulation and roof repair",
+      heading: "Sealing the opening and repairing the roof",
       paragraphs: [
-        "Whatever was living in the attic usually leaves something behind: flattened or soiled insulation, droppings, nesting material, and an opening at the roofline where it came and went.",
-        "Once the animal is out, we seal that opening and repair the damage around it, from the roof and soffits to the vents. Inside the attic, we clean out the droppings and nesting material and remove and replace insulation where it's needed.",
-        "If a raccoon has been leaving droppings in the attic, [raccoon feces cleanup](/wildlife/raccoon-feces-removal) explains what's involved.",
+        "Whatever was living in the attic came and went through an opening at the roofline, and that opening is where the repair starts.",
+        "Once the animal is out, we seal that opening and repair the damage around it, from the roof and soffits to the vents.",
       ],
       linkLabel: "Attic and roof damage repair",
     },
@@ -381,6 +383,9 @@ export const WILDLIFE: WildlifeEntry[] = [
     unlisted: true,
     serviceType: "Balcony pigeon removal and netting",
   },
+  RACCOON_UNDER_DECK_ENTRY,
+  ATTIC_CLEANUP_ENTRY,
+  DEAD_BIRD_REMOVAL_ENTRY,
 ];
 
 export function getWildlifeBySlug(slug: string): WildlifeEntry | undefined {

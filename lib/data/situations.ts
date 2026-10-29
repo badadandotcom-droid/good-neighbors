@@ -1,5 +1,8 @@
 import type { FaqItem } from "@/lib/types";
 import { GUARANTEE, INSURANCE } from "@/lib/config/site";
+import { RACCOON_UNDER_DECK_CONTENT } from "@/lib/data/raccoon-under-deck";
+import { ATTIC_CLEANUP_CONTENT } from "@/lib/data/attic-cleanup";
+import { DEAD_BIRD_REMOVAL_CONTENT } from "@/lib/data/dead-bird-removal";
 
 /**
  * ============================================================================
@@ -154,7 +157,7 @@ export const SITUATIONS: SituationContent[] = [
         "We identify the species and check for babies.",
         "Humane removal from outside, with mother and young kept together.",
         `We seal the entry points. ${GUARANTEE.short}`,
-        "Cleanup, insulation and roof repair, matched to your home's existing materials and colours.",
+        "Roof, soffit and vent repair, matched to your home's existing materials and colours.",
       ],
       outro: "Call when you hear the noise, whatever the hour: a real person answers 24 hours a day, and a technician comes out the same day.",
     },
@@ -178,11 +181,6 @@ export const SITUATIONS: SituationContent[] = [
       {
         question: "How much does it cost to get a squirrel or raccoon out of the attic?",
         answer: "Every attic is different, and we explain the price before any work begins.",
-      },
-      {
-        question: "Do you clean up and replace the insulation?",
-        answer:
-          "Yes. Once the animal is out, we clean out the droppings and nesting material and remove and replace insulation where it's needed, and we repair the roof, soffit or vent the animal used.",
       },
       {
         question: "Will it come back?",
@@ -716,6 +714,9 @@ export const SITUATIONS: SituationContent[] = [
       },
     ],
   },
+  RACCOON_UNDER_DECK_CONTENT,
+  ATTIC_CLEANUP_CONTENT,
+  DEAD_BIRD_REMOVAL_CONTENT,
 ];
 
 export function getSituationContent(slug: string): SituationContent | undefined {
