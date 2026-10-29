@@ -13,6 +13,7 @@ GNW Website 16 set two, and they fire into GNW Website 16. Delete both (`delete_
 - `trig_01KHGbjxLe4kVzZurtknpVKr`: Sun Nov 1, 12:05 AM Toronto (`at` 2026-11-01T04:05:00Z; still daylight time then), "Nov 1: November page live (GNW Website 16)".
 - `trig_01SSzon4tz8bS77YNsBgyn19`: Tue Dec 1, 12:05 AM Toronto (`at` 2026-12-01T05:05:00Z), "Dec 1: November page down (GNW Website 16)".
 Both were approved by the owner (Oct 28, 1:35 PM); the November page itself was approved Oct 28, 1:11 PM, so neither run needs a further yes. If this chat hands off before they fire, the next chat moves them again.
+- MOVED by GNW Website 17 (Oct 28, about 9:25 PM): both IDs above are deleted (each delete confirmed). They now fire into GNW Website 17, texts word for word from the end of this file: `trig_0157iAXbVmKaPhacqsPfi34D` (Nov 1, `at` 2026-11-01T04:05:00Z) and `trig_01QGFk9XbunGr55fxo73fn7V` (Dec 1, `at` 2026-12-01T05:05:00Z).
 
 ## Start here (GNW Website 17)
 1. Act first on any note the owner pastes from the ads chat. The website side is waiting on ADS 36's reply to GNW Website 16's note of 2:05 PM (word for word below): Keyword Planner numbers for the three new ad groups, the groups changed to match, and for each page or section its main phrase and 5 to 10 phrases it must cover. Nothing from ADS 36 was in the GNWW Project at 4:40 PM. Job B waits for that list (owner, 1:52 PM: "the ads group has to match the research").
