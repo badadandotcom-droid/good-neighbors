@@ -60,6 +60,10 @@ export const DEAD_BIRD_REMOVAL_CONTENT: SituationContent = {
   subhead:
     "A dead bird in a vent, a chimney or a wall won't sort itself out. We find it, take it out with the nest and droppings, and clean and disinfect the spot, at homes and on condo balconies across Toronto and the GTA.",
   trustRow: "no-guarantee",
+  // Ads chat, ADS 46 (Nov 1 2026): the 311 line, worded for birds. City of
+  // Toronto, checked Nov 2 2026: larger birds on public property are picked
+  // up on a 311 request; small ones are not (bagged, regular garbage).
+  aboveCallLine: "A dead bird on the street or in a park? Call the City instead: in Toronto, that's 311.",
   signs: {
     heading: "Signs of a dead bird in a vent, wall or chimney",
     intro: "You rarely see the bird. More often, something changes around one vent, the fireplace or one stretch of wall.",

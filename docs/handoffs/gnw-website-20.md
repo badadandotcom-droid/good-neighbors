@@ -13,6 +13,8 @@ FIRST: say the model, explain the plan in a line or two and ask "Ready to start?
 ## Scheduled check: move it into this chat at the start
 GNW Website 19 holds one: `trig_01Piqcafu6KWvTEwtqyDfDxx`, Tue Dec 1, 12:05 AM Toronto (`at` 2026-12-01T05:05:00Z), "Dec 1: November page down (GNW Website 19)". Approved by Duane (Oct 28, 1:35 PM). Create the new one here with `send_later` (text at the end of this file, word for word; `initiation` human_request), delete the old one with `delete_trigger`, confirm with `list_triggers`, and record the new ID in this file. (The Nov 1 go-live check already ran: the November page went live Nov 1, 12:10 AM.)
 
+DONE in GNW Website 20 (Nov 2, about 10:59 AM, Duane's "do what you gotta do now"): new check `trig_019TpsUpLRnxPxeaVgeCBcbZ`, "Dec 1: November page down (GNW Website 20)", `at` 2026-12-01T05:05:00Z, text word for word from the end of this file; the old `trig_01Piqcafu6KWvTEwtqyDfDxx` deleted; `list_triggers` shows only the new one for Dec 1. The next chat moves it again the same way.
+
 ## Live now
 Live branch `claude/good-neighbors-v2-visual-redesign` at 5b685e2 (Nov 1, 12:10 AM; Vercel success; read live 12:11 AM).
 - /november-special live (title and H1 "November Special: $699 + HST", guarantee and insurance lines, noindex, off the sitemap). The ads chat's November ad points at it (live since Nov 1); keep it up through Nov 30.
@@ -51,3 +53,10 @@ Scheduled check, moved from GNW Website 19 to GNW Website 20 (Duane said yes to 
 5. Run every check. If anything fails, stop and tell Duane. Then fast-forward the live branch, push, and once Vercel has deployed, confirm in the built-in browser that https://www.goodneighborswildlife.ca/november-special lands on the attic page.
 6. Give Duane the note for the ads chat, alone in a code box, headed "For the ads chat (…), from" this chat's name. It says the page is down, /november-special now redirects (302) to /wildlife/something-in-the-attic, and the November ad should already be paused (due by the end of Nov 30). Record it in the handoff and send Duane one push notification.
 ```
+
+## GNW Website 20 log (Toronto time)
+- Nov 2, 10:59 AM: Dec 1 check moved into this chat (above). Model: Sonnet for the move, then Opus 5.5 at Max (Duane's switch) for the 311 line.
+- Nov 2, about 11:15 AM: the 311 line built on `claude/gnw-website-20`, not live. New optional field `aboveCallLine` in `SituationContent` (lib/data/situations.ts), rendered by `SituationPage` right above the Call button (order 4 on phones, between the H1 and the buttons; above the buttons from `sm` up). Plain text, never a tel: link (PhoneClickTracker counts every tel: tap as the Ads phone-tap conversion). Wording, each page its own (best-result-first; facts re-checked on the City of Toronto's "Enforcement & assistance" page Nov 2: large dead animals and larger birds on public property are picked up on a 311 request, small ones are not):
+  - /wildlife/dead-animal-removal: "Is it on a road, a sidewalk or in a park? That's for the City: in Toronto, call 311."
+  - /wildlife/dead-bird-removal: "A dead bird on the street or in a park? Call the City instead: in Toronto, that's 311."
+  - Checks: lint, types, build; crawl (no problems); compare: only these two pages changed, and the only text change on each is the new line; firstscreen: all 36 pass, Call button bottom 403 → 460 px (dead animal) and 440 → 497 px (dead bird), fold 738. Waiting on Duane's yes.

@@ -53,6 +53,16 @@ export function SituationPage({
     { term: "Before we leave", detail: "We'll explain what we found, what we did, and how the animal got in." },
   ];
 
+  // The 311 line on the dead animal and dead bird pages (Nov 2026): right
+  // above the Call button. Order 4 on phones puts it between the H1 and the
+  // buttons; from `sm` up the hero is a plain block, so it sits where it is
+  // in the markup, just above the buttons.
+  const aboveCall = content.aboveCallLine && (
+    <p className="order-4 mt-4 text-[15px] leading-snug text-ink-700 text-pretty sm:mt-6 sm:text-base">
+      {content.aboveCallLine}
+    </p>
+  );
+
   const ctas = (
     <div className="order-5 mt-5 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
       <CTAButton
@@ -109,6 +119,7 @@ export function SituationPage({
               </div>
               <p className="order-8 mt-8 font-display text-xl leading-snug text-pine-600 text-pretty sm:mt-6 sm:text-2xl">{content.subhead}</p>
               <p className="order-9 mt-4 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">{entry.intro}</p>
+              {aboveCall}
               {ctas}
               {content.trustRow && <TrustRow mobileOrder guarantee={content.trustRow !== "no-guarantee"} />}
             </div>
@@ -141,6 +152,7 @@ export function SituationPage({
             </div>
             <p className="order-8 mt-8 font-display text-xl leading-snug text-pine-600 text-pretty sm:mt-6 sm:text-2xl">{content.subhead}</p>
             {content.keepLine && <p className="order-9 mt-3 text-lg leading-relaxed text-ink-700">{content.keepLine}</p>}
+            {aboveCall}
             {ctas}
             {content.trustRow && <TrustRow mobileOrder guarantee={content.trustRow !== "no-guarantee"} />}
           </Container>

@@ -49,6 +49,16 @@ export interface SituationContent {
   subhead: string;
   /** A line from the live page kept word for word, shown after the subhead. */
   keepLine?: string;
+  /**
+   * One short line directly above the Call button: on a phone it sits right
+   * under the H1 (order 4, the guarantee line's slot, so only for pages with
+   * no guarantee line), and from `sm` up it sits just above the buttons.
+   * Added Nov 2026 for the 311 line on the dead animal and dead bird pages
+   * (ads chat, ADS 46, Nov 1 2026: steer road, sidewalk and park pickups to
+   * the City before they call us). Plain text, never a tel: link: every tel:
+   * tap on the site counts as an Ads phone-tap conversion.
+   */
+  aboveCallLine?: string;
   /** The sound guide table (attic and walls pages). */
   soundGuide?: { heading: string; intro: string; rows: SoundRow[] };
   /**
@@ -446,6 +456,12 @@ export const SITUATIONS: SituationContent[] = [
     // sealed as part of the job), so the trust row shows insurance and 24/7
     // only and the page has no sealing-and-repair block.
     trustRow: "no-guarantee",
+    // Ads chat, ADS 46 (Nov 1 2026), after a call about a deer on the road:
+    // steer public-property pickups to the City before they call. City of
+    // Toronto, checked Nov 2 2026: large dead animals on public property go
+    // through 311; small ones are not collected. "In Toronto" because 311 is
+    // Toronto's line and the ads also reach Peel, York and Durham.
+    aboveCallLine: "Is it on a road, a sidewalk or in a park? That's for the City: in Toronto, call 311.",
     sections: [
       {
         heading: "The smell of a dead animal in the house",
