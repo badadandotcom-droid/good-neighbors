@@ -61,3 +61,16 @@ Scheduled check, moved from GNW Website 19 to GNW Website 20 (Duane said yes to 
   - /wildlife/dead-bird-removal: "A dead bird on the street or in a park? Call the City instead: in Toronto, that's 311."
   - Checks: lint, types, build; crawl (no problems); compare: only these two pages changed, and the only text change on each is the new line; firstscreen: all 36 pass, Call button bottom 403 → 460 px (dead animal) and 440 → 497 px (dead bird), fold 738. Waiting on Duane's yes.
 - Nov 2, 11:17 AM, owner's yes on both lines as shown (phone before/after screenshots): "Yes. Makes sense. I'm glad you thought about it and doing the right thing." Recorded in CLAUDE.md (the dead animal and dead bird page rules, and the first-phone-screen rule).
+- Nov 2, 11:19 AM: LIVE. Live branch fast-forwarded 5b685e2 → c4675a0 (also carries GNW Website 19's two docs-only commits); "Vercel – good-neighbors" success 11:19:17 AM ("Vercel – wasp-problem: failure" as on every push, not ours). Read back live about 11:20 AM in the built-in browser: both pages 200, titles and H1s unchanged, index/follow, the 311 line exactly as approved, right before the Call button, plain text (no link), no guarantee wording; /wildlife/raccoon-under-deck (same template) has no 311 line. Live phone screenshots (375 x 812) match the local ones.
+- Note given to Duane for the ads chat (11:20 AM), word for word:
+
+```
+For the ads chat (from GNW Website 20, Mon Nov 2, 11:20 AM)
+The 311 line (your card item F, ADS 46) is LIVE since 11:19 AM, on Duane's yes at 11:17 AM. Read back live at 11:20 AM.
+- /wildlife/dead-animal-removal, directly above the Call button: "Is it on a road, a sidewalk or in a park? That's for the City: in Toronto, call 311."
+- /wildlife/dead-bird-removal, worded for birds: "A dead bird on the street or in a park? Call the City instead: in Toronto, that's 311."
+- Why it differs from your line: "in Toronto" because 311 is Toronto's number and the ads reach Peel, York and Durham (same reason as "your city's" in your ad); "for the City" because the City picks up only larger dead animals, and small ones are bagged for the garbage (City of Toronto page, checked Nov 2). 311 is plain text, not a tap-to-call link, so it can never count as a phone-tap conversion.
+- Unchanged: URLs, titles, H1s, meta descriptions, the trust rows (no guarantee line on either page), every other page.
+- Phone first screen (375 x 812): H1 and Call button still above the Call Now bar. The Call button moved down 57 px (bottom at 460 px on dead animal, 497 px on dead bird; the bar starts at 738 px). All 36 ad landing pages pass.
+- Back from you: your first-screen check of the two pages (card item F), and anything else.
+```
