@@ -60,3 +60,4 @@ Scheduled check, moved from GNW Website 19 to GNW Website 20 (Duane said yes to 
   - /wildlife/dead-animal-removal: "Is it on a road, a sidewalk or in a park? That's for the City: in Toronto, call 311."
   - /wildlife/dead-bird-removal: "A dead bird on the street or in a park? Call the City instead: in Toronto, that's 311."
   - Checks: lint, types, build; crawl (no problems); compare: only these two pages changed, and the only text change on each is the new line; firstscreen: all 36 pass, Call button bottom 403 → 460 px (dead animal) and 440 → 497 px (dead bird), fold 738. Waiting on Duane's yes.
+- Nov 2, 11:17 AM, owner's yes on both lines as shown (phone before/after screenshots): "Yes. Makes sense. I'm glad you thought about it and doing the right thing." Recorded in CLAUDE.md (the dead animal and dead bird page rules, and the first-phone-screen rule).
