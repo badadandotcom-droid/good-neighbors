@@ -40,7 +40,9 @@ export default function BlogIndexPage() {
       />
       <JsonLd data={breadcrumbJsonLd([{ name: "Blog", path: "/blog" }])} />
 
-      <BlogHero heading={TITLE} lead={LEAD} guarantee location="blog-index" />
+      {/* No guarantee line on the index (owner, Nov 3 2026, 1:27 PM, pencilled: "maybe the blog trust
+          row shouldn't show the guarantee line"): the index is not about one job. Posts set their own. */}
+      <BlogHero heading={TITLE} lead={LEAD} guarantee={false} location="blog-index" />
 
       <section className="py-14 sm:py-24">
         <Container className="max-w-3xl">
