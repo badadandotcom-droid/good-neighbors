@@ -12,6 +12,7 @@ FIRST: say the model, explain the plan in a line or two and ask "Ready to start?
 
 ## Scheduled check: move it into this chat at the start
 GNW Website 20 holds `trig_019TpsUpLRnxPxeaVgeCBcbZ`, "Dec 1: November page down (GNW Website 20)", `at` 2026-12-01T05:05:00Z (Tue Dec 1, 12:05 AM Toronto). Approved by Duane (Oct 28, 1:35 PM). Create the new one here with `send_later` (text at the end of this file, word for word; `initiation` human_request), delete the old one with `delete_trigger`, confirm with `list_triggers`, and record the new ID in this file. `delete_trigger` and `list_triggers` load through ToolSearch.
+- DONE Nov 3, 12:05 PM: the check now lives in GNW Website 21 as `trig_019EuQtGqN5dZkX8hd4WuxML`, "Dec 1: November page down (GNW Website 21)", `at` 2026-12-01T05:05:00Z; the GNW Website 20 one (`trig_019TpsUpLRnxPxeaVgeCBcbZ`) is deleted; `list_triggers` shows only the new one.
 
 ## Live now
 Live branch `claude/good-neighbors-v2-visual-redesign` at c4675a0 (Nov 2, 11:19 AM; Vercel success; read live 11:20 AM).
