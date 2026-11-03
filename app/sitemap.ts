@@ -4,6 +4,7 @@ import { MARKETS, marketHref } from "@/lib/data/markets";
 import { CITIES, cityHref } from "@/lib/data/cities";
 import { WILDLIFE } from "@/lib/data/wildlife";
 import { DAMAGE_REPAIR_PATH } from "@/lib/data/repairs";
+import { getAllPosts } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = ["/", "/wildlife", "/service-areas", "/about", "/contact", "/faq"];
@@ -51,6 +52,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     });
+  }
+
+  // The blog (Nov 2026): /blog and every post, dated from the posts' front
+  // matter. Nothing is listed until the first post exists (an empty /blog is
+  // noindex; owner's yes, Nov 3 2026).
+  const posts = getAllPosts();
+  if (posts.length > 0) {
+    entries.push({
+      url: new URL("/blog", BRAND.url).toString(),
+      lastModified: new Date(posts[0].updated ?? posts[0].date),
+      changeFrequency: "weekly",
+      priority: 0.6,
+    });
+    for (const post of posts) {
+      entries.push({
+        url: new URL(`/blog/${post.slug}`, BRAND.url).toString(),
+        lastModified: new Date(post.updated ?? post.date),
+        changeFrequency: "monthly",
+        priority: 0.6,
+      });
+    }
   }
 
   return entries;

@@ -200,3 +200,80 @@
     border-top: 0;
   }
 }
+
+/*
+ * Blog post bodies (Nov 2026): the markdown in content/blog is rendered to
+ * plain HTML at build time (lib/blog.ts), so the post's headings, paragraphs,
+ * lists and links are styled here to match the long-form pages (the same
+ * sizes, colours and link treatment as SituationPage and RichText).
+ */
+@layer components {
+  .post-body {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--color-ink-700);
+    text-wrap: pretty;
+  }
+  @media (min-width: 40rem) {
+    .post-body {
+      font-size: 1rem;
+    }
+  }
+  .post-body > * + * {
+    margin-top: 1rem;
+  }
+  .post-body h2 {
+    margin-top: 2.75rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  @media (min-width: 40rem) {
+    .post-body h2 {
+      margin-top: 3.25rem;
+      font-size: 1.875rem;
+    }
+  }
+  .post-body h3 {
+    margin-top: 2rem;
+    font-size: 1.125rem;
+  }
+  .post-body h2 + *, .post-body h3 + * {
+    margin-top: 1rem;
+  }
+  .post-body a {
+    font-weight: 500;
+    color: var(--color-pine-600);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .post-body a:hover {
+    color: var(--color-pine-700);
+  }
+  .post-body ul, .post-body ol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-left: 1.25rem;
+  }
+  .post-body ul {
+    list-style: disc;
+  }
+  .post-body ol {
+    list-style: decimal;
+  }
+  .post-body li::marker {
+    color: var(--color-pine-500);
+  }
+  .post-body strong {
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+  .post-body blockquote {
+    border-left: 2px solid var(--color-brass-400);
+    padding-left: 1rem;
+    color: var(--color-ink-700);
+  }
+  .post-body img {
+    border-radius: 2px;
+  }
+}

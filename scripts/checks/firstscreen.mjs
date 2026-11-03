@@ -1,7 +1,9 @@
 // Phone first-screen check for the ad landing pages (owner/ads chat rule, Oct 2026): at 375 x 812 the H1, the
 // guarantee line and the page's own big Call button must all sit above the fixed Call Now / Get Help Now bar.
 // /contact is reported but not failed: it has no guarantee line or hero buttons by design.
-// Usage: node firstscreen.mjs [outDir]   (server on :3000; needs playwright-core, see README.md)
+// Usage: node firstscreen.mjs [outDir] [extraPath ...]   (server on :3000; needs playwright-core, see README.md)
+// Extra paths (for example /blog and a post) are checked after the ad pages without being listed as ad pages; a
+// path with no guarantee line by design gets a "!" suffix (/blog/some-skunk-post!) and is judged like NO_GUARANTEE.
 // Writes a viewport screenshot per page into outDir and exits 1 if any page fails.
 import { chromium } from "playwright-core";
 import fs from "node:fs";
@@ -22,6 +24,12 @@ const PAGES = [
   "/service-areas/newmarket", "/service-areas/aurora", "/service-areas/stouffville",
   "/wildlife/raccoon-under-deck", "/wildlife/attic-cleanup", "/wildlife/dead-bird-removal", "/november-special",
 ];
+
+for (const extra of process.argv.slice(3)) {
+  const p = extra.replace(/!$/, "");
+  if (extra.endsWith("!")) NO_GUARANTEE.add(p);
+  PAGES.push(p);
+}
 
 const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromium", args: ["--no-sandbox"] });
 const ctx = await browser.newContext({ viewport: { width: 375, height: 812 }, deviceScaleFactor: 1, isMobile: true, hasTouch: true });

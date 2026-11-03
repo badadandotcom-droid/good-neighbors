@@ -176,6 +176,64 @@ export function serviceJsonLd(opts: {
   };
 }
 
+/**
+ * A blog post as a BlogPosting (Nov 2026): the headline, description and
+ * dates from the post's front matter, the business as author and publisher
+ * (by its @id), nothing else. No image until a post has one of the owner's
+ * own photos, and no rating or review fields, ever.
+ */
+export function blogPostingJsonLd(post: {
+  title: string;
+  description: string;
+  path: string;
+  date: string;
+  updated?: string;
+  primaryKeyword: string;
+  wordCount: number;
+}) {
+  const url = new URL(post.path, BRAND.url).toString();
+  const business = { "@type": "HomeAndConstructionBusiness", "@id": BUSINESS_ID, name: BRAND.seoName, url: BRAND.url };
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${url}#post`,
+    headline: post.title,
+    description: post.description,
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    datePublished: post.date,
+    dateModified: post.updated ?? post.date,
+    inLanguage: "en-CA",
+    keywords: post.primaryKeyword,
+    wordCount: post.wordCount,
+    author: business,
+    publisher: business,
+    isPartOf: { "@type": "Blog", "@id": `${new URL("/blog", BRAND.url).toString()}#blog` },
+  };
+}
+
+/** The blog index as a Blog with its posts listed, newest first. */
+export function blogJsonLd(opts: { name: string; description: string; posts: { title: string; path: string; date: string }[] }) {
+  const url = new URL("/blog", BRAND.url).toString();
+  return {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${url}#blog`,
+    name: opts.name,
+    description: opts.description,
+    url,
+    inLanguage: "en-CA",
+    publisher: { "@type": "HomeAndConstructionBusiness", "@id": BUSINESS_ID, name: BRAND.seoName, url: BRAND.url },
+    blogPost: opts.posts.map((p) => ({
+      "@type": "BlogPosting",
+      "@id": `${new URL(p.path, BRAND.url).toString()}#post`,
+      headline: p.title,
+      url: new URL(p.path, BRAND.url).toString(),
+      datePublished: p.date,
+    })),
+  };
+}
+
 /** Breadcrumb trail for a page, starting at the homepage. */
 export function breadcrumbJsonLd(trail: { name: string; path: string }[]) {
   const items = [{ name: "Home", path: "/" }, ...trail];

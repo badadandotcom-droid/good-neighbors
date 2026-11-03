@@ -7,6 +7,7 @@ import { getActiveMarkets, marketHref } from "@/lib/data/markets";
 import { CITIES, cityHref } from "@/lib/data/cities";
 import { getSpeciesEntries } from "@/lib/data/wildlife";
 import { DAMAGE_REPAIR_PATH } from "@/lib/data/repairs";
+import { hasPosts } from "@/lib/blog";
 
 export function Footer() {
   const phone = getPhone();
@@ -64,6 +65,9 @@ export function Footer() {
           links={[
             { label: "About", href: "/about" },
             { label: "FAQ", href: "/faq" },
+            // The one quiet link to the blog (owner, Nov 2026, via GNW Blog 1): the
+            // only change to existing pages. It appears once the first post exists.
+            ...(hasPosts() ? [{ label: "Blog", href: "/blog" }] : []),
             { label: "Contact", href: "/contact" },
           ]}
         />
