@@ -132,8 +132,14 @@ export const WILDLIFE: WildlifeEntry[] = [
     category: "species",
     name: "Birds",
     singular: "Bird",
-    seoTitle: "Bird Removal in Toronto: Vents, Chimneys & Eaves",
-    heading: "Bird Removal in Toronto",
+    // Title and H1 (owner's yes, Nov 3 2026, 6:40 PM, GNW Website 21; ads chat
+    // OK in ADS 50's Nov 3 note): "pigeon control toronto" is the biggest bird
+    // search by far (Keyword Planner, GTA: about 260 a month, 720 in September;
+    // claude/bird-keyword-volumes-2026-10-11.md) and the page never said
+    // "control". Was "Bird Removal in Toronto: Vents, Chimneys & Eaves" / "Bird
+    // Removal in Toronto". URL unchanged.
+    seoTitle: "Pigeon Control & Bird Removal in Toronto",
+    heading: "Pigeon Control & Bird Removal in Toronto",
     metaDescription:
       "Pigeon and bird removal in Toronto: roofs, ledges, balconies, vents and chimneys. Eggs and young checked first; vents screened and chimneys capped after.",
     summary: "Nesting in vents, chimneys, and eaves — most often a seasonal, fast-moving situation.",

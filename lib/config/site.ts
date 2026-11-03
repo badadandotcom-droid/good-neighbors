@@ -160,7 +160,10 @@ export const ALWAYS_ON_CALL = {
 export const GOOGLE_RATING: { enabled: boolean; rating: string; count: number; href: string } = {
   enabled: true,
   rating: "5.0",
-  count: 4,
+  // 6 from Nov 3 2026 (read live on Google Maps, 6:50 PM, in GNW Website 21:
+  // 5.0, six 5-star reviews; the ads chat's note of 6:40 PM said Duane saw 6).
+  // Was 4 (Oct 27).
+  count: 6,
   href: "/review",
 };
 

@@ -464,6 +464,17 @@ export const SITUATIONS: SituationContent[] = [
     aboveCallLine: "Is it on a road, a sidewalk or in a park? That's for the City: in Toronto, call 311.",
     sections: [
       {
+        // First section (owner's yes, Nov 3 2026, 6:40 PM, GNW Website 21, after
+        // the ads chat's Quality Score read: the page opened with three sections
+        // about the smell before it said what we do; the service and the areas
+        // now come first for "dead animal removal toronto").
+        heading: "Dead animal removal in Toronto and the GTA",
+        paragraphs: [
+          "Call when the smell, the flies or a sudden silence in the attic tells you something has died in the house. We come out the same day, at any hour, find the animal, take it out and clean the spot where it died. Most of these jobs are done in one visit.",
+          "We cover Toronto, including Scarborough, North York and Etobicoke, and the rest of the GTA: Peel, York and Durham Region. The price is explained before anything is touched.",
+        ],
+      },
+      {
         heading: "The smell of a dead animal in the house",
         paragraphs: [
           "It usually starts as a faint, sweetish, rotten smell in one room that you can't trace to the garbage or the drains. Over a day or two it gets stronger, it's worse in the afternoon when the house warms up, and it seems to come from a wall, a ceiling or a vent rather than from anything in the room.",

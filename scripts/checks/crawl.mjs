@@ -17,7 +17,7 @@ const GUARANTEE_FULL =
   "Every entry point we seal comes with a lifetime guarantee, for as long as you own your home. If an animal gets back in through it, we come back and take care of it at no charge. Full terms are written on your invoice.";
 
 // The one allowed mention of reviews: the real Google rating line from
-// GOOGLE_RATING (lib/config/site.ts), "5.0 on Google · 4 reviews" (owner, Oct 27
+// GOOGLE_RATING (lib/config/site.ts), "5.0 on Google · N reviews" (owner, Oct 27
 // 2026). It is removed before the banned-words test; any other "review" or
 // "rating" on a page still fails.
 const RATING_LINE = /\b\d\.\d on Google · \d+ reviews?\b/g;
