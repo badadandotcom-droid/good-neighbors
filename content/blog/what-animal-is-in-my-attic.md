@@ -45,7 +45,9 @@ If it comes from deeper in the attic, away from the vents, with heavy movement a
 
 ## Bats are the quiet ones
 
-Bats are the hardest to pick out by ear. Most of their calls are pitched too high for people to hear, so an attic with bats in it can seem quiet. The better test is the one the Ontario SPCA suggests: go outside about half an hour before dusk and watch the roofline. If bats live up there, you'll see them come out to feed. If you do, see [bat removal](/wildlife/bats).
+Bats are the hardest to pick out by ear. Most of their calls are pitched too high for people to hear, so an attic with bats in it can seem quiet. The better test is the one the Ontario SPCA suggests: go outside about half an hour before dusk and watch the roofline. Any warm evening with no rain or wind works, from spring into early fall. If you spot them, see [bat removal](/wildlife/bats).
+
+Seeing none doesn't rule bats out. They often stay in on cold or wet nights, and from about October to spring they hibernate, so a watch in the cold months will likely show nothing. Don't wait for spring: call, and we'll check for signs of bats.
 
 ## Scratching in the walls, or tiny squeaks
 
@@ -74,6 +76,6 @@ Don't go up into the attic to find it, either. A mother raccoon will defend her 
 
 Call once you've heard it more than once, when you hear chirping or crying, or when you can see a hole from the ground. Calls are answered 24/7, and we offer same-day service.
 
-What we do, in order: we find where it's getting in, and we check for babies before anything goes on the hole. A one-way door goes over the entry so the animal can get out and can't get back in. Once everything is out, we seal it. We're carpenters who also do wildlife, so the repair is cut and fitted to match the house. Lifetime guarantee on every entry point we seal. More on [getting an animal out of the attic](/wildlife/something-in-the-attic).
+What we do, in order: we find where it's getting in, and we check for babies before anything goes on the hole. A one-way door goes over the entry so the animal can get out and can't get back in. Once everything is out, we seal it. We do the carpentry ourselves, so the repair is cut and fitted to match the house. Lifetime guarantee on every entry point we seal. More on [getting an animal out of the attic](/wildlife/something-in-the-attic).
 
 You'll know the price before any work begins. Send photos through the [contact page](/contact), or call us now.
