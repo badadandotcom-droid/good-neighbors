@@ -1,6 +1,6 @@
 # Review: thicker /wildlife/bats (GNW Website 23, Wed Nov 4, 2026, about 3:40 AM Toronto)
 
-Status: DRAFT on branch `claude/gnw-website-23`, not live. Waiting on the owner's yes.
+Status: APPROVED by the owner, Wed Nov 4, 2026, 4:59 PM ("y and y": yes to the five method facts below, and yes to keeping the headings built on "bats in the attic", "bat exclusion" and "bat control"). Goes live from branch `claude/gnw-website-23`.
 
 ## What changed
 - /wildlife/bats moved from the short template (253 words, no FAQ) to the long-form species template (`bats` in `lib/data/species-pages.ts`, about 1,400 words of page copy, 8 FAQ questions with FAQPage schema), plus a sealing-and-repair block with the lifetime-guarantee box (`repair` on the bats entry in `lib/data/wildlife.ts`).
