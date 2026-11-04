@@ -51,6 +51,8 @@ Live branch `claude/good-neighbors-v2-visual-redesign` at 5488938 (Nov 3, 9:59 P
 - Nov 3, 9:58 PM, Duane: "You can go ahead live with all three." LIVE 9:59 PM: live branch 6952123 → 5488938, Vercel Production success 9:59 PM; read live 10:00 PM: birds title and H1 "Pigeon Control & Bird Removal in Toronto", the pigeon-control paragraph and balcony link present; dead-animal page's first H2 "Dead animal removal in Toronto and the GTA", H1 unchanged; "5.0 on Google · 6 reviews" on the homepage, the attic page, birds and dead-animal.
 - Not checked after go-live: PSI on the live birds page; the Birds ad's pinned headline (the ads chat's call: it may want headline 1 re-pinned to the new phrase); whether most pigeon calls come from balconies (the new paragraph says so; Duane did not object when shown).
 
+- Nov 3, 11:18 PM, Duane: "Let's do the handoff now." Handed off to GNW Website 22: docs/handoffs/gnw-website-22.md on branch claude/gnw-website-21. The Dec 1 scheduled check (trig_019EuQtGqN5dZkX8hd4WuxML) stays in this chat until GNW Website 22 recreates it and deletes it. Open at close: balcony netting (Duane), /wildlife/bats, work photos, the audit tech note, Search Console indexing for four URLs, the three thin-data Quality Score pages at about 100 impressions.
+
 ## Decisions in GNW Website 20 (Duane's words, Toronto time)
 - Nov 2, 10:59 AM: "Yeah, do what you gotta do now on Sonnet and then tell me when to switch." (the Dec 1 check moved into GNW Website 20).
 - Nov 2, 11:17 AM: "Yes. Makes sense. I'm glad you thought about it and doing the right thing." (the two 311 lines as worded; live 11:19 AM).
