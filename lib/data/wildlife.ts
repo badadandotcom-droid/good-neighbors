@@ -199,6 +199,19 @@ export const WILDLIFE: WildlifeEntry[] = [
     iconId: "bat",
     photoOverride: "/images/bat-detail.jpg",
     photoAlt: "A bat tucked into a gap in a damaged soffit",
+    // Nov 4 2026 (GNW Website 23): the page went long-form (`bats` in
+    // lib/data/species-pages.ts) and gained this block. Repairs named are
+    // only the owner-confirmed ones in lib/data/repairs.ts (soffits, fascia
+    // boards, roof vents, siding, chimney caps); bats are sealed out of the
+    // house, so the lifetime-guarantee box stays on.
+    repair: {
+      heading: "Bat exclusion and sealing",
+      paragraphs: [
+        "Getting the bats out is half the job. The other half is closing the gaps they used, so the colony can't move back in through them.",
+        "Once the last bat is out, we seal each gap and repair what's around it where it's damaged: the soffit, a fascia board, a roof vent, the siding, or a chimney cap where bats were using the chimney. The repair matches the materials and colours already on your house, and we do the carpentry ourselves.",
+      ],
+      linkLabel: "Soffit, fascia and vent repair",
+    },
     trustRow: true,
   },
   {

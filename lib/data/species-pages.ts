@@ -22,6 +22,32 @@ import type { SituationContent } from "@/lib/data/situations";
  * birds left where they are until the young have flown; no relocation
  * promises; nothing about the work beyond what the live site already says.
  *
+ * Bats (Nov 4, 2026, GNW Website 23; the five bat ad groups land here, and
+ * [bat removal near me] scores 7, so the title, H1 and URL are locked by the
+ * Quality Score gate and only the body grew, from 253 words). The calendar
+ * is Ontario's guidance on bats in buildings (files.ontario.ca, MNR species
+ * at risk, "Bats in buildings: a guide to safe and humane exclusions",
+ * Table 1, Ontario), checked against the Ontario SPCA's bat page: no
+ * eviction from mid-May to mid-August (flightless pups); one-way doors in
+ * April and early May, and from late August through November; from
+ * December to the end of March gaps are sealed only once every bat has
+ * left (big brown bats may hibernate inside). Species: little brown bat
+ * endangered in Ontario since Jan 24, 2013 (ontario.ca), three bat species
+ * endangered in Canada (canada.ca, City of Toronto), white-nose syndrome;
+ * big brown bat nursery colonies in attics and chimneys and hibernating in
+ * buildings (MNR guide; Tennessee wildlife agency). A bat inside the house:
+ * the City of Toronto's bat page and the Canadian Wildlife Health
+ * Cooperative's bats-and-rabies sheet (don't touch; contact or a bat in a
+ * room with a sleeping person, a child or anyone who can't say: wash for 15
+ * minutes and call a doctor or public health; in Toronto 311, plain text,
+ * never a tel: link). Gap size about a centimetre (Ontario SPCA half an
+ * inch, Minnesota DNR 3/8 inch). No time of day for the one-way door; the
+ * bat-watch tip is an activity clue with what to do in winter. No cleanup
+ * content (the attic-cleanup rule). The lifetime guarantee applies (bats
+ * are sealed out of the house). The method lines (one-way doors on each
+ * gap, several days, then sealing and repair) were written for the owner
+ * to confirm before go-live.
+ *
  * Same rules as lib/data/situations.ts: general facts about the animals and
  * about Toronto homes are wanted; everything about the business must already
  * be true on the live site. Neighbourhoods come only from the owner's lists
@@ -458,6 +484,115 @@ export const SPECIES_PAGES: SituationContent[] = [
       {
         question: "How soon can you come?",
         answer: "The same day, at any hour of the day or night. The visit starts at the deck, not inside the house.",
+      },
+    ],
+  },
+  {
+    slug: "bats",
+    subhead:
+      "Bats in the attic, the walls or behind the siding. We find the gaps they use, let them out through one-way doors when Ontario's timing allows, and seal the way in.",
+    trustRow: true,
+    signs: {
+      heading: "Signs of bats in the attic",
+      intro: "Bats are small and easy to miss. These are the signs that usually give them away.",
+    },
+    sections: [
+      {
+        heading: "Bat removal in Toronto and the GTA",
+        paragraphs: [
+          "A bat problem usually starts small: droppings below a gap in the roofline, a squeak above the bedroom ceiling, a few bats slipping out from under the eaves on a summer evening.",
+          "We handle bat removal and bat control across Toronto and the GTA: Brampton and Mississauga in [Peel Region](/service-areas/peel-region), Vaughan, Markham and Richmond Hill in [York Region](/service-areas/york-region), Pickering, Ajax, Whitby and Oshawa in [Durham Region](/service-areas/durham-region), and every part of [Toronto](/service-areas/toronto).",
+          "Same-day service applies to bats too: we can come out today, confirm it's bats, find the gaps they use and tell you what the season allows, with the price explained before any work begins.",
+        ],
+      },
+      {
+        heading: "Bats in the attic",
+        paragraphs: [
+          "The bats most likely to move into an Ontario house are the big brown bat and the little brown bat. In late spring the females gather in nursery colonies to have their young, and an attic, a soffit or the space beside a chimney suits them.",
+          "Each mother has one or two pups, born in late spring or early summer, and the pups can't fly for their first few weeks. So bats in the attic in June are a different job from bats in the attic in September.",
+        ],
+      },
+      {
+        heading: "When bats can be removed in Ontario",
+        paragraphs: [
+          "Ontario's guidance on bats in buildings sets the calendar, and we follow it. From mid-May to mid-August, no bats are evicted: pups that can't fly yet may be inside, and a pup cut off from its mother dies.",
+          "One-way doors can go on in April and early May, before the pups are born, and again from late August through November, once the young are flying.",
+          "From December to the end of March, some bats, big brown bats in particular, may spend the winter hibernating inside a house. Gaps are sealed in winter only once every bat has left, because a bat put out into the cold would likely die. If bats are wintering in your attic, the one-way doors wait for April.",
+          "Whatever the month, call when you notice them. We'll tell you which part of the year you're in and book the work for when the season allows.",
+        ],
+      },
+      {
+        heading: "Bats and Ontario's wildlife rules",
+        paragraphs: [
+          "Killing or harming a bat, or keeping one, is against the law. Three bat species found in Ontario are endangered in Canada, among them the little brown bat, which often raises its young in attics and has been on Ontario's endangered list since 2013.",
+          "The reason is white-nose syndrome, a fungus disease that has hit Ontario's bats hard at their hibernation sites. Ontario's guidance says that work which may affect a species at risk can need the province's authorization.",
+          "So nothing we do traps a bat inside or harms it. The bats leave on their own, in the months Ontario's guidance sets out.",
+        ],
+      },
+      {
+        heading: "Where bats get into a house",
+        paragraphs: [
+          "Bats don't need much room. A gap about a centimetre wide is enough, which is why they get in where larger animals can't: along the roofline and the soffits, behind siding that has shrunk or worked loose, around roof and attic vents, and at the chimney.",
+          "Those gaps are usually there before the bats are. Wood shrinks, siding loosens and vent screens tear, and a bat looking for a roost finds the opening.",
+          "From spring to fall you can help us find them. Watch the roofline from just before sunset until dark: bats coming out often show which gap they use. Seeing none doesn't rule them out, and in winter the bats are hibernating, so call either way and we'll look for the signs.",
+        ],
+      },
+      {
+        heading: "A bat inside the house",
+        paragraphs: [
+          "Don't touch it, even if it looks sick or hurt. Bats can carry rabies.",
+          "Anyone it may have touched should wash the spot with soap and water for 15 minutes, then call a doctor or the local public health unit right away. The same goes if it was in a bedroom while someone slept, or in a room with a child or anyone who can't say for sure whether it touched them. Keep the bat shut in that room if you can do it without touching it, in case it needs to be tested. In Toronto, 311 connects you to Toronto Public Health and Toronto Animal Services. If a pet may have touched it, call your vet.",
+          "If no one touched it and no one was asleep in that room, shut the doors to the rest of the house, open a window and give it time to fly out on its own. If bats keep turning up inside, call us and we'll find where they're getting in.",
+        ],
+      },
+    ],
+    process: {
+      heading: "How bat exclusion works",
+      intro: "Bat exclusion is how bats are taken out of a house humanely: they leave through one-way doors, and the gaps are closed behind them.",
+      steps: [
+        "We look for every gap the bats are using, from the ground and up the ladder. Droppings below an opening and dark rub marks around its edge usually give it away.",
+        "We check for babies first, and from mid-May to mid-August nothing goes on that could keep a pup from its mother. Work found in those months is booked for late August.",
+        "A one-way door goes over each gap the bats use. They leave on their own and can't get back in, and the door stays on until they've all gone, usually several days.",
+        "Then the door comes off and the gap is sealed, with any damaged soffit, fascia, vent or siding around it repaired to match your home.",
+      ],
+      outro: "We explain the price first. You'll know the method, the timing and what we'll seal before any work begins.",
+    },
+    faqHeading: "Bat removal questions",
+    faqs: [
+      {
+        question: "When can bats be removed in Ontario?",
+        answer:
+          "In April and early May, before the pups arrive, and from late August through November, once the young can fly. Between mid-May and mid-August, Ontario's guidance is to leave the bats where they are. In winter, gaps are sealed only after every bat has gone.",
+      },
+      {
+        question: "Can you get bats out of the attic in the summer?",
+        answer:
+          "Not from mid-May to mid-August, while the pups can't fly yet. We can still come out, confirm it's bats and find the gaps, so the one-way doors are ready to go on in late August.",
+      },
+      {
+        question: "Is November too late to get bats out?",
+        answer:
+          "No. One-way doors can go on through November while the bats are still coming and going. Any bats that settle in to hibernate in the house are left until April, since putting a bat out in the cold would likely kill it.",
+      },
+      {
+        question: "Are bats protected in Ontario?",
+        answer:
+          "Yes. It's against the law to kill or harm a bat, and the little brown bat, one of the two that turn up in attics here, is endangered in Ontario. That's why bats leave through one-way doors at the right time of year and are never sealed in.",
+      },
+      {
+        question: "What should I do if there's a bat in my house?",
+        answer:
+          "Don't touch it. If no one had contact with it and it wasn't in a room where someone was asleep, close the doors to that room, open a window and let it leave. If anyone may have touched it, wash the spot with soap and water for 15 minutes and call your doctor or public health right away. In Toronto, call 311.",
+      },
+      {
+        question: "Will the bats come back?",
+        answer: `Not through a gap we've sealed. We find each gap they're using before anything is closed, so they aren't just pushed to another one. ${GUARANTEE.short}`,
+      },
+      INSURANCE_FAQ,
+      {
+        question: "Can you come out the same day?",
+        answer:
+          "Yes. The first visit is to confirm it's bats, find the gaps and look for pups. Whether the one-way doors go on that day depends on the month.",
       },
     ],
   },
