@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 const STEPS: { title: string; body: string }[] = [
   {
     title: "Tell us what's happening",
-    body: "Call or send a quick request — what you're hearing or seeing, and where.",
+    body: "Call or send a quick request: what you're hearing or seeing, and where.",
   },
   {
     title: "We come out and handle it",

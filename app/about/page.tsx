@@ -8,7 +8,7 @@ import type { IllustrationId, PhotoSlotId } from "@/lib/types";
 
 export const metadata = pageMetadata({
   title: "About",
-  description: `${BRAND.name} is a humane wildlife removal company built around fast, local, professional service.`,
+  description: `${BRAND.name} is a humane wildlife removal company serving Toronto, York, Durham and Peel. Same-day service, open 24/7. We explain the price first.`,
   path: "/about",
 });
 

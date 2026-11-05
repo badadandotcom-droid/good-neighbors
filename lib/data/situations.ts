@@ -146,7 +146,7 @@ export const SITUATIONS: SituationContent[] = [
         heading: "Raccoon in the attic or roof",
         paragraphs: [
           "Toronto is known for one of the densest urban raccoon populations anywhere, so a raccoon in the attic is a normal thing to happen to a normal house. The sound is heavy and slow: footsteps, thumps, sometimes growling or chittering, almost always after dark. Raccoons climb downspouts and trees, pull roof vents right off, and push through soffit where the roof meets the eaves.",
-          "They den in attics mostly from late winter to early summer to have their kits. The babies are born in spring, mostly April and May, and stay with their mother into late summer. While the family is there, it uses one corner of the attic as a latrine, its weight flattens the insulation, and the droppings can carry raccoon roundworm, so don't handle them and don't go up to look. See [raccoon removal](/wildlife/raccoons) for the signs outside the house.",
+          "They den in attics mostly from late winter to early summer to have their kits. The babies are born in spring, mostly April and May, and stay with their mother into late summer. While the family is there, the mother and kits leave their droppings in one corner, their weight flattens the insulation, and raccoon droppings can carry roundworm, so don't handle them and don't go up to look. See [raccoon removal](/wildlife/raccoons) for the signs outside the house.",
         ],
       },
       {
@@ -255,7 +255,7 @@ export const SITUATIONS: SituationContent[] = [
         heading: "Raccoon in the wall or ceiling",
         paragraphs: [
           "Raccoons are too big for most wall cavities, but they fit between floors, inside chimney chases and above dropped ceilings, and the sound is hard to mistake: heavy, slow, mostly at night. In spring a mother picks exactly these quiet, enclosed spots for her kits.",
-          "The damage adds up: torn drywall, soiled insulation, one spot used as a latrine. See [raccoon removal](/wildlife/raccoons) for the signs outside.",
+          "The damage adds up: torn drywall, soiled insulation, droppings in one spot. See [raccoon removal](/wildlife/raccoons) for the signs outside.",
         ],
       },
       {

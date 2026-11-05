@@ -217,18 +217,7 @@ export const CITIES: City[] = [
     cardLine: "Unionville and Angus Glen to Cornell and Milliken.",
     intro:
       "Markham mixes the heritage streets of Unionville, the big newer homes of Cachet and Angus Glen, and the tight subdivisions of Milliken and Cornell, with the Rouge River threading through all of it. When something moves in overhead, we get it out humanely, seal the way in and repair the damage.",
-    neighbourhoods: [
-      "Unionville",
-      "Cachet",
-      "Angus Glen",
-      "Thornhill",
-      "Berczy",
-      "Wismer",
-      "Cornell",
-      "Box Grove",
-      "Markham Village",
-      "Milliken",
-    ],
+    neighbourhoods: ["Unionville", "Cachet", "Angus Glen", "Thornhill", "Berczy", "Wismer"],
     problems: [
       "The Rouge River's headwater streams run through Markham, past Unionville, Markham Village and Cornell, and the valley land along them is full of raccoons, squirrels and skunks. Unionville's Main Street homes date back well over a century, with mature trees, wood trim and old brick chimneys, and the same goes for the older parts of Markham Village. Houses like that have a dozen small ways in that a newer home doesn't.",
       "Cachet and Angus Glen are the other end of the scale: large homes from the 1990s and 2000s on big lots, often backing onto a golf course or a woodlot. Size works against you here. A bigger roof has more vents, more soffit and more places where two rooflines meet, and a raccoon only needs one of them.",
@@ -347,7 +336,7 @@ export const CITIES: City[] = [
     cardLine: "Historic Main Street to Stonehaven, Glenway and Woodland Hill.",
     intro:
       "Newmarket has a historic core along Main Street and Fairy Lake, established neighbourhoods like Glenway and Huron Heights, and newer estates in Stonehaven and Summerhill, with the Holland River running through the middle. Whatever is in the attic, we get it out humanely, seal the entry point and repair the damage.",
-    neighbourhoods: ["Stonehaven", "Glenway", "Summerhill", "Armitage", "Woodland Hill", "Huron Heights", "Bristol-London"],
+    neighbourhoods: ["Stonehaven", "Glenway", "Summerhill", "Armitage", "Woodland Hill", "Huron Heights"],
     problems: [
       "Newmarket's oldest homes sit along Main Street and around Fairy Lake, Victorian brick with wood trim, deep eaves and chimneys that were never capped. The Holland River flows past them and north out of town, and its banks and the trails around Fairy Lake are where the town's raccoons and skunks live. An old house with mature trees beside a river valley is about as inviting as it gets.",
       "Huron Heights and Bristol-London were built in the 1970s and 80s, Glenway and Armitage mostly in the 80s and 90s, and by now their trees are big enough to touch the roof and their wood fascia has had decades of weather. Stonehaven, Summerhill and Woodland Hill are newer and larger, with long rooflines, more vents and more soffit, which is more for a raccoon to test.",
@@ -466,7 +455,7 @@ export const CITIES: City[] = [
     cardLine: "The lakefront and Pickering Village to Riverside and Nottingham.",
     intro:
       "Ajax runs from the lakefront in Lakeside up past the old homes of Pickering Village and central Ajax to the newer streets of Riverside and Nottingham, with Duffins Creek along its western edge. Wherever the noise is coming from, we remove the animal humanely, seal the way in and repair the damage.",
-    neighbourhoods: ["Riverside", "Nottingham", "Pickering Village", "Lakeside", "Applecroft", "Hermitage", "Salem", "Central Ajax"],
+    neighbourhoods: ["Riverside", "Nottingham", "Pickering Village", "Lakeside", "Applecroft", "Hermitage"],
     problems: [
       "Ajax has two very different kinds of older home. Pickering Village, now part of Ajax, is a 19th-century village with brick and frame houses under big trees. Central Ajax was built in the 1940s through the 70s, starting with the wartime homes around the old munitions plant, and those houses have wood fascia and soffit that has had a long time to weather. Both kinds give a squirrel plenty to chew on.",
       "Riverside, Nottingham, Salem and Applecroft came later, mostly 1990s to 2010s two-storeys with aluminum soffit, several roof vents and attached garages, and Hermitage sits in between. Riverside backs onto Duffins Creek, and the creek valley is where much of the town's wildlife lives.",
@@ -502,7 +491,7 @@ export const CITIES: City[] = [
     cardLine: "Windfields and Kedron to McLaughlin, Centennial and Lakeview.",
     intro:
       "Oshawa has a century of housing in one city: the older streets of McLaughlin and Centennial north and south of downtown, the postwar blocks of Eastdale and Lakeview, and brand-new subdivisions in Windfields and Kedron up near the university. We get the animal out humanely, seal the entry point and repair the damage.",
-    neighbourhoods: ["Windfields", "Kedron", "McLaughlin", "Northglen", "Samac", "Taunton", "Pinecrest", "Centennial", "Eastdale", "Lakeview"],
+    neighbourhoods: ["Windfields", "Kedron", "McLaughlin", "Northglen", "Samac", "Taunton"],
     problems: [
       "Oshawa Creek runs right through the middle of the city, from the north end down past downtown to the lake, and the ravine along it is a corridor for raccoons, squirrels and skunks. The neighbourhoods either side of it, McLaughlin and Centennial, have some of Oshawa's oldest homes: brick and frame houses from the early 1900s onward, with wood soffit and fascia, deep eaves and chimneys that have never had a cap.",
       "Eastdale, Lakeview and Pinecrest are mostly postwar, 1950s to 70s bungalows and two-storeys whose trees are now big enough to touch the roof. Samac and Northglen came in the 1980s and 90s, and Taunton after that, with aluminum soffit and roof vents that are now old enough to loosen and crack.",
@@ -574,19 +563,7 @@ export const CITIES: City[] = [
     cardLine: "The Kingsway and Humber Valley to Mimico, Long Branch and Rexdale.",
     intro:
       "Etobicoke is old trees and old rooflines: the Kingsway, Humber Valley Village and Sunnylea along the Humber, the lakefront streets of Mimico and Long Branch, and the postwar subdivisions of Markland Wood, Alderwood and Rexdale. We get the animal out humanely, seal the way in and repair the damage.",
-    neighbourhoods: [
-      "The Kingsway",
-      "Humber Valley Village",
-      "Princess Gardens",
-      "Sunnylea",
-      "Islington",
-      "Markland Wood",
-      "Mimico",
-      "Long Branch",
-      "Alderwood",
-      "Rexdale",
-      "Eringate",
-    ],
+    neighbourhoods: ["The Kingsway", "Humber Valley Village", "Princess Gardens", "Sunnylea", "Islington", "Markland Wood"],
     problems: [
       "The Humber River is the spine of Etobicoke, and the homes along it in the Kingsway, Humber Valley Village and Sunnylea were built from the 1930s to the 50s: stone and brick, slate and cedar, wood soffits and fascia, big chimneys, and oaks and maples that have had ninety years to grow over the roof. They are beautiful houses with a great many ways in, and the river valley keeps them supplied with raccoons.",
       "Mimico Creek runs through the middle, and the lakefront in Mimico, Long Branch and Alderwood mixes 1920s cottages-turned-houses with 1950s bungalows and new builds. Islington and Princess Gardens are 1950s and 60s neighbourhoods under mature trees; Markland Wood and Eringate are a little younger, with the original wood trim now well weathered.",
@@ -694,7 +671,7 @@ export const CITIES: City[] = [
     cardLine: "Bolton and Caledon East to the Escarpment villages and rural estates.",
     intro:
       "Caledon is the rural top of Peel: Bolton's old village core and its newer subdivisions, Caledon East, the Escarpment villages of Belfountain, Inglewood, Cheltenham and Alton, and estates and farms on big lots in between. Out here the list of animals is longer, and we handle all of them humanely, seal the way in and repair the damage.",
-    neighbourhoods: ["Bolton", "Caledon East", "Inglewood", "Cheltenham", "Belfountain", "Alton", "Palgrave", "Mono Mills", "Caledon Village"],
+    neighbourhoods: ["Bolton", "Caledon East", "Inglewood", "Cheltenham", "Belfountain", "Alton"],
     problems: [
       "Caledon is mostly countryside: the Niagara Escarpment along the west side, the Oak Ridges Moraine across the east, the Caledon Hills and the Humber headwaters in between. That means more skunks, more bats and more raccoons than the suburbs to the south, and animals that have barns, sheds, garages and woodpiles to choose from before they ever try the house.",
       "Bolton is the one real town, with a 19th-century village core on the Humber under mature trees and subdivisions from the 1980s to the 2010s around it: wood trim and open chimneys in the old part, aluminum soffit and roof vents in the new. Caledon East, Caledon Village, Palgrave and Mono Mills are smaller versions of the same mix.",

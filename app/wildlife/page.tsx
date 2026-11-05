@@ -47,7 +47,7 @@ export default function WildlifePage() {
               Whatever moved in, we know how to move it out.
             </p>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-700 text-pretty">
-              Each species behaves differently, which changes how we approach removal — but every job starts the
+              Each species behaves differently, which changes how we approach removal, but every job starts the
               same way: understanding what&apos;s happening at your property and responding quickly.
             </p>
             <GuaranteeLine className="mt-6" />
@@ -94,8 +94,7 @@ export default function WildlifePage() {
               <h3 className="font-display text-3xl text-charcoal sm:text-4xl">{species[0].name}</h3>
               <p className="max-w-md text-[15px] leading-relaxed text-ink-700">{species[0].summary}</p>
               <span className="mt-2 inline-flex items-center gap-2 text-sm font-medium text-pine-600 group-hover:text-pine-700">
-                Learn more
-                <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+                <span className="transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">→</span>
               </span>
             </div>
           </Link>
@@ -122,7 +121,7 @@ export default function WildlifePage() {
                   <p className="mt-2 text-sm leading-relaxed text-ink-700">{s.summary}</p>
                 </div>
                 <span className="mt-auto text-sm font-medium text-pine-600 group-hover:text-pine-700">
-                  Learn more &rarr;
+                  <span aria-hidden="true">&rarr;</span>
                 </span>
               </Link>
             ))}
@@ -162,7 +161,7 @@ export default function WildlifePage() {
         <Container>
           <SectionHeading
             eyebrow="Not Sure?"
-            title="Sometimes you just know where — not what"
+            title="Sometimes you just know where, not what"
             description="That's still enough to get started. These are the two most common ways wildlife problems show up."
           />
           <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2">

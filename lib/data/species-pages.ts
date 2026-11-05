@@ -87,7 +87,7 @@ export const SPECIES_PAGES: SituationContent[] = [
         heading: "How raccoons get into a house",
         paragraphs: [
           "Raccoons rarely find a way in. They make one. They climb a downspout, a tree or the corner of the brickwork, then go to work on the weakest point of the roofline: a plastic roof vent pulled right off, a soffit pushed up where the roof meets the eaves, shingles lifted at the edge, a chimney with no cap. On an older Toronto home the trim is wood and gives way quickly; on a newer one, the aluminum soffit lifts at the corners.",
-          "Once in, a raccoon settles in. It flattens the insulation into a bed, uses one corner of the attic as a latrine, and comes and goes through the same hole every night. The damage is at the opening, in the insulation, and sometimes in the ceiling below. Our [damage repair](/wildlife/damage-repair) page lists exactly what we fix.",
+          "Once in, a raccoon settles in. It flattens the insulation into a bed, leaves its droppings in one corner of the attic, and comes and goes through the same hole every night. The damage is at the opening, in the insulation, and sometimes in the ceiling below. Our [damage repair](/wildlife/damage-repair) page lists exactly what we fix.",
         ],
       },
       {

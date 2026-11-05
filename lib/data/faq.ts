@@ -40,12 +40,12 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "What should I do if I hear something in my attic?",
     answer:
-      "Avoid the urge to go up and investigate yourself, especially if young animals may be involved. Note when you hear activity and roughly where, and contact us — that information helps our technician right away.",
+      "Avoid the urge to go up and investigate yourself, especially if young animals may be involved. Note when you hear activity and roughly where, and contact us. That information helps our technician right away.",
   },
   {
     question: "What should I do if I hear something in a wall?",
     answer:
-      "Leave the wall alone — cutting into it yourself can make the situation harder to resolve. Let us know which wall and when the noise happens, and we'll take it from there.",
+      "Leave the wall alone. Cutting into it yourself can make the situation harder to resolve. Let us know which wall and when the noise happens, and we'll take it from there.",
   },
   {
     question: "Will you need to come inside my home?",

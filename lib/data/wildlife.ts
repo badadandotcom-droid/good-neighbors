@@ -29,7 +29,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     heading: "Raccoon Removal in Toronto",
     metaDescription:
       "Humane raccoon removal in Toronto & the GTA. We seal the entry point and repair roof, soffit and vent damage. Lifetime guarantee on every entry point we seal.",
-    summary: "Strong, dexterous, and drawn to attics, chimneys, and sheds — especially with young in spring.",
+    summary: "They pull roof vents off, push up soffits and den in attics, chimneys and sheds, mostly from late winter to early summer.",
     intro:
       "In spring, a female raccoon often looks for a warm, hidden place to raise her young. Raccoons are strong enough to tear rooflines and soffits and clever enough to find the weakest point in a house.",
     commonSigns: [
@@ -142,7 +142,7 @@ export const WILDLIFE: WildlifeEntry[] = [
     heading: "Pigeon Control & Bird Removal in Toronto",
     metaDescription:
       "Pigeon and bird removal in Toronto: roofs, ledges, balconies, vents and chimneys. Eggs and young checked first; vents screened and chimneys capped after.",
-    summary: "Nesting in vents, chimneys, and eaves — most often a seasonal, fast-moving situation.",
+    summary: "Nests in dryer and bathroom vents, chimneys and eaves. We check for eggs and young first.",
     intro:
       "Birds most often turn up nesting in bathroom or dryer vents, chimneys, or under eaves. It's usually a seasonal situation tied to nesting season, and it can move quickly from 'a bit of noise' to a blocked vent or chimney that needs prompt attention.",
     commonSigns: [

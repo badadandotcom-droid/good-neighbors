@@ -21,7 +21,7 @@ export function TrustBar({ market }: { market?: Market }) {
     },
     {
       title: "Care for your home",
-      body: "Careful around your roofline, landscaping, and finishes — every visit.",
+      body: "Careful around your roofline, landscaping, and finishes, on every visit.",
     },
   ];
 
