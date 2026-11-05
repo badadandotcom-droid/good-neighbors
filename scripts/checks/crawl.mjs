@@ -23,7 +23,6 @@ const GUARANTEE_FULL =
 const RATING_LINE = /\b\d\.\d on Google · \d+ reviews?\b/g;
 
 const BANNED = [
-  /fully insured/i,
   /\bbonded\b/i,
   /\blicen[cs]ed\b/i,
   /background[- ]checked/i,

@@ -32,10 +32,10 @@ export const BRAND = {
  * ----------------------------------------------------------------------------
  * LIABILITY INSURANCE — owner-confirmed (Oct 2026), exact wording only.
  * ----------------------------------------------------------------------------
- * The policy is real: $5 million, in the company's name. Say it only in
- * these two forms. Still off the site: "fully insured", "bonded",
- * "background-checked", "vetted technicians", "licensed", reviews, ratings,
- * years in business, awards and certifications.
+ * The policy is real: $5 million, in the company's name. Say it in these two
+ * forms, or as "fully insured" (owner, Nov 3 2026). Still off the site:
+ * "bonded", "background-checked", "vetted technicians", "licensed", reviews,
+ * ratings, years in business, awards and certifications.
  */
 export const INSURANCE = {
   /** The trust line beside the guarantee line and the 24/7 line. */
