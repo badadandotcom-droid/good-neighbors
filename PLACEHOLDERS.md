@@ -200,11 +200,16 @@ for artwork from the same source as the others at any time; no code changes.
 
 ## Trust signals — intentionally absent
 
-No reviews, star ratings, testimonials, "homes serviced" counts, years in
-business, awards or certifications appear anywhere on the site. Good
+No review widgets, star ratings, "homes serviced" counts, years in
+business, awards or certifications appear anywhere on the site. (Customer
+testimonials are allowed since the owner's call of Nov 6 2026, under the rule
+in CLAUDE.md and `lib/data/testimonials.ts`; the one real Google rating line
+is the only rating.) Good
 Neighbors is a new brand — none of that exists yet. Do not add placeholder
 versions of these; add them for real once they exist. The component system
-has no dedicated "testimonial" or "review" component for exactly this reason.
+has no review-widget component for exactly this reason; the one testimonial
+component (`components/wildlife/CustomerJob.tsx`) shows a customer's own words
+and job photos and nothing else.
 
 **Liability insurance is real (owner-confirmed, Oct 2026): $5 million, in
 the company's name.** The exact wording lives in `INSURANCE` in

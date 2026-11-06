@@ -14,6 +14,8 @@ import { GUARANTEE } from "@/lib/config/site";
 import { getActiveMarkets, marketHref } from "@/lib/data/markets";
 import { DAMAGE_REPAIR_PATH, REPAIR_SERVICES } from "@/lib/data/repairs";
 import { breadcrumbJsonLd, pageMetadata, serviceJsonLd } from "@/lib/seo";
+import { CustomerJob } from "@/components/wildlife/CustomerJob";
+import { DAMAGE_REPAIR_TESTIMONIAL } from "@/lib/data/testimonials";
 
 const TITLE = "Raccoon & Squirrel Damage Repair in Toronto";
 const DESCRIPTION =
@@ -188,6 +190,8 @@ export default function DamageRepairPage() {
           </div>
         </Container>
       </section>
+
+      <CustomerJob testimonial={DAMAGE_REPAIR_TESTIMONIAL} />
 
       <section className="bg-pine-700 py-16 text-bone-50 sm:py-24">
         <Container className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center lg:gap-16">

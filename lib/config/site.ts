@@ -154,7 +154,8 @@ export const ALWAYS_ON_CALL = {
  * redirect to the Business Profile). Only the real rating and count, ever:
  * update `count` (and `rating` if it moves) as reviews come in, and set
  * `enabled` to false rather than show a number that is not true. No review
- * widgets, no quoted reviews. Not put into structured data: Google ignores
+ * widgets. Customer testimonials are a separate thing, allowed under the
+ * owner's Nov 6 2026 rule (lib/data/testimonials.ts). Not put into structured data: Google ignores
  * self-serving aggregate ratings on a LocalBusiness.
  */
 export const GOOGLE_RATING: { enabled: boolean; rating: string; count: number; href: string } = {
