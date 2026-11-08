@@ -11,7 +11,7 @@ function Star({ className }: { className?: string }) {
 
 /**
  * The real Google rating as one line: five stars, the rating and the review
- * count, linked to the Reviews tab of our Google listing (to read them). The numbers live in GOOGLE_RATING
+ * count, linked to our Google listing (to read them). The numbers live in GOOGLE_RATING
  * (lib/config/site.ts) and are the Business Profile's real figures, updated
  * by hand as reviews come in (owner, Oct 27 2026). Opens in a new tab so the
  * landing page stays put.
