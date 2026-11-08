@@ -11,7 +11,7 @@ function Star({ className }: { className?: string }) {
 
 /**
  * The real Google rating as one line: five stars, the rating and the review
- * count, linked to the Google review page. The numbers live in GOOGLE_RATING
+ * count, linked to the Reviews tab of our Google listing (to read them). The numbers live in GOOGLE_RATING
  * (lib/config/site.ts) and are the Business Profile's real figures, updated
  * by hand as reviews come in (owner, Oct 27 2026). Opens in a new tab so the
  * landing page stays put.
@@ -26,7 +26,7 @@ export function GoogleRating({ className }: { className?: string }) {
       target="_blank"
       rel="noopener"
       className={cn("items-center gap-2 text-sm font-medium text-charcoal hover:text-pine-700", className ?? "inline-flex")}
-      aria-label={`${rating} stars on Google from ${count} reviews, opens the Google review page in a new tab`}
+      aria-label={`${rating} stars on Google from ${count} reviews, opens our Google reviews in a new tab`}
     >
       <span className="flex gap-0.5 text-brass-400" aria-hidden="true">
         <Star />

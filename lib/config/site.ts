@@ -165,7 +165,10 @@ export const GOOGLE_RATING: { enabled: boolean; rating: string; count: number; h
   // 5.0, six 5-star reviews; the ads chat's note of 6:40 PM said Duane saw 6).
   // Was 4 (Oct 27).
   count: 6,
-  href: "/review",
+  // Opens the Google listing on its Reviews tab, to READ the reviews (owner,
+  // Nov 8 2026: tapping the stars went to the write-a-review box). The /review
+  // short link (next.config.ts) stays as it is for post-job texts and invoices.
+  href: "https://www.google.com/maps/place/Good+Neighbors+Wildlife/data=!4m7!3m6!1s0x6d680a14a02cd2c3:0x95f19a7fdeca7749!8m2!3d43.9670309!4d-79.2341564!9m1!1b1",
 };
 
 /** Placeholder for future analytics/tracking wiring — see lib/analytics.ts */
