@@ -15,7 +15,7 @@ export function CustomerJob({ testimonial }: { testimonial: Testimonial }) {
   const oddCount = photos.length % 2 === 1;
 
   return (
-    <section className="py-16 sm:py-24">
+    <section id="recent-job" className="scroll-mt-20 py-16 sm:py-24">
       <Container>
         <SectionHeading
           eyebrow="A recent job"

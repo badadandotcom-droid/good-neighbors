@@ -103,7 +103,14 @@ export default function DamageRepairPage() {
               animal humanely, seal the entry point it was using, and repair the damage it caused, from the roof and
               soffits to the attic.
             </p>
-            <p className="order-9 mt-4 max-w-lg text-base leading-relaxed text-ink-700 text-pretty">
+            <a
+              href="#recent-job"
+              className="order-9 mt-4 inline-flex items-center gap-2 self-start text-base font-medium text-pine-600 underline decoration-brass-400 underline-offset-4 hover:text-pine-700"
+            >
+              See a recent job: before, during and after
+              <span aria-hidden="true">&darr;</span>
+            </a>
+            <p className="order-10 mt-4 max-w-lg text-base leading-relaxed text-ink-700 text-pretty">
               Repairs are matched to your home&apos;s existing materials and colours, so the fix blends in with the
               rest of the house.
             </p>
