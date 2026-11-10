@@ -161,10 +161,9 @@ export const ALWAYS_ON_CALL = {
 export const GOOGLE_RATING: { enabled: boolean; rating: string; count: number; href: string } = {
   enabled: true,
   rating: "5.0",
-  // 6 from Nov 3 2026 (read live on Google Maps, 6:50 PM, in GNW Website 21:
-  // 5.0, six 5-star reviews; the ads chat's note of 6:40 PM said Duane saw 6).
-  // Was 4 (Oct 27).
-  count: 6,
+  // 8 from Nov 9 2026 (read on the Business Profile Reviews panel, 11:25 PM,
+  // by Google Profile and Reviews 16: 5.0, all 5 stars). Was 6 (Nov 3), 4 (Oct 27).
+  count: 8,
   // Opens the Google listing so people can READ the reviews (owner,
   // Nov 8 2026: tapping the stars went to the write-a-review box). The /review
   // short link (next.config.ts) stays as it is for post-job texts and invoices.
