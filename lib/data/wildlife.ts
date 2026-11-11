@@ -339,7 +339,8 @@ export const WILDLIFE: WildlifeEntry[] = [
     category: "situation",
     name: "Dead Animal Removal",
     singular: "animal",
-    seoTitle: "Dead Animal Removal on Your Property in Toronto",
+    // Title changed Nov 10 2026 (ads chat ADS 58, owner's yes): H1 below unchanged.
+    seoTitle: "Dead Animal Removal Toronto: On Your Property, Same Day",
     heading: "Dead Animal Removal on Your Property in Toronto",
     metaDescription:
       "Dead raccoon or squirrel in the attic, a wall, a vent or under the deck? We find it, remove it and clean the spot. Your property, not the road. Toronto & GTA.",

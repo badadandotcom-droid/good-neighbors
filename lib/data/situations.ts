@@ -471,7 +471,7 @@ export const SITUATIONS: SituationContent[] = [
         heading: "Dead animal removal in Toronto and the GTA",
         paragraphs: [
           "Call when the smell, the flies or a sudden silence in the attic tells you something has died in the house. We come out the same day, at any hour, find the animal, take it out and clean the spot where it died. Most of these jobs are done in one visit.",
-          "We cover Toronto, including Scarborough, North York and Etobicoke, and the rest of the GTA: Peel, York and Durham Region. The price is explained before anything is touched.",
+          "We cover Toronto, including Scarborough, North York and Etobicoke, and across the GTA in Markham, Vaughan, Mississauga and the rest of Peel, York and Durham Region. The price is explained before anything is touched.",
         ],
       },
       {
