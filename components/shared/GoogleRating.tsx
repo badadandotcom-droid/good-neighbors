@@ -3,9 +3,15 @@ import { cn } from "@/lib/utils";
 
 const STAR_PATH = "M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7L10 1.6z";
 
-/** One star, filled from the left by `fill` (0 to 1) over a pale base star. */
+/**
+ * One star, filled from the left by `fill` (0 to 1) over a pale base star.
+ * The star's shape runs from x = 1.7 to x = 18.3 of the 20-wide box, so the
+ * fill is measured across the shape, not the box: at 0.9 the tip of the right
+ * arm stays pale and can be seen (a plain 90% of the box would hide nothing).
+ */
 function Star({ fill }: { fill: number }) {
-  const pct = Math.round(Math.max(0, Math.min(1, fill)) * 100);
+  const f = Math.max(0, Math.min(1, fill));
+  const pct = f >= 1 ? 100 : f <= 0 ? 0 : Math.round(((1.7 + f * 16.6) / 20) * 100);
   return (
     <span className="relative inline-block h-3.5 w-3.5 shrink-0">
       <svg viewBox="0 0 20 20" className="absolute inset-0 h-full w-full text-stone-300" fill="currentColor" aria-hidden="true">
