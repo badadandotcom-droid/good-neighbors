@@ -150,20 +150,23 @@ export const ALWAYS_ON_CALL = {
  * ----------------------------------------------------------------------------
  * Owner, Oct 27 2026 (via the ads chat, ADS 27): the listing has real reviews
  * now, so the rating is shown near the Call button on the homepage and every
- * landing page, linked to the Google review page (/review, the site's own
- * redirect to the Business Profile). Only the real rating and count, ever:
- * update `count` (and `rating` if it moves) as reviews come in, and set
+ * landing page, linked to the Google listing so people can read the reviews.
+ * The line reads "4.9 on Google · Read our reviews": the real rating, and NO
+ * review count (owner, Nov 12 2026: "No count"; the count went stale with
+ * every new review). The stars fill to the rating, so 4.9 is not drawn as a
+ * flat 5. Update `rating` when Google's rounded figure moves, and set
  * `enabled` to false rather than show a number that is not true. No review
  * widgets. Customer testimonials are a separate thing, allowed under the
  * owner's Nov 6 2026 rule (lib/data/testimonials.ts). Not put into structured data: Google ignores
  * self-serving aggregate ratings on a LocalBusiness.
  */
-export const GOOGLE_RATING: { enabled: boolean; rating: string; count: number; href: string } = {
+export const GOOGLE_RATING: { enabled: boolean; rating: string; href: string } = {
   enabled: true,
-  rating: "5.0",
-  // 8 from Nov 9 2026 (read on the Business Profile Reviews panel, 11:25 PM,
-  // by Google Profile and Reviews 16: 5.0, all 5 stars). Was 6 (Nov 3), 4 (Oct 27).
-  count: 8,
+  // 4.9 from Nov 12 2026 (read on the Business Profile, 8:30 AM, by Google
+  // Profile and Reviews 16/17: 10 reviews, 9 five-star and 1 four-star). Was
+  // 5.0 until then. The count is no longer shown (8 on Nov 9, 6 on Nov 3, 4 on
+  // Oct 27), so a new review needs a change here only when the rating moves.
+  rating: "4.9",
   // Opens the Google listing so people can READ the reviews (owner,
   // Nov 8 2026: tapping the stars went to the write-a-review box). The /review
   // short link (next.config.ts) stays as it is for post-job texts and invoices.

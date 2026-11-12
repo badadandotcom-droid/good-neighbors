@@ -1,42 +1,54 @@
 import { GOOGLE_RATING } from "@/lib/config/site";
 import { cn } from "@/lib/utils";
 
-function Star({ className }: { className?: string }) {
+const STAR_PATH = "M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7L10 1.6z";
+
+/** One star, filled from the left by `fill` (0 to 1) over a pale base star. */
+function Star({ fill }: { fill: number }) {
+  const pct = Math.round(Math.max(0, Math.min(1, fill)) * 100);
   return (
-    <svg viewBox="0 0 20 20" className={cn("h-3.5 w-3.5 shrink-0", className)} fill="currentColor" aria-hidden="true">
-      <path d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.8L10 14.6l-5.1 2.8 1.1-5.8-4.3-4 5.8-.7L10 1.6z" />
-    </svg>
+    <span className="relative inline-block h-3.5 w-3.5 shrink-0">
+      <svg viewBox="0 0 20 20" className="absolute inset-0 h-full w-full text-stone-300" fill="currentColor" aria-hidden="true">
+        <path d={STAR_PATH} />
+      </svg>
+      <span className="absolute inset-y-0 left-0 overflow-hidden" style={{ width: `${pct}%` }}>
+        <svg viewBox="0 0 20 20" className="h-3.5 w-3.5 max-w-none text-brass-400" fill="currentColor" aria-hidden="true">
+          <path d={STAR_PATH} />
+        </svg>
+      </span>
+    </span>
   );
 }
 
 /**
- * The real Google rating as one line: five stars, the rating and the review
- * count, linked to our Google listing (to read them). The numbers live in GOOGLE_RATING
- * (lib/config/site.ts) and are the Business Profile's real figures, updated
- * by hand as reviews come in (owner, Oct 27 2026). Opens in a new tab so the
- * landing page stays put.
+ * The real Google rating as one line: five stars filled to the real rating
+ * (4.9 leaves a sliver of the fifth star unfilled, so the stars never claim a
+ * flat 5), the rating, and "Read our reviews", linked to our Google listing.
+ * No review count (owner, Nov 12 2026: "No count"; the count went stale with
+ * every new review). The rating lives in GOOGLE_RATING (lib/config/site.ts)
+ * and is the Business Profile's real figure, updated by hand when it moves.
+ * Opens in a new tab so the landing page stays put.
  */
 /** `className` must carry the display class (default "inline-flex"), so a caller can hide the line per breakpoint. */
 export function GoogleRating({ className }: { className?: string }) {
   if (!GOOGLE_RATING.enabled) return null;
-  const { rating, count, href } = GOOGLE_RATING;
+  const { rating, href } = GOOGLE_RATING;
+  const value = Number(rating);
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener"
       className={cn("items-center gap-2 text-sm font-medium text-charcoal hover:text-pine-700", className ?? "inline-flex")}
-      aria-label={`${rating} stars on Google from ${count} reviews, opens our Google reviews in a new tab`}
+      aria-label={`Rated ${rating} out of 5 on Google. Read our reviews, opens Google in a new tab`}
     >
-      <span className="flex gap-0.5 text-brass-400" aria-hidden="true">
-        <Star />
-        <Star />
-        <Star />
-        <Star />
-        <Star />
+      <span className="flex gap-0.5" aria-hidden="true">
+        {[0, 1, 2, 3, 4].map((i) => (
+          <Star key={i} fill={value - i} />
+        ))}
       </span>
       <span>
-        {rating} on Google · {count} {count === 1 ? "review" : "reviews"}
+        {rating} on Google · Read our reviews
       </span>
     </a>
   );
