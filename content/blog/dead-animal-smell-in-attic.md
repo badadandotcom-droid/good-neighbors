@@ -3,6 +3,7 @@ title: "Dead Animal Smell in the Attic"
 slug: "dead-animal-smell-in-attic"
 description: "A bad smell from the attic or a wall? What a dead animal smells like, the other signs, how long it lasts, what not to do, and when to call in Toronto."
 date: "2026-11-04"
+updated: "2026-11-15"
 primaryKeyword: "dead animal in attic smell"
 relatedPage: "/wildlife/dead-animal-removal"
 ---
@@ -62,6 +63,8 @@ Inside your house, it's yours to deal with. Ontario says the owner is responsibl
 ## When to call
 
 Call when you can smell it but can't find it, when it's somewhere you can't safely reach, when it's in a wall or above a finished ceiling, or when you just don't want to be the one who handles it. Calls are answered 24/7, and we offer same-day service.
+
+We work across Toronto and the GTA, from [North York](/service-areas/north-york) to [Caledon](/service-areas/caledon) and [Whitby](/service-areas/whitby).
 
 What we do: we track the smell, the flies and any stains to the spot, take the animal out, and we always disinfect the area where the dead animal was. If it got in through a gap at the roofline or a vent, we show you where, and we quote closing it before we do any of that work. See [dead animal removal](/wildlife/dead-animal-removal) for more.
 

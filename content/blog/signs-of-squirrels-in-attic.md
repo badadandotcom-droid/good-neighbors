@@ -3,6 +3,7 @@ title: "Signs of Squirrels in Your Attic"
 slug: "signs-of-squirrels-in-attic"
 description: "The signs of squirrels or raccoons in your attic: what to listen for, what to look for outside and in the attic, and a simple test to see if a hole is in use."
 date: "2026-11-04"
+updated: "2026-11-15"
 primaryKeyword: "signs of squirrels in attic"
 relatedPage: "/wildlife/something-in-the-attic"
 ---
@@ -63,6 +64,8 @@ Keep it simple and keep your distance:
 ## When to call
 
 Call when you've heard it more than once, when you've found a hole or droppings, when the paper test says the hole is in use, or when you hear chirping. Calls are answered 24/7, and we offer same-day service.
+
+We do [squirrel removal in Newmarket](/service-areas/newmarket), [Stouffville](/service-areas/stouffville) and [Caledon](/service-areas/caledon), and in the rest of York, Peel, Durham and Toronto.
 
 What we do, in order: we find every place it's getting in, and we check for babies before anything goes on the hole. If there are young, they stay with their mother. For squirrels, we take the babies out by hand and set them in a warm box outside beside the hole, so she can carry them to another nest. For raccoons, the hole stays open until the kits are out with her. A one-way door goes over the entry so the animals can leave and can't get back in. After that, the opening is sealed and the damage repaired. We do the carpentry ourselves. Lifetime guarantee on every entry point we seal. See [getting an animal out of the attic](/wildlife/something-in-the-attic) for more.
 

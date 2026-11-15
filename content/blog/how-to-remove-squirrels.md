@@ -3,6 +3,7 @@ title: "How to Remove Squirrels"
 slug: "how-to-remove-squirrels"
 description: "How to remove squirrels from your attic in Toronto and the GTA: what people try, why most of it fails, what Ontario law allows, and the way that lasts."
 date: "2026-11-04"
+updated: "2026-11-15"
 primaryKeyword: "how to remove squirrels"
 relatedPage: "/wildlife/squirrels"
 ---
@@ -66,6 +67,8 @@ Some people do. What makes it hard is the combination: working at roof height, f
 ## When to call
 
 Call when you've heard it more than once, when the lights and radio haven't moved it, when you think there may be babies, or when the hole is higher than you'd want to climb. Calls are answered 24/7, and we offer same-day service.
+
+We do [squirrel removal in Etobicoke](/service-areas/etobicoke), [North York](/service-areas/north-york) and [Whitby](/service-areas/whitby), and across the rest of the GTA.
 
 What we do, in order: we find where it's getting in, and we check for babies before anything goes on the hole. A one-way door goes over the entry so the squirrel can get out and can't get back in. Once it's out, we seal the house. We do the carpentry ourselves, so the repaired soffit or vent matches the roofline. Lifetime guarantee on every entry point we seal. See [squirrel removal](/wildlife/squirrels) and [getting an animal out of the attic](/wildlife/something-in-the-attic) for more.
 

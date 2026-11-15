@@ -3,6 +3,7 @@ title: "Does the City Remove Raccoons?"
 slug: "does-the-city-remove-raccoons"
 description: "Will the City of Toronto remove a raccoon from your house? What 311 and animal services do and don't do across the GTA, and who to call instead."
 date: "2026-11-04"
+updated: "2026-11-15"
 primaryKeyword: "does the city remove raccoons"
 relatedPage: "/wildlife/raccoons"
 ---
@@ -62,6 +63,8 @@ Since the City won't come for a healthy raccoon, you'll be choosing a company. T
 ## When to call us
 
 If there's a healthy raccoon in your attic, your chimney or your walls, that's our job. Calls are answered 24/7, and we offer same-day service.
+
+We do it in every part of the city. There's a page each for [raccoon removal in Scarborough](/service-areas/scarborough), [North York](/service-areas/north-york) and [Etobicoke](/service-areas/etobicoke).
 
 Here's how we do it. First we find the way in and check for kits, and nothing goes on the hole until we know. If there are kits, the hole stays open until they're all out with their mother, and the family leaves together. They leave through a one-way door over the entry, which keeps them from getting back in. Then we seal the opening and repair the damage. We do the carpentry ourselves, and we carry $5 million liability insurance. Lifetime guarantee on every entry point we seal. See [raccoon removal](/wildlife/raccoons) for the full job, or our post on [how to remove raccoons](/blog/how-to-remove-raccoons) for the step by step.
 

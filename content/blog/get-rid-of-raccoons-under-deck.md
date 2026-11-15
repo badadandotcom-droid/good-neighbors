@@ -3,6 +3,7 @@ title: "Get Rid of Raccoons Under a Deck"
 slug: "get-rid-of-raccoons-under-deck"
 description: "How to get rid of a raccoon under your deck in Toronto and the GTA: checking for kits, what Ontario law allows, and the buried barrier that keeps them out."
 date: "2026-11-04"
+updated: "2026-11-15"
 primaryKeyword: "how to get rid of raccoons under deck"
 relatedPage: "/wildlife/raccoon-under-deck"
 ---
@@ -68,6 +69,8 @@ Raccoons often use one spot near a deck or woodpile as a toilet. Don't clean it 
 ## When to call
 
 Call when the raccoon keeps coming back, when you hear chirping under the deck, when the lights and radio haven't moved it, or when the gap is under a deck or porch you can't get under yourself. Calls are answered 24/7, and we offer same-day service.
+
+We get raccoons out from under decks in [Etobicoke](/service-areas/etobicoke), [Markham](/service-areas/markham) and [Ajax](/service-areas/ajax), and everywhere else in Toronto and the GTA.
 
 What we do, in order: we find where it's getting under, and we check for kits before anything goes on the gap. If there are kits, the gap stays open until they can leave with their mother, so the family moves on together. The one-way door goes on only once every raccoon can follow it out. Once they're out, we dig wire mesh about 30 cm into the ground along the base of the deck and bend it outward another 20 to 30 cm, so nothing can dig back under. See [raccoon under deck removal](/wildlife/raccoon-under-deck) for more.
 

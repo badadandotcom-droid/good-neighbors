@@ -3,6 +3,7 @@ title: "Baby Raccoons in the Attic"
 slug: "baby-raccoons-in-attic"
 description: "Baby raccoons or squirrels in the attic: when they're born in Ontario, how to tell they're up there, why the mother must stay with them, and what to do next."
 date: "2026-11-05"
+updated: "2026-11-15"
 primaryKeyword: "baby raccoons in attic"
 relatedPage: "/wildlife/something-in-the-attic"
 relatedLabel: "Getting an animal out of the attic"
@@ -70,6 +71,8 @@ If a baby fell out of your attic, that's a sign there's a nest up there. Call us
 
 Call when you hear chirping in the attic, when you see a raccoon or squirrel going in and out of the same spot in spring or summer, or when you've found a baby on the ground near the house. Calls are answered 24/7, and we offer same-day service.
 
-What we do, in order: we find the way in and check for babies before anything goes on the hole. For raccoons, if there are kits, the hole stays open until they're out with their mother. They stay together and leave together, so she can move them to another den. For squirrels, we bring the babies out to a reunion box so the mother can carry them away. A one-way door goes over the entry so the animals can get out and can't get back in, and once they're all out, we seal the opening and repair the damage. Lifetime guarantee on every entry point we seal.
+We take these calls across the GTA, including [raccoon removal in Etobicoke](/service-areas/etobicoke), [Newmarket](/service-areas/newmarket) and [Pickering](/service-areas/pickering).
+
+What we do, in order: we find the way in and check for babies before anything goes on the hole. For raccoons, if there are kits, the hole stays open until they're out with their mother. They stay together and leave together, so she can move them to another den. For squirrels, we bring the babies out to a reunion box so the mother can carry them away. A one-way door goes over the entry so the animals can get out and can't get back in, and once they're all out, we seal the opening and repair the damage. Lifetime guarantee on every entry point we seal. More on [raccoon removal](/wildlife/raccoons) and [squirrel removal](/wildlife/squirrels).
 
 You can send up to five photos through the [contact page](/contact) first, or call us now. We explain the price before any work begins.

@@ -3,6 +3,7 @@ title: "Get Rid of Skunks Under a Deck"
 slug: "get-rid-of-skunks-under-deck"
 description: "How to get rid of a skunk under your deck in Toronto and the GTA: the signs, checking for kits, what Ontario law allows, and how to keep the next one out."
 date: "2026-11-04"
+updated: "2026-11-15"
 primaryKeyword: "how to get rid of skunks under deck"
 relatedPage: "/wildlife/skunks"
 ---
@@ -74,6 +75,8 @@ Then take away the reasons to come back. Latch the green bin, bring pet food in,
 ## When to call
 
 Call when the newspaper keeps getting pushed aside, when the lights and radio haven't moved it, when you think there may be kits, or when the deck sits too low for you to see underneath. Calls are answered 24/7, and we offer same-day service.
+
+We work in Toronto, Peel, York and Durham Region, so a skunk under a deck in [Newmarket](/service-areas/newmarket), [Caledon](/service-areas/caledon) or [Oshawa](/service-areas/oshawa) is a call we take.
 
 What we do, in order: we find where the skunk is getting under, and we check for young before anything goes on the gap. The one-way door goes on only once any kits are old enough to follow their mother out. Once the space is empty, we dig wire mesh about 30 cm into the ground along the base of the deck and bend it outward another 20 to 30 cm, so there's nothing left to dig back through. See [skunk removal](/wildlife/skunks) for more.
 

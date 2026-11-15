@@ -3,6 +3,7 @@ title: "What Does Raccoon Poop Look Like?"
 slug: "what-does-raccoon-poop-look-like"
 description: "What raccoon poop looks like, where raccoons leave it, how to tell it from squirrel droppings, and what to do when you find it on a deck or in the attic."
 date: "2026-11-05"
+updated: "2026-11-15"
 primaryKeyword: "what does raccoon poop look like"
 relatedPage: "/wildlife/raccoon-feces-removal"
 relatedLabel: "Raccoon poop cleanup"
@@ -68,6 +69,8 @@ A small amount on a deck can be cleaned up with care. A pile that has built up i
 ## When to call
 
 Call when you find droppings in the attic, when the same spot outside keeps filling up, or when you've found droppings and a hole near them. Calls are answered 24/7, and we offer same-day service.
+
+We do this work across Toronto and the GTA, including [raccoon removal in Vaughan](/service-areas/vaughan), [Pickering](/service-areas/pickering) and [Oshawa](/service-areas/oshawa).
 
 What we do: we find where the raccoon is getting in and check for kits before anything goes on the hole. If there are kits, the hole stays open until they're out with their mother, so she can move them to another den. A one-way door lets the raccoons out and keeps them out, then we seal the opening. For the droppings themselves, we clean them out, disinfect the area and replace insulation that's been soiled. See [raccoon poop cleanup](/wildlife/raccoon-feces-removal) for how that works.
 

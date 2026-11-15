@@ -3,6 +3,7 @@ title: "How Do Raccoons Get in the Attic?"
 slug: "how-do-raccoons-get-in-the-attic"
 description: "How raccoons and squirrels get into an attic in Toronto: roof vents, soffits, fascia and chimneys, how they reach the roof, and how the hole is fixed."
 date: "2026-11-04"
+updated: "2026-11-15"
 primaryKeyword: "how do raccoons get in the attic"
 relatedPage: "/wildlife/damage-repair"
 ---
@@ -60,6 +61,8 @@ The City of Toronto's advice is to make sure every animal is gone before the hol
 ## When to call
 
 Call when you've found a hole you can't reach safely, when you've heard an animal in the attic, or when you're not sure the hole you found is the only one. Calls are answered 24/7, and we offer same-day service.
+
+We find and close these holes all over the GTA. Our city pages include [squirrel removal in Scarborough](/service-areas/scarborough), [raccoon removal in Vaughan](/service-areas/vaughan) and [raccoon removal in Ajax](/service-areas/ajax).
 
 What we do, in order: we find every place an animal is getting in, and we check for babies before anything goes on the hole. If there are young, the opening stays open until they're out with their mother. A one-way door goes on the entry so the animals can leave and can't get back in. Then we close it and repair the damage: roof boards and shingles, soffits, fascia, roof vents, chimney caps, vent covers, eavestroughs and siding. We do the carpentry ourselves, so the new soffit or fascia matches what's already on the house. Lifetime guarantee on every entry point we seal. See [damage repair](/wildlife/damage-repair) for more, and our post on [how to remove raccoons](/blog/how-to-remove-raccoons) for the removal side.
 

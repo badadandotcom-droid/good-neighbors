@@ -3,6 +3,7 @@ title: "What Is Humane Wildlife Removal?"
 slug: "what-is-humane-wildlife-removal"
 description: "What humane wildlife removal means in Ontario: the animal leaves on its own, babies stay with their mother, the way in is sealed, and what the law requires."
 date: "2026-11-05"
+updated: "2026-11-15"
 primaryKeyword: "humane wildlife removal"
 relatedPage: "/wildlife/raccoons"
 relatedLabel: "Raccoon removal"
@@ -59,6 +60,8 @@ Our post on whether [the City removes raccoons](/blog/does-the-city-remove-racco
 ## When to call
 
 Call when you hear an animal in the attic or walls, when you've found the hole it's using, or when you've tried the lights and radio and it's still there. Calls are answered 24/7, and we offer same-day service.
+
+This is how we work on every job, from [wildlife removal in Brampton](/service-areas/brampton) to [Richmond Hill](/service-areas/richmond-hill), [Aurora](/service-areas/aurora) and [Stouffville](/service-areas/stouffville).
 
 What we do, in order: we find where the animal is getting in and check for babies before anything goes on the hole. If there are kits, the hole stays open until they're out with their mother. A one-way door goes over the entry so the animals can get out and can't get back in. Once they're all out, we seal the opening and repair what was damaged. We do the carpentry ourselves, so the repair is matched to the house. Lifetime guarantee on every entry point we seal.
 

@@ -3,6 +3,7 @@ title: "Are Raccoons in Attics Dangerous?"
 slug: "are-raccoons-in-attics-dangerous"
 description: "Are raccoons in the attic dangerous? The real risks in plain words: roundworm in droppings, rabies in Ontario, damage to the house, and how to stay safe."
 date: "2026-11-04"
+updated: "2026-11-15"
 primaryKeyword: "are raccoons in the attic dangerous"
 relatedPage: "/wildlife/raccoons"
 ---
@@ -64,6 +65,8 @@ Squirrels also widen small openings by gnawing, so a gap that starts small rarel
 ## When to call
 
 Call when you hear a raccoon in the attic, when you find droppings, or when anyone has had a close encounter with one. Calls are answered 24/7, and we offer same-day service.
+
+We handle [raccoon removal in North York](/service-areas/north-york), in [Mississauga](/service-areas/mississauga) and in [Ajax](/service-areas/ajax), along with the rest of Toronto and the GTA.
 
 Our order of work: first the way in, then a check for kits before anything covers the hole. Kits stay with their mother. The hole stays open until they're out with her, and they go together. The raccoons leave through a one-way door on the entry, and it won't let them back in. Then we seal the opening and repair what was torn. We do the carpentry ourselves. Lifetime guarantee on every entry point we seal. See [raccoon removal](/wildlife/raccoons) for more, or our post on [how to remove raccoons](/blog/how-to-remove-raccoons).
 

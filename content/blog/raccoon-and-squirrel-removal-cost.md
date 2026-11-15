@@ -3,6 +3,7 @@ title: "Raccoon and Squirrel Removal Cost"
 slug: "raccoon-and-squirrel-removal-cost"
 description: "What moves the cost of raccoon or squirrel removal in Toronto: entry points, roof height, babies and repairs, what a good quote covers, and the red flags."
 date: "2026-11-04"
+updated: "2026-11-15"
 primaryKeyword: "raccoon removal cost"
 relatedPage: "/contact"
 relatedLabel: "Get a price for your home"
@@ -74,6 +75,8 @@ We look first. We find every way in, check for babies, and then tell you what th
 
 Call when you hear something in the attic or the walls, when you've spotted a torn vent or a chewed soffit, or when you want a price before you decide anything. Calls are answered 24/7, and we offer same-day service.
 
-What we do, in order: we find the entry, check for babies, put a one-way door on the way in once every animal can leave through it, and seal the rest. For raccoons with kits, the hole stays open until they're out with their mother. For squirrels, we take the babies out by hand and set them in a warm box outside beside the hole, so the mother can carry them to another nest. Once they're all out, we seal the way in.
+We explain the price first on every job, in every area we serve: [raccoon removal in Newmarket](/service-areas/newmarket), [squirrel removal in Richmond Hill](/service-areas/richmond-hill), [Ajax](/service-areas/ajax) and the rest of the GTA.
+
+What we do, in order: we find the entry, check for babies, put a one-way door on the way in once every animal can leave through it, and seal the rest. For raccoons with kits, the hole stays open until they're out with their mother. For squirrels, we take the babies out by hand and set them in a warm box outside beside the hole, so the mother can carry them to another nest. Once they're all out, we seal the way in. See [raccoon removal](/wildlife/raccoons) or [squirrel removal](/wildlife/squirrels) for how each job goes.
 
 We explain the price before any work begins. You can send up to five photos through the [contact page](/contact) first, or call us now.

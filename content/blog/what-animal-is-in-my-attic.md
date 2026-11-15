@@ -3,6 +3,7 @@ title: "What Animal Is in My Attic?"
 slug: "what-animal-is-in-my-attic"
 description: "Scratching, thumping or chirping overhead? How to tell a squirrel from a raccoon, a bird or a bat by the sound and the time of day, and what to do next."
 date: "2026-11-03"
+updated: "2026-11-15"
 primaryKeyword: "what animal is in my attic"
 relatedPage: "/wildlife/something-in-the-attic"
 ---
@@ -75,6 +76,8 @@ Don't go up into the attic to find it, either. A mother raccoon will defend her 
 ## When to call
 
 Call once you've heard it more than once, when you hear chirping or crying, or when you can see a hole from the ground. Calls are answered 24/7, and we offer same-day service.
+
+We cover Toronto and the GTA, including [wildlife removal in Mississauga](/service-areas/mississauga), [Markham](/service-areas/markham) and [Aurora](/service-areas/aurora).
 
 What we do, in order: we find where it's getting in, and we check for babies before anything goes on the hole. A one-way door goes over the entry so the animal can get out and can't get back in. Once everything is out, we seal it. We do the carpentry ourselves, so the repair is cut and fitted to match the house. Lifetime guarantee on every entry point we seal. More on [getting an animal out of the attic](/wildlife/something-in-the-attic).
 
