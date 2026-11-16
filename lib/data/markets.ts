@@ -54,7 +54,7 @@ export const MARKETS: Market[] = [
       {
         heading: "Why Toronto has so much wildlife",
         paragraphs: [
-          "Toronto is a city of ravines. The Don, the Humber and the Rouge, Highland Creek, Mimico Creek and the smaller valleys that feed them run through every part of the city, and they are home to raccoons, squirrels, skunks and, around the older homes, bats. A house that backs onto a ravine, or sits a few streets from one, has wildlife for neighbours whether it ever sees them or not.",
+          "Toronto is a city of ravines. The Don, the Humber and the Rouge, Highland Creek, Mimico Creek and the smaller valleys that feed them run through every part of the city, and they are home to raccoons, squirrels, skunks and, around the older homes, bats. A house that backs onto a ravine, or sits a few streets from one, has wildlife for neighbours whether it ever sees them or not. So wildlife removal in Toronto is mostly about the house: how the animal got in, and closing that gap once it's out.",
           "The trees do the rest. The oaks and maples planted when the postwar neighbourhoods went up are now big enough to hang over the roof, and in the older neighbourhoods they have had a century. A branch near the eaves is a bridge for a squirrel; a tree trunk or a downspout is a ladder for a raccoon. Add rooflines with sixty-year-old wood soffits, gable vents, plastic roof vents and chimneys that have never had a cap, and you have the reason Toronto's raccoons are famous.",
         ],
       },
@@ -79,7 +79,7 @@ export const MARKETS: Market[] = [
       {
         heading: "How a visit works in Toronto",
         paragraphs: [
-          "Usually, we can solve the wildlife problem entirely from outside without needing to enter your home. The visit starts with a full inspection of the roofline, because the opening is often nowhere near where you hear the noise, and on an older home there may be more than one. We identify the animal, check for young, and remove it humanely, with mother and young kept together.",
+          "Most of our wildlife control work in Toronto is done from outside; we usually don't need to come into your home. The visit starts with a full inspection of the roofline, because the opening is often nowhere near where you hear the noise, and on an older home there may be more than one. We identify the animal and check for young. The animal removal itself is humane, with mother and young kept together.",
           "Then we seal the entry point and repair what the animal damaged: roof boards and shingles, soffits, fascia, roof vents, chimney caps, eavestroughs and siding, matched to your home's existing materials and colours, which on a Kingsway or York Mills home matters. See [damage repair](/wildlife/damage-repair) for the full list.",
         ],
       },
@@ -88,7 +88,7 @@ export const MARKETS: Market[] = [
       {
         question: "Which parts of Toronto do you cover?",
         answer:
-          "All of it: Scarborough, North York, Etobicoke, East York, York, downtown and everything in between. Scarborough, North York and Etobicoke each have a page of their own with the neighbourhoods listed.",
+          "All of it. We do wildlife removal and wildlife control in Scarborough, North York, Etobicoke, East York, York, downtown and everything in between. Scarborough, North York and Etobicoke each have a page of their own with the neighbourhoods listed.",
       },
       {
         question: "Do you cover the Kingsway, York Mills and the Bluffs?",
