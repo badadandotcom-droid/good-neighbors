@@ -34,7 +34,7 @@ export const MARKETS: Market[] = [
     displayName: "Toronto",
     brandName: "Good Neighbors Toronto",
     heroHeading: "Wildlife Removal in Toronto",
-    hubTitle: "Wildlife Removal in Toronto: Scarborough, North York & Etobicoke",
+    hubTitle: "Wildlife Removal in Toronto: North York, Etobicoke & Scarborough",
     alsoCovered: ["East York", "downtown Toronto"],
     status: "active",
     country: "CA",
