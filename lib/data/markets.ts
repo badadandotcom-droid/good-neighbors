@@ -88,7 +88,7 @@ export const MARKETS: Market[] = [
       {
         question: "Which parts of Toronto do you cover?",
         answer:
-          "All of it. We do wildlife removal and wildlife control in Scarborough, North York, Etobicoke, East York, York, downtown and everything in between. Scarborough, North York and Etobicoke each have a page of their own with the neighbourhoods listed.",
+          "All of it. We do wildlife removal and wildlife control in North York, Etobicoke, Scarborough, East York, York, downtown and everything in between. Scarborough, North York and Etobicoke each have a page of their own with the neighbourhoods listed.",
       },
       {
         question: "Do you cover the Kingsway, York Mills and the Bluffs?",
