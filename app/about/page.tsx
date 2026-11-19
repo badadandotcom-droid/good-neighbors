@@ -50,8 +50,8 @@ export default function AboutPage() {
             Wildlife removal for your home.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-ink-700 text-pretty">
-            Good Neighbors Wildlife Inc. was founded by Duane Lewis to provide humane wildlife removal for
-            homeowners in Toronto &amp; the GTA.
+            Good Neighbors Wildlife is a Toronto company. We love animals, and we do our own carpentry. We get
+            wildlife out of homes across the GTA humanely, then close the way they got in.
           </p>
           <p className="mt-4 text-lg leading-relaxed text-ink-700 text-pretty">
             Our approach is straightforward: understand the problem, explain the price before work begins, and
