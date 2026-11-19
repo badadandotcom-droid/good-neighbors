@@ -66,7 +66,7 @@ The City of Toronto leaves the choice to you: handle it yourself within the rule
 
 Call when you've heard it more than once, when you've heard chirping, when the lights and radio haven't moved it, or when the hole is higher than you'd want to climb. Calls are answered 24/7, and we offer same-day service.
 
-If you'd rather hand it over, we do [raccoon removal in Scarborough](/service-areas/scarborough), [Brampton](/service-areas/brampton) and [Caledon](/service-areas/caledon), and in every other part of Toronto and the GTA.
+If you'd rather hand it over, we do [raccoon removal in Brampton](/service-areas/brampton), [Caledon](/service-areas/caledon) and [Scarborough](/service-areas/scarborough), and in every other part of Toronto and the GTA.
 
 What we do, in order: we find where it's getting in, and we check for kits before anything goes on the hole. If there are kits, the hole stays open until they're out with their mother. They stay together and leave together, so she can move them to another den. A one-way door goes over the entry so the raccoons can get out and can't get back in. Once they're all out, we seal the opening and repair what the raccoon tore up. We do the carpentry ourselves, so the new soffit or vent matches the roofline. Lifetime guarantee on every entry point we seal. See [raccoon removal](/wildlife/raccoons) and [getting an animal out of the attic](/wildlife/something-in-the-attic) for more.
 

@@ -42,7 +42,7 @@ export const MARKETS: Market[] = [
     metro: "Greater Toronto Area",
     serviceArea: ["Toronto", "North York", "Etobicoke", "Scarborough", "East York"],
     heroBlurb:
-      "Toronto's raccoons are famous for a reason, and they share the city with squirrels in every mature tree, skunks under the decks and bats in the older attics. From the Bluffs in Scarborough to the Kingsway in Etobicoke, the ravine lots of North York and the century homes of East York, York and downtown, we remove the animal humanely, seal the way in and repair the damage it caused.",
+      "Toronto's raccoons are famous for a reason, and they share the city with squirrels in every mature tree, skunks under the decks and bats in the older attics. From the ravine lots of North York to the Kingsway in Etobicoke, the century homes of East York, York and downtown, and the Bluffs in Scarborough, we remove the animal humanely, seal the way in and repair the damage it caused.",
     seoDescription:
       "Humane raccoon, squirrel, skunk, bat and bird removal in Toronto. We seal the way in and repair the damage. Lifetime guarantee on every entry point we seal.",
     // Long-form hub copy (Oct 2026). Same rules as the city pages: real

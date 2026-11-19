@@ -405,7 +405,7 @@ export const CITIES: City[] = [
       {
         question: "Do you cover York Mills and the Bridle Path?",
         answer:
-          "Yes. We cover all of North York: York Mills, the Bridle Path, Hoggs Hollow and Armour Heights; Bayview Village and Don Mills; Willowdale, Newtonbrook, Bathurst Manor and Downsview. Scarborough, East York and the rest of Toronto are covered as well.",
+          "Yes. We cover all of North York: York Mills, the Bridle Path, Hoggs Hollow and Armour Heights; Bayview Village and Don Mills; Willowdale, Newtonbrook, Bathurst Manor and Downsview. East York, Scarborough and the rest of Toronto are covered as well.",
       },
     ],
     nearby: ["scarborough", "etobicoke", "vaughan", "markham"],

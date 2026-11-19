@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 export const metadata = pageMetadata({
   title: "Service Areas",
   description:
-    "Humane wildlife removal across Toronto, Peel, York and Durham: Scarborough, Brampton, Mississauga and more. Lifetime guarantee on every entry point we seal.",
+    "Humane wildlife removal across Toronto, Peel, York and Durham: Brampton, Mississauga, Scarborough and more. Lifetime guarantee on every entry point we seal.",
   path: "/service-areas",
 });
 

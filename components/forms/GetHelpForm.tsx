@@ -323,7 +323,7 @@ export function GetHelpForm() {
       <FormSection number={2} title="What's happening" last>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <Field label="Property location or postal code" htmlFor="location" optional className="sm:col-span-2">
-            <input id="location" name="location" type="text" placeholder="e.g. Scarborough, or M1B 2K5" className={inputClass(false)} />
+            <input id="location" name="location" type="text" placeholder="e.g. North York, or a postal code" className={inputClass(false)} />
           </Field>
 
           <Field label="What are you dealing with?" htmlFor="animal" optional>
