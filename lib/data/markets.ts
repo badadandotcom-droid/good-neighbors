@@ -40,7 +40,7 @@ export const MARKETS: Market[] = [
     country: "CA",
     region: "Ontario",
     metro: "Greater Toronto Area",
-    serviceArea: ["Toronto", "Scarborough", "North York", "Etobicoke", "East York"],
+    serviceArea: ["Toronto", "North York", "Etobicoke", "Scarborough", "East York"],
     heroBlurb:
       "Toronto's raccoons are famous for a reason, and they share the city with squirrels in every mature tree, skunks under the decks and bats in the older attics. From the Bluffs in Scarborough to the Kingsway in Etobicoke, the ravine lots of North York and the century homes of East York, York and downtown, we remove the animal humanely, seal the way in and repair the damage it caused.",
     seoDescription:
@@ -61,9 +61,9 @@ export const MARKETS: Market[] = [
       {
         heading: "Toronto, part by part",
         paragraphs: [
-          "[Scarborough](/service-areas/scarborough) is one of the busiest parts of the city for raccoons and squirrels: postwar bungalows, side-splits and back-splits from the 1950s and 60s in Cliffside, Bendale, Wexford and Scarborough Village, wooded lots in Guildwood and Birch Cliff and along the Bluffs, and the deep valleys of Highland Creek and the Rouge in the east. Agincourt and Malvern are newer, with aluminum soffit that lifts at the corners.",
           "[North York](/service-areas/north-york) is ravine country. The Don's east and west branches run through York Mills, Hoggs Hollow, Armour Heights and the Bridle Path, where large older homes sit under trees that reach well over the roof, and Don Mills and Bayview Village were laid out around the same ravines. Willowdale, Bathurst Manor, Newtonbrook and Downsview mix sixty-year-old bungalows with big new rebuilds, whose complicated rooflines have more vents, more soffit and more places where two roofs meet.",
           "[Etobicoke](/service-areas/etobicoke) is old trees and old rooflines. The Kingsway, Humber Valley Village and Sunnylea sit along the Humber in stone and brick homes from the 1930s to the 50s, with wood soffits, big chimneys and oaks that have had ninety years to grow; Mimico, Long Branch and Alderwood line the lake; Islington, Princess Gardens, Markland Wood and Eringate are 1950s and 60s streets under mature trees; and Rexdale, to the north, is postwar bungalows and semis beside the hydro corridors and the Humber's west branch.",
+          "[Scarborough](/service-areas/scarborough) is one of the busiest parts of the city for raccoons and squirrels: postwar bungalows, side-splits and back-splits from the 1950s and 60s in Cliffside, Bendale, Wexford and Scarborough Village, wooded lots in Guildwood and Birch Cliff and along the Bluffs, and the deep valleys of Highland Creek and the Rouge in the east. Agincourt and Malvern are newer, with aluminum soffit that lifts at the corners.",
           "East York, York and the older neighbourhoods downtown are the century homes: brick semis and narrow detached houses on small lots, with wood trim, old chimneys and street trees as old as the houses. We cover all of them, along with the rest of the city.",
         ],
       },
@@ -88,7 +88,7 @@ export const MARKETS: Market[] = [
       {
         question: "Which parts of Toronto do you cover?",
         answer:
-          "All of it. We do wildlife removal and wildlife control in North York, Etobicoke, Scarborough, East York, York, downtown and everything in between. Scarborough, North York and Etobicoke each have a page of their own with the neighbourhoods listed.",
+          "All of it. We do wildlife removal and wildlife control in North York, Etobicoke, Scarborough, East York, York, downtown and everything in between. North York, Etobicoke and Scarborough each have a page of their own with the neighbourhoods listed.",
       },
       {
         question: "Do you cover the Kingsway, York Mills and the Bluffs?",
