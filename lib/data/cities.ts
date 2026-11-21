@@ -356,9 +356,9 @@ export const CITIES: City[] = [
     ],
     faqs: [
       {
-        question: "Do you cover Stonehaven and Glenway?",
+        question: "Do you cover all of Newmarket?",
         answer:
-          "Yes. We cover all of Newmarket: Stonehaven, Summerhill and Woodland Hill; Glenway and Armitage; Huron Heights and Bristol-London; and the Main Street and Fairy Lake area. Aurora, just south, is covered too.",
+          "Yes, every part of Newmarket. Aurora, just south, is covered too.",
       },
     ],
     nearby: ["aurora", "richmond-hill", "stouffville"],
@@ -475,9 +475,9 @@ export const CITIES: City[] = [
     ],
     faqs: [
       {
-        question: "Do you cover Pickering Village and the lakefront?",
+        question: "Do you cover all of Ajax?",
         answer:
-          "Yes. We cover all of Ajax: Pickering Village and central Ajax; Lakeside on the waterfront; Riverside, Nottingham, Salem, Applecroft and Hermitage. Pickering and Whitby on either side are covered as well.",
+          "Yes, all of Ajax, Pickering Village and the lakefront included. Pickering and Whitby on either side are covered as well.",
       },
     ],
     nearby: ["pickering", "whitby", "oshawa", "scarborough"],
@@ -511,9 +511,9 @@ export const CITIES: City[] = [
     ],
     faqs: [
       {
-        question: "Do you cover Windfields and Kedron?",
+        question: "Do you cover all of Oshawa?",
         answer:
-          "Yes. We cover all of Oshawa: Windfields, Kedron, Taunton, Northglen and Samac in the north; McLaughlin, Centennial and Pinecrest in the middle; and Eastdale and Lakeview to the south. Whitby next door and Bowmanville to the east are covered as well.",
+          "Yes, every part of Oshawa, from the north end down to the lake. Whitby next door and Bowmanville to the east are covered as well.",
       },
     ],
     nearby: ["whitby", "ajax", "pickering"],
@@ -619,9 +619,9 @@ export const CITIES: City[] = [
     ],
     faqs: [
       {
-        question: "Do you cover Aurora Estates and Hills of St Andrew?",
+        question: "Do you cover all of Aurora?",
         answer:
-          "Yes. We cover all of Aurora: Aurora Estates, Hills of St Andrew and Aurora Highlands; Aurora Village along Yonge Street; and Bayview Northeast and Bayview Wellington. Newmarket, Richmond Hill and King City are covered too.",
+          "Yes, all of Aurora. Newmarket, Richmond Hill and King City are covered too.",
       },
     ],
     nearby: ["newmarket", "richmond-hill", "stouffville"],
@@ -655,9 +655,9 @@ export const CITIES: City[] = [
     ],
     faqs: [
       {
-        question: "Do you cover Ballantrae and Musselman's Lake?",
+        question: "Do you cover all of Stouffville?",
         answer:
-          "Yes. We cover all of Whitchurch-Stouffville: Ballantrae, Musselman's Lake, the town centre, Vandorf and Gormley, including the rural properties between them. Markham, Richmond Hill and Aurora next door are covered as well.",
+          "Yes, all of Whitchurch-Stouffville: the town itself, Ballantrae, Musselman's Lake and the rural properties between them. Markham, Richmond Hill and Aurora next door are covered as well.",
       },
     ],
     nearby: ["markham", "aurora", "richmond-hill", "newmarket"],
@@ -691,9 +691,9 @@ export const CITIES: City[] = [
     ],
     faqs: [
       {
-        question: "Do you cover Bolton and the Escarpment villages?",
+        question: "Do you cover all of Caledon?",
         answer:
-          "Yes. We cover all of Caledon: Bolton, Caledon East, Caledon Village, Palgrave and Mono Mills; Belfountain, Inglewood, Cheltenham and Alton on the Escarpment; and the rural properties in between. Brampton and the rest of Peel are covered as well.",
+          "Yes, all of Caledon: Bolton, Caledon East, the Escarpment villages and the rural properties in between. Brampton and the rest of Peel are covered as well.",
       },
     ],
     nearby: ["brampton", "vaughan", "mississauga"],

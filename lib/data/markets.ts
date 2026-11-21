@@ -91,11 +91,6 @@ export const MARKETS: Market[] = [
           "All of it. We do wildlife removal and wildlife control in North York, Etobicoke, Scarborough, East York, York, downtown and everything in between. North York, Etobicoke and Scarborough each have a page of their own with the neighbourhoods listed.",
       },
       {
-        question: "Do you cover the Kingsway, York Mills and the Bluffs?",
-        answer:
-          "Yes. The Kingsway, Humber Valley Village and Sunnylea in Etobicoke; York Mills, the Bridle Path, Hoggs Hollow and Don Mills in North York; Guildwood, Cliffside, Birch Cliff and the Scarborough Bluffs along the lake; and the rest of the city.",
-      },
-      {
         question: "Why does Toronto have so many raccoons?",
         answer:
           "Ravines, mature trees and older rooflines. The Don, the Humber and the Rouge give raccoons somewhere to live, the trees and downspouts give them a way onto the roof, and sixty-year-old soffits, roof vents and uncapped chimneys give them a way in. Toronto has one of the densest urban raccoon populations anywhere.",
