@@ -73,7 +73,8 @@ function normalize(html) {
 // else ("Normally $850" stays off it: owner, Oct 28, 1:11 PM); every other
 // page keeps the no-dollar-figure rule.
 const EXTRA_PATHS = ["/november-special"];
-const ALLOWED_FIGURES = { "/november-special": [/\$699\b/g] };
+// /block-and-lock (owner, Nov 23-24 2026) is the one page that may say "block and lock".
+const ALLOWED_FIGURES = { "/november-special": [/\$699\b/g], "/block-and-lock": [/block and lock/gi] };
 
 const sitemap = await (await fetch(`${base}/sitemap.xml`)).text();
 const urls = [...new Set([...[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname), ...EXTRA_PATHS])];

@@ -7,7 +7,7 @@ import { DAMAGE_REPAIR_PATH } from "@/lib/data/repairs";
 import { getAllPosts } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPaths = ["/", "/wildlife", "/service-areas", "/about", "/contact", "/faq"];
+  const staticPaths = ["/", "/wildlife", "/service-areas", "/about", "/contact", "/faq", "/block-and-lock"];
 
   const entries: MetadataRoute.Sitemap = staticPaths.map((path) => ({
     url: new URL(path, BRAND.url).toString(),

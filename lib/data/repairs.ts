@@ -5,8 +5,8 @@
  * materials and colours (owner-confirmed).
  *
  * Repair talk stays limited to the spot the animal used and the damage it
- * caused. Whole-home prevention ("block and lock") is deliberately not
- * offered on public pages — see PLACEHOLDERS.md.
+ * caused. Whole-home prevention ("block and lock") is offered only on
+ * /block-and-lock (owner, Nov 2026; lib/data/block-and-lock.ts).
  */
 export const DAMAGE_REPAIR_PATH = "/wildlife/damage-repair";
 

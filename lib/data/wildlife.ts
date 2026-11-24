@@ -15,7 +15,7 @@ import { DEAD_BIRD_REMOVAL_ENTRY } from "@/lib/data/dead-bird-removal";
  * section say so in their own words, and /wildlife/damage-repair (its own
  * static route, not an entry here) covers it in full. Keep that talk to the
  * spot the animal used and the damage it caused — whole-home prevention
- * ("block and lock") stays off public pages.
+ * ("block and lock") lives only on /block-and-lock (owner, Nov 2026).
  *
  * Every `seoTitle` and `heading` names the animal or problem and Toronto.
  */

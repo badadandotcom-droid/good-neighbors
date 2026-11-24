@@ -282,9 +282,9 @@ and colours. Name no other repair type without asking the owner.
   Google review link. Build it once the Google Business Profile exists and
   its review link is known. Unlisted means `noIndex`, and not in the nav,
   footer or sitemap.
-- **Whole-home prevention ("block and lock") page.** Deliberately kept off
-  the public site so customers aren't put off. If built, it's an unlisted
-  page the owner sends to customers directly, on the same unlisted terms.
+- **Whole-home prevention ("block and lock") page.** BUILT Nov 24 2026 as the
+  public page /block-and-lock (owner's call, Nov 23 2026; see CLAUDE.md).
+  The offer stays off every other page.
 
 ## Pricing — intentionally absent
 
