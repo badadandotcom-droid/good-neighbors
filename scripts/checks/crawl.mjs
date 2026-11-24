@@ -112,7 +112,9 @@ for (const p of urls) {
     html.replace(/<script[\s\S]*?<\/script>/g, " ").replace(/<style[\s\S]*?<\/style>/g, " ").replace(/<svg[\s\S]*?<\/svg>/g, " "),
   );
   const allowFigures = (s) => (ALLOWED_FIGURES[p] ?? []).reduce((t, re) => t.replace(re, " "), s);
-  const bodyForBanned = allowFigures(bodyText.replace(RATING_LINE, " "));
+  // The footer's one "Block and Lock" link (owner, Nov 24 2026) is on every page; the phrase
+  // stays banned everywhere else outside /block-and-lock.
+  const bodyForBanned = allowFigures(bodyText.replace(RATING_LINE, " ").replace(/Raccoon Poop & Feces Removal Block and Lock/, " "));
   const banned = BANNED.filter((re) => re.test(bodyForBanned) || re.test(allowFigures(title)) || re.test(allowFigures(description))).map(
     (re) => re.source,
   );

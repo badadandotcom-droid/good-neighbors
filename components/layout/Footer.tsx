@@ -48,6 +48,9 @@ export function Footer() {
             { label: "Attic Cleanup", href: "/wildlife/attic-cleanup" },
             { label: "Raccoon Under a Deck", href: "/wildlife/raccoon-under-deck" },
             { label: "Raccoon Poop & Feces Removal", href: "/wildlife/raccoon-feces-removal" },
+            // Whole-house sealing (owner, Nov 24 2026, 5:02 PM, via the ads chat: one quiet
+            // link on every page, a named exception to the "7+ pages not touched" rule).
+            { label: "Block and Lock", href: "/block-and-lock" },
           ]}
         />
 
