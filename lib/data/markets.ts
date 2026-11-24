@@ -74,6 +74,7 @@ export const MARKETS: Market[] = [
           "Squirrels are the day sound: light, fast scampering around sunrise and again before dusk, and gnawing. They chew in at soffit corners, fascia boards and roof vents, nest in the insulation and raise young twice a year. See [squirrel removal](/wildlife/squirrels).",
           "Skunks dig in under decks, porches, sheds and front steps, and the ravine neighbourhoods have the most of them ([skunk removal](/wildlife/skunks)). Starlings and sparrows nest in uncovered dryer and bathroom vents and in uncapped chimneys, busiest in spring ([bird removal](/wildlife/birds)). Bats roost in the attics and behind the fascia of the older homes near the ravines and the lake; they are protected in Ontario, so we assess the timing and explain the method before any work begins ([bat removal](/wildlife/bats)).",
           "Not sure which it is? [Something in the attic](/wildlife/something-in-the-attic) and [something in the walls](/wildlife/something-in-the-walls) go by the sound and the time of day, and you don't need to identify the animal yourself.",
+          "Whichever animal it turns out to be, wildlife control in Toronto starts the same way: at the roofline, looking for the way in.",
         ],
       },
       {
@@ -88,7 +89,7 @@ export const MARKETS: Market[] = [
       {
         question: "Which parts of Toronto do you cover?",
         answer:
-          "All of it. We do wildlife removal and wildlife control in North York, Etobicoke, Scarborough, East York, York, downtown and everything in between. North York, Etobicoke and Scarborough each have a page of their own with the neighbourhoods listed.",
+          "All of it. We do wildlife removal and wildlife control in North York, Etobicoke, Scarborough, East York, York, downtown and everything in between. North York, Etobicoke and Scarborough each have a page of their own.",
       },
       {
         question: "Why does Toronto have so many raccoons?",
@@ -172,12 +173,7 @@ export const MARKETS: Market[] = [
       {
         question: "Which parts of York Region do you cover?",
         answer:
-          "Markham, Vaughan (Woodbridge included), Richmond Hill, Newmarket, Aurora and Stouffville each have a page of their own. Thornhill, King Township, East Gwillimbury and Georgina are covered too, rural roads and the Lake Simcoe shore included: all of York Region.",
-      },
-      {
-        question: "Do you cover Unionville, Kleinburg and Bayview Hill?",
-        answer:
-          "Yes. Unionville, Cachet and Angus Glen in Markham; Kleinburg, Woodbridge and Islington Woods in Vaughan; Bayview Hill, Mill Pond and Oak Ridges in Richmond Hill; Aurora Estates and Hills of St Andrew in Aurora; Stonehaven in Newmarket; Ballantrae and Musselman's Lake in Stouffville; and everywhere in between.",
+          "Markham (Unionville included), Vaughan (Woodbridge included), Richmond Hill, Newmarket, Aurora and Stouffville each have a page of their own. Thornhill, King Township, East Gwillimbury and Georgina are covered too, rural roads and the Lake Simcoe shore included: all of York Region.",
       },
       {
         question: "Do you come out to rural properties in King Township and Stouffville?",
@@ -262,12 +258,7 @@ export const MARKETS: Market[] = [
       {
         question: "Which parts of Durham Region do you cover?",
         answer:
-          "All eight of its municipalities. Pickering, Ajax, Whitby and Oshawa have their own pages, and Clarington (home to Courtice and Bowmanville), Uxbridge, Scugog and Brock Township are covered just the same, rural roads and lakefront included.",
-      },
-      {
-        question: "Do you cover Rosebank, Brooklin and Windfields?",
-        answer:
-          "Yes, along with every neighbourhood around them: Rosebank, Rouge Park and Whitevale in Pickering; Riverside, Nottingham and Pickering Village in Ajax; Brooklin, Lynde Creek and Port Whitby in Whitby; and Windfields, Kedron and McLaughlin in Oshawa.",
+          "All eight of its municipalities. Pickering, Ajax, Whitby (Brooklin included) and Oshawa have their own pages, and Clarington (home to Courtice and Bowmanville), Uxbridge, Scugog and Brock Township are covered just the same, rural roads and lakefront included.",
       },
       {
         question: "Do you cover the countryside in Uxbridge, Scugog and Brock Township?",
@@ -343,12 +334,7 @@ export const MARKETS: Market[] = [
       {
         question: "Which parts of Peel Region do you cover?",
         answer:
-          "All of Peel: Mississauga, Brampton and Caledon, including Bolton and the rural roads between the villages. Brampton, Mississauga and Caledon each have a page of their own with the neighbourhoods listed.",
-      },
-      {
-        question: "Do you cover Lorne Park, Castlemore and Bolton?",
-        answer:
-          "Yes. Lorne Park, Mineola, Port Credit and Clarkson in south Mississauga; Castlemore, the Vales of Castlemore and Peel Village in Brampton; Bolton, Caledon East and the Escarpment villages in Caledon; and everywhere in between.",
+          "All of Peel: Mississauga, Brampton and Caledon, including Bolton and the rural roads between the villages. Brampton, Mississauga and Caledon each have a page of their own.",
       },
       {
         question: "Do you come out to rural Caledon?",

@@ -8,6 +8,7 @@ import { ShieldCheckIcon } from "@/components/shared/GuaranteeLine";
 import { CallNote, TrustRow } from "@/components/shared/TrustRow";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { Illustration } from "@/components/illustrations/Illustration";
+import { RelatedReading } from "@/components/shared/RelatedReading";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { getPhone } from "@/lib/config/resolvers";
 import { GUARANTEE } from "@/lib/config/site";
@@ -241,6 +242,7 @@ export default function DamageRepairPage() {
       </section>
 
       <FinalCTA />
+      <RelatedReading path={DAMAGE_REPAIR_PATH} />
     </>
   );
 }

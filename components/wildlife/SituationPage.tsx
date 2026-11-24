@@ -5,6 +5,7 @@ import { CTAButton } from "@/components/shared/CTAButton";
 import { HelpLink } from "@/components/shared/HelpLink";
 import { Illustration } from "@/components/illustrations/Illustration";
 import { FinalCTA } from "@/components/home/FinalCTA";
+import { RelatedReading } from "@/components/shared/RelatedReading";
 import { FAQAccordion } from "@/components/shared/FAQAccordion";
 import { CallNote, TrustRow } from "@/components/shared/TrustRow";
 import { JsonLd } from "@/components/shared/JsonLd";
@@ -301,6 +302,7 @@ export function SituationPage({
 
       <RelatedWildlife currentSlug={entry.slug} />
       <FinalCTA />
+      <RelatedReading path={`/wildlife/${entry.slug}`} />
     </>
   );
 }

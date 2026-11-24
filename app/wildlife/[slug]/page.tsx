@@ -7,6 +7,7 @@ import { CTAButton } from "@/components/shared/CTAButton";
 import { HelpLink } from "@/components/shared/HelpLink";
 import { PhotoPlaceholder } from "@/components/shared/PhotoPlaceholder";
 import { Illustration } from "@/components/illustrations/Illustration";
+import { RelatedReading } from "@/components/shared/RelatedReading";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { CallNote, TrustRow } from "@/components/shared/TrustRow";
 import { JsonLd } from "@/components/shared/JsonLd";
@@ -198,6 +199,7 @@ export default async function WildlifeDetailPage({ params }: { params: Promise<{
       <RelatedWildlife currentSlug={entry.slug} />
 
       <FinalCTA />
+      <RelatedReading path={`/wildlife/${entry.slug}`} />
     </>
   );
 }

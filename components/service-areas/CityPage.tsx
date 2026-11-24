@@ -5,6 +5,7 @@ import { CTAButton } from "@/components/shared/CTAButton";
 import { HelpLink } from "@/components/shared/HelpLink";
 import { SameDayBadge } from "@/components/shared/SameDayBadge";
 import { Illustration } from "@/components/illustrations/Illustration";
+import { RelatedReading } from "@/components/shared/RelatedReading";
 import { FAQAccordion } from "@/components/shared/FAQAccordion";
 import { DamageRepairBanner } from "@/components/shared/DamageRepairBanner";
 import { GuaranteeBlock } from "@/components/shared/GuaranteeBlock";
@@ -235,6 +236,8 @@ export function CityPage({ city }: { city: City }) {
           </div>
         </Container>
       </section>
+
+      <RelatedReading path={path} />
     </>
   );
 }
